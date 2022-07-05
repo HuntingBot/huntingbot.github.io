@@ -20,15 +20,15 @@
     var CONFIG = {"hostname":"huntingbot.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="一维反二子棋的规则如下：在一个 1xn 的棋盘上，双方交替落子，禁止连成二子，先不能走棋者输。 这个游戏，无论棋盘大小为多少，都是后手必胜。以下将给出一个证明及必胜策略。 首先，注意到每一次落子后，该子的左边和右边互不影响。所以，我们只需要考虑连续的空白（未落子处）。 然后，我们使用数学归纳法。可以证明： 定理 1  当一段连续的空白两端是同种颜色的棋子时（下称“A 类”），空中无子可下后，在这段">
+  <meta name="description" content="一维反二子棋的规则如下：在一个 1xn 的棋盘上，双方交替落子，禁止连成二子，先不能走棋者输。 这个游戏，无论棋盘大小为多少，都是后手必胜。以下将给出一个证明及必胜策略。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="一维反二子棋后手必胜的证明">
 <meta property="og:url" content="https://huntingbot.github.io/1dantigomoku/index.html">
 <meta property="og:site_name" content="Radiation">
-<meta property="og:description" content="一维反二子棋的规则如下：在一个 1xn 的棋盘上，双方交替落子，禁止连成二子，先不能走棋者输。 这个游戏，无论棋盘大小为多少，都是后手必胜。以下将给出一个证明及必胜策略。 首先，注意到每一次落子后，该子的左边和右边互不影响。所以，我们只需要考虑连续的空白（未落子处）。 然后，我们使用数学归纳法。可以证明： 定理 1  当一段连续的空白两端是同种颜色的棋子时（下称“A 类”），空中无子可下后，在这段">
+<meta property="og:description" content="一维反二子棋的规则如下：在一个 1xn 的棋盘上，双方交替落子，禁止连成二子，先不能走棋者输。 这个游戏，无论棋盘大小为多少，都是后手必胜。以下将给出一个证明及必胜策略。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-07-05T09:48:47.000Z">
-<meta property="article:modified_time" content="2022-07-05T10:03:47.806Z">
+<meta property="article:modified_time" content="2022-07-05T10:07:37.038Z">
 <meta property="article:author" content="Ultimium">
 <meta property="article:tag" content="生命游戏">
 <meta name="twitter:card" content="summary">
@@ -183,7 +183,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2022-07-05 17:48:47 / 修改时间：18:03:47" itemprop="dateCreated datePublished" datetime="2022-07-05T17:48:47+08:00">2022-07-05</time>
+              <time title="创建时间：2022-07-05 17:48:47 / 修改时间：18:07:37" itemprop="dateCreated datePublished" datetime="2022-07-05T17:48:47+08:00">2022-07-05</time>
             </span>
 
           
@@ -199,6 +199,8 @@
       
         <p>一维反二子棋的规则如下：在一个 1xn 的棋盘上，双方交替落子，禁止连成二子，先不能走棋者输。</p>
 <p>这个游戏，无论棋盘大小为多少，都是后手必胜。以下将给出一个证明及必胜策略。</p>
+<a id="more"></a>
+
 <p>首先，注意到每一次落子后，该子的左边和右边互不影响。所以，我们只需要考虑连续的空白（未落子处）。</p>
 <p>然后，我们使用数学归纳法。可以证明：</p>
 <p><strong>定理 1</strong>  <em>当一段连续的空白两端是同种颜色的棋子时（下称“A 类”），空中无子可下后，在这段空白中与两端颜色相同的棋子（下称“黑子”）一定比另一种颜色的棋子（下称“白子”）少 1 个。当一段连续的空白两端是不同颜色的棋子时（下称“B 类”），空中无子可下后，在这段空白中的双方子力一定相等。</em> </p>

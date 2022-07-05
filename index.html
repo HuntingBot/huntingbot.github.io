@@ -181,7 +181,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2022-07-05 17:48:47 / 修改时间：18:03:47" itemprop="dateCreated datePublished" datetime="2022-07-05T17:48:47+08:00">2022-07-05</time>
+              <time title="创建时间：2022-07-05 17:48:47 / 修改时间：18:07:37" itemprop="dateCreated datePublished" datetime="2022-07-05T17:48:47+08:00">2022-07-05</time>
             </span>
 
           
@@ -197,33 +197,14 @@
       
           <p>一维反二子棋的规则如下：在一个 1xn 的棋盘上，双方交替落子，禁止连成二子，先不能走棋者输。</p>
 <p>这个游戏，无论棋盘大小为多少，都是后手必胜。以下将给出一个证明及必胜策略。</p>
-<p>首先，注意到每一次落子后，该子的左边和右边互不影响。所以，我们只需要考虑连续的空白（未落子处）。</p>
-<p>然后，我们使用数学归纳法。可以证明：</p>
-<p><strong>定理 1</strong>  <em>当一段连续的空白两端是同种颜色的棋子时（下称“A 类”），空中无子可下后，在这段空白中与两端颜色相同的棋子（下称“黑子”）一定比另一种颜色的棋子（下称“白子”）少 1 个。当一段连续的空白两端是不同颜色的棋子时（下称“B 类”），空中无子可下后，在这段空白中的双方子力一定相等。</em> </p>
-<blockquote>
-<p><strong>证明</strong> 显然，空白的长度为 0 时，上述结论成立。</p>
-<p>现在证明：如果对于所有长度小于 n 的空白，上述结论成立，那么对于长度为 n 的空白，上述结论也成立。考虑先手落子后的情形。</p>
-<p>对于 A 类空白，若黑先，则下在任何位置后，此段空白被分为两段长度小于 n 的 A 类空白，每段空白中黑比白少一个，共少两个。由于这一步还下了一个黑子，黑比白少一个，故结论成立。若白先，则下在任何位置后，此段空白被分为两段长度小于 n 的 B 类空白，每段空白中黑与白相等，由于这一步还下了一个白子，黑比白少一个，故结论成立。</p>
-<p>对于 B 类空白，无论谁先，下在任何位置后，此段空白被分为一段长度小于 n 的 A 类空白和一段长度小于 n 的 B 类空白。前者中先手比后手少一个，后者中先手与后手相等，由于这一步还下了一个先手的子，双方子力相等，故结论成立。</p>
-<p>由数学归纳法，定理 1 对长度为任意自然数的空白成立。QED</p>
-</blockquote>
-<p>接下来，我们可以证明：</p>
-<p><strong>定理 2</strong>  <em>当一段连续的空白一端为棋盘边界时，若与空白一端棋子颜色不同的一方（下称“白方”）先手，白方一定存在一种下法，使得空中无子可下后，白方总是比黑方多一子。</em> </p>
-<blockquote>
-<p><strong>证明</strong> 只要与空白一端棋子颜色不同的一方（下称“白方”）下在边界，就得到了一个 B 类空白，由定理 1 可知其中双方子力相等。加上白方下的这一子，无子可下后白方总是比黑方多下一子，所以定理 2 成立。</p>
-</blockquote>
-<p><strong>定理 3</strong>  <em>当一段连续的空白一端为棋盘边界时，若与空白一端棋子颜色相同的一方（下称“黑方”）先手，空中无子可下后，黑方的子一定不多于白方的子。</em> </p>
-<blockquote>
-<p><strong>证明</strong> 显然，空白的长度为 1 时，上述结论成立。</p>
-<p>黑方落子后，要么产生一个  A 型空白（下在边界处），要么产生一个 A 型空白和一个一端为棋盘边界的空白（下在边界旁边）。前者中由定理 1 可知黑子的个数一定比白子少 1，算上黑棋下的这一子，双方子力相等。后者由定理 1 和定理 2 得，黑子的个数一定比白子少 2，算上黑棋下的这一子，黑子比白子少 1。所以定理 3 成立。</p>
-</blockquote>
-<p>最后我们证明：</p>
-<p><strong>定理 4</strong>  <em>对于任何 1xn 的棋盘，后手必胜。</em> </p>
-<blockquote>
-<p><strong>证明</strong> 先手第一步要么下在棋盘一端，要么下在棋盘中间。两者都会使棋盘变为一个或两个一端为棋盘边界的空白。如果是前者，根据定理 2，后手能下的子比先手多一个，后手先，下完之后轮到先手，显然先手输。</p>
-<p>如果是后者，后手可随意选择一边下子，先手下哪边后手就下哪边，由于后手先下的那一边后手可下的点比先手多一个，先手一定先在另一边下子，由定理 3 可得，先手能下的点仍然不会多于后手，显然先手输。</p>
-</blockquote>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/1dantigomoku/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -273,7 +254,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-07-05 18:04:01" itemprop="dateModified" datetime="2022-07-05T18:04:01+08:00">2022-07-05</time>
+                <time title="修改时间：2022-07-05 18:08:02" itemprop="dateModified" datetime="2022-07-05T18:08:02+08:00">2022-07-05</time>
               </span>
 
           
@@ -309,16 +290,14 @@ o5bobobobo5bo3bo$5ob5obo5b5o3bo3b5ob5o2bobo2b5obo3bo!
 #C [[ T 1100 X 0 Y 0 ZOOM 0.25 THEME CUSTOM ]]</pre><canvas width="480" height="480"></canvas></div>
 
 <p>原博客：<a href="https://alephalpha.github.io/posts/d960e01f/" target="_blank" rel="noopener">在 Hexo 中插入 LifeViewer</a></p>
-<p>在按照该博客操作时发现并没有source/js/src/和layout/_custom/head.swig文件夹，自己新建后也没用。</p>
-<p>后来发现那篇文章是2019年3月的，NexT可能已经出了无数新版本了，但是head.swig这个文件还是存在的，只不过被合并到了_layout.swig里面。</p>
-<p>所以修改那个文件的head部分就行。</p>
-<p>所以应该在 layout/_layout.swig 文件中的<code>&lt;head&gt;</code>后面插入这么两行：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta name&#x3D;&quot;LifeViewer&quot; content&#x3D;&quot;rle pre 37 hide limit&quot;&gt;</span><br><span class="line">&lt;script src&#x3D;&quot;&#123;&#123; url_for(theme.js) &#125;&#125;&#x2F;src&#x2F;lv-plugin.js&quot;&gt;&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
-
-<p>至于source/js/src/，这个创建就行，因为上面那两行就是引用的这个地址。</p>
-<div class="rle"><pre>#CXRLE Pos=1,1
-x = 0, y = 0, rule = B3/S23
-!</pre><canvas width="480" height="480"></canvas></div>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/leapviewerhtml/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
