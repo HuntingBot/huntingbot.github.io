@@ -1,0 +1,33 @@
+#N 9btbk.rle: Block on boat: Synthesis
+#O Mark D. Niemiec's life synthesis database, Sun May 23 09:08:07 2021
+#C  OO.OO.
+#C  OO.O.O
+#C  ....O.
+x = 201, y = 134
+100bo$99bo$99b3o$$95bobo$96boo86bo$96bo80bo5bo$56bobo119boo3b3o$obo36b
+x16boo21bx39bx18bo20bx17boo20bx$boo35bxbx16bo20bxbx18boo17bxbx16bobo
+18bxbx37bxbx$bo37bxx18boo18bxx18boo18bxx17boo19bxx38bxx$58boo$39bxx18b
+o19bxx18boo18bxx15boo21bxx38bxx$39bxx38bxx18boo18bxx15boo21bxx38bxx$
+177boo$133boo43boo$132bobo42bo3boo$134bo46bobo$181bo3$16boo$17boo$16bo
+$19bo$18bo$18b3o8$55bo$14b3obbo36bobbo39bo19bx19bo19bxx$16bobobo33b3ob
+obo37bobo17bxbx17bobo17bxbbx$15bo3boo38boo38boo18bxx18boo18bxbx$39bx
+39bx80bx$19boo17bxbx18boo17bxbx18boo38boo$19boo18bxx18boo18bxx18boo38b
+oo$$102bo37boo$102boo36bobo$101bobo36bo7$56bobo$35byy19boo17byy$14boo
+19byy20bo17byy$15boo$14bo4bo39bo39bo19bx19bo19bx$18bobo18bxx17bobo18b
+xx17bobo17bxbx17bobo17bxbx$19boo18bxx18boo18bxx18boo18bxx18boo18bxx$$
+19boo18bxx18boo18bxx18boo18bxx18boo18bxx$19boo18bxx18boo18bxx18boo18b
+xx18boo18bxx$$100bo20bxx16bo17bxx$100boo18bxbx15boo17bxbx$99bobo19bx
+16bobo17bx7$140bo16bo$138bobo14bobo$139boo15boo$$19bo19bo19bo19bo19bo
+19bo19bo19bo$18bobo17bobo17bobo17bobo17bobo17bobo17bobo17bobo$14boo3b
+oo18boo18boo18boo18boo18boo18boo18boo$15boo$14bo4boo18boo18boo18boo18b
+oo18boo18boo18boo$19boo18boo18boo18boo18boo18boo18boo18boo$122boo$35b
+3o18boo19bo21bo21bobo$37bo17bobo19boo20boo22bo$36bo20bo18bobo19bobo19$
+23boo17boo$22boo17boo$19bo4bo14bo3bo15bo19bo19bo19bo19bo19bo$18bobo17b
+obo17bobo17bobo17bobo17bobo17bobo17bobo$19boo18boo18boobboo14boo18boo
+18boo18boo18boo$62boo19boo$19boo18boo18boo3bo14booboo15boo18boo18boo
+18boo$19boo18boo18boo18boo3bo14boob3o14boo18boo18boo$102bo$103bo18b3o
+17boo16bo$122bo19bobo14boo$123bo18bo16bobo7$39bo$16bobo20bobo$16boo21b
+oo23bo$17bo44boo$19bo19bo19bo3boo14bo19bo19bo$18bobo17bobo17bobo17bobo
+3bo13bobo17bobo$19boo18boo18boo18booboo15boo18boo$83boo19bo$19boo18boo
+18boo18boo18booboo15boo$19boo18boo18boo18boo18boobboo14boo$124bo$122b
+oo$123boo!

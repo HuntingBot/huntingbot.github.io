@@ -1,0 +1,25 @@
+#N 14bebe1.rle: Bookends: Synthesis
+#O Mark D. Niemiec's life synthesis database, Wed Jun 02 23:36:57 2021
+#C  OO...OO
+#C  O.O.O.O
+#C  ..O.O..
+#C  .OO.OO.
+x = 155, y = 75
+48bobo$49boo$49bo$3bobo$4boo21bxx22boo14bxx$4bo22bxbbx19bobbo13bxbbx$
+28b3x20boo15b3x$boo$obo25b3x20boo15b3x$bbo24bxbbx19bobbo13bxbbx$27bxx
+22boo14bxx$$8boo39bo$8bobo38boo$8bo39bobo8$43bo$44boo62bx25bo$7boo18b
+xx14boobboo38boo5bo12bxbx17boo3boo13bxx4bx$7bobbo16bxx18bobbo18bxx16bo
+bboboo13bxbbx16bobbobboo12bxbbxbxbx$8b3o37b3o18bxx17b3obboo13bxx18b3o
+17b3xbxx$$8b3o37b3o18bxx17b3obboo13bxx18b3o17b3xbxx$7bobbobboo12bxx3b
+yy13bobbo18bxx16bobboboo13bxbbx16bobbobboo12bxbbxbxbx$7boo3boo13bxx3b
+yy9boobboo38boo5bo12bxbx17boo3boo13bxx4bx$14bo29boo62bx25bo$43bo10$3b
+oo$4boo17boo$3bo3boo15booboo14boobboo18boo18boo18boo18boo18boo$7bobbo
+12bo3bobbo13boobobbo16bobbo16bobbo16bobbo16bobbo16bobbo$8b3o17b3o12bo
+4b3o17b3o17b3o17b3o17b3o17b3o$$8b3o17b3o17b3o17b3o17b3o17b3o17b3o17b3o
+$7bobbo16bobbo16bobbo12boobbobbo16bobbo16bobbo16bobbo16bobbo$7boo18boo
+18boo15booboo14boobboo18boo18boo18boo$63bo20boo$83bo19b3o18boo19bo$
+105bo17bobo19boo$104bo20bo18bobo8$13boo$12boo$7boo5bo12boo4boo12boo18b
+oo18boo$7bobbo16bobboboo13bobbo16bobbo16bobbo$8b3o17b3o3bo13b3o17b3o
+17b3o$$8b3o17b3o17b3o17b3o17b3o$7bobbo16bobbo16bobbo16bobbo16bobbo$7b
+oo18boo18boo18boo18boo$52boo$52bobo14bo18bo$52bo15boo17boo$68bobo16bob
+o!

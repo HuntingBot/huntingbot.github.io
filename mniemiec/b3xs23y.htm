@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="copyright" content="1997,1998,1999,2013,2015,2016,2017,2018,2019,2020,2021,2022 Mark D. Niemiec" />
+<title>Life-Like Rules</title>
+<meta name="description"
+content="Life-Like Rules: B3x/S23y pattern lists and glider syntheses" />
+<meta name="keywords"
+content="conway game eightlife eight pulsar pedestrian honey life variant still life oscillator spaceship gun puffer replicator pattern object list glider synthesis" />
+<link rel="prev" href="b36s245.htm" />
+<link rel="next" href="rulell.htm" />
+<link rel="search" href="lifesrch.htm" />
+<link rel="author" href="lifecred.htm#niemiec" />
+<link rel="license" href="lifepage.htm#copyright" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="shortcut icon" href="images/23-64.ico" />
+<style type="text/css">
+    body{lang="en-US";hyphens:auto;color:black;background-color:white;
+      margin-top:0;padding:0;border:0;height:100%;
+      font-family:Verdana,Arial,Helvetica,sans-serif;}
+    hr.a{border-style:solid;border-width:3px;border-color:#000000;}
+    h1{text-align:center;
+      font-family:Verdana,Arial,Helvetica,sans-serif;font-variant:small-caps;}
+    h2{font-family:Verdana,Arial,Helvetica,sans-serif;font-variant:small-caps;}
+    h3{font-family:Verdana,Arial,Helvetica,sans-serif;font-variant:small-caps;}
+    i{font-family:"Times New Roman",Times,serif;}
+    pre{hyphens:manual;}
+    img{border:2px black solid;}
+    ul,ol{margin-left:0px;padding-left:1en;}
+    table{border:1px black solid;border-spacing:0px;border-collapse:collapse;
+      table-layout:fixed;}
+    td,th{border:1px black solid;vertical-align:top;font-size:12px;padding:1px;}
+    td a{display:block;}
+    a{text-decoration:none;}
+    a:focus{text-decoration:underline;} a:hover{text-decoration:underline;}
+    a.p:link{color:#008000;} a.p:visited{color:#00C000;}
+    a.i:link{color:#000080;} a.i:visited{color:#0000C0;}
+    a.j:link{color:#008080;} a.j:visited{color:#00C0C0;}
+    a.x:link{color:#800000;} a.x:visited{color:#C00000;}
+    td:hover{background-color:#F0F0F0;}
+    .s{background-color:#E0E0E0;} td.s:hover{background-color:#E0E0E0;}
+    .b{background-color:#C0C0FF;} td.b:hover{background-color:#E0E0FF;}
+    .g{background-color:#C0FFC0;} td.g:hover{background-color:#E0FFE0;}
+    .t{background-color:#C0FFFF;} td.t:hover{background-color:#E0FFFF;}
+    .r{background-color:#FFC0C0;} td.r:hover{background-color:#FFE0E0;}
+    .m{background-color:#FFC0FF;} td.m:hover{background-color:#FFE0FF;}
+    .y{background-color:#FFFFC0;} td.y:hover{background-color:#FFFFE0;}
+    .o{background-color:#FFD0AA;} td.o:hover{background-color:#FFE8D5;}
+    .v{background-color:#FFAAD0;} td.v:hover{background-color:#FFD5E8;}
+    .h{background-color:#E0E0FF;} td.h:hover{background-color:#F0F0FF;}
+    .k{background-color:#000000;color:#FFFFFF;} td.k:hover{background-color:#C0C0C0;}
+    .n{background-color:#F0F0F0;text-align:center;} th.n:hover{background-color:#F8F8F8;}
+    .c{text-align:center;} .u{display:none;}
+</style>
+</head>
+<body>
+<a id="top" name="top"></a>
+<h1>Life-Like Rules</h1>
+<p class="c">
+	<b><a class="j" href="#8l-intro"><em>B3/S238</em>
+	(EightLife/Pulsar Life):</a></b>
+	<a class="j" href="#8l-p1">Still-life</a> |
+	<a class="j" href="#8l-p2">P2 oscillators</a> |
+	<a class="j" href="#8l-p3">P3 oscillator</a> |
+	<a class="j" href="#8l-p4">P4 oscillators</a> |
+	<a class="j" href="#8l-p11">P11 oscillator</a> |
+	<a class="j" href="#8l-p15">P15 oscillator</a> |
+	<a class="j" href="#8l-p20">P20 oscillator</a> |
+	<a class="j" href="#8l-p22">P22 oscillator</a> |
+	<a class="j" href="#8l-p23">P23 oscillator</a><br />
+	<b><a class="j" href="#pl-intro"><em>B38/S28</em>
+	(Pedestrian Life):</a></b>
+	<a class="j" href="#pl-p3">P3 oscillator</a> |
+	<a class="j" href="#pl-p120">P120 oscillator</a> |
+	<a class="j" href="#pl-ss">Spaceships</a> |
+	<a class="j" href="#pl-gun">Gun</a> |
+	<a class="j" href="#pl-puff">Puffers</a><br />
+	<b><a class="j" href="#hl-intro"><em>B38/S238</em>
+	(Honey Life):</a></b>
+	<a class="j" href="#hl-p2">P2 oscillators</a>
+</p>
+<hr class="a" /><main>
+<a id="8l-intro" name="8l-intro"></a>
+<h2>B3/S238 (EightLife, Pulsar Life)</h2>
+<p><em>B3/S238</em> is a very close relative to Life. It is called EightLife
+because it is identical to Life, except for survival with 8 neighbors.</p>
+<p>The still-lifes are identical to those in Life. As there are no new birth
+conditions and all the old survival conditions still exist, all old
+still-lifes continue to work. Any additional still-lifes would include cells
+with 8 living neighbors, but four of those cells would necessarily not be
+stable, so no new still-lifes can exist either. Honeycombs are much more
+common, as solitary tables that normally die in life evolve into honeycombs
+in EightLife.</p>
+<p>Most Life oscillators work in EightLife, with the notable exception of
+Lonely Bees and similar oscillators, that rely on the table evolution.
+There are a few additional oscillators that do not work in Life.</p>
+<p>Most Life spaceships work in EightLife, with the notable exceptions of the
+HWSS and OWSS and any other spaceships that involve similar mechanisms.</p>
+<p>Many methuselahs evolve differently. In particular, the pi heptomino turns
+into a pulsar, making pulsars much more common in this rule. For this reason,
+this rule is also called Pulsar Life. Most dirty puffers also produce
+different exhaust than they do in Life.</p>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/EightLife">EightLife</a>,
+<a class="x" href="http://conwaylife.com/wiki/Heavyweight_spaceship">Heavyweight spaceship</a>,
+<a class="x" href="http://conwaylife.com/wiki/Overweight_spaceship">Overweight spaceship</a>,
+<a class="x" href="http://conwaylife.com/wiki/Pulsar">Pulsar</a>,
+<a class="x" href="http://conwaylife.com/wiki/Snacker">Snacker</a>.</p>
+<hr /><article><a id="a0" name="a0"></a>
+<a id="8l-p1" name="8l-p1"></a>
+<h2>1 Still-life</h2>
+<p><img src="map/8l-p1.png" alt="B3/S238 P1"
+ width="81" height="61" usemap="#8l-p1" /></p>
+<p><table><colgroup><col span="12" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_8l-p1" class="i" href="javascript:Nav('8l-p1')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#top">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a1">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/8l-p1.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/8l-p1.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/8l-p1.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="lis/8l-p1.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/8l-p1.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/8l-p1.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=8l-p1" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_8l-p1"><p><table id="t-8l-p1" style="width:85px">
+    <colgroup><col style="width:83px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="b3xs23y/12-121.rle">12.121; Honeycomb;
+	    Super beehive; Beehive siamese tub [3]</a></td>
+    </tr>
+</table></p></div>
+<map name="8l-p1">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,41,20,61" href="#bottom" />
+	<area coords="61,0,81,20" href="zip/8l-p1.zip" />
+	<area coords="61,41,81,61" href="stamp/8l-p1.rle" />
+	<area coords="0,0,81,61" href="b3xs23y/12-121.rle" />
+</map>
+<p>Since tables turn into honeycombs instead of dying, honeycombs are
+much more common in EightLife, and much easier to synthesize.</p>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Beehive">Beehive</a>,
+<a class="x" href="http://conwaylife.com/wiki/EightLife">EightLife</a>,
+<a class="x" href="http://conwaylife.com/wiki/Honeycomb">Honeycomb</a>,
+<a class="x" href="http://conwaylife.com/wiki/Tub">Tub</a>.</p>
+</article>
+<hr /><article><a id="a1" name="a1"></a>
+<a id="8l-p2" name="8l-p2"></a>
+<h2>3 Period 2 oscillators</h2>
+<p><img src="map/8l-p2.png" alt="B3/S238 P2 oscillators"
+ width="201" height="81" usemap="#8l-p2" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_8l-p2" class="i" href="javascript:Nav('8l-p2')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a0">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a2">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/8l-p2.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/8l-p2.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/8l-p2.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/8l-p2.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/8l-p2.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/8l-p2.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/8l-p2.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=8l-p2" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_8l-p2"><p><table id="t-8l-p2" style="width:205px">
+    <colgroup><col style="width:71px;" /><col style="width:60px;" />
+	<col style="width:72px;" /></colgroup>
+    <tr>
+	<td class="y"><a class="p" href="b3xs23y/10mb.rle">
+	    Medium box [14]</a></td>
+	<td><a class="p" href="b3xs23y/13lb.rle">
+	    Large box [10]</a></td>
+	<td><a class="p" href="b3xs23y/13bksbbk.rle">
+	    Small box between blocks [8]</a></td>
+    </tr>
+</table></p></div>
+<map name="8l-p2">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,61,20,81" href="#bottom" />
+	<area coords="181,0,201,20" href="zip/8l-p2.zip" />
+	<area coords="181,61,201,81" href="stamp/8l-p2.rle" />
+	<area coords="0,0,70,81" href="b3xs23y/10mb.rle" />
+	<area coords="70,0,130,81" href="b3xs23y/13lb.rle" />
+	<area coords="130,0,201,81" href="b3xs23y/13bksbbk.rle" />
+</map>
+<p>In addition to Life period 2 oscillators, EightLife includes a new class
+of period 2 oscillators involving a solid 3&times;3 box in the middle.</p>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Block">Block</a>,
+<a class="x" href="http://conwaylife.com/wiki/EightLife">EightLife</a>.</p>
+</article>
+<hr /><article><a id="a2" name="a2"></a>
+<a id="8l-p3" name="8l-p3"></a>
+<h2>1 Period 3 oscillator</h2>
+<p><img src="map/8l-p3.png" alt="B3/S238 P3"
+ width="101" height="101" usemap="#8l-p3" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_8l-p3" class="i" href="javascript:Nav('8l-p3')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a1">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a3">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/8l-p3.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/8l-p3.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/8l-p3.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/8l-p3.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/8l-p3.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/8l-p3.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/8l-p3.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=8l-p3" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_8l-p3"><p><table id="t-8l-p3" style="width:105px">
+    <colgroup><col style="width:103px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="b3xs23y/48pu.rle">
+	    Pulsar; Pulsar CP 48-54-72 [2]</a></td>
+    </tr>
+</table></p></div>
+<map name="8l-p3">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,81,20,101" href="#bottom" />
+	<area coords="81,0,101,20" href="zip/8l-p3.zip" />
+	<area coords="81,81,101,101" href="stamp/8l-p3.rle" />
+	<area coords="0,0,101,101" href="b3xs23y/48pu.rle" />
+</map>
+<p>Life&rsquo;s pulsar works in EightLife, but because it evolves from the
+pi heptomino, it is much more common, and can be synthesized from 2 gliders.</p>
+<p>The Pulsar consists of four inducting Traffic light predecessors. Its
+predecessors are used in many other oscillators (as described under
+<a class="i" href="bits-12.htm#cons-12">Traffic light</a>). Pulsars are also
+infinitely extensible, by arranging multiple quadrants in a closed
+loop. The Pulsar, consisting of four quadrants, is the smallest such
+arrangement. The <a class="p" href="lg/144qu.rle">Quasar</a>, consisting of twelve
+quadrants, is the next largest.</p>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/EightLife">EightLife</a>,
+<a class="x" href="http://conwaylife.com/wiki/Pulsar">Pulsar</a>.</p>
+</article>
+<hr /><article><a id="a3" name="a3"></a>
+<a id="8l-p4" name="8l-p4"></a>
+<h2>3 Period 4 oscillators</h2>
+<p><img src="map/8l-p4.png" alt="B3/S238 P4 oscillators"
+ width="201" height="81" usemap="#8l-p4" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_8l-p4" class="i" href="javascript:Nav('8l-p4')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a2">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a4">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/8l-p4.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/8l-p4.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/8l-p4.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/8l-p4.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/8l-p4.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/8l-p4.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/8l-p4.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=8l-p4" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_8l-p4"><p><table id="t-8l-p4" style="width:205px">
+    <colgroup><col style="width:71px;" /><col style="width:60px;" />
+	<col style="width:72px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="b3xs23y/13bksbpl.rle">
+	    Small box between block and pole [9]</a></td>
+	<td class="r"><a class="p" href="b3xs23y/13plsbpl.rle">
+	    Small box between poles [x]</a></td>
+	<td><a class="p" href="b3xs23y/20bklkbk.rle">
+	    Lake between blocks [9]</a></td>
+    </tr>
+</table></p></div>
+<map name="8l-p4">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,61,20,81" href="#bottom" />
+	<area coords="181,0,201,20" href="zip/8l-p4.zip" />
+	<area coords="181,61,201,81" href="stamp/8l-p4.rle" />
+	<area coords="0,0,70,81" href="b3xs23y/13bksbpl.rle" />
+	<area coords="70,0,130,81" href="b3xs23y/13plsbpl.rle" />
+	<area coords="130,0,201,81" href="b3xs23y/20bklkbk.rle" />
+</map>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Block">Block</a>,
+<a class="x" href="http://conwaylife.com/wiki/EightLife">EightLife</a>.</p>
+</article>
+<hr /><article><a id="a4" name="a4"></a>
+<a id="8l-p11" name="8l-p11"></a>
+<h2>1 Period 11 oscillator</h2>
+<p><img src="map/8l-p11.png" alt="B3/S238 P11"
+ width="121" height="121" usemap="#8l-p11" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_8l-p11" class="i" href="javascript:Nav('8l-p11')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a3">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a5">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/8l-p11.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/8l-p11.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/8l-p11.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/8l-p11.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/8l-p11.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/8l-p11.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/8l-p11.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=8l-p11" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_8l-p11"><p><table id="t-8l-p11" style="width:125px">
+    <colgroup><col style="width:123px;" /></colgroup>
+    <tr>
+	<td class="r"><a class="p" href="b3xs23y/136p11.rle">
+	    136-bit P11 [x]</a></td>
+    </tr>
+</table></p></div>
+<map name="8l-p11">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,101,20,121" href="#bottom" />
+	<area coords="101,0,121,20" href="zip/8l-p11.zip" />
+	<area coords="101,101,121,121" href="stamp/8l-p11.rle" />
+	<area coords="0,0,121,121" href="b3xs23y/136p11.rle" />
+</map>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/EightLife">EightLife</a>.</p>
+</article>
+<hr /><article><a id="a5" name="a5"></a>
+<a id="8l-p15" name="8l-p15"></a>
+<h2>1 Period 15 oscillator</h2>
+<p><img src="map/8l-p15.png" alt="B3/S238 P15"
+ width="81" height="61" usemap="#8l-p15" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_8l-p15" class="i" href="javascript:Nav('8l-p15')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a4">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a6">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/8l-p15.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/8l-p15.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/8l-p15.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/8l-p15.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/8l-p15.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/8l-p15.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/8l-p15.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=8l-p15" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_8l-p15"><p><table id="t-8l-p15" style="width:85px">
+    <colgroup><col style="width:83px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="b3xs23y/12pc.rle">
+	    Pentadecathlon [3]</a></td>
+    </tr>
+</table></p></div>
+<map name="8l-p15">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,41,20,61" href="#bottom" />
+	<area coords="61,0,81,20" href="zip/8l-p15.zip" />
+	<area coords="61,41,81,61" href="stamp/8l-p15.rle" />
+	<area coords="0,0,81,61" href="b3xs23y/12pc.rle" />
+</map>
+<p>Life&rsquo;s pentadecathlon also works in EightLife, but generations
+2&hellip;4 evolve slightly differently in the interior.</p>
+<p>The pentadecathlon consists of two forming
+<a class="p" href="12/12tl.rle">Traffic light</a> predecessors.
+It produces a useful <a class="i" href="lifeterm.htm#exspark">domino spark</a>,
+making it useful in hassler oscillators of many periods, including
+<a class="i" href="p15.htm#p15-lg">15</a>,
+<a class="i" href="p30.htm#p30-lg">30</a>,
+<a class="i" href="period.htm#p45">45</a>
+<a class="i" href="p60.htm">60</a>, and
+<a class="i" href="p120.htm">120</a>.
+Both its end and side sparks can eat gliders and the three simple spaceships in
+many different ways. Its end spark is also useful for reflecting gliders,
+and is used in glider shuttles of many periods, including
+<a class="i" href="period.htm#p45">45</a>,
+<a class="i" href="p60.htm#p60-lg">60</a> and
+<a class="i" href="period.htm#p75">75</a>.</p>
+<p>Its phase can also be altered (as described under the notes for
+<a class="i" href="bits-12.htm#cons-12">Traffic light</a>).</p>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/EightLife">EightLife</a>,
+<a class="x" href="http://conwaylife.com/wiki/Pentadecathlon">Pentadecathlon</a>.</p>
+</article>
+<hr /><article><a id="a6" name="a6"></a>
+<a id="8l-p20" name="8l-p20"></a>
+<h2>1 Period 20 oscillator</h2>
+<p><img src="map/8l-p20.png" alt="B3/S238 P20"
+ width="121" height="81" usemap="#8l-p20" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_8l-p20" class="i" href="javascript:Nav('8l-p20')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a5">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a7">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/8l-p20.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/8l-p20.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/8l-p20.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/8l-p20.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/8l-p20.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/8l-p20.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/8l-p20.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=8l-p20" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_8l-p20"><p><table id="t-8l-p20" style="width:125px">
+    <colgroup><col style="width:123px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="b3xs23y/40hc2bk4.rle">Four blocks hassling
+	    two honeycombs [27]</a></td>
+    </tr>
+</table></p></div>
+<map name="8l-p20">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,61,20,81" href="#bottom" />
+	<area coords="101,0,121,20" href="zip/8l-p20.zip" />
+	<area coords="101,61,121,81" href="stamp/8l-p20.rle" />
+	<area coords="0,0,121,81" href="b3xs23y/40hc2bk4.rle" />
+</map>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Block">Block</a>,
+<a class="x" href="http://conwaylife.com/wiki/EightLife">EightLife</a>,
+<a class="x" href="http://conwaylife.com/wiki/Honeycomb">Honeycomb</a>.</p>
+</article>
+<hr /><article><a id="a7" name="a7"></a>
+<a id="8l-p22" name="8l-p22"></a>
+<h2>1 Period 22 oscillator</h2>
+<p><img src="map/8l-p22.png" alt="B3/S238 P22"
+ width="81" height="61" usemap="#8l-p22" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_8l-p22" class="i" href="javascript:Nav('8l-p22')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a6">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a8">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/8l-p22.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/8l-p22.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/8l-p22.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/8l-p22.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/8l-p22.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/8l-p22.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/8l-p22.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=8l-p22" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_8l-p22"><p><table id="t-8l-p22" style="width:85px">
+    <colgroup><col style="width:83px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="b3xs23y/14blbl.rle">
+	    Two blinker predecessors [4]</a></td>
+    </tr>
+</table></p></div>
+<map name="8l-p22">
+	<area coords="0,0,22,22" href="#top" />
+	<area coords="0,39,22,61" href="#bottom" />
+	<area coords="59,0,81,22" href="zip/8l-p22.zip" />
+	<area coords="59,39,81,61" href="stamp/8l-p22.rle" />
+	<area coords="0,0,81,61" href="b3xs23y/14blbl.rle" />
+</map>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Blinker">Blinker</a>,
+<a class="x" href="http://conwaylife.com/wiki/EightLife">EightLife</a>.</p>
+</article>
+<hr /><article><a id="a8" name="a8"></a>
+<a id="8l-p23" name="8l-p23"></a>
+<h2>1 Period 23 oscillator</h2>
+<p><img src="map/8l-p23.png" alt="B3/S238 P23"
+ width="101" height="101" usemap="#8l-p23" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_8l-p23" class="i" href="javascript:Nav('8l-p23')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a7">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a9">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/8l-p23.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/8l-p23.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/8l-p23.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/8l-p23.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/8l-p23.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/8l-p23.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/8l-p23.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=8l-p23" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_8l-p23"><p><table id="t-8l-p23" style="width:105px">
+    <colgroup><col style="width:103px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="b3xs23y/40rp8.rle">
+	    Eight R pentominoes [29]</a></td>
+    </tr>
+</table></p></div>
+<map name="8l-p23">
+	<area coords="0,0,23,23" href="#top" />
+	<area coords="0,78,23,101" href="#bottom" />
+	<area coords="78,0,101,23" href="zip/8l-p23.zip" />
+	<area coords="78,78,101,101" href="stamp/8l-p23.rle" />
+	<area coords="0,0,101,101" href="b3xs23y/40rp8.rle" />
+</map>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/EightLife">EightLife</a>.</p>
+</article>
+<hr class="a" /><a id="pl-intro" name="pl-intro"></a>
+<h2>B38/S23 (Pedestrian Life)</h2>
+<p><em>B38/S23</em> is a very close relative to Life. It is called Pedestrian
+Life because the common traffic light predecessor dies rather than evolving into
+a traffic light, making the usually common traffic lights extremely rare.
+Pulsars are also much more rare, as they usually form from traffic-light
+predecessors in Life.</p>
+<p>The still-lifes are identical to those in Life. As there are no new survival
+conditions and all the old birth conditions still exist, no new still-lifes will
+work. All Life still-lifes that would fail would include dead cells with 8
+living neighbors, but four of those cells would necessarily not be stable,
+so no old still-lifes would be excluded either.</p>
+<p>Most Life oscillators and spaceships work in Pedestrian Life, with the
+notable exception of all pre-pulsar shuttles, since those rely on the evolution
+of traffic lights. There are a few additional oscillators that do not work in
+Life. Many methuselahs evolve differently. Most dirty puffers also produce
+different exhaust than they do in Life.</p>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Pedestrian_life">Pedestrian life</a>,
+<a class="x" href="http://conwaylife.com/wiki/Pulsar">Pulsar</a>,
+<a class="x" href="http://conwaylife.com/wiki/Traffic_light">Traffic light</a>.</p>
+<hr /><article><a id="a9" name="a9"></a>
+<a id="pl-p3" name="pl-p3"></a>
+<h2>1 Period 3 oscillator</h2>
+<p><img src="map/pl-p3.png" alt="B38/S23 P3"
+ width="101" height="101" usemap="#pl-p3" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_pl-p3" class="i" href="javascript:Nav('pl-p3')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a8">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a10">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/pl-p3.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/pl-p3.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/pl-p3.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/pl-p3.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/pl-p3.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/pl-p3.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/pl-p3.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=pl-p3" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_pl-p3"><p><table id="t-pl-p3" style="width:105px">
+    <colgroup><col style="width:103px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="b3xs23y/48pup.rle">
+	    Pulsar; Pulsar CP 48-54-72 [4]</a></td>
+    </tr>
+</table></p></div>
+<map name="pl-p3">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,81,20,101" href="#bottom" />
+	<area coords="81,0,101,20" href="zip/pl-p3.zip" />
+	<area coords="81,81,101,101" href="stamp/pl-p3.rle" />
+	<area coords="0,0,101,101" href="b3xs23y/48pup.rle" />
+</map>
+<p>Unlike in Life, pulsars can no longer form naturally from pairs of forming
+traffic lights, but can form from four of them.</p>
+<p>The Pulsar consists of four inducting Traffic light predecessors. Its
+predecessors are used in many other oscillators (as described under
+<a class="i" href="bits-12.htm#cons-12">Traffic light</a>). Pulsars are also
+infinitely extensible, by arranging multiple quadrants in a closed
+loop. The Pulsar, consisting of four quadrants, is the smallest such
+arrangement. The <a class="p" href="lg/144qu.rle">Quasar</a>, consisting of twelve
+quadrants, is the next largest.</p>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Pedestrian_Life">Pedestrian Life</a>,
+<a class="x" href="http://conwaylife.com/wiki/Pulsar">Pulsar</a>,
+<a class="x" href="http://conwaylife.com/wiki/Traffic_light">Traffic light</a>.</p>
+</article>
+<hr /><article><a id="a10" name="a10"></a>
+<a id="pl-p120" name="pl-p120"></a>
+<h2>1 Period 120 oscillator</h2>
+<p><img src="map/pl-p120.png" alt="B38/S23 P120"
+ width="161" height="81" usemap="#pl-p120" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_pl-p120" class="i" href="javascript:Nav('pl-p120')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a9">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a11">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/pl-p120.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/pl-p120.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/pl-p120.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/pl-p120.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/pl-p120.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/pl-p120.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/pl-p120.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=pl-p120" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_pl-p120"><p><table id="t-pl-p120" style="width:165px">
+    <colgroup><col style="width:163px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="b3xs23y/28gl4bk2.rle">Two blocks hassling
+	    four gliders [8]</a></td>
+    </tr>
+</table></p></div>
+<map name="pl-p120">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,61,20,81" href="#bottom" />
+	<area coords="141,0,161,20" href="zip/pl-p120.zip" />
+	<area coords="141,61,161,81" href="stamp/pl-p120.rle" />
+	<area coords="0,0,161,81" href="b3xs23y/28gl4bk2.rle" />
+</map>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Block">Block</a>,
+<a class="x" href="http://conwaylife.com/wiki/Glider">Glider</a>,
+<a class="x" href="http://conwaylife.com/wiki/Pedestrian_Life">Pedestrian Life</a>.</p>
+</article>
+<hr /><article><a id="a11" name="a11"></a>
+<a id="pl-ss" name="pl-ss"></a>
+<h2>2 Spaceships</h2>
+<p>Pedestrian Life supports an unstable puffer mechanism similar to
+Life&rsquo;s switch engine. There are many arrangements of two of these in
+tandem that can form (5,2)<i>c</i>/190 oblique spaceships. One of these is
+shown here, as well as another that alternately creates and destroys a
+blinker. There are also many similar tandem arrangements that form
+puffers.</p>
+<p><img src="map/pl-ss.png" alt="B38/S23 spaceships"
+ width="381" height="121" usemap="#pl-ss" /></p>
+<p><table><colgroup><col span="12" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_pl-ss" class="i" href="javascript:Nav('pl-ss')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a10">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a12">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/pl-ss.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/pl-ss.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/pl-ss.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="lis/pl-ss.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/pl-ss.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/pl-ss.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=pl-ss" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_pl-ss"><p><table id="t-pl-ss" style="width:385px">
+    <colgroup><col style="width:211px;" /><col style="width:172px;" />
+	</colgroup>
+    <tr>
+	<td><a class="p" href="b3xs23y/38p190k.rle">(5,2)<i>c</i>/190
+	    oblique spaceship [10]</a></td>
+	<td><a class="p" href="b3xs23y/32p380k.rle">(5,2)<i>c</i>/190
+	    oblique spaceship dragging blinker [9]</a></td>
+    </tr>
+</table></p></div>
+<map name="pl-ss">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,101,20,121" href="#bottom" />
+	<area coords="361,0,381,20" href="zip/pl-ss.zip" />
+	<area coords="361,101,381,121" href="stamp/pl-ss.rle" />
+	<area coords="0,0,210,121" href="b3xs23y/38p190k.rle" />
+	<area coords="210,0,381,121" href="b3xs23y/32p380k.rle" />
+</map>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Blinker">Blinker</a>,
+<a class="x" href="http://conwaylife.com/wiki/Pedestrian_Life">Pedestrian Life</a>,
+<a class="x" href="http://conwaylife.com/wiki/Switch_engine">Switch engine</a>.</p>
+</article>
+<hr /><article><a id="a12" name="a12"></a>
+<a id="pl-gun" name="pl-gun"></a>
+<h2>1 Gun</h2>
+<p>Pedestrian Life supports a small common glider gun.</p>
+<p><img src="map/pl-gun.png" alt="B38/S23 gun"
+ width="481" height="436" usemap="#pl-gun" /></p>
+<p><table><colgroup><col span="12" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_pl-gun" class="i" href="javascript:Nav('pl-gun')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a11">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a13">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/pl-gun.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/pl-gun.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/pl-gun.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="lis/pl-gun.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/pl-gun.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/pl-gun.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=pl-gun" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_pl-gun"><p><table id="t-pl-gun" style="width:485px">
+    <colgroup><col style="width:483px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="b3xs23y/g424gl4.rle">Period 424 (mod 106)
+	    rotating glider gun [6]</a></td>
+    </tr>
+</table></p></div>
+<map name="pl-gun">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,416,20,436" href="#bottom" />
+	<area coords="461,0,481,20" href="zip/pl-gun.zip" />
+	<area coords="461,416,481,436" href="stamp/pl-gun.rle" />
+	<area coords="0,0,481,436" href="b3xs23y/g424gl4.rle" />
+</map>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Glider">Glider</a>,
+<a class="x" href="http://conwaylife.com/wiki/Pedestrian_Life">Pedestrian Life</a>.</p>
+</article>
+<hr /><article><a id="a13" name="a13"></a>
+<a id="pl-puff" name="pl-puff"></a>
+<h2>2 Puffers</h2>
+<p><img src="map/pl-puff.png" alt="B38/S23 puff"
+ width="321" height="141" usemap="#pl-puff" /></p>
+<p><table><colgroup><col span="12" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_pl-puff" class="i" href="javascript:Nav('pl-puff')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a12">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a14">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/pl-puff.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/pl-puff.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/pl-puff.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="lis/pl-puff.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/pl-puff.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/pl-puff.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=pl-puff" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_pl-puff"><p><table id="t-pl-puff" style="width:325px">
+    <colgroup><col style="width:151px;" /><col style="width:172px;" />
+	</colgroup>
+    <tr>
+	<td><a class="p" href="b3xs23y/p589.rle">Period 589 <i>c</i>/19 diagonal
+	    puffer that leaves 4 blinkers, 12 blocks, 2 beehives, 1 ship,
+	    4 loaves, 2 rearward gliders, and 4 forward gliders. [4]</a></td>
+	<td><a class="p" href="b3xs23y/p488.rle">Period 488 57<i>c</i>/488
+	    orthogonal puffer that leaves 2 blinkers, 15 blocks, 6 boats,
+	    6 beehives, 2 toads, and 2 loaves. [8]</a></td>
+    </tr>
+</table></p></div>
+<map name="pl-puff">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,121,20,141" href="#bottom" />
+	<area coords="301,0,321,20" href="zip/pl-puff.zip" />
+	<area coords="301,121,321,141" href="stamp/pl-puff.rle" />
+	<area coords="0,0,150,141" href="b3xs23y/p589.rle" />
+	<area coords="150,0,321,141" href="b3xs23y/p488.rle" />
+</map>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Beehive">Beehive</a>,
+<a class="x" href="http://conwaylife.com/wiki/Blinker">Blinker</a>,
+<a class="x" href="http://conwaylife.com/wiki/Block">Block</a>,
+<a class="x" href="http://conwaylife.com/wiki/Boat">Boat</a>,
+<a class="x" href="http://conwaylife.com/wiki/Glider">Glider</a>,
+<a class="x" href="http://conwaylife.com/wiki/Loaf">Loaf</a>,
+<a class="x" href="http://conwaylife.com/wiki/Pedestrian_Life">Pedestrian Life</a>,
+<a class="x" href="http://conwaylife.com/wiki/Ship">Ship</a>,
+<a class="x" href="http://conwaylife.com/wiki/Toad">Toad</a>.</p>
+</article>
+<hr class="a" /><a id="hl-intro" name="hl-intro"></a>
+<h2>B38/S238 (Honey Life)</h2>
+<p><em>B38/S238</em> is a very close relative to Life, sharing many features
+of <a class="j" href="#8l-intro">EightLife</a>
+and <a class="j" href="#pl-intro">Pedestrian Life</a>.
+It is called Honey Life because, as in EightLife, tables turn into honeycombs
+(12.121), making those very common.</p>
+<p>The still-lifes are identical to those in Life, EightLife, and Pedestrian
+Life.</p>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Honey_Life">Honey Life</a>,
+<a class="x" href="http://conwaylife.com/wiki/Honeycomb">Honeycomb</a>.</p>
+<hr /><article><a id="a14" name="a14"></a>
+<a id="hl-p2" name="hl-p2"></a>
+<h2>1 Period 2 oscillator</h2>
+<p><img src="map/hl-p2.png" alt="B38/S238 P2"
+ width="81" height="81" usemap="#hl-p2" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_hl-p2" class="i" href="javascript:Nav('hl-p2')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a13">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a15">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/hl-p2.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/hl-p2.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/hl-p2.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/hl-p2.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/hl-p2.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/hl-p2.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/hl-p2.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=hl-p2" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_hl-p2"><p><table id="t-hl-p2" style="width:85px">
+    <colgroup><col style="width:83px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="b3xs23y/10mbh.rle">
+	    Medium box [7]</a></td>
+    </tr>
+</table></p></div>
+<map name="hl-p2">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,61,20,81" href="#bottom" />
+	<area coords="61,0,81,20" href="zip/hl-p2.zip" />
+	<area coords="61,61,81,81" href="stamp/hl-p2.rle" />
+	<area coords="0,0,81,81" href="b3xs23y/10mbh.rle" />
+</map>
+<p>This oscillator has a cheaper synthesis in Honey Life than it does in
+EightLife.</p>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Honey_Life">Honey Life</a>.</p>
+</article>
+</main>
+<hr class="a" /><a id="a15" name="a15"></a>
+<a id="bottom" name="bottom"></a>
+<p><b>Other rules:</b>
+	<a class="i" href="lifepage.htm"><em>B3/S23</em> (Conway&rsquo;s Life)</a>,
+	<a class="i" href="b2s2.htm"><em>B2/S2</em> (2/2 Life)</a>,
+	<a class="i" href="b34s34.htm"><em>B34/S34</em> (3/4 Life)</a>,
+	<a class="i" href="b36s23.htm"><em>B36/S23</em> (HighLife)</a>,
+	<a class="i" href="b36s245.htm"><em>B36/S245</em> (Replicator rule)</a>,
+	<em>B3<i>x</i>/S23<i>y</i></em> (Life-like rules),
+	<a class="i" href="rulell.htm"><em>B2n3/S23-q</em> (LeapLife)</a>,
+	<a class="i" href="rulevl.htm"><em>B2n3-q5y6c/S23-k</em> (VesselLife)</a>,
+	<a class="i" href="rulemn.htm">Niemiec&rsquo;s Rules</a>,
+	<a class="i" href="color.htm">Multi-colored Life</a>.</p>
+<p><b>See also:</b>
+    <a href="lifestr.htm">structure</a>,
+    <a href="lifestyl.htm">style book</a>,
+    <a href="lifeterm.htm">definitions</a>,
+    <a href="lifemeth.htm">search methodologies</a>,
+    <a href="recipe.htm">conversion recipes</a>,
+    <a href="liferule.htm">other rules</a>,
+    <a href="lifenews.htm">news</a>,
+    <a href="lifecred.htm">credits</a>,
+    <a href="lifelink.htm">links</a>,
+    <a href="lifemap.htm">site map</a>,
+    <a class="i" target="lifesrch" href="lifesrch.htm">search</a>,
+    <a class="i" target="lifesrch" href="lifxsrch.htm">expanded search</a>,
+    <a class="i" target="srchhelp" href="srchhelp.htm">search help</a>.</p>
+<p><a href="index.htm">Home page</a> |
+<a href="lifepage.htm">Life page</a></p>
+<p><a href="lifepage.htm#copyright">Copyright &copy;
+1997, 1998, 1999, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022 by Mark. D. Niemiec.
+All rights reserved</a>.<br />
+This page was last updated on <em>2022-07-03</em>.</p>
+<script type="text/javascript"><!--
+"use strict";
+// Convert a named DOM object (id="id") into the actual object
+function Id (id) {
+    return document.getElementById (id);
+}
+// Expand or collapse stamp image text table
+function Nav (n) {
+    var v = Id ("a_" + n).childNodes[0].nodeValue === "+";
+    Id ("a_" + n).childNodes[0].nodeValue = v ? "\u2013" : "+";
+    Id ("b_" + n).style.display = v ? "block" : "none";
+}
+// Set alt and title attributes on an element
+function SetAltTitle (p, n) {
+    if (p && p.href) {
+	p.title = p.alt = n;
+    }
+}
+// Provide title tooltips for all stamp images
+function Titles () {
+    var q = [];				// name = q["id"][i];
+    var t = document.getElementsByTagName ("table");
+    for (i = 0; i < t.length; ++i) {
+	var n = t[i].id;		// table id
+	if (n) {
+	    var r = t[i].getElementsByTagName ("tr");
+	    var b = [];			// patterns in table
+	    for (var j = 0; j < r.length; ++j) {
+		var d = r[j].getElementsByTagName ("td");
+		for (var k = 0; k < d.length; ++k) {
+		    if (d[k].getElementsByTagName ("a"). length) {
+			// Get text in a way that works on most browsers
+			m = (d[k].textContent || d[k].innerText)
+			  .replace (/[\n\t]/g, " ") .replace (/   */g, " ")
+			  .replace (/^ /, "") .replace (/ $/, "")
+			  .replace (/[\xAD\u8230]/g, "");
+			b.push (m);
+		    }
+		}
+	    }
+	    q[n] = b;
+	}
+    }
+    var m = document.getElementsByTagName ("map");
+    for (var i = 0; i < m.length; ++i) {
+	var b = q["t-"+m[i].name];
+	var s = m[i].getElementsByTagName ("area");
+	if (s) {
+	    // First 4 areas are NW, SW, NE, SE corners; last is default
+	    // Others are in the same order as patterns in table
+	    SetAltTitle (s[0], "Top of page");
+	    SetAltTitle (s[1], "Bottom of page");
+	    if (s[3]) {
+		SetAltTitle (s[2], "Zip archive of all patterns");
+		SetAltTitle (s[3], "This stamp page");
+		for (var j = 4, k = 0; j < s.length; ++j) {
+		    var a = s[j].href;
+		    if ((n = a.indexOf ("~")) >= 0) {
+			SetAltTitle (s[j], a.substring (0, n));
+		    } else if (b && b[k]) {
+			SetAltTitle (s[j], b[k++]);
+		    }
+		}
+	    } else {
+		SetAltTitle (s[2], "This stamp page");
+	    }
+	}
+    }
+}
+Titles ();
+// -->
+</script>
+</body></html>

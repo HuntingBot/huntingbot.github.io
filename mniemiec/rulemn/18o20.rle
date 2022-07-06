@@ -1,0 +1,13 @@
+#N 18o20.rle: P20 c/20 spaceship: Synthesis
+#O Mark D. Niemiec's life synthesis database, Sun Oct 29 16:51:03 2017
+#C  ..OOO.....OOO..
+#C  O..OO.....OO..O
+#C  ..O.O.....O.O..
+#C  ..O.........O..
+x = 146, y = 39, rule = B3/S2aei3aeijr4-cknqy
+7bo21bo$8bo19bo$5bobbo19bobbo$5boo23boo17bxx15bxx$bboo29boo14bxx15bxx$
+3bo29bo$oboo29boobo$boo31boo15$50bxx13bxx23boo13boo$5bo3boo15boo3bo18b
+xx13bxx23boo13boo$5boobboo15boobboo$4boboo21boobo17bxx13bxx23boo13boo$
+5boo23boo18bxx13bxx23boo13boo6$83boo27boo19b3x5b3x$84bo27bo18bxbbxx5b
+xxbbx$81bo33bo17bxbx5bxbx$82boo7bo13bo7boo18bx9bx$90b3o11b3o$89boobo
+11boboo$91bo13bo!

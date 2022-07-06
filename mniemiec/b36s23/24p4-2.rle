@@ -1,0 +1,10 @@
+#N 24p4-2.rle: 24-bit P4 #2: Pattern image
+#O Mark D. Niemiec's life synthesis database, Sat Aug 05 05:43:58 2017
+#C  ..O..............
+#C  .O.O..........OO.
+#C  ...........OO.O..
+#C  O..OO.O.O.......O
+#C  OO...O..O.O.O..OO
+#C  ......O....O.....
+x = 17, y = 6, rule = B36/S23
+bbx$bxbx10bxx$11bxxbx$xbbxxbxbx7bx$xx3bxbbxbxbxbbxx$6bx4bx!

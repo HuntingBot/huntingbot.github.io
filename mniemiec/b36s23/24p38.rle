@@ -1,0 +1,10 @@
+#N 24p38.rle: 24-bit P38: Pattern image
+#O Mark D. Niemiec's life synthesis database, Sat Aug 05 08:41:22 2017
+#C  .OO.........OO.
+#C  O.OO.......OO.O
+#C  OO.OO.....OO.OO
+#C  ...O...O...O...
+#C  ......O.O......
+#C  .......O.......
+x = 15, y = 6, rule = B36/S23
+bxx9bxx$xbxx7bxxbx$xxbxx5bxxbxx$3bx3bx3bx$6bxbx$7bx!

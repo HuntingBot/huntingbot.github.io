@@ -1,0 +1,25 @@
+#N 15mblw.rle: Medium blinker on long W: Synthesis
+#O Mark D. Niemiec's life synthesis database, Sat May 08 18:17:10 2021
+#C  OO.......
+#C  .O.......
+#C  .OOO.....
+#C  ...O....O
+#C  ...OOO..O
+#C  .....O..O
+#C  ........O
+x = 172, y = 138
+150b3o$150boobo$151b3o$152boo20$134bo4bo$134boobboo$132b4obb4o$133boo
+4boo12$165b4x3$6boo18bxx18boo18bxx18boo9boo17bxx18boo28bxx$6boo19bx19b
+o19bx19bo9boo18bx19bo29bx$6boboo17b3x17b3o17b3x17b3o7boboo16b3x17b3o
+27b3x$b3obb4o19bx19bo19bx19bo7b4o18bx19bo29bx$oboo65bxx18boo28b3x17b3o
+27b3x$3o118bx19bo29bx$oo3boo90b4o$4b3o90boboo$3boobo90boo$3b3o91boo12b
+oo$45b4obb4o55b4o$45boobobboboo55boo$47boobboo58bo$47boobboo10$55boo$
+54b4o$54boo$55bo11$35b4x16b4o16b4x16b4o16b4x16b4o26b4x$16b3o126boo$9b
+oo4boboo126boo$9b3o3b3o58bxx18boo18bxx18boo7boboo17bxx$9boboobboo36bo
+23bx19bo19bx19bo7b4o18bx$10b3o40bo23bxx18boo18bxx18boo28b3x$54bobboo
+110bx$50booboob4o12b3y17b3o50b4o$52boobboo14byy18boo51boboo$57bo87boo$
+52boo35boo54boo12boo$50booboo33b4o66b4o$54bo35boo66boo$53bo36bo68bo$
+53bo16$95b4o16b4x16b4o26b4x3$96boo18bxx18boo9boo17bxx$97bo19bx19bo9boo
+18bx$97b3o17b3x17b3o7boboo16b3x$99bo19bx19bo7b4o18bx$119bxx18boo28b3x$
+171bx$147b4o$147boboo$147boo$147boo12boo$95b4obb4o55b4o$95boobobboboo
+55boo$97boobboo58bo$97boobboo10$105boo$104b4o$104boo$105bo!

@@ -1,0 +1,21 @@
+#N 114sd2b.rle: Trans super diamonds sharing sparks: Pattern image
+#O Mark D. Niemiec's life synthesis database, Sun Jun 05 23:22:04 2016
+#C  ...OOOOOO....................
+#C  .OO......OO..................
+#C  .O........O.........OOOOOO...
+#C  O...OOOO...O......OO......OO.
+#C  O..O....O..O......O........O.
+#C  O..O.OO.O..O.....O...OOOO...O
+#C  O..O.OO.O..O..O..O..O....O..O
+#C  O..O....O..O..O..O..O.OO.O..O
+#C  O...OOOO...O.....O..O.OO.O..O
+#C  .O........O......O..O....O..O
+#C  .OO......OO......O...OOOO...O
+#C  ...OOOOOO.........O........O.
+#C  ..................OO......OO.
+#C  ....................OOOOOO...
+x = 29, y = 14, rule = B34/S34
+3b6x$bxx6bxx$bx8bx9b6x$x3b4x3bx6bxx6bxx$xbbx4bxbbx6bx8bx$xbbxbxxbxbbx
+5bx3b4x3bx$xbbxbxxbxbbxbbxbbxbbx4bxbbx$xbbx4bxbbxbbxbbxbbxbxxbxbbx$x3b
+4x3bx5bxbbxbxxbxbbx$bx8bx6bxbbx4bxbbx$bxx6bxx6bx3b4x3bx$3b6x9bx8bx$18b
+xx6bxx$20b6x!

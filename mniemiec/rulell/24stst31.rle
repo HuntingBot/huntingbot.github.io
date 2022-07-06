@@ -1,0 +1,16 @@
+#N 24stst31.rle: Two stars offset 3 steps and 1 space: Synthesis
+#O Mark D. Niemiec's life synthesis database, Fri Jun 19 19:16:58 2020
+#C  ..OOO...........
+#C  ............O...
+#C  O.....O...O...O.
+#C  O.....O....O.O..
+#C  O.....O..O.....O
+#C  ...........O.O..
+#C  ..OOO.....O...O.
+#C  ............O...
+x = 110, y = 50
+83bo$4bo31b3x27b3o13bo13b3x$5boo75b3o21bx$4boo28bx5bx23bo5bo23bx5bx3bx
+3bx$34bx5bx23bo5bo23bx5bx4bxbx$34bx5bx23bo5bo23bx5bxbbx5bx$oo103bxbx$b
+oo33b3x27b3o9b3o15b3x5bx3bx$o77bo27bx$79bo15$43bobo$44boo$44bo5$96b3x$
+106bx$94bx5bx3bx3bx$56bo37bx5bx4bxbx$57boo35bx5bxbbx5bx$56boo47bxbx$
+96b3x5bx3bx$106bx3$61boo$60bobo$62bo4$60b3o$62bo$61bo!

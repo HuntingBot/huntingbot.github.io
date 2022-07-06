@@ -1,0 +1,19 @@
+#N 120sdbk.rle: Super diamonds hassling block: Pattern image
+#O Mark D. Niemiec's life synthesis database, Sun Jun 05 23:22:21 2016
+#C  ...OOOOOO..............OOOOOO...
+#C  .OO......OO..........OO......OO.
+#C  .O........O..........O........O.
+#C  O...OOOO...O........O...OOOO...O
+#C  O..O....O..O........O..O....O..O
+#C  O..O.OO.O..O..OOOO..O..O.OO.O..O
+#C  O..O.OO.O..O..OOOO..O..O.OO.O..O
+#C  O..O....O..O........O..O....O..O
+#C  O...OOOO...O........O...OOOO...O
+#C  .O........O..........O........O.
+#C  .OO......OO..........OO......OO.
+#C  ...OOOOOO..............OOOOOO...
+x = 32, y = 12, rule = B34/S34
+3b6x14b6x$bxx6bxx10bxx6bxx$bx8bx10bx8bx$x3b4x3bx8bx3b4x3bx$xbbx4bxbbx
+8bxbbx4bxbbx$xbbxbxxbxbbxbb4xbbxbbxbxxbxbbx$xbbxbxxbxbbxbb4xbbxbbxbxxb
+xbbx$xbbx4bxbbx8bxbbx4bxbbx$x3b4x3bx8bx3b4x3bx$bx8bx10bx8bx$bxx6bxx10b
+xx6bxx$3b6x14b6x!

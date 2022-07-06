@@ -1,0 +1,14 @@
+#N 16mbchs4.rle: Medium blinker on up chair tie up chair: Synthesis
+#O Mark D. Niemiec's life synthesis database, Tue Apr 28 22:18:36 2020
+#C  O.O......
+#C  OOO......
+#C  ..OO....O
+#C  ...OOO..O
+#C  ...O.O..O
+#C  ........O
+x = 120, y = 48
+5b3o$6boo16bxx18boo18bxx18boo28bxx$7bo17bx19bo19bx19bo29bx$24b3x17b3o
+17b3x17b3o27b3x$26b3x17b3o17b3x17b3o27b3x$27bx19bo19bx19bo29bx$7bo19b
+xx18boo18bxx18boo28bxx$b3obboo$oboob3o$3o18b3y17b3o72b4x$oo36boo$36boo
+boo$40bo$39bo$39bo7$84boo4boo$83b4obb4o$85boobboo$85bo4bo20$103boo$
+102b3o$101boobo$101b3o!

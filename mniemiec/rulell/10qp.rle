@@ -1,0 +1,16 @@
+#N 10qp.rle: Quadpole: Synthesis
+#O Mark D. Niemiec's life synthesis database, Mon Feb 08 05:58:56 2021
+#C  OO.....
+#C  O.O....
+#C  .......
+#C  ..O.O..
+#C  .......
+#C  ....O.O
+#C  .....OO
+x = 151, y = 28
+91bo$bbo37bo48bobo$3bo37bo48boo$b3o35b3o18bxx18boo18bxx18boo18bxx$60bx
+bx17boo12bobo3bxbx17boo18bxbx$23bx19bo50boo$oo21bx19bo18bxbx30bo6bxbx
+37bxbx$boo20bx19bo45b3o$o63bxbx10bo3boo6bo14bxbx37bxbx$45b3o17bxx10boo
+boo8bo14bxx10bo$45bo30bobo3bo33bobo27bxbx$46bo68bobbo4boo$116boo5bobo
+22bxbx$124bo24bxx$116boo$115bobo$116bo$130bo$129bobo$129bobo$130bo5$
+113boo$112bobo$114bo!

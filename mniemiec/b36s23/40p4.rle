@@ -1,0 +1,17 @@
+#N 40p4.rle: 40-bit P4: Pattern image
+#O Mark D. Niemiec's life synthesis database, Sat Aug 05 03:04:35 2017
+#C  ...O.....O...
+#C  ..O.O...O.O..
+#C  .O.........O.
+#C  OO..O...O..OO
+#C  O....O.O....O
+#C  .....O.O.....
+#C  .....O.O.....
+#C  O....O.O....O
+#C  OO..O...O..OO
+#C  .O.........O.
+#C  ..O.O...O.O..
+#C  ...O.....O...
+x = 13, y = 12, rule = B36/S23
+3bx5bx$bbxbx3bxbx$bx9bx$xxbbx3bxbbxx$x4bxbx4bx$5bxbx$5bxbx$x4bxbx4bx$
+xxbbx3bxbbxx$bx9bx$bbxbx3bxbx$3bx5bx!

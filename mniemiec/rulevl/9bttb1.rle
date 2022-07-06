@@ -1,0 +1,32 @@
+#N 9bttb1.rle: Cis tub on boat: Synthesis
+#O Mark D. Niemiec's life synthesis database, Sun May 23 11:54:07 2021
+#C  .OO....
+#C  O.O..O.
+#C  .O..O.O
+#C  .....O.
+x = 195, y = 112
+90bo$90bobo$90boo$123bo$68bxx20bo17bxx11bobo4boo18bxx$3bobo19bx19bo3b
+oo14bxbbxbx14bo3boo14bxbbxbx11boo4bobo14bxbbxbx$4boo18bxbx17boboboo14b
+xbxbbx14bobobbobo12bxbxbbx19bo14bxbxbbx$4bo20bxx18boo3bo14bx19bo19bx
+14bo24bx$120boo$3boo115bobo$bbobo$4bo10$162bo$163bo$161b3o$8boo18bxx
+18boo18bxx18boo18bxx18boo18bxx18boo18bxx$5bobbobo17bxbx14bobbobo17bxbx
+14bobbobo17bxbx14bobbobo17bxbx14bobbobo17bxbx$4bobobbo19bx14bobobbo19b
+x14bobobbo19bx14bobobbo19bx14bobobbo19bx$5bo39bo39bo39bo39bo$3o38boo$
+bbo37bobo38b3o38boo$bo40bo40bo37bobo$82bo40bo11$bbo38bo$obo39bo$boo5b
+oo18bxx10b3o5boo18bxx18boo16bx21boo18bxx18boo18bxx$5bobbobo17bxbx14bo
+bbobo17bxbx14bobbobo14bxbx17bobbobo14bxbbxx15bobbobo14bxbbxx$4bobobbo
+19bx14bobobbo19bx14bobobbo3bo10bxbbx5by10bobobbo14bxbx17bobobbo4bo9bxb
+x$5bo39bo39bo5boo12bxx5byby10bo19bx19bo6boo11bx$92boo17bybby16bo20byy
+19boo17byy$112byy17boo19byy38byy$130bobo14$8boo18boo18boo18boo$3obbobb
+obo14bobbobo14bobbobo14bobbobo$bbobobobbo10b3obobobbo14bobobbo14bobobb
+o$bo3bo16bobbo14boo3bo19bo$21bo19boo27boo$40bo28bobo$71bo10$9bobo16bo
+17bo$10boo14bobo15bobo15bobo18bo$10bo16boo16boo16boo16bobo$63bo18boo$
+8boo18boo18boo18boo18boo11bo6boo18boo$5bobbobo14bobbobo14bobbobo14bobb
+obo14bobbobo11bobbobbobo10bo3bobbobo$4bobobbo14bobobbo14bobobbo14bobo
+bbo14bobobbo10b3obobobbo12bobobobbo$5bo19bo19bo19bo19bo19bo14b3obbo13$
+65bobo22bobo38bo20bo$65boo23boo39bobo17bo20bo$42bobo21bo24bo39boo18b3o
+18bobo$42boo128boo$8boo18boo13bo4boo18boo18boo38boo18boo18boo18boo3bo$
+5bobbobob3o10bobbobo14bobbobo14bobbobo14bobbobo34bobbobo14bobbobo14bo
+bbobo14bobbobobo$4bobobbobbo11bobobbo14bobobbo14bobobbo14bobobbo34bobo
+bbo14bobobbo14bobobbo14bobobbobb3o$5bo7bo11bo19bo19bo19bo39bo19bo19bo
+19bo$$27b3o$27bo$28bo!

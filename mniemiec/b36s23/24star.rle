@@ -1,0 +1,24 @@
+#N 24star.rle: Star: Synthesis
+#O Mark D. Niemiec's life synthesis database, Mon Jan 14 04:02:48 2019
+#C  ....OOO....
+#C  ...........
+#C  ..O.O.O.O..
+#C  ...........
+#C  O.O.....O.O
+#C  O.........O
+#C  O.O.....O.O
+#C  ...........
+#C  ..O.O.O.O..
+#C  ...........
+#C  ....OOO....
+x = 108, y = 51
+55bobo$56boo$56bo$73bobo$73boo$74bo$58bobo$59boo$54bo4bo$48bo6boo$49b
+oo3boo16bo$48boo9bobo9bo4bobo$40bo18boo10b3obboo$41boo17bo16bo$40boo7b
+o17bo$47bobo17bobo$48boo17boo$56bo20bobo$52bo3bobo18boo8bo$53bobboo10b
+3o7bo6boo$51b3o14bo17boo13b3x$69bo11bo$75boobboo18bxbxbxbx$bo4bo67boo
+4boo$bbobbo16bx39bo13bo20bxbx5bxbx$3obb3o13bxbx37bobo33bx9bx$22bx25bo
+13bo34bxbx5bxbx$8b3o32boo4boo$8bo35boobboo49bxbxbxbx$9bo33bo11bo$37boo
+17bo14b3o27b3x$38boo6bo7b3o10boobbo$37bo8boo18bobo3bo$45bobo20bo$56boo
+17boo$55bobo17bobo$57bo17bo7boo$47bo16bo17boo$47boobb3o10boo18bo$46bob
+o4bo9bobo9boo$52bo16boo3boo$68boo6bo$65bo4bo$64boo$64bobo$50bo$50boo$
+49bobo$68bo$67boo$67bobo!

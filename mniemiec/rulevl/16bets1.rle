@@ -1,0 +1,12 @@
+#N 16bets1.rle: Up bookend w/tub on bookend w/tub: Synthesis
+#O Mark D. Niemiec's life synthesis database, Tue Sep 01 04:43:12 2020
+#C  .O.....O.
+#C  O.O...O.O
+#C  .O.O.O.O.
+#C  ...O.O...
+#C  ..OO.OO..
+x = 79, y = 24
+10bo$8boo$obo6boo$boo$bo4$3bo$boo$bboo$32bxxbxx15booboo15bxxbxx$3bo29b
+xbx17bobo17bxbx$3boo26bxbxbxbx13bobobobo13bxbxbxbx$bbobo25bxbx3bxbx11b
+obo3bobo11bxbx3bxbx$31bx5bx13bo5bo13bx5bx5$32byybyy15booboo$32byybyy
+11b3obooboo$50bo$49bo!

@@ -1,0 +1,10 @@
+#N 13p2-3.rle: 13P2.3; Two Zs tossing light blinker: Pattern image
+#O Mark D. Niemiec's life synthesis database, Fri Apr 24 07:07:48 2020
+#C  ..O.....
+#C  OOO.....
+#C  O.OOO...
+#C  .......O
+#C  .....OOO
+#C  .....O..
+x = 6, y = 8
+bxx$bx$3x$bbx$bbx$4bxx$4bx$3bxx!

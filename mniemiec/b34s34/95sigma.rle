@@ -1,0 +1,32 @@
+#N 95sigma.rle: Sigma ship: Pattern image
+#O Mark D. Niemiec's life synthesis database, Mon Jun 10 21:19:55 2013
+#C  ....OO....
+#C  ...OOOO...
+#C  ...OOOO...
+#C  .O..OO..O.
+#C  .O......O.
+#C  O........O
+#C  .OO....O..
+#C  .O.OOOO.O.
+#C  .....OOOO.
+#C  OO........
+#C  .OOOOOO.O.
+#C  OOO.OOOO..
+#C  .OOO.....O
+#C  ..O.OOOOO.
+#C  .O.O.OOO.O
+#C  .O..O..O..
+#C  .O...OOOO.
+#C  O......O..
+#C  .OO.......
+#C  OOOOOOO...
+#C  .......O..
+#C  .....OO...
+#C  ...OOOO...
+#C  .......O..
+#C  .....O.OOO
+#C  .......O..
+x = 10, y = 26, rule = B34/S34
+4bxx$3b4x$3b4x$bxbbxxbbx$bx6bx$x8bx$bxx4bx$bxb4xbx$5b4x$xx$b6xbx$3xb4x
+$b3x5bx$bbxb5x$bxbxb3xbx$bxbbxbbx$bx3b4x$x6bx$bxx$7x$7bx$5bxx$3b4x$7bx
+$5bxb3x$7bx!

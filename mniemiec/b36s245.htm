@@ -1,0 +1,3624 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="copyright" content="1997,1998,1999,2013,2015,2016,2017,2018,2019,2020,2021,2022 Mark D. Niemiec" />
+<title>Life Variant: Replicator Rule (B36/S245)</title>
+<meta name="description"
+content="Life Variant: Replicator Rule: B36/S245 pattern lists and glider syntheses" />
+<meta name="keywords"
+content="conway game life variant replicator rule still life oscillator spaceship flotilla replicator pattern object list glider synthesis" />
+<link rel="prev" href="b36s23.htm" />
+<link rel="next" href="b3xs23y.htm" />
+<link rel="search" href="lifesrch.htm" />
+<link rel="author" href="lifecred.htm#niemiec" />
+<link rel="license" href="lifepage.htm#copyright" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="shortcut icon" href="images/rl-64.ico" />
+<style type="text/css">
+    body{lang="en-US";hyphens:auto;color:black;background-color:white;
+      margin-top:0;padding:0;border:0;height:100%;
+      font-family:Verdana,Arial,Helvetica,sans-serif;}
+    hr.a{border-style:solid;border-width:3px;border-color:#000000;}
+    h1{text-align:center;
+      font-family:Verdana,Arial,Helvetica,sans-serif;font-variant:small-caps;}
+    h2{font-family:Verdana,Arial,Helvetica,sans-serif;font-variant:small-caps;}
+    h3{font-family:Verdana,Arial,Helvetica,sans-serif;font-variant:small-caps;}
+    i{font-family:"Times New Roman",Times,serif;}
+    pre{hyphens:manual;}
+    img{border:2px black solid;}
+    ul,ol{margin-left:0px;padding-left:1en;}
+    table{border:1px black solid;border-spacing:0px;border-collapse:collapse;
+      table-layout:fixed;}
+    td,th{border:1px black solid;vertical-align:top;font-size:12px;padding:1px;}
+    td a{display:block;}
+    a{text-decoration:none;}
+    a:focus{text-decoration:underline;} a:hover{text-decoration:underline;}
+    a.p:link{color:#008000;} a.p:visited{color:#00C000;}
+    a.i:link{color:#000080;} a.i:visited{color:#0000C0;}
+    a.j:link{color:#008080;} a.j:visited{color:#00C0C0;}
+    a.x:link{color:#800000;} a.x:visited{color:#C00000;}
+    td:hover{background-color:#F0F0F0;}
+    .s{background-color:#E0E0E0;} td.s:hover{background-color:#E0E0E0;}
+    .b{background-color:#C0C0FF;} td.b:hover{background-color:#E0E0FF;}
+    .g{background-color:#C0FFC0;} td.g:hover{background-color:#E0FFE0;}
+    .t{background-color:#C0FFFF;} td.t:hover{background-color:#E0FFFF;}
+    .r{background-color:#FFC0C0;} td.r:hover{background-color:#FFE0E0;}
+    .m{background-color:#FFC0FF;} td.m:hover{background-color:#FFE0FF;}
+    .y{background-color:#FFFFC0;} td.y:hover{background-color:#FFFFE0;}
+    .o{background-color:#FFD0AA;} td.o:hover{background-color:#FFE8D5;}
+    .v{background-color:#FFAAD0;} td.v:hover{background-color:#FFD5E8;}
+    .h{background-color:#E0E0FF;} td.h:hover{background-color:#F0F0FF;}
+    .k{background-color:#000000;color:#FFFFFF;} td.k:hover{background-color:#C0C0C0;}
+    .n{background-color:#F0F0F0;text-align:center;} th.n:hover{background-color:#F8F8F8;}
+    .c{text-align:center;} .u{display:none;}
+</style>
+</head>
+<body>
+<a id="top" name="top"></a>
+<h1>Life Variant: Replicator Rule (B36/S245)</h1>
+<p class="c">
+	<a class="j" href="#rl-intro">Introduction</a> |
+	<a class="j" href="#rl-count">Object Counts</a> |
+	<a class="j" href="#rl-p1">Still-lifes</a> |
+	<a class="j" href="#rl-pp1">Pseudo-still-lifes</a> |
+	<a class="j" href="#rl-qp1">Quasi-still-lifes</a> |
+	<a class="j" href="#rl-p2">P2 oscillators</a> |
+	<a class="j" href="#rl-pp2">P2 pseudo-oscillators</a> |
+	<a class="j" href="#rl-qp2">P2 quasi-oscillator</a> |
+	<a class="j" href="#rl-p3">P3 oscillators</a> |
+	<a class="j" href="#rl-p4">P4 oscillators</a> |
+	<a class="j" href="#rl-pp4">P4 pseudo-oscillators</a> |
+	<a class="j" href="#rl-p4n">P4<i>n</i> oscillators</a> |
+	<a class="j" href="#rl-p5">P5 oscillators</a> |
+	<a class="j" href="#rl-p6">P6 oscillators</a> |
+	<a class="j" href="#rl-pp6">P6 pseudo-oscillators</a> |
+	<a class="j" href="#rl-p7">P7 oscillator</a> |
+	<a class="j" href="#rl-p8">P8 oscillators</a> |
+	<a class="j" href="#rl-p9">P9 oscillators</a> |
+	<a class="j" href="#rl-p10">P10 oscillators</a> |
+	<a class="j" href="#rl-p12">P12 oscillators</a> |
+	<a class="j" href="#rl-pp12">P12 pseudo-oscillators</a> |
+	<a class="j" href="#rl-p14">P14 oscillator</a> |
+	<a class="j" href="#rl-p119">P119 oscillator</a> |
+	<a class="j" href="#rl-p127">P127 oscillator</a> |
+	<a class="j" href="#rl-p204n">P204<i>n</i> oscillators</a> |
+	<a class="j" href="#rl-cons">Constellations</a> |
+	<a class="j" href="#rl-ss">Spaceships</a> |
+	<a class="j" href="#rl-meth">Methuselah</a> |
+	<a class="j" href="#rl-gun">Gun</a> |
+	<a class="j" href="#rl-puff">Replicator</a>
+</p>
+<hr class="a" /><main>
+<article><a id="a0" name="a0"></a>
+<a id="rl-intro" name="rl-intro"></a>
+<h2>Introduction</h2>
+<p>The rule <em>B36/S245</em>, also known as the Logarithmic Replicator rule,
+behaves very differently from Life. Its most distinguishing feature is that
+it has a small common replicator, the shuttle. The shuttle forms the basis
+for most complex constructions in this rule. Every 102 generations, the
+shuttle flips over and drops an egg, similar to how Life's queen bee shuttle
+works. However, unlike the queen bee, which is destroyed if it runs into its
+own egg, the shuttle splits into two asynchronous shuttles.</p>
+<p>The interactions between the shuttles and their eggs and other junk
+they leave behind is much more complicated than that of the replicator in
+<a class="i" href="b36s23.htm">HighLife</a>, but because this rule is even less
+explosive than Life is, the shuttle's activity tends to remain fairly
+close to its axis of growth.</p>
+<p>The shuttle itself is extremely versatile:</p>
+<p><ul>
+    <li>By itself, it grows irregularly, expanding in both directions,
+	filling the space between the ends with unpredictable junk,
+	and eventually stabilizing.</li>
+    <li>Two shuttles can be combined to form a clean replicator that
+	behaves like a one-dimensional XOR cellular automaton embedded
+	in a two-dimensional space, and whose Feynman diagram is a
+	Sierpinski gasket. This is similar to the replicator in
+	<a class="i" href="b36s23.htm">HighLife</a>.</li>
+    <li>If one end is capped by an oscillator that eats eggs, this forms
+	a single-ended wick-stretcher. If both ends are capped, it forms
+	an oscillator of arbitrarily high period.</li>
+    <li>Multiple shuttles in tandem can also be used to create oscillators,
+	clean spaceships, puffers, or guns.</li>
+</ul></p>
+<p>Synthesizing pseudo-objects is generally fairly easy, either by
+simultaneously shooting two edgewise objects at each other, or by first
+synthesizing one, and then adding the other (or adding another smaller
+object and then growing it into the desired object.</p>
+<p><ul>
+    <li>These small objects can be added to existing objects:
+	P, beehive (and turned into pond), cis carrier (and turned to
+	trans carrier), medium blinker, heavy blinker, toad, and trans egg.</li>
+    <li>These small objects cannot yet be added, but can be synthesized
+	edgewise: W (and turned into Z, P, crab, and long Z).</li>
+    <li>These objects cannot yet be added, so pseudo-objects involving
+	them cannot yet be synthesized, unless all other pieces can be added:
+	X, pinwheel, R, loaf, shuriken, shuriken w/domino, cis egg, cam,
+	and table on table.
+        (Groups of 2&hellip;4 Xs and Rs can be synthesized simultaneously).</li>
+</ul></p>
+<p>Soups in this rule tend to be quite tame, with one exception - if they form
+a shuttle. The shuttle is a natural replicator. It changes direction every 102
+generations after dropping an egg. However, if an egg is in its path, it
+creates large sparks, and then reforms two shuttles after 96 generations,
+so its population forms an irregularly-growing sawtooth. There are many ways
+of combining shuttles to create spaceships, puffers, and guns. Most of the
+three-glider conversion tools involve two gliders forming a shuttle, and a
+third glider hitting it before it grows too large. Many of the larger exotic
+still-lifes with even symmetry evolve from the shuttle.</p>
+<p>David Eppstein wrote an 
+<a class="x" href="https://www.ics.uci.edu/~eppstein/ca/replicators/b36s245.html">article</a>
+about replicators in this rule.</p>
+<p>Two shuttles can combine to form a regular replicator.</p>
+<p>The point on the W can eat gliders. Several other oscillators that have
+similar protruding points (e.g. pinwheel and R) can also eat gliders. One
+phase of the glider has a protruding point that can eat several objects.</p>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/HighLife">HighLife</a>,
+<a class="x" href="http://conwaylife.com/wiki/Queen_bee_shuttle">Queen bee shuttle</a>,
+<a class="x" href="http://conwaylife.com/wiki/Replicator">Replicator</a>.</p>
+</article>
+<hr /><article><a id="a1" name="a1"></a>
+<a id="rl-count" name="rl-count"></a>
+<h2>Object Counts</h2>
+<p>Computer searches have counted
+<a class="j" href="#rl-p1">still-lifes</a> and
+<a class="j" href="#rl-pp1">pseudo-still-lifes</a> up to 29 bits and
+<a class="j" href="#rl-p2">period 2 oscillators</a> and
+<a class="j" href="#rl-pp2">period 2 pseudo-oscillators</a> up to 14 bits.</p>
+<p>Numbers in <b>bold face</b> have been confirmed by computer search. Other
+given numbers are believed to be complete, but have not yet been verified.
+Lists with large numbers of objects that have not yet been counted are shown
+with &ldquo;many&rdquo;.</p>
+<p>Status of object lists on this page is shown by background color:</p>
+<p><ul>
+    <li>White (or <span class="h">light blue</span>) indicates small complete
+	object list; may have syntheses for some.</li>
+    <li><span class="r">Red</span> indicates complete object count; may have
+	syntheses for some.</li>
+    <li><span class="s">Grey</span> indicates objects not counted; may have
+	syntheses for some.</li>
+    <li><span class="t">Teal</span> indicates an aggregate list, containing the
+	sums of related lists preceding them.</li>
+</ul></p>
+<p><table style="width:1274px">
+    <colgroup><col style="width:161px;" /><col span="12" style="width:20px;" />
+	<col span="4" style="width:30px;" /><col span="3" style="width:40px;" />
+	<col span="3" style="width:50px;" /><col span="3" style="width:60px;" />
+	<col span="2" style="width:70px;" /><col style="width:161px;" />
+	</colgroup>
+    <tr>
+	<td class="h"><b>Population</b></td>
+	<td class="h"><b>3</b></td><td class="h"><b>4</b></td>
+	<td class="h"><b>5</b></td><td class="h"><b>6</b></td>
+	<td class="h"><b>7</b></td><td class="h"><b>8</b></td>
+	<td class="h"><b>9</b></td><td class="h"><b>10</b></td>
+	<td class="h"><b>11</b></td><td class="h"><b>12</b></td>
+	<td class="h"><b>13</b></td><td class="h"><b>14</b></td>
+	<td class="h"><b>15</b></td><td class="h"><b>16</b></td>
+	<td class="h"><b>17</b></td><td class="h"><b>18</b></td>
+	<td class="h"><b>19</b></td><td class="h"><b>20</b></td>
+	<td class="h"><b>21</b></td><td class="h"><b>22</b></td>
+	<td class="h"><b>23</b></td><td class="h"><b>24</b></td>
+	<td class="h"><b>25</b></td><td class="h"><b>26</b></td>
+	<td class="h"><b>27</b></td><td class="h"><b>28</b></td>
+	<td class="h"><b>29</b></td>
+	<td class="h"><b>Population</b></td>
+    </tr>
+    <tr>
+	<td class="h"><b><a class="j" href="#rl-p1">Still-lifes</a></b></td>
+	<td class="h"><b>-</b></td><td class="h"><b>1</b></td>
+	<td class="h"><b>1</b></td><td class="h"><b>2</b></td>
+	<td class="h"><b>2</b></td><td class="h"><b>4</b></td>
+	<td class="h"><b>1</b></td>
+	<td class="h"><b>3</b></td><td class="h"><b>6</b></td>
+	<td class="h"><b>10</b></td><td class="h"><b>18</b></td>
+	<td class="h"><b>49</b></td>
+	<td class="r"><b>103</b></td><td class="r"><b>230</b></td>
+	<td class="r"><b>377</b></td><td class="r"><b>750</b></td>
+	<td class="r"><b>1415</b></td>
+	<td class="r"><b>3093</b></td><td class="r"><b>6377</b></td>
+	<td class="r"><b>13499</b></td><td class="r"><b>27511</b></td>
+	<td class="r"><b>58365</b></td>
+	<td class="r"><b>112917</b></td><td class="r"><b>259958</b></td>
+	<td class="r"><b>524889</b></td><td class="r"><b>1142833</b></td>
+	<td class="r"><b>2409764</b></td>
+	<td class="h"><b><a class="j" href="#rl-p1">Still-lifes</a></b></td>
+    </tr>
+    <tr>
+	<td class="h"><b><a class="j" href="#rl-p2">P2 oscillators</a></b></td>
+	<td><b>1</b></td><td><b>1</b></td>
+	<td class="h"><b>1</b></td><td><b>0</b></td><td><b>0</b></td>
+	<td><b>1</b></td><td><b>0</b></td>
+	<td class="h"><b>1</b></td><td><b>2</b></td><td><b>6</b></td>
+	<td><b>5</b></td><td><b>9</b></td>
+	<td class="h">1</td><td>4</td><td>0</td>
+	<td>2</td><td>0</td>
+	<td class="h">5</td><td class="s">many</td><td class="s">many</td>
+	<td class="s">many</td><td class="s">many</td>
+	<td class="s">many</td><td class="s">many</td><td class="s">many</td>
+	<td class="s">many</td><td class="s">many</td>
+	<td class="h"><b><a class="j" href="#rl-p2">P2 oscillators</a></b></td>
+    </tr>
+    <tr>
+	<td class="h"><b><a class="j" href="#rl-p3">P3 oscillators</a></b></td>
+	<td>-</td><td>-</td>
+	<td class="h">-</td><td>-</td><td>-</td>
+	<td>-</td><td>-</td>
+	<td class="h">-</td><td>1</td><td>1</td>
+	<td>0</td><td>1</td>
+	<td class="h">0</td><td>0</td><td>0</td>
+	<td>0*</td><td>0</td>
+	<td class="h">1</td><td>1</td><td>0</td>
+	<td>0*</td><td>0</td>
+	<td class="h">0</td><td>0</td><td>0</td>
+	<td>1</td><td>0</td>
+	<td class="h"><b><a class="j" href="#rl-p3">P3 oscillators</a></b></td>
+    </tr>
+    <tr>
+	<td class="h"><b><a class="j" href="#rl-p4">P4 oscillators</a></b></td>
+	<td>-</td><td>-</td>
+	<td class="h">3</td><td>0</td><td>0</td>
+	<td>2</td><td>0</td>
+	<td class="h">3</td><td>1</td><td>1</td>
+	<td>0</td><td>0</td>
+	<td class="h">0</td><td>0</td><td>0</td>
+	<td>1</td><td>0</td>
+	<td class="h">0</td><td>0</td><td>0</td>
+	<td>0</td><td>0</td>
+	<td class="h">0</td><td>0</td><td>0</td>
+	<td>0</td><td>0</td>
+	<td class="h"><b><a class="j" href="#rl-p4">P4 oscillators</a></b></td>
+    </tr>
+    <tr>
+	<td class="h"><b><a class="j" href="#rl-p4n">P4<i>n</i> oscillators</a></b></td>
+	<td>-</td><td>-</td>
+	<td class="h">2</td><td>-</td><td>-</td>
+	<td>-</td><td>-</td>
+	<td class="h">1</td><td>-</td><td>-</td>
+	<td>-</td><td>-</td>
+	<td class="h">1</td><td>-</td><td>-</td>
+	<td>-</td><td>-</td>
+	<td class="h">2</td><td>-</td><td>-</td>
+	<td>-</td><td>-</td>
+	<td class="h">2</td><td>-</td><td>-</td>
+	<td>-</td><td>-</td>
+	<td class="h"><b><a class="j" href="#rl-p4n">P4<i>n</i> oscillators</a></b></td>
+    </tr>
+    <tr>
+	<td class="h"><b><a class="j" href="#rl-p5">P5 oscillators</a></b></td>
+	<td class="h">-</td><td class="h">-</td>
+	<td class="h">-</td><td class="h">-</td><td class="h">-</td>
+	<td class="h">-</td><td class="h">-</td>
+	<td class="h">-</td><td class="h">-</td><td class="h">-</td>
+	<td class="h">-</td><td class="h">-</td>
+	<td class="h">-</td><td class="h">-</td><td class="h">-</td>
+	<td class="h">-</td><td class="h">-</td>
+	<td class="h">1</td><td>0</td><td>0</td>
+	<td class="h">0</td><td>0</td>
+	<td class="h">0</td><td>0</td><td>0</td>
+	<td class="h">0</td><td>0</td>
+	<td class="h"><b><a class="j" href="#rl-p5">P5 oscillators</a></b></td>
+    </tr>
+    <tr>
+	<td class="h"><b><a class="j" href="#rl-p6">P6 oscillators</a></b></td>
+	<td>-</td><td>-</td>
+	<td class="h">-</td><td>-</td><td>-</td>
+	<td>-</td><td>-</td>
+	<td class="h">-</td><td>-</td><td>1</td>
+	<td>0</td><td>1</td>
+	<td class="h">0</td><td>0</td><td>0</td>
+	<td>1</td><td>0</td>
+	<td class="h">0</td><td>0</td><td>0</td>
+	<td>0</td><td>0</td>
+	<td class="h">0</td><td>0</td><td>0</td>
+	<td>0</td><td>0</td>
+	<td class="h"><b><a class="j" href="#rl-p6">P6 oscillators</a></b></td>
+    </tr>
+    <tr>
+	<td class="h"><b><a class="j" href="#rl-p7">P7 oscillators</a></b></td>
+	<td>-</td><td>-</td>
+	<td class="h">-</td><td>-</td><td>-</td>
+	<td>-</td><td>-</td>
+	<td class="h">-</td><td>-</td><td>-</td>
+	<td>-</td><td>-</td>
+	<td class="h">-</td><td>-</td><td>-</td>
+	<td>-</td><td>-</td>
+	<td class="h">2</td><td>0</td><td>0</td>
+	<td>0</td><td>0</td>
+	<td class="h">0</td><td>0</td><td>0</td>
+	<td>0</td><td>0</td>
+	<td class="h"><b><a class="j" href="#rl-p7">P7 oscillators</a></b></td>
+    </tr>
+    <tr>
+	<td class="h"><b><a class="j" href="#rl-p8">P8 oscillators</a></b></td>
+	<td>-</td><td>-</td>
+	<td class="h">-</td><td>-</td><td>-</td>
+	<td>-</td><td>-</td>
+	<td class="h">-</td><td>-</td><td>1</td>
+	<td>0</td><td>0</td>
+	<td class="h">0</td><td>0</td><td>1</td>
+	<td>0</td><td>0</td>
+	<td class="h">0</td><td>0</td><td>0</td>
+	<td>2</td><td>0</td>
+	<td class="h">0</td><td>0</td><td>0</td>
+	<td>0</td><td>0</td>
+	<td class="h"><b><a class="j" href="#rl-p8">P8 oscillators</a></b></td>
+    </tr>
+    <tr>
+	<td class="h"><b><a class="j" href="#rl-p10">P10 oscillators</a></b></td>
+	<td class="h">-</td><td class="h">-</td>
+	<td class="h">-</td><td class="h">-</td><td class="h">-</td>
+	<td class="h">-</td><td class="h">-</td>
+	<td class="h">-</td><td class="h">-</td><td class="h">-</td>
+	<td class="h">-</td><td class="h">-</td>
+	<td class="h">-</td><td class="h">-</td><td class="h">-</td>
+	<td class="h">-</td><td class="h">-</td>
+	<td class="h">-</td><td>1</td><td>0</td>
+	<td class="h">0</td><td>0</td>
+	<td class="h">1</td><td>0</td><td>0</td>
+	<td class="h">0</td><td>0</td>
+	<td class="h"><b><a class="j" href="#rl-p10">P10 oscillators</a></b></td>
+    </tr>
+    <tr>
+	<td class="h"><b><a class="j" href="#rl-p12">P12 oscillators</a></b></td>
+	<td>-</td><td>-</td>
+	<td class="h">-</td><td>-</td><td>-</td>
+	<td>-</td><td>-</td>
+	<td class="h">1</td><td>0</td><td>0</td>
+	<td class="h">0</td><td>0</td>
+	<td class="h">0</td><td>0</td><td>0</td>
+	<td class="h">0</td><td>0</td>
+	<td class="h">0</td><td>0</td><td>0</td>
+	<td class="h">0</td><td>0</td>
+	<td class="h">0</td><td>0</td><td>0</td>
+	<td class="h">0</td><td>0</td>
+	<td class="h"><b><a class="j" href="#rl-p12">P12 oscillators</a></b></td>
+    </tr>
+    <tr>
+	<td class="h"><b><a class="j" href="#rl-p14">P14 oscillators</a></b></td>
+	<td>-</td><td>-</td>
+	<td class="h">-</td><td>-</td><td>-</td>
+	<td>-</td><td>-</td>
+	<td class="h">-</td><td>-</td><td>-</td>
+	<td>-</td><td>-</td>
+	<td class="h">-</td><td>-</td><td>1</td>
+	<td class="h">0</td><td>0</td>
+	<td class="h">2</td><td>0</td><td>0</td>
+	<td class="h">0</td><td>0</td>
+	<td class="h">0</td><td>0</td><td>0</td>
+	<td class="h">0</td><td>0</td>
+	<td class="h"><b><a class="j" href="#rl-p14">P14 oscillators</a></b></td>
+    </tr>
+    <tr>
+	<td class="h"><b><a class="j" href="#rl-p4n">P16 oscillators</a></b></td>
+	<td>-</td><td>-</td>
+	<td class="h">-</td><td>-</td><td>-</td>
+	<td>-</td><td>-</td>
+	<td class="h">-</td><td>-</td><td>-</td>
+	<td>-</td><td>-</td>
+	<td class="h">-</td><td>-</td><td>-</td>
+	<td>-</td><td>-</td>
+	<td class="h">-</td><td>-</td><td>-</td>
+	<td>-</td><td>-</td>
+	<td class="h">1</td><td>-</td><td>-</td>
+	<td>-</td><td>-</td>
+	<td class="h"><b><a class="j" href="#rl-p4n">P16 oscillators</a></b></td>
+    </tr>
+    <tr>
+	<td class="h"><b><a class="j" href="#rl-p4n">P20 oscillators</a></b></td>
+	<td class="h">-</td><td>-</td>
+	<td class="h">-</td><td class="h">-</td>
+	<td class="h">-</td><td>-</td>
+	<td class="h">-</td>
+	<td class="h">-</td><td class="h">-</td>
+	<td class="h">-</td><td class="h">-</td>
+	<td class="h">-</td>
+	<td class="h">-</td><td class="h">-</td>
+	<td class="h">-</td><td class="h">-</td>
+	<td class="h">-</td>
+	<td class="h">1</td><td class="h">-</td>
+	<td class="h">-</td><td class="h">-</td>
+	<td class="h">-</td>
+	<td class="h">0</td><td class="h">-</td>
+	<td class="h">-</td><td>-</td>
+	<td class="h">-</td>
+	<td class="h"><b><a class="j" href="#rl-p4n">P20 oscillators</a></b></td>
+    </tr>
+    <tr>
+	<td class="h"><b><a class="j" href="#rl-p4n">P24 oscillators</a></b></td>
+	<td>-</td><td>-</td>
+	<td class="h">-</td><td>-</td><td>-</td>
+	<td>-</td><td>-</td>
+	<td class="h">-</td><td>-</td><td>-</td>
+	<td>-</td><td>-</td>
+	<td class="h">-</td><td>-</td><td>-</td>
+	<td>-</td><td>-</td>
+	<td class="h">1</td><td>-</td><td>-</td>
+	<td>-</td><td>-</td>
+	<td class="h">0</td><td>-</td><td>-</td>
+	<td>-</td><td>-</td>
+	<td class="h"><b><a class="j" href="#rl-p4n">P24 oscillators</a></b></td>
+    </tr>
+    <tr>
+	<td class="h"><b><a class="j" href="#rl-p4n">P32 oscillators</a></b></td>
+	<td>-</td><td>-</td>
+	<td class="h">-</td><td>-</td><td>-</td>
+	<td>-</td><td>-</td>
+	<td class="h">-</td><td>-</td><td>-</td>
+	<td>-</td><td>-</td>
+	<td class="h">-</td><td>-</td><td>-</td>
+	<td>-</td><td>-</td>
+	<td class="h">-</td><td>-</td><td>-</td>
+	<td>-</td><td>-</td>
+	<td class="h">1</td><td>-</td><td>-</td>
+	<td>-</td><td>-</td>
+	<td class="h"><b><a class="j" href="#rl-p4n">P32 oscillators</a></b></td>
+    </tr>
+    <tr>
+	<td class="h"><b><a class="j" href="#rl-p127">P127 oscillators</a></b></td>
+	<td>-</td><td>-</td>
+	<td class="h">-</td><td>-</td><td>-</td>
+	<td>-</td><td>-</td>
+	<td class="h">-</td><td>-</td><td>-</td>
+	<td>-</td><td>-</td>
+	<td class="h">-</td><td>-</td><td>-</td>
+	<td>-</td><td>-</td>
+	<td class="h">-</td><td>-</td><td>-</td>
+	<td>-</td><td>-</td>
+	<td class="h">-</td><td>-</td><td>1</td>
+	<td>0</td><td>0</td>
+	<td class="h"><b><a class="j" href="#rl-p127">P127 oscillators</a></b></td>
+    </tr>
+    <tr>
+	<td class="h"><b>Other periods</b></td>
+	<td>-</td><td>-</td>
+	<td class="h">-</td><td>-</td><td>-</td>
+	<td>-</td><td>-</td>
+	<td class="h">-</td><td>-</td><td>-</td>
+	<td>-</td><td>-</td>
+	<td class="h">-</td><td>-</td><td>-</td>
+	<td>-</td><td>-</td>
+	<td class="h">-</td><td>-</td><td>-</td>
+	<td>-</td><td>-</td>
+	<td class="h">-</td><td>-</td><td>-</td>
+	<td>-</td><td>-</td>
+	<td class="h"><b>Other periods</b></td>
+    </tr>
+    <tr>
+	<td class="h"><b>All oscillators</b></td>
+	<td class="t">1</td><td class="t">1</td>
+	<td class="t">4</td><td class="t">0</td><td class="t">0</td>
+	<td class="t">3</td><td class="t">0</td>
+	<td class="t">5</td><td class="t">4</td><td class="t">10</td>
+	<td class="t">5</td><td class="t">11</td>
+	<td class="t">1</td><td class="t">4</td><td class="t">2</td>
+	<td class="t">5</td><td class="t">0</td>
+	<td class="t">5</td><td class="s">many</td><td class="s">many</td>
+	<td class="s">many</td><td class="s">many</td>
+	<td class="s">many</td><td class="s">many</td><td class="s">many</td>
+	<td class="s">many</td><td class="s">many</td>
+	<td class="h"><b>All oscillators</b></td>
+    </tr>
+    <tr>
+	<td class="h"><b><a class="j" href="#rl-ss">Orthogonal <i>c</i>/2</a></b></td>
+	<td>-</td><td>-</td>
+	<td class="h">-</td><td>-</td><td>-</td>
+	<td>-</td><td>-</td>
+	<td class="h">-</td><td>-</td><td>-</td>
+	<td>-</td><td>-</td>
+	<td class="h">-</td><td>-</td><td>1</td>
+	<td>2</td><td>1</td>
+	<td class="h">0</td><td>0</td><td>0</td>
+	<td>0</td><td>0</td>
+	<td class="h">0</td><td>0</td><td>0</td>
+	<td>0</td><td>0</td>
+	<td class="h"><b><a class="j" href="#rl-ss">Orthogonal <i>c</i>/2</a></b></td>
+    </tr>
+    <tr>
+	<td class="h"><b><a class="j" href="#rl-ss">Orthogonal <i>c</i>/3</a></b></td>
+	<td>-</td><td>-</td>
+	<td class="h">-</td><td>-</td><td>-</td>
+	<td>-</td><td>-</td>
+	<td class="h">-</td><td>-</td><td>-</td>
+	<td>-</td><td>-</td>
+	<td class="h">-</td><td>-</td><td>-</td>
+	<td>-</td><td>-</td>
+	<td class="h">-</td><td>1</td><td>0</td>
+	<td>0</td><td>0</td>
+	<td class="h">0</td><td>0</td><td>0</td>
+	<td>0</td><td>0</td>
+	<td class="h"><b><a class="j" href="#rl-ss">Orthogonal <i>c</i>/3</a></b></td>
+    </tr>
+    <tr>
+	<td class="h"><b><a class="j" href="#rl-ss">Orthogonal <i>c</i>/4</a></b></td>
+	<td>-</td><td>-</td>
+	<td class="h">-</td><td>-</td><td>-</td>
+	<td>-</td><td>-</td>
+	<td class="h">-</td><td>-</td><td>-</td>
+	<td>-</td><td>-</td>
+	<td class="h">1</td><td>0</td><td>0</td>
+	<td>0</td><td>0</td>
+	<td class="h">0</td><td>0</td><td>0</td>
+	<td>0</td><td>0</td>
+	<td class="h">0</td><td>0</td><td>0</td>
+	<td>0</td><td>0</td>
+	<td class="h"><b><a class="j" href="#rl-ss">Orthogonal <i>c</i>/4</a></b></td>
+    </tr>
+    <tr>
+	<td class="h"><b><a class="j" href="#rl-ss">Orthogonal 4<i>c</i>/23</a></b></td>
+	<td>-</td><td>-</td>
+	<td class="h">-</td><td>-</td><td>-</td>
+	<td>-</td><td>-</td>
+	<td class="h">-</td><td>-</td><td>-</td>
+	<td>-</td><td>1</td>
+	<td class="h">0</td><td>0</td><td>0</td>
+	<td>0</td><td>0</td>
+	<td class="h">0</td><td>0</td><td>0</td>
+	<td>0</td><td>0</td>
+	<td class="h">0</td><td>0</td><td>0</td>
+	<td>0</td><td>0</td>
+	<td class="h"><b><a class="j" href="#rl-ss">Orthogonal 4<i>c</i>/23</a></b></td>
+    </tr>
+    <tr>
+	<td class="h"><b><a class="j" href="#rl-ss">Diagonal <i>c</i>/4</a></b></td>
+	<td>-</td><td>1</td>
+	<td class="h">0</td><td>0</td><td>0</td>
+	<td>0</td><td>0</td>
+	<td class="h">0</td><td>0</td><td>0</td>
+	<td>0</td><td>0</td>
+	<td class="h">0</td><td>0</td><td>0</td>
+	<td>0</td><td>0</td>
+	<td class="h">0</td><td>0</td><td>0</td>
+	<td>0</td><td>0</td>
+	<td class="h">0</td><td>0</td><td>0</td>
+	<td>0</td><td>0</td>
+	<td class="h"><b><a class="j" href="#rl-ss">Diagonal <i>c</i>/4</a></b></td>
+    </tr>
+    <tr>
+	<td class="h"><b>Other velocities</b></td>
+	<td>-</td><td>-</td>
+	<td class="h">-</td><td>-</td><td>-</td>
+	<td>-</td><td>-</td>
+	<td class="h">-</td><td>-</td><td>-</td>
+	<td>-</td><td>-</td>
+	<td class="h">-</td><td>-</td><td>-</td>
+	<td>-</td><td>-</td>
+	<td class="h">-</td><td>-</td><td>-</td>
+	<td>-</td><td>-</td>
+	<td class="h">-</td><td>-</td><td>-</td>
+	<td>-</td><td>-</td>
+	<td class="h"><b>Other velocities</b></td>
+    </tr>
+    <tr>
+	<td class="h"><b><a class="j" href="#rl-ss">All spaceships</a></b></td>
+	<td class="t">-</td><td class="t">1</td>
+	<td class="t">1</td><td class="t">0</td><td class="t">0</td>
+	<td class="t">0</td><td class="t">0</td>
+	<td class="t">0</td><td class="t">0</td><td class="t">0</td>
+	<td class="t">0</td><td class="t">1</td>
+	<td class="t">1</td><td class="t">0</td><td class="t">1</td>
+	<td class="t">2</td><td class="t">1</td>
+	<td class="t">0</td><td class="t">1</td><td class="t">0</td>
+	<td class="t">0</td><td class="t">0</td>
+	<td class="t">0</td><td class="t">0</td><td class="t">0</td>
+	<td class="t">0</td><td class="t">0</td>
+	<td class="h"><b><a class="j" href="#rl-ss">All spaceships</a></b></td>
+    </tr>
+    <tr>
+	<td class="h"><b><a class="j" href="#rl-pp1">Pseudo-still-lifes</a></b></td>
+	<td class="h"><b>-</b></td><td class="h"><b>-</b></td>
+	<td class="h"><b>-</b></td><td class="h"><b>-</b></td>
+	<td class="h"><b>-</b></td><td class="h"><b>-</b></td>
+	<td class="h"><b>-</b></td>
+	<td class="h"><b>2</b></td><td class="h"><b>5</b></td>
+	<td class="h"><b>13</b></td><td class="h"><b>15</b></td>
+	<td class="h"><b>21</b></td>
+	<td class="h"><b>25</b></td><td class="r"><b>69</b></td>
+	<td class="r"><b>158</b></td><td class="r"><b>343</b></td>
+	<td class="r"><b>673</b></td>
+	<td class="r"><b>1478</b></td><td class="r"><b>3336</b></td>
+	<td class="r"><b>7339</b></td><td class="r"><b>14698</b></td>
+	<td class="r"><b>29810</b></td>
+	<td class="r"><b>61247</b></td><td class="r"><b>134903</b></td>
+	<td class="r"><b>297264</b></td><td class="r"><b>644205</b></td>
+	<td class="r"><b>1374453</b></td>
+	<td class="h"><b><a class="j" href="#rl-pp1">Pseudo-still-lifes</a></b></td>
+    </tr>
+    <tr>
+	<td class="h"><b><a class="j" href="#rl-pp2">P2 pseudo-oscillators</a></b></td>
+	<td><b>-</b></td><td><b>-</b></td>
+	<td class="h"><b>-</b></td><td><b>-</b>
+	</td><td><b>-</b></td><td><b>1</b></td><td><b>1</b></td>
+	<td class="h"><b>4</b></td><td><b>2</b></td><td><b>5</b></td>
+	<td><b>4</b></td><td><b>17</b></td>
+	<td class="h">35</td><td>4</td><td class="r">67</td>
+	<td class="s">many</td><td class="s">many</td>
+	<td class="h">5</td><td class="s">many</td><td class="s">many</td>
+	<td class="s">many</td><td class="s">many</td>
+	<td class="s">many</td><td class="s">many</td><td class="s">many</td>
+	<td class="s">many</td><td class="s">many</td>
+	<td class="h"><b><a class="j" href="#rl-pp2">P2 pseudo-oscillators</a></b></td>
+    </tr>
+    <tr>
+	<td class="h"><b><a class="j" href="#rl-pp4">P4 pseudo-oscillators</a></b></td>
+	<td>-</td><td>-</td>
+	<td class="h">-</td><td>-</td><td>-</td>
+	<td>-</td><td>1</td>
+	<td class="h">4</td><td>0</td><td>3</td>
+	<td>4</td><td>12</td>
+	<td class="h">16</td><td>25</td><td>28</td>
+	<td class="s">many</td><td class="s">many</td>
+	<td class="s">many</td><td class="s">many</td><td class="s">many</td>
+	<td class="s">many</td><td class="s">many</td>
+	<td class="s">many</td><td class="s">many</td><td class="s">many</td>
+	<td class="s">many</td><td class="s">many</td>
+	<td class="h"><b><a class="j" href="#rl-pp4">P4 pseudo-oscillators</a></b></td>
+    </tr>
+    <tr>
+	<td class="h"><b><a class="j" href="#rl-pp6">P6 pseudo-oscillators</a></b></td>
+	<td>-</td><td>-</td>
+	<td class="h">-</td><td>-</td><td>-</td>
+	<td>-</td><td>-</td>
+	<td class="h">-</td><td>-</td><td>-</td>
+	<td>-</td><td>-</td>
+	<td class="h">-</td><td>-</td><td>-</td>
+	<td>1</td><td>0</td>
+	<td class="h">2</td><td>1</td><td>6</td>
+	<td class="s">many</td><td class="s">many</td>
+	<td class="s">many</td><td class="s">many</td><td class="s">many</td>
+	<td class="s">many</td><td class="s">many</td>
+	<td class="h"><b><a class="j" href="#rl-pp6">P6 pseudo-oscillators</a></b></td>
+    </tr>
+    <tr>
+	<td class="h"><b><a class="j" href="#rl-pp12">P12 pseudo-oscillators</a></b></td>
+	<td>-</td><td>-</td>
+	<td class="h">-</td><td>-</td><td>-</td>
+	<td>-</td><td>-</td>
+	<td class="h">-</td><td>-</td><td>-</td>
+	<td>-</td><td>-</td>
+	<td class="h">-</td><td>-</td><td>-</td>
+	<td>-</td><td>-</td>
+	<td class="h">2</td><td>0</td><td>2</td>
+	<td>0</td><td class="s">many</td>
+	<td class="s">many</td><td class="s">many</td><td class="s">many</td>
+	<td class="s">many</td><td class="s">many</td>
+	<td class="h"><b><a class="j" href="#rl-pp12">P12 pseudo-oscillators</a></b></td>
+    </tr>
+    <tr>
+	<td class="h"><b>Other periods</b></td>
+	<td>-</td><td>-</td>
+	<td class="h">-</td><td>-</td><td>-</td>
+	<td>-</td><td>-</td>
+	<td class="h">-</td><td>-</td><td>-</td>
+	<td>-</td><td>-</td>
+	<td class="h">-</td><td>-</td><td>-</td>
+	<td>-</td><td>-</td>
+	<td class="h">-</td><td>-</td><td>-</td>
+	<td>-</td><td>-</td>
+	<td class="h">-</td><td>-</td><td>-</td>
+	<td>-</td><td>-</td>
+	<td class="h"><b>Other periods</b></td>
+    </tr>
+    <tr>
+	<td class="h"><b>All pseudo-oscillators</b></td>
+	<td class="t">-</td><td class="t">-</td>
+	<td class="t">-</td><td class="t">-</td>
+	<td class="t">-</td><td class="t">1</td><td class="t">2</td>
+	<td class="t">8</td><td class="t">2</td><td class="t">8</td>
+	<td class="t">8</td><td class="t">29</td>
+	<td class="t">51</td><td class="t">92</td><td class="s">many</td>
+	<td class="s">many</td><td class="s">many</td>
+	<td class="s">many</td><td class="s">many</td><td class="s">many</td>
+	<td class="s">many</td><td class="s">many</td>
+	<td class="s">many</td><td class="s">many</td><td class="s">many</td>
+	<td class="s">many</td><td class="s">many</td>
+	<td class="h"><b>All pseudo-oscillators</b></td>
+    </tr>
+</table></p>
+</article>
+<hr class="a" /><article><a id="a2" name="a2"></a>
+<a id="rl-p1" name="rl-p1"></a>
+<h2>108 still-lifes</h2>
+<p>These are all the still-lifes up to 14 bits, and a few others.</p>
+<p>These consist of:</p>
+<p><ul>
+    <li>The 1 4-bit still-life.</li>
+    <li>The 1 5-bit still-life.</li>
+    <li>The 2 6-bit still-lifes.</li>
+    <li>The 2 7-bit still-lifes.</li>
+    <li>The 4 7-bit still-lifes.</li>
+    <li>The 1 9-bit still-life.</li>
+    <li>The 3 10-bit still-lifes.</li>
+    <li>The 6 11-bit still-lifes (1 w/o synthesis).</li>
+    <li>The 10 12-bit still-lifes (3 w/o syntheses).</li>
+    <li>The 18 13-bit still-lifes (14 w/o syntheses).</li>
+    <li>The 49 14-bit still-lifes (38 w/o syntheses).</li>
+    <li>3 of the 103 15-bit still-lifes.</li>
+    <li>2 of the 230 16-bit still-lifes.</li>
+    <li>2 of the 750 18-bit still-lifes.</li>
+    <li>1 of the 6377 21-bit still-lifes.</li>
+    <li>1 of the 58365 24-bit still-lifes.</li>
+    <li>2 larger still-lifes.</li>
+</ul></p>
+<p><img src="map/rl-p1.png" alt="B36/S245 still-lifes"
+ width="621" height="477" usemap="#rl-p1" /></p>
+<p><table><colgroup><col span="12" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_rl-p1" class="i" href="javascript:Nav('rl-p1')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a1">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a3">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/rl-p1.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/rl-p1.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/rl-p1.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="lis/rl-p1.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/rl-p1.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/rl-p1.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=rl-p1" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_rl-p1"><p><table id="t-rl-p1" style="width:625px">
+    <colgroup><col style="width:71px;" /><col span="8" style="width:60px;" />
+	<col style="width:72px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="b36s245/4-1.rle">4.1;
+	    Tub [2]</a></td>
+	<td><a class="p" href="b36s245/5-1.rle">5.1;
+	    Z [3]</a></td>
+	<td><a class="p" href="b36s245/6-1.rle">6.1;
+	    Beehive [2]</a></td>
+	<td><a class="p" href="b36s245/6-2.rle">6.2;
+	    Carrier; Aircraft carrier [2]</a></td>
+	<td><a class="p" href="b36s245/7-1.rle">7.1;
+	    Loaf [3]</a></td>
+	<td><a class="p" href="b36s245/7-2.rle">7.2;
+	    W [3]</a></td>
+	<td><a class="p" href="b36s245/8-1.rle">8.1;
+	    shurik&shy;en [3]</a></td>
+	<td><a class="p" href="b36s245/8-2.rle">8.2;
+	    Pond [3]</a></td>
+	<td><a class="p" href="b36s245/8-3.rle">8.3;
+	    Crab [3]</a></td>
+	<td><a class="p" href="b36s245/8-4.rle">8.4;
+	    Mango; Cigar [3]</a></td>
+    </tr>
+    <tr>
+	<td><a class="p" href="b36s245/9-1.rle">9.1;
+	    Long Z [6]</a></td>
+	<td><a class="p" href="b36s245/10-1.rle">
+	    10.1 [3]</a></td>
+	<td><a class="p" href="b36s245/10-2.rle">10.2;
+	    Table tie table [3]</a></td>
+	<td class="r"><a class="p" href="b36s245/10-3.rle">
+	    10.3 [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/11-1.rle">11.1;
+	    Elephant [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/11-2.rle">11.2;
+	    Dagger [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/11-3.rle">11.3;
+	    Long crab [x]</a></td>
+	<td><a class="p" href="b36s245/11-4.rle">11.4;
+	    Up chair siamese up chair [4]</a></td>
+	<td><a class="p" href="b36s245/11-5.rle">11.5;
+	    Up chair siamese down chair [6]</a></td>
+	<td><a class="p" href="b36s245/11-6.rle">11.6;
+	    Long W [9]</a></td>
+    </tr>
+    <tr>
+	<td><a class="p" href="b36s245/12-1.rle">12.1;
+	    shurik&shy;en w/&#8203;trans shoes [4]</a></td>
+	<td class="r"><a class="p" href="b36s245/12-2.rle">12.2;
+	    W tie table [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/12-3.rle">12.3;
+	    Rabbit [x]</a></td>
+	<td><a class="p" href="b36s245/12-4.rle">12.4;
+	    shurik&shy;en w/&#8203;cis shoes [6]</a></td>
+	<td><a class="p" href="b36s245/12-5.rle">12.5;
+	    Down chair tie down chair [8]</a></td>
+	<td class="r"><a class="p" href="b36s245/12-6.rle">12.6;
+	    Z on hand [x]</a></td>
+	<td><a class="p" href="b36s245/12-7.rle">12.7;
+	    Up chair tie up chair [4]</a></td>
+	<td><a class="p" href="b36s245/12-8.rle">12.8;
+	    Up chair tie down chair [6]</a></td>
+	<td><a class="p" href="b36s245/12-9.rle">12.9;
+	    Chair siamese chair w/&#8203;tub [3]</a></td>
+	<td><a class="p" href="b36s245/12-10.rle">12.10;
+	    shurik&shy;en w/&#8203;stacked shoes [6]</a></td>
+    </tr>
+    <tr>
+	<td class="o"><a class="p" href="b36s245/13-1.rle">13.1;
+	    Dagger w/&#8203;rear shoe [x+3]</a></td>
+	<td class="r"><a class="p" href="b36s245/13-2.rle">
+	    13.2 [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/13-3.rle">
+	    13.3 [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/13-4.rle">
+	    13.4 [x]</a></td>
+	<td class="o"><a class="p" href="b36s245/13-5.rle">13.5;
+	    Dagger w/&#8203;front shoe [x+3]</a></td>
+	<td class="o"><a class="p" href="b36s245/13-6.rle">13.6;
+	    Elephant w/&#8203;front shoe [x+3]</a></td>
+	<td><a class="p" href="b36s245/13-7.rle">13.7;
+	    Chair siamese chair w/&#8203;shoe [9]</a></td>
+	<td class="r"><a class="p" href="b36s245/13-8.rle">
+	    13.8 [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/13-9.rle">
+	    13.9 [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/13-10.rle">
+	    13.10 [x]</a></td>
+    </tr>
+    <tr>
+	<td><a class="p" href="b36s245/13-11.rle">13.11;
+	    Down chair tie chair w/&#8203;tub [10]</a></td>
+	<td><a class="p" href="b36s245/13-12.rle">13.12;
+	    Up chair tie chair w/&#8203;shoe [8]</a></td>
+	<td class="o"><a class="p" href="b36s245/13-13.rle">13.13;
+	    Elephant w/&#8203;rear shoe [x+3]</a></td>
+	<td class="r"><a class="p" href="b36s245/13-14.rle">13.14;
+	    Mango tie boat [x]</a></td>
+	<td class="o"><a class="p" href="b36s245/13-15.rle">13.15;
+	    Hand on tub w/&#8203;shoe [x+3]</a></td>
+	<td class="r"><a class="p" href="b36s245/13-16.rle">13.16;
+	    Pond tie boat [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/13-17.rle">
+	    13.17 [x]</a></td>
+	<td><a class="p" href="b36s245/13-18.rle">13.18;
+	    Very long Z [12]</a></td>
+	<td><a class="p" href="b36s245/14-1.rle">14.1;
+	    Table tie block tie cis table [4]</a></td>
+	<td class="r"><a class="p" href="b36s245/14-2.rle">
+	    14.2 [x]</a></td>
+    </tr>
+    <tr>
+	<td class="r"><a class="p" href="b36s245/14-3.rle">
+	    14.3 [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/14-4.rle">14.4;
+	    W tie W [x]</a></td>
+	<td><a class="p" href="b36s245/14-5.rle">
+	    14.5 [4]</a></td>
+	<td class="r"><a class="p" href="b36s245/14-6.rle">
+	    14.6 [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/14-7.rle">14.7;
+	    Crab tie Z [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/14-8.rle">
+	    14.8 [x]</a></td>
+	<td><a class="p" href="b36s245/14-9.rle">14.9;
+	    shurik&shy;en w/&#8203;3 shoes [7]</a></td>
+	<td class="r"><a class="p" href="b36s245/14-10.rle">
+	    14.10 [x]</a></td>
+	<td><a class="p" href="b36s245/14-11.rle">14.11;
+	    shurik&shy;en w/&#8203;3 balanced shoes [9]</a></td>
+	<td class="r"><a class="p" href="b36s245/14-12.rle">14.12;
+	    Table on hand w/&#8203;shoe [x]</a></td>
+    </tr>
+    <tr>
+	<td class="o"><a class="p" href="b36s245/14-13.rle">14.13;
+	    Cis long Z tie table [x+3]</a></td>
+	<td class="r"><a class="p" href="b36s245/14-14.rle">14.14;
+	    Hat tie table [x]</a></td>
+	<td class="o"><a class="p" href="b36s245/14-15.rle">14.15;
+	    W on hand [x+3]</a></td>
+	<td class="r"><a class="p" href="b36s245/14-16.rle">
+	    14.16 [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/14-17.rle">
+	    14.17 [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/14-18.rle">
+	    14.18 [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/14-19.rle">
+	    14.19 [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/14-20.rle">
+	    14.20 [x]</a></td>
+	<td class="o"><a class="p" href="b36s245/14-21.rle">14.21;
+	    Trans long Z tie table [x+3]</a></td>
+	<td class="r"><a class="p" href="b36s245/14-22.rle">
+	    14.22 [x]</a></td>
+    </tr>
+    <tr>
+	<td class="r"><a class="p" href="b36s245/14-23.rle">
+	    14.23 [x]</a></td>
+	<td class="o"><a class="p" href="b36s245/14-24.rle">14.24;
+	    Z on hand w/&#8203;trans shoe [x+3]</a></td>
+	<td class="o"><a class="p" href="b36s245/14-25.rle">
+	    14.25 [x+2]</a></td>
+	<td class="r"><a class="p" href="b36s245/14-26.rle">
+	    14.26 [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/14-27.rle">
+	    14.27 [x]</a></td>
+	<td><a class="p" href="b36s245/14-28.rle">14.28;
+	    Chair w/&#8203;beehive siamese chair [10]</a></td>
+	<td class="r"><a class="p" href="b36s245/14-29.rle">
+	    14.29 [x]</a></td>
+	<td><a class="p" href="b36s245/14-30.rle">14.30;
+	    shurik&shy;en w/&#8203;3 opposite shoes [7]</a></td>
+	<td class="r"><a class="p" href="b36s245/14-31.rle">
+	    14.31 [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/14-32.rle">
+	    14.32 [x]</a></td>
+    </tr>
+    <tr>
+	<td><a class="p" href="b36s245/14-33.rle">14.33;
+	    Chair w/&#8203;tub tie chair w/&#8203;tub [6]</a></td>
+	<td class="r"><a class="p" href="b36s245/14-34.rle">14.34;
+	    Hand tie hand [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/14-35.rle">14.35;
+	    Boat tie long loaf [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/14-36.rle">
+	    14.36 [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/14-37.rle">
+	    14.37 [x]</a></td>
+	<td><a class="p" href="b36s245/14-38.rle">14.38;
+	    Down chair w/&#8203;shoe tie down chair [11]</a></td>
+	<td class="o"><a class="p" href="b36s245/14-39.rle">14.39;
+	    Z on hand w/&#8203;cis shoe [x+3]</a></td>
+	<td><a class="p" href="b36s245/14-40.rle">14.40;
+	    Down chair w/&#8203;shoe tie up chair [9]</a></td>
+	<td class="r"><a class="p" href="b36s245/14-41.rle">14.41;
+	    Table tie block tie trans table [x]</a></td>
+	<td><a class="p" href="b36s245/14-42.rle">14.42;
+	    shurik&shy;en w/&#8203;3 un&shy;balanced shoes [9]</a></td>
+    </tr>
+    <tr>
+	<td class="r"><a class="p" href="b36s245/14-43.rle">14.43;
+	    Tub on Z tie table [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/14-44.rle">14.44;
+	    Hat on table [x]</a></td>
+	<td><a class="p" href="b36s245/14-45.rle">14.45;
+	    shurik&shy;en w/&#8203;3 shoes [9]</a></td>
+	<td class="r"><a class="p" href="b36s245/14-46.rle">
+	    14.46 [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/14-47.rle">
+	    14.47 [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/14-48.rle">
+	    14.48 [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/14-49.rle">
+	    14.49 [x]</a></td>
+	<td><a class="p" href="b36s245/15-33.rle">
+	    15.33 [12]</a></td>
+	<td><a class="p" href="b36s245/15-37.rle">
+	    15.37 [10]</a></td>
+	<td><a class="p" href="b36s245/15-51.rle">
+	    15.51 [7]</a></td>
+    </tr>
+    <tr>
+	<td><a class="p" href="b36s245/16-18.rle">16.18;
+	    Half&shy;horn [7]</a></td>
+	<td><a class="p" href="b36s245/16-58.rle">
+	    16.58 [14]</a></td>
+	<td><a class="p" href="b36s245/18-41.rle">18.41;
+	    Long&shy;horn [5]</a></td>
+	<td><a class="p" href="b36s245/18-262.rle">18.262;
+	    Mickey mouse [9]</a></td>
+	<td><a class="p" href="b36s245/21-2947.rle">21.2947;
+	    Mickey moose [7]</a></td>
+	<td><a class="p" href="b36s245/24-11113.rle">24.11113;
+	    Moose [5]</a></td>
+	<td><a class="p" href="b36s245/36-1.rle">
+	    Cross [4]</a></td>
+	<td><a class="p" href="b36s245/40-1.rle">
+	    Spider [4]</a></td>
+	<td colspan="2" class="s">&nbsp;</td>
+    </tr>
+</table></p></div>
+<map name="rl-p1">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,457,20,477" href="#bottom" />
+	<area coords="601,0,621,20" href="zip/rl-p1.zip" />
+	<area coords="601,457,621,477" href="stamp/rl-p1.rle" />
+	<area coords="0,0,70,50" href="b36s245/4-1.rle" />
+	<area coords="70,0,130,50" href="b36s245/5-1.rle" />
+	<area coords="130,0,190,50" href="b36s245/6-1.rle" />
+	<area coords="190,0,250,50" href="b36s245/6-2.rle" />
+	<area coords="250,0,310,50" href="b36s245/7-1.rle" />
+	<area coords="310,0,370,50" href="b36s245/7-2.rle" />
+	<area coords="370,0,430,50" href="b36s245/8-1.rle" />
+	<area coords="430,0,490,50" href="b36s245/8-2.rle" />
+	<area coords="490,0,550,50" href="b36s245/8-3.rle" />
+	<area coords="550,0,621,50" href="b36s245/8-4.rle" />
+	<area coords="0,50,70,90" href="b36s245/9-1.rle" />
+	<area coords="70,50,130,90" href="b36s245/10-1.rle" />
+	<area coords="130,50,190,90" href="b36s245/10-2.rle" />
+	<area coords="190,50,250,90" href="b36s245/10-3.rle" />
+	<area coords="250,50,310,90" href="b36s245/11-1.rle" />
+	<area coords="310,50,370,90" href="b36s245/11-2.rle" />
+	<area coords="370,50,430,90" href="b36s245/11-3.rle" />
+	<area coords="430,50,490,90" href="b36s245/11-4.rle" />
+	<area coords="490,50,550,90" href="b36s245/11-5.rle" />
+	<area coords="550,50,621,90" href="b36s245/11-6.rle" />
+	<area coords="0,90,70,130" href="b36s245/12-1.rle" />
+	<area coords="70,90,130,130" href="b36s245/12-2.rle" />
+	<area coords="130,90,190,130" href="b36s245/12-3.rle" />
+	<area coords="190,90,250,130" href="b36s245/12-4.rle" />
+	<area coords="250,90,310,130" href="b36s245/12-5.rle" />
+	<area coords="310,90,370,130" href="b36s245/12-6.rle" />
+	<area coords="370,90,430,130" href="b36s245/12-7.rle" />
+	<area coords="430,90,490,130" href="b36s245/12-8.rle" />
+	<area coords="490,90,550,130" href="b36s245/12-9.rle" />
+	<area coords="550,90,621,130" href="b36s245/12-10.rle" />
+	<area coords="0,130,70,170" href="b36s245/13-1.rle" />
+	<area coords="70,130,130,170" href="b36s245/13-2.rle" />
+	<area coords="130,130,190,170" href="b36s245/13-3.rle" />
+	<area coords="190,130,250,170" href="b36s245/13-4.rle" />
+	<area coords="250,130,310,170" href="b36s245/13-5.rle" />
+	<area coords="310,130,370,170" href="b36s245/13-6.rle" />
+	<area coords="370,130,430,170" href="b36s245/13-7.rle" />
+	<area coords="430,130,490,170" href="b36s245/13-8.rle" />
+	<area coords="490,130,550,170" href="b36s245/13-9.rle" />
+	<area coords="550,130,621,170" href="b36s245/13-10.rle" />
+	<area coords="0,170,70,214" href="b36s245/13-11.rle" />
+	<area coords="70,170,130,214" href="b36s245/13-12.rle" />
+	<area coords="130,170,190,214" href="b36s245/13-13.rle" />
+	<area coords="190,170,250,214" href="b36s245/13-14.rle" />
+	<area coords="250,170,310,214" href="b36s245/13-15.rle" />
+	<area coords="310,170,370,214" href="b36s245/13-16.rle" />
+	<area coords="370,170,430,214" href="b36s245/13-17.rle" />
+	<area coords="430,170,490,214" href="b36s245/13-18.rle" />
+	<area coords="490,170,550,214" href="b36s245/14-1.rle" />
+	<area coords="550,170,621,214" href="b36s245/14-2.rle" />
+	<area coords="0,214,70,254" href="b36s245/14-3.rle" />
+	<area coords="70,214,130,254" href="b36s245/14-4.rle" />
+	<area coords="130,214,190,254" href="b36s245/14-5.rle" />
+	<area coords="190,214,250,254" href="b36s245/14-6.rle" />
+	<area coords="250,214,310,254" href="b36s245/14-7.rle" />
+	<area coords="310,214,370,254" href="b36s245/14-8.rle" />
+	<area coords="370,214,430,254" href="b36s245/14-9.rle" />
+	<area coords="430,214,490,254" href="b36s245/14-10.rle" />
+	<area coords="490,214,550,254" href="b36s245/14-11.rle" />
+	<area coords="550,214,621,254" href="b36s245/14-12.rle" />
+	<area coords="0,254,70,294" href="b36s245/14-13.rle" />
+	<area coords="70,254,130,294" href="b36s245/14-14.rle" />
+	<area coords="130,254,190,294" href="b36s245/14-15.rle" />
+	<area coords="190,254,250,294" href="b36s245/14-16.rle" />
+	<area coords="250,254,310,294" href="b36s245/14-17.rle" />
+	<area coords="310,254,370,294" href="b36s245/14-18.rle" />
+	<area coords="370,254,430,294" href="b36s245/14-19.rle" />
+	<area coords="430,254,490,294" href="b36s245/14-20.rle" />
+	<area coords="490,254,550,294" href="b36s245/14-21.rle" />
+	<area coords="550,254,621,294" href="b36s245/14-22.rle" />
+	<area coords="0,294,70,334" href="b36s245/14-23.rle" />
+	<area coords="70,294,130,334" href="b36s245/14-24.rle" />
+	<area coords="130,294,190,334" href="b36s245/14-25.rle" />
+	<area coords="190,294,250,334" href="b36s245/14-26.rle" />
+	<area coords="250,294,310,334" href="b36s245/14-27.rle" />
+	<area coords="310,294,370,334" href="b36s245/14-28.rle" />
+	<area coords="370,294,430,334" href="b36s245/14-29.rle" />
+	<area coords="430,294,490,334" href="b36s245/14-30.rle" />
+	<area coords="490,294,550,334" href="b36s245/14-31.rle" />
+	<area coords="550,294,621,334" href="b36s245/14-32.rle" />
+	<area coords="0,334,70,374" href="b36s245/14-33.rle" />
+	<area coords="70,334,130,374" href="b36s245/14-34.rle" />
+	<area coords="130,334,190,374" href="b36s245/14-35.rle" />
+	<area coords="190,334,250,374" href="b36s245/14-36.rle" />
+	<area coords="250,334,310,374" href="b36s245/14-37.rle" />
+	<area coords="310,334,370,374" href="b36s245/14-38.rle" />
+	<area coords="370,334,430,374" href="b36s245/14-39.rle" />
+	<area coords="430,334,490,374" href="b36s245/14-40.rle" />
+	<area coords="490,334,550,374" href="b36s245/14-41.rle" />
+	<area coords="550,334,621,374" href="b36s245/14-42.rle" />
+	<area coords="0,374,70,418" href="b36s245/14-43.rle" />
+	<area coords="70,374,130,418" href="b36s245/14-44.rle" />
+	<area coords="130,374,190,418" href="b36s245/14-45.rle" />
+	<area coords="190,374,250,418" href="b36s245/14-46.rle" />
+	<area coords="250,374,310,418" href="b36s245/14-47.rle" />
+	<area coords="310,374,370,418" href="b36s245/14-48.rle" />
+	<area coords="370,374,430,418" href="b36s245/14-49.rle" />
+	<area coords="430,374,490,418" href="b36s245/15-33.rle" />
+	<area coords="490,374,550,418" href="b36s245/15-37.rle" />
+	<area coords="550,374,621,418" href="b36s245/15-51.rle" />
+	<area coords="0,418,70,477" href="b36s245/16-18.rle" />
+	<area coords="70,418,130,477" href="b36s245/16-58.rle" />
+	<area coords="130,418,190,477" href="b36s245/18-41.rle" />
+	<area coords="190,418,250,477" href="b36s245/18-262.rle" />
+	<area coords="250,418,310,477" href="b36s245/21-2947.rle" />
+	<area coords="310,418,370,477" href="b36s245/24-11113.rle" />
+	<area coords="370,418,430,477" href="b36s245/36-1.rle" />
+	<area coords="430,418,490,477" href="b36s245/40-1.rle" />
+</map>
+<p>Although not generally considered a still-life, the empty field (i.e.
+<a href="b36s245/0vacuum.rle">vacuum</a>) technically fulfills most the
+criteria, and it occurs sufficiently frequently to warrant being mentioned.
+For example, it is the most common result of two gliders colliding. (Since
+it has no living cells, it fails to be an actual object, in much the same
+way that 1 is not considered a prime number, even though it has no other
+prime factors.)</p>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Aircraft_carrier">Aircraft carrier</a>,
+<a class="x" href="http://conwaylife.com/wiki/Beehive">Beehive</a>,
+<a class="x" href="http://conwaylife.com/wiki/Block">Block</a>,
+<a class="x" href="http://conwaylife.com/wiki/Boat">Boat</a>,
+<a class="x" href="http://conwaylife.com/wiki/Loaf">Loaf</a>,
+<a class="x" href="http://conwaylife.com/wiki/Mango">Mango</a>,
+<a class="x" href="http://conwaylife.com/wiki/Pond">Pond</a>,
+<a class="x" href="http://conwaylife.com/wiki/Tub">Tub</a>,
+<a class="x" href="http://conwaylife.com/wiki/Vacuum_(empty_space)">Vacuum (empty space)</a>.</p>
+</article>
+<hr /><article><a id="a3" name="a3"></a>
+<a id="rl-pp1" name="rl-pp1"></a>
+<h2>93 pseudo-still-lifes</h2>
+<p>These are all the pseudo-still-lifes up to 15 bits,
+and the 16-bit ones composed of two 8-bit still-lifes.</p>
+<p><img src="map/rl-pp1.png" alt="B36/S245 pseudo-still-lifes"
+ width="621" height="461" usemap="#rl-pp1" /></p>
+<p><table><colgroup><col span="12" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_rl-pp1" class="i" href="javascript:Nav('rl-pp1')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a2">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a4">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/rl-pp1.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/rl-pp1.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/rl-pp1.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="lis/rl-pp1.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/rl-pp1.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/rl-pp1.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=rl-pp1" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_rl-pp1"><p><table id="t-rl-pp1" style="width:625px">
+    <colgroup><col style="width:71px;" /><col span="8" style="width:60px;" />
+	<col style="width:72px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="b36s245/10zz1.rle">
+	    Up z on z [4]</a></td>
+	<td><a class="p" href="b36s245/10zz2.rle">
+	    Down z on z [6]</a></td>
+	<td><a class="p" href="b36s245/11acz2.rle">
+	    Down Z on carrier [7]</a></td>
+	<td><a class="p" href="b36s245/11hvz.rle">
+	    Z on beehive [8]</a></td>
+	<td><a class="p" href="b36s245/11acz4.rle">
+	    Down Z under carrier [6]</a></td>
+	<td><a class="p" href="b36s245/11acz1.rle">
+	    Up Z on carrier [5]</a></td>
+	<td><a class="p" href="b36s245/11acz3.rle">
+	    Up Z under carrier [6]</a></td>
+	<td><a class="p" href="b36s245/12acac1.rle">
+	    Up trans carrier on carrier [8]</a></td>
+	<td><a class="p" href="b36s245/12hvhv.rle">
+	    Beehive on beehive [3]</a></td>
+	<td><a class="p" href="b36s245/12acac5.rle">
+	    Up cis carrier under carrier [5]</a></td>
+    </tr>
+    <tr>
+	<td class="r"><a class="p" href="b36s245/12lfz2.rle">
+	    Down Z on loaf [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/12lfz1.rle">
+	    Up Z on loaf [x]</a></td>
+	<td><a class="p" href="b36s245/12wz1.rle">
+	    Up Z on W [7]</a></td>
+	<td><a class="p" href="b36s245/12acac3.rle">
+	    Up trans carrier under carrier [5]</a></td>
+	<td><a class="p" href="b36s245/12achv1.rle">
+	    Beehive on carrier [7]</a></td>
+	<td><a class="p" href="b36s245/12acac2.rle">
+	    Down trans carrier on carrier [4]</a></td>
+	<td><a class="p" href="b36s245/12achv2.rle">
+	    Beehive under carrier [5]</a></td>
+	<td><a class="p" href="b36s245/12wz2.rle">
+	    Down Z on W [9]</a></td>
+	<td><a class="p" href="b36s245/12acac4.rle">
+	    Down trans carrier under carrier [5]</a></td>
+	<td><a class="p" href="b36s245/12acac6.rle">
+	    down cis carrier under carrier [5]</a></td>
+    </tr>
+    <tr>
+	<td><a class="p" href="b36s245/13lfhv.rle">
+	    Beehive on loaf [8]</a></td>
+	<td><a class="p" href="b36s245/13pdz.rle">
+	    Z on pond [10]</a></td>
+	<td><a class="p" href="b36s245/13cbz1.rle">
+	    Up Z on crab [9]</a></td>
+	<td><a class="p" href="b36s245/13wac4.rle">
+	    Down cis carrier on W [6]</a></td>
+	<td><a class="p" href="b36s245/13wac2.rle">
+	    Down trans carrier on W [10]</a></td>
+	<td><a class="p" href="b36s245/13lfac1.rle">
+	    Up trans carrier on loaf [11]</a></td>
+	<td><a class="p" href="b36s245/13lfac2.rle">
+	    Down trans carrier on loaf [11]</a></td>
+	<td><a class="p" href="b36s245/13cgz1.rle">
+	    Up Z on mango [7]</a></td>
+	<td><a class="p" href="b36s245/13cgz2.rle">
+	    Down Z on mango [7]</a></td>
+	<td><a class="p" href="b36s245/13cbz2.rle">
+	    Down Z on crab [11]</a></td>
+    </tr>
+    <tr>
+	<td><a class="p" href="b36s245/13whv.rle">
+	    Beehive on W [8]</a></td>
+	<td><a class="p" href="b36s245/13lfac3.rle">
+	    Up cis carrier on loaf [6]</a></td>
+	<td><a class="p" href="b36s245/13lfac4.rle">
+	    Down cis carrier on loaf [6]</a></td>
+	<td><a class="p" href="b36s245/13wac1.rle">
+	    Up trans carrier on W [8]</a></td>
+	<td><a class="p" href="b36s245/13wac3.rle">
+	    Up cis carrier on W [6]</a></td>
+	<td><a class="p" href="b36s245/14pdhv.rle">
+	    Beehive on pond [8]</a></td>
+	<td><a class="p" href="b36s245/14cbac4.rle">
+	    Down crab below carrier [6]</a></td>
+	<td class="r"><a class="p" href="b36s245/14lflf2.rle">
+	    Down loaf on loaf [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/14lflf1.rle">
+	    Up loaf on loaf [x]</a></td>
+	<td><a class="p" href="b36s245/14cbac2.rle">
+	    Down crab on carrier [11]</a></td>
+    </tr>
+    <tr>
+	<td><a class="p" href="b36s245/14ww1.rle">
+	    Up W on W [10]</a></td>
+	<td><a class="p" href="b36s245/14pdac1.rle">
+	    Pond on carrier [9]</a></td>
+	<td><a class="p" href="b36s245/14cghv.rle">
+	    Beehive on mango [6]</a></td>
+	<td><a class="p" href="b36s245/14cbhv.rle">
+	    Beehive on crab [8]</a></td>
+	<td><a class="p" href="b36s245/14pdac2.rle">
+	    Pond below carrier [6]</a></td>
+	<td><a class="p" href="b36s245/14cgac4.rle">
+	    Up mango below carrier [6]</a></td>
+	<td><a class="p" href="b36s245/14cgac2.rle">
+	    Down mango on carrier [6]</a></td>
+	<td><a class="p" href="b36s245/14lzz1.rle">
+	    Up Z on long Z [10]</a></td>
+	<td class="o"><a class="p" href="b36s245/14wlf2.rle">
+	    Down loaf on W [x+3]</a></td>
+	<td class="o"><a class="p" href="b36s245/14wlf1.rle">
+	    Up loaf on W [x+3]</a></td>
+    </tr>
+    <tr>
+	<td><a class="p" href="b36s245/14cbac1.rle">
+	    Up crab on carrier [10]</a></td>
+	<td><a class="p" href="b36s245/14cgac1.rle">
+	    Up mango on carrier [6]</a></td>
+	<td><a class="p" href="b36s245/14cbac3.rle">
+	    Up crab below carrier [6]</a></td>
+	<td><a class="p" href="b36s245/14cgac3.rle">
+	    Up mango below carrier [6]</a></td>
+	<td><a class="p" href="b36s245/14lzz2.rle">
+	    Down Z on long Z [12]</a></td>
+	<td><a class="p" href="b36s245/14ww2.rle">
+	    Down W on W [12]</a></td>
+	<td class="r"><a class="p" href="b36s245/15zzz1.rle">
+	    Up Z on up Z on Z [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/15sksz1.rle">
+	    Up Z on shuriken w/&#8203;shoe [x]</a></td>
+	<td><a class="p" href="b36s245/15pdlf.rle">
+	    Loaf on pond [10]</a></td>
+	<td class="r"><a class="p" href="b36s245/15tataz1.rle">
+	    Up Z on table tie table [x]</a></td>
+    </tr>
+    <tr>
+	<td><a class="p" href="b36s245/15cbw1.rle">
+	    Up w on crab [12]</a></td>
+	<td class="r"><a class="p" href="b36s245/15zzz2.rle">
+	    Up Z on down Z on Z [x]</a></td>
+	<td><a class="p" href="b36s245/15cglf1.rle">
+	    Up loaf on mango [7]</a></td>
+	<td><a class="p" href="b36s245/15cglf2.rle">
+	    Down loaf on mango [7]</a></td>
+	<td><a class="p" href="b36s245/15lzac4.rle">
+	    Down long Z below carrier [9]</a></td>
+	<td class="r"><a class="p" href="b36s245/15sksz2.rle">
+	    Down Z on shuriken w/&#8203;shoe [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/15tataz3.rle">
+	    Up Z on table on table [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/15tataz2.rle">
+	    Down Z on table tie table [x]</a></td>
+	<td class="o"><a class="p" href="b36s245/15cblf2.rle">
+	    Down loaf on crab [x+5]</a></td>
+	<td><a class="p" href="b36s245/15pdw.rle">
+	    Pond on W [10]</a></td>
+    </tr>
+    <tr>
+	<td class="o"><a class="p" href="b36s245/15cblf1.rle">
+	    Up loaf on crab [x+5]</a></td>
+	<td><a class="p" href="b36s245/15cgw1.rle">
+	    Up w on mango [7]</a></td>
+	<td><a class="p" href="b36s245/15lzac2.rle">
+	    Down long Z on carrier [13]</a></td>
+	<td class="r"><a class="p" href="b36s245/15zzz3.rle">
+	    Down Z on down Z on Z [x]</a></td>
+	<td><a class="p" href="b36s245/15lzhv.rle">
+	    Beehive on long Z [11]</a></td>
+	<td class="r"><a class="p" href="b36s245/15tataz4.rle">
+	    Down Z on table on table [x]</a></td>
+	<td><a class="p" href="b36s245/15cbw2.rle">
+	    Down w on crab [14]</a></td>
+	<td><a class="p" href="b36s245/15cgw2.rle">
+	    Down w on mango [7]</a></td>
+	<td><a class="p" href="b36s245/15lzac1.rle">
+	    Up long Z on carrier [11]</a></td>
+	<td class="r"><a class="p" href="b36s245/15zzz4.rle">
+	    Z on down Z on Z [x]</a></td>
+    </tr>
+    <tr>
+	<td><a class="p" href="b36s245/15lzac3.rle">
+	    Up long Z below carrier [9]</a></td>
+	<td><a class="p" href="b36s245/16pdpd.rle">
+	    Pond on pond [10]</a></td>
+	<td class="r"><a class="p" href="b36s245/16cbcb3.rle">
+	    Up crab below crab [x]</a></td>
+	<td><a class="p" href="b36s245/16cbcb1.rle">
+	    Up crab on crab [14]</a></td>
+	<td><a class="p" href="b36s245/16cgcg1.rle">
+	    Up mango on mango [7]</a></td>
+	<td><a class="p" href="b36s245/16cgpd.rle">
+	    Pond on mango [7]</a></td>
+	<td class="o"><a class="p" href="b36s245/16cbcb4.rle">
+	    Down crab below crab [x+2]</a></td>
+	<td><a class="p" href="b36s245/16cbpd.rle">
+	    Pond on crab [10]</a></td>
+	<td><a class="p" href="b36s245/16cbcg1.rle">
+	    Up mango on crab [7]</a></td>
+	<td><a class="p" href="b36s245/16cgcg2.rle">
+	    Down mango on mango [7]</a></td>
+    </tr>
+    <tr>
+	<td class="g"><a class="p" href="b36s245/16cbcb2.rle">
+	    Down crab on crab [16]</a></td>
+	<td><a class="p" href="b36s245/16cbcg2.rle">
+	    Down mango on crab [7]</a></td>
+	<td class="r"><a class="p" href="b36s245/16sksk.rle">
+	    shurik&shy;en on shuriken [x]</a></td>
+	<td colspan="7" class="s">&nbsp;</td>
+    </tr>
+</table></p></div>
+<map name="rl-pp1">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,441,20,461" href="#bottom" />
+	<area coords="601,0,621,20" href="zip/rl-pp1.zip" />
+	<area coords="601,441,621,461" href="stamp/rl-pp1.rle" />
+	<area coords="0,0,70,54" href="b36s245/10zz1.rle" />
+	<area coords="70,0,130,54" href="b36s245/10zz2.rle" />
+	<area coords="130,0,190,54" href="b36s245/11acz2.rle" />
+	<area coords="190,0,250,54" href="b36s245/11hvz.rle" />
+	<area coords="250,0,310,54" href="b36s245/11acz4.rle" />
+	<area coords="310,0,370,54" href="b36s245/11acz1.rle" />
+	<area coords="370,0,430,54" href="b36s245/11acz3.rle" />
+	<area coords="430,0,490,54" href="b36s245/12acac1.rle" />
+	<area coords="490,0,550,54" href="b36s245/12hvhv.rle" />
+	<area coords="550,0,621,54" href="b36s245/12acac5.rle" />
+	<area coords="0,54,70,98" href="b36s245/12lfz2.rle" />
+	<area coords="70,54,130,98" href="b36s245/12lfz1.rle" />
+	<area coords="130,54,190,98" href="b36s245/12wz1.rle" />
+	<area coords="190,54,250,98" href="b36s245/12acac3.rle" />
+	<area coords="250,54,310,98" href="b36s245/12achv1.rle" />
+	<area coords="310,54,370,98" href="b36s245/12acac2.rle" />
+	<area coords="370,54,430,98" href="b36s245/12achv2.rle" />
+	<area coords="430,54,490,98" href="b36s245/12wz2.rle" />
+	<area coords="490,54,550,98" href="b36s245/12acac4.rle" />
+	<area coords="550,54,621,98" href="b36s245/12acac6.rle" />
+	<area coords="0,98,70,142" href="b36s245/13lfhv.rle" />
+	<area coords="70,98,130,142" href="b36s245/13pdz.rle" />
+	<area coords="130,98,190,142" href="b36s245/13cbz1.rle" />
+	<area coords="190,98,250,142" href="b36s245/13wac4.rle" />
+	<area coords="250,98,310,142" href="b36s245/13wac2.rle" />
+	<area coords="310,98,370,142" href="b36s245/13lfac1.rle" />
+	<area coords="370,98,430,142" href="b36s245/13lfac2.rle" />
+	<area coords="430,98,490,142" href="b36s245/13cgz1.rle" />
+	<area coords="490,98,550,142" href="b36s245/13cgz2.rle" />
+	<area coords="550,98,621,142" href="b36s245/13cbz2.rle" />
+	<area coords="0,142,70,186" href="b36s245/13whv.rle" />
+	<area coords="70,142,130,186" href="b36s245/13lfac3.rle" />
+	<area coords="130,142,190,186" href="b36s245/13lfac4.rle" />
+	<area coords="190,142,250,186" href="b36s245/13wac1.rle" />
+	<area coords="250,142,310,186" href="b36s245/13wac3.rle" />
+	<area coords="310,142,370,186" href="b36s245/14pdhv.rle" />
+	<area coords="370,142,430,186" href="b36s245/14cbac4.rle" />
+	<area coords="430,142,490,186" href="b36s245/14lflf2.rle" />
+	<area coords="490,142,550,186" href="b36s245/14lflf1.rle" />
+	<area coords="550,142,621,186" href="b36s245/14cbac2.rle" />
+	<area coords="0,186,70,230" href="b36s245/14ww1.rle" />
+	<area coords="70,186,130,230" href="b36s245/14pdac1.rle" />
+	<area coords="130,186,190,230" href="b36s245/14cghv.rle" />
+	<area coords="190,186,250,230" href="b36s245/14cbhv.rle" />
+	<area coords="250,186,310,230" href="b36s245/14pdac2.rle" />
+	<area coords="310,186,370,230" href="b36s245/14cgac4.rle" />
+	<area coords="370,186,430,230" href="b36s245/14cgac2.rle" />
+	<area coords="430,186,490,230" href="b36s245/14lzz1.rle" />
+	<area coords="490,186,550,230" href="b36s245/14wlf2.rle" />
+	<area coords="550,186,621,230" href="b36s245/14wlf1.rle" />
+	<area coords="0,230,70,274" href="b36s245/14cbac1.rle" />
+	<area coords="70,230,130,274" href="b36s245/14cgac1.rle" />
+	<area coords="130,230,190,274" href="b36s245/14cbac3.rle" />
+	<area coords="190,230,250,274" href="b36s245/14cgac3.rle" />
+	<area coords="250,230,310,274" href="b36s245/14lzz2.rle" />
+	<area coords="310,230,370,274" href="b36s245/14ww2.rle" />
+	<area coords="370,230,430,274" href="b36s245/15zzz1.rle" />
+	<area coords="430,230,490,274" href="b36s245/15sksz1.rle" />
+	<area coords="490,230,550,274" href="b36s245/15pdlf.rle" />
+	<area coords="550,230,621,274" href="b36s245/15tataz1.rle" />
+	<area coords="0,274,70,318" href="b36s245/15cbw1.rle" />
+	<area coords="70,274,130,318" href="b36s245/15zzz2.rle" />
+	<area coords="130,274,190,318" href="b36s245/15cglf1.rle" />
+	<area coords="190,274,250,318" href="b36s245/15cglf2.rle" />
+	<area coords="250,274,310,318" href="b36s245/15lzac4.rle" />
+	<area coords="310,274,370,318" href="b36s245/15sksz2.rle" />
+	<area coords="370,274,430,318" href="b36s245/15tataz3.rle" />
+	<area coords="430,274,490,318" href="b36s245/15tataz2.rle" />
+	<area coords="490,274,550,318" href="b36s245/15cblf2.rle" />
+	<area coords="550,274,621,318" href="b36s245/15pdw.rle" />
+	<area coords="0,318,70,370" href="b36s245/15cblf1.rle" />
+	<area coords="70,318,130,370" href="b36s245/15cgw1.rle" />
+	<area coords="130,318,190,370" href="b36s245/15lzac2.rle" />
+	<area coords="190,318,250,370" href="b36s245/15zzz3.rle" />
+	<area coords="250,318,310,370" href="b36s245/15lzhv.rle" />
+	<area coords="310,318,370,370" href="b36s245/15tataz4.rle" />
+	<area coords="370,318,430,370" href="b36s245/15cbw2.rle" />
+	<area coords="430,318,490,370" href="b36s245/15cgw2.rle" />
+	<area coords="490,318,550,370" href="b36s245/15lzac1.rle" />
+	<area coords="550,318,621,370" href="b36s245/15zzz4.rle" />
+	<area coords="0,370,70,418" href="b36s245/15lzac3.rle" />
+	<area coords="70,370,130,418" href="b36s245/16pdpd.rle" />
+	<area coords="130,370,190,418" href="b36s245/16cbcb3.rle" />
+	<area coords="190,370,250,418" href="b36s245/16cbcb1.rle" />
+	<area coords="250,370,310,418" href="b36s245/16cgcg1.rle" />
+	<area coords="310,370,370,418" href="b36s245/16cgpd.rle" />
+	<area coords="370,370,430,418" href="b36s245/16cbcb4.rle" />
+	<area coords="430,370,490,418" href="b36s245/16cbpd.rle" />
+	<area coords="490,370,550,418" href="b36s245/16cbcg1.rle" />
+	<area coords="550,370,621,418" href="b36s245/16cgcg2.rle" />
+	<area coords="0,418,70,461" href="b36s245/16cbcb2.rle" />
+	<area coords="70,418,130,461" href="b36s245/16cbcg2.rle" />
+	<area coords="130,418,190,461" href="b36s245/16sksk.rle" />
+</map>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Aircraft_carrier">Aircraft carrier</a>,
+<a class="x" href="http://conwaylife.com/wiki/Beehive">Beehive</a>,
+<a class="x" href="http://conwaylife.com/wiki/Loaf">Loaf</a>,
+<a class="x" href="http://conwaylife.com/wiki/Mango">Mango</a>,
+<a class="x" href="http://conwaylife.com/wiki/Pond">Pond</a>.</p>
+</article>
+<hr /><article><a id="a4" name="a4"></a>
+<a id="rl-qp1" name="rl-qp1"></a>
+<h2>2 quasi-still-lifes</h2>
+<p><img src="map/rl-qp1.png" alt="B36/S245 qp1"
+ width="141" height="61" usemap="#rl-qp1" /></p>
+<p><table><colgroup><col span="12" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_rl-qp1" class="i" href="javascript:Nav('rl-qp1')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a3">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a5">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/rl-qp1.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/rl-qp1.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/rl-qp1.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="lis/rl-qp1.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/rl-qp1.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/rl-qp1.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=rl-qp1" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_rl-qp1"><p><table id="t-rl-qp1" style="width:145px">
+    <colgroup><col span="2" style="width:72px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="b36s245/8tbtb04.rle">Two tubs
+	    offset (4, 0) [4]</a></td>
+	<td><a class="p" href="b36s245/10hvtb.rle">
+	    Beehive and tub [3]</a></td>
+    </tr>
+</table></p></div>
+<map name="rl-qp1">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,41,20,61" href="#bottom" />
+	<area coords="121,0,141,20" href="zip/rl-qp1.zip" />
+	<area coords="121,41,141,61" href="stamp/rl-qp1.rle" />
+	<area coords="0,0,70,61" href="b36s245/8tbtb03.rle" />
+	<area coords="70,0,141,61" href="b36s245/10hvtb.rle" />
+</map>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Beehive">Beehive</a>,
+<a class="x" href="http://conwaylife.com/wiki/Tub">Tub</a>.</p>
+</article>
+<hr /><article><a id="a5" name="a5"></a>
+<a id="rl-p2" name="rl-p2"></a>
+<h2>47 period 2 oscillators</h2>
+<p>These are all the period 2 oscillators up to 14 bits, and a few others.
+(There are actually 5 13-bit ones; unfortunately, the fifth one has been
+lost.)</p>
+<p><img src="map/rl-p2.png" alt="B36/S245 period 2 oscillators"
+ width="621" height="321" usemap="#rl-p2" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_rl-p2" class="i" href="javascript:Nav('rl-p2')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a4">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a6">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/rl-p2.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/rl-p2.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/rl-p2.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/rl-p2.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/rl-p2.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/rl-p2.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/rl-p2.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=rl-p2" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_rl-p2"><p><table id="t-rl-p2" style="width:625px">
+    <colgroup><col style="width:71px;" /><col span="8" style="width:60px;" />
+	<col style="width:72px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="b36s245/3lb.rle">Blinker;
+	    Light blinker [2]</a></td>
+	<td><a class="p" href="b36s245/4mb.rle">
+	    Medium blinker [2]</a></td>
+	<td><a class="p" href="b36s245/5x.rle">
+	    X [2]</a></td>
+	<td><a class="p" href="b36s245/8hb.rle">
+	    Heavy blinker [2]</a></td>
+	<td><a class="p" href="b36s245/10td.rle">
+	    Toad [4]</a></td>
+	<td class="r"><a class="p" href="b36s245/11ms.rle">
+	    Medium star [x]</a></td>
+	<td><a class="p" href="b36s245/11wow.rle">
+	    Wow [6]</a></td>
+	<td class="r"><a class="p" href="b36s245/18lh.rle">
+	    Light H [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/18bf.rle">
+	    Butterfly [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/18p2-3.rle">
+	    18P2.3 [x]</a></td>
+    </tr>
+    <tr>
+	<td class="r"><a class="p" href="b36s245/12p2-1.rle">
+	    12P2.1 [x]</a></td>
+	<td><a class="p" href="b36s245/12zdz.rle">
+	    Two Zs juggling a domino [9]</a></td>
+	<td class="r"><a class="p" href="b36s245/12bc2.rle">
+	    Two beacons [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/12llei.rle">
+	    Light lei [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/12p2-5.rle">
+	    P2 12.5 [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/12px.rle">
+	    Phoenix [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/13p2-1.rle">
+	    13P2.1 [x]</a></td>
+	<td><a class="p" href="b36s245/13p2-2.rle">
+	    13P2.2 [3]</a></td>
+	<td class="r"><a class="p" href="b36s245/13p2-3.rle">13P2.3;
+	    Two Zs tossing light blinker [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/13mlei.rle">
+	    Medium lei [x]</a></td>
+    </tr>
+    <tr>
+	<td><a class="p" href="b36s245/14lt.rle">
+	    Light T [4]</a></td>
+	<td class="r"><a class="p" href="b36s245/14p2-2.rle">
+	    14P2.2 [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/14p2-3.rle">14P2.3;
+	    Light cis flag [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/14p2-4.rle">
+	    14P2.4 [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/14p2-5.rle">14P2.5;
+	    Light trans flag [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/14p2-6.rle">
+	    14P2.6 [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/14p2-7.rle">
+	    14P2.7 [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/14hlei.rle">
+	    Heavy lei [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/14p2-9.rle">14P2.9;
+	    Two dominoes between two Zs [x]</a></td>
+	<td class="s">&nbsp;</td>
+    </tr>
+    <tr>
+	<td class="r"><a class="p" href="b36s245/15p2-1.rle">
+	    15P2.1 [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/15p2-2.rle">
+	    15P2.2 [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/15p2-3.rle">
+	    15P2.3 [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/15p2-4.rle">15P2.4;
+	    Two tables flipping a P [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/15p2-5.rle">
+	    15P2.5 [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/15p2-6.rle">
+	    15P2.6 [x]</a></td>
+	<td class="o"><a class="p" href="b36s245/15p2-7.rle">15P2.7;
+	    W and Z tossing light blinker [x+3]</a></td>
+	<td class="r"><a class="p" href="b36s245/15p2-8.rle">
+	    15P2.8 [x]</a></td>
+	<td colspan="2" class="s">&nbsp;</td>
+    </tr>
+    <tr>
+	<td class="r"><a class="p" href="b36s245/16p2-1.rle">
+	    16P2.1 [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/16mt.rle">
+	    Medium T [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/16p2-3.rle">
+	    16P2.3 [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/16ltd.rle">
+	    Large toad [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/20mh.rle">
+	    Medium H [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/20ht.rle">
+	    Heavy T [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/20ta4.rle">
+	    Four tables [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/20hs.rle">
+	    Heavy star [x]</a></td>
+	<td><a class="p" href="b36s245/20p2-5.rle">
+	    20P2.5 [18]</a></td>
+	<td class="r"><a class="p" href="b36s245/24ck4.rle">
+	    Four clocks [x]</a></td>
+    </tr>
+</table></p></div>
+<map name="rl-p2">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,301,20,321" href="#bottom" />
+	<area coords="601,0,621,20" href="zip/rl-p2.zip" />
+	<area coords="601,301,621,321" href="stamp/rl-p2.rle" />
+	<area coords="0,0,70,70" href="b36s245/3lb.rle" />
+	<area coords="70,0,130,70" href="b36s245/4mb.rle" />
+	<area coords="130,0,190,70" href="b36s245/5x.rle" />
+	<area coords="190,0,250,70" href="b36s245/8hb.rle" />
+	<area coords="250,0,310,70" href="b36s245/10td.rle" />
+	<area coords="310,0,370,70" href="b36s245/11ms.rle" />
+	<area coords="370,0,430,70" href="b36s245/11wow.rle" />
+	<area coords="430,0,490,70" href="b36s245/18lh.rle" />
+	<area coords="490,0,550,70" href="b36s245/18bf.rle" />
+	<area coords="550,0,621,70" href="b36s245/18p2-3.rle" />
+	<area coords="0,70,70,130" href="b36s245/12p2-1.rle" />
+	<area coords="70,70,130,130" href="b36s245/12zdz.rle" />
+	<area coords="130,70,190,130" href="b36s245/12bc2.rle" />
+	<area coords="190,70,250,130" href="b36s245/12llei.rle" />
+	<area coords="250,70,310,130" href="b36s245/12p2-5.rle" />
+	<area coords="310,70,370,130" href="b36s245/12px.rle" />
+	<area coords="370,70,430,130" href="b36s245/13p2-1.rle" />
+	<area coords="430,70,490,130" href="b36s245/13p2-2.rle" />
+	<area coords="490,70,550,130" href="b36s245/13p2-3.rle" />
+	<area coords="550,70,621,130" href="b36s245/13mlei.rle" />
+	<area coords="0,130,70,190" href="b36s245/14lt.rle" />
+	<area coords="70,130,130,190" href="b36s245/14p2-2.rle" />
+	<area coords="130,130,190,190" href="b36s245/14p2-3.rle" />
+	<area coords="190,130,250,190" href="b36s245/14p2-4.rle" />
+	<area coords="250,130,310,190" href="b36s245/14p2-5.rle" />
+	<area coords="310,130,370,190" href="b36s245/14p2-6.rle" />
+	<area coords="370,130,430,190" href="b36s245/14p2-7.rle" />
+	<area coords="430,130,490,190" href="b36s245/14hlei.rle" />
+	<area coords="490,130,550,190" href="b36s245/14p2-9.rle" />
+	<area coords="0,190,70,250" href="b36s245/15p2-1.rle" />
+	<area coords="70,190,130,250" href="b36s245/15p2-2.rle" />
+	<area coords="130,190,190,250" href="b36s245/15p2-3.rle" />
+	<area coords="190,190,250,250" href="b36s245/15p2-4.rle" />
+	<area coords="250,190,310,250" href="b36s245/15p2-5.rle" />
+	<area coords="310,190,370,250" href="b36s245/15p2-6.rle" />
+	<area coords="370,190,430,250" href="b36s245/15p2-7.rle" />
+	<area coords="430,190,490,250" href="b36s245/15p2-8.rle" />
+	<area coords="0,250,70,321" href="b36s245/16p2-1.rle" />
+	<area coords="70,250,130,321" href="b36s245/16mt.rle" />
+	<area coords="130,250,190,321" href="b36s245/16p2-3.rle" />
+	<area coords="190,250,250,321" href="b36s245/16ltd.rle" />
+	<area coords="250,250,310,321" href="b36s245/20mh.rle" />
+	<area coords="310,250,370,321" href="b36s245/20ht.rle" />
+	<area coords="370,250,430,321" href="b36s245/20ta4.rle" />
+	<area coords="430,250,490,321" href="b36s245/20hs.rle" />
+	<area coords="490,250,550,321" href="b36s245/20p2-5.rle" />
+	<area coords="550,250,621,321" href="b36s245/24ck4.rle" />
+</map>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Beacon">Beacon</a>,
+<a class="x" href="http://conwaylife.com/wiki/Blinker">Blinker</a>,
+<a class="x" href="http://conwaylife.com/wiki/Butterfly">Butterfly</a>,
+<a class="x" href="http://conwaylife.com/wiki/Lei">Lei</a>,
+<a class="x" href="http://conwaylife.com/wiki/Phoenix_1">Phoenix 1</a>.</p>
+</article>
+<hr /><article><a id="a6" name="a6"></a>
+<a id="rl-pp2" name="rl-pp2"></a>
+<h2>89 period 2 pseudo-oscillators</h2>
+<p>These are all the period 2 pseudo-oscillators up to 15 bits,
+and a few others.</p>
+<p><img src="map/rl-pp2.png" alt="B36/S245 period 2 pseudo-oscillators"
+ width="621" height="441" usemap="#rl-pp2" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_rl-pp2" class="i" href="javascript:Nav('rl-pp2')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a5">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a7">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/rl-pp2.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/rl-pp2.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/rl-pp2.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/rl-pp2.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/rl-pp2.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/rl-pp2.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/rl-pp2.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=rl-pp2" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_rl-pp2"><p><table id="t-rl-pp2" style="width:625px">
+    <colgroup><col style="width:71px;" /><col span="8" style="width:60px;" />
+	<col style="width:72px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="b36s245/8mbmb.rle">
+	    Medium blinker on medium blinker [4]</a></td>
+	<td><a class="p" href="b36s245/9mbz.rle">
+	    Medium blinker on z [6]</a></td>
+	<td><a class="p" href="b36s245/10xx.rle">
+	    X on X [5]</a></td>
+	<td><a class="p" href="b36s245/10mbhv.rle">
+	    Beehive on medium blinker [4]</a></td>
+	<td><a class="p" href="b36s245/10mbac1.rle">
+	    Medium blinker on carrier [5]</a></td>
+	<td><a class="p" href="b36s245/10mbac2.rle">Medium blinker
+	    below carrier [5]</a></td>
+	<td><a class="p" href="b36s245/11mblf.rle">
+	    Medium blinker on loaf [5]</a></td>
+	<td><a class="p" href="b36s245/11mbw.rle">
+	    Medium blinker on W [6]</a></td>
+	<td colspan="2"><a class="p" href="b36s245/20xxxx.rle">
+	    X on X on X on X [11]</a></td>
+    </tr>
+    <tr>
+	<td><a class="p" href="b36s245/12hbmb.rle">
+	    Medium blinker on heavy blinker [4]</a></td>
+	<td><a class="p" href="b36s245/12mbpd.rle">
+	    Medium blinker on pond [6]</a></td>
+	<td><a class="p" href="b36s245/12mbmbmb.rle">Medium blinker
+	    on medium blinker on medium blinker [7]</a></td>
+	<td><a class="p" href="b36s245/12mbcg.rle">Medium blinker
+	    on mango [6]</a></td>
+	<td><a class="p" href="b36s245/12mbcb.rle">
+	    Medium blinker on crab [6]</a></td>
+	<td><a class="p" href="b36s245/13hbz.rle">
+	    Heavy blinker on Z [6]</a></td>
+	<td><a class="p" href="b36s245/13mbmbz.rle">
+	    Medium blinker on medium blinker on Z [9]</a></td>
+	<td><a class="p" href="b36s245/13mbzmb.rle">
+	    Medium blinker on Z on medium blinker [9]</a></td>
+	<td><a class="p" href="b36s245/13mblz.rle">
+	    Medium blinker on long Z [9]</a></td>
+	<td><a class="p" href="b36s245/20x2x2.rle">
+	    2&times;2 Xs [10]</a></td>
+    </tr>
+    <tr>
+	<td><a class="p" href="b36s245/14hbhv.rle">
+	    Heavy blinker on beehive [4]</a></td>
+	<td><a class="p" href="b36s245/14hbac1.rle">Heavy blinker
+	    on carrier [5]</a></td>
+	<td><a class="p" href="b36s245/14mbhvmb.rle">
+	    Medium blinker on beehive on medium blinker [7]</a></td>
+	<td><a class="p" href="b36s245/14mbzz1.rle">
+	    Medium blinker on Z on up Z [7]</a></td>
+	<td><a class="p" href="b36s245/14mbmbhv.rle">
+	    Medium blinker on medium blinker on beehive [7]</a></td>
+	<td><a class="p" href="b36s245/14zmbz2.rle">
+	    Down Z on medium blinker on Z [10]</a></td>
+	<td><a class="p" href="b36s245/14zmbz1.rle">
+	    Up Z on medium blinker on Z [10]</a></td>
+	<td><a class="p" href="b36s245/14mbmba1.rle">
+	    Medium blinker on medium blinker on carrier [8]</a></td>
+	<td><a class="p" href="b36s245/14hbac2.rle">Heavy blinker
+	    below carrier [5]</a></td>
+	<td><a class="p" href="b36s245/14mbsks.rle">
+	    Medium blinker on shuriken w/&#8203;shoe [6]</a></td>
+    </tr>
+    <tr>
+	<td><a class="p" href="b36s245/14mbtas1.rle">
+	    Medium blinker on table tie table [6]</a></td>
+	<td><a class="p" href="b36s245/14mbamb1.rle">
+	    Medium blinker on carrier on medium blinker [8]</a></td>
+	<td><a class="p" href="b36s245/14mbzz2.rle">
+	    Medium blinker on Z on down Z [9]</a></td>
+	<td><a class="p" href="b36s245/14mbmba2.rle">
+	    Medium blinker on medium blinker below carrier [8]</a></td>
+	<td class="o"><a class="p" href="b36s245/14mbtas2.rle">
+	    Medium blinker on table on table [x+3]</a></td>
+	<td><a class="p" href="b36s245/14mbamb3.rle">
+	    Medium blinker above carrier above medium blinker [8]</a></td>
+	<td><a class="p" href="b36s245/14mbamb2.rle">
+	    Medium blinker on carrier above medium blinker [8]</a></td>
+	<td><a class="p" href="b36s245/15xxx.rle">
+	    X on X on X [12]</a></td>
+	<td><a class="p" href="b36s245/15hblf.rle">
+	    Heavy blinker on loaf [6]</a></td>
+	<td><a class="p" href="b36s245/15mbhvz.rle">
+	    Medium blinker on beehive on Z [11]</a></td>
+    </tr>
+    <tr>
+	<td><a class="p" href="b36s245/15mbzac4.rle">
+	    Medium blinker on down Z below carrier [9]</a></td>
+	<td><a class="p" href="b36s245/15hvmbz.rle">
+	    Z on medium blinker on beehive [11]</a></td>
+	<td><a class="p" href="b36s245/15mbzac2.rle">
+	    Medium blinker on down Z on carrier [10]</a></td>
+	<td><a class="p" href="b36s245/15mbacz2.rle">
+	    Medium blinker on carrier on down Z [10]</a></td>
+	<td><a class="p" href="b36s245/15mbmblf.rle">
+	    Medium blinker on medium blinker on loaf [9]</a></td>
+	<td><a class="p" href="b36s245/15acmbz1.rle">
+	    Carrier on medium blinker on up Z [14]</a></td>
+	<td><a class="p" href="b36s245/15acmbz2.rle">
+	    Carrier on medium blinker on down Z [14]</a></td>
+	<td class="o"><a class="p" href="b36s245/15mblcb.rle">
+	    Medium blinker on long crab [x+3]</a></td>
+	<td><a class="p" href="b36s245/15mbwow.rle">
+	    Medium blinker on wow [9]</a></td>
+	<td><a class="p" href="b36s245/15mbchs3.rle">Medium blinker
+	    on down chair siamese up chair [9]</a></td>
+    </tr>
+    <tr>
+	<td><a class="p" href="b36s245/15hbw.rle">
+	    Heavy blinker on W [6]</a></td>
+	<td class="o"><a class="p" href="b36s245/15mbep1.rle">
+	    Medium blinker on elephant [x+3]</a></td>
+	<td class="o"><a class="p" href="b36s245/15mbep2.rle">
+	    Medium blinker behind elephant [x+3]</a></td>
+	<td><a class="p" href="b36s245/15mbzhv.rle">
+	    Medium blinker on Z on beehive [11]</a></td>
+	<td><a class="p" href="b36s245/15mbacz8.rle">
+	    Medium blinker above carrier above down Z [9]</a></td>
+	<td><a class="p" href="b36s245/15mbacz1.rle">
+	    Medium blinker on carrier on up Z [8]</a></td>
+	<td><a class="p" href="b36s245/15mbmbw.rle">
+	    Medium blinker on medium blinker on W [9]</a></td>
+	<td><a class="p" href="b36s245/15acmbz3.rle">
+	    Carrier above medium blinker on up Z [9]</a></td>
+	<td><a class="p" href="b36s245/15acmbz4.rle">
+	    Carrier above medium blinker on down Z [9]</a></td>
+	<td><a class="p" href="b36s245/15mbzac1.rle">
+	    Medium blinker on up Z on carrier [8]</a></td>
+    </tr>
+    <tr>
+	<td><a class="p" href="b36s245/15mbchs2.rle">
+	    Medium blinker on up chair siamese down chair [9]</a></td>
+	<td><a class="p" href="b36s245/15mbchs1.rle">
+	    Medium blinker on up chair siamese up chair [7]</a></td>
+	<td><a class="p" href="b36s245/15tdz.rle">
+	    Z on toad [8]</a></td>
+	<td><a class="p" href="b36s245/15mbacz6.rle">
+	    Medium blinker above carrier on down Z [10]</a></td>
+	<td><a class="p" href="b36s245/15mbacz7.rle">
+	    Medium blinker above carrier above up Z [9]</a></td>
+	<td><a class="p" href="b36s245/15mbzac3.rle">
+	    Medium blinker on up Z below carrier [9]</a></td>
+	<td><a class="p" href="b36s245/15mblfmb.rle">
+	    Medium blinker on loaf on medium blinker [9]</a></td>
+	<td><a class="p" href="b36s245/15mbacz4.rle">
+	    Medium blinker on carrier above down Z [9]</a></td>
+	<td><a class="p" href="b36s245/15mblw.rle">
+	    Medium blinker on long W [12]</a></td>
+	<td><a class="p" href="b36s245/15mbacz5.rle">
+	    Medium blinker above carrier on up Z [8]</a></td>
+    </tr>
+    <tr>
+	<td><a class="p" href="b36s245/15mbwmb.rle">
+	    Medium blinker on W on medium blinker [9]</a></td>
+	<td><a class="p" href="b36s245/15mbacz3.rle">
+	    Medium blinker on carrier above up Z [9]</a></td>
+	<td><a class="p" href="b36s245/16hbhb.rle">
+	    Heavy blinker on heavy blinker [5]</a></td>
+	<td class="o"><a class="p" href="b36s245/16mbrb3.rle">
+	    Medium blinker behind rabbit [x+3]</a></td>
+	<td class="o"><a class="p" href="b36s245/16mbrb1.rle">
+	    Medium blinker on rabbit [x+3]</a></td>
+	<td class="o"><a class="p" href="b36s245/16mbwta.rle">
+	    Medium blinker on W tie table [x+3]</a></td>
+	<td><a class="p" href="b36s245/16mbchs7.rle">
+	    Medium blinker on down chair tie down chair [11]</a></td>
+	<td><a class="p" href="b36s245/16mbss2c.rle">
+	    Medium blinker on shuriken w/&#8203;trans shoes [7]</a></td>
+	<td><a class="p" href="b36s245/16mbchs6.rle">
+	    Medium blinker on down chair tie up chair [9]</a></td>
+	<td><a class="p" href="b36s245/16mbss2a.rle">
+	    Medium blinker on shuriken w/&#8203;cis shoes [9]</a></td>
+    </tr>
+    <tr>
+	<td><a class="p" href="b36s245/16tdmb.rle">
+	    Medium blinker on toad [5]</a></td>
+	<td><a class="p" href="b36s245/16mbchs5.rle">
+	    Medium blinker on up chair tie down chair [9]</a></td>
+	<td><a class="p" href="b36s245/16mbchs4.rle">
+	    Medium blinker on up chair tie up chair [7]</a></td>
+	<td><a class="p" href="b36s245/16mbss2b.rle">
+	    Medium blinker below shuriken w/&#8203;cis shoes [9]</a></td>
+	<td class="o"><a class="p" href="b36s245/16mbhnz.rle">
+	    Medium blinker on z on hand [x+3]</a></td>
+	<td class="o"><a class="p" href="b36s245/16mbrb2.rle">
+	    Medium blinker above rabbit [x+3]</a></td>
+	<td><a class="p" href="b36s245/16mbss2d.rle">
+	    Medium blinker on shuriken w/&#8203;stacked shoes [9]</a></td>
+	<td><a class="p" href="b36s245/16mbcctb.rle">
+	    Medium blinker on chair siamese chair 2/tub [6]</a></td>
+	<td><a class="p" href="b36s245/18tdhb.rle">
+	    Heavy blinker on toad [5]</a></td>
+	<td><a class="p" href="b36s245/18tdcb.rle">
+	    Toad on crab [3]</a></td>
+    </tr>
+</table></p></div>
+<map name="rl-pp2">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,421,20,441" href="#bottom" />
+	<area coords="601,0,621,20" href="zip/rl-pp2.zip" />
+	<area coords="601,421,621,441" href="stamp/rl-pp2.rle" />
+	<area coords="0,0,70,58" href="b36s245/8mbmb.rle" />
+	<area coords="70,0,130,58" href="b36s245/9mbz.rle" />
+	<area coords="130,0,190,58" href="b36s245/10xx.rle" />
+	<area coords="190,0,250,58" href="b36s245/10mbhv.rle" />
+	<area coords="250,0,310,58" href="b36s245/10mbac1.rle" />
+	<area coords="310,0,370,58" href="b36s245/10mbac2.rle" />
+	<area coords="370,0,430,58" href="b36s245/11mblf.rle" />
+	<area coords="430,0,490,58" href="b36s245/11mbw.rle" />
+	<area coords="490,0,621,58" href="b36s245/20xxxx.rle" />
+	<area coords="0,58,70,106" href="b36s245/12hbmb.rle" />
+	<area coords="70,58,130,106" href="b36s245/12mbpd.rle" />
+	<area coords="130,58,190,106" href="b36s245/12mbmbmb.rle" />
+	<area coords="190,58,250,106" href="b36s245/12mbcg.rle" />
+	<area coords="250,58,310,106" href="b36s245/12mbcb.rle" />
+	<area coords="310,58,370,106" href="b36s245/13hbz.rle" />
+	<area coords="370,58,430,106" href="b36s245/13mbmbz.rle" />
+	<area coords="430,58,490,106" href="b36s245/13mbzmb.rle" />
+	<area coords="490,58,550,106" href="b36s245/13mblz.rle" />
+	<area coords="550,58,621,106" href="b36s245/20x2x2.rle" />
+	<area coords="0,106,70,154" href="b36s245/14hbhv.rle" />
+	<area coords="70,106,130,154" href="b36s245/14hbac1.rle" />
+	<area coords="130,106,190,154" href="b36s245/14mbhvmb.rle" />
+	<area coords="190,106,250,154" href="b36s245/14mbzz1.rle" />
+	<area coords="250,106,310,154" href="b36s245/14mbmbhv.rle" />
+	<area coords="310,106,370,154" href="b36s245/14zmbz2.rle" />
+	<area coords="370,106,430,154" href="b36s245/14zmbz1.rle" />
+	<area coords="430,106,490,154" href="b36s245/14mbmba1.rle" />
+	<area coords="490,106,550,154" href="b36s245/14hbac2.rle" />
+	<area coords="550,106,621,154" href="b36s245/14mbsks.rle" />
+	<area coords="0,154,70,202" href="b36s245/14mbtas1.rle" />
+	<area coords="70,154,130,202" href="b36s245/14mbamb1.rle" />
+	<area coords="130,154,190,202" href="b36s245/14mbzz2.rle" />
+	<area coords="190,154,250,202" href="b36s245/14mbmba2.rle" />
+	<area coords="250,154,310,202" href="b36s245/14mbtas2.rle" />
+	<area coords="310,154,370,202" href="b36s245/14mbamb3.rle" />
+	<area coords="370,154,430,202" href="b36s245/14mbamb2.rle" />
+	<area coords="430,154,490,202" href="b36s245/15xxx.rle" />
+	<area coords="490,154,550,202" href="b36s245/15hblf.rle" />
+	<area coords="550,154,621,202" href="b36s245/15mbhvz.rle" />
+	<area coords="0,202,70,250" href="b36s245/15mbzac4.rle" />
+	<area coords="70,202,130,250" href="b36s245/15hvmbz.rle" />
+	<area coords="130,202,190,250" href="b36s245/15mbzac2.rle" />
+	<area coords="190,202,250,250" href="b36s245/15mbacz2.rle" />
+	<area coords="250,202,310,250" href="b36s245/15mbmblf.rle" />
+	<area coords="310,202,370,250" href="b36s245/15acmbz1.rle" />
+	<area coords="370,202,430,250" href="b36s245/15acmbz2.rle" />
+	<area coords="430,202,490,250" href="b36s245/15mblcb.rle" />
+	<area coords="490,202,550,250" href="b36s245/15mbwow.rle" />
+	<area coords="550,202,621,250" href="b36s245/15mbchs3.rle" />
+	<area coords="0,250,70,298" href="b36s245/15hbw.rle" />
+	<area coords="70,250,130,298" href="b36s245/15mbep1.rle" />
+	<area coords="130,250,190,298" href="b36s245/15mbep2.rle" />
+	<area coords="190,250,250,298" href="b36s245/15mbzhv.rle" />
+	<area coords="250,250,310,298" href="b36s245/15mbacz8.rle" />
+	<area coords="310,250,370,298" href="b36s245/15mbacz1.rle" />
+	<area coords="370,250,430,298" href="b36s245/15mbmbw.rle" />
+	<area coords="430,250,490,298" href="b36s245/15acmbz3.rle" />
+	<area coords="490,250,550,298" href="b36s245/15acmbz4.rle" />
+	<area coords="550,250,621,298" href="b36s245/15mbzac1.rle" />
+	<area coords="0,298,70,346" href="b36s245/15mbchs2.rle" />
+	<area coords="70,298,130,346" href="b36s245/15mbchs1.rle" />
+	<area coords="130,298,190,346" href="b36s245/15tdz.rle" />
+	<area coords="190,298,250,346" href="b36s245/15mbacz6.rle" />
+	<area coords="250,298,310,346" href="b36s245/15mbacz7.rle" />
+	<area coords="310,298,370,346" href="b36s245/15mbzac3.rle" />
+	<area coords="370,298,430,346" href="b36s245/15mblfmb.rle" />
+	<area coords="430,298,490,346" href="b36s245/15mbacz4.rle" />
+	<area coords="490,298,550,346" href="b36s245/15mblw.rle" />
+	<area coords="550,298,621,346" href="b36s245/15mbacz5.rle" />
+	<area coords="0,346,70,398" href="b36s245/15mbwmb.rle" />
+	<area coords="70,346,130,398" href="b36s245/15mbacz3.rle" />
+	<area coords="130,346,190,398" href="b36s245/16hbhb.rle" />
+	<area coords="190,346,250,398" href="b36s245/16mbrb3.rle" />
+	<area coords="250,346,310,398" href="b36s245/16mbrb1.rle" />
+	<area coords="310,346,370,398" href="b36s245/16mbwta.rle" />
+	<area coords="370,346,430,398" href="b36s245/16mbchs7.rle" />
+	<area coords="430,346,490,398" href="b36s245/16mbss2c.rle" />
+	<area coords="490,346,550,398" href="b36s245/16mbchs6.rle" />
+	<area coords="550,346,621,398" href="b36s245/16mbss2a.rle" />
+	<area coords="0,398,70,441" href="b36s245/16tdmb.rle" />
+	<area coords="70,398,130,441" href="b36s245/16mbchs5.rle" />
+	<area coords="130,398,190,441" href="b36s245/16mbchs4.rle" />
+	<area coords="190,398,250,441" href="b36s245/16mbss2b.rle" />
+	<area coords="250,398,310,441" href="b36s245/16mbhnz.rle" />
+	<area coords="310,398,370,441" href="b36s245/16mbrb2.rle" />
+	<area coords="370,398,430,441" href="b36s245/16mbss2d.rle" />
+	<area coords="430,398,490,441" href="b36s245/16mbcctb.rle" />
+	<area coords="490,398,550,441" href="b36s245/18tdhb.rle" />
+	<area coords="550,398,621,441" href="b36s245/18tdcb.rle" />
+</map>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Aircraft_carrier">Aircraft carrier</a>,
+<a class="x" href="http://conwaylife.com/wiki/Beehive">Beehive</a>,
+<a class="x" href="http://conwaylife.com/wiki/Loaf">Loaf</a>,
+<a class="x" href="http://conwaylife.com/wiki/loaf">loaf</a>,
+<a class="x" href="http://conwaylife.com/wiki/Mango">Mango</a>,
+<a class="x" href="http://conwaylife.com/wiki/Pond">Pond</a>.</p>
+</article>
+<hr /><article><a id="a7" name="a7"></a>
+<a id="rl-qp2" name="rl-qp2"></a>
+<h2>1 period 2 quasi-oscillator</h2>
+<p><img src="map/rl-qp2.png" alt="B36/S245 qp2"
+ width="81" height="61" usemap="#rl-qp2" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_rl-qp2" class="i" href="javascript:Nav('rl-qp2')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a6">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a8">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/rl-qp2.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/rl-qp2.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/rl-qp2.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/rl-qp2.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/rl-qp2.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/rl-qp2.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/rl-qp2.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=rl-qp2" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_rl-qp2"><p><table id="t-rl-qp2" style="width:85px">
+    <colgroup><col style="width:83px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="b36s245/6htl.rle">
+	    Half traffic light [2]</a></td>
+    </tr>
+</table></p></div>
+<map name="rl-qp2">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,41,20,61" href="#bottom" />
+	<area coords="61,0,81,20" href="zip/rl-qp2.zip" />
+	<area coords="61,41,81,61" href="stamp/rl-qp2.rle" />
+	<area coords="0,0,81,61" href="b36s245/6htl.rle" />
+</map>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Blinker">Blinker</a>,
+<a class="x" href="http://conwaylife.com/wiki/Traffic_light">Traffic light</a>.</p>
+</article>
+<hr /><article><a id="a8" name="a8"></a>
+<a id="rl-p3" name="rl-p3"></a>
+<h2>7 period 3 oscillators</h2>
+<p><img src="map/rl-p3.png" alt="B36/S245 period 3 oscillators"
+ width="581" height="81" usemap="#rl-p3" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_rl-p3" class="i" href="javascript:Nav('rl-p3')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a7">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a9">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/rl-p3.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/rl-p3.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/rl-p3.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/rl-p3.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/rl-p3.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/rl-p3.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/rl-p3.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=rl-p3" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_rl-p3"><p><table id="t-rl-p3" style="width:585px">
+    <colgroup><col style="width:91px;" /><col span="5" style="width:80px;" />
+	<col style="width:92px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="b36s245/11bt.rle">
+	    Bowtie [4]</a></td>
+	<td class="r"><a class="p" href="b36s245/12tt.rle">
+	    Twin tees [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/14zddz.rle">
+	    Two dominoes between two Zs [x]</a></td>
+	<td><a class="p" href="b36s245/19p3-1.rle">
+	    19P3.1 [15]</a></td>
+	<td class="r"><a class="p" href="b36s245/20p3-1.rle">
+	    20P3.1 [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/21p3-1.rle">
+	    21P3.1 [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/28p3-1.rle">
+	    28P3.1 [x]</a></td>
+    </tr>
+</table></p></div>
+<map name="rl-p3">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,61,20,81" href="#bottom" />
+	<area coords="561,0,581,20" href="zip/rl-p3.zip" />
+	<area coords="561,61,581,81" href="stamp/rl-p3.rle" />
+	<area coords="0,0,90,81" href="b36s245/11bt.rle" />
+	<area coords="90,0,170,81" href="b36s245/12tt.rle" />
+	<area coords="170,0,250,81" href="b36s245/14zddz.rle" />
+	<area coords="250,0,330,81" href="b36s245/19p3-1.rle" />
+	<area coords="330,0,410,81" href="b36s245/20p3-1.rle" />
+	<area coords="410,0,490,81" href="b36s245/21p3-1.rle" />
+	<area coords="490,0,581,81" href="b36s245/28p3-1.rle" />
+</map>
+</article>
+<hr /><article><a id="a9" name="a9"></a>
+<a id="rl-p4" name="rl-p4"></a>
+<h2>12 period 4 oscillators</h2>
+<p><img src="map/rl-p4.png" alt="B36/S245 period 4 oscillators"
+ width="381" height="141" usemap="#rl-p4" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_rl-p4" class="i" href="javascript:Nav('rl-p4')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a8">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a10">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/rl-p4.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/rl-p4.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/rl-p4.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/rl-p4.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/rl-p4.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/rl-p4.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/rl-p4.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=rl-p4" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_rl-p4"><p><table id="t-rl-p4" style="width:385px">
+    <colgroup><col style="width:71px;" /><col span="4" style="width:60px;" />
+	<col style="width:72px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="b36s245/5p.rle">P;
+	    P pent&shy;omino [2]</a></td>
+	<td><a class="p" href="b36s245/5r.rle">R;
+	    R pent&shy;omino [2]</a></td>
+	<td><a class="p" href="b36s245/5pw.rle">
+	    Pinwheel [2]</a></td>
+	<td><a class="p" href="b36s245/8eg.rle">
+	    Egg [3]</a></td>
+	<td><a class="p" href="b36s245/8cm.rle">
+	    Cam [3]</a></td>
+	<td class="r"><a class="p" href="b36s245/15pwpwx.rle">
+	    X on two pinwheels [x]</a></td>
+    </tr>
+    <tr>
+	<td class="r"><a class="p" href="b36s245/10p4-1.rle">
+	    10P4.1 [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/10p4-2.rle">
+	    10P4.2 [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/10p4-3.rle">
+	    10P4.3 [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/11p4-1.rle">
+	    11P4.1 [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/12p4-1.rle">
+	    12P4.1 [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/18wddw.rle">
+	    Two dominoes between two Ws [x]</a></td>
+    </tr>
+</table></p></div>
+<map name="rl-p4">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,121,20,141" href="#bottom" />
+	<area coords="361,0,381,20" href="zip/rl-p4.zip" />
+	<area coords="361,121,381,141" href="stamp/rl-p4.rle" />
+	<area coords="0,0,70,70" href="b36s245/5p.rle" />
+	<area coords="70,0,130,70" href="b36s245/5r.rle" />
+	<area coords="130,0,190,70" href="b36s245/5pw.rle" />
+	<area coords="190,0,250,70" href="b36s245/8eg.rle" />
+	<area coords="250,0,310,70" href="b36s245/8cm.rle" />
+	<area coords="310,0,381,70" href="b36s245/15pwpwx.rle" />
+	<area coords="0,70,70,141" href="b36s245/10p4-1.rle" />
+	<area coords="70,70,130,141" href="b36s245/10p4-2.rle" />
+	<area coords="130,70,190,141" href="b36s245/10p4-3.rle" />
+	<area coords="190,70,250,141" href="b36s245/11p4-1.rle" />
+	<area coords="250,70,310,141" href="b36s245/12p4-1.rle" />
+	<area coords="310,70,381,141" href="b36s245/18wddw.rle" />
+</map>
+</article>
+<hr /><article><a id="a10" name="a10"></a>
+<a id="rl-pp4" name="rl-pp4"></a>
+<h2>94 period 4 pseudo-oscillators</h2>
+<p>These are all the period 4 pseudo-oscillators up to 17 bits,
+and one other.</p>
+<p><img src="map/rl-pp4.png" alt="B36/S245 period 4 pseudo-oscillators"
+ width="621" height="461" usemap="#rl-pp4" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_rl-pp4" class="i" href="javascript:Nav('rl-pp4')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a9">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a11">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/rl-pp4.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/rl-pp4.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/rl-pp4.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/rl-pp4.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/rl-pp4.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/rl-pp4.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/rl-pp4.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=rl-pp4" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_rl-pp4"><p><table id="t-rl-pp4" style="width:625px">
+    <colgroup><col style="width:71px;" /><col span="8" style="width:60px;" />
+	<col style="width:72px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="b36s245/9pmb.rle">
+	    Medium blinker on P [5]</a></td>
+	<td><a class="p" href="b36s245/10pp.rle">
+	    P on P [6]</a></td>
+	<td><a class="p" href="b36s245/10rr1.rle">
+	    R on R [7]</a></td>
+	<td><a class="p" href="b36s245/10rr2.rle">
+	    Up R below R [6]</a></td>
+	<td class="r"><a class="p" href="b36s245/10pwpw.rle">
+	    Pinwheel on pinwheel [x]</a></td>
+	<td><a class="p" href="b36s245/10rr3.rle">
+	    Down R below R [11]</a></td>
+	<td><a class="p" href="b36s245/12egmb1.rle">
+	    Medium blinker on egg [5]</a></td>
+	<td><a class="p" href="b36s245/12egmb2.rle">
+	    Delayed medium blinker on egg [5]</a></td>
+	<td><a class="p" href="b36s245/12egmb3.rle">
+	    Delayed medium blinker above egg [6]</a></td>
+	<td class="s">&nbsp;</td>
+    </tr>
+    <tr>
+	<td><a class="p" href="b36s245/13phb.rle">
+	    Heavy blinker on P [7]</a></td>
+	<td><a class="p" href="b36s245/13egz.rle">
+	    Egg on Z [6]</a></td>
+	<td><a class="p" href="b36s245/13pmbmb.rle">Medium blinker
+	    on medium blinker on P [8]</a></td>
+	<td><a class="p" href="b36s245/13mbpmb1.rle">Medium blinker
+	    on P on medium blinker [8]</a></td>
+	<td><a class="p" href="b36s245/14egac2.rle">
+	    Egg below carrier [5]</a></td>
+	<td><a class="p" href="b36s245/14eghv.rle">
+	    Beehive on egg [5]</a></td>
+	<td><a class="p" href="b36s245/14egac1.rle">
+	    Egg on carrier [5]</a></td>
+	<td><a class="p" href="b36s245/14ppmb1.rle">
+	    Medium blinker on P on P [9]</a></td>
+	<td><a class="p" href="b36s245/14pmbp2.rle">
+	    Down P on medium blinker on P [9]</a></td>
+	<td><a class="p" href="b36s245/14ppmb2.rle">
+	    Medium blinker below P on P [9]</a></td>
+    </tr>
+    <tr>
+	<td><a class="p" href="b36s245/14pmbp4.rle">Delayed down P
+	    on medium blinker on P [9]</a></td>
+	<td><a class="p" href="b36s245/14pmbp3.rle">Delayed up P
+	    on medium blinker on P [9]</a></td>
+	<td><a class="p" href="b36s245/14pmbz1.rle">
+	    Up P on medium blinker on Z [10]</a></td>
+	<td><a class="p" href="b36s245/14pmbz2.rle">
+	    Down P on medium blinker on Z [10]</a></td>
+	<td class="o"><a class="p" href="b36s245/14mp1043.rle">
+	    Medium blinker on 10P4.3 [x+3]</a></td>
+	<td><a class="p" href="b36s245/15ppp.rle">
+	    P on P on P [10]</a></td>
+	<td><a class="p" href="b36s245/15rrr1.rle">
+	    R on R on R [14]</a></td>
+	<td class="r"><a class="p" href="b36s245/15rrr4.rle">
+	    Down R below R below down R [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/15rrr3.rle">
+	    Down R below R below up R [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/15rrr2.rle">
+	    Up R below R below up R [x]</a></td>
+    </tr>
+    <tr>
+	<td class="r"><a class="p" href="b36s245/15pwpwpw.rle">
+	    Pinwheel on pinwheel on pinwheel [x]</a></td>
+	<td><a class="p" href="b36s245/15eglf.rle">
+	    Egg on loaf [6]</a></td>
+	<td><a class="p" href="b36s245/15pmbhv.rle">
+	    P on medium blinker on beehive [8]</a></td>
+	<td><a class="p" href="b36s245/15pmbac2.rle">
+	    P on medium blinker on down carrier [9]</a></td>
+	<td><a class="p" href="b36s245/15pmbac1.rle">
+	    P on medium blinker on up carrier [9]</a></td>
+	<td><a class="p" href="b36s245/15egw.rle">
+	    Egg on W [6]</a></td>
+	<td class="o"><a class="p" href="b36s245/15p10p42.rle">
+	    P on 10P4.2 [x+4]</a></td>
+	<td><a class="p" href="b36s245/15mbpmb2.rle">Medium blinker
+	    on up P above medium blinker [8]</a></td>
+	<td><a class="p" href="b36s245/15tdp.rle">
+	    P on toad [7]</a></td>
+	<td><a class="p" href="b36s245/15pmbac4.rle">P on medium
+	    blinker below down carrier [8]</a></td>
+    </tr>
+    <tr>
+	<td colspan="2"><a class="p" href="b36s245/15pmbac3.rle">
+	    P on medium blinker below up carrier [8]</a></td>
+	<td class="r"><a class="p" href="b36s245/16egeg4.rle">
+	    Up egg beside egg [x]</a></td>
+	<td><a class="p" href="b36s245/16egeg1.rle">
+	    Egg on egg [6]</a></td>
+	<td><a class="p" href="b36s245/16eghb1.rle">
+	    Heavy blinker on egg [5]</a></td>
+	<td><a class="p" href="b36s245/16egeg2.rle">
+	    Delayed egg on egg [6]</a></td>
+	<td><a class="p" href="b36s245/16eghb2.rle">
+	    Delayed heavy blinker on egg [5]</a></td>
+	<td><a class="p" href="b36s245/16egeg3.rle">
+	    Twice delayed egg on egg [6]</a></td>
+	<td><a class="p" href="b36s245/16egpd.rle">
+	    Egg on pond [6]</a></td>
+	<td><a class="p" href="b36s245/16eghb3.rle">
+	    Delayed heavy blinker beside egg [8]</a></td>
+    </tr>
+    <tr>
+	<td class="o"><a class="p" href="b36s245/16egeg5.rle">
+	    Down egg beside egg [x+4]</a></td>
+	<td class="r"><a class="p" href="b36s245/16cmcm2.rle">
+	    Down cam on cam [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/16cmcm1.rle">
+	    Up cam on cam [x]</a></td>
+	<td><a class="p" href="b36s245/16mbegm2.rle">Medium blinker
+	    on advanced egg on medium blinker [8]</a></td>
+	<td><a class="p" href="b36s245/16mbegm4.rle">Medium blinker
+	    beside advanced egg beside medium blinker [9]</a></td>
+	<td><a class="p" href="b36s245/16mbegm1.rle">Medium blinker
+	    on egg on medium blinker [8]</a></td>
+	<td><a class="p" href="b36s245/16egmbs1.rle">Medium blinker
+	    on medium blinker on egg [7]</a></td>
+	<td><a class="p" href="b36s245/16egmbs2.rle">Delayed medium blinker
+	    on medium blinker on egg [7]</a></td>
+	<td><a class="p" href="b36s245/16egmbs3.rle">Delayed medium blinker
+	    medium blinker beside egg [9]</a></td>
+	<td><a class="p" href="b36s245/16pmblf1.rle">
+	    P on medium blinker on up loaf [10]</a></td>
+    </tr>
+    <tr>
+	<td><a class="p" href="b36s245/16pmblf2.rle">
+	    P on medium blinker on down loaf [10]</a></td>
+	<td><a class="p" href="b36s245/16egcb.rle">
+	    Egg on crab [6]</a></td>
+	<td><a class="p" href="b36s245/16egcg.rle">
+	    Egg on mango [6]</a></td>
+	<td><a class="p" href="b36s245/16pmbw1.rle">
+	    P on medium blinker on up W [13]</a></td>
+	<td><a class="p" href="b36s245/16pmbw2.rle">
+	    P on medium blinker on down W [13]</a></td>
+	<td class="o"><a class="p" href="b36s245/16p11p41.rle">
+	    P on 11P4.1 [x+4]</a></td>
+	<td><a class="p" href="b36s245/16mbegm3.rle">Medium blinker
+	    beside advanced egg on medium blinker [8]</a></td>
+	<td><a class="p" href="b36s245/17mbegz2.rle">Medium blinker
+	    on advanced egg on Z [9]</a></td>
+	<td><a class="p" href="b36s245/17phbmb.rle">Medium blinker
+	    on heavy blinker on P [8]</a></td>
+	<td><a class="p" href="b36s245/17mbegz1.rle">
+	    Medium blinker on egg on Z [9]</a></td>
+    </tr>
+    <tr>
+	<td><a class="p" href="b36s245/17egmbp1.rle">
+	    P on medium blinker on egg [8]</a></td>
+	<td><a class="p" href="b36s245/17pmbhb.rle">
+	    Heavy blinker on medium blinker on P [8]</a></td>
+	<td><a class="p" href="b36s245/17egmbz1.rle">
+	    Egg on medium blinker on Z [9]</a></td>
+	<td><a class="p" href="b36s245/17egmbp4.rle">
+	    P on medium blinker on egg advanced 3 [8]</a></td>
+	<td><a class="p" href="b36s245/17egmbp2.rle">
+	    P on medium blinker on egg advanced 1 [8]</a></td>
+	<td><a class="p" href="b36s245/17egmbp6.rle">
+	    P on medium blinker on down advanced egg [10]</a></td>
+	<td><a class="p" href="b36s245/17egmbp5.rle">
+	    P on medium blinker on up advanced egg [10]</a></td>
+	<td><a class="p" href="b36s245/17pmbpd.rle">
+	    P on medium blinker on pond [10]</a></td>
+	<td><a class="p" href="b36s245/17egmbp3.rle">
+	    P on medium blinker on egg advanced 2 [8]</a></td>
+	<td><a class="p" href="b36s245/17egmbz2.rle">Advanced egg
+	    on medium blinker on Z [9]</a></td>
+    </tr>
+    <tr>
+	<td><a class="p" href="b36s245/17egmbz3.rle">Advanced egg
+	    beside medium blinker on Z [10]</a></td>
+	<td colspan="2"><a class="p" href="b36s245/17pmmm.rle">Medium blinker
+	    on medium blinker on medium blinker on P [11]</a></td>
+	<td><a class="p" href="b36s245/17egzmb1.rle">Egg on Z
+	    on medium blinker [9]</a></td>
+	<td><a class="p" href="b36s245/17mbphb2.rle">Heavy blinker
+	    on P on medium blinker [10]</a></td>
+	<td><a class="p" href="b36s245/17egzmb2.rle">Advanced egg on Z
+	    on medium blinker [9]</a></td>
+	<td><a class="p" href="b36s245/17pmbcg1.rle">
+	    Up P on medium blinker on mango [9]</a></td>
+	<td><a class="p" href="b36s245/17pmbcg2.rle">
+	    Down P on medium blinker on mango [9]</a></td>
+	<td><a class="p" href="b36s245/17pmbcb1.rle">
+	    Up P on medium blinker on crab [15]</a></td>
+	<td><a class="p" href="b36s245/17pmbcb2.rle">
+	    Down P on medium blinker on crab [15]</a></td>
+    </tr>
+    <tr>
+	<td colspan="2"><a class="p" href="b36s245/17mbpmm1.rle">Medium blinker on P
+	    on medium blinker on medium blinker [11]</a></td>
+	<td><a class="p" href="b36s245/17mbphb3.rle">Heavy blinker below P
+	    above medium blinker [10]</a></td>
+	<td><a class="p" href="b36s245/17mbphb1.rle">Heavy blinker above P
+	    above medium blinker [10]</a></td>
+	<td><a class="p" href="b36s245/17eglz.rle">
+	    Egg on long Z [9]</a></td>
+	<td><a class="p" href="b36s245/17mbegz4.rle">
+	    Trans medium blinker beside egg on Z [9]</a></td>
+	<td><a class="p" href="b36s245/17mbegz3.rle">
+	    Cis medium blinker beside egg on Z [9]</a></td>
+	<td><a class="p" href="b36s245/20rrrr1.rle">
+	    4 Rs [17]</a></td>
+	<td colspan="2" class="s">&nbsp;</td>
+    </tr>
+</table></p></div>
+<map name="rl-pp4">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,441,20,461" href="#bottom" />
+	<area coords="601,0,621,20" href="zip/rl-pp4.zip" />
+	<area coords="601,441,621,461" href="stamp/rl-pp4.rle" />
+	<area coords="0,0,70,74" href="b36s245/9pmb.rle" />
+	<area coords="70,0,130,74" href="b36s245/10pp.rle" />
+	<area coords="130,0,190,74" href="b36s245/10rr1.rle" />
+	<area coords="190,0,250,74" href="b36s245/10rr2.rle" />
+	<area coords="250,0,310,74" href="b36s245/10pwpw.rle" />
+	<area coords="310,0,370,74" href="b36s245/10rr3.rle" />
+	<area coords="370,0,430,74" href="b36s245/12egmb1.rle" />
+	<area coords="430,0,490,74" href="b36s245/12egmb2.rle" />
+	<area coords="490,0,550,74" href="b36s245/12egmb3.rle" />
+	<area coords="0,74,70,138" href="b36s245/13phb.rle" />
+	<area coords="70,74,130,138" href="b36s245/13egz.rle" />
+	<area coords="130,74,190,138" href="b36s245/13pmbmb.rle" />
+	<area coords="190,74,250,138" href="b36s245/13mbpmb1.rle" />
+	<area coords="250,74,310,138" href="b36s245/14egac2.rle" />
+	<area coords="310,74,370,138" href="b36s245/14eghv.rle" />
+	<area coords="370,74,430,138" href="b36s245/14egac1.rle" />
+	<area coords="430,74,490,138" href="b36s245/14ppmb1.rle" />
+	<area coords="490,74,550,138" href="b36s245/14pmbp2.rle" />
+	<area coords="550,74,621,138" href="b36s245/14ppmb2.rle" />
+	<area coords="0,138,70,198" href="b36s245/14pmbp4.rle" />
+	<area coords="70,138,130,198" href="b36s245/14pmbp3.rle" />
+	<area coords="130,138,190,198" href="b36s245/14pmbz1.rle" />
+	<area coords="190,138,250,198" href="b36s245/14pmbz2.rle" />
+	<area coords="250,138,310,198" href="b36s245/14mp1043.rle" />
+	<area coords="310,138,370,198" href="b36s245/15ppp.rle" />
+	<area coords="370,138,430,198" href="b36s245/15rrr1.rle" />
+	<area coords="430,138,490,198" href="b36s245/15rrr4.rle" />
+	<area coords="490,138,550,198" href="b36s245/15rrr3.rle" />
+	<area coords="550,138,621,198" href="b36s245/15rrr2.rle" />
+	<area coords="0,198,70,258" href="b36s245/15pwpwpw.rle" />
+	<area coords="70,198,130,258" href="b36s245/15eglf.rle" />
+	<area coords="130,198,190,258" href="b36s245/15pmbhv.rle" />
+	<area coords="190,198,250,258" href="b36s245/15pmbac2.rle" />
+	<area coords="250,198,310,258" href="b36s245/15pmbac1.rle" />
+	<area coords="310,198,370,258" href="b36s245/15egw.rle" />
+	<area coords="370,198,430,258" href="b36s245/15p10p42.rle" />
+	<area coords="430,198,490,258" href="b36s245/15mbpmb2.rle" />
+	<area coords="490,198,550,258" href="b36s245/15tdp.rle" />
+	<area coords="550,198,621,258" href="b36s245/15pmbac4.rle" />
+	<area coords="0,258,130,318" href="b36s245/15pmbac3.rle" />
+	<area coords="130,258,190,318" href="b36s245/16egeg4.rle" />
+	<area coords="190,258,250,318" href="b36s245/16egeg1.rle" />
+	<area coords="250,258,310,318" href="b36s245/16eghb1.rle" />
+	<area coords="310,258,370,318" href="b36s245/16egeg2.rle" />
+	<area coords="370,258,430,318" href="b36s245/16eghb2.rle" />
+	<area coords="430,258,490,318" href="b36s245/16egeg3.rle" />
+	<area coords="490,258,550,318" href="b36s245/16egpd.rle" />
+	<area coords="550,258,621,318" href="b36s245/16eghb3.rle" />
+	<area coords="0,318,70,378" href="b36s245/16egeg5.rle" />
+	<area coords="70,318,130,378" href="b36s245/16cmcm2.rle" />
+	<area coords="130,318,190,378" href="b36s245/16cmcm1.rle" />
+	<area coords="190,318,250,378" href="b36s245/16mbegm2.rle" />
+	<area coords="250,318,310,378" href="b36s245/16mbegm4.rle" />
+	<area coords="310,318,370,378" href="b36s245/16mbegm1.rle" />
+	<area coords="370,318,430,378" href="b36s245/16egmbs1.rle" />
+	<area coords="430,318,490,378" href="b36s245/16egmbs2.rle" />
+	<area coords="490,318,550,378" href="b36s245/16egmbs3.rle" />
+	<area coords="550,318,621,378" href="b36s245/16pmblf1.rle" />
+	<area coords="0,378,70,442" href="b36s245/16pmblf2.rle" />
+	<area coords="70,378,130,442" href="b36s245/16egcb.rle" />
+	<area coords="130,378,190,442" href="b36s245/16egcg.rle" />
+	<area coords="190,378,250,442" href="b36s245/16pmbw1.rle" />
+	<area coords="250,378,310,442" href="b36s245/16pmbw2.rle" />
+	<area coords="310,378,370,442" href="b36s245/16p11p41.rle" />
+	<area coords="370,378,430,442" href="b36s245/16mbegm3.rle" />
+	<area coords="430,378,490,442" href="b36s245/17mbegz2.rle" />
+	<area coords="490,378,550,442" href="b36s245/17phbmb.rle" />
+	<area coords="550,378,621,442" href="b36s245/17mbegz1.rle" />
+	<area coords="0,442,70,461" href="b36s245/17egmbp1.rle" />
+	<area coords="70,442,130,461" href="b36s245/17pmbhb.rle" />
+	<area coords="130,442,190,461" href="b36s245/17egmbz1.rle" />
+	<area coords="190,442,250,461" href="b36s245/17egmbp4.rle" />
+	<area coords="250,442,310,461" href="b36s245/17egmbp2.rle" />
+	<area coords="310,442,370,461" href="b36s245/17egmbp6.rle" />
+	<area coords="370,442,430,461" href="b36s245/17egmbp5.rle" />
+	<area coords="430,442,490,461" href="b36s245/17pmbpd.rle" />
+	<area coords="490,442,550,461" href="b36s245/17egmbp3.rle" />
+	<area coords="550,442,621,461" href="b36s245/17egmbz2.rle" />
+</map>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Aircraft_carrier">Aircraft carrier</a>,
+<a class="x" href="http://conwaylife.com/wiki/Beehive">Beehive</a>,
+<a class="x" href="http://conwaylife.com/wiki/Loaf">Loaf</a>,
+<a class="x" href="http://conwaylife.com/wiki/Mango">Mango</a>,
+<a class="x" href="http://conwaylife.com/wiki/Pond">Pond</a>.</p>
+</article>
+<hr /><article><a id="a11" name="a11"></a>
+<a id="rl-p4n" name="rl-p4n"></a>
+<h2>39 period 4<i>n</i> oscillators</h2>
+<p><img src="map/rl-p4n.png" alt="B36/S245 period 4n oscillators"
+ width="586" height="397" usemap="#rl-p4n" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_rl-p4n" class="i" href="javascript:Nav('rl-p4n')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a10">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a12">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/rl-p4n.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/rl-p4n.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/rl-p4n.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/rl-p4n.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/rl-p4n.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/rl-p4n.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/rl-p4n.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=rl-p4n" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_rl-p4n"><p><table id="t-rl-p4n" style="width:590px">
+    <colgroup><col style="width:201px;" /><col style="width:185px;" />
+	<col style="width:202px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="b36s245/5x.rle">
+	    X&sup1; [2]</a></td>
+	<td><a class="p" href="b36s245/5r.rle">R;
+	    R pent&shy;omino [2]</a></td>
+	<td class="r"><a class="p" href="b36s245/15p8-1.rle">
+	    15P8.1 [x]</a></td>
+    </tr>
+    <tr>
+	<td><a class="p" href="b36s245/10rx.rle">RX;
+	    R interacting with X [8]</a></td>
+	<td class="r"><a class="p" href="b36s245/25p16-1.rle">
+	    25P16.1 [x]</a></td>
+	<td><a class="p" href="b36s245/20p20-1.rle">
+	    20P20.1 [14]</a></td>
+    </tr>
+    <tr>
+	<td><a class="p" href="b36s245/20p24-1.rle">
+	    20P24.1 [17]</a></td>
+	<td class="r"><a class="p" href="b36s245/35p28-1.rle">
+	    35P28.1 [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/25p32-1.rle">
+	    25P32.1 [x]</a></td>
+    </tr>
+    <tr>
+	<td class="r"><a class="p" href="b36s245/35p36-1.rle">
+	    35P36.1 [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/35p40-1.rle">
+	    35P40.1 [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/40p44-1.rle">
+	    40P44.1 [x]</a></td>
+    </tr>
+    <tr>
+	<td class="r"><a class="p" href="b36s245/40p48-1.rle">
+	    40P48.1 [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/30p52-1.rle">
+	    30P52.1 [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/45p56-1.rle">
+	    45P56.1 [x]</a></td>
+    </tr>
+    <tr>
+	<td class="r"><a class="p" href="b36s245/50p64-1.rle">
+	    50P64.1 [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/50p68-1.rle">
+	    50P68.1 [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/45p76-1.rle">
+	    45P76.1 [x]</a></td>
+    </tr>
+    <tr>
+	<td class="r"><a class="p" href="b36s245/60p84-1.rle">
+	    60P84.1 [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/65p88-1.rle">
+	    65P88.1 [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/55p92-1.rle">
+	    55P92.1 [x]</a></td>
+    </tr>
+    <tr>
+	<td class="r"><a class="p" href="b36s245/65p96-1.rle">
+	    65P96.1 [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/60p108-1.rle">
+	    60P108.1 [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/45p112-1.rle">
+	    45P112.1 [x]</a></td>
+    </tr>
+    <tr>
+	<td class="r"><a class="p" href="b36s245/35p132-1.rle">
+	    35P132.1 [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/65p136-1.rle">
+	    65P136.1 [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/65p140-1.rle">
+	    65P140.1 [x]</a></td>
+    </tr>
+    <tr>
+	<td class="r"><a class="p" href="b36s245/70p156-1.rle">
+	    70P156.1 [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/55p164-1.rle">
+	    55P164.1 [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/40p168-1.rle">
+	    40P168.1 [x]</a></td>
+    </tr>
+    <tr>
+	<td class="r"><a class="p" href="b36s245/65p180-1.rle">
+	    65P180.1 [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/65p212-1.rle">
+	    65P212.1 [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/55p224-1.rle">
+	    55P224.1 [x]</a></td>
+    </tr>
+    <tr>
+	<td class="r"><a class="p" href="b36s245/70p276-1.rle">
+	    70P276.1 [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/50p284-1.rle">
+	    50P284.1 [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/55p304-1.rle">
+	    55P304.1 [x]</a></td>
+    </tr>
+    <tr>
+	<td class="r"><a class="p" href="b36s245/70p324-1.rle">
+	    70P324.1 [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/55p356-1.rle">
+	    55P356.1 [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/65p484-1.rle">
+	    65P484.1 [x]</a></td>
+    </tr>
+</table></p></div>
+<map name="rl-p4n">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,377,20,397" href="#bottom" />
+	<area coords="566,0,586,20" href="zip/rl-p4n.zip" />
+	<area coords="566,377,586,397" href="stamp/rl-p4n.rle" />
+	<area coords="0,0,95,40" href="b36s245/5x.rle" />
+	<area coords="95,0,180,40" href="b36s245/5r.rle" />
+	<area coords="180,0,586,40" href="b36s245/15p8-1.rle" />
+	<area coords="0,40,95,70" href="b36s245/10rx.rle" />
+	<area coords="95,40,180,70" href="b36s245/25p16-1.rle" />
+	<area coords="180,40,586,70" href="b36s245/20p20-1.rle" />
+	<area coords="0,70,95,100" href="b36s245/20p24-1.rle" />
+	<area coords="95,70,180,100" href="b36s245/35p28-1.rle" />
+	<area coords="180,70,586,100" href="b36s245/25p32-1.rle" />
+	<area coords="0,100,95,130" href="b36s245/35p36-1.rle" />
+	<area coords="95,100,180,130" href="b36s245/35p40-1.rle" />
+	<area coords="180,100,586,130" href="b36s245/40p44-1.rle" />
+	<area coords="0,130,95,160" href="b36s245/40p48-1.rle" />
+	<area coords="95,130,180,160" href="b36s245/30p52-1.rle" />
+	<area coords="180,130,586,160" href="b36s245/45p56-1.rle" />
+	<area coords="0,160,95,190" href="b36s245/50p64-1.rle" />
+	<area coords="95,160,180,190" href="b36s245/50p68-1.rle" />
+	<area coords="180,160,586,190" href="b36s245/45p76-1.rle" />
+	<area coords="0,190,95,220" href="b36s245/60p84-1.rle" />
+	<area coords="95,190,180,220" href="b36s245/65p88-1.rle" />
+	<area coords="180,190,586,220" href="b36s245/55p92-1.rle" />
+	<area coords="0,220,95,250" href="b36s245/65p96-1.rle" />
+	<area coords="95,220,180,250" href="b36s245/60p108-1.rle" />
+	<area coords="180,220,586,250" href="b36s245/45p112-1.rle" />
+	<area coords="0,250,95,280" href="b36s245/35p132-1.rle" />
+	<area coords="95,250,180,280" href="b36s245/65p136-1.rle" />
+	<area coords="180,250,586,280" href="b36s245/65p140-1.rle" />
+	<area coords="0,280,95,310" href="b36s245/70p156-1.rle" />
+	<area coords="95,280,180,310" href="b36s245/55p164-1.rle" />
+	<area coords="180,280,586,310" href="b36s245/40p168-1.rle" />
+	<area coords="0,310,95,340" href="b36s245/65p180-1.rle" />
+	<area coords="95,310,180,340" href="b36s245/65p212-1.rle" />
+	<area coords="180,310,586,340" href="b36s245/55p224-1.rle" />
+	<area coords="0,340,95,370" href="b36s245/70p276-1.rle" />
+	<area coords="95,340,180,370" href="b36s245/50p284-1.rle" />
+	<area coords="180,340,586,370" href="b36s245/55p304-1.rle" />
+	<area coords="0,370,95,397" href="b36s245/70p324-1.rle" />
+	<area coords="95,370,180,397" href="b36s245/55p356-1.rle" />
+	<area coords="180,370,586,397" href="b36s245/65p484-1.rle" />
+</map>
+<p>A certain group of adjacent P4 oscillators can interact with each other,
+in a manner isomorphic to a one-dimensional cellular automaton with a 3-cell
+neighborhood, four living states (X, right-facing R, left-facing R, and
+table), and bounded at both ends by vacuum. Every four generations in B36/S245
+is equivalent to one generation in the one-dimensional cellular automaton.
+This produce oscillators of several different periods that are multiples of
+four&sup1;. Computer searches of all patterns containing up
+to 14 such adjacent 3&times;3 cells have discovered oscillators of periods
+2&sup1;, 4, 8, 12, 16, 20, 24, 28, 32, 36, 40, 44, 48, 52, 56,
+64, 68, 72, 76, 84, 88, 92, 96, 108, 112, 132, 136, 140, 156,
+164, 168, 180, 212, 224, 276, 284, 304, 324, 356, 484, 504,
+832, 872, 1628, 2424, and also many pseudo-oscillators
+consisting of combinations of smaller oscillators in this series.</p>
+<p>(Note&sup1;: 2 is not a multiple of 4; the period 2 X is included here
+because it is a member of this series.) There are many oscillators of most
+of these periods. For brevity, only one example is shown for each period.</p>
+</article>
+<hr /><article><a id="a12" name="a12"></a>
+<a id="rl-p5" name="rl-p5"></a>
+<h2>2 period 5 oscillators</h2>
+<p><img src="map/rl-p5.png" alt="B36/S245 P5s"
+ width="141" height="81" usemap="#rl-p5" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_rl-p5" class="i" href="javascript:Nav('rl-p5')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a11">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a13">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/rl-p5.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/rl-p5.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/rl-p5.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/rl-p5.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/rl-p5.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/rl-p5.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/rl-p5.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=rl-p5" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_rl-p5"><p><table id="t-rl-p5" style="width:145px">
+    <colgroup><col span="2" style="width:72px;" /></colgroup>
+    <tr>
+	<td class="r"><a class="p" href="b36s245/20p5-1.rle">
+	    20P5.1 [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/48p5-1.rle">
+	    48P5.1 [x]</a></td>
+    </tr>
+</table></p></div>
+<map name="rl-p5">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,61,20,81" href="#bottom" />
+	<area coords="121,0,141,20" href="zip/rl-p5.zip" />
+	<area coords="121,61,141,81" href="stamp/rl-p5.rle" />
+	<area coords="0,0,70,81" href="b36s245/20p5-1.rle" />
+	<area coords="70,0,141,81" href="b36s245/48p5-1.rle" />
+</map>
+</article>
+<hr /><article><a id="a13" name="a13"></a>
+<a id="rl-p6" name="rl-p6"></a>
+<h2>5 period 6 oscillators</h2>
+<p><img src="map/rl-p6.png" alt="B36/S245 period 6 oscillators"
+ width="321" height="81" usemap="#rl-p6" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_rl-p6" class="i" href="javascript:Nav('rl-p6')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a12">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a14">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/rl-p6.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/rl-p6.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/rl-p6.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/rl-p6.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/rl-p6.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/rl-p6.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/rl-p6.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=rl-p6" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_rl-p6"><p><table id="t-rl-p6" style="width:325px">
+    <colgroup><col style="width:71px;" /><col span="3" style="width:60px;" />
+	<col style="width:72px;" /></colgroup>
+    <tr>
+	<td class="r"><a class="p" href="b36s245/12p6-1.rle">
+	    12P6.1 [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/14p6-1.rle">
+	    14P6.1 [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/14p6-2.rle">
+	    14P6.2 [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/18p6-1.rle">
+	    18P6.1 [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/22p6-1.rle">
+	    22P6.1 [x]</a></td>
+    </tr>
+</table></p></div>
+<map name="rl-p6">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,61,20,81" href="#bottom" />
+	<area coords="301,0,321,20" href="zip/rl-p6.zip" />
+	<area coords="301,61,321,81" href="stamp/rl-p6.rle" />
+	<area coords="0,0,70,81" href="b36s245/12p6-1.rle" />
+	<area coords="70,0,130,81" href="b36s245/14p6-1.rle" />
+	<area coords="130,0,190,81" href="b36s245/14p6-2.rle" />
+	<area coords="190,0,250,81" href="b36s245/18p6-1.rle" />
+	<area coords="250,0,321,81" href="b36s245/22p6-1.rle" />
+</map>
+</article>
+<hr /><article><a id="a14" name="a14"></a>
+<a id="rl-pp6" name="rl-pp6"></a>
+<h2>10 period 6 pseudo-oscillators</h2>
+<p><img src="map/rl-pp6.png" alt="B36/S245 period 6 pseudo-oscillators"
+ width="421" height="161" usemap="#rl-pp6" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_rl-pp6" class="i" href="javascript:Nav('rl-pp6')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a13">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a15">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/rl-pp6.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/rl-pp6.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/rl-pp6.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/rl-pp6.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/rl-pp6.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/rl-pp6.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/rl-pp6.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=rl-pp6" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_rl-pp6"><p><table id="t-rl-pp6" style="width:425px">
+    <colgroup><col style="width:91px;" /><col span="3" style="width:80px;" />
+	<col style="width:92px;" /></colgroup>
+    <tr>
+	<td class="o"><a class="p" href="b36s245/18zddzmb.rle">Medium blinker
+	    on two dominoes between two Zs [x+3]</a></td>
+	<td class="o"><a class="p" href="b36s245/20zddwmb.rle">Medium blinker
+	    on two dominoes between Z and W [x+6]</a></td>
+	<td class="o"><a class="p" href="b36s245/20wddzmb.rle">Medium blinker
+	    on two dominoes between W and Z [x+6]</a></td>
+	<td class="o"><a class="p" href="b36s245/21skddzm.rle">Medium blinker
+	    on two dominoes between Z and shuriken [x+3]</a></td>
+	<td class="o"><a class="p" href="b36s245/22zddzmm.rle">Medium blinker
+	    on medium blinker on two dominoes between two Zs [x+3]</a></td>
+    </tr>
+    <tr>
+	<td class="o"><a class="p" href="b36s245/22mzddzm.rle">Medium blinker
+	    on two dominoes between two Zs on medium blinker [x+6]</a></td>
+	<td class="o"><a class="p" href="b36s245/22wddwmb.rle">Medium blinker
+	    on two dominoes between two Ws [x+9]</a></td>
+	<td class="o"><a class="p" href="b36s245/22zddzhb.rle">Heavy blinker
+	    on two dominoes between two Zs [x+3]</a></td>
+	<td class="o"><a class="p" href="b36s245/22zddlzm.rle">Medium blinker
+	    on two dominoes between long Z and Z [x+9]</a></td>
+	<td class="o"><a class="p" href="b36s245/22lzddzm.rle">Medium blinker
+	    on two dominoes between Z and long Z [x+9]</a></td>
+    </tr>
+</table></p></div>
+<map name="rl-pp6">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,141,20,161" href="#bottom" />
+	<area coords="401,0,421,20" href="zip/rl-pp6.zip" />
+	<area coords="401,141,421,161" href="stamp/rl-pp6.rle" />
+	<area coords="0,0,90,90" href="b36s245/18zddzmb.rle" />
+	<area coords="90,0,170,90" href="b36s245/20zddwmb.rle" />
+	<area coords="170,0,250,90" href="b36s245/20wddzmb.rle" />
+	<area coords="250,0,330,90" href="b36s245/21skddzm.rle" />
+	<area coords="330,0,421,90" href="b36s245/22zddzmm.rle" />
+	<area coords="0,90,90,161" href="b36s245/22mzddzm.rle" />
+	<area coords="90,90,170,161" href="b36s245/22wddwmb.rle" />
+	<area coords="170,90,250,161" href="b36s245/22zddzhb.rle" />
+	<area coords="250,90,330,161" href="b36s245/22zddlzm.rle" />
+	<area coords="330,90,421,161" href="b36s245/22lzddzm.rle" />
+</map>
+<p>The all have a pseudo-period of 6, a composite of
+<a class="j" href="#rl-p2">2</a> and
+<a class="j" href="#rl-p3">3</a>.</p>
+</article>
+<hr /><article><a id="a15" name="a15"></a>
+<a id="rl-p7" name="rl-p7"></a>
+<h2>2 period 7 oscillators</h2>
+<p><img src="map/rl-p7.png" alt="B36/S245 P7s"
+ width="141" height="81" usemap="#rl-p7" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_rl-p7" class="i" href="javascript:Nav('rl-p7')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a14">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a16">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/rl-p7.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/rl-p7.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/rl-p7.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/rl-p7.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/rl-p7.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/rl-p7.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/rl-p7.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=rl-p7" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_rl-p7"><p><table id="t-rl-p7" style="width:145px">
+    <colgroup><col span="2" style="width:72px;" /></colgroup>
+    <tr>
+	<td class="r"><a class="p" href="b36s245/20p7-1.rle">
+	    20P7.1 [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/20p7-2.rle">
+	    20P7.2 [x]</a></td>
+    </tr>
+</table></p></div>
+<map name="rl-p7">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,61,20,81" href="#bottom" />
+	<area coords="121,0,141,20" href="zip/rl-p7.zip" />
+	<area coords="121,61,141,81" href="stamp/rl-p7.rle" />
+	<area coords="0,0,70,81" href="b36s245/20p7-1.rle" />
+	<area coords="70,0,141,81" href="b36s245/20p7-2.rle" />
+</map>
+</article>
+<hr /><article><a id="a16" name="a16"></a>
+<a id="rl-p8" name="rl-p8"></a>
+<h2>4 period 8 oscillators</h2>
+<p><img src="map/rl-p8.png" alt="B36/S245 P8 oscillators"
+ width="341" height="81" usemap="#rl-p8" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_rl-p8" class="i" href="javascript:Nav('rl-p8')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a15">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a17">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/rl-p8.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/rl-p8.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/rl-p8.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/rl-p8.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/rl-p8.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/rl-p8.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/rl-p8.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=rl-p8" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_rl-p8"><p><table id="t-rl-p8" style="width:345px">
+    <colgroup><col style="width:91px;" /><col span="2" style="width:80px;" />
+	<col style="width:92px;" /></colgroup>
+    <tr>
+	<td class="r"><a class="p" href="b36s245/12p8-1.rle">
+	    12P8.1 [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/15p8-1.rle">
+	    15P8.1 [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/17p8-1.rle">
+	    17P8.1 [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/22p8-1.rle">
+	    22P8.1 [x]</a></td>
+    </tr>
+</table></p></div>
+<map name="rl-p8">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,61,20,81" href="#bottom" />
+	<area coords="321,0,341,20" href="zip/rl-p8.zip" />
+	<area coords="321,61,341,81" href="stamp/rl-p8.rle" />
+	<area coords="0,0,70,81" href="b36s245/12p8-1.rle" />
+	<area coords="70,0,130,81" href="b36s245/15p8-1.rle" />
+	<area coords="130,0,190,81" href="b36s245/17p8-1.rle" />
+	<area coords="190,0,341,81" href="b36s245/22p8-1.rle" />
+</map>
+</article>
+<hr /><article><a id="a17" name="a17"></a>
+<a id="rl-p9" name="rl-p9"></a>
+<h2>2 period 9 oscillators</h2>
+<p><img src="map/rl-p9.png" alt="B36/S245 period 9 oscillators"
+ width="221" height="81" usemap="#rl-p9" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_rl-p9" class="i" href="javascript:Nav('rl-p9')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a16">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a18">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/rl-p9.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/rl-p9.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/rl-p9.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/rl-p9.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/rl-p9.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/rl-p9.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/rl-p9.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=rl-p9" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_rl-p9"><p><table id="t-rl-p9" style="width:225px">
+    <colgroup><col span="2" style="width:112px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="b36s245/32p9-1.rle">
+	    32P9.1 [11]</a></td>
+	<td class="r"><a class="p" href="b36s245/44p9-1.rle">
+	    44P9.1 [x]</a></td>
+    </tr>
+</table></p></div>
+<map name="rl-p9">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,61,20,81" href="#bottom" />
+	<area coords="201,0,221,20" href="zip/rl-p9.zip" />
+	<area coords="201,61,221,81" href="stamp/rl-p9.rle" />
+	<area coords="0,0,110,81" href="b36s245/32p9-1.rle" />
+	<area coords="110,0,221,81" href="b36s245/44p9-1.rle" />
+</map>
+</article>
+<hr /><article><a id="a18" name="a18"></a>
+<a id="rl-p10" name="rl-p10"></a>
+<h2>2 period 10 oscillators</h2>
+<p><img src="map/rl-p10.png" alt="B36/S245 P10s"
+ width="141" height="81" usemap="#rl-p10" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_rl-p10" class="i" href="javascript:Nav('rl-p10')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a17">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a19">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/rl-p10.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/rl-p10.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/rl-p10.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/rl-p10.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/rl-p10.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/rl-p10.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/rl-p10.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=rl-p10" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_rl-p10"><p><table id="t-rl-p10" style="width:145px">
+    <colgroup><col span="2" style="width:72px;" /></colgroup>
+    <tr>
+	<td class="r"><a class="p" href="b36s245/21p10-1.rle">
+	    21P10.1 [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/24p10-1.rle">
+	    24P10.1 [x]</a></td>
+    </tr>
+</table></p></div>
+<map name="rl-p10">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,61,20,81" href="#bottom" />
+	<area coords="121,0,141,20" href="zip/rl-p10.zip" />
+	<area coords="121,61,141,81" href="stamp/rl-p10.rle" />
+	<area coords="0,0,70,81" href="b36s245/21p10-1.rle" />
+	<area coords="70,0,141,81" href="b36s245/24p10-1.rle" />
+</map>
+<p>The first oscillator has two independent rotors of
+periods 2 and 5 respectively. It has a pseudo-period of 10,
+a composite of 2 and 5.</p>
+</article>
+<hr /><article><a id="a19" name="a19"></a>
+<a id="rl-p12" name="rl-p12"></a>
+<h2>2 period 12 oscillators</h2>
+<p><img src="map/rl-p12.png" alt="B36/S245 P12 oscillators"
+ width="181" height="61" usemap="#rl-p12" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_rl-p12" class="i" href="javascript:Nav('rl-p12')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a18">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a20">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/rl-p12.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/rl-p12.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/rl-p12.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/rl-p12.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/rl-p12.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/rl-p12.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/rl-p12.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=rl-p12" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_rl-p12"><p><table id="t-rl-p12" style="width:185px">
+    <colgroup><col span="2" style="width:92px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="b36s245/10rx.rle">RX;
+	    R interacting with X [8]</a></td>
+	<td class="r"><a class="p" href="b36s245/30p12-1.rle">
+	    30P12.1 [x]</a></td>
+    </tr>
+</table></p></div>
+<map name="rl-p12">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,41,20,61" href="#bottom" />
+	<area coords="161,0,181,20" href="zip/rl-p12.zip" />
+	<area coords="161,41,181,61" href="stamp/rl-p12.rle" />
+	<area coords="0,0,90,61" href="b36s245/10rx.rle" />
+	<area coords="90,0,181,61" href="b36s245/30p12-1.rle" />
+</map>
+</article>
+<hr /><article><a id="a20" name="a20"></a>
+<a id="rl-pp12" name="rl-pp12"></a>
+<h2>3 period 12 pseudo-oscillators</h2>
+<p>These are all the period 12 pseudo-oscillators up to 22 bits.</p>
+<p><img src="map/rl-pp12.png" alt="B36/S245 PP12"
+ width="321" height="81" usemap="#rl-pp12" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_rl-pp12" class="i" href="javascript:Nav('rl-pp12')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a19">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a21">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/rl-pp12.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/rl-pp12.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/rl-pp12.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/rl-pp12.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/rl-pp12.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/rl-pp12.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/rl-pp12.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=rl-pp12" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_rl-pp12"><p><table id="t-rl-pp12" style="width:325px">
+    <colgroup><col style="width:111px;" /><col style="width:100px;" />
+	<col style="width:112px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="b36s245/20rxrx1.rle">
+	    RX on RX [17]</a></td>
+	<td class="r"><a class="p" href="b36s245/20rxrx2.rle">
+	    RX below RX [x]</a></td>
+	<td class="o"><a class="p" href="b36s245/22zddzeg.rle">
+	    Egg on 14P2.9 [x+3]</a></td>
+    </tr>
+</table></p></div>
+<map name="rl-pp12">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,61,20,81" href="#bottom" />
+	<area coords="301,0,321,20" href="zip/rl-pp12.zip" />
+	<area coords="301,61,321,81" href="stamp/rl-pp12.rle" />
+	<area coords="0,0,110,81" href="b36s245/20rxrx1.rle" />
+	<area coords="110,0,210,81" href="b36s245/20rxrx2.rle" />
+	<area coords="210,0,321,81" href="b36s245/22zddzeg.rle" />
+</map>
+<p>The last one has a pseudo-period of 12, a composite of
+<a class="j" href="#rl-p3">3</a> and
+<a class="j" href="#rl-p4">4</a>.</p>
+</article>
+<hr /><article><a id="a21" name="a21"></a>
+<a id="rl-p14" name="rl-p14"></a>
+<h2>1 period 14 oscillator</h2>
+<p>This is the smallest known period 14 oscillator. Since the
+rotor grows on a still stator, there are many other larger
+period 14 oscillators with the same rotor. All currently known
+period 14 oscillators are of this form.</p>
+<p><img src="map/rl-p14.png" alt="B36/S245 P14"
+ width="81" height="61" usemap="#rl-p14" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_rl-p14" class="i" href="javascript:Nav('rl-p14')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a20">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a22">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/rl-p14.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/rl-p14.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/rl-p14.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/rl-p14.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/rl-p14.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/rl-p14.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/rl-p14.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=rl-p14" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_rl-p14"><p><table id="t-rl-p14" style="width:85px">
+    <colgroup><col style="width:83px;" /></colgroup>
+    <tr>
+	<td class="r"><a class="p" href="b36s245/17p14-1.rle">
+	    17P14.1 [x]</a></td>
+    </tr>
+</table></p></div>
+<map name="rl-p14">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,41,20,61" href="#bottom" />
+	<area coords="61,0,81,20" href="zip/rl-p14.zip" />
+	<area coords="61,41,81,61" href="stamp/rl-p14.rle" />
+	<area coords="0,0,81,61" href="b36s245/17p14-1.rle" />
+</map>
+</article>
+<hr /><article><a id="a22" name="a22"></a>
+<a id="rl-p119" name="rl-p119"></a>
+<h2>1 period 119 oscillator</h2>
+<p><img src="map/rl-p119.png" alt="B36/S245 P119"
+ width="161" height="141" usemap="#rl-p119" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_rl-p119" class="i" href="javascript:Nav('rl-p119')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a21">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a23">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/rl-p119.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/rl-p119.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/rl-p119.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/rl-p119.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/rl-p119.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/rl-p119.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/rl-p119.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=rl-p119" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_rl-p119"><p><table id="t-rl-p119" style="width:165px">
+    <colgroup><col style="width:163px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="b36s245/40p119-1.rle">
+	    40P119.1 [8]</a></td>
+    </tr>
+</table></p></div>
+<map name="rl-p119">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,121,20,141" href="#bottom" />
+	<area coords="141,0,161,20" href="zip/rl-p119.zip" />
+	<area coords="141,121,161,141" href="stamp/rl-p119.rle" />
+	<area coords="0,0,161,141" href="b36s245/40p119-1.rle" />
+</map>
+<p>This oscillator is formed from four rotationally-symmetrical shuttles.</p>
+</article>
+<hr /><article><a id="a23" name="a23"></a>
+<a id="rl-p127" name="rl-p127"></a>
+<h2>1 period 127 oscillator</h2>
+<p><img src="map/rl-p127.png" alt="B36/S245 P127"
+ width="161" height="121" usemap="#rl-p127" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_rl-p127" class="i" href="javascript:Nav('rl-p127')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a22">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a24">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/rl-p127.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/rl-p127.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/rl-p127.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/rl-p127.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/rl-p127.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/rl-p127.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/rl-p127.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=rl-p127" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_rl-p127"><p><table id="t-rl-p127" style="width:165px">
+    <colgroup><col style="width:163px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="b36s245/27p127-1.rle">
+	    27P127.1 [14]</a></td>
+    </tr>
+</table></p></div>
+<map name="rl-p127">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,101,20,121" href="#bottom" />
+	<area coords="141,0,161,20" href="zip/rl-p127.zip" />
+	<area coords="141,101,161,121" href="stamp/rl-p127.rle" />
+	<area coords="0,0,161,121" href="b36s245/27p127-1.rle" />
+</map>
+<p>This oscillator is formed from four rotationally-symmetrical shuttles
+and a light blinker.</p>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Blinker">Blinker</a>.</p>
+</article>
+<hr /><article><a id="a24" name="a24"></a>
+<a id="rl-p204n" name="rl-p204n"></a>
+<h2>3 period 204<i>n</i> oscillators</h2>
+<p>Since the shuttle naturally flips every 102 generations, it has a period of
+204. There are many ways that multiple shuttles can interact to produce
+oscillators whose periods are a multiple of 204.</p>
+<p><img src="map/rl-p204n.png" alt="B36/S245 P204n"
+ width="621" height="201" usemap="#rl-p204n" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_rl-p204n" class="i" href="javascript:Nav('rl-p204n')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a23">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a25">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/rl-p204n.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/rl-p204n.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/rl-p204n.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/rl-p204n.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/rl-p204n.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/rl-p204n.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/rl-p204n.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=rl-p204n" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_rl-p204n"><p><table id="t-rl-p204n" style="width:625px">
+    <colgroup><col style="width:211px;" /><col style="width:200px;" />
+	<col style="width:212px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="b36s245/48p204-1.rle">
+	    48P204.1 [8]</a></td>
+	<td><a class="p" href="b36s245/56p408-1.rle">
+	    56P408.1 [12]</a></td>
+	<td><a class="p" href="b36s245/48p612-1.rle">
+	    48P612.1 [8]</a></td>
+    </tr>
+</table></p></div>
+<map name="rl-p204n">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,181,20,201" href="#bottom" />
+	<area coords="601,0,621,20" href="zip/rl-p204n.zip" />
+	<area coords="601,181,621,201" href="stamp/rl-p204n.rle" />
+	<area coords="0,0,210,201" href="b36s245/48p204-1.rle" />
+	<area coords="210,0,410,201" href="b36s245/56p408-1.rle" />
+	<area coords="410,0,621,201" href="b36s245/48p612-1.rle" />
+</map>
+</article>
+<hr /><article><a id="a25" name="a25"></a>
+<a id="rl-cons" name="rl-cons"></a>
+<h2>4 constellations</h2>
+<p><img src="map/rl-cons.png" alt="B36/S245 constellations"
+ width="261" height="61" usemap="#rl-cons" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_rl-cons" class="i" href="javascript:Nav('rl-cons')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a24">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a26">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/rl-cons.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/rl-cons.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/rl-cons.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/rl-cons.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/rl-cons.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/rl-cons.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/rl-cons.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=rl-cons" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_rl-cons"><p><table id="t-rl-cons" style="width:265px">
+    <colgroup><col style="width:71px;" /><col span="2" style="width:60px;" />
+	<col style="width:72px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="b36s245/8tbtb04.rle">Two tubs
+	    offset (4, 0)&sup1; [4]</a></td>
+	<td><a class="p" href="b36s245/8tbtb56.rle">Two tubs
+	    offset (6, 5) [2]</a></td>
+	<td><a class="p" href="b36s245/10hvtb.rle">
+	    Beehive and tub&sup1; [3]</a></td>
+	<td><a class="p" href="b36s245/6htl.rle">
+	    Half traffic light&sup2; [2]</a></td>
+    </tr>
+</table></p></div>
+<map name="rl-cons">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,41,20,61" href="#bottom" />
+	<area coords="241,0,261,20" href="zip/rl-cons.zip" />
+	<area coords="241,41,261,61" href="stamp/rl-cons.rle" />
+	<area coords="0,0,70,61" href="b36s245/8tbtb03.rle" />
+	<area coords="70,0,130,61" href="b36s245/8tbtb56.rle" />
+	<area coords="130,0,190,61" href="b36s245/10hvtb.rle" />
+	<area coords="190,0,261,61" href="b36s245/6htl.rle" />
+</map>
+<p>Note &sup1;: This constellation is a
+<a class="i" href="qp1.htm">quasi-still-life</a>.</p>
+<p>Note &sup2;: This constellation is a
+<a class="i" href="qosc.htm">quasi-oscillator</a>.</p>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Beehive">Beehive</a>,
+<a class="x" href="http://conwaylife.com/wiki/Blinker">Blinker</a>,
+<a class="x" href="http://conwaylife.com/wiki/Traffic_light">Traffic light</a>,
+<a class="x" href="http://conwaylife.com/wiki/Tub">Tub</a>.</p>
+</article>
+<hr /><article><a id="a26" name="a26"></a>
+<a id="rl-ss" name="rl-ss"></a>
+<h2>8 Spaceships</h2>
+<p><img src="map/rl-ss.png" alt="B36/S245 spaceships"
+ width="341" height="161" usemap="#rl-ss" /></p>
+<p><table><colgroup><col span="12" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_rl-ss" class="i" href="javascript:Nav('rl-ss')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a25">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a27">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/rl-ss.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/rl-ss.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/rl-ss.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="lis/rl-ss.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/rl-ss.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/rl-ss.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=rl-ss" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_rl-ss"><p><table id="t-rl-ss" style="width:345px">
+    <colgroup><col style="width:91px;" /><col span="2" style="width:80px;" />
+	<col style="width:92px;" /></colgroup>
+    <tr>
+	<td class="r"><a class="p" href="b36s245/17lw.rle">
+	    Lightweight space&shy;ship [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/18mw1.rle">
+	    Front-heavy middleweight space&shy;ship [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/18mw2.rle">
+	    Rear-heavy middleweight space&shy;ship [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/19hw.rle">
+	    Heavyweight space&shy;ship [x]</a></td>
+    </tr>
+    <tr>
+	<td><a class="p" href="b36s245/5gl.rle">Glider;
+	    Glider 158 [3]</a></td>
+	<td class="r"><a class="p" href="b36s245/21o3-1.rle">
+	    31P3H1V0.1 [x]</a></td>
+	<td class="r"><a class="p" href="b36s245/15o4.rle">15P4H1V0.1;
+	    Glider 3722 [x]</a></td>
+	<td><a class="p" href="b36s245/14ent.rle">Enterprise;
+	    Glider 5988 [7]</a></td>
+    </tr>
+</table></p></div>
+<map name="rl-ss">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,141,20,161" href="#bottom" />
+	<area coords="321,0,341,20" href="zip/rl-ss.zip" />
+	<area coords="321,141,341,161" href="stamp/rl-ss.rle" />
+	<area coords="0,0,90,90" href="b36s245/17lw.rle" />
+	<area coords="90,0,170,90" href="b36s245/18mw1.rle" />
+	<area coords="170,0,250,90" href="b36s245/18mw2.rle" />
+	<area coords="250,0,341,90" href="b36s245/19hw.rle" />
+	<area coords="0,90,90,161" href="b36s245/5gl.rle" />
+	<area coords="90,90,170,161" href="b36s245/21o3-1.rle" />
+	<area coords="170,90,250,161" href="b36s245/15o4.rle" />
+	<area coords="250,90,341,161" href="b36s245/14ent.rle" />
+</map>
+</article>
+<hr /><article><a id="a27" name="a27"></a>
+<a id="rl-meth" name="rl-meth"></a>
+<h2>1 methuselah</h2>
+<p>This rule's most distinguishing feature is that
+it has a small common replicator, the shuttle. The shuttle forms the basis
+for most complex constructions in this rule. Every 102 generations, the
+shuttle flips over and drops an egg, similar to how Life's queen bee shuttle
+works. However, unlike the queen bee, which is destroyed if it runs into its
+own egg, the shuttle splits into two asynchronous shuttles.</p>
+<p>The interactions between the shuttles and their eggs and other junk
+they leave behind is much more complicated than that of the replicator in
+<a class="i" href="b36s23.htm">HighLife</a>, but because this rule is even less
+explosive than Life is, the shuttle's activity tends to remain fairly
+close to its axis of growth.</p>
+<p>The shuttle itself is extremely versatile:</p>
+<p><ul>
+    <li>By itself, it grows irregularly, expanding in both directions,
+	filling the space between the ends with unpredictable junk,
+	and eventually stabilizing.</li>
+    <li>Two shuttles can be combined to form a clean replicator that
+	behaves like a one-dimensional XOR cellular automaton embedded
+	in a two-dimensional space, and whose Feynman diagram is a
+	Sierpinski gasket. This is similar to the replicator in
+	<a class="i" href="b36s23.htm">HighLife</a>.</li>
+    <li>If one end is capped by an oscillator that eats eggs, this forms
+	a single-ended wick-stretcher. If both ends are capped, it forms
+	an oscillator of arbitrarily high period.</li>
+    <li>Multiple shuttles in tandem can also be used to create oscillators,
+	clean spaceships, puffers, or guns.</li>
+</ul></p>
+<p><img src="map/rl-meth.png" alt="B36/S245 shuttle"
+ width="61" height="61" usemap="#rl-meth" /></p>
+<p><table><colgroup><col span="12" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_rl-meth" class="i" href="javascript:Nav('rl-meth')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a26">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a28">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/rl-meth.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/rl-meth.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/rl-meth.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="lis/rl-meth.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/rl-meth.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/rl-meth.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=rl-meth" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_rl-meth"><p><table id="t-rl-meth" style="width:65px">
+    <colgroup><col style="width:63px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="b36s245/6sh.rle">Shuttle [2]</a></td>
+    </tr>
+    <tr>
+	<td><a class="p" href="b36s245/6sh.rle">Egg and 2 medium blinkers (@1185)</a></td>
+    </tr>
+</table></p></div>
+<map name="rl-meth">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,41,20,61" href="#bottom" />
+	<area coords="41,0,61,20" href="zip/rl-meth.zip" />
+	<area coords="41,41,61,61" href="stamp/rl-meth.rle" />
+	<area coords="0,0,61,61" href="b36s245/6sh.rle" />
+</map>
+</article>
+<hr /><article><a id="a28" name="a28"></a>
+<a id="rl-gun" name="rl-gun"></a>
+<h2>1 gun</h2>
+<p>Shuttles can combined together in many ways to generate gliders. This is one example.</p>
+<p><img src="map/rl-gun.png" alt="B36/S245 gun"
+ width="401" height="221" usemap="#rl-gun" /></p>
+<p><table><colgroup><col span="12" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_rl-gun" class="i" href="javascript:Nav('rl-gun')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a27">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a29">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/rl-gun.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/rl-gun.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/rl-gun.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="lis/rl-gun.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/rl-gun.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/rl-gun.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=rl-gun" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_rl-gun"><p><table id="t-rl-gun" style="width:405px">
+    <colgroup><col style="width:403px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="b36s245/48g804-1.rle">P804
+	    double-barreled gun [x+4]</a></td>
+    </tr>
+</table></p></div>
+<map name="rl-gun">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,201,20,221" href="#bottom" />
+	<area coords="381,0,401,20" href="zip/rl-gun.zip" />
+	<area coords="381,201,401,221" href="stamp/rl-gun.rle" />
+	<area coords="0,0,401,221" href="b36s245/48g804-1.rle" />
+</map>
+</article>
+<hr /><article><a id="a29" name="a29"></a>
+<a id="rl-puff" name="rl-puff"></a>
+<h2>1 replicator</h2>
+<p>Two shuttles in tandem can produce a replicator. The different parts of
+the replicator are asynchronous, so they interact in complex and irregular
+ways, but the number different interactions is limited, so the result is
+a linear pattern that exhibits apparently chaotic behavior, yet never
+exceeds 29 cells in width.</p>
+<p><img src="map/rl-puff.png" alt="B36/S245 replicator"
+ width="121" height="41" usemap="#rl-puff" /></p>
+<p><table><colgroup><col span="12" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_rl-puff" class="i" href="javascript:Nav('rl-puff')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a28">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a30">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/rl-puff.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/rl-puff.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/rl-puff.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="lis/rl-puff.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/rl-puff.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/rl-puff.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=rl-puff" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_rl-puff"><p><table id="t-rl-puff" style="width:125px">
+    <colgroup><col style="width:123px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="b36s245/24repl.rle">Replicator [5]</a></td>
+    </tr>
+</table></p></div>
+<map name="rl-puff">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,21,20,41" href="#bottom" />
+	<area coords="101,0,121,20" href="zip/rl-puff.zip" />
+	<area coords="101,21,121,41" href="stamp/rl-puff.rle" />
+	<area coords="0,0,121,41" href="b36s245/24repl.rle" />
+</map>
+</article>
+</main>
+<hr class="a" /><a id="a30" name="a30"></a>
+<a id="bottom" name="bottom"></a>
+<p><b>Other rules:</b>
+	<a class="i" href="lifepage.htm"><em>B3/S23</em> (Conway&rsquo;s Life)</a>,
+	<a class="i" href="b2s2.htm"><em>B2/S2</em> (2/2 Life)</a>,
+	<a class="i" href="b34s34.htm"><em>B34/S34</em> (3/4 Life)</a>,
+	<a class="i" href="b36s23.htm"><em>B36/S23</em> (HighLife)</a>,
+	<em>B36/S245</em> (Replicator rule),
+	<a class="i" href="b3xs23y.htm"><em>B3<i>x</i>/S23<i>y</i></em> (Life-like rules)</a>,
+	<a class="i" href="rulell.htm"><em>B2n3/S23-q</em> (LeapLife)</a>,
+	<a class="i" href="rulevl.htm"><em>B2n3-q5y6c/S23-k</em> (VesselLife)</a>,
+	<a class="i" href="rulemn.htm">Niemiec&rsquo;s Rules</a>,
+	<a class="i" href="color.htm">Multi-colored Life</a>.</p>
+<p><b>See also:</b>
+    <a href="lifestr.htm">structure</a>,
+    <a href="lifestyl.htm">style book</a>,
+    <a href="lifeterm.htm">definitions</a>,
+    <a href="lifemeth.htm">search methodologies</a>,
+    <a href="recipe.htm">conversion recipes</a>,
+    <a href="liferule.htm">other rules</a>,
+    <a href="lifenews.htm">news</a>,
+    <a href="lifecred.htm">credits</a>,
+    <a href="lifelink.htm">links</a>,
+    <a href="lifemap.htm">site map</a>,
+    <a class="i" target="lifesrch" href="lifesrch.htm">search</a>,
+    <a class="i" target="lifesrch" href="lifxsrch.htm">expanded search</a>,
+    <a class="i" target="srchhelp" href="srchhelp.htm">search help</a>.</p>
+<p><a href="index.htm">Home page</a> |
+<a href="lifepage.htm">Life page</a></p>
+<p><a href="lifepage.htm#copyright">Copyright &copy;
+1997, 1998, 1999, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022 by Mark. D. Niemiec.
+All rights reserved</a>.<br />
+This page was last updated on <em>2022-07-03</em>.</p>
+<script type="text/javascript"><!--
+"use strict";
+// Convert a named DOM object (id="id") into the actual object
+function Id (id) {
+    return document.getElementById (id);
+}
+// Expand or collapse stamp image text table
+function Nav (n) {
+    var v = Id ("a_" + n).childNodes[0].nodeValue === "+";
+    Id ("a_" + n).childNodes[0].nodeValue = v ? "\u2013" : "+";
+    Id ("b_" + n).style.display = v ? "block" : "none";
+}
+// Set alt and title attributes on an element
+function SetAltTitle (p, n) {
+    if (p && p.href) {
+	p.title = p.alt = n;
+    }
+}
+// Provide title tooltips for all stamp images
+function Titles () {
+    var q = [];				// name = q["id"][i];
+    var t = document.getElementsByTagName ("table");
+    for (i = 0; i < t.length; ++i) {
+	var n = t[i].id;		// table id
+	if (n) {
+	    var r = t[i].getElementsByTagName ("tr");
+	    var b = [];			// patterns in table
+	    for (var j = 0; j < r.length; ++j) {
+		var d = r[j].getElementsByTagName ("td");
+		for (var k = 0; k < d.length; ++k) {
+		    if (d[k].getElementsByTagName ("a"). length) {
+			// Get text in a way that works on most browsers
+			m = (d[k].textContent || d[k].innerText)
+			  .replace (/[\n\t]/g, " ") .replace (/   */g, " ")
+			  .replace (/^ /, "") .replace (/ $/, "")
+			  .replace (/[\xAD\u8230]/g, "");
+			b.push (m);
+		    }
+		}
+	    }
+	    q[n] = b;
+	}
+    }
+    var m = document.getElementsByTagName ("map");
+    for (var i = 0; i < m.length; ++i) {
+	var b = q["t-"+m[i].name];
+	var s = m[i].getElementsByTagName ("area");
+	if (s) {
+	    // First 4 areas are NW, SW, NE, SE corners; last is default
+	    // Others are in the same order as patterns in table
+	    SetAltTitle (s[0], "Top of page");
+	    SetAltTitle (s[1], "Bottom of page");
+	    if (s[3]) {
+		SetAltTitle (s[2], "Zip archive of all patterns");
+		SetAltTitle (s[3], "This stamp page");
+		for (var j = 4, k = 0; j < s.length; ++j) {
+		    var a = s[j].href;
+		    if ((n = a.indexOf ("~")) >= 0) {
+			SetAltTitle (s[j], a.substring (0, n));
+		    } else if (b && b[k]) {
+			SetAltTitle (s[j], b[k++]);
+		    }
+		}
+	    } else {
+		SetAltTitle (s[2], "This stamp page");
+	    }
+	}
+    }
+}
+Titles ();
+// -->
+</script>
+</body></html>

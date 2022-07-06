@@ -1,0 +1,23 @@
+#N 42p28.rle: 42P28: Synthesis
+#O Mark D. Niemiec's life synthesis database, Mon Jan 14 05:30:21 2019
+#C  ..OOO...............OOO..
+#C  ....O...............O....
+#C  O.O..O.O.........O.O..O.O
+#C  O..OO.OO.........OO.OO..O
+#C  O.O..O.O.........O.O..O.O
+#C  ....O...............O....
+#C  ..OOO...............OOO..
+x = 178, y = 41
+130bo9bo$128bobo9bobo$129boo9boo$$73bo25by11by17bo11bo$72bo25byby9byby
+15bobo9bobo$72b3o23byby9byby15bobo9bobo$5bo14bo58bo19by11by17bo11bo$6b
+oo10bobo48bo8bo$5boo12boo49bo7b3o$68b3o$5bo19bo3bo$5boo11b3obbobobbo
+21bx29bo$4bobo13bo3boobb3o4b3x12bxbb3x9b3o12bobb3o$19bo30bx29bo3$95b3x
+15b3x9b3o15b3o9b3x15b3x$97bx15bx13bo15bo13bx15bx$93bxbxbbxbx9bxbxbbxbx
+5bobobbobo9bobobbobo5bxbxbbxbx9bxbxbbxbx$93bxbbxxbxx9bxxbxxbbx5bobboob
+oo9booboobbo5bxbbxxbxx9bxxbxxbbx$93bxbxbbxbx9bxbxbbxbx5bobobbobo9bobo
+bbobo5bxbxbbxbx9bxbxbbxbx$97bx15bx13bo15bo13bx15bx$95b3x15b3x9b3o15b3o
+9b3x15b3x3$11bo28bx29bo$3obboo3bo13bobo8b3xbbx12b3x9b3obbo12b3o$bbobbo
+bobb3o11boo14bx29bo$bo3bo19bo$80b3o$10boo12boo44b3o7bo$10bobo10boo47bo
+8bo$10bo14bo45bo27by11by17bo11bo$76b3o19byby9byby15bobo9bobo$78bo19byb
+y9byby15bobo9bobo$77bo21by11by17bo11bo$$129boo9boo$128bobo9bobo$130bo
+9bo!

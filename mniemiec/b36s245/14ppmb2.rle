@@ -1,0 +1,17 @@
+#N 14ppmb2.rle: Medium blinker below P on P: Synthesis
+#O Mark D. Niemiec's life synthesis database, Wed Apr 29 03:46:13 2020
+#C  .....O.....
+#C  OOO..O..OOO
+#C  OO...O...OO
+#C  .....O.....
+x = 160, y = 109
+51boobboo$b3o47boobboo$oboo45boobobboboo$3o46b4obb4o$oo$23bx19bo19bx3b
+x15bo3bo15bx3bx15bo3bo25bx3bx$bo21bxx18boo18bxxbb3x13boobb3o13bxxbxx
+15booboo25bxxbxx$obo20bxx18boo4boo12bxx4bx13boo4bo13bxxbxx15booboo25b
+xxbxx$3bo44b4o$bbo45boo$49bo41bo64b4x$90boo$89b3o10$124boo4boo$123b4o
+bb4o$125boobboo$125bo4bo20$143boo$142b3o$141boobo$141b3o12$84boobboo$
+84boobboo$6bo75boobobboboo$6bo75b4obb4o$7bo$3booboo19bx19bo29bx19bo15b
+x3bx15bo3bo15bx3bx$5boo19bxx18boo28bxx18boo13b3xbbxx13b3obboo15bxxbxx$
+26bxx18boo28bxx12boo4boo13bx4bxx13bo4boo15bxxbxx$89b4o$4boo85boo$3b4o
+69b4x11bo4b4o16b4x9bo6b4o16b4x$5boo122boo$5bo123b3o10$44boo4boo$43b4o
+bb4o$45boobboo$45bo4bo20$63boo$62b3o$61boobo$61b3o!

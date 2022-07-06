@@ -1,0 +1,8 @@
+#N 10m2.rle: M2: Synthesis
+#O Mark D. Niemiec's life synthesis database, Fri Feb 18 08:10:59 2011
+#C  O.O.O
+#C  .O.O.
+#C  .O.O.
+#C  O.O.O
+x = 25, y = 9, rule = B34/S34
+bo$obbo$bboo18bxx$b3o17b4x$$bb3o16b4x$bboo18bxx$bbobbo$4bo!

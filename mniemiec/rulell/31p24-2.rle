@@ -1,0 +1,22 @@
+#N 31p24-2.rle: 31P24.2; House between trans stars: Synthesis
+#O Mark D. Niemiec's life synthesis database, Sun Dec 20 19:24:21 2020
+#C  ...O.......................
+#C  .O...O.....................
+#C  ..O.O.......O..........O...
+#C  O.....O....O.O.......O...O.
+#C  ..O.O.....O...........O.O..
+#C  .O...O.....O.O......O.....O
+#C  ...O........O.........O.O..
+#C  .....................O...O.
+#C  .......................O...
+x = 183, y = 46
+115bo$113bobo$114boo15bo27bx$130bo26bx3bx$130b3o11bo13bxbx7bx10bx$144b
+obo9bx5bx4bxbx7bx3bx$144boo12bxbx5bx11bxbx$140boo15bx3bx5bxbx6bx5bx$
+140bobo16bx8bx9bxbx$110boo28bo36bx3bx$109bobo67bx$111bo13bo$125boo$
+124bobo18$bbo$obo76bx39bo39bx$boo35bo38bx3bx35bo3bo35bx3bx$18bx17bobo
+9bo15bo13bxbx18bx18bobo7bo10bo18bxbx7bx10bx$3bo13bxbx17boo8bobo14bobo
+9bx5bx14bx3bx14bo5bo4bobo7bo3bo14bx5bx4bxbx7bx3bx$3boo11bxbbx13boo11bo
+bbo14boo12bxbx17bxbx17bobo5bobbo8bobo17bxbx5bx11bxbx$bbobo12bxx13bobo
+12boo11boo15bx3bx14bx5bx14bo3bo5boo7bo5bo14bx3bx5bxbx6bx5bx$34bo25bobo
+16bx18bxbx18bo18bobo18bx8bx9bxbx$60bo36bx3bx35bo3bo35bx3bx$99bx39bo39b
+x3$135bo$134boo$134bobo!

@@ -1,0 +1,13 @@
+#N 36le.rle: Minimal lightweight emulator: Pattern image
+#O Mark D. Niemiec's life synthesis database, Sat Aug 05 06:00:28 2017
+#C  O............O
+#C  OOO........OOO
+#C  ...O.O..O.O...
+#C  ..O........O..
+#C  .O.OO....OO.O.
+#C  O.O..OOOO..O.O
+#C  O..O......O..O
+#C  .OO........OO.
+x = 14, y = 8, rule = B36/S23
+x12bx$3x8b3x$3bxbxbbxbx$bbx8bx$bxbxx4bxxbx$xbxbb4xbbxbx$xbbx6bxbbx$bxx
+8bxx!

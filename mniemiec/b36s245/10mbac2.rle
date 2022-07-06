@@ -1,0 +1,13 @@
+#N 10mbac2.rle: Medium blinker below carrier: Synthesis
+#O Mark D. Niemiec's life synthesis database, Tue Apr 21 22:52:56 2020
+#C  OO....
+#C  O....O
+#C  ..O..O
+#C  .OO..O
+#C  .....O
+x = 80, y = 104
+8bo$9bo$6bobo$7bo17bxx18boo28bxx$25bxbbx16bobbo26bxbbx$8boo17bxx18boo
+28bxx$7b3o$6boobo$6b3o67b4x12$44boo4boo$43b4obb4o$45boobboo$45bo4bo20$
+63boo$62b3o$61boobo$61b3o14$63boo$65bo$64bobo$63bobbo20$43b4obb4o$43b
+oobobboboo$45boobboo$45boobboo7$75bxx$75bxbbx$77bxx3$26b4x16b4o26b4x$
+7b3o$oo4boboo$3o3b3o$oboobboo$b3o!

@@ -1,0 +1,16 @@
+#N 21p16-1.rle: 21P16.1: Synthesis
+#O Mark D. Niemiec's life synthesis database, Fri Aug 07 02:54:01 2020
+#C  OO.......OO
+#C  OO.....O..O
+#C  ...........
+#C  .....O.....
+#C  ....OO...O.
+#C  .....O.....
+#C  ...........
+#C  OO.....O..O
+#C  OO.......OO
+x = 53, y = 34
+12bo$13bo$11b3o$30bobo$bbobo25boo$3boo26bo$3bo4$33bo$33bobo$33boo$42b
+xx7bxx$42bxx5bxbbx$17bo$17bobo27bx$17boo27bxx3bx$47bx$11b3o$13bo28bxx
+5bxbbx$12bo29bxx7bxx$3o$bbo$bo5$3boo26boo$4boo24boo$3bo17boo9bo$21bobo
+$21bo!

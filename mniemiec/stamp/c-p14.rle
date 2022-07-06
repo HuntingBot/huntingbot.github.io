@@ -1,0 +1,5 @@
+#N c-p14.rle: Colored period 14 oscillator: Stamp collection
+#O Mark D. Niemiec's life synthesis database, Wed Jun 05 22:51:51 2019
+x = 45, y = 15, rule = Life4c
+5$5.AA19.A5.A$5.D.C.BB14.A.A3.A.A$10.B14.A..A.A..A$6.C..B17.A3.A$7.B
+19.BB.AA$7.A.A.C$10.DA!

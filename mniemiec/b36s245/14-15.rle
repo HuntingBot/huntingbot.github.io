@@ -1,0 +1,11 @@
+#N 14-15.rle: 14.15; W on hand: Partial synthesis
+#O Mark D. Niemiec's life synthesis database, Sat Apr 25 08:25:24 2020
+#C  ..OO...
+#C  ..O..O.
+#C  OOO.OO.
+#C  O...OOO
+#C  ....O..
+x = 45, y = 29
+bx19bo19bx$b3x17b3o17b3x$3x17b3o17b3x$4bx19bo19bx$bb3x17b3o17b3x$bbx
+19bo19bx$41bxx6$17b4obb4o$17boobobboboo$19boobboo$19boobboo10$15boo$
+14b4o$16boo$16bo!

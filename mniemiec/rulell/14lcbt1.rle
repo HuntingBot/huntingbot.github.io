@@ -1,0 +1,12 @@
+#N 14lcbt1.rle: Up boat on long canoe: Synthesis
+#O Mark D. Niemiec's life synthesis database, Tue Jul 07 18:20:40 2020
+#C  OO........
+#C  O.........
+#C  .O........
+#C  ..O.....O.
+#C  ...O.O.O.O
+#C  ....OO.OO.
+x = 65, y = 10
+19bxx18boo18bxx$19bxbx17bobo17bxbx$obo9bo9bx19bo19bx$boo9bobo8bx19bo
+19bx$bo10boo10bx19bo19bx$3bo19bxx18boo18bxx$3boo$bbobo37bo20bxx$42boo
+18bxbx$41bobo19bx!

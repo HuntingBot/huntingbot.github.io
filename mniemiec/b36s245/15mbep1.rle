@@ -1,0 +1,11 @@
+#N 15mbep1.rle: Medium blinker on elephant: Partial synthesis
+#O Mark D. Niemiec's life synthesis database, Fri Apr 24 23:00:01 2020
+#C  O..O.....
+#C  OOOO....O
+#C  ..O.OO..O
+#C  ...O.O..O
+#C  ........O
+x = 76, y = 22
+34bo$34boo$32b4o$33boo32bx$xbx47bobo14bxbbxbx$xxbx46boobo13bxbbxxbx$bb
+4x27boo17b4o11bx4b4x$bbxbbx26b4o16bobbo16bxbbx$34boo$34bo9$9boo$9b3o$
+9boboo$10b3o!

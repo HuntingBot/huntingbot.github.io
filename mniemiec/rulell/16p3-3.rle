@@ -1,0 +1,32 @@
+#N 16p3-3.rle: 16P3.3: Synthesis
+#O Mark D. Niemiec's life synthesis database, Tue Jun 01 13:50:07 2021
+#C  OOOO......
+#C  ....O.O...
+#C  ....O..O..
+#C  ......O.O.
+#C  ..........
+#C  .......OO.
+#C  .........O
+#C  .........O
+#C  .........O
+#C  .........O
+x = 193, y = 75
+74bo14bo$75boo5bobobboo58bobo$74boo5bo6boo58boo$81bo66bo$81bobbo$81b3o
+34byy28boo$117bybby26bobbo$117bybby26bobbo$118byy28boo3$36bobo84bx29bo
+29bx$37boo84bx29bo29bx$37bo85bx29bo29bx$4bo96bobo19bx29bo29bx$5bo29b3o
+19b3x17b3o21boo21bxx28boo28bxx$3b3o19bx11bo7bo19bx19bo16bo$24bxbx9bo7b
+obo17bxbx17bobo37bxbx27bobo27bxbx$7boo16bxbx17bobo17bxbx17bobo37bxbbx
+26bobbo26bxbbx$7bobo16bx19bo19bx19bo12bobbo23bxbx27bobo27bxbx$7bo90bo
+30b4x26b4o26b4x$98bo3bo$98b4o$136byy28boo$68bx19bo46bybby26bobbobboo$
+51boo15bx19bo46bybby26bobboboo$47booboo16bx19bo47byy28boo4bo$46bobo3bo
+49bo$48bo52boo$101bobo12$147bobo$65bobo8bobo69boo$66boo8boo70bo$66bo3b
+obo4bo$73bo34byy38boo$5bo67bo33bybby36bobbo$3bobo64bobbo33bybby36bobbo
+$4boo65b3o34byy38boo$oo$boo$o112bx39bo29bx$113bx39bo29bx$113bx39bo29bx
+$113bx39bo29bx$38bxx28boo21bo22bxx38boo28bxx$3boo10bo22bx6bx22bo6bo13b
+oo$4boo8bobo19bxbx5bxbx19bobo5bobo13boo22bxbx22bo14bobo27bxbx$3bo11bob
+o18bxx7bxbx18boo7bobo25byy10bxbbx21booboo10bobbo26bxbbx$16bo29bx29bo
+26byy11bxbx20boobboo11bobo27bxbx$85b4o30b4x36b4o26b4x$60boo23bo3bo$59b
+obo23bo18byy38boo$61bo24bobbo14byy20byy16boo20boo$48bx29bo46bybby36bo
+bbobboo$46b3x27b3o46bybby36bobboboo$45bx29bo14boo34byy38boo4bo$45bxx
+28boo12boo$16bo8b3o63bo18byy38boo$16boo7bo84byybbyy34boobboo$15bobo8bo
+87byy38boo$23bo$23boo45b3o82bo$22bobo47bo81boo$71bo82bobo!

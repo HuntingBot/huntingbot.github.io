@@ -1,0 +1,9 @@
+#N 18p4-3.rle: 18-bit P4 #3: Pattern image
+#O Mark D. Niemiec's life synthesis database, Sat Jun 22 00:19:50 2013
+#C  ..O.O.....
+#C  OO.O..O.O.
+#C  .O.O..O.O.
+#C  .O.O..O.OO
+#C  .....O.O..
+x = 10, y = 5, rule = B34/S34
+bbxbx$xxbxbbxbx$bxbxbbxbx$bxbxbbxbxx$5bxbx!

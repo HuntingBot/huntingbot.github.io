@@ -1,0 +1,13 @@
+#N 19-2.rle: 19-bit still-life #2: Synthesis
+#O Mark D. Niemiec's life synthesis database, Tue Sep 01 05:56:20 2020
+#C  .OO.......
+#C  O..O......
+#C  .O.O....OO
+#C  ..O..OO..O
+#C  ...OO..OO.
+#C  ......O...
+#C  .....OO...
+x = 78, y = 30
+65bo$63boo$64boo9$50bo$3bobo42boo$4boo19bxx18boobboo$4bo19bxbx17bobo$
+23bxbx17bobo$boo21bx19bo$obo49bobo$bbo49boo$53bo$74bxx$73bxbx$73bx$71b
+xxbx$71bxbbx$73bx$73bxbxx$74bxbbx$75bxbx$76bx!

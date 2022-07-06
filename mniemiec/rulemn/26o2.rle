@@ -1,0 +1,8 @@
+#N 26o2.rle: 26-bit P2 c/2 spaceship: Pattern image
+#O Mark D. Niemiec's life synthesis database, Sat Oct 28 22:23:24 2017
+#C  OOO.OOOO.OOOO.OOO
+#C  O.O.O..O.O..O.O.O
+#C  .......O.O.......
+#C  ..O...........O..
+x = 17, y = 4, rule = B3/S2ae3aeijr4-cknqy
+3xb4xb4xb3x$xbxbxbbxbxbbxbxbx$7bxbx$bbx11bx!

@@ -1,0 +1,10 @@
+#N 18fm.rle: Fumarole: Pattern image
+#O Mark D. Niemiec's life synthesis database, Sat Aug 05 06:26:44 2017
+#C  OO....OO
+#C  O.O..O.O
+#C  ..O..O..
+#C  .O....O.
+#C  .OO..OO.
+#C  ...OO...
+x = 8, y = 6, rule = B36/S23
+3bxx$bxxbbxx$bx4bx$bbxbbx$xbxbbxbx$xx4bxx!

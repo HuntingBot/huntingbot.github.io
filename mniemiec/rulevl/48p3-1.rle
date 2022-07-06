@@ -1,0 +1,50 @@
+#N 48p3-1.rle: 48P3.1: Synthesis
+#O Mark D. Niemiec's life synthesis database, Tue Aug 25 02:55:18 2020
+#C  .....O...O.....
+#C  .....O...O.....
+#C  .....O...O.....
+#C  ....OO...OO....
+#C  ...O.O...O.O...
+#C  OOOOO.....OOOOO
+#C  ...............
+#C  ...............
+#C  ...............
+#C  OOOOO.....OOOOO
+#C  ...O.O...O.O...
+#C  ....OO...OO....
+#C  .....O...O.....
+#C  .....O...O.....
+#C  .....O...O.....
+x = 185, y = 170
+7bo14bobo$8bo14boobbo$6b3o14bo3bobo$27boo34b3x27bo9b3o$48bx39bo4bobo
+25bxx9bxx$5boo41bx39bo4boo25bxxbx7bxbxx$6boo40bx39bo30bxx13bxx$5bo113b
+xbbx9bxbbx$104b3o13bx13bx$104bo$105bo4$89bo$90bo$88b3o29bx13bx$29bo89b
+xbbx9bxbbx$27boo37bx39bo12bxx13bxx$28boo36bx33boo4bo13bxxbx7bxbxx$66bx
+32bobo4bo14bxx9bxx$6boo41b3x37b3o9bo$5bobo3bo14b3o$7bobboo14bo$10bobo
+14bo6$143bo$141boo$142boo14$75bobo$76boo$76bo5$113bo$114boo$13bo99boo$
+14bo3bo$12b3oboo39bx59bo$17boo37bxbx57bobo$56bxx58boo5$11boo9boo27bxx
+9bxx47boo9boo$10boobo7boboo25bxxbx7bxbxx45boobo7boboo50bx3bx$9boo13boo
+23bxx13bxx43boo13boo49bx3bx$9bobbo9bobbo6bo16bxbbx9bxbbx43bobbo9bobbo
+49bx3bx$10bo13bo7bobo15bx13bx45bo13bo9bobo37bxx3bxx$32boo100boo37bxbx
+3bxbx$135bo34b5x5b5x$bobo28bo10bx26bxx31bo26boo$bboo27boo9bxbx25bxbx
+29bobo25bobo$bbo28bobo9bxx26bx31boo26bo$99bo70b5x5b5x$boo96boo72bxbx3b
+xbx$obo7bo13bo25bx13bx33bobo9bo13bo49bxx3bxx$bbo6bobbo9bobbo23bxbbx9bx
+bbx43bobbo9bobbo49bx3bx$9boo13boo23bxx13bxx43boo13boo49bx3bx$10boobo7b
+oboo25bxxbx7bxbxx45boobo7boboo50bx3bx$11boo9boo27bxx9bxx47boo9boo5$57b
+xx58boo$16boo38bxbx57bobo$17boob3o34bx59bo$16bo3bo$21bo98boo$119boo$
+121bo5$158bo$157boo$157bobo14$91boo$92boo$91bo11$15bo3bo25bo3bo25bo3bo
+25bo3bo25bo3bo$15bo3bo25bo3bo25bo3bo25bo3bo25bo3bo$7bo7bo3bo25bo3bo25b
+o3bo25bo3bo25bo3bo$7boo5boo3boo23boo3boo23boo3boo23boo3boo23boo3boo$6b
+obo4bobo3bobo14b3o4bobo3bobo14boo5bobo3bobo21bobo3bobo21bobo3bobo$10b
+5o5b5o13bob5o5b5o10bobobb5o5b5o15b5o5b5o15b5o5b5o$37bo29bo$96boo$97boo
+$10b5o5b5o15b5o5b5o15b5o5b5o11bo3b5o5b5o11boobb5o5b5o$13bobo3bobo21bob
+o3bobo21bobo3bobo21bobo3bobo15boo4bobo3bobo$14boo3boo23boo3boo23boo3b
+oo23boo3boo15bo7boo3boo$15bo3bo25bo3bo25bo3bo25bo3bo25bo3bo$15bo3bo25b
+o3bo25bo3bo25bo3bo25bo3bo$15bo3bo25bo3bo25bo3bo25bo3bo25bo3bo16$15bo3b
+o25bo3bo25bo3bo25bo3bo$15bo3bo25bo3bo25bo3bo25bo3bo$15bo3bo25bo3bo25bo
+3bo25bo3bo$14boo3boo23boo3boo23boo3boo23boo3boo$13bobo3bobo21bobo3bobo
+21bobo3bobo21bobo3bobo$10b5o5b5o15b5o5b5o15b5o5b5o15b5o5b5o4$6b3ob5o5b
+5o11boobb5o5b5o15b5o5b5o15b5o5b5o$8bo4bobo3bobo13bobo5bobo3bobo21bobo
+3bobo21bobo3bobo$7bo6boo3boo16bo6boo3boo16bo6boo3boo15boo6boo3boo$15bo
+3bo25bo3bo17boo6bo3bo17boo6bo3bo$15bo3bo25bo3bo16bobo6bo3bo16bo8bo3bo$
+15bo3bo25bo3bo25bo3bo25bo3bo!

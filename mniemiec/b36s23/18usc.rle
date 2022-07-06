@@ -1,0 +1,10 @@
+#N 18usc.rle: Undead spark coil; House on house; JC: Synthesis
+#O Mark D. Niemiec's life synthesis database, Fri Aug 04 04:03:41 2017
+#C  OO...OO
+#C  O.O.O.O
+#C  ..O.O..
+#C  O.O.O.O
+#C  OO...OO
+x = 34, y = 7, rule = B36/S23
+15bo$bo12bo12bxx3bxx$bbo11b3o10bxbxbxbx$3o15b3o8bxbx$4b3o11bo8bxbxbxbx
+$6bo12bo7bxx3bxx$5bo!

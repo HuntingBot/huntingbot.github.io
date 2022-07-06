@@ -1,0 +1,30 @@
+#N 24o6.rle: 24P6H2V0.1: Synthesis
+#O Mark D. Niemiec's life synthesis database, Fri Mar 11 11:59:52 2022
+#C  ..O...O..
+#C  .O.O.O.O.
+#C  .O.O.O.O.
+#C  OO.O.O.OO
+#C  ...O.O...
+#C  ...O.O...
+#C  ..OO.OO..
+x = 111, y = 210
+43bobo37bobo$44boo38boo$44bo39bo8$42bo39bo$42boo5bo32boo5bo$41bobo4bo
+32bobo4bo$48b3o37b3o3$51bo39bo$50boo38boo$50bobo37bobo5$64bx3bx35bx3bx
+$63bxbxbxbx33bxbxbxbx$63bxbxbxbx33bxbxbxbx$62bxxbxbxbxx31bxxbxbxbxx$
+65bxbx37bxbx$65bxbx37bxbx$64bxxbxx35bxxbxx$35bo21bo$35boo19boo35boo$
+34bobo19bobo33boo$94bo9$103b3y$106by$106by$103byy5$73bobo$74boo$74bo8$
+72bo$72boo5bo$71bobo4bo$78b3o3$81bo$80boo$80bobo$$4bobo$5boo$5bo$104bx
+3bx$3b3o19b3x47b3o25bxbxbxbx$5bo97bxbxbxbx$4bo97bxxbxbxbxx$105bxbx$
+105bxbx$104bxxbxx30$38boo$37bobo$39bo3$80bo11bo$81bo9bo$45bobo31b3o9b
+3o$43bobobobo14bxxbxx15booboo$44booboo15bxxbxx15booboo$oo9boo7bxx9bxx$
+oo9boo7bxx9bxx$44booboo15bxxbxx15booboo$43bobobobo14bxxbxx15booboo$4bo
+3bo36bobo56bx3bx$3bobobobo68bo15bo8bxbxbxbx$3bobobobo68boo13boo8bxbxbx
+bx$bbooboboboo66bobo13bobo6bxxbxbxbxx$5bobo97bxbx$5bobo97bxbx$4booboo
+95bxxbxx5$93b3o$93bo$94bo14$79bo13bo$80boo9boo$45bobo31boo11boo$43bobo
+bobo14bxxbxx15booboo$44booboo15bxxbxx15booboo$80bo11bo$80boo9boo$79bob
+o9bobo$$44booboo15bxxbxx15booboo$43bobobobo14bxxbxx15booboo$45bobo$$
+104bx3bx$103bxbxbxbx$103bxbxbxbx$102bxxbxbxbxx$105bxbx$105bxbx$105bxbx
+$104bxxbxx16$57bobo13bobo$58boo13boo$58bo15bo3$59bo13bo$60boo9boo$59b
+oo11boo$14booboo15bxxbxx25booboo$13bobobobo14bxxbxx25booboo$15bobo$$
+50boo29boo$49bobo29bobo$51bo29bo3$104bx3bx$42boo45boo12bxbxbxbx$41bobo
+45bobo11bxbxbxbx$43bo45bo12bxxbxbxbxx$105bxbx$105bxbx$104bxxbxx!

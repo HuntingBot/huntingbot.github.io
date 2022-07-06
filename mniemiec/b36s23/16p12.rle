@@ -1,0 +1,15 @@
+#N 16p12.rle: 16-bit P12: Synthesis
+#O Mark D. Niemiec's life synthesis database, Fri Aug 04 12:57:36 2017
+#C  .OO.O..
+#C  .O...OO
+#C  O.....O
+#C  .......
+#C  O.....O
+#C  OO...O.
+#C  ..O.OO.
+x = 52, y = 37, rule = B36/S23
+22bo$20boo$21boo$11bo$12boo$11boo$$15bo$16boo$15boo$$21bo9bobo$19boo
+10boo$20boo10bo$obo$boo8bobo13bobo16bxxbx$bo10boo13boo17bx3bxx$12bo15b
+o16bx5bx$$8bo15bo20bx5bx$8boo13boo10bo9bxx3bx$7bobo13bobo8boo11bxbxx$
+34bobo$4bo10boo$4boo10boo$3bobo9bo$$20boo$19boo$21bo$$24boo$23boo$25bo
+$14boo$15boo$14bo!

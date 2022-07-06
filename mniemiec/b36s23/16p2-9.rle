@@ -1,0 +1,9 @@
+#N 16p2-9.rle: 16-bit P2 #9: Pattern image
+#O Mark D. Niemiec's life synthesis database, Fri Aug 04 17:22:39 2017
+#C  OOO..OOO
+#C  ........
+#C  .O.OO.O.
+#C  O......O
+#C  OO....OO
+x = 8, y = 5, rule = B36/S23
+3xbb3x$$bxbxxbx$x6bx$xx4bxx!

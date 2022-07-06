@@ -1,0 +1,15 @@
+#N 12tt1.rle: Close T on T; Small IHI: Synthesis
+#O Mark D. Niemiec's life synthesis database, Wed Jul 11 11:48:04 2018
+#C  ...O.O...
+#C  OOOO.OOOO
+#C  ...O.O...
+x = 166, y = 57
+70bo$71bo$69b3o$$72bo$71bo28bxbx27bobo27bxbx$19bo51b3o23b4xb4x21b4ob4o
+21bxxoxbxoxx$19bobo78bxbx27bobo27bxbx$6bo12boo$4bobo9boo18bxx7bxx19boo
+7boo$5boo9bobo17bxx7bxx19boo7boo$bboo12bo$bobo96byby27bobo$3bo65b3o25b
+4yb4y21b4ob4o$71bo28byby27bobo$70bo$$71b3o56bo$71bo58boo$72bo56bobo15$
+57bo67bo$58bo65bo35bxbx$56b3o65b3o30b4xb4x$60bo61bo37bxbx$59bo63bo$59b
+3o37bxx20b3o15boo$99bxx38boo$128bo$obo37bobo86bo$boo37boo85b3o$bo39bo$
+3b3o15bxx14b3o21boo17bxx19bxx17boo19boo$3bo17bxbx15bo21bobo15bxbx19bxb
+x15bobo19bobo$4bo17bx15bo23bo17bx21bx17bo21bo$bo39bo$boo37boo$obo37bob
+o86boo$128bobo$130bo$$132boo$132bobo$132bo!

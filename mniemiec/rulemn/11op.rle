@@ -1,0 +1,19 @@
+#N 11op.rle: Oblique puffer; P19 (5; 6)c/19 clean oblique puffer: Synthesis
+#O Mark D. Niemiec's life synthesis database, Sun Oct 29 08:09:11 2017
+#C  ...OO
+#C  .OOOO
+#C  OO...
+#C  .OO..
+#C  ..O..
+x = 113, y = 113, rule = B3/S2ae3aeijr4-ckqy
+8bo$7boboo$7b3o20bx39bx39bx$8bo20bxx38bxx38bxx$28bxx38bxx38bxx$29b4x
+36b4x36b4x$31bxx38bxx8boo28bxx$boo35boo40boboo8boo$oboo33boboo40boo8b
+oobo$3bo36bo40boo9boo$bboo35boo51boo4$45bo$43b4o$43boobo$45bo15$30bx
+10bo28bx39bx$12boo15bxx9bobo26bxx38bxx$12boo14bxx9bobbo25bxx38bxx$13b
+oo14b4x7b3o26b4x36b4x$31bxx38bxx38bxx$$48boo$48bobbo$51bo$11bo38bo36bo
+$10boo74boboo$9boo75b4o$87bo9$78b3o$77bobbo$78bobo$79bo12$4bo$3bo$3boo
+bo42boo$4b3o43boo$30bx20bo18bx39bx$29bxx38bxx38bxx$28bxx38bxx38bxx$29b
+4x36b4x36b4x$31bxx14boo22bxx38bxx$48bo29boo$7boo36bo33boo$7boo36boo32b
+oo5boo$5boo79bo$5boo78boo15$12bo$13bo$10boboo$10b3o3$30bx39bx$8boo19b
+xx17boo19bxx$7b3o18bxx17b3o18bxx$29b4x36b4x$5bo25bxx12bo25bxx$4boo38b
+oo$4boo38boo$52b3o$51boobo$51bo$52bo!

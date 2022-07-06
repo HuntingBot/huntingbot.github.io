@@ -1,0 +1,17 @@
+#N 10btbt1.rle: Up boat on boat; Bi-boat: Synthesis
+#O Mark D. Niemiec's life synthesis database, Fri Aug 21 14:31:01 2020
+#C  .OO.OO.
+#C  O.O.O.O
+#C  .O...O.
+x = 127, y = 53
+9bo$4bo3bo$5boob3o14bx27bo11bx5by13bo5bo13bx$4boo18bxbx11bo14bobo8bxbx
+3byby11bobo3bobo11bxbx$25bxx12bo13boo10bxx3byy13boo3boo13bxx$37b3o17b
+3o$25bxx15boo13bo7bxx3byy13boo3boo13bxx$4boo18bxbx14bobo14bo5bxbx3byby
+11bobo3bobo11bxbx$5boob3o14bx17bo21bx5by13bo5bo13bx$4bo3bo$9bo82boo$
+91bobo$93bo10$5bo19bx19bo19bx$4bobo17bxbx17bobo17bxbx$5boo18bxx18boo
+18bxx$$5boo18bxx18boo18bxx$4bobo18bxx17bobo18bxx$o4bo39bo$boo$oo19byy
+20bo17byy$21byy19boo17byy$42bobo8$28boo$27boo$5bo19bo3bo15bo19bo19bo
+19bo19bo$4bobo17bobo17bobo17bobo17bobo17bobo17bobo$5boo18boo18boobboo
+14boo18boo18boo18boo$48boo19boo$5boo18boo18boo3bo14booboo15boo18boo18b
+oo$4bobo17bobo17bobo17bobo3bo13bobo17bobo17bobo$5bo19bo19bo19bo19bo19b
+o19bo$88b3o17boo13bo$bboo84bo19bobo11boo$bobo85bo18bo13bobo$3bo!

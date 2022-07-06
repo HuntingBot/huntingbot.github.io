@@ -1,0 +1,10 @@
+#N 14blbl.rle: Two blinker predecessors: Synthesis
+#O Mark D. Niemiec's life synthesis database, Sat Jan 13 12:34:32 2018
+#C  .OO........
+#C  O...O...O..
+#C  .O.O...O.O.
+#C  ..O...O...O
+#C  ........OO.
+x = 35, y = 13
+7bo$7bobo$bo5boo$bbo$3o22bxx$24bx3bx3bx$25bxbx3bxbx$26bx3bx3bx$16b3o
+13bxx$16bo$10boo5bo$9bobo$11bo!

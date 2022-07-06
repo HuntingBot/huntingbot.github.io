@@ -1,0 +1,12 @@
+#N 14mbtas1.rle: Medium blinker on table tie table: Synthesis
+#O Mark D. Niemiec's life synthesis database, Wed Apr 22 01:20:18 2020
+#C  O.O.....
+#C  OOO....O
+#C  ..OOO..O
+#C  ..O.O..O
+#C  .......O
+x = 102, y = 25
+3bo$3bo$4bo$oobooboo56bo$bboobboo55boo$6boboo14bxbx17bobo16b4o27bxbx$
+6b4o14b3x17b3o17boo28b3x4bx$26b3x17b3o47b3xbbx$26bxbx17bobo47bxbxbbx$
+64boo35bx$63b4o$6b4o53boo$6boboo54bo$6boo$6boo7$88boo$87b3o$86boobo$
+86b3o!

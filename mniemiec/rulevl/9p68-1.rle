@@ -1,0 +1,29 @@
+#N 9p68-1.rle: 9P68.1: Synthesis
+#O Mark D. Niemiec's life synthesis database, Mon Aug 31 16:16:47 2020
+#C  .OO..
+#C  O..O.
+#C  OO.OO
+#C  ..O..
+x = 186, y = 139
+36bo$34bobo$bo33boo$bbo18bxx18boo$3o18bxx18boo$118boo$3o18bxx18boo45bo
+29boobbo$bbo18bxx18boo46boo30bobo35bo$bo86boo31boo37bo$117bo40b3o$117b
+oo44boo$116bobo43bobobbo$83boboobboo72bobbobo$83boobobboo76bo$63bx39bx
+39bx39bx$61bxxbxx35bxxbxx35bxxbxx35bxxbxx$61bxbbx36bxbbx36bxbbx36bxbbx
+$62bxx38bxx38bxx38bxx23$124boboo$124boobo$$86boo$63bx21bo17bx21boo16bx
+39bx$40boo19bxxbxx10boo7bobbo12bxxbxx19boo14bxxbxx35bxxbxx$40boo19bxbb
+x10bobo7bobbo12bxbbx36bxbbx16boo18bxbbx$62bxx13bo24bxx38bxx12boobo3bo
+18bxx$40boo114bo5bo$40boo115b3obo$121bo$38boo81boo34b3obo$34boobbobo
+79bobo33bo5bo$33bobo3bo116boobo3bo$35bo125boo$$167bo$166boo$166bobo5$
+44bobo$45boo76bo$45bo77bobo$123boo$50bo$44boo3bobo$44bobboobo30boo$45b
+oo33bobo37boo$80bo40bo$45boo30booboo39bobo$44bobboobo26boobo41bobo40bo
+3bo$44boo3bobo11bx16boboo19bx19bobo17bx20bobobobo12bx$50bo10bxxbxx14bo
+bbo17bxxbxx18boo15bxxbxx17bobboboo11bxxbxx$61bxbbx16boo18bxbbx36bxbbx
+19boo15bxbbx$62bxx38bxx38bxx38bxx$168boo$77boo88bobo$78boo89bo$77bo9$
+110byy$109byby$110by3$66byy23boo$31bo34byby22boo$32bo34by$30b3o39byy$
+72byy18b3o$88boobbo$28boo58boo3bo$28boo93boboobboo$123boobobboo$23boo
+38bx39bx39bx$23boo36bxxbxx35bxxbxx35bxxbxx$61bxbbx36bxbbx36bxbbx$62bxx
+38bxx24boo12bxx$129boo20by$128bo21byby$69byy79bybby$69byy80byy9$100bo$
+99bo$99b3o$55b3y60b3y$54bybbyy59bybby$34bo19by3by32bo25byybby$35boo17b
+4y34boo24bybyy$34boo20by34boo26byy5$27boo62bo$28boo8b3o50bobo$27bo12bo
+22bx27boo30bx$39bo21bxxbxx17boo36bxobxx$32boo27bxbbx19boo35bxbbx$33boo
+27bxx19bo38bxx$32bo!

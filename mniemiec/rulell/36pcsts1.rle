@@ -1,0 +1,23 @@
+#N 36pcsts1.rle: Pentadecathlon and two cis stars sharing sparks: Synthesis
+#O Mark D. Niemiec's life synthesis database, Tue Jun 01 10:52:20 2021
+#C  ..OOO..............OOO..
+#C  ........................
+#C  O.....O..........O.....O
+#C  O.....O..........O.....O
+#C  O.....O..........O.....O
+#C  ........................
+#C  ..OOO..............OOO..
+#C  ........................
+#C  ........................
+#C  .........O....O.........
+#C  .......OO.OOOO.OO.......
+#C  .........O....O.........
+x = 123, y = 62
+5bo10bo$6bo8bo$4b3o8b3o$38bx4bx24bo4bo34bx4bx$36bxxb4xbxx20boob4oboo
+30bxxb4xbxx$38bx4bx24bo4bo34bx4bx$$3o16b3o33bo30bo$bbo16bo36boo26boo
+15b3x14b3x$bo18bo34boo28boo$99bx5bx10bx5bx$99bx5bx10bx5bx$59boo20boo
+16bx5bx10bx5bx$60boo18boo$59bo22bo18b3x14b3x17$35bo30bo$33bobo30bobo$
+34boo30boo8$37bobo22bobo$38boo22boo$38bo24bo44bx4bx$106bxxb4xbxx$108bx
+4bx3$101b3x14b3x$$99bx5bx10bx5bx$99bx5bx10bx5bx$35bo30bo32bx5bx10bx5bx
+$30boo3boo28boo3boo$29bobobbobo28bobobbobo28b3x14b3x$31bo38bo4$36bo28b
+o$36boo26boo$35bobo26bobo!

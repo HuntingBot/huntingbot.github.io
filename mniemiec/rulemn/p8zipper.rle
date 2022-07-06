@@ -1,0 +1,12 @@
+#N p8zipper.rle: P8 zipper: Synthesis
+#O Mark D. Niemiec's life synthesis database, Sun Oct 29 10:29:52 2017
+#C  OO.....OO
+#C  O..O.O..O
+#C  ...O.O...
+#C  ...O.O...
+#C  ...O.O...
+#C  ..OO.OO..
+x = 70, y = 17, rule = B3/S2aei3aeijr4-cknqy
+61bxx5bxx$61bxbbxbxbbx$38bo13bo11bxbx$38boo11boo11bxbx$37boboo9boobo
+10bxbx$38boo11boo10bxxbxx$$25bx11bo7bo7bo$oo23bx10b3o6bo6b3o$boo3bo18b
+x10boboo5bo5boobo$boobb3o29bo15bo$4boobo$6bo$45bo$44b3o$44boboo$45bo!

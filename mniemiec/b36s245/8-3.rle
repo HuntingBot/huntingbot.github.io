@@ -1,0 +1,28 @@
+#N 8-3.rle: 8.3; Crab: Synthesis
+#O Mark D. Niemiec's life synthesis database, Fri May 01 09:37:02 2020
+#C  OO..
+#C  .O..
+#C  O.OO
+#C  .O.O
+x = 150, y = 130
+128bo$7b3o74b3o40boo$6boboo73boboo40b4o$6b3o74b3o42boo$6boo3boo13bxx
+19b3o16bxx15boo21bxx16bo21bxx$10b3o14bx14bo5boo17bx39bx16bo22bx$9boobo
+13bxbxx12bo6bo16bxbxx14b4o18bxbxx15bo20bxbxx$9b3o15bxbx13bo23bxbx14boo
+bo3boo14bxbx11booboobboo17bxbx$3bo35booboo42boobb3o30boobb4o$3boo36boo
+43booboobo34boo$3b3o39boo42b3o36bo$44booboo$44bo$45bo$45bo4$10b3o$10b
+oobo$11b3o33boo$12boo33boo36b3o$45boobo35boboo$12boo31b4o35b3o42boobb
+oo$11b3o12bxx38bxx16boo20bxx21boobboo11bxx$10boobo13bx17b4o18bx21bo17b
+x19boobobboboo10bx$10b3o13bxbxx15boobo17bxbxx18boo16bxbxx17b4obb4o9bxb
+xx$3b4o20bxbx17boo18bxbx14boobb4o15bxbx37bxbx$3boobo40boo3boo30b3obboo
+$5boo44b3o30boboo$5boo43boobo31b3o$50b3o9$11boobboo$11boobboo$9boobobb
+oboo12b4y$9b4obb4o$26bxx$27bx$26bxbxx$27bxbx3$4o$oobo$bboo$bboo3$8boo$
+8boo$8boboo$8b4o3$8b4o102boo$8boboo100booboo$8boo17bx19bo18bxx48bo$8b
+oo17b3x17b3o17bx47bo$26b3x17b3o17bxbxx45bo$28bx19bo18bxbx$$boo45boo$b
+3o43b3o$boboo41boobo$bb3o41b3o10$46boo45bo$46boo45bo29boo$44boobo18bxx
+17boo7bo28boo21bxx$44b4o19bx17b3obbooboo13bx12boobo3bo18bx$66bxbxx15bo
+boo3boo13b3x11b4obb3o16bxbxx$8boo57bxbx16b3o20bx19bo17bxbx$8boo$8boboo
+15b4x16b4o$8b4o15bxbbx16bobbo$28bxx18boo$3boo5boo74boo$3b3o3b3o68bo6bo
+$3bobooboobo68bo6b3o$4b3ob3o70bo7bo$77booboo$79boobboo$82b4o$84boo$84b
+o4$106bxx18boo18bxx$107bx19bo19bx$106bxbxx17b3o16bxbxx$107bxbx19bo17bx
+bx6$121b4obb4o$121boobobboboo$123boobboo$123boobboo10$119boo$118b4o$
+120boo$120bo!

@@ -1,0 +1,10 @@
+#N 16egeg5.rle: Down egg beside egg: Partial synthesis
+#O Mark D. Niemiec's life synthesis database, Tue Apr 28 21:38:25 2020
+#C  .OO......
+#C  O..O.OOOO
+#C  OOOO.O..O
+#C  ......OO.
+x = 49, y = 20
+25bo$25bo$24bo$20b3obooboo$19boboobboo$19b3o$19boo$$6bxx18boo13bxx$bxx
+bbxbbx12boobbobbo11bxbbxb4x$xbbxbbxx12bobbobboo12b4xbxbbx$bxx18boo23b
+xx$$28boo$27b3o$22boobboobo$20booboob3o$24bo$23bo$23bo!

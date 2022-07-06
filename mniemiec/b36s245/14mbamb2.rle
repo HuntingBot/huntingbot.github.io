@@ -1,0 +1,26 @@
+#N 14mbamb2.rle: Medium blinker on carrier above medium blinker: Synthesis
+#O Mark D. Niemiec's life synthesis database, Sat May 08 16:26:20 2021
+#C  OOOO....
+#C  ........
+#C  ........
+#C  .OO....O
+#C  .O..O..O
+#C  ...OO..O
+#C  .......O
+x = 163, y = 191
+122bo$21bo100boo$22bo97b4o$19bobo99boo32bx$20bo17bxx18boo28bxx48boo15b
+xbbxx$38bxbbx16bobbo26bxbbx46bobbo13bxbbxbbx$21boo17bxx18boo28bxx29boo
+17boo13bx4bxx$20b3o97b4o$19boobo99boo$19b3o67b4x29bo16b4o16b4x9$97boo$
+97b3o$97boboo$57boo4boo33b3o$56b4obb4o$58boobboo$58bo4bo17$146boo$148b
+o$147bobo$76boo68bobbo$75b3o$74boobo$74b3o17$126b4obb4o$126boobobboboo
+$128boobboo$128boobboo7$158bxx$158bxbbx$160bxx3$109b4x16b4o26b4x$90b3o
+$83boo4boboo$83b3o3b3o$83boboobboo$84b3o16$72bo$72boo$70b4o$71boo32bx
+19bo29bx$88boo15bxbbxx15bobboo25bxbbxx$88bobbo13bxbbxbbx13bobbobbo23bx
+bbxbbx$71boo17boo13bx4bxx13bo4boo23bx4bxx$70b4o$72boo$72bo86b4x9$47boo
+$47b3o$47boboo$48b3o76boo4boo$126b4obb4o$128boobboo$128bo4bo20$146boo$
+145b3o$144boobo$144b3o9$80boo$82bo$81bobo$80bobbo11$59boo66boo$59boo
+66boo$57boobo66boboo$3boo20bx19bo11b4o34bx19bo11b4o24bx$bb3o20bx19bo
+49bxbbxx15bobboo35bxbbxx$boobo20bx19bo49bxbbx16bobbo36bxbbxbbx$b3o21bx
+19bo11b4o34bx4bx14bo4bo6b4o24bx4bxx$57boobo38bxx18boo6boboo$59boo66boo
+$oo57boo66boo12boo$3o137b4o$oboo136boo$b3o137bo5$107bo16boo$106bobo14b
+4o$109bo13boo$108bo15bo!

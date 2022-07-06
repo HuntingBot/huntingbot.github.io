@@ -1,0 +1,11 @@
+#N 16p3-1.rle: 16P3.1: Synthesis
+#O Mark D. Niemiec's life synthesis database, Fri Apr 09 22:02:32 2021
+#C  OO......OO
+#C  O.O....O.O
+#C  ..OO..OO..
+#C  ...O..O...
+#C  ...O..O...
+x = 48, y = 15
+9bo6bo$10bo4bo$8b3o4b3o20bxx6bxx$bbo20bo14bxbx4bxbx$obo20bobo14bxxbbxx
+$boo5boo6boo5boo16bxbbx$9boo4boo24bxbbx$8bo8bo5$8bo8bo$8boo6boo$7bobo
+6bobo!

@@ -1,0 +1,15 @@
+#N 32p14.rle: 32-bit P14: Pattern image
+#O Mark D. Niemiec's life synthesis database, Fri Aug 04 13:27:13 2017
+#C  ...OOO....
+#C  ..O.OO.O..
+#C  .O......O.
+#C  ...O..O..O
+#C  OO......OO
+#C  OO......OO
+#C  O..O..O...
+#C  .O......O.
+#C  ..O.OO.O..
+#C  ....OOO...
+x = 10, y = 10, rule = B36/S23
+3b3x$bbxbxxbx$bx6bx$3bxbbxbbx$xx6bxx$xx6bxx$xbbxbbx$bx6bx$bbxbxxbx$4b
+3x!

@@ -1,0 +1,23 @@
+#N 4bk.rle: Block: Synthesis
+#O Mark D. Niemiec's life synthesis database, Sat Aug 15 00:48:44 2020
+#C  OO
+#C  OO
+x = 193, y = 128
+166bo$167boo$124bo41boo$122bobo$43bobo77boo41bo$44boo38bobo79boo$26bxx
+16bo21bxx17boo19bxx15bo22bxx17bobo18bxx$26bxx38bxx17bo20bxx15boo21bxx
+38bxx$41b3o78bobo$bbo40bo38boo$3boo37bo40boo$bboo78bo$$bo$boo$obo9$
+125bo$5bobo76bobo39booboo$6boo18bxx38bxx17boo19bxx17boobbobo14bxx38bxx
+$6bo19bxx19bo18bxx17bo20bxx21bo16bxx38bxx$45bobo115bo$4boo40boo33b3o
+80bobboo$5boo76bo78b3oboo$4bo39bo37bo85bo$44boo$43bobo13$26bxx38bxx38b
+xx38bxx38bxx$8boo16bxx19boo17bxx19boo17bxx19boo17bxx20bo17bxx$7boo37b
+oo38bobo32bo4boo39bobo$5bo3bo38bo39bo32boo5bo37bo$3bobo36b3o75bobboo
+40booboo$4boo37boo45boo30b3o40bo$42boobo43boobo29bobo41bo$45boo41bo73b
+oo$44bo42bobbo70bobo$88bobo72bo11$6boo18bxx18boo18bxx18boo18bxx$6bobo
+17bxx18bobo17bxx18bobbo16bxx$7bo39bobo$48bo38bobbo$9bo20byy57boo$9boo
+19byy12b3o$8bobo35bo44b3o$45bo47bo$92bo11$172bo$6boo18bxx18boo18bxx18b
+oo18bxx18boo18bxx18boobboo14bxx$6boo18bxbx17boo18bxbx17boo18bxbx17boo
+18bxbx17boo3boo13bxbx$27bx39bxbx37bxbx37bxbx37bxbx$50b3o15bx39bxx38bxb
+x17bo19bxbx$10bo39bo39boo38boo17bxbx16boo19bxbx$9boo40bo37boo34b3oboo
+19bx16bobo20bxbx$9bobo34b3o42bo35bo3bo59bxx$48bo36b3o38bo46boo$5b3o39b
+o39bo85bobo$7bo78bo86bo$6bo8$29bxx$10boo17bxbx$6booboo15bxxbbx$6boo3bo
+14bxx17$bboo$3boo$bbo3boo$6boo!

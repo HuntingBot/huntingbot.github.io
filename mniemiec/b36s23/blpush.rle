@@ -1,0 +1,12 @@
+#N blpush.rle: Blinker pushing reaction: Stamp collection
+#O Mark D. Niemiec's life synthesis database, Thu Aug 24 00:09:24 2017
+x = 125, y = 121, rule = B36/S23
+6b3o$5bobbo$4bo3bo$4bobbo$4b3o$$o$o$o13b3o$13bobbo$12bo3bo$12bobbo$12b
+3o4$22b3o$21bobbo$20bo3bo$20bobbo$20b3o8$34b3o$33bobbo$32bo3bo$32bobbo
+$32b3o3b3o$37bobbo$36bo3bo$36bobbo$36b3o8$50b3o$49bobbo$48bo3bo$48bobb
+o$48b3o3b3o$53bobbo$52bo3bo$52bobbo$52b3o8$66b3o$65bobbo$64bo3bo$64bo
+bbo$64b3o8$78b3o$77bobbo$76bo3bo$76bobbo$76b3o3b3o$81bobbo$80bo3bo$80b
+obbo$80b3o3b3o$85bobbo$84bo3bo$84bobbo$84b3o3b3o$89bobbo$88bo3bo$88bo
+bbo$88b3o8$102b3o$101bobbo$100bo3bo$100bobbo$100b3o3b3o$105bobbo$104bo
+3bo$104bobbo$104b3o8$118b3o$117bobbo$116bo3bo$116bobbo$116b3o3b3o$121b
+obbo$120bo3bo$120bobbo$120b3o!

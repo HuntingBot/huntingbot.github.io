@@ -1,0 +1,30 @@
+#N 12lfbt8.rle: Boat near loaf: Synthesis
+#O Mark D. Niemiec's life synthesis database, Sun May 23 12:40:23 2021
+#C  .OO.....
+#C  O..O....
+#C  O.O..OO.
+#C  .O...O.O
+#C  ......O.
+x = 192, y = 89
+25bxx18boo4bobo11bxx18boo18bxx$24bxbbx16bobbo3boo11bxbbx16bobbo9bo6bx
+bbx$7boo15bxbxbbxx13bobo5bo11bxbxbbxx13bobobboo6bobo4bxbxbbxx$6bobbo
+15bx3bxbx13bo19bx3bxx14bo3boo6boo6bx3bxbx$7boo21bx22b3o54bx$8bo44bo40b
+oo$4boo48bo38boo$3boo90bo$4bo9$162bobo$162boo$163bo$5boo38boo38boo38b
+oo38boo$4bobbo36bobbo36bobbo36bobbo36bobbo$4bobobboo19bx13bobobboo18b
+xx13bobobboo18bxx13bobobboo18bxx13bobobboo18bxx$5bo3bobo17bxbx13bo3bob
+o17bxbx13bo3bobo17bxbx13bo3bobo17bxbx13bo3bobo17bxbx$boo7bo19bx19bo19b
+x19bo19bx19bo19bx19bo19bx$obo38b3o41boo38boo$bbo40bo40bobo38bobo$42bo
+43bo38bo13$5boo18bxx18boo18bxx18boo18bxx$4bobbo16bxbbx16bobbo16bxbbx
+16bobbo16bxbbx$4bobobboo13bxbx17bobobboo13bxbxbbxx13bobobboo13bxbxbbxx
+$5bo3bobo13bx19bo3bobo13bx3bxx14bo3bobo13bx3bxx$10bo3bo19by15bo39bo4bo
+$12boo19byby57boo$13boo17bybby16bo20byy19boo17byy$33byy17boo19byy38byy
+$51bobo8$105bo17bo$103bobo15bobo18bo$boo88bobo10boo16boo16bobo$bboo88b
+oo47boo$bo3boo18boo18boo18boo18boo5bo12boo18boo18boo$4bobbo16bobbo16bo
+bbo16bobbo16bobbo16bobbo16bobbo16bobbo$4bobobboo13bobobboo13bobobboo
+13bobobboo13bobobboo13bobobboo13bobobboo13bobobboo$5bo3bobo8boo3bo3bob
+o13bo3bobo13bo3bobo13bo3bobo13bo3bobo13bo3bobo13bo3bobo$10bo10boo7bo
+19bo19bo19bo19bo19bo19bo$20bo21boo$41bobo25boo$43bo24bobo$70bo8$44bobo
+22bo$44boo22bo$45bo22b3o$94bo$5boo18boo18boo18boo18boo6bo$4bobbo16bobb
+o16bobbo16bobbo16bobbo5b3o$4bobobboo13bobobboo13bobobboo13bobobboo13bo
+bobboo$5bo3bobo13bo3bobo13bo3bobo13bo3bobo13bo3bobo$10bo19bo19bo19bo
+19bo$$9boo17bo$9bobo15boo$9bo17bobo!

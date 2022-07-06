@@ -1,0 +1,16 @@
+#N g1104dgc.rle: P1104 cyclic gun: Synthesis
+#O Mark D. Niemiec's life synthesis database, Wed Sep 27 10:10:02 2017
+#C  OO............
+#C  OO.........O..
+#C  ..........OOO.
+#C  .........OO.OO
+#C  ..........O...
+#C  .........OO...
+#C  ..........O...
+#C  .........OO.OO
+#C  ..........OOO.
+#C  ...........O..
+x = 133, y = 24, rule = B3/S2aei3aeijr4-cknqy
+79bo$80bo$77boboo$77b3o46bx3bx$82boo41bxx3bxx$81boobo39bxx5bxx$82boo
+41b7x$83bo42bxbxbx8$23bxx48boo48bxx$3o20bxx48boo48bxx$bbo$boo$$3bo$bb
+3o$boobo$3bo!

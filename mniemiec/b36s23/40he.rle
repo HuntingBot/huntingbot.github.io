@@ -1,0 +1,13 @@
+#N 40he.rle: Minimal heavyweight emulator: Pattern image
+#O Mark D. Niemiec's life synthesis database, Sat Aug 05 06:01:20 2017
+#C  O..............O
+#C  OOO....OO....OOO
+#C  ...O.O....O.O...
+#C  ..O..........O..
+#C  .O.OO......OO.O.
+#C  O.O..OOOOOO..O.O
+#C  O..O........O..O
+#C  .OO..........OO.
+x = 16, y = 8, rule = B36/S23
+x14bx$3x4bxx4b3x$3bxbx4bxbx$bbx10bx$bxbxx6bxxbx$xbxbb6xbbxbx$xbbx8bxbb
+x$bxx10bxx!

@@ -1,0 +1,10 @@
+#N 12acac3x.rle: Two carriers offset (-3;  3): Synthesis
+#O Mark D. Niemiec's life synthesis database, Sat Jul 29 22:12:18 2017
+#C  ..OO...
+#C  O..O...
+#C  OO.....
+#C  .....OO
+#C  ...O..O
+#C  ...OO..
+x = 26, y = 6, rule = B36/S23
+bbobo17bxx$3boo17bxbbx$3bo20bxx$bo17bxx$oo17bxbbx$obo18bxx!

@@ -1,0 +1,19 @@
+#N 16sq.rle: Skewed quad: Synthesis
+#O Mark D. Niemiec's life synthesis database, Mon Jan 14 01:39:23 2019
+#C  .OO....
+#C  .O...OO
+#C  ..O.O.O
+#C  .......
+#C  O.O.O..
+#C  OO...O.
+#C  ....OO.
+x = 113, y = 23
+92bo$90bobo$9bo81boo$9bobo39bo42bo$9boo39bo31bo11bobo$7bo42b3o30bo10b
+oo$5bobo19bxx18boo18bx13b3o3bo$6boo6bo11bxbbx16bobbo16bxbx17bobo$13bo
+13bxx4bx9bo3boo4bo13bxx4bx4b3o6boo4bo13bxx$bo11b3o16bxbx6bobo8bobo17bx
+bx5bo11bobo12bx3bxx$bbo29bxbx7boo8bobo17bxx5bo12boo14bxbxbx$3o13b3o6bx
+7bx11bo7bo$16bo7bxbx17bobo8boo8bxx18boo12bo6bxbxbx$3b3o11bo6bxbx17bobo
+8bobo6bxbx17bobo11bo7bxx3bx$5bo19bx4bxx13bo4boo3bo9bx4bxx13bo4boo6b3o
+9bxx$4bo6boo16bxbbx16bobbo17bxbx17bobo$11bobo16bxx18boo19bx19bo3b3o$
+11bo34b3o34boo10bo$8boo38bo33bobo11bo$7bobo37bo36bo$9bo76boo$86bobo$
+86bo!

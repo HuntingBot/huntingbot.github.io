@@ -1,0 +1,33 @@
+#N 12lfbt1.rle: Up boat on loaf: Synthesis
+#O Mark D. Niemiec's life synthesis database, Fri Aug 28 18:00:16 2020
+#C  .OO.....
+#C  O..O.OO.
+#C  .O.O.O.O
+#C  ..O...O.
+x = 172, y = 109
+8bo$8bobo16bx19bo18bx$bobo4boo15bxx18boo18bxbx$bboo23bxx18boo16bxx$bbo
+23bx19bo$65bxx$4bo39bo19bxbbx$3boo39boo18bxbx$3bobo37bobo19bx13$6bo19b
+x19bo19bx19bo19bx19bo19bx$5bobo17bxbx17bobo17bxbx17bobo17bxbx17bobo17b
+xbx$5boo19bx18boo17bxbbx17boo18bxx18boo18bxx$21by43bxx$oo3boo13byby22b
+oo38boo18bxx18boo18bxx$boobobbo13by22bobbo36bobbo17bxx17bobbo17bxx$o3b
+obo37bobo37bobo37bobo$5bo39bo39bo39bo$88boo$41b3o44bobo36b3o$43bo44bo
+38bo$42bo85bo5$7bobo$8boo19byy38byy11bo$8bo20byy19boo17byy12bo$49boo
+30b3o$6bo39bo4bo34bo$5bobo17bxx18bobo17bxx18bobo$5boo18bxx18boo18bxx
+18boo$$5boo18bxx18boo18bxx18boo15bx$4bobbo16bxbbx16bobbo16bxbbx16bobbo
+13bxbx$4bobo17bxbx17bobo17bxbx17bobo15bxbx$5bo19bx19bo19bx19bo17bxbx$
+104bx8$47bo18bo17bo$45bobo16bobo15bobo18bo$46boo17boo16boo16bobo17bo$
+102boo18boo$6bo19bo19bo19bo19bo19bo14boo3bo19bo$5bobo17bobo17bobo17bob
+o17bobo17bobo17bobo17bobo$5boo18boo18boo18boo18boo18boo18boo18boo$$5b
+oo18boo18boo18boo18boo18boo18boo18boo$4bobbo16bobbo16bobbo16bobbo16bo
+bbo16bobbo16bobbo16bobbo$4bobo17bobo17bobo17bobo17bobo17bobo17bobo17bo
+bo$5bo19bo19bo19bo19bo19bo19bo14bo4bo$7bo133boo$7boo18bo112boo$6bobo
+18boo$26bobo9$6bo19bo19bo19bo$5bobo17bobo17bobo17bobo$5boo18boo18boo
+18boo$9b3o$5boobbo15boobb3o13boo18boo$4bobbobbo13bobbobo14bobbob3o12bo
+bbo$4bobo17bobo3bo13bobobbo14bobo$5bo19bo19bo4bo14bo3b3o$69bo$70bo7$5b
+o20bo20bobo$5bobo18bobo18boo21bo$5boo19boo20bo20bo21bo$69b3o17boo$6bo
+19bo19bo19bo19bo3boo14bo19bo19bo19bo$5bobo17bobo17bobo17bobo17bobo17bo
+bobbo14bobo17bobo17bobo$5boo18boo18boo18boo18boo18boobbo15boo18boo18b
+oo$109b3o18bo$5boo18boo18boo18boo18boo18boo18boobbo15boo3bo14boo$4bobb
+o16bobbo16bobbo16bobbo16bobbo16bobbo16bobbob3o12bobbobo14bobbobbo$4bob
+o17bobo17bobo17bobo17bobo17bobo17bobo17bobobb3o12bobobbo$5bo19bo19bo
+19bo19bo19bo19bo19bo19bo3b3o!

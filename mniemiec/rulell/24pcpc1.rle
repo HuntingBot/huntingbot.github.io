@@ -1,0 +1,20 @@
+#N 24pcpc1.rle: Parallel pentadecathlons spaced (0;  8) in phase; Pentadecathlon on pentadecathlon #1: Synthesis
+#O Mark D. Niemiec's life synthesis database, Fri Apr 09 22:08:36 2021
+#C  .O.......O.
+#C  .O.......O.
+#C  O.O.....O.O
+#C  .O.......O.
+#C  .O.......O.
+#C  .O.......O.
+#C  .O.......O.
+#C  O.O.....O.O
+#C  .O.......O.
+#C  .O.......O.
+x = 125, y = 48
+94bo10bo$95bo8bo$93b3o8b3o$117bx4bx$115bxxb4xbxx$117bx4bx$$89b3o16b3o$
+91bo16bo$90bo18bo$$37bx4bx14bo4bo14bx4bx14bo4bo14bx4bx$35bxxb4xbxx10b
+oob4oboo10bxxb4xbxx10boob4oboo10bxxb4xbxx$37bx4bx14bo4bo14bx4bx14bo4bo
+14bx4bx3$13bo$obo9boo$boo5bo3bobo13byy18boo$bo6boo18byy18boo$7bobo$48b
+o$48boo$47bobo9$60bobo34bobo$61boo34boo18bx4bx$61bo36bo16bxxb4xbxx$66b
+o4bobo12bobo4bo23bx4bx$67boo3boo12boo3boo$66boo4bo14bo4boo4$117bx4bx$
+115bxxb4xbxx$117bx4bx$$68b3o18b3o$70bo18bo$69bo20bo!

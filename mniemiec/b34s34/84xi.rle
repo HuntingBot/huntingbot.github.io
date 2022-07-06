@@ -1,0 +1,22 @@
+#N 84xi.rle: Xi ship: Pattern image
+#O Mark D. Niemiec's life synthesis database, Mon Jun 10 21:21:34 2013
+#C  ...OO....OO...
+#C  ...OO....OO...
+#C  .O....OO....O.
+#C  ..............
+#C  .OOO.O..O.OOO.
+#C  ..OOOOOOOOOO..
+#C  ..............
+#C  ..OOOO..OOOO..
+#C  .O.OOO..OOO.O.
+#C  .O..........O.
+#C  O....OOOO....O
+#C  O............O
+#C  O...OO..OO...O
+#C  OO.OOO..OOO.OO
+#C  ..O...OO...O..
+#C  .....OOOO.....
+#C  .....OOOO.....
+x = 14, y = 17, rule = B34/S34
+3bxx4bxx$3bxx4bxx$bx4bxx4bx$$b3xbxbbxb3x$bb10x$$bb4xbb4x$bxb3xbb3xbx$b
+x10bx$x4b4x4bx$x12bx$x3bxxbbxx3bx$xxb3xbb3xbxx$bbx3bxx3bx$5b4x$5b4x!

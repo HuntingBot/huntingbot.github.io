@@ -1,0 +1,31 @@
+#N 10cht.rle: Cis hook w/tail: Synthesis
+#O Mark D. Niemiec's life synthesis database, Wed Jul 15 10:03:17 2020
+#C  OO....
+#C  O...OO
+#C  .O..O.
+#C  ..O.O.
+#C  ...O..
+x = 190, y = 137
+85bo$84bo$84b3o17$52bobo$53boo$bbo50bo$3boo$bboo20bxx28boo$23bxbbx26bo
+bbo$bbo20bxbbx26bobbo$bboo20bxx28boo$bobo$108bxx$104bxx3bx$105bxbbx$
+105bxbx$106bx9$30b3o$32bo$31bo4$92boo$40boo50bobo$39bobo50bo$41bo10$
+81bo$81boo$80bobo$40bo45bo$41bo42boo$39b3o43boo$110byy$110byy$8boo18b
+xx9b3o6boo13bxx3bxx28boo17byy3bxbx3bxx$4boo3bo18bxx11bobboo3bo13bxbx3b
+x15bo8boo3bo17byy3bxxbx3bx$5bobbo31bo4bobbo16bxbbx16bo9bobbo26bxbbx$5b
+obo37bobo17bxbx17bo9bobo27bxbx$6bo39bo19bx29bo13by3by11bx$bboo106by3by
+$bobo106by3by$3bo5$131bo$131bobo$131boo$37bo$35bobo88bobo37bobo19bx$
+36boo44bobo19bx22boo19bxx17boo18bxbx$22bx38bxx20boo18bxbx21bo20bxx17bo
+20bxx$3o18bxbx16b3o18bxbx19bo20bxx$bbo5boo12bxbx3bxx12bo5boo12bxbx3bxx
+18boo18bxx18boo18bxx18boo18bxx$bobboo3bo13bxbx3bx11bobboo3bo13bxbx3bx
+14boo3bo14bxx3bx14boo3bo14bxx3bx14boo3bo14bxx3bx$5bobbo16bxbbx16bobbo
+16bxbbx16bobbo16bxbbx16bobbo16bxbbx16bobbo16bxbbx$5bobo17bxbx17bobo17b
+xbx17bobo17bxbx17bobo17bxbx17bobo17bxbx$6bo19bx19bo19bx19bo19bx19bo19b
+x19bo19bx12$69bobo57bobo$70boo57boo$70bo42bo16bo$111boo$8boo18boo18boo
+18boo18boo18boobboo14boo$4boo3bo14boo3bo14boo3bo14boo3bo14boo3bo14boo
+3bo14boo3bo$5bobbo16bobbo16bobbo16bobbo16bobbo4bo11bobbo16bobbo$3obbob
+o17bobo17bobo17bobo17bobo3boo12bobo17bobo$bbo3bo19bo14bo4bo19bo19bo5b
+oo12bo19bo$bo40boo$25boo14boo$24bobo$26bo10$12boo$11boo$8boo3bo14boo
+18boo18boo18boo18boo$4boo3bo14boo3bo14boo3bo14boo3bo14boo3bo14boo3bo$
+5bobbo16bobbo16bobbo16bobbo16bobbo16bobbo$5bobo17bobo3boo12bobo17bobo
+17bobo17bobo$6bo19bo4bobo12bo3boo14bo19bo19bo$31bo18bobo16b3o$50bo18bo
+18b3o14boo$70bo17bo16bobo$89bo15bo!

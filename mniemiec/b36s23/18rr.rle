@@ -1,0 +1,10 @@
+#N 18rr.rle: Railroad crossing: Pattern image
+#O Mark D. Niemiec's life synthesis database, Fri Aug 04 18:12:17 2017
+#C  OO...OO.
+#C  O.O.O..O
+#C  ..O.O.OO
+#C  .O.OO...
+#C  ..O.O...
+#C  ...O....
+x = 8, y = 6, rule = B36/S23
+bxx3bxx$xbbxbxbx$xxbxbx$3bxxbx$3bxbx$4bx!

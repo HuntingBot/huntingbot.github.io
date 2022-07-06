@@ -1,0 +1,11 @@
+#N 16bvzb.rle: Block on very long Z on block: Synthesis
+#O Mark D. Niemiec's life synthesis database, Tue Sep 01 05:05:38 2020
+#C  ..OO...
+#C  ...O...
+#C  OO.O.OO
+#C  OO.O.OO
+#C  ...O...
+#C  ...OO..
+x = 41, y = 22
+4bo$4bobo$4boo$bo$bbo$3o$37bxx$37bxx$35bx$bbo32b6x$bboo36bx$bobo33bxx$
+37bxx7$23boo$22boo$24bo!

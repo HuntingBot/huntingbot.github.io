@@ -1,0 +1,18 @@
+#N 7ls.rle: Python; Long snake: Synthesis
+#O Mark D. Niemiec's life synthesis database, Sun May 23 21:08:32 2021
+#C  OO...
+#C  O.O.O
+#C  ...OO
+x = 155, y = 109
+101bo$100bo$100b3o47bxx$111bxx18boo17bxbxbx$92bo16bxbbx16bobbo20bxx$
+90bobo22bxx18boo$91boo15bxbbx3bxx11bobbo3boo$108bxx18boo$$92b3o37b3o$
+92bo39bo$93bo39bo12$95bo$94bo$94b3o16$75bo$75bobo$75boo$$21bobo49bo$
+21boo51bo47bo$22bo26bxx21b3o4boo39bobo$49bxx28boo25byy13boo3boo$23b3o
+80byy18boo$23bo100bo$24bo78b3y18bo$110bxx12bo5boo18bxx$110bxbxbx15bobo
+bo15bxbxbx$113bxx18boo18bxx$$bo$bbo$3o$35bxx28boo67bo$3bo31bxx28boo46b
+3y18bo$3boo129bo$bbobo$136boo$136bobo$93bo42bo$92boo$92bobo15$30boo18b
+xx$30bobobo15bxx$33boo$$36bo$35boo$35bobo10$92bobo16bobo16bobo16bobo$
+93boo17boo17boo17boo$93bo18bo18bo18bo$$30boo18boo18boo18boo18boo18boo
+18boo$30bobobo15bobobo15bobobo15bobobo15bobobo15bobobo15bobobo$33boo
+18boo18boo18boo18boo18boo18boo$26b3o19bo$28bo19boo23bo$27bo19bobo23boo
+$72bobo!

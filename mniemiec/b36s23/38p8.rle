@@ -1,0 +1,15 @@
+#N 38p8.rle: 38-bit P8: Pattern image
+#O Mark D. Niemiec's life synthesis database, Sat Aug 05 07:53:22 2017
+#C  O.............O
+#C  .O...........O.
+#C  .OO.OO.O.OO.OO.
+#C  OO..O.....O..OO
+#C  ...............
+#C  ...............
+#C  OO..O.....O..OO
+#C  .OO.OO.O.OO.OO.
+#C  .O...........O.
+#C  O.............O
+x = 15, y = 10, rule = B36/S23
+x13bx$bx11bx$bxxbxxbxbxxbxx$xxbbx5bxbbxx3$xxbbx5bxbbxx$bxxbxxbxbxxbxx$
+bx11bx$x13bx!

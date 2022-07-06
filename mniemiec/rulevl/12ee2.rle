@@ -1,0 +1,9 @@
+#N 12ee2.rle: Eater head siamese eater tail: Synthesis
+#O Mark D. Niemiec's life synthesis database, Tue Sep 01 01:17:47 2020
+#C  OO...OO
+#C  O....O.
+#C  .OOO.O.
+#C  ...OO..
+x = 25, y = 9
+3bo$bobo20bx$bboo18b3x$10bo10bx$8boo11bxx$3o6boo11bx$bbobboo15bxbx$bo
+3bobo15bxx$5bo!

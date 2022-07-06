@@ -1,0 +1,27 @@
+#N 5gl.rle: Glider; Featherweight spaceship; FWSS; 5P4H1V1.1; Glider 115: Synthesis
+#O Mark D. Niemiec's life synthesis database, Sun Aug 09 12:00:31 2020
+#C  OOO
+#C  O..
+#C  .O.
+x = 196, y = 149
+15boo30bobo$14boo32boo$16bo31bo$11bobo$12boo37bo40boo38boo$12bo37bobo
+39bobo37bobo$33b3x15bobo19b3x17boo18b3x17bobo17b3x$33bx18bo20bx23boo
+14bx20bo18bx$34bx39bx22bobo14bx39bx$97bo$131boo$130bobo$132bo$91boo$
+91boobbobo$obo92boo$boo93bo$bo$88boo$5booboo78boo$5booboo5$46boobboo$
+33b3x8bobbobbobo20b3x37b3x$33bx16bo22bx39bx$34bx8bobbo27bx39bx$43boo5$
+133boo$129boobbobo$93bo34bobobbo$92bobo32b3o$91bobbo31bobo$92boo32boo
+3$53bobo37boo$53boo38bobo$5boo47bo38bo$4bobbobboo$5bobobbobo20b3x19boo
+16b3x37b3x$6bo3bo22bx20bobbo15bx39bx$34bx20bobo16bx39bx$56bo9$60bo$58b
+oo$59boo$54boo41bobo$53bobbo40boo$53bobbo35bo5bo$5boo47boo35bobo$4bobb
+obboo80bobo$4bobbobbobo20b3x37b3x17bobo17b3x37b3x$5boo3bo22bx39bx20bo
+18bx39bx$34bx39bx39bx39bx13$7bobo$8boo$8bo$133boo$11bo42bo39bo37bo41bo
+$10bobo20b3x17boo18b3x17boo18b3x16bobbo3bo13b3x17boo18b3x$11bobo19bx
+20boo17bx20boo17bx18bobboboo14bx20boo17bx$12bobo19bx39bx39bx23boo14bx
+39bx$13boo42boo38bo79bobo$58boo37boo78boo$57bo38bobo79bo5$14bo37bo$15b
+o36bobo$13b3o31bo4boo44bo$10boo34b4o47bo$10bobo33boobo47b3o$9b4o34boo
+90bo$10boo82bo43boo38b3o$94boo42bobo37bo$93bobbo37boo38boo3bo$94boo39b
+o39bo$33b3x37b3x37b3x17b3o17b3x17b3o17b3x$33bx39bx39bx39bx39bx$34bx39b
+x39bx39bx39bx7$10bo36boo$10b3o34bobo$11bo35bo$$6bobo33b3o$7boo34bo$7bo
+34bo4$90bobbo40bo$33b3x37b3x14bobbo19b3x17boo18b3x$33bx39bx19bo19bx20b
+oo17bx$34bx39bx16boo21bx39bx$97boo38boo$97bobo37bobo$97bo39bo11$10boo
+18bxx$10bobo17bxbx$11bo19bx$$13b3o$13bo$14bo!

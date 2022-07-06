@@ -1,0 +1,19 @@
+#N 114sd2a.rle: Cis super diamonds sharing sparks: Pattern image
+#O Mark D. Niemiec's life synthesis database, Sun Jun 05 23:21:48 2016
+#C  ...OOOOOO...........OOOOOO...
+#C  .OO......OO.......OO......OO.
+#C  .O........O.......O........O.
+#C  O...OOOO...O.....O...OOOO...O
+#C  O..O....O..O.....O..O....O..O
+#C  O..O.OO.O..O..O..O..O.OO.O..O
+#C  O..O.OO.O..O..O..O..O.OO.O..O
+#C  O..O....O..O.....O..O....O..O
+#C  O...OOOO...O.....O...OOOO...O
+#C  .O........O.......O........O.
+#C  .OO......OO.......OO......OO.
+#C  ...OOOOOO...........OOOOOO...
+x = 29, y = 12, rule = B34/S34
+3b6x11b6x$bxx6bxx7bxx6bxx$bx8bx7bx8bx$x3b4x3bx5bx3b4x3bx$xbbx4bxbbx5bx
+bbx4bxbbx$xbbxbxxbxbbxbbxbbxbbxbxxbxbbx$xbbxbxxbxbbxbbxbbxbbxbxxbxbbx$
+xbbx4bxbbx5bxbbx4bxbbx$x3b4x3bx5bx3b4x3bx$bx8bx7bx8bx$bxx6bxx7bxx6bxx$
+3b6x11b6x!

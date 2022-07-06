@@ -1,0 +1,2641 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="copyright" content="1997,1998,1999,2013,2015,2016,2017,2018,2019,2020,2021,2022 Mark D. Niemiec" />
+<title>Life Variant: VesselLife (B2n3-q5y6c/S23-k)</title>
+<meta name="description"
+content="Life Variant: VesselLife: B2n3-q5y6c/S23-k pattern lists and glider syntheses" />
+<meta name="keywords"
+content="conway game life vessel vessellife rule still life oscillator spaceship wick stretcher puffer pattern object list glider synthesis" />
+<link rel="prev" href="rulell.htm" />
+<link rel="next" href="rulemn.htm" />
+<link rel="search" href="lifesrch.htm" />
+<link rel="author" href="lifecred.htm#niemiec" />
+<link rel="license" href="lifepage.htm#copyright" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="shortcut icon" href="images/23-64.ico" />
+<style type="text/css">
+    body{lang="en-US";hyphens:auto;color:black;background-color:white;
+      margin-top:0;padding:0;border:0;height:100%;
+      font-family:Verdana,Arial,Helvetica,sans-serif;}
+    hr.a{border-style:solid;border-width:3px;border-color:#000000;}
+    h1{text-align:center;
+      font-family:Verdana,Arial,Helvetica,sans-serif;font-variant:small-caps;}
+    h2{font-family:Verdana,Arial,Helvetica,sans-serif;font-variant:small-caps;}
+    h3{font-family:Verdana,Arial,Helvetica,sans-serif;font-variant:small-caps;}
+    i{font-family:"Times New Roman",Times,serif;}
+    pre{hyphens:manual;}
+    img{border:2px black solid;}
+    ul,ol{margin-left:0px;padding-left:1en;}
+    table{border:1px black solid;border-spacing:0px;border-collapse:collapse;
+      table-layout:fixed;}
+    td,th{border:1px black solid;vertical-align:top;font-size:12px;padding:1px;}
+    td a{display:block;}
+    a{text-decoration:none;}
+    a:focus{text-decoration:underline;} a:hover{text-decoration:underline;}
+    a.p:link{color:#008000;} a.p:visited{color:#00C000;}
+    a.i:link{color:#000080;} a.i:visited{color:#0000C0;}
+    a.j:link{color:#008080;} a.j:visited{color:#00C0C0;}
+    a.x:link{color:#800000;} a.x:visited{color:#C00000;}
+    td:hover{background-color:#F0F0F0;}
+    .s{background-color:#E0E0E0;} td.s:hover{background-color:#E0E0E0;}
+    .b{background-color:#C0C0FF;} td.b:hover{background-color:#E0E0FF;}
+    .g{background-color:#C0FFC0;} td.g:hover{background-color:#E0FFE0;}
+    .t{background-color:#C0FFFF;} td.t:hover{background-color:#E0FFFF;}
+    .r{background-color:#FFC0C0;} td.r:hover{background-color:#FFE0E0;}
+    .m{background-color:#FFC0FF;} td.m:hover{background-color:#FFE0FF;}
+    .y{background-color:#FFFFC0;} td.y:hover{background-color:#FFFFE0;}
+    .o{background-color:#FFD0AA;} td.o:hover{background-color:#FFE8D5;}
+    .v{background-color:#FFAAD0;} td.v:hover{background-color:#FFD5E8;}
+    .h{background-color:#E0E0FF;} td.h:hover{background-color:#F0F0FF;}
+    .k{background-color:#000000;color:#FFFFFF;} td.k:hover{background-color:#C0C0C0;}
+    .n{background-color:#F0F0F0;text-align:center;} th.n:hover{background-color:#F8F8F8;}
+    .c{text-align:center;} .u{display:none;}
+</style>
+</head>
+<body>
+<a id="top" name="top"></a>
+<h1>Life Variant: VesselLife (B2n3-q5y6c/S23-k)</h1>
+<p class="c">
+	<a class="j" href="#vl-intro">Introduction</a> |
+	<a class="j" href="#vl-p1-0">Still-lifes (1-11)</a>,
+	<a class="j" href="#vl-p1-1">(12-15)</a>,
+	<a class="j" href="#vl-p1-2">(16+)</a> |
+	<a class="j" href="#vl-pp1">Pseudo-still-lifes</a> |
+	<a class="j" href="#vl-qp1">Quasi-still-life</a> |
+	<a class="j" href="#vl-p2">P2 oscillators</a> |
+	<a class="j" href="#vl-pp2">P2 pseudo-oscillators</a> |
+	<a class="j" href="#vl-qp2">P2 quasi-oscillators</a> |
+	<a class="j" href="#vl-p3">P3 oscillators</a> |
+	<a class="j" href="#vl-pp3">P3 pseudo-oscillator</a> |
+	<a class="j" href="#vl-p4">P4 oscillators</a> |
+	<a class="j" href="#vl-p5">P5 oscillators</a> |
+	<a class="j" href="#vl-p6">P6 oscillator</a> |
+	<a class="j" href="#vl-p8">P8 oscillator</a> |
+	<a class="j" href="#vl-p10">P10 oscillators</a> |
+	<a class="j" href="#vl-p12">P12 oscillators</a> |
+	<a class="j" href="#vl-p13">P13 oscillator</a> |
+	<a class="j" href="#vl-p14">P14 oscillator</a> |
+	<a class="j" href="#vl-p15">P15 oscillator</a> |
+	<a class="j" href="#vl-p16">P16 oscillator</a> |
+	<a class="j" href="#vl-p18">P18 oscillator</a> |
+	<a class="j" href="#vl-p22">P22 oscillators</a> |
+	<a class="j" href="#vl-p58">P58 oscillator</a> |
+	<a class="j" href="#vl-p68">P68 oscillator</a> |
+	<a class="j" href="#vl-p80">P80 oscillator</a> |
+	<a class="j" href="#vl-p92">P92 oscillator</a> |
+	<a class="j" href="#vl-cons">Constellations</a> |
+	<a class="j" href="#vl-ss">Spaceships</a> |
+	<a class="j" href="#vl-ws">Wick-stretchers</a> |
+	<a class="j" href="#vl-puff">Puffer</a>
+</p>
+<hr class="a" /><main>
+<article><a id="a0" name="a0"></a>
+<a id="vl-intro" name="vl-intro"></a>
+<h2>Introduction</h2>
+<p>The rule <em>B2n3-q5y6c/S23-k</em>, also known as VesselLife, is similar
+to Life, but has some distinctive differences. All four of Life&rsquo;s basic
+spaceships work. Its most distinguishing feature is that patterns like boats,
+barges, and ships of various lengths are extremely common, and these can act
+as tag-alongs behind a glider, allowing extrusion of ships of arbitrary
+length. Another distinctive characteristic is the <em>B2n</em> condition,
+which allows patterns to interact at greater distance, and makes many synthesis
+techniques difficult or impossible. This rule is less explosive than Life,
+and there are no known patterns with infinite chaotic growth; most small
+patterns become stable after at most a few hundred generations.</p>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Barge">Barge</a>,
+<a class="x" href="http://conwaylife.com/wiki/Boat">Boat</a>,
+<a class="x" href="http://conwaylife.com/wiki/Glider">Glider</a>,
+<a class="x" href="http://conwaylife.com/wiki/Ship">Ship</a>.</p>
+</article>
+<hr class="a" /><article><a id="a1" name="a1"></a>
+<a id="vl-p1-0" name="vl-p1-0"></a>
+<h2>102 small still-lifes (4&hellip;11 bits)</h2>
+<p>This list has been generated by hand, and may be incomplete.
+All items have explicit syntheses.</p>
+<p>These consist of:</p>
+<p><ul>
+    <li>The 2 4-bit still-lifes.</li>
+    <li>The 1 5-bit still-life.</li>
+    <li>The 4 6-bit still-lifes (Life&rsquo;s beehive doesn&rsquo;t work).</li>
+    <li>The 5 7-bit still-lifes (including 1 new one).</li>
+    <li>The 10 8-bit still-lifes (including one new one).</li>
+    <li>The 15 9-bit still-lifes (including 6 new ones; Life&rsquo;s hat doesn&rsquo;t work).</li>
+    <li>The 39 10-bit still-lifes (including 16 new ones;
+	Life&rsquo;s beehive w/&#8203;tail and boat tie boat don&rsquo;t work).</li>
+    <li>26/49 11-bit still-lifes.</li>
+</ul></p>
+<p><img src="map/vl-p1-0.png" alt="VesselLife still-lifes up to 11 bits"
+ width="621" height="477" usemap="#vl-p1-0" /></p>
+<p><table><colgroup><col span="12" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_vl-p1-0" class="i" href="javascript:Nav('vl-p1-0')">+</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a0">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a2">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/vl-p1-0.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/vl-p1-0.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/vl-p1-0.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="lis/vl-p1-0.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/vl-p1-0.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/vl-p1-0.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=vl-p1-0" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_vl-p1-0" class="u"><p><table id="t-vl-p1-0" style="width:625px">
+    <colgroup><col style="width:71px;" /><col span="8" style="width:60px;" />
+	<col style="width:72px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="rulevl/4bk.rle">
+	    Block [2]</a></td>
+	<td><a class="p" href="rulevl/4tb.rle">Tub;
+	    Diamond [3]</a></td>
+	<td><a class="p" href="rulevl/5bt.rle">
+	    Boat [2]</a></td>
+	<td><a class="p" href="rulevl/6sn.rle">
+	    Snake [3]</a></td>
+	<td><a class="p" href="rulevl/6sh.rle">
+	    Ship [2]</a></td>
+	<td><a class="p" href="rulevl/6ac.rle">Carrier;
+	    Aircraft carrier [4]</a></td>
+	<td><a class="p" href="rulevl/6bg.rle">
+	    Barge [2]</a></td>
+	<td colspan="3" class="s">&nbsp;</td>
+    </tr>
+    <tr>
+	<td><a class="p" href="rulevl/7ls.rle">Python;
+	    Long snake [4]</a></td>
+	<td><a class="p" href="rulevl/7lf.rle">Loaf;
+	    Burloaf [3]</a></td>
+	<td><a class="p" href="rulevl/7et.rle">Eater;
+	    Eater 1; Fishhook [4]</a></td>
+	<td><a class="p" href="rulevl/7lb.rle">
+	    Long boat [2]</a></td>
+	<td><a class="p" href="rulevl/7bkpb.rle">
+	    Pre-block on block&sup1; [5]</a></td>
+	<td colspan="5" class="s">&nbsp;</td>
+    </tr>
+    <tr>
+	<td><a class="p" href="rulevl/8sl.rle">
+	    Shil&shy;lelagh [3]</a></td>
+	<td><a class="p" href="rulevl/8pd.rle">
+	    Pond [3]</a></td>
+	<td><a class="p" href="rulevl/8lp.rle">
+	    Long ship [4]</a></td>
+	<td><a class="p" href="rulevl/8cg.rle">Mango;
+	    Cigar [4]</a></td>
+	<td><a class="p" href="rulevl/8ht.rle">Hook w/&#8203;tail;
+	    Snake eater [4]</a></td>
+	<td class="y"><a class="p" href="rulevl/8vs.rle">Very long snake;
+	    Long long snake [15]</a></td>
+	<td><a class="p" href="rulevl/8lg.rle">
+	    Long barge [3]</a></td>
+	<td><a class="p" href="rulevl/8tt.rle">Tub w/&#8203;tail;
+	    Twit [3]</a></td>
+	<td><a class="p" href="rulevl/8btpb.rle">
+	    Pre-block on boat&sup1; [4]</a></td>
+	<td><a class="p" href="rulevl/8cs.rle">Canoe;
+	    Sinking ship; Cis snake [4]</a></td>
+    </tr>
+    <tr>
+	<td><a class="p" href="rulevl/9ll.rle">
+	    Long shil&shy;lelagh [4]</a></td>
+	<td><a class="p" href="rulevl/9tlt.rle">
+	    Tub w/&#8203;long tail [4]</a></td>
+	<td><a class="p" href="rulevl/9lht.rle">
+	    Long hook w/&#8203;tail [8]</a></td>
+	<td><a class="p" href="rulevl/9snpb2.rle">
+	    Trans pre-block on snake&sup1; [8]</a></td>
+	<td class="g"><a class="p" href="rulevl/9acpb2.rle">
+	    Trans pre-block on carrier&sup1; [9]</a></td>
+	<td><a class="p" href="rulevl/9snpb1.rle">
+	    Cis pre-block on snake&sup1; [4]</a></td>
+	<td><a class="p" href="rulevl/9hlt.rle">
+	    Hook w/&#8203;long tail&sup1; [5]</a></td>
+	<td><a class="p" href="rulevl/9dbt.rle">Down boat w/&#8203;tail;
+	    Cis-boat w/&#8203;tail [4]</a></td>
+	<td><a class="p" href="rulevl/9acpb1.rle">
+	    Cis pre-block on carrier&sup1; [9]</a></td>
+	<td><a class="p" href="rulevl/9in.rle">Integ&shy;ral;
+	    Integ&shy;ral sign [3]</a></td>
+    </tr>
+    <tr>
+	<td><a class="p" href="rulevl/9ubt.rle">Up boat w/&#8203;tail;
+	    Trans-boat w/&#8203;tail [3]</a></td>
+	<td><a class="p" href="rulevl/9vb.rle">
+	    Very long boat [3]</a></td>
+	<td><a class="p" href="rulevl/9shpb.rle">
+	    Pre-block on ship&sup1; [4]</a></td>
+	<td class="y"><a class="p" href="rulevl/9xs.rle">
+	    Extra long snake [20]</a></td>
+	<td><a class="p" href="rulevl/9lc.rle">Long canoe;
+	    Long sinking ship [4]</a></td>
+	<td><a class="p" href="rulevl/10ss.rle">
+	    Snake siamese snake [8]</a></td>
+	<td><a class="p" href="rulevl/10as1.rle">Broken snake;
+	    Trans carrier siamese snake [7]</a></td>
+	<td><a class="p" href="rulevl/10lha.rle">Loop;
+	    Curl; Long hat; Hook w/&#8203;hooked tail [4]</a></td>
+	<td><a class="p" href="rulevl/10bta.rle">Block on table;
+	    Block and table [4]</a></td>
+	<td><a class="p" href="rulevl/10dblt.rle">
+	    Down boat w/&#8203;long tail&sup1; [5]</a></td>
+    </tr>
+    <tr>
+	<td class="y"><a class="p" href="rulevl/10hvt.rle">
+	    Hook w/&#8203;very long tail&sup1; [12]</a></td>
+	<td><a class="p" href="rulevl/10li.rle">Long integ&shy;ral;
+	    S-ten [4]</a></td>
+	<td><a class="p" href="rulevl/10ublt.rle">
+	    Up boat w/&#8203;long tail [3]</a></td>
+	<td><a class="p" href="rulevl/10pbbpb1.rle">
+	    Cis pre-block on block on pre-block&sup1; [5]</a></td>
+	<td><a class="p" href="rulevl/10etpb3.rle">
+	    Trans pre-block above eater&sup1; [4]</a></td>
+	<td><a class="p" href="rulevl/10etpb2.rle">
+	    Cis pre-block on eater&sup1; [5]</a></td>
+	<td><a class="p" href="rulevl/10bpbpb2.rle">
+	    Cis pre-block on pre-block on block&sup1; [4]</a></td>
+	<td class="g"><a class="p" href="rulevl/10as2.rle">
+	    Cis carrier siamese snake&sup1; [10]</a></td>
+	<td><a class="p" href="rulevl/10tvt.rle">Tub w/&#8203;very long tail;
+	    Tub w/&#8203;long long tail [7]</a></td>
+	<td><a class="p" href="rulevl/10lspb2.rle">
+	    Cis pre-block on python&sup1; [9]</a></td>
+    </tr>
+    <tr>
+	<td class="g"><a class="p" href="rulevl/10aa1.rle">Trans carrier
+	    siamese trans carrier [10]</a></td>
+	<td><a class="p" href="rulevl/10vl.rle">Very long shil&shy;lelagh;
+	    Long long shil&shy;lelagh [6]</a></td>
+	<td><a class="p" href="rulevl/10vht.rle">Very long hook w/&#8203;tail;
+	    Long long hook w/&#8203;tail [9]</a></td>
+	<td><a class="p" href="rulevl/10lfg.rle">
+	    Loaf siamese barge [4]</a></td>
+	<td><a class="p" href="rulevl/10vp.rle">Very long ship;
+	    Long long ship [5]</a></td>
+	<td><a class="p" href="rulevl/10dgt.rle">Down barge w/&#8203;tail;
+	    Cis-barge w/&#8203;tail [5]</a></td>
+	<td><a class="p" href="rulevl/10csl.rle">
+	    Cis shil&shy;lelagh [4]</a></td>
+	<td class="y"><a class="p" href="rulevl/10cht.rle">
+	    Cis hook w/&#8203;tail [13]</a></td>
+	<td class="y"><a class="p" href="rulevl/10aa3.rle">
+	    Cis carrier siamese cis carrier&sup1; [15]</a></td>
+	<td><a class="p" href="rulevl/10clt.rle">Claw w/&#8203;tail;
+	    Great snake eater [4]</a></td>
+    </tr>
+    <tr>
+	<td><a class="p" href="rulevl/10aa2.rle">Trans carrier
+	    siamese cis carrier&sup1; [5]</a></td>
+	<td><a class="p" href="rulevl/10ihk.rle">
+	    Integ&shy;ral w/&#8203;hook [8]</a></td>
+	<td><a class="p" href="rulevl/10lspb1.rle">
+	    Trans pre-block on python&sup1; [9]</a></td>
+	<td><a class="p" href="rulevl/10vg.rle">Very long barge;
+	    Long long barge [3]</a></td>
+	<td><a class="p" href="rulevl/10ftt.rle">Fuse w/&#8203;two tails;
+	    Melusine [8]</a></td>
+	<td><a class="p" href="rulevl/10ugt.rle">Up barge w/&#8203;tail;
+	    Trans-barge w/&#8203;tail; Trans-barge w/&#8203;tail [3]</a></td>
+	<td><a class="p" href="rulevl/10etpb1.rle">
+	    Trans pre-block on eater&sup1; [9]</a></td>
+	<td><a class="p" href="rulevl/10lbpb.rle">
+	    Pre-block on long boat&sup1; [7]</a></td>
+	<td class="g"><a class="p" href="rulevl/10pbbpb2.rle">Trans pre-block
+	    on block on pre-block&sup1; [10]</a></td>
+	<td><a class="p" href="rulevl/10itb.rle">Integ&shy;ral w/&#8203;tub;
+	    tub w/&#8203;nine; prodigal [5]</a></td>
+    </tr>
+    <tr>
+	<td><a class="p" href="rulevl/10etpb4.rle">
+	    Cis pre-block above eater&sup1; [9]</a></td>
+	<td><a class="p" href="rulevl/10bpbpb1.rle">Trans pre-block
+	    on pre-block on block&sup1; [4]</a></td>
+	<td class="y"><a class="p" href="rulevl/10ys.rle">10-bit snake;
+	    Extra extra long snake [12]</a></td>
+	<td><a class="p" href="rulevl/10vc.rle">Very long canoe;
+	    Long long canoe [5]</a></td>
+	<td><a class="p" href="rulevl/11vi.rle">
+	    Very long integ&shy;ral [5]</a></td>
+	<td><a class="p" href="rulevl/11ae2.rle">
+	    Cis carrier siamese eater&sup1; [5]</a></td>
+	<td><a class="p" href="rulevl/11ecp.rle">
+	    Eater w/&#8203;cape [4]</a></td>
+	<td><a class="p" href="rulevl/11ubta.rle">
+	    Up boat on table [5]</a></td>
+	<td><a class="p" href="rulevl/11dbvt.rle">
+	    Down boat w/&#8203;very long tail&sup1; [9]</a></td>
+	<td><a class="p" href="rulevl/11ae1.rle">
+	    Trans carrier siamese eater [5]</a></td>
+    </tr>
+    <tr>
+	<td><a class="p" href="rulevl/11llf.rle">
+	    Loaf siamese loaf [4]</a></td>
+	<td><a class="p" href="rulevl/11vha.rle">
+	    Very long hat [4]</a></td>
+	<td><a class="p" href="rulevl/11bksd.rle">
+	    Block on side&sup1; [5]</a></td>
+	<td><a class="p" href="rulevl/11dbta.rle">
+	    Down boat on table [5]</a></td>
+	<td><a class="p" href="rulevl/11ulft.rle">
+	    Up loaf w/&#8203;tail [3]</a></td>
+	<td><a class="p" href="rulevl/11dlbt.rle">Down long boat w/&#8203;tail;
+	    Cis-long boat w/&#8203;tail [7]</a></td>
+	<td><a class="p" href="rulevl/11hct.rle">
+	    Hook w/&#8203;cis tail&sup1; [6]</a></td>
+	<td><a class="p" href="rulevl/11uglt.rle">
+	    Up barge w/&#8203;long tail [4]</a></td>
+	<td><a class="p" href="rulevl/11lit.rle">
+	    Long integ&shy;ral w/&#8203;tub [4]</a></td>
+	<td><a class="p" href="rulevl/11xl.rle">
+	    Extra long shil&shy;lelagh [4]</a></td>
+    </tr>
+    <tr>
+	<td><a class="p" href="rulevl/11dlft.rle">Down loaf w/&#8203;tail;
+	    Trans-loaf w/&#8203;tail [5]</a></td>
+	<td><a class="p" href="rulevl/11idb.rle">11.12;
+	    Integ&shy;ral w/&#8203;down boat; Cis-boat w/&#8203;nine [5]</a></td>
+	<td><a class="p" href="rulevl/11gu.rle">Gull;
+	    Elev&shy;ener [3]</a></td>
+	<td><a class="p" href="rulevl/11iub.rle">
+	    Integ&shy;ral w/&#8203;up boat [4]</a></td>
+	<td><a class="p" href="rulevl/11ulbt.rle">
+	    Up long boat w/&#8203;tail [4]</a></td>
+	<td><a class="p" href="rulevl/11xb.rle">Extra long boat;
+	    Very very long boat [3]</a></td>
+	<td><a class="p" href="rulevl/11lppb.rle">
+	    Pre-block on long ship&sup1; [4]</a></td>
+	<td><a class="p" href="rulevl/11bpbac2.rle">Block on pre-block
+	    siamese cis carrier&sup1; [5]</a></td>
+	<td><a class="p" href="rulevl/11cltt.rle">
+	    Claw w/&#8203;tub w/&#8203;tail [4]</a></td>
+	<td><a class="p" href="rulevl/11itt.rle">
+	    Integ&shy;ral w/&#8203;tub and tub [3]</a></td>
+    </tr>
+</table></p></div>
+<map name="vl-p1-0">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,457,20,477" href="#bottom" />
+	<area coords="601,0,621,20" href="zip/vl-p1-0.zip" />
+	<area coords="601,457,621,477" href="stamp/vl-p1-0.rle" />
+	<area coords="0,0,70,50" href="rulevl/4bk.rle" />
+	<area coords="70,0,130,50" href="rulevl/4tb.rle" />
+	<area coords="130,0,190,50" href="rulevl/5bt.rle" />
+	<area coords="190,0,250,50" href="rulevl/6sn.rle" />
+	<area coords="250,0,310,50" href="rulevl/6sh.rle" />
+	<area coords="310,0,370,50" href="rulevl/6ac.rle" />
+	<area coords="370,0,430,50" href="rulevl/6bg.rle" />
+	<area coords="0,50,70,90" href="rulevl/7ls.rle" />
+	<area coords="70,50,130,90" href="rulevl/7lf.rle" />
+	<area coords="130,50,190,90" href="rulevl/7et.rle" />
+	<area coords="190,50,250,90" href="rulevl/7lb.rle" />
+	<area coords="250,50,310,90" href="rulevl/7bkpb.rle" />
+	<area coords="0,90,70,130" href="rulevl/8sl.rle" />
+	<area coords="70,90,130,130" href="rulevl/8pd.rle" />
+	<area coords="130,90,190,130" href="rulevl/8lp.rle" />
+	<area coords="190,90,250,130" href="rulevl/8cg.rle" />
+	<area coords="250,90,310,130" href="rulevl/8ht.rle" />
+	<area coords="310,90,370,130" href="rulevl/8vs.rle" />
+	<area coords="370,90,430,130" href="rulevl/8lg.rle" />
+	<area coords="430,90,490,130" href="rulevl/8tt.rle" />
+	<area coords="490,90,550,130" href="rulevl/8btpb.rle" />
+	<area coords="550,90,621,130" href="rulevl/8cs.rle" />
+	<area coords="0,130,70,170" href="rulevl/9ll.rle" />
+	<area coords="70,130,130,170" href="rulevl/9tlt.rle" />
+	<area coords="130,130,190,170" href="rulevl/9lht.rle" />
+	<area coords="190,130,250,170" href="rulevl/9snpb2.rle" />
+	<area coords="250,130,310,170" href="rulevl/9acpb2.rle" />
+	<area coords="310,130,370,170" href="rulevl/9snpb1.rle" />
+	<area coords="370,130,430,170" href="rulevl/9hlt.rle" />
+	<area coords="430,130,490,170" href="rulevl/9dbt.rle" />
+	<area coords="490,130,550,170" href="rulevl/9acpb1.rle" />
+	<area coords="550,130,621,170" href="rulevl/9in.rle" />
+	<area coords="0,170,70,214" href="rulevl/9ubt.rle" />
+	<area coords="70,170,130,214" href="rulevl/9vb.rle" />
+	<area coords="130,170,190,214" href="rulevl/9shpb.rle" />
+	<area coords="190,170,250,214" href="rulevl/9xs.rle" />
+	<area coords="250,170,310,214" href="rulevl/9lc.rle" />
+	<area coords="310,170,370,214" href="rulevl/10ss.rle" />
+	<area coords="370,170,430,214" href="rulevl/10as1.rle" />
+	<area coords="430,170,490,214" href="rulevl/10lha.rle" />
+	<area coords="490,170,550,214" href="rulevl/10bta.rle" />
+	<area coords="550,170,621,214" href="rulevl/10dblt.rle" />
+	<area coords="0,214,70,254" href="rulevl/10hvt.rle" />
+	<area coords="70,214,130,254" href="rulevl/10li.rle" />
+	<area coords="130,214,190,254" href="rulevl/10ublt.rle" />
+	<area coords="190,214,250,254" href="rulevl/10pbbpb1.rle" />
+	<area coords="250,214,310,254" href="rulevl/10etpb3.rle" />
+	<area coords="310,214,370,254" href="rulevl/10etpb2.rle" />
+	<area coords="370,214,430,254" href="rulevl/10bpbpb2.rle" />
+	<area coords="430,214,490,254" href="rulevl/10as2.rle" />
+	<area coords="490,214,550,254" href="rulevl/10tvt.rle" />
+	<area coords="550,214,621,254" href="rulevl/10lspb2.rle" />
+	<area coords="0,254,70,294" href="rulevl/10aa1.rle" />
+	<area coords="70,254,130,294" href="rulevl/10vl.rle" />
+	<area coords="130,254,190,294" href="rulevl/10vht.rle" />
+	<area coords="190,254,250,294" href="rulevl/10lfg.rle" />
+	<area coords="250,254,310,294" href="rulevl/10vp.rle" />
+	<area coords="310,254,370,294" href="rulevl/10dgt.rle" />
+	<area coords="370,254,430,294" href="rulevl/10csl.rle" />
+	<area coords="430,254,490,294" href="rulevl/10cht.rle" />
+	<area coords="490,254,550,294" href="rulevl/10aa3.rle" />
+	<area coords="550,254,621,294" href="rulevl/10clt.rle" />
+	<area coords="0,294,70,338" href="rulevl/10aa2.rle" />
+	<area coords="70,294,130,338" href="rulevl/10ihk.rle" />
+	<area coords="130,294,190,338" href="rulevl/10lspb1.rle" />
+	<area coords="190,294,250,338" href="rulevl/10vg.rle" />
+	<area coords="250,294,310,338" href="rulevl/10ftt.rle" />
+	<area coords="310,294,370,338" href="rulevl/10ugt.rle" />
+	<area coords="370,294,430,338" href="rulevl/10etpb1.rle" />
+	<area coords="430,294,490,338" href="rulevl/10lbpb.rle" />
+	<area coords="490,294,550,338" href="rulevl/10pbbpb2.rle" />
+	<area coords="550,294,621,338" href="rulevl/10itb.rle" />
+	<area coords="0,338,70,386" href="rulevl/10etpb4.rle" />
+	<area coords="70,338,130,386" href="rulevl/10bpbpb1.rle" />
+	<area coords="130,338,190,386" href="rulevl/10ys.rle" />
+	<area coords="190,338,250,386" href="rulevl/10vc.rle" />
+	<area coords="250,338,310,386" href="rulevl/11vi.rle" />
+	<area coords="310,338,370,386" href="rulevl/11ae2.rle" />
+	<area coords="370,338,430,386" href="rulevl/11ecp.rle" />
+	<area coords="430,338,490,386" href="rulevl/11ubta.rle" />
+	<area coords="490,338,550,386" href="rulevl/11dbvt.rle" />
+	<area coords="550,338,621,386" href="rulevl/11ae1.rle" />
+	<area coords="0,386,70,426" href="rulevl/11llf.rle" />
+	<area coords="70,386,130,426" href="rulevl/11vha.rle" />
+	<area coords="130,386,190,426" href="rulevl/11bksd.rle" />
+	<area coords="190,386,250,426" href="rulevl/11dbta.rle" />
+	<area coords="250,386,310,426" href="rulevl/11ulft.rle" />
+	<area coords="310,386,370,426" href="rulevl/11dlbt.rle" />
+	<area coords="370,386,430,426" href="rulevl/11hct.rle" />
+	<area coords="430,386,490,426" href="rulevl/11uglt.rle" />
+	<area coords="490,386,550,426" href="rulevl/11lit.rle" />
+	<area coords="550,386,621,426" href="rulevl/11xl.rle" />
+	<area coords="0,426,70,477" href="rulevl/11dlft.rle" />
+	<area coords="70,426,130,477" href="rulevl/11idb.rle" />
+	<area coords="130,426,190,477" href="rulevl/11gu.rle" />
+	<area coords="190,426,250,477" href="rulevl/11iub.rle" />
+	<area coords="250,426,310,477" href="rulevl/11ulbt.rle" />
+	<area coords="310,426,370,477" href="rulevl/11xb.rle" />
+	<area coords="370,426,430,477" href="rulevl/11lppb.rle" />
+	<area coords="430,426,490,477" href="rulevl/11bpbac2.rle" />
+	<area coords="490,426,550,477" href="rulevl/11cltt.rle" />
+	<area coords="550,426,621,477" href="rulevl/11itt.rle" />
+</map>
+<p>Note &sup1;: These are additional still-lifes not found in Life.</p>
+<p>Although not generally considered a still-life, the empty field (i.e.
+<a href="rulevl/0vacuum.rle">vacuum</a>) technically fulfills most the
+criteria, and it occurs sufficiently frequently to warrant being mentioned.
+For example, it is the most common result of two gliders colliding. (Since
+it has no living cells, it fails to be an actual object, in much the same
+way that 1 is not considered a prime number, even though it has no other
+prime factors.)</p>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Aircraft_carrier">Aircraft carrier</a>,
+<a class="x" href="http://conwaylife.com/wiki/Barge">Barge</a>,
+<a class="x" href="http://conwaylife.com/wiki/Block">Block</a>,
+<a class="x" href="http://conwaylife.com/wiki/Block_on_table">Block on table</a>,
+<a class="x" href="http://conwaylife.com/wiki/Boat">Boat</a>,
+<a class="x" href="http://conwaylife.com/wiki/Boat_with_long_tail">Boat with long tail</a>,
+<a class="x" href="http://conwaylife.com/wiki/Canoe">Canoe</a>,
+<a class="x" href="http://conwaylife.com/wiki/Carrier_siamese_carrier">Carrier siamese carrier</a>,
+<a class="x" href="http://conwaylife.com/wiki/Carrier_siamese_snake">Carrier siamese snake</a>,
+<a class="x" href="http://conwaylife.com/wiki/Cis-barge_with_tail">Cis-barge with tail</a>,
+<a class="x" href="http://conwaylife.com/wiki/Cis-boat_with_nine">Cis-boat with nine</a>,
+<a class="x" href="http://conwaylife.com/wiki/Cis-boat_with_tail">Cis-boat with tail</a>,
+<a class="x" href="http://conwaylife.com/wiki/Cis-hook_with_tail">Cis-hook with tail</a>,
+<a class="x" href="http://conwaylife.com/wiki/Cis-long_boat_with_tail">Cis-long boat with tail</a>,
+<a class="x" href="http://conwaylife.com/wiki/Cis-shillelagh">Cis-shillelagh</a>,
+<a class="x" href="http://conwaylife.com/wiki/Claw_with_tail">Claw with tail</a>,
+<a class="x" href="http://conwaylife.com/wiki/Eater_1">Eater 1</a>,
+<a class="x" href="http://conwaylife.com/wiki/Elevener">Elevener</a>,
+<a class="x" href="http://conwaylife.com/wiki/Extra_extra_long_snake">Extra extra long snake</a>,
+<a class="x" href="http://conwaylife.com/wiki/Extra_long_snake">Extra long snake</a>,
+<a class="x" href="http://conwaylife.com/wiki/Hook_with_tail">Hook with tail</a>,
+<a class="x" href="http://conwaylife.com/wiki/Integral_sign">Integral sign</a>,
+<a class="x" href="http://conwaylife.com/wiki/Integral_with_hook">Integral with hook</a>,
+<a class="x" href="http://conwaylife.com/wiki/Integral_with_tub">Integral with tub</a>,
+<a class="x" href="http://conwaylife.com/wiki/Loaf">Loaf</a>,
+<a class="x" href="http://conwaylife.com/wiki/Loaf_siamese_barge">Loaf siamese barge</a>,
+<a class="x" href="http://conwaylife.com/wiki/Loaf_siamese_loaf">Loaf siamese loaf</a>,
+<a class="x" href="http://conwaylife.com/wiki/Long_barge">Long barge</a>,
+<a class="x" href="http://conwaylife.com/wiki/Long_boat">Long boat</a>,
+<a class="x" href="http://conwaylife.com/wiki/Long_canoe">Long canoe</a>,
+<a class="x" href="http://conwaylife.com/wiki/Long_hook_with_tail">Long hook with tail</a>,
+<a class="x" href="http://conwaylife.com/wiki/Long_integral">Long integral</a>,
+<a class="x" href="http://conwaylife.com/wiki/Long_shillelagh">Long shillelagh</a>,
+<a class="x" href="http://conwaylife.com/wiki/Long_ship">Long ship</a>,
+<a class="x" href="http://conwaylife.com/wiki/Loop">Loop</a>,
+<a class="x" href="http://conwaylife.com/wiki/Mango">Mango</a>,
+<a class="x" href="http://conwaylife.com/wiki/Pond">Pond</a>,
+<a class="x" href="http://conwaylife.com/wiki/Pre-block">Pre-block</a>,
+<a class="x" href="http://conwaylife.com/wiki/Python">Python</a>,
+<a class="x" href="http://conwaylife.com/wiki/Shillelagh">Shillelagh</a>,
+<a class="x" href="http://conwaylife.com/wiki/Ship">Ship</a>,
+<a class="x" href="http://conwaylife.com/wiki/Snake">Snake</a>,
+<a class="x" href="http://conwaylife.com/wiki/Snake_siamese_snake">Snake siamese snake</a>,
+<a class="x" href="http://conwaylife.com/wiki/Trans-barge_with_tail">Trans-barge with tail</a>,
+<a class="x" href="http://conwaylife.com/wiki/Trans-boat_with_tail">Trans-boat with tail</a>,
+<a class="x" href="http://conwaylife.com/wiki/Trans-fuse_with_two_tails">Trans-fuse with two tails</a>,
+<a class="x" href="http://conwaylife.com/wiki/Trans-loaf_with_tail">Trans-loaf with tail</a>,
+<a class="x" href="http://conwaylife.com/wiki/Trans-very_long_hook_with_tail">Trans-very long hook with tail</a>,
+<a class="x" href="http://conwaylife.com/wiki/Tub">Tub</a>,
+<a class="x" href="http://conwaylife.com/wiki/Tub_with_long_tail">Tub with long tail</a>,
+<a class="x" href="http://conwaylife.com/wiki/Tub_with_tail">Tub with tail</a>,
+<a class="x" href="http://conwaylife.com/wiki/Tub_with_very_long_tail">Tub with very long tail</a>,
+<a class="x" href="http://conwaylife.com/wiki/Vacuum_(empty_space)">Vacuum (empty space)</a>,
+<a class="x" href="http://conwaylife.com/wiki/Very_long_barge">Very long barge</a>,
+<a class="x" href="http://conwaylife.com/wiki/Very_long_boat">Very long boat</a>,
+<a class="x" href="http://conwaylife.com/wiki/Very_long_canoe">Very long canoe</a>,
+<a class="x" href="http://conwaylife.com/wiki/Very_long_shillelagh">Very long shillelagh</a>,
+<a class="x" href="http://conwaylife.com/wiki/Very_long_ship">Very long ship</a>,
+<a class="x" href="http://conwaylife.com/wiki/Very_long_snake">Very long snake</a>,
+<a class="x" href="http://conwaylife.com/wiki/Very_very_long_boat">Very very long boat</a>.</p>
+</article>
+<hr /><article><a id="a2" name="a2"></a>
+<a id="vl-p1-1" name="vl-p1-1"></a>
+<h2>74 still-lifes from 12&hellip;15 bits</h2>
+<p><img src="map/vl-p1-1.png" alt="VesselLife still-lifes from 12&hellip;15 bits"
+ width="621" height="441" usemap="#vl-p1-1" /></p>
+<p><table><colgroup><col span="12" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_vl-p1-1" class="i" href="javascript:Nav('vl-p1-1')">+</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a1">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a3">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/vl-p1-1.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/vl-p1-1.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/vl-p1-1.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="lis/vl-p1-1.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/vl-p1-1.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/vl-p1-1.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=vl-p1-1" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_vl-p1-1" class="u"><p><table id="t-vl-p1-1" style="width:625px">
+    <colgroup><col style="width:71px;" /><col span="8" style="width:60px;" />
+	<col style="width:72px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="rulevl/12tata1.rle">Cis table on table;
+	    Table and table [3]</a></td>
+	<td><a class="p" href="rulevl/12bct.rle">
+	    Block on cap [3]</a></td>
+	<td><a class="p" href="rulevl/12ee2.rle">
+	    Eater head siamese eater tail [4]</a></td>
+	<td><a class="p" href="rulevl/12bpbe.rle">Block on pre-block
+	    siamese eater&sup1; [4]</a></td>
+	<td><a class="p" href="rulevl/12bkcv.rle">Block w/&#8203;cover;
+	    Block and two tails [4]</a></td>
+	<td><a class="p" href="rulevl/12tata2.rle">
+	    Trans Table on table [4]</a></td>
+	<td><a class="p" href="rulevl/12clht.rle">Snorkel loop;
+	    Claw w/&#8203;hooked tail [4]</a></td>
+	<td><a class="p" href="rulevl/12bklsd.rle">
+	    Block on long side&sup1; [5]</a></td>
+	<td><a class="p" href="rulevl/12cltbft.rle">Claw siamese tub
+	    siamese feather [5]</a></td>
+	<td><a class="p" href="rulevl/12bkle1.rle">
+	    Cis block on long book&shy;end [5]</a></td>
+    </tr>
+    <tr>
+	<td><a class="p" href="rulevl/12dlflt.rle">
+	    Down loaf w/&#8203;long tail&sup1; [5]</a></td>
+	<td><a class="p" href="rulevl/12ucgt.rle">
+	    Up mango w/&#8203;tail [4]</a></td>
+	<td><a class="p" href="rulevl/12eft1.rle">
+	    Eater w/&#8203;feather [4]</a></td>
+	<td><a class="p" href="rulevl/12liub.rle">
+	    Long integ&shy;ral w/&#8203;boat [5]</a></td>
+	<td><a class="p" href="rulevl/12dlgt.rle">
+	    Down long barge w/&#8203;tail [5]</a></td>
+	<td><a class="p" href="rulevl/12clcl.rle">
+	    Claw tie claw [4]</a></td>
+	<td><a class="p" href="rulevl/12xp.rle">
+	    Extra long ship [3]</a></td>
+	<td><a class="p" href="rulevl/12ee3.rle">
+	    Eater tail siamese eater tail [5]</a></td>
+	<td><a class="p" href="rulevl/12bpbpbb.rle">Block on pre-block
+	    siamese pre-block on block&sup1; [4]</a></td>
+	<td><a class="p" href="rulevl/12epbb.rle">Eater siamese pre-block
+	    on block&sup1; [6]</a></td>
+    </tr>
+    <tr>
+	<td><a class="p" href="rulevl/12acpbbt.rle">Carrier siamese pre-block
+	    on boat&sup1; [4]</a></td>
+	<td><a class="p" href="rulevl/12xg.rle">
+	    Extra long barge [4]</a></td>
+	<td><a class="p" href="rulevl/12ulgt.rle">
+	    Up long barge w/&#8203;tail [4]</a></td>
+	<td><a class="p" href="rulevl/12gutb.rle">
+	    Gull w/&#8203;tub [4]</a></td>
+	<td><a class="p" href="rulevl/12itub.rle">
+	    Integ&shy;ral w/&#8203;tub and up boat [4]</a></td>
+	<td colspan="5" class="s">&nbsp;</td>
+    </tr>
+    <tr>
+	<td><a class="p" href="rulevl/13bksdcu.rle">
+	    Block on side w/&#8203;curl&sup1; [5]</a></td>
+	<td><a class="p" href="rulevl/13cubk.rle">
+	    Block on curl&sup1; [5]</a></td>
+	<td><a class="p" href="rulevl/13dbct.rle">
+	    Down boat on cap [5]</a></td>
+	<td><a class="p" href="rulevl/13cuac.rle">
+	    Curl siamese carrier&sup1; [6]</a></td>
+	<td><a class="p" href="rulevl/13btle3.rle">Up boat
+	    on trans long book&shy;end [4]</a></td>
+	<td><a class="p" href="rulevl/13dvbt.rle">
+	    Down very long boat w/&#8203;tail [7]</a></td>
+	<td><a class="p" href="rulevl/13bpbtt.rle">Block on pre-block
+	    siamese tub w/&#8203;tail&sup1; [4]</a></td>
+	<td><a class="p" href="rulevl/13dlfvt.rle">
+	    Down loaf w/&#8203;very long tail&sup1; [5]</a></td>
+	<td><a class="p" href="rulevl/13btcv.rle">
+	    Boat on cover [4]</a></td>
+	<td><a class="p" href="rulevl/13clbtcl.rle">
+	    Claw siamese boat siamese claw [5]</a></td>
+    </tr>
+    <tr>
+	<td><a class="p" href="rulevl/13cltbht.rle">Snorkel loop w/&#8203;tub;
+	    Claw w/&#8203;tub w/&#8203;hooked tail [4]</a></td>
+	<td><a class="p" href="rulevl/13swtb.rle">
+	    Swan w/&#8203;tub [4]</a></td>
+	<td><a class="p" href="rulevl/13licl.rle">
+	    Long integ&shy;ral w/&#8203;claw&sup1; [4]</a></td>
+	<td><a class="p" href="rulevl/13bklet1.rle">
+	    Block on cis long book&shy;end w/&#8203;tub [5]</a></td>
+	<td><a class="p" href="rulevl/13lbpbs2.rle">Cis pre-block
+	    on pre-block on long boat&sup1; [5]</a></td>
+	<td><a class="p" href="rulevl/13idlf.rle">
+	    Integ&shy;ral w/&#8203;down loaf [5]</a></td>
+	<td><a class="p" href="rulevl/13guub.rle">
+	    Gull w/&#8203;up boat [4]</a></td>
+	<td><a class="p" href="rulevl/13yb.rle">
+	    Extra extra long boat [4]</a></td>
+	<td colspan="2" class="s">&nbsp;</td>
+    </tr>
+    <tr>
+	<td><a class="p" href="rulevl/14bebe1.rle">Book&shy;ends;
+	    Up book&shy;end on book&shy;end; Cis-mirrored hook [6]</a></td>
+	<td><a class="p" href="rulevl/14bzb.rle">
+	    Block on Z on block [5]</a></td>
+	<td><a class="p" href="rulevl/14bkztl.rle">
+	    Block on Z w/&#8203;tail [5]</a></td>
+	<td><a class="p" href="rulevl/14ppc.rle">
+	    Paper&shy;clip [4]</a></td>
+	<td><a class="p" href="rulevl/14bebe5.rle">
+	    Down trans book&shy;end on down trans book&shy;end [5]</a></td>
+	<td><a class="p" href="rulevl/14bkcu2.rle">
+	    Trans block on curl [4]</a></td>
+	<td><a class="p" href="rulevl/14ner.rle">Four&shy;teener;
+	    Curl siamese eater [4]</a></td>
+	<td><a class="p" href="rulevl/14bkcu1.rle">
+	    Cis block on curl [4]</a></td>
+	<td><a class="p" href="rulevl/14bpbubt.rle">
+	    Block on pre-block siamese up boat w/&#8203;tail [5]</a></td>
+	<td><a class="p" href="rulevl/14shpbe.rle">
+	    Ship on pre-block siamese eater [4]</a></td>
+    </tr>
+    <tr>
+	<td><a class="p" href="rulevl/14bklhs.rle">
+	    Block on dock [3]</a></td>
+	<td><a class="p" href="rulevl/14clubht.rle">Snorkel loop w/&#8203;up boat;
+	    Claw w/&#8203;up boat w/&#8203;hooked tail [6]</a></td>
+	<td><a class="p" href="rulevl/14hb.rle">Half bakery;
+	    Loaf side tie loaf; Loaf on loaf; Bi-loaf 1 [4]</a></td>
+	<td><a class="p" href="rulevl/14yp.rle">
+	    Extra extra long ship [4]</a></td>
+	<td><a class="p" href="rulevl/14bpbcu.rle">
+	    Block on pre-block siamese cover [6]</a></td>
+	<td><a class="p" href="rulevl/14yg.rle">
+	    Extra extra long barge [4]</a></td>
+	<td><a class="p" href="rulevl/14itdlf.rle">
+	    Integ&shy;ral w/&#8203;tub and down loaf [4]</a></td>
+	<td><a class="p" href="rulevl/14uvgt.rle">
+	    Up very long barge w/&#8203;tail [5]</a></td>
+	<td><a class="p" href="rulevl/14iugub.rle">
+	    Integ&shy;ral w/&#8203;up barge and up boat [6]</a></td>
+	<td class="s">&nbsp;</td>
+    </tr>
+    <tr>
+	<td><a class="p" href="rulevl/15ulfct.rle">
+	    Up loaf on cap [5]</a></td>
+	<td><a class="p" href="rulevl/15betbe6.rle">Down trans book&shy;end
+	    on trans book&shy;end w/&#8203;tub [5]</a></td>
+	<td><a class="p" href="rulevl/15betbe1.rle">Up cis book&shy;end
+	    on cis book&shy;end w/&#8203;tub [5]</a></td>
+	<td><a class="p" href="rulevl/15bebb2.rle">
+	    Down bi-block on book&shy;end&sup1; [4]</a></td>
+	<td><a class="p" href="rulevl/15bksncu.rle">
+	    Block on curled snake&sup1; [6]</a></td>
+	<td><a class="p" href="rulevl/15cule.rle">
+	    Curl siamese long book&shy;end [5]</a></td>
+	<td><a class="p" href="rulevl/15bktabe.rle">
+	    Block on table siamese book&shy;end [5]</a></td>
+	<td><a class="p" href="rulevl/15bebb3.rle">
+	    Block on block and book&shy;end&sup1; [4]</a></td>
+	<td><a class="p" href="rulevl/15bpbugt.rle">Block on pre-block
+	    siamese up barge w/&#8203;tail&sup1; [5]</a></td>
+	<td><a class="p" href="rulevl/15lclstb.rle">
+	    Long claw tie long claw w/&#8203;tub [6]</a></td>
+    </tr>
+    <tr>
+	<td><a class="p" href="rulevl/15lfclub.rle">
+	    Loaf tie claw w/&#8203;up boat [5]</a></td>
+	<td><a class="p" href="rulevl/15zb.rle">
+	    Extra extra extra long boat [4]</a></td>
+	<td colspan="8" class="s">&nbsp;</td>
+    </tr>
+</table></p></div>
+<map name="vl-p1-1">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,421,20,441" href="#bottom" />
+	<area coords="601,0,621,20" href="zip/vl-p1-1.zip" />
+	<area coords="601,421,621,441" href="stamp/vl-p1-1.rle" />
+	<area coords="0,0,70,50" href="rulevl/12tata1.rle" />
+	<area coords="70,0,130,50" href="rulevl/12bct.rle" />
+	<area coords="130,0,190,50" href="rulevl/12ee2.rle" />
+	<area coords="190,0,250,50" href="rulevl/12bpbe.rle" />
+	<area coords="250,0,310,50" href="rulevl/12bkcv.rle" />
+	<area coords="310,0,370,50" href="rulevl/12tata2.rle" />
+	<area coords="370,0,430,50" href="rulevl/12clht.rle" />
+	<area coords="430,0,490,50" href="rulevl/12bklsd.rle" />
+	<area coords="490,0,550,50" href="rulevl/12cltbft.rle" />
+	<area coords="550,0,621,50" href="rulevl/12bkle1.rle" />
+	<area coords="0,50,70,90" href="rulevl/12dlflt.rle" />
+	<area coords="70,50,130,90" href="rulevl/12ucgt.rle" />
+	<area coords="130,50,190,90" href="rulevl/12eft1.rle" />
+	<area coords="190,50,250,90" href="rulevl/12liub.rle" />
+	<area coords="250,50,310,90" href="rulevl/12dlgt.rle" />
+	<area coords="310,50,370,90" href="rulevl/12clcl.rle" />
+	<area coords="370,50,430,90" href="rulevl/12xp.rle" />
+	<area coords="430,50,490,90" href="rulevl/12ee3.rle" />
+	<area coords="490,50,550,90" href="rulevl/12bpbpbb.rle" />
+	<area coords="550,50,621,90" href="rulevl/12epbb.rle" />
+	<area coords="0,90,70,150" href="rulevl/12acpbbt.rle" />
+	<area coords="70,90,130,150" href="rulevl/12xg.rle" />
+	<area coords="130,90,190,150" href="rulevl/12ulgt.rle" />
+	<area coords="190,90,250,150" href="rulevl/12gutb.rle" />
+	<area coords="250,90,310,150" href="rulevl/12itub.rle" />
+	<area coords="0,150,70,190" href="rulevl/13bksdcu.rle" />
+	<area coords="70,150,130,190" href="rulevl/13cubk.rle" />
+	<area coords="130,150,190,190" href="rulevl/13dbct.rle" />
+	<area coords="190,150,250,190" href="rulevl/13cuac.rle" />
+	<area coords="250,150,310,190" href="rulevl/13btle3.rle" />
+	<area coords="310,150,370,190" href="rulevl/13dvbt.rle" />
+	<area coords="370,150,430,190" href="rulevl/13bpbtt.rle" />
+	<area coords="430,150,490,190" href="rulevl/13dlfvt.rle" />
+	<area coords="490,150,550,190" href="rulevl/13btcv.rle" />
+	<area coords="550,150,621,190" href="rulevl/13clbtcl.rle" />
+	<area coords="0,190,70,250" href="rulevl/13cltbht.rle" />
+	<area coords="70,190,130,250" href="rulevl/13swtb.rle" />
+	<area coords="130,190,190,250" href="rulevl/13licl.rle" />
+	<area coords="190,190,250,250" href="rulevl/13bklet1.rle" />
+	<area coords="250,190,310,250" href="rulevl/13lbpbs2.rle" />
+	<area coords="310,190,370,250" href="rulevl/13idlf.rle" />
+	<area coords="370,190,430,250" href="rulevl/13guub.rle" />
+	<area coords="430,190,490,250" href="rulevl/13yb.rle" />
+	<area coords="0,250,70,290" href="rulevl/14bebe1.rle" />
+	<area coords="70,250,130,290" href="rulevl/14bzb.rle" />
+	<area coords="130,250,190,290" href="rulevl/14bkztl.rle" />
+	<area coords="190,250,250,290" href="rulevl/14ppc.rle" />
+	<area coords="250,250,310,290" href="rulevl/14bebe5.rle" />
+	<area coords="310,250,370,290" href="rulevl/14bkcu2.rle" />
+	<area coords="370,250,430,290" href="rulevl/14ner.rle" />
+	<area coords="430,250,490,290" href="rulevl/14bkcu1.rle" />
+	<area coords="490,250,550,290" href="rulevl/14bpbubt.rle" />
+	<area coords="550,250,621,290" href="rulevl/14shpbe.rle" />
+	<area coords="0,290,70,350" href="rulevl/14bklhs.rle" />
+	<area coords="70,290,130,350" href="rulevl/14clubht.rle" />
+	<area coords="130,290,190,350" href="rulevl/14hb.rle" />
+	<area coords="190,290,250,350" href="rulevl/14yp.rle" />
+	<area coords="250,290,310,350" href="rulevl/14bpbcu.rle" />
+	<area coords="310,290,370,350" href="rulevl/14yg.rle" />
+	<area coords="370,290,430,350" href="rulevl/14itdlf.rle" />
+	<area coords="430,290,490,350" href="rulevl/14uvgt.rle" />
+	<area coords="490,290,550,350" href="rulevl/14iugub.rle" />
+	<area coords="0,350,70,390" href="rulevl/15ulfct.rle" />
+	<area coords="70,350,130,390" href="rulevl/15betbe6.rle" />
+	<area coords="130,350,190,390" href="rulevl/15betbe1.rle" />
+	<area coords="190,350,250,390" href="rulevl/15bebb2.rle" />
+	<area coords="250,350,310,390" href="rulevl/15bksncu.rle" />
+	<area coords="310,350,370,390" href="rulevl/15cule.rle" />
+	<area coords="370,350,430,390" href="rulevl/15bktabe.rle" />
+	<area coords="430,350,490,390" href="rulevl/15bebb3.rle" />
+	<area coords="490,350,550,390" href="rulevl/15bpbugt.rle" />
+	<area coords="550,350,621,390" href="rulevl/15lclstb.rle" />
+	<area coords="0,390,70,441" href="rulevl/15lfclub.rle" />
+	<area coords="70,390,130,441" href="rulevl/15zb.rle" />
+</map>
+<p>Note &sup1;: These are additional still-lifes not found in Life.</p>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Aircraft_carrier">Aircraft carrier</a>,
+<a class="x" href="http://conwaylife.com/wiki/Bakery">Bakery</a>,
+<a class="x" href="http://conwaylife.com/wiki/Barge">Barge</a>,
+<a class="x" href="http://conwaylife.com/wiki/Bi-block">Bi-block</a>,
+<a class="x" href="http://conwaylife.com/wiki/Block">Block</a>,
+<a class="x" href="http://conwaylife.com/wiki/Block_and_two_tails">Block and two tails</a>,
+<a class="x" href="http://conwaylife.com/wiki/Block_on_table">Block on table</a>,
+<a class="x" href="http://conwaylife.com/wiki/Boat">Boat</a>,
+<a class="x" href="http://conwaylife.com/wiki/Bookends">Bookends</a>,
+<a class="x" href="http://conwaylife.com/wiki/Eater_1">Eater 1</a>,
+<a class="x" href="http://conwaylife.com/wiki/Fourteener">Fourteener</a>,
+<a class="x" href="http://conwaylife.com/wiki/Half-bakery">Half-bakery</a>,
+<a class="x" href="http://conwaylife.com/wiki/Integral_sign">Integral sign</a>,
+<a class="x" href="http://conwaylife.com/wiki/Loaf">Loaf</a>,
+<a class="x" href="http://conwaylife.com/wiki/Long_barge">Long barge</a>,
+<a class="x" href="http://conwaylife.com/wiki/Long_boat">Long boat</a>,
+<a class="x" href="http://conwaylife.com/wiki/Mango">Mango</a>,
+<a class="x" href="http://conwaylife.com/wiki/Paper_clip">Paper clip</a>,
+<a class="x" href="http://conwaylife.com/wiki/Pre-block">Pre-block</a>,
+<a class="x" href="http://conwaylife.com/wiki/Ship">Ship</a>,
+<a class="x" href="http://conwaylife.com/wiki/Snorkel_loop">Snorkel loop</a>,
+<a class="x" href="http://conwaylife.com/wiki/Table_on_table">Table on table</a>,
+<a class="x" href="http://conwaylife.com/wiki/Trans-barge_with_tail">Trans-barge with tail</a>,
+<a class="x" href="http://conwaylife.com/wiki/Trans-boat_with_tail">Trans-boat with tail</a>,
+<a class="x" href="http://conwaylife.com/wiki/Tub">Tub</a>,
+<a class="x" href="http://conwaylife.com/wiki/Tub_with_tail">Tub with tail</a>,
+<a class="x" href="http://conwaylife.com/wiki/Very_long_barge">Very long barge</a>,
+<a class="x" href="http://conwaylife.com/wiki/Very_long_boat">Very long boat</a>.</p>
+</article>
+<hr /><article><a id="a3" name="a3"></a>
+<a id="vl-p1-2" name="vl-p1-2"></a>
+<h2>43 still-lifes 16 bits and larger</h2>
+<p><img src="map/vl-p1-2.png" alt="VesselLife still-lifes 16 bits and larger"
+ width="621" height="461" usemap="#vl-p1-2" /></p>
+<p><table><colgroup><col span="12" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_vl-p1-2" class="i" href="javascript:Nav('vl-p1-2')">+</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a2">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a4">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/vl-p1-2.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/vl-p1-2.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/vl-p1-2.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="lis/vl-p1-2.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/vl-p1-2.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/vl-p1-2.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=vl-p1-2" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_vl-p1-2" class="u"><p><table id="t-vl-p1-2" style="width:625px">
+    <colgroup><col style="width:71px;" /><col span="8" style="width:60px;" />
+	<col style="width:72px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="rulevl/16ctct1.rle">
+	    Cap on cap [5]</a></td>
+	<td><a class="p" href="rulevl/16wgwg1.rle">
+	    Up wing on wing [4]</a></td>
+	<td><a class="p" href="rulevl/16lele1.rle">
+	    Up cis long book&shy;end on cis long book&shy;end [5]</a></td>
+	<td><a class="p" href="rulevl/16cuet6.rle">
+	    Down eater tail on curl&sup1; [5]</a></td>
+	<td><a class="p" href="rulevl/16bets1.rle">
+	    Up book&shy;end w/&#8203;tub on book&shy;end w/&#8203;tub [5]</a></td>
+	<td><a class="p" href="rulevl/16bvzb.rle">
+	    Block on very long Z on block&sup1; [4]</a></td>
+	<td><a class="p" href="rulevl/16bvtabk.rle">
+	    Block on very long table on block&sup1; [5]</a></td>
+	<td><a class="p" href="rulevl/16cubtbk.rle">
+	    Block on curl siamese boat&sup1; [5]</a></td>
+	<td><a class="p" href="rulevl/16bpbulf.rle">
+	    Block on pre-block siamese up loaf w/&#8203;tail&sup1; [5]</a></td>
+	<td><a class="p" href="rulevl/16cutltl.rle">
+	    Curl siamese tail w/&#8203;tail&sup1; [5]</a></td>
+    </tr>
+    <tr>
+	<td><a class="p" href="rulevl/16bebbt5.rle">
+	    Block on boat and book&shy;end&sup1; [6]</a></td>
+	<td><a class="p" href="rulevl/16bpbulb.rle">Block on pre-block
+	    siamese up long boat w/&#8203;tail&sup1; [4]</a></td>
+	<td><a class="p" href="rulevl/16betbb3.rle">
+	    Block on block and book&shy;end&sup1; w/&#8203;tub [4]</a></td>
+	<td><a class="p" href="rulevl/16cuubpb.rle">
+	    Curl w/&#8203;up boat siamese pre-block on block&sup1; [6]</a></td>
+	<td><a class="p" href="rulevl/16cupbb.rle">
+	    Curl on pre-block on block&sup1; [6]</a></td>
+	<td><a class="p" href="rulevl/16lidldb.rle">
+	    Long integ&shy;ral w/&#8203;down loaf and down boat&sup1; [4]</a></td>
+	<td><a class="p" href="rulevl/16zp.rle">
+	    Extra extra extra long ship [5]</a></td>
+	<td colspan="3" class="s">&nbsp;</td>
+    </tr>
+    <tr>
+	<td><a class="p" href="rulevl/17bzet6.rle">
+	    Block on Z on down eater tail&sup1; [4]</a></td>
+	<td><a class="p" href="rulevl/17dvbb1.rle">
+	    Cis bi-block on dove&sup1; [4]</a></td>
+	<td><a class="p" href="rulevl/17clzb.rle">
+	    Curl siamese Z on block&sup1; [5]</a></td>
+	<td><a class="p" href="rulevl/17besbt.rle">
+	    Boat on book&shy;end siamese book&shy;end [5]</a></td>
+	<td><a class="p" href="rulevl/17bpbdcg.rle">Block on pre-block
+	    siamese down mango w/&#8203;tail&sup1; [5]</a></td>
+	<td><a class="p" href="rulevl/17bpbulg.rle">Block on pre-block
+	    siamese up long barge w/&#8203;tail&sup1; [5]</a></td>
+	<td><a class="p" href="rulevl/17iuxb.rle">
+	    Integ&shy;ral w/&#8203;up extra long boat [6]</a></td>
+	<td colspan="3" class="s">&nbsp;</td>
+    </tr>
+    <tr>
+	<td><a class="p" href="rulevl/18hshs1.rle">Dead spark coil;
+	    House on house; JC [4]</a></td>
+	<td><a class="p" href="rulevl/18pbclzb.rle">
+	    Pre-block siamese curl siamese Z on block&sup1; [5]</a></td>
+	<td><a class="p" href="rulevl/18cdlfcp.rle">
+	    Claw w/&#8203;down loaf and tail w/&#8203;cape&sup1; [5]</a></td>
+	<td colspan="2"><a class="p" href="rulevl/18lzp.rle">
+	    Extra extra extra extra long ship [4]</a></td>
+	<td><a class="p" href="rulevl/19-2.rle">
+	    19-bit still-life #2&sup1; [5]</a></td>
+	<td><a class="p" href="rulevl/19cubebk.rle">
+	    Block on curl siamese book&shy;end&sup1; [3]</a></td>
+	<td><a class="p" href="rulevl/19-1.rle">Integ&shy;ral w/&#8203;tub
+	    w/&#8203;up trans tail siamese pre-block on block&sup1; [4]</a></td>
+	<td><a class="p" href="rulevl/19iuyb.rle">
+	    Integ&shy;ral w/&#8203;up extra extra long boat [6]</a></td>
+	<td class="s">&nbsp;</td>
+    </tr>
+    <tr>
+	<td><a class="p" href="rulevl/20-1.rle">
+	    Up long tables w/&#8203;pre-blocks&sup1; [14]</a></td>
+	<td><a class="p" href="rulevl/20cucu1.rle">
+	    Up curl on curl&sup1; [4]</a></td>
+	<td><a class="p" href="rulevl/20hstsbb.rle">
+	    Two blocks on house w/&#8203;two tubs&sup1; [6]</a></td>
+	<td colspan="2"><a class="p" href="rulevl/20vzp.rle">
+	    Extra extra extra extra extra long ship [4]</a></td>
+	<td colspan="2"><a class="p" href="rulevl/22-1.rle">Block on pre-block
+	    siamese tub w/&#8203;two up trans tails siamese pre-block
+	    on block&sup1; [3]</a></td>
+	<td><a class="p" href="rulevl/24lhsubs.rle">
+	    Cis docks w/&#8203;up boats [6]</a></td>
+	<td><a class="p" href="rulevl/24lake2.rle">
+	    Lake 2 [14]</a></td>
+	<td class="s">&nbsp;</td>
+    </tr>
+    <tr>
+	<td colspan="2"><a class="p" href="rulevl/25-1.rle">
+	    Weird still-life&sup1; [7]</a></td>
+	<td colspan="2"><a class="p" href="rulevl/29-1.rle">Block on pre-block
+	    siamese tub w/&#8203;two up trans tails siamese pre-block
+	    on extra long boat&sup1; [5]</a></td>
+	<td colspan="2"><a class="p" href="rulevl/30-1.rle">
+	    Cis-mirrored very very long bee siamese eaters [9]</a></td>
+	<td colspan="2"><a class="p" href="rulevl/36-1.rle">Extra long boat on
+	    pre-block siamese tub w/&#8203;two up trans tails siamese pre-block
+	    on extra long boat&sup1; [5]</a></td>
+	<td colspan="2" class="s">&nbsp;</td>
+    </tr>
+</table></p></div>
+<map name="vl-p1-2">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,441,20,461" href="#bottom" />
+	<area coords="601,0,621,20" href="zip/vl-p1-2.zip" />
+	<area coords="601,441,621,461" href="stamp/vl-p1-2.rle" />
+	<area coords="0,0,70,90" href="rulevl/16ctct1.rle" />
+	<area coords="70,0,130,90" href="rulevl/16wgwg1.rle" />
+	<area coords="130,0,190,90" href="rulevl/16lele1.rle" />
+	<area coords="190,0,250,90" href="rulevl/16cuet6.rle" />
+	<area coords="250,0,310,90" href="rulevl/16bets1.rle" />
+	<area coords="310,0,370,90" href="rulevl/16bvzb.rle" />
+	<area coords="370,0,430,90" href="rulevl/16bvtabk.rle" />
+	<area coords="430,0,490,90" href="rulevl/16cubtbk.rle" />
+	<area coords="490,0,550,90" href="rulevl/16bpbulf.rle" />
+	<area coords="550,0,621,90" href="rulevl/16cutltl.rle" />
+	<area coords="0,90,70,170" href="rulevl/16bebbt5.rle" />
+	<area coords="70,90,130,170" href="rulevl/16bpbulb.rle" />
+	<area coords="130,90,190,170" href="rulevl/16betbb3.rle" />
+	<area coords="190,90,250,170" href="rulevl/16cuubpb.rle" />
+	<area coords="250,90,310,170" href="rulevl/16cupbb.rle" />
+	<area coords="310,90,370,170" href="rulevl/16lidldb.rle" />
+	<area coords="370,90,430,170" href="rulevl/16zp.rle" />
+	<area coords="0,170,70,250" href="rulevl/17bzet6.rle" />
+	<area coords="70,170,130,250" href="rulevl/17dvbb1.rle" />
+	<area coords="130,170,190,250" href="rulevl/17clzb.rle" />
+	<area coords="190,170,250,250" href="rulevl/17besbt.rle" />
+	<area coords="250,170,310,250" href="rulevl/17bpbdcg.rle" />
+	<area coords="310,170,370,250" href="rulevl/17bpbulg.rle" />
+	<area coords="370,170,430,250" href="rulevl/17iuxb.rle" />
+	<area coords="0,250,70,330" href="rulevl/18hshs1.rle" />
+	<area coords="70,250,130,330" href="rulevl/18pbclzb.rle" />
+	<area coords="130,250,190,330" href="rulevl/18cdlfcp.rle" />
+	<area coords="190,250,310,330" href="rulevl/18lzp.rle" />
+	<area coords="310,250,370,330" href="rulevl/19-2.rle" />
+	<area coords="370,250,430,330" href="rulevl/19cubebk.rle" />
+	<area coords="430,250,490,330" href="rulevl/19-1.rle" />
+	<area coords="490,250,550,330" href="rulevl/19iuyb.rle" />
+	<area coords="0,330,70,410" href="rulevl/20-1.rle" />
+	<area coords="70,330,130,410" href="rulevl/20cucu1.rle" />
+	<area coords="130,330,190,410" href="rulevl/20hstsbb.rle" />
+	<area coords="190,330,310,410" href="rulevl/20vzp.rle" />
+	<area coords="310,330,430,410" href="rulevl/22-1.rle" />
+	<area coords="430,330,490,410" href="rulevl/24lhsubs.rle" />
+	<area coords="490,330,550,410" href="rulevl/24lake2.rle" />
+	<area coords="0,410,130,461" href="rulevl/25-1.rle" />
+	<area coords="130,410,250,461" href="rulevl/29-1.rle" />
+	<area coords="250,410,370,461" href="rulevl/30-1.rle" />
+	<area coords="370,410,490,461" href="rulevl/36-1.rle" />
+</map>
+<p>Note &sup1;: These are additional still-lifes not found in Life.</p>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Bi-block">Bi-block</a>,
+<a class="x" href="http://conwaylife.com/wiki/Block">Block</a>,
+<a class="x" href="http://conwaylife.com/wiki/Boat">Boat</a>,
+<a class="x" href="http://conwaylife.com/wiki/Dead_spark_coil">Dead spark coil</a>,
+<a class="x" href="http://conwaylife.com/wiki/Eater_1">Eater 1</a>,
+<a class="x" href="http://conwaylife.com/wiki/Integral_sign">Integral sign</a>,
+<a class="x" href="http://conwaylife.com/wiki/Integral_with_tub">Integral with tub</a>,
+<a class="x" href="http://conwaylife.com/wiki/Lake_2">Lake 2</a>,
+<a class="x" href="http://conwaylife.com/wiki/Loaf">Loaf</a>,
+<a class="x" href="http://conwaylife.com/wiki/Long_barge">Long barge</a>,
+<a class="x" href="http://conwaylife.com/wiki/Long_boat">Long boat</a>,
+<a class="x" href="http://conwaylife.com/wiki/Mango">Mango</a>,
+<a class="x" href="http://conwaylife.com/wiki/Pre-block">Pre-block</a>,
+<a class="x" href="http://conwaylife.com/wiki/Tub">Tub</a>,
+<a class="x" href="http://conwaylife.com/wiki/Tub_with_tail">Tub with tail</a>,
+<a class="x" href="http://conwaylife.com/wiki/Very_very_long_boat">Very very long boat</a>.</p>
+</article>
+<hr /><article><a id="a4" name="a4"></a>
+<a id="vl-pp1" name="vl-pp1"></a>
+<h2>52 pseudo-still-lifes</h2>
+<p>These are all the pseudo-still-lifes up to 10 bits,
+and a few larger ones.</p>
+<p><img src="map/vl-pp1.png" alt="VesselLife pseudo-still-lifes"
+ width="621" height="361" usemap="#vl-pp1" /></p>
+<p><table><colgroup><col span="12" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_vl-pp1" class="i" href="javascript:Nav('vl-pp1')">+</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a3">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a5">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/vl-pp1.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/vl-pp1.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/vl-pp1.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="lis/vl-pp1.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/vl-pp1.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/vl-pp1.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=vl-pp1" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_vl-pp1" class="u"><p><table id="t-vl-pp1" style="width:625px">
+    <colgroup><col style="width:71px;" /><col span="8" style="width:60px;" />
+	<col style="width:72px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="rulevl/8bkbk.rle">Block on block;
+	    Two blocks; Bi-block [2]</a></td>
+	<td><a class="p" href="rulevl/8bkbk1.rle">
+	    Trans block on block [3]</a></td>
+	<td><a class="p" href="rulevl/8bktb.rle">
+	    Tub on block [5]</a></td>
+	<td><a class="p" href="rulevl/9btbk.rle">
+	    Block on boat [3]</a></td>
+	<td><a class="p" href="rulevl/9btbk4.rle">
+	    Trans block below boat [4]</a></td>
+	<td><a class="p" href="rulevl/9btbk1.rle">
+	    Cis block on boat [3]</a></td>
+	<td><a class="p" href="rulevl/9btbk3.rle">
+	    Cis block below boat [4]</a></td>
+	<td><a class="p" href="rulevl/9bttb1.rle">
+	    Cis tub on boat [3]</a></td>
+	<td><a class="p" href="rulevl/9btbk2.rle">
+	    Trans block on boat [4]</a></td>
+	<td><a class="p" href="rulevl/9bttb2.rle">
+	    Trans tub on boat [5]</a></td>
+    </tr>
+    <tr>
+	<td><a class="p" href="rulevl/10snbk.rle">
+	    Block on snake [5]</a></td>
+	<td><a class="p" href="rulevl/10shbk.rle">
+	    Block on ship [4]</a></td>
+	<td><a class="p" href="rulevl/10btbt1.rle">Up boat on boat;
+	    Bi-boat [4]</a></td>
+	<td><a class="p" href="rulevl/10btbt2.rle">
+	    Down boat on boat [4]</a></td>
+	<td><a class="p" href="rulevl/10acbk1.rle">
+	    Block on carrier [7]</a></td>
+	<td><a class="p" href="rulevl/10acbk2.rle">
+	    Block below carrier [7]</a></td>
+	<td><a class="p" href="rulevl/10btbt3.rle">
+	    Up cis boat on trans boat [4]</a></td>
+	<td><a class="p" href="rulevl/10btbt4.rle">
+	    Down cis boat on boat [4]</a></td>
+	<td><a class="p" href="rulevl/10btbt5.rle">
+	    Down trans boat on boat [4]</a></td>
+	<td><a class="p" href="rulevl/10btbt6.rle">
+	    Cis up boat below boat [4]</a></td>
+    </tr>
+    <tr>
+	<td><a class="p" href="rulevl/10btbt7.rle">
+	    Trans down boat below boat [4]</a></td>
+	<td><a class="p" href="rulevl/10btbt8.rle">
+	    Trans up boat below boat [6]</a></td>
+	<td><a class="p" href="rulevl/10btbt9.rle">
+	    Cis down boat below boat [6]</a></td>
+	<td><a class="p" href="rulevl/10shbk1.rle">
+	    Cis block on ship [4]</a></td>
+	<td><a class="p" href="rulevl/10shbk2.rle">
+	    Trans block on ship [4]</a></td>
+	<td><a class="p" href="rulevl/10shtb1.rle">
+	    Cis tub on ship [5]</a></td>
+	<td><a class="p" href="rulevl/10shtb2.rle">
+	    Cis tub on ship [5]</a></td>
+	<td><a class="p" href="rulevl/10snbk1.rle">
+	    Cis block on snake [5]</a></td>
+	<td><a class="p" href="rulevl/10snbk2.rle">
+	    Trans block on snake [5]</a></td>
+	<td><a class="p" href="rulevl/10snbk3.rle">
+	    Cis block below snake [5]</a></td>
+    </tr>
+    <tr>
+	<td><a class="p" href="rulevl/10snbk4.rle">
+	    Trans block below snake [5]</a></td>
+	<td><a class="p" href="rulevl/10sntb1.rle">
+	    Cis tub on snake [6]</a></td>
+	<td><a class="p" href="rulevl/10sntb2.rle">
+	    Trans tub on snake [6]</a></td>
+	<td><a class="p" href="rulevl/10sntb3.rle">
+	    Tub below snake [6]</a></td>
+	<td><a class="p" href="rulevl/10acbk3.rle">
+	    Cis block on carrier [6]</a></td>
+	<td><a class="p" href="rulevl/10acbk4.rle">
+	    Trans block on carrier [6]</a></td>
+	<td><a class="p" href="rulevl/10acbk5.rle">
+	    Cis block below carrier [6]</a></td>
+	<td><a class="p" href="rulevl/10acbk6.rle">
+	    Trans block below carrier [6]</a></td>
+	<td class="r"><a class="p" href="rulevl/10acbk7.rle">
+	    Block above carrier [x]</a></td>
+	<td><a class="p" href="rulevl/10actb1.rle">
+	    Cis tub on carrier [7]</a></td>
+    </tr>
+    <tr>
+	<td><a class="p" href="rulevl/10actb2.rle">
+	    Trans tub on carrier [7]</a></td>
+	<td><a class="p" href="rulevl/10actb3.rle">
+	    Cis tub below carrier [7]</a></td>
+	<td><a class="p" href="rulevl/10actb4.rle">
+	    Trans tub below carrier [7]</a></td>
+	<td><a class="p" href="rulevl/10bgbk1.rle">
+	    Cis block on barge [4]</a></td>
+	<td><a class="p" href="rulevl/10bgbk2.rle">
+	    Trans block on barge [4]</a></td>
+	<td><a class="p" href="rulevl/11lbbk.rle">
+	    Block on long boat [4]</a></td>
+	<td><a class="p" href="rulevl/11lfbk2.rle">
+	    Trans block on loaf [4]</a></td>
+	<td><a class="p" href="rulevl/11lfbk4.rle">
+	    Down loaf on block [4]</a></td>
+	<td><a class="p" href="rulevl/11lfbk.rle">
+	    Block on loaf [4]</a></td>
+	<td class="s">&nbsp;</td>
+    </tr>
+    <tr>
+	<td><a class="p" href="rulevl/12lfbt8.rle">
+	    Boat near loaf [4]</a></td>
+	<td><a class="p" href="rulevl/12lfbt1.rle">
+	    Up boat on loaf [4]</a></td>
+	<td><a class="p" href="rulevl/13btbb1.rle">
+	    Cis block on block on boat [3]</a></td>
+	<td colspan="7" class="s">&nbsp;</td>
+    </tr>
+</table></p></div>
+<map name="vl-pp1">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,341,20,361" href="#bottom" />
+	<area coords="601,0,621,20" href="zip/vl-pp1.zip" />
+	<area coords="601,341,621,361" href="stamp/vl-pp1.rle" />
+	<area coords="0,0,70,70" href="rulevl/8bkbk.rle" />
+	<area coords="70,0,130,70" href="rulevl/8bkbk1.rle" />
+	<area coords="130,0,190,70" href="rulevl/8bktb.rle" />
+	<area coords="190,0,250,70" href="rulevl/9btbk.rle" />
+	<area coords="250,0,310,70" href="rulevl/9btbk4.rle" />
+	<area coords="310,0,370,70" href="rulevl/9btbk1.rle" />
+	<area coords="370,0,430,70" href="rulevl/9btbk3.rle" />
+	<area coords="430,0,490,70" href="rulevl/9bttb1.rle" />
+	<area coords="490,0,550,70" href="rulevl/9btbk2.rle" />
+	<area coords="550,0,621,70" href="rulevl/9bttb2.rle" />
+	<area coords="0,70,70,130" href="rulevl/10snbk.rle" />
+	<area coords="70,70,130,130" href="rulevl/10shbk.rle" />
+	<area coords="130,70,190,130" href="rulevl/10btbt1.rle" />
+	<area coords="190,70,250,130" href="rulevl/10btbt2.rle" />
+	<area coords="250,70,310,130" href="rulevl/10acbk1.rle" />
+	<area coords="310,70,370,130" href="rulevl/10acbk2.rle" />
+	<area coords="370,70,430,130" href="rulevl/10btbt3.rle" />
+	<area coords="430,70,490,130" href="rulevl/10btbt4.rle" />
+	<area coords="490,70,550,130" href="rulevl/10btbt5.rle" />
+	<area coords="550,70,621,130" href="rulevl/10btbt6.rle" />
+	<area coords="0,130,70,190" href="rulevl/10btbt7.rle" />
+	<area coords="70,130,130,190" href="rulevl/10btbt8.rle" />
+	<area coords="130,130,190,190" href="rulevl/10btbt9.rle" />
+	<area coords="190,130,250,190" href="rulevl/10shbk1.rle" />
+	<area coords="250,130,310,190" href="rulevl/10shbk2.rle" />
+	<area coords="310,130,370,190" href="rulevl/10shtb1.rle" />
+	<area coords="370,130,430,190" href="rulevl/10shtb2.rle" />
+	<area coords="430,130,490,190" href="rulevl/10snbk1.rle" />
+	<area coords="490,130,550,190" href="rulevl/10snbk2.rle" />
+	<area coords="550,130,621,190" href="rulevl/10snbk3.rle" />
+	<area coords="0,190,70,250" href="rulevl/10snbk4.rle" />
+	<area coords="70,190,130,250" href="rulevl/10sntb1.rle" />
+	<area coords="130,190,190,250" href="rulevl/10sntb2.rle" />
+	<area coords="190,190,250,250" href="rulevl/10sntb3.rle" />
+	<area coords="250,190,310,250" href="rulevl/10acbk3.rle" />
+	<area coords="310,190,370,250" href="rulevl/10acbk4.rle" />
+	<area coords="370,190,430,250" href="rulevl/10acbk5.rle" />
+	<area coords="430,190,490,250" href="rulevl/10acbk6.rle" />
+	<area coords="490,190,550,250" href="rulevl/10acbk7.rle" />
+	<area coords="550,190,621,250" href="rulevl/10actb1.rle" />
+	<area coords="0,250,70,310" href="rulevl/10actb2.rle" />
+	<area coords="70,250,130,310" href="rulevl/10actb3.rle" />
+	<area coords="130,250,190,310" href="rulevl/10actb4.rle" />
+	<area coords="190,250,250,310" href="rulevl/10bgbk1.rle" />
+	<area coords="250,250,310,310" href="rulevl/10bgbk2.rle" />
+	<area coords="310,250,370,310" href="rulevl/11lbbk.rle" />
+	<area coords="370,250,430,310" href="rulevl/11lfbk2.rle" />
+	<area coords="430,250,490,310" href="rulevl/11lfbk4.rle" />
+	<area coords="490,250,550,310" href="rulevl/11lfbk.rle" />
+	<area coords="0,310,70,361" href="rulevl/12lfbt8.rle" />
+	<area coords="70,310,130,361" href="rulevl/12lfbt1.rle" />
+	<area coords="130,310,190,361" href="rulevl/13btbb1.rle" />
+</map>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Aircraft_carrier">Aircraft carrier</a>,
+<a class="x" href="http://conwaylife.com/wiki/Barge">Barge</a>,
+<a class="x" href="http://conwaylife.com/wiki/Bi-block">Bi-block</a>,
+<a class="x" href="http://conwaylife.com/wiki/Bi-boat">Bi-boat</a>,
+<a class="x" href="http://conwaylife.com/wiki/Block">Block</a>,
+<a class="x" href="http://conwaylife.com/wiki/Block_on_boat">Block on boat</a>,
+<a class="x" href="http://conwaylife.com/wiki/Boat">Boat</a>,
+<a class="x" href="http://conwaylife.com/wiki/Loaf">Loaf</a>,
+<a class="x" href="http://conwaylife.com/wiki/Long_boat">Long boat</a>,
+<a class="x" href="http://conwaylife.com/wiki/Ship">Ship</a>,
+<a class="x" href="http://conwaylife.com/wiki/Snake">Snake</a>,
+<a class="x" href="http://conwaylife.com/wiki/Tub">Tub</a>.</p>
+</article>
+<hr /><article><a id="a5" name="a5"></a>
+<a id="vl-qp1" name="vl-qp1"></a>
+<h2>1 quasi-still-life</h2>
+<p><img src="map/vl-qp1.png" alt="VL qp1"
+ width="81" height="61" usemap="#vl-qp1" /></p>
+<p><table><colgroup><col span="12" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_vl-qp1" class="i" href="javascript:Nav('vl-qp1')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a4">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a6">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/vl-qp1.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/vl-qp1.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/vl-qp1.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="lis/vl-qp1.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/vl-qp1.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/vl-qp1.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=vl-qp1" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_vl-qp1"><p><table id="t-vl-qp1" style="width:85px">
+    <colgroup><col style="width:83px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="rulevl/10btbt10.rle">
+	    Up boat behind boat [4]</a></td>
+    </tr>
+</table></p></div>
+<map name="vl-qp1">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,41,20,61" href="#bottom" />
+	<area coords="61,0,81,20" href="zip/vl-qp1.zip" />
+	<area coords="61,41,81,61" href="stamp/vl-qp1.rle" />
+	<area coords="0,0,81,61" href="rulevl/10btbt10.rle" />
+</map>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Boat">Boat</a>.</p>
+</article>
+<hr /><article><a id="a6" name="a6"></a>
+<a id="vl-p2" name="vl-p2"></a>
+<h2>13 period 2 oscillators</h2>
+<p>These are all the period 2 oscillators up to 10 bits, and a few others.</p>
+<p><img src="map/vl-p2.png" alt="VesselLife period 2 oscillators"
+ width="581" height="141" usemap="#vl-p2" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_vl-p2" class="i" href="javascript:Nav('vl-p2')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a5">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a7">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/vl-p2.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/vl-p2.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/vl-p2.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/vl-p2.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/vl-p2.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/vl-p2.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/vl-p2.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=vl-p2" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_vl-p2"><p><table id="t-vl-p2" style="width:585px">
+    <colgroup><col style="width:91px;" /><col span="5" style="width:80px;" />
+	<col style="width:92px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="rulevl/3bl.rle">
+	    Blinker [2]</a></td>
+	<td><a class="p" href="rulevl/6ck.rle">
+	    Clock [3]</a></td>
+	<td><a class="p" href="rulevl/8bp.rle">
+	    Bipole [6]</a></td>
+	<td><a class="p" href="rulevl/9tp.rle">
+	    Tripole [4]</a></td>
+	<td><a class="p" href="rulevl/9p2-1.rle">9P2.1;
+	    Ship Block; SKC [3]</a></td>
+	<td><a class="p" href="rulevl/10qp.rle">
+	    Quad&shy;pole [8]</a></td>
+	<td><a class="p" href="rulevl/11lgbk.rle">
+	    Long barge block [4]</a></td>
+    </tr>
+    <tr>
+	<td class="g"><a class="p" href="rulevl/14ttb.rle">
+	    Test tube baby [14]</a></td>
+	<td class="y"><a class="p" href="rulevl/14op.rle">
+	    Octopole [16]</a></td>
+	<td><a class="p" href="rulevl/16ttbub.rle">
+	    Test tube baby w/&#8203;up boat [14]</a></td>
+	<td><a class="p" href="rulevl/18sc.rle">
+	    Spark coil [6]</a></td>
+	<td><a class="p" href="rulevl/18ttbub2.rle">Boat test tube baby;
+	    Test tube baby w/&#8203;two up boats [13]</a></td>
+	<td><a class="p" href="rulevl/44p2-1.rle">
+	    44P2.1 [18]</a></td>
+	<td class="s">&nbsp;</td>
+    </tr>
+</table></p></div>
+<map name="vl-p2">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,121,20,141" href="#bottom" />
+	<area coords="561,0,581,20" href="zip/vl-p2.zip" />
+	<area coords="561,121,581,141" href="stamp/vl-p2.rle" />
+	<area coords="0,0,90,70" href="rulevl/3bl.rle" />
+	<area coords="90,0,170,70" href="rulevl/6ck.rle" />
+	<area coords="170,0,250,70" href="rulevl/8bp.rle" />
+	<area coords="250,0,330,70" href="rulevl/9tp.rle" />
+	<area coords="330,0,410,70" href="rulevl/9p2-1.rle" />
+	<area coords="410,0,490,70" href="rulevl/10qp.rle" />
+	<area coords="490,0,581,70" href="rulevl/11lgbk.rle" />
+	<area coords="0,70,90,141" href="rulevl/14ttb.rle" />
+	<area coords="90,70,170,141" href="rulevl/14op.rle" />
+	<area coords="170,70,250,141" href="rulevl/16ttbub.rle" />
+	<area coords="250,70,330,141" href="rulevl/18sc.rle" />
+	<area coords="330,70,410,141" href="rulevl/18ttbub2.rle" />
+	<area coords="410,70,490,141" href="rulevl/44p2-1.rle" />
+</map>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Barge">Barge</a>,
+<a class="x" href="http://conwaylife.com/wiki/Bipole">Bipole</a>,
+<a class="x" href="http://conwaylife.com/wiki/Blinker">Blinker</a>,
+<a class="x" href="http://conwaylife.com/wiki/Block">Block</a>,
+<a class="x" href="http://conwaylife.com/wiki/Boat">Boat</a>,
+<a class="x" href="http://conwaylife.com/wiki/Boat_test_tube_baby">Boat test tube baby</a>,
+<a class="x" href="http://conwaylife.com/wiki/Clock">Clock</a>,
+<a class="x" href="http://conwaylife.com/wiki/Long">Long</a>,
+<a class="x" href="http://conwaylife.com/wiki/Octapole">Octapole</a>,
+<a class="x" href="http://conwaylife.com/wiki/Quadpole">Quadpole</a>,
+<a class="x" href="http://conwaylife.com/wiki/Ship">Ship</a>,
+<a class="x" href="http://conwaylife.com/wiki/Spark_coil">Spark coil</a>,
+<a class="x" href="http://conwaylife.com/wiki/Test_tube_baby">Test tube baby</a>,
+<a class="x" href="http://conwaylife.com/wiki/Tripole">Tripole</a>.</p>
+</article>
+<hr /><article><a id="a7" name="a7"></a>
+<a id="vl-pp2" name="vl-pp2"></a>
+<h2>7 period 2 pseudo-oscillators</h2>
+<p>These are all the period 2 pseudo-oscillators up to 8 bits,
+and one other.</p>
+<p><img src="map/vl-pp2.png" alt="VesselLife period 2 pseudo-oscillators"
+ width="441" height="61" usemap="#vl-pp2" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_vl-pp2" class="i" href="javascript:Nav('vl-pp2')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a6">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a8">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/vl-pp2.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/vl-pp2.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/vl-pp2.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/vl-pp2.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/vl-pp2.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/vl-pp2.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/vl-pp2.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=vl-pp2" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_vl-pp2"><p><table id="t-vl-pp2" style="width:445px">
+    <colgroup><col style="width:71px;" /><col span="5" style="width:60px;" />
+	<col style="width:72px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="rulevl/6blbl.rle">
+	    Blinker on blinker [4]</a></td>
+	<td><a class="p" href="rulevl/7bkbl14.rle">Block and blinker
+	    offset (4, 1) [4]</a></td>
+	<td><a class="p" href="rulevl/7bkbl22.rle">Block and blinker
+	    offset (2, 2) [3]</a></td>
+	<td><a class="p" href="rulevl/8btbl1.rle">
+	    Cis blinker near boat [3]</a></td>
+	<td><a class="p" href="rulevl/8btbl2.rle">
+	    Trans blinker near boat [4]</a></td>
+	<td><a class="p" href="rulevl/8btbl3.rle">
+	    Blinker on boat [4]</a></td>
+	<td><a class="p" href="rulevl/10blbbl1.rle">
+	    Cis blinker on block on blinker [4]</a></td>
+    </tr>
+</table></p></div>
+<map name="vl-pp2">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,41,20,61" href="#bottom" />
+	<area coords="421,0,441,20" href="zip/vl-pp2.zip" />
+	<area coords="421,41,441,61" href="stamp/vl-pp2.rle" />
+	<area coords="0,0,70,61" href="rulevl/6blbl.rle" />
+	<area coords="70,0,130,61" href="rulevl/7bkbl14.rle" />
+	<area coords="130,0,190,61" href="rulevl/7bkbl22.rle" />
+	<area coords="190,0,250,61" href="rulevl/8btbl1.rle" />
+	<area coords="250,0,310,61" href="rulevl/8btbl2.rle" />
+	<area coords="310,0,370,61" href="rulevl/8btbl3.rle" />
+	<area coords="370,0,441,61" href="rulevl/10blbbl1.rle" />
+</map>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Blinker">Blinker</a>,
+<a class="x" href="http://conwaylife.com/wiki/Block">Block</a>,
+<a class="x" href="http://conwaylife.com/wiki/Boat">Boat</a>.</p>
+</article>
+<hr /><article><a id="a8" name="a8"></a>
+<a id="vl-qp2" name="vl-qp2"></a>
+<h2>2 period 2 quasi-oscillators</h2>
+<p><img src="map/vl-qp2.png" alt="VL qp2"
+ width="141" height="61" usemap="#vl-qp2" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_vl-qp2" class="i" href="javascript:Nav('vl-qp2')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a7">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a9">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/vl-qp2.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/vl-qp2.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/vl-qp2.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/vl-qp2.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/vl-qp2.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/vl-qp2.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/vl-qp2.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=vl-qp2" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_vl-qp2"><p><table id="t-vl-qp2" style="width:145px">
+    <colgroup><col span="2" style="width:72px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="rulevl/6blbl04.rle">Two blinkers
+	    offset (4, 0) [3]</a></td>
+	<td><a class="p" href="rulevl/6blbl14.rle">Two blinkers
+	    offset (4, 1) [3]</a></td>
+    </tr>
+</table></p></div>
+<map name="vl-qp2">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,41,20,61" href="#bottom" />
+	<area coords="121,0,141,20" href="zip/vl-qp2.zip" />
+	<area coords="121,41,141,61" href="stamp/vl-qp2.rle" />
+	<area coords="0,0,70,61" href="rulevl/6blbl04.rle" />
+	<area coords="70,0,141,61" href="rulevl/6blbl14.rle" />
+</map>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Blinker">Blinker</a>.</p>
+</article>
+<hr /><article><a id="a9" name="a9"></a>
+<a id="vl-p3" name="vl-p3"></a>
+<h2>7 period 3 oscillators</h2>
+<p><img src="map/vl-p3.png" alt="VesselLife period 3 oscillators"
+ width="581" height="101" usemap="#vl-p3" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_vl-p3" class="i" href="javascript:Nav('vl-p3')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a8">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a10">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/vl-p3.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/vl-p3.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/vl-p3.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/vl-p3.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/vl-p3.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/vl-p3.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/vl-p3.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=vl-p3" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_vl-p3"><p><table id="t-vl-p3" style="width:585px">
+    <colgroup><col style="width:91px;" /><col span="5" style="width:80px;" />
+	<col style="width:92px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="rulevl/8p3-1.rle">
+	    8P3.1 [2]</a></td>
+	<td><a class="p" href="rulevl/8p3-2.rle">
+	    8P3.2 [4]</a></td>
+	<td><a class="p" href="rulevl/22p3-1.rle">22P3.1;
+	    Short hooks eating tubs [12]</a></td>
+	<td class="r"><a class="p" href="rulevl/24p3-1.rle">
+	    24P3.1 [x]</a></td>
+	<td class="r"><a class="p" href="rulevl/24st.rle">
+	    Star [x]</a></td>
+	<td><a class="p" href="rulevl/28p3-1.rle">28P3.1;
+	    Double cuphook [12]</a></td>
+	<td><a class="p" href="rulevl/48p3-1.rle">
+	    48P3.1 [24]</a></td>
+    </tr>
+</table></p></div>
+<map name="vl-p3">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,81,20,101" href="#bottom" />
+	<area coords="561,0,581,20" href="zip/vl-p3.zip" />
+	<area coords="561,81,581,101" href="stamp/vl-p3.rle" />
+	<area coords="0,0,90,101" href="rulevl/8p3-1.rle" />
+	<area coords="90,0,170,101" href="rulevl/8p3-2.rle" />
+	<area coords="170,0,250,101" href="rulevl/22p3-1.rle" />
+	<area coords="250,0,330,101" href="rulevl/24p3-1.rle" />
+	<area coords="330,0,410,101" href="rulevl/24st.rle" />
+	<area coords="410,0,490,101" href="rulevl/28p3-1.rle" />
+	<area coords="490,0,581,101" href="rulevl/48p3-1.rle" />
+</map>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Block">Block</a>,
+<a class="x" href="http://conwaylife.com/wiki/Candlefrobra">Candlefrobra</a>,
+<a class="x" href="http://conwaylife.com/wiki/Cuphook">Cuphook</a>,
+<a class="x" href="http://conwaylife.com/wiki/Pre-block">Pre-block</a>,
+<a class="x" href="http://conwaylife.com/wiki/Star">Star</a>,
+<a class="x" href="http://conwaylife.com/wiki/Tub">Tub</a>.</p>
+</article>
+<hr /><article><a id="a10" name="a10"></a>
+<a id="vl-pp3" name="vl-pp3"></a>
+<h2>1 period 3 pseudo-oscillator</h2>
+<p><img src="map/vl-pp3.png" alt="VL pp3"
+ width="81" height="61" usemap="#vl-pp3" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_vl-pp3" class="i" href="javascript:Nav('vl-pp3')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a9">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a11">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/vl-pp3.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/vl-pp3.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/vl-pp3.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/vl-pp3.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/vl-pp3.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/vl-pp3.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/vl-pp3.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=vl-pp3" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_vl-pp3"><p><table id="t-vl-pp3" style="width:85px">
+    <colgroup><col style="width:83px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="rulevl/12p3bk.rle">
+	    Block on 8P3.2 [5]</a></td>
+    </tr>
+</table></p></div>
+<map name="vl-pp3">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,41,20,61" href="#bottom" />
+	<area coords="61,0,81,20" href="zip/vl-pp3.zip" />
+	<area coords="61,41,81,61" href="stamp/vl-pp3.rle" />
+	<area coords="0,0,81,61" href="rulevl/12p3bk.rle" />
+</map>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Block">Block</a>.</p>
+</article>
+<hr /><article><a id="a11" name="a11"></a>
+<a id="vl-p4" name="vl-p4"></a>
+<h2>7 period 4 oscillators</h2>
+<p><img src="map/vl-p4.png" alt="VesselLife period 4 oscillators"
+ width="441" height="81" usemap="#vl-p4" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_vl-p4" class="i" href="javascript:Nav('vl-p4')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a10">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a12">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/vl-p4.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/vl-p4.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/vl-p4.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/vl-p4.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/vl-p4.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/vl-p4.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/vl-p4.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=vl-p4" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_vl-p4"><p><table id="t-vl-p4" style="width:445px">
+    <colgroup><col style="width:71px;" /><col span="5" style="width:60px;" />
+	<col style="width:72px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="rulevl/9p4-1.rle">
+	    9P4.1 [3]</a></td>
+	<td><a class="p" href="rulevl/10p4-1.rle">
+	    10P4.1 [6]</a></td>
+	<td><a class="p" href="rulevl/10p4bl.rle">10P4.2;
+	    Blinker hassling 8p4.1 [4]</a></td>
+	<td><a class="p" href="rulevl/12md.rle">
+	    Mold [7]</a></td>
+	<td><a class="p" href="rulevl/14p4lp.rle">
+	    Long ship hassling 8p4.1 [8]</a></td>
+	<td><a class="p" href="rulevl/14p4lf.rle">
+	    Loaf hassling 8p4.1 [4]</a></td>
+	<td class="y"><a class="p" href="rulevl/40p4-1.rle">
+	    40P4.1 [52]</a></td>
+    </tr>
+</table></p></div>
+<map name="vl-p4">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,61,20,81" href="#bottom" />
+	<area coords="421,0,441,20" href="zip/vl-p4.zip" />
+	<area coords="421,61,441,81" href="stamp/vl-p4.rle" />
+	<area coords="0,0,70,81" href="rulevl/9p4-1.rle" />
+	<area coords="70,0,130,81" href="rulevl/10p4-1.rle" />
+	<area coords="130,0,190,81" href="rulevl/10p4bl.rle" />
+	<area coords="190,0,250,81" href="rulevl/12md.rle" />
+	<area coords="250,0,310,81" href="rulevl/14p4lp.rle" />
+	<area coords="310,0,370,81" href="rulevl/14p4lf.rle" />
+	<area coords="370,0,441,81" href="rulevl/40p4-1.rle" />
+</map>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Blinker">Blinker</a>,
+<a class="x" href="http://conwaylife.com/wiki/Block">Block</a>,
+<a class="x" href="http://conwaylife.com/wiki/Loaf">Loaf</a>,
+<a class="x" href="http://conwaylife.com/wiki/Long_ship">Long ship</a>,
+<a class="x" href="http://conwaylife.com/wiki/Mold">Mold</a>,
+<a class="x" href="http://conwaylife.com/wiki/Pre-block">Pre-block</a>.</p>
+</article>
+<hr /><article><a id="a12" name="a12"></a>
+<a id="vl-p5" name="vl-p5"></a>
+<h2>14 period 5 oscillators</h2>
+<p><img src="map/vl-p5.png" alt="VesselLife period 5 oscillators"
+ width="501" height="121" usemap="#vl-p5" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_vl-p5" class="i" href="javascript:Nav('vl-p5')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a11">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a13">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/vl-p5.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/vl-p5.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/vl-p5.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/vl-p5.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/vl-p5.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/vl-p5.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/vl-p5.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=vl-p5" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_vl-p5"><p><table id="t-vl-p5" style="width:505px">
+    <colgroup><col style="width:71px;" /><col span="6" style="width:60px;" />
+	<col style="width:72px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="rulevl/9p5tbtb.rle">
+	    P5 between two tubs [4]</a></td>
+	<td><a class="p" href="rulevl/10p5bttb.rle">
+	    P5 between boat and tub [4]</a></td>
+	<td><a class="p" href="rulevl/11p5btbt.rle">
+	    P5 between two boats [3]</a></td>
+	<td><a class="p" href="rulevl/11p5bgtb.rle">
+	    P5 between barge and tub [4]</a></td>
+	<td><a class="p" href="rulevl/12p5bgbt.rle">
+	    P5 between barge and boat [4]</a></td>
+	<td><a class="p" href="rulevl/12p5lbtb.rle">
+	    P5 between long boat and tub [4]</a></td>
+	<td colspan="2" class="s">&nbsp;</td>
+    </tr>
+    <tr>
+	<td><a class="p" href="rulevl/13p5lbbt.rle">
+	    P5 between long boat and boat [4]</a></td>
+	<td><a class="p" href="rulevl/13p5bgbg.rle">
+	    P5 between two barges [6]</a></td>
+	<td><a class="p" href="rulevl/13p5lgtb.rle">
+	    P5 between long barge and tub [4]</a></td>
+	<td><a class="p" href="rulevl/14p5lbbg.rle">
+	    P5 between long boat and barge [4]</a></td>
+	<td><a class="p" href="rulevl/14p5lgbt.rle">
+	    P5 between long barge and boat [4]</a></td>
+	<td><a class="p" href="rulevl/15p5lblb.rle">
+	    P5 between two long boats [5]</a></td>
+	<td><a class="p" href="rulevl/16oc.rle">
+	    Octagon 2 [10]</a></td>
+	<td><a class="p" href="rulevl/18eehv.rle">
+	    Beehive between two eaters [12]</a></td>
+    </tr>
+</table></p></div>
+<map name="vl-p5">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,101,20,121" href="#bottom" />
+	<area coords="481,0,501,20" href="zip/vl-p5.zip" />
+	<area coords="481,101,501,121" href="stamp/vl-p5.rle" />
+	<area coords="0,0,70,70" href="rulevl/9p5tbtb.rle" />
+	<area coords="70,0,130,70" href="rulevl/10p5bttb.rle" />
+	<area coords="130,0,190,70" href="rulevl/11p5btbt.rle" />
+	<area coords="190,0,250,70" href="rulevl/11p5bgtb.rle" />
+	<area coords="250,0,310,70" href="rulevl/12p5bgbt.rle" />
+	<area coords="310,0,370,70" href="rulevl/12p5lbtb.rle" />
+	<area coords="0,70,70,121" href="rulevl/13p5lbbt.rle" />
+	<area coords="70,70,130,121" href="rulevl/13p5bgbg.rle" />
+	<area coords="130,70,190,121" href="rulevl/13p5lgtb.rle" />
+	<area coords="190,70,250,121" href="rulevl/14p5lbbg.rle" />
+	<area coords="250,70,310,121" href="rulevl/14p5lgbt.rle" />
+	<area coords="310,70,370,121" href="rulevl/15p5lblb.rle" />
+	<area coords="370,70,430,121" href="rulevl/16oc.rle" />
+	<area coords="430,70,501,121" href="rulevl/18eehv.rle" />
+</map>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Barge">Barge</a>,
+<a class="x" href="http://conwaylife.com/wiki/Beehive">Beehive</a>,
+<a class="x" href="http://conwaylife.com/wiki/Boat">Boat</a>,
+<a class="x" href="http://conwaylife.com/wiki/Eater_1">Eater 1</a>,
+<a class="x" href="http://conwaylife.com/wiki/Long_barge">Long barge</a>,
+<a class="x" href="http://conwaylife.com/wiki/Long_boat">Long boat</a>,
+<a class="x" href="http://conwaylife.com/wiki/Octagon_2">Octagon 2</a>,
+<a class="x" href="http://conwaylife.com/wiki/Tub">Tub</a>.</p>
+</article>
+<hr /><article><a id="a13" name="a13"></a>
+<a id="vl-p6" name="vl-p6"></a>
+<h2>1 period 6 oscillator</h2>
+<p><img src="map/vl-p6.png" alt="VL p6"
+ width="81" height="81" usemap="#vl-p6" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_vl-p6" class="i" href="javascript:Nav('vl-p6')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a12">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a14">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/vl-p6.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/vl-p6.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/vl-p6.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/vl-p6.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/vl-p6.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/vl-p6.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/vl-p6.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=vl-p6" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_vl-p6"><p><table id="t-vl-p6" style="width:85px">
+    <colgroup><col style="width:83px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="rulevl/12p6tbtb.rle">
+	    P6 between two tubs [6]</a></td>
+    </tr>
+</table></p></div>
+<map name="vl-p6">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,61,20,81" href="#bottom" />
+	<area coords="61,0,81,20" href="zip/vl-p6.zip" />
+	<area coords="61,61,81,81" href="stamp/vl-p6.rle" />
+	<area coords="0,0,81,81" href="rulevl/12p6tbtb.rle" />
+</map>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Tub">Tub</a>.</p>
+</article>
+<hr /><article><a id="a14" name="a14"></a>
+<a id="vl-p8" name="vl-p8"></a>
+<h2>1 period 8 oscillator</h2>
+<p><img src="map/vl-p8.png" alt="VL p8"
+ width="81" height="81" usemap="#vl-p8" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_vl-p8" class="i" href="javascript:Nav('vl-p8')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a13">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a15">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/vl-p8.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/vl-p8.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/vl-p8.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/vl-p8.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/vl-p8.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/vl-p8.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/vl-p8.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=vl-p8" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_vl-p8"><p><table id="t-vl-p8" style="width:85px">
+    <colgroup><col style="width:83px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="rulevl/18p8-1.rle">
+	    18P8.1 [12]</a></td>
+    </tr>
+</table></p></div>
+<map name="vl-p8">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,61,20,81" href="#bottom" />
+	<area coords="61,0,81,20" href="zip/vl-p8.zip" />
+	<area coords="61,61,81,81" href="stamp/vl-p8.rle" />
+	<area coords="0,0,81,81" href="rulevl/18p8-1.rle" />
+</map>
+</article>
+<hr /><article><a id="a15" name="a15"></a>
+<a id="vl-p10" name="vl-p10"></a>
+<h2>3 period 10 oscillators</h2>
+<p><img src="map/vl-p10.png" alt="VesselLife p10s"
+ width="201" height="61" usemap="#vl-p10" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_vl-p10" class="i" href="javascript:Nav('vl-p10')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a14">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a16">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/vl-p10.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/vl-p10.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/vl-p10.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/vl-p10.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/vl-p10.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/vl-p10.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/vl-p10.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=vl-p10" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_vl-p10"><p><table id="t-vl-p10" style="width:205px">
+    <colgroup><col style="width:71px;" /><col style="width:60px;" />
+	<col style="width:72px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="rulevl/8p10-1.rle">
+	    8P10.1 [3]</a></td>
+	<td><a class="p" href="rulevl/13p10-1.rle">
+	    13P10.1 [6]</a></td>
+	<td><a class="p" href="rulevl/21lf2bk2.rle">
+	    Two blocks hassling two loaves [9]</a></td>
+    </tr>
+</table></p></div>
+<map name="vl-p10">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,41,20,61" href="#bottom" />
+	<area coords="181,0,201,20" href="zip/vl-p10.zip" />
+	<area coords="181,41,201,61" href="stamp/vl-p10.rle" />
+	<area coords="0,0,70,61" href="rulevl/8p10-1.rle" />
+	<area coords="70,0,130,61" href="rulevl/13p10-1.rle" />
+	<area coords="130,0,201,61" href="rulevl/21lf2bk2.rle" />
+</map>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Block">Block</a>,
+<a class="x" href="http://conwaylife.com/wiki/Loaf">Loaf</a>.</p>
+</article>
+<hr /><article><a id="a16" name="a16"></a>
+<a id="vl-p12" name="vl-p12"></a>
+<h2>1 period 12 oscillator</h2>
+<p><img src="map/vl-p12.png" alt="VL p12"
+ width="81" height="61" usemap="#vl-p12" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_vl-p12" class="i" href="javascript:Nav('vl-p12')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a15">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a17">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/vl-p12.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/vl-p12.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/vl-p12.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/vl-p12.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/vl-p12.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/vl-p12.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/vl-p12.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=vl-p12" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_vl-p12"><p><table id="t-vl-p12" style="width:85px">
+    <colgroup><col style="width:83px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="rulevl/15bd.rle">
+	    Baker&rsquo;s dozen [4]</a></td>
+    </tr>
+</table></p></div>
+<map name="vl-p12">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,41,20,61" href="#bottom" />
+	<area coords="61,0,81,20" href="zip/vl-p12.zip" />
+	<area coords="61,41,81,61" href="stamp/vl-p12.rle" />
+	<area coords="0,0,81,61" href="rulevl/15bd.rle" />
+</map>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Baker's_dozen">Baker&rsquo;s dozen</a>,
+<a class="x" href="http://conwaylife.com/wiki/Block">Block</a>,
+<a class="x" href="http://conwaylife.com/wiki/Loaf">Loaf</a>.</p>
+</article>
+<hr /><article><a id="a17" name="a17"></a>
+<a id="vl-p13" name="vl-p13"></a>
+<h2>1 period 13 oscillator</h2>
+<p><img src="map/vl-p13.png" alt="VL p13"
+ width="81" height="81" usemap="#vl-p13" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_vl-p13" class="i" href="javascript:Nav('vl-p13')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a16">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a18">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/vl-p13.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/vl-p13.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/vl-p13.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/vl-p13.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/vl-p13.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/vl-p13.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/vl-p13.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=vl-p13" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_vl-p13"><p><table id="t-vl-p13" style="width:85px">
+    <colgroup><col style="width:83px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="rulevl/20p13-1.rle">
+	    20P13.1 [12]</a></td>
+    </tr>
+</table></p></div>
+<map name="vl-p13">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,61,20,81" href="#bottom" />
+	<area coords="61,0,81,20" href="zip/vl-p13.zip" />
+	<area coords="61,61,81,81" href="stamp/vl-p13.rle" />
+	<area coords="0,0,81,81" href="rulevl/20p13-1.rle" />
+</map>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Block">Block</a>.</p>
+</article>
+<hr /><article><a id="a18" name="a18"></a>
+<a id="vl-p14" name="vl-p14"></a>
+<h2>1 period 14 oscillator</h2>
+<p><img src="map/vl-p14.png" alt="VL p14"
+ width="81" height="61" usemap="#vl-p14" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_vl-p14" class="i" href="javascript:Nav('vl-p14')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a17">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a19">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/vl-p14.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/vl-p14.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/vl-p14.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/vl-p14.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/vl-p14.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/vl-p14.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/vl-p14.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=vl-p14" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_vl-p14"><p><table id="t-vl-p14" style="width:85px">
+    <colgroup><col style="width:83px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="rulevl/14p14-1.rle">
+	    14P14.1 [6]</a></td>
+    </tr>
+</table></p></div>
+<map name="vl-p14">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,41,20,61" href="#bottom" />
+	<area coords="61,0,81,20" href="zip/vl-p14.zip" />
+	<area coords="61,41,81,61" href="stamp/vl-p14.rle" />
+	<area coords="0,0,81,61" href="rulevl/14p14-1.rle" />
+</map>
+</article>
+<hr /><article><a id="a19" name="a19"></a>
+<a id="vl-p15" name="vl-p15"></a>
+<h2>1 period 15 oscillator</h2>
+<p><img src="map/vl-p15.png" alt="VL p15"
+ width="121" height="81" usemap="#vl-p15" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_vl-p15" class="i" href="javascript:Nav('vl-p15')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a18">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a20">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/vl-p15.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/vl-p15.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/vl-p15.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/vl-p15.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/vl-p15.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/vl-p15.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/vl-p15.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=vl-p15" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_vl-p15"><p><table id="t-vl-p15" style="width:125px">
+    <colgroup><col style="width:123px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="rulevl/34p15-1.rle">
+	    34P15.1 [30]</a></td>
+    </tr>
+</table></p></div>
+<map name="vl-p15">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,61,20,81" href="#bottom" />
+	<area coords="101,0,121,20" href="zip/vl-p15.zip" />
+	<area coords="101,61,121,81" href="stamp/vl-p15.rle" />
+	<area coords="0,0,121,81" href="rulevl/34p15-1.rle" />
+</map>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Block">Block</a>.</p>
+</article>
+<hr /><article><a id="a20" name="a20"></a>
+<a id="vl-p16" name="vl-p16"></a>
+<h2>1 period 16 oscillator</h2>
+<p><img src="map/vl-p16.png" alt="VL p16"
+ width="81" height="81" usemap="#vl-p16" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_vl-p16" class="i" href="javascript:Nav('vl-p16')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a19">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a21">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/vl-p16.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/vl-p16.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/vl-p16.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/vl-p16.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/vl-p16.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/vl-p16.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/vl-p16.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=vl-p16" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_vl-p16"><p><table id="t-vl-p16" style="width:85px">
+    <colgroup><col style="width:83px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="rulevl/21p16-1.rle">
+	    21P16.1 [10]</a></td>
+    </tr>
+</table></p></div>
+<map name="vl-p16">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,61,20,81" href="#bottom" />
+	<area coords="61,0,81,20" href="zip/vl-p16.zip" />
+	<area coords="61,61,81,81" href="stamp/vl-p16.rle" />
+	<area coords="0,0,81,81" href="rulevl/21p16-1.rle" />
+</map>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Block">Block</a>,
+<a class="x" href="http://conwaylife.com/wiki/Pre-block">Pre-block</a>.</p>
+</article>
+<hr /><article><a id="a21" name="a21"></a>
+<a id="vl-p18" name="vl-p18"></a>
+<h2>1 period 18 oscillator</h2>
+<p><img src="map/vl-p18.png" alt="VL p18"
+ width="81" height="81" usemap="#vl-p18" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_vl-p18" class="i" href="javascript:Nav('vl-p18')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a20">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a22">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/vl-p18.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/vl-p18.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/vl-p18.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/vl-p18.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/vl-p18.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/vl-p18.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/vl-p18.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=vl-p18" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_vl-p18"><p><table id="t-vl-p18" style="width:85px">
+    <colgroup><col style="width:83px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="rulevl/23p18-1.rle">
+	    23P18.1 [10]</a></td>
+    </tr>
+</table></p></div>
+<map name="vl-p18">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,61,20,81" href="#bottom" />
+	<area coords="61,0,81,20" href="zip/vl-p18.zip" />
+	<area coords="61,61,81,81" href="stamp/vl-p18.rle" />
+	<area coords="0,0,81,81" href="rulevl/23p18-1.rle" />
+</map>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Block">Block</a>.</p>
+</article>
+<hr /><article><a id="a22" name="a22"></a>
+<a id="vl-p22" name="vl-p22"></a>
+<h2>2 period 22 oscillators</h2>
+<p><img src="map/vl-p22.png" alt="VesselLife p22s"
+ width="181" height="61" usemap="#vl-p22" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_vl-p22" class="i" href="javascript:Nav('vl-p22')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a21">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a23">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/vl-p22.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/vl-p22.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/vl-p22.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/vl-p22.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/vl-p22.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/vl-p22.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/vl-p22.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=vl-p22" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_vl-p22"><p><table id="t-vl-p22" style="width:185px">
+    <colgroup><col span="2" style="width:92px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="rulevl/16p22-1.rle">16P22.1;
+	    Two wings [6]</a></td>
+	<td><a class="p" href="rulevl/17p22-1.rle">
+	    17P22.1 [9]</a></td>
+    </tr>
+</table></p></div>
+<map name="vl-p22">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,41,20,61" href="#bottom" />
+	<area coords="161,0,181,20" href="zip/vl-p22.zip" />
+	<area coords="161,41,181,61" href="stamp/vl-p22.rle" />
+	<area coords="0,0,90,61" href="rulevl/16p22-1.rle" />
+	<area coords="90,0,181,61" href="rulevl/17p22-1.rle" />
+</map>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Block">Block</a>.</p>
+</article>
+<hr /><article><a id="a23" name="a23"></a>
+<a id="vl-p58" name="vl-p58"></a>
+<h2>1 period 58 oscillator</h2>
+<p><img src="map/vl-p58.png" alt="VL p58"
+ width="81" height="61" usemap="#vl-p58" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_vl-p58" class="i" href="javascript:Nav('vl-p58')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a22">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a24">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/vl-p58.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/vl-p58.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/vl-p58.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/vl-p58.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/vl-p58.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/vl-p58.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/vl-p58.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=vl-p58" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_vl-p58"><p><table id="t-vl-p58" style="width:85px">
+    <colgroup><col style="width:83px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="rulevl/12p58-1.rle">12P58.1;
+	    Two beehives [4]</a></td>
+    </tr>
+</table></p></div>
+<map name="vl-p58">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,41,20,61" href="#bottom" />
+	<area coords="61,0,81,20" href="zip/vl-p58.zip" />
+	<area coords="61,41,81,61" href="stamp/vl-p58.rle" />
+	<area coords="0,0,81,61" href="rulevl/12p58-1.rle" />
+</map>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Beehive">Beehive</a>.</p>
+</article>
+<hr /><article><a id="a24" name="a24"></a>
+<a id="vl-p68" name="vl-p68"></a>
+<h2>1 period 68 oscillator</h2>
+<p><img src="map/vl-p68.png" alt="VL p68"
+ width="81" height="61" usemap="#vl-p68" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_vl-p68" class="i" href="javascript:Nav('vl-p68')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a23">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a25">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/vl-p68.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/vl-p68.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/vl-p68.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/vl-p68.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/vl-p68.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/vl-p68.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/vl-p68.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=vl-p68" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_vl-p68"><p><table id="t-vl-p68" style="width:85px">
+    <colgroup><col style="width:83px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="rulevl/9p68-1.rle">
+	    9P68.1 [3]</a></td>
+    </tr>
+</table></p></div>
+<map name="vl-p68">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,41,20,61" href="#bottom" />
+	<area coords="61,0,81,20" href="zip/vl-p68.zip" />
+	<area coords="61,41,81,61" href="stamp/vl-p68.rle" />
+	<area coords="0,0,81,61" href="rulevl/9p68-1.rle" />
+</map>
+</article>
+<hr /><article><a id="a25" name="a25"></a>
+<a id="vl-p80" name="vl-p80"></a>
+<h2>1 period 80 oscillator</h2>
+<p><img src="map/vl-p80.png" alt="VL p80"
+ width="121" height="81" usemap="#vl-p80" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_vl-p80" class="i" href="javascript:Nav('vl-p80')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a24">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a26">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/vl-p80.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/vl-p80.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/vl-p80.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/vl-p80.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/vl-p80.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/vl-p80.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/vl-p80.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=vl-p80" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_vl-p80"><p><table id="t-vl-p80" style="width:125px">
+    <colgroup><col style="width:123px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="rulevl/20p80-1.rle">
+	    20P80.1 [7]</a></td>
+    </tr>
+</table></p></div>
+<map name="vl-p80">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,61,20,81" href="#bottom" />
+	<area coords="101,0,121,20" href="zip/vl-p80.zip" />
+	<area coords="101,61,121,81" href="stamp/vl-p80.rle" />
+	<area coords="0,0,121,81" href="rulevl/20p80-1.rle" />
+</map>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Block">Block</a>.</p>
+</article>
+<hr /><article><a id="a26" name="a26"></a>
+<a id="vl-p92" name="vl-p92"></a>
+<h2>1 period 92 oscillator</h2>
+<p><img src="map/vl-p92.png" alt="VL p92"
+ width="81" height="81" usemap="#vl-p92" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_vl-p92" class="i" href="javascript:Nav('vl-p92')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a25">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a27">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/vl-p92.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/vl-p92.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/vl-p92.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/vl-p92.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/vl-p92.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/vl-p92.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/vl-p92.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=vl-p92" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_vl-p92"><p><table id="t-vl-p92" style="width:85px">
+    <colgroup><col style="width:83px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="rulevl/24p92-1.rle">
+	    24P92.1 [4]</a></td>
+    </tr>
+</table></p></div>
+<map name="vl-p92">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,61,20,81" href="#bottom" />
+	<area coords="61,0,81,20" href="zip/vl-p92.zip" />
+	<area coords="61,61,81,81" href="stamp/vl-p92.rle" />
+	<area coords="0,0,81,81" href="rulevl/24p92-1.rle" />
+</map>
+</article>
+<hr /><article><a id="a27" name="a27"></a>
+<a id="vl-cons" name="vl-cons"></a>
+<h2>15 constellations</h2>
+<p><img src="map/vl-cons.png" alt="VesselLife constellations"
+ width="441" height="241" usemap="#vl-cons" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_vl-cons" class="i" href="javascript:Nav('vl-cons')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a26">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a28">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/vl-cons.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/vl-cons.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/vl-cons.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/vl-cons.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/vl-cons.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/vl-cons.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/vl-cons.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=vl-cons" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_vl-cons"><p><table id="t-vl-cons" style="width:445px">
+    <colgroup><col style="width:71px;" /><col span="5" style="width:60px;" />
+	<col style="width:72px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="rulevl/8bkbk35.rle">Two blocks
+	    offset (5, 3) [2]</a></td>
+	<td><a class="p" href="rulevl/8bkbk44.rle">Two blocks
+	    offset (4, 4) [3]</a></td>
+	<td><a class="p" href="rulevl/10snbk06.rle">Snake and block
+	    offset (6, 0) [2]</a></td>
+	<td><a class="p" href="rulevl/10btbt10.rle">
+	    Up boat behind boat&sup1; [4]</a></td>
+	<td><a class="p" href="rulevl/10snbk41.rle">Snake and block
+	    offset (1, 4) [3]</a></td>
+	<td><a class="p" href="rulevl/12bk3.rle">Three blocks
+	    offset (8, 3) and (4, 7) [2]</a></td>
+	<td><a class="p" href="rulevl/16lplp.rle">
+	    Two long ships [3]</a></td>
+    </tr>
+    <tr>
+	<td><a class="p" href="rulevl/6blbl04.rle">Two blinkers
+	    offset (4, 0)&sup2; [3]</a></td>
+	<td><a class="p" href="rulevl/6blbl05.rle">Two blinkers
+	    offset (5, 0) [2]</a></td>
+	<td><a class="p" href="rulevl/6blbl14.rle">Two blinkers
+	    offset (4, 1)&sup2; [3]</a></td>
+	<td><a class="p" href="rulevl/6blbl15.rle">Two blinkers
+	    offset (5, 1) [2]</a></td>
+	<td><a class="p" href="rulevl/6blbl29.rle">Two blinkers
+	    offset (9, 2) [2]</a></td>
+	<td><a class="p" href="rulevl/7bkbl6h.rle">Block and blinker
+	    offset (17, 6) [2]</a></td>
+	<td class="s">&nbsp;</td>
+    </tr>
+    <tr>
+	<td colspan="2"><a class="p" href="rulevl/8glbl.rle">
+	    Glider and blinker [2]</a></td>
+	<td colspan="2"><a class="p" href="rulevl/29mess.rle">3 blocks,
+	   3 blinkers and 18P3.1 [2]</a></td>
+	<td colspan="3" class="s">&nbsp;</td>
+    </tr>
+</table></p></div>
+<map name="vl-cons">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,221,20,241" href="#bottom" />
+	<area coords="421,0,441,20" href="zip/vl-cons.zip" />
+	<area coords="421,221,441,241" href="stamp/vl-cons.rle" />
+	<area coords="0,0,70,70" href="rulevl/8bkbk35.rle" />
+	<area coords="70,0,130,70" href="rulevl/8bkbk44.rle" />
+	<area coords="130,0,190,70" href="rulevl/10snbk06.rle" />
+	<area coords="190,0,250,70" href="rulevl/10btbt10.rle" />
+	<area coords="250,0,310,70" href="rulevl/10snbk41.rle" />
+	<area coords="310,0,370,70" href="rulevl/12bk3.rle" />
+	<area coords="370,0,441,70" href="rulevl/16lplp.rle" />
+	<area coords="0,70,70,130" href="rulevl/6blbl04.rle" />
+	<area coords="70,70,130,130" href="rulevl/6blbl05.rle" />
+	<area coords="130,70,190,130" href="rulevl/6blbl14.rle" />
+	<area coords="190,70,250,130" href="rulevl/6blbl15.rle" />
+	<area coords="250,70,310,130" href="rulevl/6blbl29.rle" />
+	<area coords="310,70,441,130" href="rulevl/7bkbl6h.rle" />
+	<area coords="0,130,130,241" href="rulevl/8glbl.rle" />
+	<area coords="130,130,250,241" href="rulevl/29mess.rle" />
+</map>
+<p>Note &sup1;: This constellation is a
+<a class="i" href="qp1.htm">quasi-still-life</a>.</p>
+<p>Note &sup2;: These constellations are
+<a class="i" href="qosc.htm">quasi-oscillators</a>.</p>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Blinker">Blinker</a>,
+<a class="x" href="http://conwaylife.com/wiki/Block">Block</a>,
+<a class="x" href="http://conwaylife.com/wiki/Boat">Boat</a>,
+<a class="x" href="http://conwaylife.com/wiki/Glider">Glider</a>,
+<a class="x" href="http://conwaylife.com/wiki/Long_ship">Long ship</a>,
+<a class="x" href="http://conwaylife.com/wiki/Pre-block">Pre-block</a>,
+<a class="x" href="http://conwaylife.com/wiki/Snake">Snake</a>.</p>
+</article>
+<hr /><article><a id="a28" name="a28"></a>
+<a id="vl-ss" name="vl-ss"></a>
+<h2>17 Spaceships</h2>
+<p><img src="map/vl-ss.png" alt="VesselLife spaceships"
+ width="501" height="301" usemap="#vl-ss" /></p>
+<p><table><colgroup><col span="12" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_vl-ss" class="i" href="javascript:Nav('vl-ss')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a27">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a29">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/vl-ss.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/vl-ss.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/vl-ss.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="lis/vl-ss.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/vl-ss.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/vl-ss.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=vl-ss" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_vl-ss"><p><table id="t-vl-ss" style="width:505px">
+    <colgroup><col style="width:91px;" /><col span="4" style="width:40px;" />
+	<col span="2" style="width:80px;" /><col style="width:92px;" />
+	</colgroup>
+    <tr>
+	<td><a class="p" href="rulevl/9lw.rle">Lightweight space&shy;ship;
+	    LWSS; Small fish; 9P4H2V0.1; Glider 1062 [4]</a></td>
+	<td colspan="2"><a class="p" href="rulevl/11mw.rle">Middleweight space&shy;ship;
+	    MWSS; Medium fish; 11P4H2V0.1 [3]</a></td>
+	<td colspan="2"><a class="p" href="rulevl/13hw.rle">Heavyweight space&shy;ship;
+	    HWSS; Big fish; 13P4H2V0.1 [3]</a></td>
+	<td><a class="p" href="rulevl/9ha.rle">
+	    Hat [4]</a></td>
+	<td><a class="p" href="rulevl/16o6.rle">
+	    16P6H2V0.1 [4]</a></td>
+	<td><a class="p" href="rulevl/24o6.rle">
+	    24P6H2V0.1 [6]</a></td>
+    </tr>
+    <tr>
+	<td><a class="p" href="rulevl/5gl.rle">Glider;
+	    Featherweight space&shy;ship; FWSS; 5P4H1V1.1; Glider 115 [2]</a></td>
+	<td colspan="2"><a class="p" href="rulevl/10bgl.rle">
+	    Big Glider [3]</a></td>
+	<td colspan="2" class="r"><a class="p" href="rulevl/19d4-1.rle">
+	    19P4H1D1.1 [x]</a></td>
+	<td class="r"><a class="p" href="rulevl/20d4-1.rle">
+	    20P4H1D1.1 [x]</a></td>
+	<td class="r"><a class="p" href="rulevl/21d4-1.rle">
+	    21P4H1D1.1 [x]</a></td>
+	<td class="r"><a class="p" href="rulevl/21d4-2.rle">
+	    21P4H1D1.2 [x]</a></td>
+    </tr>
+    <tr>
+	<td colspan="2" class="r"><a class="p" href="rulevl/32d4-1.rle">32P4H1D1.1;
+	    19P4H1D1.1 w/&#8203;tag-along [x]</a></td>
+	<td colspan="2" class="r"><a class="p" href="rulevl/26d4-1.rle">
+	    26P8H2D2.1 [x]</a></td>
+	<td colspan="2" class="r"><a class="p" href="rulevl/49d5.rle">
+	    49P5H1D1 [x]</a></td>
+	<td><a class="p" href="rulevl/5r.rle">R;
+	    R pent&shy;omino [2]</a></td>
+	<td><a class="p" href="rulevl/8j.rle">
+	    J [3]</a></td>
+    </tr>
+</table></p></div>
+<map name="vl-ss">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,281,20,301" href="#bottom" />
+	<area coords="481,0,501,20" href="zip/vl-ss.zip" />
+	<area coords="481,281,501,301" href="stamp/vl-ss.rle" />
+	<area coords="0,0,90,110" href="rulevl/9lw.rle" />
+	<area coords="90,0,170,110" href="rulevl/11mw.rle" />
+	<area coords="170,0,250,110" href="rulevl/13hw.rle" />
+	<area coords="250,0,330,110" href="rulevl/9ha.rle" />
+	<area coords="330,0,410,110" href="rulevl/16o6.rle" />
+	<area coords="410,0,501,110" href="rulevl/24o6.rle" />
+	<area coords="0,110,90,210" href="rulevl/5gl.rle" />
+	<area coords="90,110,170,210" href="rulevl/10bgl.rle" />
+	<area coords="170,110,250,210" href="rulevl/19d4-1.rle" />
+	<area coords="250,110,330,210" href="rulevl/20d4-1.rle" />
+	<area coords="330,110,410,210" href="rulevl/21d4-1.rle" />
+	<area coords="410,110,501,210" href="rulevl/21d4-2.rle" />
+	<area coords="0,210,130,301" href="rulevl/32d4-1.rle" />
+	<area coords="130,210,210,301" href="rulevl/26d4-1.rle" />
+	<area coords="210,210,330,301" href="rulevl/49d5.rle" />
+	<area coords="330,210,410,301" href="rulevl/5r.rle" />
+	<area coords="410,210,501,301" href="rulevl/8j.rle" />
+</map>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Glider">Glider</a>,
+<a class="x" href="http://conwaylife.com/wiki/Hat">Hat</a>,
+<a class="x" href="http://conwaylife.com/wiki/Heavyweight_spaceship">Heavyweight spaceship</a>,
+<a class="x" href="http://conwaylife.com/wiki/Lightweight_spaceship">Lightweight spaceship</a>,
+<a class="x" href="http://conwaylife.com/wiki/Middleweight_spaceship">Middleweight spaceship</a>.</p>
+</article>
+<hr /><article><a id="a29" name="a29"></a>
+<a id="vl-ws" name="vl-ws"></a>
+<h2>2 wicks stretchers</h2>
+<p>Two spaceships can extrude arbitrarily long ships behind them.</p>
+<p><img src="map/vl-ws.png" alt="VL wick stretchers"
+ width="181" height="81" usemap="#vl-ws" /></p>
+<p><table><colgroup><col span="12" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_vl-ws" class="i" href="javascript:Nav('vl-ws')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a28">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a30">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/vl-ws.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/vl-ws.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/vl-ws.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="lis/vl-ws.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/vl-ws.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/vl-ws.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=vl-ws" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_vl-ws"><p><table id="t-vl-ws" style="width:185px">
+    <colgroup><col span="2" style="width:92px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="rulevl/9shs4.rle">
+	    <i>c</i>/4 ship stretcher [3]</a></td>
+	<td><a class="p" href="rulevl/9shs12.rle">
+	    <i>c</i>/12 ship stretcher [3]</a></td>
+    </tr>
+</table></p></div>
+<map name="vl-ws">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,61,20,81" href="#bottom" />
+	<area coords="161,0,181,20" href="zip/vl-ws.zip" />
+	<area coords="161,61,181,81" href="stamp/vl-ws.rle" />
+	<area coords="0,0,90,81" href="rulevl/9shs4.rle" />
+	<area coords="90,0,181,81" href="rulevl/9shs12.rle" />
+</map>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Ship">Ship</a>.</p>
+</article>
+<hr /><article><a id="a30" name="a30"></a>
+<a id="vl-puff" name="vl-puff"></a>
+<h2>1 puffer</h2>
+<p><img src="map/vl-puff.png" alt="VL puffer"
+ width="81" height="81" usemap="#vl-puff" /></p>
+<p><table><colgroup><col span="12" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_vl-puff" class="i" href="javascript:Nav('vl-puff')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a29">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a31">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/vl-puff.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/vl-puff.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/vl-puff.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="lis/vl-puff.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/vl-puff.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/vl-puff.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=vl-puff" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_vl-puff"><p><table id="t-vl-puff" style="width:85px">
+    <colgroup><col style="width:83px;" /></colgroup>
+    <tr>
+	<td class="r"><a class="p" href="rulevl/20p5o14.rle">
+	    5c/14 dual block puffer [x]</a></td>
+    </tr>
+</table></p></div>
+<map name="vl-puff">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,61,20,81" href="#bottom" />
+	<area coords="61,0,81,20" href="zip/vl-puff.zip" />
+	<area coords="61,61,81,81" href="stamp/vl-puff.rle" />
+	<area coords="0,0,81,81" href="rulevl/20p5o14.rle" />
+</map>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Block">Block</a>.</p>
+</article>
+</main>
+<hr class="a" /><a id="a31" name="a31"></a>
+<a id="bottom" name="bottom"></a>
+<p><b>Other rules:</b>
+	<a class="i" href="lifepage.htm"><em>B3/S23</em> (Conway&rsquo;s Life)</a>,
+	<a class="i" href="b2s2.htm"><em>B2/S2</em> (2/2 Life)</a>,
+	<a class="i" href="b34s34.htm"><em>B34/S34</em> (3/4 Life)</a>,
+	<a class="i" href="b36s23.htm"><em>B36/S23</em> (HighLife)</a>,
+	<a class="i" href="b36s245.htm"><em>B36/S245</em> (Replicator rule)</a>,
+	<a class="i" href="b3xs23y.htm"><em>B3<i>x</i>/S23<i>y</i></em> (Life-like rules)</a>,
+	<a class="i" href="rulell.htm"><em>B2n3/S23-q</em> (LeapLife)</a>,
+	<em>B2n3-q5y6c/S23-k</em> (VesselLife),
+	<a class="i" href="rulemn.htm">Niemiec&rsquo;s Rules</a>,
+	<a class="i" href="color.htm">Multi-colored Life</a>.</p>
+<p><b>See also:</b>
+    <a href="lifestr.htm">structure</a>,
+    <a href="lifestyl.htm">style book</a>,
+    <a href="lifeterm.htm">definitions</a>,
+    <a href="lifemeth.htm">search methodologies</a>,
+    <a href="recipe.htm">conversion recipes</a>,
+    <a href="liferule.htm">other rules</a>,
+    <a href="lifenews.htm">news</a>,
+    <a href="lifecred.htm">credits</a>,
+    <a href="lifelink.htm">links</a>,
+    <a href="lifemap.htm">site map</a>,
+    <a class="i" target="lifesrch" href="lifesrch.htm">search</a>,
+    <a class="i" target="lifesrch" href="lifxsrch.htm">expanded search</a>,
+    <a class="i" target="srchhelp" href="srchhelp.htm">search help</a>.</p>
+<p><a href="index.htm">Home page</a> |
+<a href="lifepage.htm">Life page</a></p>
+<p><a href="lifepage.htm#copyright">Copyright &copy;
+1997, 1998, 1999, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022 by Mark. D. Niemiec.
+All rights reserved</a>.<br />
+This page was last updated on <em>2022-07-03</em>.</p>
+<script type="text/javascript"><!--
+"use strict";
+// Convert a named DOM object (id="id") into the actual object
+function Id (id) {
+    return document.getElementById (id);
+}
+// Expand or collapse stamp image text table
+function Nav (n) {
+    var v = Id ("a_" + n).childNodes[0].nodeValue === "+";
+    Id ("a_" + n).childNodes[0].nodeValue = v ? "\u2013" : "+";
+    Id ("b_" + n).style.display = v ? "block" : "none";
+}
+// Set alt and title attributes on an element
+function SetAltTitle (p, n) {
+    if (p && p.href) {
+	p.title = p.alt = n;
+    }
+}
+// Provide title tooltips for all stamp images
+function Titles () {
+    var q = [];				// name = q["id"][i];
+    var t = document.getElementsByTagName ("table");
+    for (i = 0; i < t.length; ++i) {
+	var n = t[i].id;		// table id
+	if (n) {
+	    var r = t[i].getElementsByTagName ("tr");
+	    var b = [];			// patterns in table
+	    for (var j = 0; j < r.length; ++j) {
+		var d = r[j].getElementsByTagName ("td");
+		for (var k = 0; k < d.length; ++k) {
+		    if (d[k].getElementsByTagName ("a"). length) {
+			// Get text in a way that works on most browsers
+			m = (d[k].textContent || d[k].innerText)
+			  .replace (/[\n\t]/g, " ") .replace (/   */g, " ")
+			  .replace (/^ /, "") .replace (/ $/, "")
+			  .replace (/[\xAD\u8230]/g, "");
+			b.push (m);
+		    }
+		}
+	    }
+	    q[n] = b;
+	}
+    }
+    var m = document.getElementsByTagName ("map");
+    for (var i = 0; i < m.length; ++i) {
+	var b = q["t-"+m[i].name];
+	var s = m[i].getElementsByTagName ("area");
+	if (s) {
+	    // First 4 areas are NW, SW, NE, SE corners; last is default
+	    // Others are in the same order as patterns in table
+	    SetAltTitle (s[0], "Top of page");
+	    SetAltTitle (s[1], "Bottom of page");
+	    if (s[3]) {
+		SetAltTitle (s[2], "Zip archive of all patterns");
+		SetAltTitle (s[3], "This stamp page");
+		for (var j = 4, k = 0; j < s.length; ++j) {
+		    var a = s[j].href;
+		    if ((n = a.indexOf ("~")) >= 0) {
+			SetAltTitle (s[j], a.substring (0, n));
+		    } else if (b && b[k]) {
+			SetAltTitle (s[j], b[k++]);
+		    }
+		}
+	    } else {
+		SetAltTitle (s[2], "This stamp page");
+	    }
+	}
+    }
+}
+Titles ();
+// -->
+</script>
+</body></html>

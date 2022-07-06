@@ -1,0 +1,10 @@
+#N 8lg.rle: 8.7; Long barge: Synthesis
+#O Mark D. Niemiec's life synthesis database, Fri Aug 04 16:19:21 2017
+#C  .O...
+#C  O.O..
+#C  .O.O.
+#C  ..O.O
+#C  ...O.
+x = 73, y = 9, rule = B36/S23
+9boo18bx19bo19bx$5boobbobo16bxbx17bobo17bxbx$6boobo19bxbx17bobo17bxbx$
+5bo24bx19bo19bxbx$55bo15bx$boo50boo$obo47boobboo$bbo47bobo$50bo!

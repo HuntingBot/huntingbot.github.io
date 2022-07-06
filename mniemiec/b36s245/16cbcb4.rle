@@ -1,0 +1,11 @@
+#N 16cbcb4.rle: Down crab below crab: Partial synthesis
+#O Mark D. Niemiec's life synthesis database, Fri Apr 24 18:44:22 2020
+#C  O.O......
+#C  OO.O.OO..
+#C  ..O...O..
+#C  ..OO.O.OO
+#C  ......O.O
+x = 45, y = 9
+bbx13b3o3bo17bxx$3x12boboob3o18bx$b3x11b3o3b3o16bxbxx$bx13boo4bo19bxbx
+$$3bx19bo4boo11bxbx$b3x17b3o3b3o11bxxbx$bb3x17b3oboobo13bx$bbx19bo3b3o
+14bxx!

@@ -1,0 +1,13 @@
+#N 33p4crs.rle: Cross: Pattern image
+#O Mark D. Niemiec's life synthesis database, Fri Jun 21 22:04:06 2013
+#C  ..O.O.O..
+#C  ...O.O...
+#C  O..O.O..O
+#C  .OOO.OOO.
+#C  O...O...O
+#C  .OOO.OOO.
+#C  O..O.O..O
+#C  ...O.O...
+#C  ..O.O.O..
+x = 9, y = 9, rule = B34/S34
+bbxbxbx$3bxbx$xbbxbxbbx$b3xb3x$x3bx3bx$b3xb3x$xbbxbxbbx$3bxbx$bbxbxbx!

@@ -1,0 +1,10 @@
+#N 13ram.rle: Ram; Krake: Synthesis
+#O Mark D. Niemiec's life synthesis database, Fri Jun 19 15:54:17 2020
+#C  OO...OO
+#C  O.O.O.O
+#C  ..O.O..
+#C  ..O.O..
+#C  ...O...
+x = 30, y = 13
+10bo$8boo$5bo3boo$6bo$4b3o16bxx3bxx$23bxbxbxbx$25bxbx$25bxbx$10bo15bx$
+9boo$bo7bobo$boo$obo!

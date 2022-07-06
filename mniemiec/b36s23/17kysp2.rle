@@ -1,0 +1,10 @@
+#N 17kysp2.rle: Bent key and skewed pole: Pattern image
+#O Mark D. Niemiec's life synthesis database, Sat Aug 05 02:14:30 2017
+#C  OO..........
+#C  O.........O.
+#C  .O.O.....O.O
+#C  ...OO..OO.O.
+#C  ....O..O....
+#C  ....O..O....
+x = 12, y = 6, rule = B36/S23
+xx$x9bx$bxbx5bxbx$3bxxbbxxbx$4bxbbx$4bxbbx!

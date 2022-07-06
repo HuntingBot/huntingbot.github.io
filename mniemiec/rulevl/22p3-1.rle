@@ -1,0 +1,49 @@
+#N 22p3-1.rle: 22P3.1; Short hooks eating tubs: Synthesis
+#O Mark D. Niemiec's life synthesis database, Tue Sep 01 16:28:04 2020
+#C  .OO...OO.
+#C  .O.O.O.O.
+#C  ...O.O...
+#C  ..O...O..
+#C  ..O...O..
+#C  .O.....O.
+#C  O.O...O.O
+#C  .O.....O.
+x = 193, y = 117
+45bo$46boo40bo$45boo42bo$87b3o$11bo$9bobo59by19bo$10boo3bo54byby17bobo
+$13boo55bybby16bobbo$14boo55byy18boo$32bxx18boo$32bxx18boo$45bobo$46b
+oo$46bo$41boo23bx19bo19bx$42boo21bxbx3bxx12bobo3boo12bxbx3bxx$41bo24bx
+bxxbbx13boboobbo13bxbxxbbx$70bxx18boo18bxx$$70bxx18boo18bxx$66bxbxxbbx
+13boboobbo13bxbxxbbx$50bo14bxbx3bxx12bobo3boo12bxbx3bxx$43b3obboo16bx
+19bo19bx$45bo3boo$44bo$$32bxx18boo$32bxx18boo$14boo55byy18boo$13boo55b
+ybby16bobbo$10boo3bo54byby17bobo$9bobo59by19bo$11bo$87b3o$45boo42bo$
+46boo40bo$45bo4$44bobo38bobo$45boo38boo$45bo40bo$$6bo39bo39bo39bo19bx$
+5bobo3boo18bxx12bobo3boo18bxx12bobo3boo18bxx12bobo3boo12bxbx$6boboobbo
+16bxbbx13boboobbo13bxxbxbbx13boboobbo13bxxbxbbx13boboobbo13bxx$10boo
+17b3x18boo14bxxb3x18boo14bxxb3x18boo$boo$obo7boo17b3x18boo14bxxb3x18b
+oo14bxxb3x18boo$bbo3boboobbo16bxbbx13boboobbo13bxxbxbbx13boboobbo13bxx
+bxbbx13boboobbo13bx$5bobo3boo18bxx12bobo3boo18bxx12bobo3boo18bxx12bobo
+3boo12bxbx$6bo39bo39bo39bo19bx$153byy$45bo40bo44b3o18byby$45boo38boo
+46bo19by$44bobo38bobo44bo6$bboo$3boo$bbo3bo14boo3bo19bo19bo19bo19bo19b
+o19bo39bo$5bobo3boo9boobobo3boo8boobbobo3boo12bobo3boo12bobo3boo12bobo
+3boo12bobo3boo12bobo3boo32bobo3boo$6boboobbo8bo4boboobbo7bobo3boboobbo
+8bo4boboobbo13boboobbo13boboobbo13boboobbo13boboobbo33boboobbo$10boo
+18boo10bo7boo9boo7boo18boo18boo18boo18boo38boo$60bobo$10boo18boo18boo
+18boo18boo18boo18boo18boo38boo$6boboobbo13boboobbo13boboobbo13boboobbo
+8boo3boboobbo13boboobbo13boboobbo13boboobbo33boboobbo$5bobo3boo12bobo
+3boo12bobo3boo12bobo3boo7bobobbobo3boo8boobbobo3boo12bobo3boo12bobo3b
+oo32bobo3boo$6bo19bo19bo19bo15bo3bo15boobbo19bo19bo39bo$101bo$123bo21b
+o40boo$123boo20boo40boo$122bobo19bobo39bo8$6bo19bo19bo19bo$5bobo3boo
+12bobo3boo12bobo3boo12bobo3boo$6boboobbo13boboobbo13boboobbo13boboobbo
+$10boo18boo18boo18boo$$10boo18boo18boo18boo$6boboobbo13boboobbo13boboo
+bbo13boboobbo$5bobo3boo12bobo3boo12bobo3boo12bobo3boo$6bo19bo19bo19bo
+$$8bo41boo21boo$8boo18b3o20boo21boo$7bobo20bo19bo22bo$29bo5$16bo$15boo
+18boo$6bo8bobo8bo7boo10bo19bo19bo19bo19bo19bo39bo$5bobo3boo12bobo3boo
+3bo8bobo3boo12bobo3boo12bobo3boo12bobo3boo12bobo3boo12bobo3boo32bobo3b
+oo$6boboobbo13boboobbo13boboobbobboo9boboobbo13boboobbo13boboobbo13bob
+oobbo13boboobbo33boboobbo$10boo18boo18boobboo14boo3boo13boo18boo18boo
+18boo38boo$56bo18bobo17boo$10boo18boo18boo18boo3bo14boo3bobo12boo18boo
+18boo38boo$6boboobbo13boboobbo13boboobbo13boboobbo13boboobbobbo10boboo
+bbobboo9boboobbo13boboobbo33boboobbo$5bobo3boo12bobo3boo12bobo3boo12bo
+bo3boo12bobo3boo12bobo3booboo9bobo3boobboo8bobo3boo32bobo3boo$6bo19bo
+19bo19bo19bo19bo9bo9bo7boo10bo39bo$136bo$149bo36bo$148boo35boo$148bobo
+34bobo!

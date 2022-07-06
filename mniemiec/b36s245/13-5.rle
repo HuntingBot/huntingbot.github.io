@@ -1,0 +1,11 @@
+#N 13-5.rle: 13.5; Dagger w/front shoe: Partial synthesis
+#O Mark D. Niemiec's life synthesis database, Sat Apr 25 01:26:34 2020
+#C  O..O..
+#C  OOOO..
+#C  ..O.OO
+#C  ..OOO.
+#C  ....O.
+x = 56, y = 13
+31boo$bx19bo9boo18bx$b3x17b3o7boboo16b3x$xxbx16boobo7b4o15bxxbx$bb3x
+17b3o27b4x$bbx19bo29bxbbx$31b4o$31boboo$31boo$31boo12boo$44b4o$44boo$
+45bo!

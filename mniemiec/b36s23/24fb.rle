@@ -1,0 +1,17 @@
+#N 24fb.rle: Fore and back; Complementary blinker: Synthesis
+#O Mark D. Niemiec's life synthesis database, Wed Jul 11 15:26:59 2018
+#C  OO.OO..
+#C  OO.O.O.
+#C  ...O..O
+#C  OO...OO
+#C  O..O...
+#C  .O.O.OO
+#C  ..OO.OO
+x = 169, y = 25
+130bo$104byy25bobboo$103bybby22b3obobbo$104byy28boo$75bo$73boo$21bo4bo
+47boo$22bobbo26bx29bo$20b3obb3o23bxbx22bo4bobo$52bx22boo5bo19bxxbxx25b
+ooboo25bxxbxx$28b3o44bobo24bxxbxbx24boobobo24bxxbxbx$28bo76bxbbx26bobb
+o26bxbbx$bo27bo72bxx3bxx23boo3boo23bxx3bxx$bbo99bxbbx26bobbo26bxbbx$3o
+70bobo27bxbxbxx24boboboo24bxbxbxx$38bx29bo5boo28bxxbxx25booboo25bxxbxx
+$3b3obb3o26bxbx27bobo4bo$5bobbo29bx29bo$4bo4bo65boo$76boo$75bo$105byy
+28boo$104bybby26bobbob3o$105byy28boobbo$140bo!

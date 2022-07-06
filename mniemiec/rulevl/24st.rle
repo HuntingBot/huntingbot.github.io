@@ -1,0 +1,26 @@
+#N 24st.rle: Star: Pattern image
+#O Mark D. Niemiec's life synthesis database, Tue Aug 25 01:40:50 2020
+#C  ....OOO....
+#C  ...........
+#C  ..O.O.O.O..
+#C  ...........
+#C  O.O.....O.O
+#C  O.........O
+#C  O.O.....O.O
+#C  ...........
+#C  ..O.O.O.O..
+#C  ...........
+#C  ....OOO....
+x = 137, y = 53
+10b3x$$8bxbxbxbx$$6bxbx5bxbx$6bx9bx$6bxbx5bxbx$$8bxbxbxbx$$10b3x10$10b
+3o17b3x17b3o17b3x$$8bobobobo13bxbxbxbx13bobobobo13bxbxbxbx$$6bobo5bobo
+9bxbx5bxbx9bobo5bobo9bxbx5bxbx$6bo9bo9bx9bx9bo9bo9bx9bx$6bobo5bobo9bxb
+x5bxbx9bobo5bobo9bxbx5bxbx$$8bobobobo13bxbxbxbx13bobobobo13bxbxbxbx$$
+10b3o17b3x17b3o17b3x3$13bo34bo$13boo33boo$12bobo32bobo5$10b3o17b3o17b
+3o17b3o17b3o17b3o17b3o$$boo5bobobobo6b3o4bobobobo13bobobobo13bobobobo
+13bobobobo13bobobobo13bobobobo$obo20bo$bbo3bobo5bobo5bo3bobo5bobo4b3o
+bbobo5bobo9bobo5bobo9bobo5bobo9bobo5bobo9bobo5bobo$6bo9bo9bo9bo6bobbo
+9bo9bo9bo9bo9bo5boobbo9bo9bo9bo$6bobo5bobo9bobo5bobo5bo3bobo5bobo9bobo
+5bobo9bobo5bobo4bobobbobo5bobo9bobo5bobo$83boo18bo$8bobobobo13bobobobo
+13bobobobo7b3o3bobobobo7bobo3bobobobo13bobobobo13bobobobo$64bo19bo$10b
+3o17b3o17b3o10bo6b3o17b3o17b3o11boo4b3o$125boo$124bo!

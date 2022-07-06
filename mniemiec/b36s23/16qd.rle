@@ -1,0 +1,10 @@
+#N 16qd.rle: Quad; Square quad; Barber-pole intersection: Pattern image
+#O Mark D. Niemiec's life synthesis database, Fri Aug 04 17:13:57 2017
+#C  OO..OO
+#C  O.O..O
+#C  ....O.
+#C  .O....
+#C  O..O.O
+#C  OO..OO
+x = 6, y = 6, rule = B36/S23
+xxbbxx$xbxbbx$4bx$bx$xbbxbx$xxbbxx!

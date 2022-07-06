@@ -1,0 +1,10 @@
+#N 12fx.rle: Fox; Gnome: Pattern image
+#O Mark D. Niemiec's life synthesis database, Fri Aug 04 17:26:13 2017
+#C  ..OOO..
+#C  O......
+#C  O...O..
+#C  O.O....
+#C  ..O..OO
+#C  ....O..
+x = 6, y = 7, rule = B36/S23
+b3x$$xbbxx$x$xbxbbx$4bx$4bx!

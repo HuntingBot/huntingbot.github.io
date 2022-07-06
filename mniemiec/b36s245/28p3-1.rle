@@ -1,0 +1,13 @@
+#N 28p3-1.rle: 28P3.1: Pattern image
+#O Mark D. Niemiec's life synthesis database, Tue Apr 21 14:05:23 2020
+#C  ....O....
+#C  ...O.O...
+#C  ..OOO.O..
+#C  .O.O.OOO.
+#C  O.O...O.O
+#C  .OOO.O.O.
+#C  ..O.OOO..
+#C  ...O.O...
+#C  ....O....
+x = 9, y = 9
+4bx$3bxbx$bb3xbx$bxbxb3x$xbx3bxbx$b3xbxbx$bbxb3x$3bxbx$4bx!

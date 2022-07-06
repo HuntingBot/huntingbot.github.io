@@ -1,0 +1,10 @@
+#N 11lit.rle: Long integral w/tub: Synthesis
+#O Mark D. Niemiec's life synthesis database, Mon Aug 31 19:55:24 2020
+#C  OO.....
+#C  O..OO..
+#C  .OO..O.
+#C  ....O.O
+#C  .....O.
+x = 36, y = 23
+obo$boo$bo6$15bobo$16boo$16bo14bxx$31bxbx$15boo16bx$16boo14bx$15bo16bx
+bx$33bxbx$34bx4$27boo$27bobo$27bo!

@@ -1,0 +1,14 @@
+#N 15fttbt1.rle: Up boat on furst w/two tails: Synthesis
+#O Mark D. Niemiec's life synthesis database, Fri Jul 10 16:08:28 2020
+#C  O.........
+#C  OOO.......
+#C  ...O......
+#C  ..O.......
+#C  ...OOO.OO.
+#C  .....O.O.O
+#C  ........O.
+x = 74, y = 50
+27bo$25boo$26boo9$6bo$5bo$5b3o7$16bo$15boo$5bo9bobo$3bobo$4boo$$3o24b
+xx18boo18bxx$bbo25bx19bo19bx$bo26bxbx17bobo17bxbx$29bxbx17bobo17bxbx$
+31bx19bo19bx$31bxx18boo18bxx$$53bo17bxx$52boo17bxbx$52bobo17bx3$8boo$
+7boo$9bo7$17boo$17bobo$17bo!

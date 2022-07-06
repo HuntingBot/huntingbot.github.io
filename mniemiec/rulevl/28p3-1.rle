@@ -1,0 +1,47 @@
+#N 28p3-1.rle: 28P3.1; Double cuphook: Synthesis
+#O Mark D. Niemiec's life synthesis database, Tue Sep 01 16:32:40 2020
+#C  .OO...OO.
+#C  .O.O.O.O.
+#C  ...O.O...
+#C  ...O.O...
+#C  O..O.O..O
+#C  OO.O.O.OO
+#C  ...O.O...
+#C  ..OO.OO..
+x = 191, y = 146
+114bobo$114boo$8bo106bo$6bobo83by19bo$7boo21bx29bo31by19bo$29bxbx27bob
+o30by19bo$10bo19bxbx27bobo8b3o$10boo19bxx28boo9bo$9bobo61bo4$85bxx18b
+oo18bxx$45bo39bx3bxx14bo3boo14bx3bxx$45boo36bx6bx12bo6bo12bx6bx$44bobo
+36b7x13b7o13b7x$$58bo24b7x13b7o13b7x$58bobo22bx6bx12bo6bo12bx6bx$58boo
+25bx3bxx14bo3boo14bx3bxx$55bo29bxx18boo18bxx$56bo$54b3o$$73bo$72bo$71b
+3o$92by19bo$92by19bo$92by19bo$115bo$114boo$114bobo6$72bo$71boo$71bobo
+12$5boo18bxx18boo18bxx18boo38boo38boo$5bo3boo14bxx18bo3boo14bxx18bo3b
+oo18bxx14bo3boo3bo23bobo4bo3boo18bxx$3bo6bo32bo6bo32bo6bo17bxbx12bo6bo
+bboo8bxx14boobbo6bo16bxbbx$3b7o33b7o33b7o17bxbx13b7o3bobo7bxx14bo3b7o
+17b3x$108bx$3b7o33b7o29bo3b7o33b7o13bxx14bo3b7o17b3x$3bo6bo32bo6bo28b
+oobbo6bo32bo6bo12bxx14boobbo6bo16bxbbx$5bo3boo34bo3boo27bobo4bo3boo34b
+o3boo27bobo4bo3boo18bxx$5boo38boo38boo38boo38boo$$boo$bboo38b3o$bo40bo
+$43bo3$7bobo42bo$7boo44bo37bobo$8bo42b3o38boo$92bo$5boo38boo18bxx18boo
+18bxx18boo18bxx18boo18bxx$5bo3boo18bxx14bo3boo14bx19bo3boo14bx19bo3boo
+bbobo9bx19bo3boobbo11bx$3bo6bo16bxbbx12bo6bo12bx3bx15bo6bo12bx3bx15bo
+6bobboo8bx3bx15bo6bobbobo7bx3bx$3b7o17b3x13b7o13b5x15b7o13b5x15b7o4bo
+8b5x15b7o3boo8b5x$$3b7o17b3x13b7o13b5x15b7o13b5x15b7o4bo8b5x15b7o3boo
+8b5x$3bo6bo16bxbbx12bo6bo12bx3bx15bo6bo12bx3bx15bo6bobboo8bx3bx15bo6bo
+bbobo7bx3bx$5bo3boo18bxx14bo3boo14bx19bo3boo14bx19bo3boobbobo9bx19bo3b
+oobbo11bx$5boo38boo18bxx18boo18bxx18boo18bxx18boo18bxx$92bo$8bo42b3o
+38boo$7boo44bo37bobo$7bobo42bo17$oo$boobboo18boo18boo18boo18boo18boo$o
+4bo3boo14bo3boo14bo3boo14bo3boo14bo3boo14bo3boo$3bo6bo12bo6bo12bo6bo
+12bo6bo12bo6bo12bo6bo$3b7o13b7o13b7o13b7o13b7o13b7o$$3b7o13b7o13b7o13b
+7o13b7o13b7o$3bo6bo8boobbo6bo12bo6bo12bo6bo12bo6bo12bo6bo$5bo3boo7bobo
+4bo3boo14bo3boo14bo3boo14bo3boo14bo3boo$5boo13bo4boo12boo4boo14bo3boo
+18boo18boo$40boo19boo$39bo20bobo$82boo20boo$83boo20boo$82bo21bo17$5boo
+18boo18boo18boo18boo18boo18boo18boo18boo18boo$5bo3boo14bo3boo14bo3boo
+14bo3boo14bo3boo14bo3boo14bo3boo14bo3boo14bo3boo14bo3boo$3bo6bo12bo6bo
+12bo6bo12bo6bo12bo6bo12bo6bo12bo6bo12bo6bo12bo6bo12bo6bo$3b7o13b7o13b
+7o13b7o13b7o13b7o13b7o13b7o13b7o13b7o$12b3o$3b7obbo10b7o13b7o13b7o13b
+7o13b7o13b7o13b7o13b7o13b7o$3bo6bobbo9bo6bobboo8bo6bo12bo6bo12bo6bo12b
+o6bo12bo6bo12bo6bo12bo6bo12bo6bo$5bo3boo14bo3boobbobo9bo3boob3o10bo3b
+oo14bo3boo14bo3boo14bo3boo14bo3boo14bo3boo14bo3boo$5boo18boo6bo11boo5b
+o12boo18boo18boo18boo18boo18boo18boo$53bo$72boo14b3o18boo18boo32bo$71b
+oo15bo19boo19bobo13boo15boo19boo$73bo15bo20bo18bo14boo16bobo17boo$146b
+o37bo!

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="copyright" content="1997,1998,1999,2013,2015,2016,2017,2018,2019,2020,2021,2022 Mark D. Niemiec" />
+<title>Other Cellular Automata Rules</title>
+<meta name="description"
+content="Other Cellular Automata Rules" />
+<meta name="keywords"
+content="conway game life other ceulluar automata rules" />
+<link rel="prev" href="common.htm" />
+<link rel="next" href="b2s2.htm" />
+<link rel="search" href="lifesrch.htm" />
+<link rel="author" href="lifecred.htm#niemiec" />
+<link rel="license" href="lifepage.htm#copyright" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="shortcut icon" href="images/23-64.ico" />
+<style type="text/css">
+    body{lang="en-US";hyphens:auto;color:black;background-color:white;
+      margin-top:0;padding:0;border:0;height:100%;
+      font-family:Verdana,Arial,Helvetica,sans-serif;}
+    hr.a{border-style:solid;border-width:3px;border-color:#000000;}
+    h1{text-align:center;
+      font-family:Verdana,Arial,Helvetica,sans-serif;font-variant:small-caps;}
+    h2{font-family:Verdana,Arial,Helvetica,sans-serif;font-variant:small-caps;}
+    h3{font-family:Verdana,Arial,Helvetica,sans-serif;font-variant:small-caps;}
+    i{font-family:"Times New Roman",Times,serif;}
+    pre{hyphens:manual;}
+    img{border:2px black solid;}
+    ul,ol{margin-left:0px;padding-left:1en;}
+    table{border:1px black solid;border-spacing:0px;border-collapse:collapse;
+      table-layout:fixed;}
+    td,th{border:1px black solid;vertical-align:top;font-size:12px;padding:1px;}
+    td a{display:block;}
+    a{text-decoration:none;}
+    a:focus{text-decoration:underline;} a:hover{text-decoration:underline;}
+    a.p:link{color:#008000;} a.p:visited{color:#00C000;}
+    a.i:link{color:#000080;} a.i:visited{color:#0000C0;}
+    a.j:link{color:#008080;} a.j:visited{color:#00C0C0;}
+    a.x:link{color:#800000;} a.x:visited{color:#C00000;}
+    td:hover{background-color:#F0F0F0;}
+    .s{background-color:#E0E0E0;} td.s:hover{background-color:#E0E0E0;}
+    .b{background-color:#C0C0FF;} td.b:hover{background-color:#E0E0FF;}
+    .g{background-color:#C0FFC0;} td.g:hover{background-color:#E0FFE0;}
+    .t{background-color:#C0FFFF;} td.t:hover{background-color:#E0FFFF;}
+    .r{background-color:#FFC0C0;} td.r:hover{background-color:#FFE0E0;}
+    .m{background-color:#FFC0FF;} td.m:hover{background-color:#FFE0FF;}
+    .y{background-color:#FFFFC0;} td.y:hover{background-color:#FFFFE0;}
+    .o{background-color:#FFD0AA;} td.o:hover{background-color:#FFE8D5;}
+    .v{background-color:#FFAAD0;} td.v:hover{background-color:#FFD5E8;}
+    .h{background-color:#E0E0FF;} td.h:hover{background-color:#F0F0FF;}
+    .k{background-color:#000000;color:#FFFFFF;} td.k:hover{background-color:#C0C0C0;}
+    .n{background-color:#F0F0F0;text-align:center;} th.n:hover{background-color:#F8F8F8;}
+    .c{text-align:center;} .u{display:none;}
+</style>
+</head>
+<body>
+<h1>Other Cellular Automata Rules</h1>
+<p class="c">
+	<b><a class="j" href="#rule-intro">Introduction</a></b><br />
+	<b><a class="j" href="#rule-rules">Rules</a>:</b>
+	<a class="j" href="#rule-total">Totalistic</a> |
+	<a class="j" href="#rule-outer">Outer totalistic</a> |
+	<a class="j" href="#rule-non">Non-totalistic</a><br />
+	<b><a class="j" href="#rule-download">Download Golly Rules</a></b>
+</p>
+<hr class="a" /><main>
+<article><a id="a0" name="a0"></a>
+<a id="rule-intro" name="rule-intro"></a>
+<h2>Introduction</h2>
+<p>All the rules described here are similar to Life, with some minor changes.
+Unless otherwise noted, they all are all two state (i.e. cells are dead or
+alive) and use a Moore neighborhood (i.e. a two-dimensional square lattice
+in which every cell&rsquo;s neighborhoods consists of the 4
+orthogonally adjacent and 4 diagonally adjacent cells).</p>
+</article>
+<hr class="a" /><article><a id="a1" name="a1"></a>
+<a id="rule-rules" name="rule-rules"></a>
+<h2>Rules</h2>
+<a id="rule-total" name="rule-total"></a>
+<h3>Totalistic rules</h3>
+<p>In totalistic rules, the state of a cell in the next generation is determined
+solely by the number of its living neighbors, which may or may not also include
+itself. The particular orientation of those neighbors is not important.
+Two examples of such rules are studied here:</p>
+<p><ul>
+    <li><b><a class="i" href="b2s2.htm"><em>B2/S2</em> (2/2 Life)</a></b>:
+	This explosive rule has both birth and survival on 2. Patterns are
+	extremely volatile, and it is difficult to make them <em>not</em>
+	expand without limit.</li>
+    <li><b><a class="i" href="b34s34.htm"><em>B34/S34</em> (3/4 Life)</a></b>:
+	This explosive rule has both birth and survival on 3 or 4 neighbors.
+	There was a fairly extensive discussion of this rule in the Lifeline
+	newsletter in the 1970s. It is also fairly interesting, but many
+	patterns expand infinitely, making it harder to work with.</li>
+</ul></p>
+<a id="rule-outer" name="rule-outer"></a>
+<h3>Outer totalistic rules</h3>
+<p>Outer totalistic rules (or semi-totalistic rules) form a superset of
+totalistic rules. The state of a cell in the next generation is determined by
+both its own state, and the number of its living neighbors, excluding itself.
+The particular orientation of those neighbors is not important. Several
+examples of such rules are studied here:</p>
+<p><ul>
+    <li><b><a class="i" href="lifepage.htm"><em>B3/S23</em>
+	(Conway&rsquo;s Game of Life)</a></b>: This rule has
+	birth on 3 neighbors, and survival on 2 or 3 neighbors. This is one
+	of the most interesting, and most widely studied two-dimensional
+	cellular automata, and the subject of most of these pages.</li>
+    <li><b><a class="i" href="b36s23.htm"><em>B36/S23</em> (HighLife)</a></b>:
+	This rule is almost identical to Life, and differs only in that birth
+	is also allowed on 6 neighbors. Its behaves very similarly to Life,
+	but also includes a small common sawtooth replicator, and several new
+	oscillators.</li>
+    <li><b><a class="i" href="b36s245.htm"><em>B36/S245;</em>
+	(Replicator rule)</a></b>: This is a rule that has a very small
+	natural replicator. Patterns grow very differently than in Life,
+	and do not tend to grow much, except when replicators form.</li>
+    <li><b><a class="i" href="b3xs23y.htm"><em>B3<i>x</i>/S23<i>y</i></em>
+	(Life-like rules)</a></b>: These rules are almost identical to Life,
+	and differ only in that birth and/or survival are also allowed on 8
+	neighbors. These behave very similarly to Life, but exhibit a few
+	minor differences worth noting.</li>
+    <li><b><a class="i" href="color.htm">Multi-colored Life</a></b>:
+	This describes several enhanced multi-state versions of Life, where
+	cells are born and die the same way as in Life, but there are multiple
+	living states (typically indicated by different colors) that supply
+	additional information and complexity.</li>
+</ul></p>
+<a id="rule-non" name="rule-non"></a>
+<h3>Non-totalistic rules</h3>
+<p>Non-totalistic rules are a superset of outer totalistic rules. The state of
+a cell in the next generation is determined by both its own state, and not only
+the number of its living neighbors, but also their particular orientations.
+The most studied examples of these are isotropic (i.e. birth and survival
+conditions are invariant under rotation and reflection), and Golly fully
+supports them. One group of related rules is studied here:</p>
+<p><ul>
+    <li><b><a class="i" href="rulell.htm"><em>B2n3/S23-q</em> (LeapLife)</a></b>
+	is a rule fairly similar to Life that is distinguished by a small
+	natural knight-ship, <em>Lepa</em>.</li>
+    <li><b><a class="i" href="rulevl.htm"><em>B2n3-q5y6c/S23-k</em> (VesselLife)</a></b>,
+	is a rule similar to LeapLife that is distinguished by several
+	additional small natural spaceships, plus two small natural
+	wick-stretchers that can grow ships of arbitrary length.</li>
+    <li><b><a class="i" href="rulemn.htm">Niemiec&rsquo;s Rules</a></b>:
+	This is actually several closely-related rules. While the birth
+	conditions are outer totalistic (and, in fact, the same as Life&rsquo;s),
+	the survival conditions are not totalistic &mdash; i.e. they depend not
+	only on the number of neighbors, but also their relative positions.
+	Birth occurs on any 3 neighbors, while survival occurs on 2&hellip;4
+        neighbors that are orthogonally connected to the original cell (i.e.
+	diagonal neighbors are allowed only if they are themselves adjacent to
+	one or two orthogonal neighbors). There are 3 optional neighborhoods
+	where survival may or may not be permitted. These yield 8
+	closely-related rule variants. Most common patterns are shared by all
+	variants. Some characteristics of these rules are that most useful
+	patterns are ominoes, or are composed almost entirely of ominoes;
+	there are also 4 common spaceships, all of different velocities,
+	several simple guns and puffers, and a common replicator, which makes
+	some of the variants explosive.</li>
+</ul></p>
+</article>
+<hr /><article><a id="a2" name="a2"></a>
+<a id="rule-download" name="rule-download"></a>
+<h2>Download Golly Rules</h2>
+<p>While most of the above rules have files that can be viewed by
+most Life programs, non-totalistic rules (e.g.
+<a class="i" href="rulell.htm">LeapLife</a>,
+<a class="i" href="rulevl.htm">VesselLife</a>, or
+<a class="i" href="rulemn.htm">Niemiec&rsquo;s Rules</a>)
+require Golly version 2.8 and later, and
+two others (<a class="i" href="color.htm">Color Life</a>, and the
+<a class="i" href="lifemeth.htm">Search Methodologies</a> pages)
+can be run by Golly versions 2.5 and later, but require special rule files
+to first be downloaded and installed. Each of those pages includes a link to
+download rule files necessary to view them, or they can all be downloaded in
+one <a class="p" href="zip/rules.zip" download="rules.zip">zip file</a>
+to conveniently install them all at once. Just open the zip file, and copy all
+the rule files to the target directly.
+They can either be installed for all users (in the Rules directory directly
+under where the Golly application is installed), or in the current
+user&rsquo;s personal Rule directory. (To find out where this is, run Golly,
+select <em>File/Preferences&hellip;</em>, and look at the <em>Control</em> tab.
+It is displayed right next to the <em>Your Rules&hellip;</em> button.</p>
+</article>
+</main>
+<hr class="a" /><p><b>See also:</b>
+    <a href="lifestr.htm">structure</a>,
+    <a href="lifestyl.htm">style book</a>,
+    <a href="lifeterm.htm">definitions</a>,
+    <a href="lifemeth.htm">search methodologies</a>,
+    <a href="recipe.htm">conversion recipes</a>,
+    <a href="liferule.htm">other rules</a>,
+    <a href="lifenews.htm">news</a>,
+    <a href="lifecred.htm">credits</a>,
+    <a href="lifelink.htm">links</a>,
+    <a href="lifemap.htm">site map</a>,
+    <a class="i" target="lifesrch" href="lifesrch.htm">search</a>,
+    <a class="i" target="lifesrch" href="lifxsrch.htm">expanded search</a>,
+    <a class="i" target="srchhelp" href="srchhelp.htm">search help</a>.</p>
+<p><a href="index.htm">Home page</a> |
+<a href="lifepage.htm">Life page</a></p>
+<p><a href="lifepage.htm#copyright">Copyright &copy;
+1997, 1998, 1999, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022 by Mark. D. Niemiec.
+All rights reserved</a>.<br />
+This page was last updated on <em>2022-07-03</em>.</p>
+</body></html>

@@ -1,0 +1,12 @@
+#N 8lp.rle: 8.3; Long ship: Synthesis
+#O Mark D. Niemiec's life synthesis database, Fri Aug 11 04:38:00 2017
+#C  OO..
+#C  O.O.
+#C  .O.O
+#C  ..OO
+x = 75, y = 42, rule = B36/S23
+12bo18bxx18boo18bxx$11bo19bxbx17bobo17bxbx$11b3o18bxbx17bobo17bxbx$5b
+3o25bx19bo19bxx$7bo$6bo52boo$55bobboo$6boo47boo3bo$bo4bobo45bobo$boo3b
+o$obo$59boo$58boo$60bo15$50bo$51bo$8bo40b3o19bxx$9bo61bxbx$7b3o62bxbx$
+28bxx18boo4boo17bxx$28bx16bobbo5bobo$10bo20bx11bobo5bobbo$10bobo17bxx
+12boo4boo13bxx$10boo53bxbx$66bxbx$7boo39b3o16bxx$8boo38bo$7bo41bo!

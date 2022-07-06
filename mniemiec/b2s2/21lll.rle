@@ -1,0 +1,9 @@
+#N 21lll.rle: Three lines: Synthesis
+#O Mark D. Niemiec's life synthesis database, Sun Apr 10 05:42:28 2016
+#C  OOOOO........
+#C  .............
+#C  .OOOOOOOOOOO.
+#C  .............
+#C  ........OOOOO
+x = 33, y = 9, rule = B2/S2
+obbo$$boo4bobbo9b5x$$3boo3boo11b11x$$bbobbo4boo16b5x$$9bobbo!

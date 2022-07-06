@@ -1,0 +1,9 @@
+#N 14m3run.rle: M3: Run methusaleh
+#O Mark D. Niemiec's life synthesis database, Tue Jul 30 04:17:25 2013
+#C  OOO...
+#C  O..OO.
+#C  O....O
+#C  .OO..O
+#C  ...OOO
+x = 8, y = 5, rule = B34/S34
+bbo$3o3bo$3oboobo$bboboobo$6bo!

@@ -1,0 +1,13 @@
+#N 15p2-1.rle: 15P2.1: Synthesis
+#O Mark D. Niemiec's life synthesis database, Sun Jan 13 21:54:05 2019
+#C  OOO.OOO
+#C  .......
+#C  .O.O.O.
+#C  O.....O
+#C  OO...OO
+x = 153, y = 34
+5bo7bo$3bobo7bobo9bxx5bxx51boo5boo$4boo7boo10bxx5bxx51boo5boo$boo13boo
+$obo13bobo$bbo4bobo6bo11b3x57b3o$8boo66bo25bo$8bo68bo23bo$75b3o23b3o$
+8boo69b3o15b3o$9boo70bo15bo$8bo71bo17bo5$9bobo16b3x57b3o$9boo$10bo$$9b
+oo135b3xb3x$8boo$10bo136bxbxbx$146bx5bx$146bxx3bxx7$46boo83boo$45bobo
+83bobo$47bo83bo!

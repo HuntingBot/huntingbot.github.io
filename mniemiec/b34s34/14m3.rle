@@ -1,0 +1,10 @@
+#N 14m3.rle: M3: Synthesis
+#O Mark D. Niemiec's life synthesis database, Tue Sep 29 09:35:38 2009
+#C  OOO...
+#C  O..OO.
+#C  O....O
+#C  .OO..O
+#C  ...OOO
+x = 26, y = 7, rule = B34/S34
+bbo$3o3bo14b3x$3oboobo13bxbbx$bboboobo13bxbbx$6bo15bxbbx$22bxbbx$23b3x
+!

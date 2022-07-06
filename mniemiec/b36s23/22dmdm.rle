@@ -1,0 +1,11 @@
+#N 22dmdm.rle: Diamond on diamond: Synthesis
+#O Mark D. Niemiec's life synthesis database, Fri Aug 04 12:43:55 2017
+#C  ..OO...OO..
+#C  .O..O.O..O.
+#C  O.O.O.O.O.O
+#C  .O..O.O..O.
+#C  ..OO...OO..
+x = 33, y = 27, rule = B36/S23
+bo$bbo$3o$$7bo$5bobo$6boo3$6b3o$8bo$7bo16bxx3bxx$23bxbbxbxbbx$22bxbxbx
+bxbxbx$23bxbbxbxbbx$7bo16bxx3bxx$6bo$6b3o3$7boo$7bobo$7bo$$12b3o$12bo$
+13bo!

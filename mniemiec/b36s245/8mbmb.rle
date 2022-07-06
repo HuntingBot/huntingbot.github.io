@@ -1,0 +1,15 @@
+#N 8mbmb.rle: Medium blinker on medium blinker: Synthesis
+#O Mark D. Niemiec's life synthesis database, Tue Apr 21 05:13:41 2020
+#C  O...O
+#C  O...O
+#C  O...O
+#C  O...O
+x = 149, y = 97
+44bo4bo$44boobboo$42b4obb4o$43boo4boo6$124bo4bo$124bo4bo$91b3o31bobbo$
+87boobboobo26booboobbooboo$86b3o3b3o28boo4boo$25b4x36b4x16boobo4boo50b
+4x$85b3o$105b4x16b4o$$25b4x36b4x76b4x$123boo4boo$121booboobbooboo$4bo
+4bo115bobbo$4boobboo114bo4bo$bb4obb4o112bo4bo$3boo4boo3$bo10bo$obo8bob
+o$3bo6bo32boo4boo$bbo8bo30b4obb4o$44boobboo$44bo4bo22$55b4x16b4o26b4x
+16b4o16b4x$35b3o$35boobo4boo$36b3o3b3o$37boobboobo60b4x36b4x$41b3o$$
+121b3o6b3o$121boo8boo$121bo10bo5$123boo4boo$122b4obb4o$73boo4boo43boo
+bboo$72b4obb4o42bo4bo$74boobboo$74bo4bo20$92boo$91b3o$90boobo$90b3o!

@@ -1,0 +1,24 @@
+#N 8lg.rle: Long barge: Synthesis
+#O Mark D. Niemiec's life synthesis database, Thu May 27 17:30:06 2021
+#C  .O...
+#C  O.O..
+#C  .O.O.
+#C  ..O.O
+#C  ...O.
+x = 149, y = 70
+8bo$8bobo31boo$8boo33boo20bx39bx39bx$42bo21bxbx18bo18bxbx14bo3bo18bxbx
+$8bo17bxx18boo17bxbx12b3obobo18bxbx14bobobo18bxbx$7boo17bxbx17bobo17bx
+bx13bobbobo18bxbx11b3obbobo18bxbx$7bobo17bx19bo19bx13bo4bobo18bx18bobo
+18bx$87bo39bo10$43bobo19by16bobo17by$44boo18byby15boo17byby$44bo20byy
+16bo17byy$$43boo38boo$5bo19bx18bo20bx18bo20bx19bo19bx$4bobo17bxbx17bob
+o17bxbx17bobo17bxbx17bobo6bo10bxbx$5bobo17bxbx17bobo17bxbx17bobo17bxbx
+17bo6bo12bxbx$6bo4bo14bxbx17bobo17bxbx17bobo17bxbx18bo4b3o11bxbx$11bob
+o13bx19bo19bx19bo19bx21bo17bx$11boo115bobo$129bo$7b3o$9bo$8bo12$5bo19b
+x19bo19bx19bo19bx19bo19bx$4bobo17bxbx17bobo17bxbx17bobo17bxbx17bobo17b
+xbx$5bobo17bxbx17bobo17bxbx17bobo17bxbx17bobo16bxbbx$6bobo17bx19bobo
+17bxbx17bobo17bxx18bobo16bxx$7bo39bobo17bx19bo39bo$48bo$9b3o39boo36bo
+20byy13bo17byy$9bo41bobo35boo19byy12boo17byy$10bo40bo36bobo33bobo11$
+121bo$3obbo19bo19bo19bo19bo19bo16bobbo$bbobobo17bobo17bobo17bobo17bobo
+14bobbobo13b3obobo$bo3bobo12boo3bobo17bobo17bobo17bobo14bobbobo17bobo$
+6bobo12boo3bobo11b3o3bobo12boo3bobo17bobo11b3o3bobo17bobo$7bo12bo6bo
+14bo4bo12bobo4bo14boo3bo19bo19bo$41bo20bo18bobo$83bo!

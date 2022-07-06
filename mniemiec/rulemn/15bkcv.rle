@@ -1,0 +1,10 @@
+#N 15bkcv.rle: Block on cover: Synthesis
+#O Mark D. Niemiec's life synthesis database, Tue Jul 23 20:57:55 2013
+#C  OO.OO
+#C  OO.OO
+#C  .O...
+#C  .OOOO
+#C  ...OO
+x = 24, y = 10, rule = B3/S2ae3aeijr4-ckqy
+3o$3o$oo$3bo$bbobo$bbobbo13bxxbxx$bb3obboo10bxxbxx$6b3o11bx$6b3o11b4x$
+22bxx!

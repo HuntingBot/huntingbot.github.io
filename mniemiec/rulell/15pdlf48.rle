@@ -1,0 +1,14 @@
+#N 15pdlf48.rle: Pond and loaf offset (8;  4): Synthesis
+#O Mark D. Niemiec's life synthesis database, Sat Jul 11 17:46:08 2020
+#C  .OO.........
+#C  O..O........
+#C  O.O.........
+#C  .O..........
+#C  .........OO.
+#C  ........O..O
+#C  ........O..O
+#C  .........OO.
+x = 33, y = 32
+21bxx$20bxbbx$20bxbx$21bx$29bxx$4bobo21bxbbx$4boo22bxbbx$5bo23bxx$$b3o
+$bo$bbo9$boo18boo$obbo16bobbo$obo17bobo$bo19bo$9boo18boo$bboo4bobbo16b
+obbo$bobo4bobbo16bobbo$3bo5boo18boo$$31bo$30boo$30bobo!

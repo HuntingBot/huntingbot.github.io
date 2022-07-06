@@ -1,0 +1,26 @@
+#N 6sh.rle: Ship: Synthesis
+#O Mark D. Niemiec's life synthesis database, Tue Jul 14 18:59:36 2020
+#C  OO.
+#C  O.O
+#C  .OO
+x = 189, y = 134
+58bo$56boo$57boo3$9bobo74bobo$3bobo3boo76boo$4boo4bo76bo$4bo21bxx38bxx
+55b3o20bxx$7bo18bxbx37bxbx16b3o19b3x15bob3o16bxbx$7boo18bxx13bo24bxx
+18bo36bo22bxx$6bobo34bo42bo$41b3o$$45boo$44bobo$46bo9$46bo$47boo115bo$
+7b3o35boo116bobo$bboobb3o17bxx13b3o3bo18bxx38bxx38bxx16boo20bxx$bobo
+22bxbx14bo22bxbx37bxbx14bo22bxbx37bxbx$3bo23bxx13bo24bxx38bxx15boo21b
+xx15boobboo17bxx$123boo39booboo$127booboo37bo$128bobo$127bobbo$128boo
+3$98boo$91boo4boo$92bo6bo$92boboo$93bobo$94bo29bobo31bobo$bo122boo33b
+oo$bbo122bo33bo$3o3bo36boo85boo$5bobo31bo4bo37bo43boo3bo29boo$4bobo19b
+xx12boobboboo18bxx15boo21bxx19bobbo15bxx13bobo22bxx$3bobo20bxbx10boo4b
+obbo17bxbx13boo22bxbx18bobo16bxbx14bo22bxbx$3bo23bxx17boo19bxx17boboob
+oo14bxx19bo18bxx13bo24bxx$bboo82booboobo69bobo$163boo13$9boo38boo$8bob
+o37bobo$7bo39bo$6bo19bxx18bo19bxx18boo18bxx16bo21bxx38bxx$6bobo17bxbx
+17bobo17bxbx17bobo17bxbx9boo3bobo20bxbx37bxbx$7boo18bxx18boo18bxx18bob
+o17bxx10boobobo22bxx38bxx$89bo28bo3bo12byy29boo$10b3o37boo36bo34bo11b
+yy23boo3bobbo$10bo39bobo35boo34bo36boobobobo$11bo38bo74bo34bo3bobbo$
+87bo36boo39boo$86boo$86bobo11$6boo18bxx18boo18bxx18boo18bxx$6bobo17bxb
+x17bobo17bxbx17bobo17bxbx$7bo19bxx18bo19bxx18bobo17bxx$88boo$$8boobboo
+36b3o38b3o$7bobobbobo35bo40bo$9bobbo38bo40bo$$48boo$47bobo$49bo9$6boo
+18bxx$6bobo17bxbx$7boo18bxx$$10b3o$10bo$11bo14$6boo18boo14bo3boo$6bobo
+17bobo14boobobo$bboo3boo18boo13boo3boo$3boo18boo$bbo19bobo$24bo!

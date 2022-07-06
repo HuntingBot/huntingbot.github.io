@@ -1,0 +1,32 @@
+#N 12-121.rle: 3: Pattern image
+#O Mark D. Niemiec's life synthesis database, Sun Jan 28 04:35:34 2018
+#C  ..OO..
+#C  .O..O.
+#C  O.OO.O
+#C  .O..O.
+#C  ..OO..
+x = 165, y = 113
+56bo$57boo38bo$56boo40boo$97boo$$16bo43bo34bo26bx19bo19bx$17boo4bo18bx
+18bo20bx12boo25bx19bo18bxbx$16boo3boo18bxbx15b3o19bxbx10bobo25bx19bo
+17bxbxbx$13boo7boo16bxbxbx35bxbxbx75bxbxbx$12bobo25bxbxbx35bxbxbx76bxb
+x$14bo26bxbx15b3o19bxbx78bx$42bx18bo20bx$60bo77boo$137bobo$139bo$56boo
+83b3o$57boo82bo$56bo85bo10$136bobo$137boo$137bo$142bobo$50bo5bo85boo$
+48bobo6bo34bobo40bo7bo$49boo4b3o35boo41boo$93bo41boo13bo$120bx19bo5bo
+3bobo$82bx17bo18bxbx17bobo5booboo10bx$81bxbx14boo20bxx10boo6boo4boo13b
+xbx$80bxbxbx14boo21bxx7bobo8boo16bxbxbx$22bo57bxbxbx37bxbx8bo8bobo15bx
+bxbx$20bobo58bxbx39bx14bo4bo17bxbx$21boo59bx13bo3boo37bo22bx$41bxx8b3o
+7boo33booboo36b3o$22b3o15bxbbx9bo6bobbo31bobo3bo$22bo18bxbx8bo8bobo77b
+oo$23bo18bx19bo79boo$58b3o80bo$60bo$59bo10$45bo53bo$46bo53bo$38bo5b3o
+51b3o$39boo9boo50bo$38boo10bobo48bo35bo$3bo46bo50b3o17bxx15booboo$4boo
+54bo5bobo52bxx14boobboo$3boo55bobo3boo$60boo5bo94bx$bo26bx19bo34bx19bo
+19bx19bo17bxbx$boo25bx19bo9boo17bxbxxbxbx12boboobobo12bxbxxbxbx12boboo
+bobo15bxbxbx$obo25bx19bo8boo18bxxbxbxbx12boobobobo12bxxbxbxbx12boobobo
+bo15bxbxbx$35bo23bo21bxbx17bobo17bxbx10bo6bobo17bxbx$35boo45bx19bo19bx
+11boo6bo19bx$34bobo96bobo$39bo16b3o$39boo15bo$38bobo16bo12$148bo$147bo
+$104bo42b3o$104bobo$104boo38bobo$97bo47boo$96bo48bo$53bobo40b3o$54boo
+94bo$54bo38bobo26bx19bo5boo12bx$81bx12boo5bo6boo11bxbx17bobo5boo10bxbx
+$61bo18bxbx11bo5bobo4boo6bo4bxbx17bobo17bxbxbx$59boo20bxx6b3o9boo6bo4b
+o5bxbxbx15bobobo15bxbxbx$60boo21bxx6bo11boo9b3o4bxbxbx15bobobo15bxbx$
+83bxbx4bo8bo3bobo5bo10bxbbx16bobbo16bx$84bx15bo3bo5boo11bxx18boo$57bo
+3boo35b3o9bobo$57booboo$56bobo3bo44b3o38boo$109bo29boo6boo$108bo31boo
+7bo$139bo$$97boo$98boo$97bo!

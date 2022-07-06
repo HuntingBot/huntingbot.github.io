@@ -1,0 +1,33 @@
+#N 11bvt.rle: Boat w/very long tail: Synthesis
+#O Mark D. Niemiec's life synthesis database, Tue Jul 14 14:55:37 2020
+#C  OO.....
+#C  O.O..OO
+#C  .O..O.O
+#C  ..OO...
+x = 195, y = 72
+60bo$bo30bxxbyy15boobooboo12bxx18boo18bxx18boo18bxx18boo18bxx$bbo30bxb
+yy16boboobboo12bx19bo19bx19bo19bx19bo19bx$3obboo4boo19bx19bo19bx19bo
+19bx19bo19bx19bo19bx$4boo4boo19bx19bo19bx19bo19bx19bo19bx19bo19bx$6bo
+5bo18bxx18boo18bxx18boobbo15bxbx17bobo17bxbx17bobo17bxbx$94bo17bxbx17b
+obo17bxbx17bobo17bxbx$94b3o16bxbx17bobo17bx19bo19bxx$114bx19bo$$136b3o
+35boobboo$136bo36bobobbobo$137bo37bobbo4$130bobo$130boo41bobo$131bo42b
+oo$174bo$89bo$12boo18bxx18boo18bxx13bobobboo18bxx18boo38boo$13bo18bxx
+19bo18bxx14boo3bo18bxx19bo39bo$12bo39bo39bo39bo39bo$11bo39bo39bo39bo
+39bo20bx$11bobo37bobo37bobo19bx17bobo19bx17bobo17bxbx$12bobo37bobo18b
+xx17bobo17bxbx17bobo17bxbx17bobo17bxbx$13boo33boo3boo18bxx18boo18bxx
+18boo18bxx18boo18bxx$47bobo$13bo35bo$13boo$12bobo3$135bobo$8bo76bo49b
+oo$9bo73bobo$7b3o74boo44bobo37bobo19bx$70bx38bxx20boo19bxx17boo18bxbx$
+48b3o18bxbx16b3o18bxbx19bo20bxx17bo20bxx$7b3o21bxx17bo19bxbx17bo19bxbx
+$9bobboo17bxbx15bobboo17bxbx15bobboo17bxbx18boo18bxx18boo18bxx$8bo4bo
+19bx19bo19bx19bo19bx19bo19bx19bo19bx$12bo19bx19bo19bx19bo19bx19bo19bx
+19bo19bx$11bo19bx19bo19bx19bo19bx19bo19bx19bo19bx$11bobo17bxbx17bobo
+17bxbx17bobo17bxbx17bobo17bxbx17bobo17bxbx$12bobo17bxbx17bobo17bxbx17b
+obo17bxbx17bobo17bxbx17bobo17bxbx$13boo18bxx18boo18bxx18boo18bxx18boo
+18bxx18boo18bxx10$154bobo$8boo144boo$9boo144bo$8bo128bo$12boo13boo3boo
+18boo18boo18boo18boo18booboo15boo18boo18boo$13bo14boo3bo19bo19bo13bo5b
+o19bo19bobboo15bo19bo19bo$12bo14bo4bo19bo19bo15boobbo19bo19bo19bo19bo
+4boo13bo$11bo19bo19bo15bo3bo15boobbo19bo19bo19bo19bo4boo13bo$11bobo17b
+obo17bobo14boobobo17bobo17bobo4bo12bobo17bobo17bobo4bo12bobo$12bobo17b
+obo17bobo12boo3bobo17bobo17boboboo14bobo17bobo17bobo17bobo$13boo18boo
+18boo18boo18boo18boobboo14boo18boo18boo18boo$$49b3o141bo$51bo140boo$
+50bo141bobo!

@@ -1,0 +1,12 @@
+#N 14mp1043.rle: Medium blinker on 10P4.3: Partial synthesis
+#O Mark D. Niemiec's life synthesis database, Tue Apr 28 23:27:37 2020
+#C  ..O......
+#C  ..O.....O
+#C  .O..OO..O
+#C  OO..O...O
+#C  ...O....O
+#C  ...O.....
+x = 56, y = 47
+bbx19bo29bx$bbxx18boo28bxx$4bxx18boo28bxx$xx18boo28bxx$bbxx18boo28bxx$
+3bx19bo29bx3$51b4x12$19boo4boo$18b4obb4o$20boobboo$20bo4bo20$38boo$37b
+3o$36boobo$36b3o!

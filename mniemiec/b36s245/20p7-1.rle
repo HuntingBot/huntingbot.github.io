@@ -1,0 +1,11 @@
+#N 20p7-1.rle: 20P7.1: Pattern image
+#O Mark D. Niemiec's life synthesis database, Tue Apr 21 12:06:28 2020
+#C  .OOOOO.
+#C  O.....O
+#C  O.....O
+#C  O.....O
+#C  O.....O
+#C  O.....O
+#C  .OOOOO.
+x = 7, y = 7
+b5x$x5bx$x5bx$x5bx$x5bx$x5bx$b5x!

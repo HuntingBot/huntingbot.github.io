@@ -1,0 +1,12 @@
+#N 16egmbs3.rle: Delayed medium blinker on medium blinker beside egg: Synthesis
+#O Mark D. Niemiec's life synthesis database, Sun Apr 26 20:18:14 2020
+#C  O...O...OO.
+#C  O...O..O..O
+#C  O...O...OO.
+#C  O...O...OO.
+x = 185, y = 22
+63bo83bo$62boo82boo$6bo55b4o80b4o$5bo19bxx18boo16boo30bxx3bx24boo3bo
+16boo26bxx3bx3bx$6bobo15bxbbx16bobbo46bxbbxbbx23bobbobbo43bxbbxbbx3bx$
+7bo17bxx18boo48bxx3bx24boo3bo44bxx3bx3bx$25bxx18boo16boo30bxx3bx24boo
+3bo16boo26bxx3bx3bx$62b4o80b4o$o7bo53boo82boo$oo5boo54bo83bo$3o3b3o8$
+87boo82boo$86b3o81b3o$85boobo80boobo$85b3o81b3o!

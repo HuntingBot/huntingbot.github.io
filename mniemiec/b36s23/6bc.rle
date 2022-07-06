@@ -1,0 +1,14 @@
+#N 6bc.rle: Beacon: Synthesis
+#O Mark D. Niemiec's life synthesis database, Fri Aug 11 04:21:03 2017
+#C  OO..
+#C  O...
+#C  ...O
+#C  ..OO
+x = 148, y = 40, rule = B36/S23
+4bo76bobo$5bo76boo$3b3o36bobo5bobo25bo3bo$24bxx17boo5boo12bxx12boo24b
+xx$24bx18bo7bo12bx12bobo24bx$6bo20bx12bo7bo18bx24bobo12bx$6bobo17bxx
+12boo5boo17bxx24boo12bxx$6boo31bobo5bobo39bo3bo$88boo$3boo83bobo$4boo$
+3bo20$85bobboo$50bo32bobobboo$6bobb3o12bxx20bobbo14bxx18boo18bxx12bo5b
+o19bxx$bo3bobobo14bx20bobob3o12bx39bx14boobbobo18bx$bbobobo3bo16bx12b
+3obobo20bx19b3o17bx10boo4bobo20bx$3obbo20bxx14bobbo20bxx19bo18bxx17bob
+o18bxx$41bo46bo32boo3bo$122boo$121bo!

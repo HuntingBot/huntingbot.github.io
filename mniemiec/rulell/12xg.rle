@@ -1,0 +1,13 @@
+#N 12xg.rle: Extra long barge: Synthesis
+#O Mark D. Niemiec's life synthesis database, Mon Jul 27 14:35:41 2020
+#C  .O.....
+#C  O.O....
+#C  .O.O...
+#C  ..O.O..
+#C  ...O.O.
+#C  ....O.O
+#C  .....O.
+x = 70, y = 15
+4bobo$4boo$5bo$3o21bx19bo19bx$bbo6bo13bxbx17bobo17bxbx$bo7bobo12bxbx
+17bobo17bxbx$9boo14bxbx17bobo17bxbx$26bxbx17bobo17bxbx$27bx19bo19bxbx$
+68bx$$50boo$49bobobbo$51bobbobo$54boo!

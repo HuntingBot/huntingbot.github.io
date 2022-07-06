@@ -1,0 +1,10 @@
+#N 8pd.rle: 8.2; Pond: Synthesis
+#O Mark D. Niemiec's life synthesis database, Fri Aug 04 16:10:19 2017
+#C  .OO.
+#C  O..O
+#C  O..O
+#C  .OO.
+x = 105, y = 12, rule = B36/S23
+bbo$obo$boo3$3o19bx19bo$bbo19bx19bo19bxx38bxx$bo20bx19bo18bxbbx36bxbbx
+$61bxbbx17boo17bxbbx$43boo17bxx13b3obobbob3o13bxx$44boo33bobboobbo$43b
+o34bo8bo!

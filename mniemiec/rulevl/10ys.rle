@@ -1,0 +1,16 @@
+#N 10ys.rle: 10-bit snake; Extra extra long snake: Synthesis
+#O Mark D. Niemiec's life synthesis database, Mon Aug 31 17:56:23 2020
+#C  OO......
+#C  O.O.....
+#C  ...O....
+#C  ....O...
+#C  .....O.O
+#C  ......OO
+x = 157, y = 20
+o$boo$oo6bo$8bobo85bo$8boo84bobo$95boo$29bxx18boo18bxx18boo18bxx18boo
+18bxx$13bo15bxbx17bobo17bxbx17bobo7bobobboo3bxbx17bobo17bxbx$11bobo18b
+x19bo19bx19bo6boobboo7bx19bo19bx$12boo19bx19bo9bo9bx19bo6bo4bo7bx19bo
+19bx$34bx19bo6boo11bx19bo19bxbx17bobo17bxbx$10bo22bxx18boo7boo9bxx4bxx
+12boo4boo14bxx18boo18bxx$10boo66bxbbx16bobbo$9bobo66bxbbx16bobbo9byy
+18boo$57boo20bxx12boo4boo10byby17bobo$58boo32boo18by19bo$57bo4bo31bo$
+61boo69boo$61bobo67bobo$133bo!

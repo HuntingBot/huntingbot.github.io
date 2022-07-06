@@ -1,0 +1,8 @@
+#N 34-p12.rle: Period 12 oscillator: Stamp collection
+#O Mark D. Niemiec's life synthesis database, Wed Feb 19 22:04:50 2014
+x = 100, y = 35, rule = B34/S34
+5$5b3o12b4o13boobo9b3o23bo$5boo15b4o11boobbo9boo23boo13b3o$5bo29boo4bo
+10bo23b3o12boo$36bo4boo23bo24bo$36bobboo12bo5b3o3boo$37boboo10bobbo4bo
+4b3o15b3o5bo$51bobbo4bobbo18bobbo4bobbo$51b4o4b3o22bo4bobbo$76b4obb3o
+4b4o$76bobbo$76bobbo$78bo$$51b3o23bo$51boo23boo12b3o$5bo45bo23b3o13boo
+$5boo3b3o5b3o71bo$5b3o4bo5boo$9bobbo5bo$10b3o!

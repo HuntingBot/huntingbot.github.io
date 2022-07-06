@@ -1,0 +1,9 @@
+#N 14o2.rle: 14-bit P6 c/2 orthogonal spaceship: Synthesis
+#O Mark D. Niemiec's life synthesis database, Sun Oct 29 10:07:15 2017
+#C  OOO..OOO
+#C  O.O..O.O
+#C  ........
+#C  ..OOOO..
+x = 37, y = 23, rule = B3/S2aei3aeijr4-cknqy
+8bo$6boobo$7b3o$8bo5$15bo$oo12boboo$boo11b3o$boo12bo$$13boo$13bo$16bo$
+14boo3$29b3xbb3x$29bxbxbbxbx$$31b4x!

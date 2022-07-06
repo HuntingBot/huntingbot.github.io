@@ -1,0 +1,21 @@
+#N 15mbwmb.rle: Medium blinker on W on medium blinker: Synthesis
+#O Mark D. Niemiec's life synthesis database, Sun May 09 06:15:01 2021
+#C  OOOO....
+#C  ........
+#C  ........
+#C  .OO.....
+#C  ..O....O
+#C  ..OOO..O
+#C  ....O..O
+#C  .......O
+x = 164, y = 93
+71b3o$71boobo$72b3o$73boo20$55bo4bo$55boobboo$53b4obb4o$54boo4boo12$
+86b4x16b4o46b4x$126bo$125boo$17boo18bxx18boo28bxx18boo16b4o28bxx$17boo
+19bx19bo29bx19bo17boo30bx4bx$17boboo17b3x17b3o27b3x17b3o47b3xbbx$12b3o
+bb4o19bx19bo29bx19bo49bxbbx$11boboo111boo35bx$11b3o111b4o$11boo3boo
+107boo$15b3o108bo$14boobo$14b3o7$150boo$149b3o$148boobo$148b3o18$26b4x
+16b4o16b4x16b4o16b4x16b4o26b4x$7b3o126boo$oo4boboo126boo$3o3b3o58bxx
+18boo18bxx18boo7boboo17bxx$oboobboo36bo23bx19bo19bx19bo7b4o18bx$b3o40b
+o23bxx18boo18bxx18boo28b3x$45bobboo110bx$41booboob4o12b3y17b3o50b4o$
+43boobboo14byy18boo51boboo$48bo87boo$43boo35boo54boo12boo$41booboo33b
+4o66b4o$45bo35boo66boo$44bo36bo68bo$44bo!

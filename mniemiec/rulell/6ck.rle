@@ -1,0 +1,20 @@
+#N 6ck.rle: Clock: Synthesis
+#O Mark D. Niemiec's life synthesis database, Fri Jul 10 11:53:47 2020
+#C  .O..
+#C  .O.O
+#C  O.O.
+#C  ..O.
+x = 156, y = 76
+33bx19bo19bx$11boo6bo13bxbx17bobo17bxbx$10bobo5bo13bxbx17bobo17bxbx$
+12bo5b3o13bx19bo19bx$$41by19bo$41by19bo$16b3o22by19bo$18bo$3o14bo41boo
+$bbo56bobo$bo57bo10$22bo$22bobo$22boo6$107byy$33bx19bo19bx32bybby3bx$
+33bxbx17bobo17bxbx30bybby3bxbx$32bxbx17bobo17bxbx32byy3bxbx$34bx3byy
+14bo3boobboo10bx39bx$12bo3boo20byy18booboo$12booboo46bo$11bobo3bo$92b
+oo3boo$7boo84bobbobo$6bobo84bobo$8bo85bo$99b3o$101bo$100bo6$8boo$9boo
+bbo14boo3bo19bo19bo19bo19bo19bo19bo$8bo4bobo13boobbobo12boo3bobo12b3o
+bbobo17bobo17bobo17bobo17bobo$12bobo13bo3bobo14boobobo15bobobo13boobbo
+bo13boobbobo17bobo17bobo$14bo19bo13bo5bo14bo4bo12bobo4bo14boo3bo19bo
+19bo$89bo18bo19b3o18boo$130bo17bobo$129bo20bo10$111bo$88bo20bobo$89boo
+19boo$69bo18boo$13bo14bo4bo15bo3bo16bobbo19bo19bo$13bobo13boobbobo14bo
+bbobo12b3obbobo17bobo17bobo$12bobo13boobbobo13b3obobo17bobo17bobo17bob
+o$8bo5bo19bo19bo19bo19bo19bo$9boo$8boo!

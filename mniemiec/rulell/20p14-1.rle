@@ -1,0 +1,14 @@
+#N 20p14-1.rle: Two 12P14.1s: Synthesis
+#O Mark D. Niemiec's life synthesis database, Fri Apr 09 22:13:39 2021
+#C  OOOOOOOO
+#C  O......O
+#C  ........
+#C  ........
+#C  ........
+#C  ........
+#C  O......O
+#C  OOOOOOOO
+x = 45, y = 46
+21bobo$21boo$22bo9$9bo13bo$7bobo12bo$obo5boo12b3o$boo15bo$bo15bo$17b3o
+3$37b8x$37bx6bx5$37bx6bx$37b8x3$17b3o$bo15bo$boo15bo$obo5boo12b3o$7bob
+o12bo$9bo13bo9$22bo$21boo$21bobo!

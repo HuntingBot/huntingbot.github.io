@@ -1,0 +1,10 @@
+#N 9snpb2.rle: Trans pre-block on snake: Synthesis
+#O Mark D. Niemiec's life synthesis database, Thu Aug 13 13:48:16 2020
+#C  OO....
+#C  O.....
+#C  ..O.OO
+#C  ..OO.O
+x = 115, y = 11
+98bo$9bobo85bo$9boo39bobo44b3o$10bo39boo$bo49bo16bxx18boo23bxx$o67bxx
+18boo24bx$3o16bxxbx16boobo9b3o4bxxbx16boobo26bxxbx$5boo12bxbxx16boboo
+9bo6bxbxx16boboo6boo18bxbxx$4boo47bo35bobo$6bo81b4o$89boo!

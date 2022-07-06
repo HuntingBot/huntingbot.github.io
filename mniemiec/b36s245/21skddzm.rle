@@ -1,0 +1,14 @@
+#N 21skddzm.rle: Medium blinker on two dominoes between Z and shuriken: Partial synthesis
+#O Mark D. Niemiec's life synthesis database, Sat May 08 00:30:46 2021
+#C  OOOO.........
+#C  .............
+#C  .............
+#C  .OO..........
+#C  ..O....O...O.
+#C  ..OO.O.O.OOO.
+#C  .....O....OOO
+#C  ..........O..
+x = 73, y = 46
+bbx29bo29bx$3x4bx22b3o4bo22b3x4bx$b3xbxbxbxx20b3oboboboo20b3xbxbxbxx$b
+x3bx4bx20bo3bo4bo20bx3bx4bx$10bxx28boo28bxx3$69b4x12$37boo4boo$36b4obb
+4o$38boobboo$38bo4bo20$56boo$55b3o$54boobo$54b3o!

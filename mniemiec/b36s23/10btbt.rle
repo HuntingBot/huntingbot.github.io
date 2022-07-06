@@ -1,0 +1,11 @@
+#N 10btbt.rle: 10.20; Bowtie; Bi-boat; Boat tie; Boat tie boat; Boat on boat: Synthesis
+#O Mark D. Niemiec's life synthesis database, Wed Aug 23 23:06:23 2017
+#C  .O....
+#C  O.O...
+#C  .OO...
+#C  ...OO.
+#C  ...O.O
+#C  ....O.
+x = 28, y = 10, rule = B36/S23
+3bobo$3boo$4bo18bx$bo20bxbx$boo4bobo13bxx$obo4boo16bxx$8bo16bxbx$5bo
+20bx$5boo$4bobo!

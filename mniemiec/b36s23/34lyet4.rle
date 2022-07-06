@@ -1,0 +1,16 @@
+#N 34lyet4.rle: Lonely bee hassled by four eaters; Lonely bee; Worker bee: Pattern image
+#O Mark D. Niemiec's life synthesis database, Sat Aug 05 08:07:42 2017
+#C  OO............OO
+#C  .O............O.
+#C  .O.O........O.O.
+#C  ..OO........OO..
+#C  ................
+#C  .....OOOOOO.....
+#C  ................
+#C  ..OO........OO..
+#C  .O.O........O.O.
+#C  .O............O.
+#C  OO............OO
+x = 16, y = 11, rule = B36/S23
+xx12bxx$bx12bx$bxbx8bxbx$bbxx8bxx$$5b6x$$bbxx8bxx$bxbx8bxbx$bx12bx$xx
+12bxx!

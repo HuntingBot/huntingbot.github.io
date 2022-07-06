@@ -1,0 +1,9 @@
+#N 12slsn.rle: Shillelagh siamese snake: Synthesis
+#O Mark D. Niemiec's life synthesis database, Sat Jul 11 22:15:33 2020
+#C  OO......
+#C  O..OO.OO
+#C  .OO.OO.O
+x = 72, y = 19
+13bo$12bo$12b3o14bxx18boo18bxx$30bx19bo19bx$16bo12bx19bo19bx$15boo12b
+xx18boo18bxx$15bobo12bx19bo19bx$29bx19bo4bo14bx$29bxx18boobbo15bxbx$
+53b3o14bxx3$53b3o$53bo$12bo41bo$12boo$bo9bobo$boo$obo!

@@ -1,0 +1,12 @@
+#N 14mbtas2.rle: Medium blinker on table on table: Partial synthesis
+#O Mark D. Niemiec's life synthesis database, Wed Apr 22 01:20:41 2020
+#C  O.O.....
+#C  OOO.....
+#C  .......O
+#C  ..OOO..O
+#C  ..O.O..O
+#C  .......O
+x = 78, y = 22
+40bo$xbx17bobo16boo29bxbx$3x17b3o16b4o27b3x$40boo35bx$bb3x17b3o47b3xbb
+x$bbxbx17bobo47bxbxbbx$40boo35bx$39b4o$39boo$40bo9$64boo$63b3o$62boobo
+$62b3o!

@@ -1,0 +1,18 @@
+#N 16hg.rle: Hourglass; Four boats: Synthesis
+#O Mark D. Niemiec's life synthesis database, Fri Aug 04 17:16:43 2017
+#C  ...O....
+#C  ..O.O...
+#C  .O..O...
+#C  O....OO.
+#C  .OO....O
+#C  ...O..O.
+#C  ...O.O..
+#C  ....O...
+x = 147, y = 20, rule = B36/S23
+123bobo$123boo$bbo121bo$obo$boo80bobo17bx19bo$83boo17bxbx17bobo$84bo
+17bxx18boo18bx$3o19bx19bo45bo43bo8bxbx$bbo19bx19bo19bxx18boobboo14bxx
+3bx14boo3bobboo8bxbbx$bo20bx19bo18bxbbx16bobbobboo9bxxbxbbxbxbx9boobo
+bbobobobboo6bx4bxx$61bxbbx12boobbobbo12bxbxbxbbxbxx5boobbobobobboboo
+12bxx4bx$43boo17bxx14boobboo14bx3bxx10boobbo3boo18bxbbx$44boo31bo35bo
+28bxbx$43bo37bo20bxx18boo19bx$81boo18bxbx17bobo$80bobo19bx19bo$$121bo$
+121boo$120bobo!

@@ -1,0 +1,19 @@
+#N 20hhvs2.rle: Trans bi-beehive on bi-beehive: Synthesis
+#O Mark D. Niemiec's life synthesis database, Fri Apr 09 22:33:29 2021
+#C  O.O.O.......
+#C  .O.O........
+#C  .......O.O.O
+#C  ........O.O.
+#C  .O.O........
+#C  O.O.O.......
+#C  ........O.O.
+#C  .......O.O.O
+x = 152, y = 23
+24bx4bx14bo4bo14bx4bx14bo4bo14bx4bx14bo4bo14bx4bx$25bxbbx16bobbo16bxbb
+x16bobbo16bxbbx16bobbo16bxbbx$24bx4bx14bo4bo14bx4bx14bo4bo14bx4bx14bo
+4bo14bx4bx$25bxbbx16bobbo16bxbbx16bobbo16bxbbx16bobbo16bxbbx$24bx4bx
+14bo4bo14bx4bx14bo4bo14bx4bx14bo4bo14bx4bx$$8bo20by19bo$bo4bobo19byby
+17bobo55bx4bx14bo4bo14bx4bx$boo4boo20byy18boo56bxbbx16bobbo16bxbbx$obo
+103bx4bx14bo4bo14bx4bx$52b3o52bxbbx16bobbo16bxbbx$52bo53bx4bx14bo4bo
+14bx4bx$53bo$4b3o80bo18by19bo$6bo80bobo4bo10byby17bobo$5bo81boo4boo10b
+yy18boo$93bobo$121b3o$123bo$122bo$89b3o$89bo$90bo!

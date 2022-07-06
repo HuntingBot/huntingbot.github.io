@@ -1,0 +1,14 @@
+#N 15dgtbt1.rle: Up boat on down barge w/tail: Synthesis
+#O Mark D. Niemiec's life synthesis database, Tue Jul 21 07:54:21 2020
+#C  .O.......
+#C  O.O.O....
+#C  .OO.OOO..
+#C  .......O.
+#C  ......O.O
+#C  .....O.O.
+#C  ......O..
+x = 110, y = 19
+22bo$20boo$21boo3$53bo$54bo$52b3o27bobo19bx$o82boo18bxbx$boo80bo20bxx$
+oo49b3o$24bxx18boo5bo12bxx18boo18bxx$5bobo17bx19bo6bo12bxbbx16bobbo16b
+xbbx$6boo17bxbx17bobo17bxbxbx15bobobo15bxbxbx$6bo19bxbx17bobo17bxbx17b
+obo17bxbx$27bx19bo19bx19bo19bx$4boo$5boo$4bo!

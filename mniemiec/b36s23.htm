@@ -1,0 +1,3142 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="copyright" content="1997,1998,1999,2013,2015,2016,2017,2018,2019,2020,2021,2022 Mark D. Niemiec" />
+<title>Life Variant: HighLife (B36/S23)</title>
+<meta name="description"
+content="Life Variant: HighLife: B36/S23 pattern lists and glider syntheses" />
+<meta name="keywords"
+content="conway game high life variant highlife still life oscillator spaceship flotilla replicator pattern object list glider synthesis" />
+<link rel="prev" href="b34s34.htm" />
+<link rel="next" href="b3xs23y.htm" />
+<link rel="search" href="lifesrch.htm" />
+<link rel="author" href="lifecred.htm#niemiec" />
+<link rel="license" href="lifepage.htm#copyright" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="shortcut icon" href="images/23-64.ico" />
+<style type="text/css">
+    body{lang="en-US";hyphens:auto;color:black;background-color:white;
+      margin-top:0;padding:0;border:0;height:100%;
+      font-family:Verdana,Arial,Helvetica,sans-serif;}
+    hr.a{border-style:solid;border-width:3px;border-color:#000000;}
+    h1{text-align:center;
+      font-family:Verdana,Arial,Helvetica,sans-serif;font-variant:small-caps;}
+    h2{font-family:Verdana,Arial,Helvetica,sans-serif;font-variant:small-caps;}
+    h3{font-family:Verdana,Arial,Helvetica,sans-serif;font-variant:small-caps;}
+    i{font-family:"Times New Roman",Times,serif;}
+    pre{hyphens:manual;}
+    img{border:2px black solid;}
+    ul,ol{margin-left:0px;padding-left:1en;}
+    table{border:1px black solid;border-spacing:0px;border-collapse:collapse;
+      table-layout:fixed;}
+    td,th{border:1px black solid;vertical-align:top;font-size:12px;padding:1px;}
+    td a{display:block;}
+    a{text-decoration:none;}
+    a:focus{text-decoration:underline;} a:hover{text-decoration:underline;}
+    a.p:link{color:#008000;} a.p:visited{color:#00C000;}
+    a.i:link{color:#000080;} a.i:visited{color:#0000C0;}
+    a.j:link{color:#008080;} a.j:visited{color:#00C0C0;}
+    a.x:link{color:#800000;} a.x:visited{color:#C00000;}
+    td:hover{background-color:#F0F0F0;}
+    .s{background-color:#E0E0E0;} td.s:hover{background-color:#E0E0E0;}
+    .b{background-color:#C0C0FF;} td.b:hover{background-color:#E0E0FF;}
+    .g{background-color:#C0FFC0;} td.g:hover{background-color:#E0FFE0;}
+    .t{background-color:#C0FFFF;} td.t:hover{background-color:#E0FFFF;}
+    .r{background-color:#FFC0C0;} td.r:hover{background-color:#FFE0E0;}
+    .m{background-color:#FFC0FF;} td.m:hover{background-color:#FFE0FF;}
+    .y{background-color:#FFFFC0;} td.y:hover{background-color:#FFFFE0;}
+    .o{background-color:#FFD0AA;} td.o:hover{background-color:#FFE8D5;}
+    .v{background-color:#FFAAD0;} td.v:hover{background-color:#FFD5E8;}
+    .h{background-color:#E0E0FF;} td.h:hover{background-color:#F0F0FF;}
+    .k{background-color:#000000;color:#FFFFFF;} td.k:hover{background-color:#C0C0C0;}
+    .n{background-color:#F0F0F0;text-align:center;} th.n:hover{background-color:#F8F8F8;}
+    .c{text-align:center;} .u{display:none;}
+</style>
+</head>
+<body>
+<a id="top" name="top"></a>
+<h1>Life Variant: HighLife (B36/S23)</h1>
+<p class="c">
+	<a class="j" href="#36-intro">Introduction</a> |
+	<a class="j" href="#36-count">Object Counts</a> |
+	<a class="j" href="#36-p1">Still-lifes</a> |
+	<a class="j" href="#36-pp1">Pseudo-still-lifes</a> |
+	<a class="j" href="#36-qp1">Quasi-still-lifes</a> |
+	<a class="j" href="#36-p2">P2 oscillators</a> |
+	<a class="j" href="#36-pp2">P2 pseudo-oscillators</a> |
+	<a class="j" href="#36-p3">P3 oscillators</a> |
+	<a class="j" href="#36-p4">P4 oscillators</a> |
+	<a class="j" href="#36-p5">P5 oscillators</a> |
+	<a class="j" href="#36-p6">P6 oscillators</a> |
+	<a class="j" href="#36-p7">P7 oscillator</a> |
+	<a class="j" href="#36-p8">P8 oscillators</a> |
+	<a class="j" href="#36-p9">P9 oscillators</a> |
+	<a class="j" href="#36-p10">P10 oscillators</a> |
+	<a class="j" href="#36-p12">P12 oscillators</a> |
+	<a class="j" href="#36-p13">P13 oscillator</a> |
+	<a class="j" href="#36-p14">P14 oscillator</a> |
+	<a class="j" href="#36-p20">P20 oscillators</a> |
+	<a class="j" href="#36-p24">P24 oscillators</a> |
+	<a class="j" href="#36-p28">P28 oscillator</a> |
+	<a class="j" href="#36-p38">P38 oscillator</a> |
+	<a class="j" href="#36-p48">P48 oscillators</a> |
+	<a class="j" href="#36-p52">P52 oscillator</a> |
+	<a class="j" href="#36-p72">P72 oscillator</a> |
+	<a class="j" href="#36-p96">P96 oscillator</a> |
+	<a class="j" href="#36-o2"><i>c</i>/2 orthogonal spaceships</a> |
+	<a class="j" href="#36-2o5">2<i>c</i>/5 orthogonal spaceships</a> |
+	<a class="j" href="#36-o3"><i>c</i>/3 orthogonal spaceships</a> |
+	<a class="j" href="#36-2o7">2<i>c</i>/7 orthogonal spaceships</a> |
+	<a class="j" href="#36-o4"><i>c</i>/4 orthogonal spaceships</a> |
+	<a class="j" href="#36-o5"><i>c</i>/5 orthogonal spaceships</a> |
+	<a class="j" href="#36-o6"><i>c</i>/6 orthogonal spaceships</a> |
+	<a class="j" href="#36-o8"><i>c</i>/8 orthogonal spaceship</a> |
+	<a class="j" href="#36-o98"><i>c</i>/98 orthogonal spaceship</a> |
+	<a class="j" href="#36-d4"><i>c</i>/4 diagonal spaceships</a> |
+	<a class="j" href="#36-d5"><i>c</i>/5 diagonal spaceship</a> |
+	<a class="j" href="#36-d6"><i>c</i>/6 diagonal spaceship</a> |
+	<a class="j" href="#36-bas">Basilisk spaceships</a> |
+	<a class="j" href="#36-flot">Flotillae</a> |
+	<a class="j" href="#36-gun">Guns</a> |
+	<a class="j" href="#36-puff">Puffers</a> |
+	<a class="j" href="#36-ws">Wick-stretchers</a> |
+	<a class="j" href="#36-br">Breeders</a> |
+	<a class="j" href="#36-cons">Constellations</a> |
+	<a class="j" href="#36-meth">Methuselah</a> |
+	<a class="j" href="#36-osc">New Oscillators</a> |
+	<a class="j" href="#36-link">Links</a>
+</p>
+<hr class="a" /><main>
+<article><a id="a0" name="a0"></a>
+<a id="36-intro" name="36-intro"></a>
+<h2>Introduction</h2>
+<p>The rule <em>B36/S23</em>, more commonly known as HighLife, is almost identical
+to normal Life. It differs only in that birth also occurs when a cell has 6
+living neighbors. This results in behavior that is very similar to Life, but
+with a few differences:</p>
+<p><ul>
+    <li>The list of <a class="j" href="#36-p1">still-lifes</a>
+	is a strict subset of the still-lifes in Life. Still-lifes containing
+	any of four configurations are no longer viable. These includes ships,
+	buns (or domino behind eater tail, which uses the same neighborhood),
+	loaves with bit, and pairs of inducting lines of three (e.g. dead
+	spark coil, docks, etc.). There are no additional still-lifes. Also,
+	oscillators whose stators include any of these components also fail;
+	in some cases, stator variants can be constructed that don't include
+	these components.</li>
+    <li>Most <a class="j" href="#36-p2">period 2 oscillators</a>
+	and several higher-period oscillators continue to work; however, the
+	higher the period, the less likely this is to be true. There are
+	several <a class="j" href="#36-osc">new oscillators</a>.</li>
+    <li>The basic spaceships
+	(<a class="j" href="#36-d4">glider</a>,
+	<a class="j" href="#36-o2">LWSS, MWSS, and HWSS</a>)
+	still work, as do a small number of others. There are several new
+	spaceships.</li>
+    <li>Most of life's common patterns (e.g. traffic light, honeyfarm, fleet,
+	bakery, B heptomino, Pi heptomino, R pentomino, etc.) evolve very
+	differently, so oscillators based on them also fail (e.g. pulsar, and
+	pre-pulsar shuttles).</li>
+    <li>The queen bee shuttle no longer works, but there is an equally useful
+	common <a class="j" href="#36-p24">period 24 shuttle</a> that can be
+	used to construct <a class="j" href="#36-gun">glider guns</a>.</li>
+    <li>There is a very small common replicator that is also extremely
+	versatile. Every 12 generations, a living replicator unit splits
+	into two adjacent ones, while two units attempting to occupy the
+	same space cancel each other out. This behaves like a one-dimensional
+	XOR cellular automaton embedded in a two-dimensional space. Its
+	Feynman diagram is a Sierpinski gasket.
+	<ul>
+	    <li>By itself, it is a double-ended
+		<a class="j" href="#36-ws">wick-stretcher</a> with a
+		sawtooth population growth.</li>
+	    <li>If one end is capped (e.g. by a block or eater, or another
+		replicator along a line of symmetry), this forms a
+		single-ended wick-stretcher.</li>
+	    <li>If both ends are capped, it forms an oscillator of
+		arbitrarily high period. Examples of periods
+		<a class="j" href="#36-p48">48</a>,
+		<a class="j" href="#36-p48">72</a>, and
+		<a class="j" href="#36-p48">96</a>, are shown here, and all
+		can be extended by arbitrarily large multiples of 48.</li>
+	    <li>It can pull a blinker, resulting in the
+		<a class="j" href="#36-d6">Bomber spaceship</a>.</li>
+	    <li>If the pull reaction is slowed by moving the replicator
+		farther away from the blinker, this results in a
+		<a class="j" href="#36-ws">wick stretcher</a> that extrudes
+		a growing spaceship whose head advances faster than its
+		tail recedes.</li>
+	    <li>A complicated chain of replicators can displace a blinker,
+		and two such reactions can push a blinker diagonally. This
+		allows construction of arbitrarily slow
+		<a class="j" href="#36-ws">wick stretchers</a>.</li>
+	    <li>Combining the blinker push and blinker pull reactions allows
+		creation of the arbitrarily slow
+		<a class="j" href="#36-bas">Basilisk spaceships</a>.</li>
+	    <li>Out-of-phase replicators can act as fence posts for each
+		other, allowing construction of oscillators of periods that
+		are not a multiple of 24. (A period 59 example has been
+		constructed, but is too large to show here.)</li>
+	</ul></li>
+</ul></p>
+<p>The lists of still-lifes, pseudo-still-lifes, quasi-still-lifes, and
+constellations only show small and easily synthesized ones. The lists of
+oscillators and pseudo-oscillators show all basic ones from Life that also
+work in HighLife, as well as new ones that only work in HighLife (marked
+with &sup1;). but for brevity, only the simplest stator variants, and omit
+larger variants. For the same reason, lists of pseudo-oscillators and
+pseudo-spaceships are omitted, as pseudo-objects are just trivial
+combinations of smaller objects. Due to the fact that most Life period 2
+oscillators also work in HighLife, only a few small examples are shown.</p>
+<p>Some Life oscillators do not work in HighLife because their stators
+become unstable; these oscillators, with stators adjusted to work in both
+Life and HighLife, are marked with &sup2;</p>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/HighLife#Bomber">Bomber</a>,
+<a class="x" href="http://conwaylife.com/wiki/Glider">Glider</a>,
+<a class="x" href="http://conwaylife.com/wiki/Heavyweight_spaceship">Heavyweight spaceship</a>,
+<a class="x" href="http://conwaylife.com/wiki/HighLife">HighLife</a>,
+<a class="x" href="http://conwaylife.com/wiki/Honey_farm">Honey farm</a>,
+<a class="x" href="http://conwaylife.com/wiki/Lightweight_spaceship">Lightweight spaceship</a>,
+<a class="x" href="http://conwaylife.com/wiki/Middleweight_spaceship">Middleweight spaceship</a>,
+<a class="x" href="http://conwaylife.com/wiki/Queen_bee_shuttle">Queen bee shuttle</a>,
+<a class="x" href="http://conwaylife.com/wiki/Replicator">Replicator</a>,
+<a class="x" href="http://conwaylife.com/wiki/Traffic_light">Traffic light</a>.</p>
+</article>
+<hr /><article><a id="a1" name="a1"></a>
+<a id="36-count" name="36-count"></a>
+<h2>Object counts</h2>
+<p>Computer searches have counted <a class="j" href="#36-p1">still-lifes</a>
+and <a class="j" href="#36-pp1">pseudo-still-lifes</a> up to 24 bits.</p>
+<p>Status of object lists on sub-pages is shown by background color:</p>
+<p><ul>
+    <li>White indicates small complete
+	object list, with syntheses for all (or at least most).</li>
+    <li><span class="r">Red</span> indicates complete object count; may have
+	syntheses for some.</li>
+</ul></p>
+<p><table style="width:1034px">
+    <colgroup><col style="width:121px;" /><col span="8" style="width:20px;" />
+	<col span="3" style="width:30px;" /><col span="3" style="width:40px;" />
+	<col span="2" style="width:50px;" /><col span="3" style="width:60px;" />
+	<col span="2" style="width:70px;" /><col style="width:121px;" />
+	</colgroup>
+    <tr>
+	<td class="h"><b>Population</b></td>
+	<td class="h"><b>4</b></td><td class="h"><b>5</b></td>
+	<td class="h"><b>6</b></td><td class="h"><b>7</b></td>
+	<td class="h"><b>8</b></td><td class="h"><b>9</b></td>
+	<td class="h"><b>10</b></td><td class="h"><b>11</b></td>
+	<td class="h"><b>12</b></td><td class="h"><b>13</b></td>
+	<td class="h"><b>14</b></td><td class="h"><b>15</b></td>
+	<td class="h"><b>16</b></td><td class="h"><b>17</b></td>
+	<td class="h"><b>18</b></td><td class="h"><b>19</b></td>
+	<td class="h"><b>20</b></td><td class="h"><b>21</b></td>
+	<td class="h"><b>22</b></td><td class="h"><b>23</b></td>
+	<td class="h"><b>24</b></td>
+	<td class="h"><b>Population</b></td>
+    </tr>
+    <tr>
+	<td class="h"><a class="j" href="#36-p1"><b>Still-lifes</b></a></td>
+	<td><a class="j" href="#36-p1"><b>2</b></a></td>
+	<td><a class="j" href="#36-p1"><b>1</b></a></td>
+	<td><a class="j" href="#36-p1"><b>4</b></a></td>
+	<td><a class="j" href="#36-p1"><b>4</b></a></td>
+	<td class="r"><a class="j" href="#36-p1"><b>9</b></a></td>
+	<td class="r"><b>9</b></td>
+	<td class="r"><a class="j" href="#36-p1"><b>25</b></a></td>
+	<td class="r"><b>44</b></td>
+	<td class="r"><b>111</b></td>
+	<td class="r"><b>218</b></td>
+	<td class="r"><a class="j" href="#36-p1"><b>540</b></a></td>
+	<td class="r"><b>1187</b></td>
+	<td class="r"><b>2872</b></td>
+	<td class="r"><b>6663</b></td>
+	<td class="r"><a class="j" href="#36-p1"><b>16092</b></a></td>
+	<td class="r"><b>37995</b></td>
+	<td class="r"><b>91742</b></td>
+	<td class="r"><b>220089</b></td>
+	<td class="r"><b>533298</b></td>
+	<td class="r"><b>1287371</b></td>
+	<td class="r"><b>3122823</b></td>
+	<td class="h"><a class="j" href="#36-p1"><b>Still-lifes</b></a></td>
+    </tr>
+    <tr>
+	<td class="h"><a class="j" href="#36-pp1"><b>Pseudo-Still-lifes</b></a></td>
+	<td><b>-</b></td>
+	<td><b>-</b></td>
+	<td><b>-</b></td>
+	<td><b>-</b></td>
+	<td><a class="j" href="#36-pp1"><b>1</b></a></td>
+	<td><a class="j" href="#36-pp1"><b>1</b></a></td>
+	<td class="r"><a class="j" href="#36-pp1"><b>6</b></a></td>
+	<td class="r"><a class="j" href="#36-pp1"><b>14</b></a></td>
+	<td class="r"><a class="j" href="#36-pp1"><b>46</b></a></td>
+	<td class="r"><b>96</b></td>
+	<td class="r"><b>251</b></td>
+	<td class="r"><b>569</b></td>
+	<td class="r"><a class="j" href="#36-pp1"><b>1471</b></a></td>
+	<td class="r"><a class="j" href="#36-pp1"><b>3607</b></a></td>
+	<td class="r"><a class="j" href="#36-pp1"><b>9335</b></a></td>
+	<td class="r"><b>23379</b></td>
+	<td class="r"><b>59698</b></td>
+	<td class="r"><b>150593</b></td>
+	<td class="r"><b>384544</b></td>
+	<td class="r"><b>976014</b></td>
+	<td class="r"><b>2493059</b></td>
+	<td class="h"><a class="j" href="#36-pp1"><b>Pseudo-Still-lifes</b></a></td>
+    </tr>
+</table></p>
+</article>
+<hr class="a" /><article><a id="a2" name="a2"></a>
+<a id="36-p1" name="36-p1"></a>
+<h2>26 still-lifes</h2>
+<p>Because HighLife is identical to Life with the exception of an additional
+birth condition but no additional survival conditions, the list of still-lifes
+is a strict subset of the still-lifes in Life. Most Life still-lifes work,
+except for those with internal dead cells with 6 neighbors in one of four
+following specific neighborhoods shown in <em>italics</em> (although the dead
+spark coil and similar still-lifes become period 2 oscillators with
+1&times;1 rotors, something that is impossible in Life).</p>
+<p><img src="map/ex36.png" alt="B36/S23 non-still-lifes"
+ width="261" height="61" usemap="#ex36" /></p>
+<p><table><colgroup><col span="7" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_ex36" class="i" href="javascript:Nav('ex36')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a1">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a3">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/ex36.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/ex36.rle" target="_blank">RLE</a></th>
+</tr></table></p>
+<div id="b_ex36"><p><table id="t-36-p1" style="width:265px">
+    <colgroup><col style="width:71px;" /><col span="2" style="width:60px;" />
+	<col style="width:72px;" /></colgroup>
+    <tr>
+	<td>6.2; <em>Ship</em></td>
+	<td>13.221; Up snake on <em>bun</em></td>
+	<td>15.866; <em>Loaf w/&#8203;bit</em> tie loaf</td>
+	<td>18.287; House on house; <em>Dead spark coil</em>, JC</td>
+    </tr>
+</table></p></div>
+<map name="ex36">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,41,20,61" href="#bottom" />
+	<area coords="241,0,261,20" nohref="nohref" />
+	<area coords="241,41,261,61" href="stamp/36-p1.rle" />
+	<area coords="0,0,70,61" href="javascript:R('!&##PH8')" />
+	<area coords="70,0,130,61" href="javascript:R('!-$&V5ER')" />
+	<area coords="130,0,190,61" href="javascript:R('!/\'\'8 D H 7 $@%25')" />
+	<area coords="190,0,261,61" href="javascript:R('!2%25\'Q@J@* J@Q@')" />
+</map>
+<p>These consist of:</p>
+<p><ul>
+    <li>The 2 4-bit still-lifes.</li>
+    <li>The 1 5-bit still-life.</li>
+    <li>The 4 6-bit still-lifes.</li>
+    <li>The 4 7-bit still-lifes.</li>
+    <li>The 9 8-bit still-lifes.</li>
+    <li>2 of the 25 10-bit still-lifes.</li>
+    <li>3 of the 540 14-bit still-lifes.</li>
+    <li>1 of the 16092 18-bit still-lifes.</li>
+</ul></p>
+<p><img src="map/36-p1.png" alt="B36/S23 still-lifes"
+ width="561" height="181" usemap="#36-p1" /></p>
+<p><table><colgroup><col span="12" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_36-p1" class="i" href="javascript:Nav('36-p1')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a1">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a3">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/36-p1.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/36-p1.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/36-p1.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="lis/36-p1.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/36-p1.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/36-p1.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=36-p1" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_36-p1"><p><table id="t-36-p1" style="width:565px">
+    <colgroup><col style="width:71px;" /><col span="7" style="width:60px;" />
+	<col style="width:72px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="b36s23/4bk.rle">4.1;
+	    Block [2]</a></td>
+	<td><a class="p" href="b36s23/4tb.rle">4.2;
+	    Tub; Diamond [4]</a></td>
+	<td><a class="p" href="b36s23/5bt.rle">5.1;
+	    Boat [3]</a></td>
+	<td><a class="p" href="b36s23/6sn.rle">6.1;
+	    Snake [4]</a></td>
+	<td><a class="p" href="b36s23/6hv.rle">6.2;
+	    Beehive [2]</a></td>
+	<td><a class="p" href="b36s23/6ac.rle">6.3;
+	    Carrier; Aircraft carrier [2]</a></td>
+	<td><a class="p" href="b36s23/6bg.rle">6.4;
+	    Barge [3]</a></td>
+	<td><a class="p" href="b36s23/10bkta.rle">10.4;
+	    Block on table; Block and table [5]</a></td>
+	<td><a class="p" href="b36s23/10btbt.rle">10.20; Bowtie;
+	    Boat tie; Boat tie boat; Boat on boat [4]</a></td>
+    </tr>
+    <tr>
+	<td><a class="p" href="b36s23/7ls.rle">7.1;
+	    Python; Long snake [11]</a></td>
+	<td><a class="p" href="b36s23/7lf.rle">7.2;
+	    Loaf; Burloaf [2]</a></td>
+	<td><a class="p" href="b36s23/7et.rle">7.3;
+	    Eater; Eater 1; Fishhook [3]</a></td>
+	<td><a class="p" href="b36s23/7lb.rle">7.4;
+	    Long boat [4]</a></td>
+	<td><a class="p" href="b36s23/14sw.rle">14.53;
+	    Sidewalk; Pavement; Side on side [4]</a></td>
+	<td><a class="p" href="b36s23/14lflf2.rle">14.384; Loaf tie loaf;
+	    Bi-loaf 2 [11]</a></td>
+	<td><a class="p" href="b36s23/14hb.rle">14.393; Half bakery;
+	    Loaf side tie loaf; Loaf on loaf; Bi-loaf 1 [3]</a></td>
+	<td><a class="p" href="b36s23/18hshs.rle">18.5256;
+	    Up house on house [4]</a></td>
+	<td class="s">&nbsp;</td>
+    </tr>
+    <tr>
+	<td><a class="p" href="b36s23/8sl.rle">8.1;
+	    Shil&shy;lelagh [11]</a></td>
+	<td><a class="p" href="b36s23/8pd.rle">8.2;
+	    Pond [3]</a></td>
+	<td><a class="p" href="b36s23/8lp.rle">8.3;
+	    Long ship [7]</a></td>
+	<td><a class="p" href="b36s23/8cg.rle">8.4;
+	    Mango; Cigar [5]</a></td>
+	<td><a class="p" href="b36s23/8ht.rle">8.5;
+	    Hook w/&#8203;tail; Snake eater [6]</a></td>
+	<td><a class="p" href="b36s23/8vs.rle">8.6;
+	    Very long snake; long long snake [8]</a></td>
+	<td><a class="p" href="b36s23/8lg.rle">8.7;
+	    Long barge [5]</a></td>
+	<td><a class="p" href="b36s23/8tt.rle">8.8;
+	    Tub w/&#8203;tail; Twit [4]</a></td>
+	<td class="y"><a class="p" href="b36s23/8cs.rle">8.9;
+	    Canoe; Sinking ship; Cis snake [11]</a></td>
+    </tr>
+</table></p></div>
+<map name="36-p1">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,161,20,181" href="#bottom" />
+	<area coords="541,0,561,20" href="zip/36-p1.zip" />
+	<area coords="541,161,561,181" href="stamp/36-p1.rle" />
+	<area coords="0,0,70,90" href="b36s23/4bk.rle" />
+	<area coords="70,0,130,90" href="b36s23/4tb.rle" />
+	<area coords="130,0,190,90" href="b36s23/5bt.rle" />
+	<area coords="190,0,250,90" href="b36s23/6sn.rle" />
+	<area coords="250,0,310,90" href="b36s23/6hv.rle" />
+	<area coords="310,0,370,90" href="b36s23/6ac.rle" />
+	<area coords="370,0,430,90" href="b36s23/6bg.rle" />
+	<area coords="430,0,490,90" href="b36s23/10bkta.rle" />
+	<area coords="490,0,561,90" href="b36s23/10btbt.rle" />
+	<area coords="0,90,70,170" href="b36s23/7ls.rle" />
+	<area coords="70,90,130,170" href="b36s23/7lf.rle" />
+	<area coords="130,90,190,170" href="b36s23/7et.rle" />
+	<area coords="190,90,250,170" href="b36s23/7lb.rle" />
+	<area coords="250,90,310,170" href="b36s23/14sw.rle" />
+	<area coords="310,90,370,170" href="b36s23/14lflf2.rle" />
+	<area coords="370,90,430,170" href="b36s23/14hb.rle" />
+	<area coords="430,90,490,170" href="b36s23/18hshs.rle" />
+	<area coords="0,170,70,181" href="b36s23/8sl.rle" />
+	<area coords="70,170,130,181" href="b36s23/8pd.rle" />
+	<area coords="130,170,190,181" href="b36s23/8lp.rle" />
+	<area coords="190,170,250,181" href="b36s23/8cg.rle" />
+	<area coords="250,170,310,181" href="b36s23/8ht.rle" />
+	<area coords="310,170,370,181" href="b36s23/8vs.rle" />
+	<area coords="370,170,430,181" href="b36s23/8lg.rle" />
+	<area coords="430,170,490,181" href="b36s23/8tt.rle" />
+	<area coords="490,170,561,181" href="b36s23/8cs.rle" />
+</map>
+<p>Although not generally considered a still-life, the empty field (i.e.
+<a href="b36s23/0vacuum.rle">vacuum</a>) technically fulfills most the
+criteria, and it occurs sufficiently frequently to warrant being mentioned.
+For example, it is the most common result of two gliders colliding. (Since
+it has no living cells, it fails to be an actual object, in much the same
+way that 1 is not considered a prime number, even though it has no other
+prime factors.)</p>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Aircraft_carrier">Aircraft carrier</a>,
+<a class="x" href="http://conwaylife.com/wiki/Bakery">Bakery</a>,
+<a class="x" href="http://conwaylife.com/wiki/Barge">Barge</a>,
+<a class="x" href="http://conwaylife.com/wiki/Beehive">Beehive</a>,
+<a class="x" href="http://conwaylife.com/wiki/Bi-loaf_1">Bi-loaf 1</a>,
+<a class="x" href="http://conwaylife.com/wiki/Bi-loaf_2">Bi-loaf 2</a>,
+<a class="x" href="http://conwaylife.com/wiki/Block">Block</a>,
+<a class="x" href="http://conwaylife.com/wiki/Block_on_table">Block on table</a>,
+<a class="x" href="http://conwaylife.com/wiki/Boat">Boat</a>,
+<a class="x" href="http://conwaylife.com/wiki/Boat-tie">Boat-tie</a>,
+<a class="x" href="http://conwaylife.com/wiki/Canoe">Canoe</a>,
+<a class="x" href="http://conwaylife.com/wiki/Dead_spark_coil">Dead spark coil</a>,
+<a class="x" href="http://conwaylife.com/wiki/Eater_1">Eater 1</a>,
+<a class="x" href="http://conwaylife.com/wiki/Grin">Grin</a>,
+<a class="x" href="http://conwaylife.com/wiki/HighLife">HighLife</a>,
+<a class="x" href="http://conwaylife.com/wiki/Hook_with_tail">Hook with tail</a>,
+<a class="x" href="http://conwaylife.com/wiki/Loaf">Loaf</a>,
+<a class="x" href="http://conwaylife.com/wiki/Long_barge">Long barge</a>,
+<a class="x" href="http://conwaylife.com/wiki/Long_boat">Long boat</a>,
+<a class="x" href="http://conwaylife.com/wiki/Long_ship">Long ship</a>,
+<a class="x" href="http://conwaylife.com/wiki/Long_snake">Long snake</a>,
+<a class="x" href="http://conwaylife.com/wiki/Mango">Mango</a>,
+<a class="x" href="http://conwaylife.com/wiki/Pond">Pond</a>,
+<a class="x" href="http://conwaylife.com/wiki/Pre-block">Pre-block</a>,
+<a class="x" href="http://conwaylife.com/wiki/Shillelagh">Shillelagh</a>,
+<a class="x" href="http://conwaylife.com/wiki/Ship">Ship</a>,
+<a class="x" href="http://conwaylife.com/wiki/Sidewalk">Sidewalk</a>,
+<a class="x" href="http://conwaylife.com/wiki/Snake">Snake</a>,
+<a class="x" href="http://conwaylife.com/wiki/Tub">Tub</a>,
+<a class="x" href="http://conwaylife.com/wiki/Tub_with_tail">Tub with tail</a>,
+<a class="x" href="http://conwaylife.com/wiki/Vacuum_(empty_space)">Vacuum (empty space)</a>,
+<a class="x" href="http://conwaylife.com/wiki/Very_long_snake">Very long snake</a>.</p>
+</article>
+<hr /><article><a id="a3" name="a3"></a>
+<a id="36-pp1" name="36-pp1"></a>
+<h2>14 pseudo-still-lifes</h2>
+<p><img src="map/36-pp1.png" alt="B36/S23 pseudo-still-lifes"
+ width="581" height="121" usemap="#36-pp1" /></p>
+<p><table><colgroup><col span="12" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_36-pp1" class="i" href="javascript:Nav('36-pp1')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a2">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a4">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/36-pp1.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/36-pp1.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/36-pp1.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="lis/36-pp1.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/36-pp1.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/36-pp1.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=36-pp1" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_36-pp1"><p><table id="t-36-pp1" style="width:585px">
+    <colgroup><col style="width:91px;" /><col span="5" style="width:80px;" />
+	<col style="width:92px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="b36s23/8bkbk.rle">Block on block;
+	    Two blocks; Bi-block [3]</a></td>
+	<td><a class="p" href="b36s23/9btbk.rle">
+	    Block on boat [3]</a></td>
+	<td><a class="p" href="b36s23/10btbt1.rle">
+	    Up boat on boat; Bi-boat [3]</a></td>
+	<td><a class="p" href="b36s23/10acbk1.rle">
+	    Block on carrier [4]</a></td>
+	<td><a class="p" href="b36s23/12bkbkbk.rle">
+	    Block on block on block [5]</a></td>
+	<td><a class="p" href="b36s23/12acac1.rle">
+	    Up trans carrier on carrier [3]</a></td>
+	<td><a class="p" href="b36s23/12hvhv.rle">
+	    Beehive on beehive [3]</a></td>
+    </tr>
+    <tr>
+	<td><a class="p" href="b36s23/11acbt1.rle">
+	    Up boat on carrier [3]</a></td>
+	<td><a class="p" href="b36s23/16bk4.rle">
+	    Block on block on block on block [8]</a></td>
+	<td><a class="p" href="b36s23/16acbts.rle">
+	    Two up boats on carrier [4]</a></td>
+	<td><a class="p" href="b36s23/16pdpd.rle">
+	    Pond on pond [4]</a></td>
+	<td><a class="p" href="b36s23/16bbk2.rle">
+	    Block pair on block pair [4]</a></td>
+	<td><a class="p" href="b36s23/17lfbts.rle">
+	    Two cis up boats on loaf [4]</a></td>
+	<td><a class="p" href="b36s23/18pdbts.rle">
+	    Two cis up boats on pond [5]</a></td>
+    </tr>
+</table></p></div>
+<map name="36-pp1">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,101,20,121" href="#bottom" />
+	<area coords="561,0,581,20" href="zip/36-pp1.zip" />
+	<area coords="561,101,581,121" href="stamp/36-pp1.rle" />
+	<area coords="0,0,90,70" href="b36s23/8bkbk.rle" />
+	<area coords="90,0,170,70" href="b36s23/9btbk.rle" />
+	<area coords="170,0,250,70" href="b36s23/10btbt1.rle" />
+	<area coords="250,0,330,70" href="b36s23/10acbk1.rle" />
+	<area coords="330,0,410,70" href="b36s23/12bkbkbk.rle" />
+	<area coords="410,0,490,70" href="b36s23/12acac1.rle" />
+	<area coords="490,0,581,70" href="b36s23/12hvhv.rle" />
+	<area coords="0,70,90,121" href="b36s23/11acbt1.rle" />
+	<area coords="90,70,170,121" href="b36s23/16bk4.rle" />
+	<area coords="170,70,250,121" href="b36s23/16acbts.rle" />
+	<area coords="250,70,330,121" href="b36s23/16pdpd.rle" />
+	<area coords="330,70,410,121" href="b36s23/16bbk2.rle" />
+	<area coords="410,70,490,121" href="b36s23/17lfbts.rle" />
+	<area coords="490,70,581,121" href="b36s23/18pdbts.rle" />
+</map>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Aircraft_carrier">Aircraft carrier</a>,
+<a class="x" href="http://conwaylife.com/wiki/Beehive">Beehive</a>,
+<a class="x" href="http://conwaylife.com/wiki/Bi-block">Bi-block</a>,
+<a class="x" href="http://conwaylife.com/wiki/Bi-boat">Bi-boat</a>,
+<a class="x" href="http://conwaylife.com/wiki/Block">Block</a>,
+<a class="x" href="http://conwaylife.com/wiki/Block_on_boat">Block on boat</a>,
+<a class="x" href="http://conwaylife.com/wiki/Boat">Boat</a>,
+<a class="x" href="http://conwaylife.com/wiki/HighLife">HighLife</a>,
+<a class="x" href="http://conwaylife.com/wiki/Loaf">Loaf</a>,
+<a class="x" href="http://conwaylife.com/wiki/Pond">Pond</a>,
+<a class="x" href="http://conwaylife.com/wiki/Pond_on_pond">Pond on pond</a>.</p>
+</article>
+<hr /><article><a id="a4" name="a4"></a>
+<a id="36-qp1" name="36-qp1"></a>
+<h2>2 quasi-still-lifes</h2>
+<p><img src="map/36-qp1.png" alt="B36/S23 QS"
+ width="141" height="61" usemap="#36-qp1" /></p>
+<p><table><colgroup><col span="12" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_36-qp1" class="i" href="javascript:Nav('36-qp1')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a3">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a5">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/36-qp1.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/36-qp1.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/36-qp1.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="lis/36-qp1.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/36-qp1.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/36-qp1.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=36-qp1" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_36-qp1"><p><table id="t-36-qp1" style="width:145px">
+    <colgroup><col span="2" style="width:72px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="b36s23/8bkbk33.rle">
+	    Two blocks offset (3, 3) [3]</a></td>
+	<td><a class="p" href="b36s23/12acac3x.rle">
+	    Two carriers offset (-3, 3) [2]</a></td>
+    </tr>
+</table></p></div>
+<map name="36-qp1">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,41,20,61" href="#bottom" />
+	<area coords="121,0,141,20" href="zip/36-qp1.zip" />
+	<area coords="121,41,141,61" href="stamp/36-qp1.rle" />
+	<area coords="0,0,70,61" href="b36s23/8bkbk33.rle" />
+	<area coords="70,0,141,61" href="b36s23/12acac3x.rle" />
+</map>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Aircraft_carrier">Aircraft carrier</a>,
+<a class="x" href="http://conwaylife.com/wiki/Block">Block</a>.</p>
+</article>
+<hr /><article><a id="a5" name="a5"></a>
+<a id="36-p2" name="36-p2"></a>
+<h2>36 period 2 oscillators</h2>
+<p><img src="map/36-p2.png" alt="B36/S23 period 2 oscillators"
+ width="621" height="321" usemap="#36-p2" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_36-p2" class="i" href="javascript:Nav('36-p2')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a4">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a6">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/36-p2.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/36-p2.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/36-p2.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/36-p2.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/36-p2.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/36-p2.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/36-p2.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=36-p2" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_36-p2"><p><table id="t-36-p2" style="width:625px">
+    <colgroup><col style="width:71px;" /><col span="8" style="width:60px;" />
+	<col style="width:72px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="b36s23/3bl.rle">
+	    Blinker [2]</a></td>
+	<td><a class="p" href="b36s23/6td.rle">
+	    Toad [3]</a></td>
+	<td><a class="p" href="b36s23/6ck.rle">
+	    Clock [4]</a></td>
+	<td><a class="p" href="b36s23/6bc.rle">
+	    Beacon [3]</a></td>
+	<td class="y"><a class="p" href="b36s23/8bp.rle">
+	    Bipole [12]</a></td>
+	<td><a class="p" href="b36s23/9it.rle">IT;
+	    Blinker on T&sup1; [6]</a></td>
+	<td><a class="p" href="b36s23/9tp.rle">
+	    Tripole [7]</a></td>
+	<td><a class="p" href="b36s23/10qp.rle">
+	    Quad&shy;pole [8]</a></td>
+	<td class="y"><a class="p" href="b36s23/11pp.rle">
+	    Pentapole [12]</a></td>
+	<td rowspan="2" class="s">&nbsp;</td>
+    </tr>
+    <tr>
+	<td><a class="p" href="b36s23/12tt1.rle">Close T on T;
+	    Small IHI&sup1; [9]</a></td>
+	<td><a class="p" href="b36s23/12tt2.rle">T on T;
+	    Medium IHI&sup1; [11]</a></td>
+	<td class="y"><a class="p" href="b36s23/12tdt.rle">
+	    T on toad&sup1; [17]</a></td>
+	<td><a class="p" href="b36s23/12hsbl.rle">
+	    Blinker on house&sup1; [4]</a></td>
+	<td class="y"><a class="p" href="b36s23/12lei.rle">
+	    Lei [14]</a></td>
+	<td class="r"><a class="p" href="b36s23/12fx.rle">Fox;
+	    Gnome [x]</a></td>
+	<td><a class="p" href="b36s23/12px.rle">Phoenix;
+	    Phoenix 1; Flip-flops [10]</a></td>
+	<td class="y"><a class="p" href="b36s23/12hp.rle">
+	    Hexapole [18]</a></td>
+	<td><a class="p" href="b36s23/14dmbl.rle">
+	    Blinker on diamond&sup1; [9]</a></td>
+    </tr>
+    <tr>
+	<td><a class="p" href="b36s23/15tit.rle">T on blinker on T;
+	    Long IHI&sup1; [8]</a></td>
+	<td class="y"><a class="p" href="b36s23/15tditd1.rle">
+	    Up toad on I on toad&sup1; [30]</a></td>
+	<td class="y"><a class="p" href="b36s23/15hstd.rle">
+	    Toad on house&sup1; [17]</a></td>
+	<td><a class="p" href="b36s23/15p2-1.rle">
+	    15P2.1 [14]</a></td>
+	<td class="y"><a class="p" href="b36s23/15tditd2.rle">
+	    Down toad on I on toad&sup1; [28]</a></td>
+	<td class="y"><a class="p" href="b36s23/15hst.rle">
+	    T on house&sup1; [20]</a></td>
+	<td class="r"><a class="p" href="b36s23/16p2-9.rle">
+	    16P2.9 [x]</a></td>
+	<td class="r"><a class="p" href="b36s23/16qd.rle">Quad;
+	    Square quad; Barber&shy;pole inter&shy;section [x]</a></td>
+	<td class="y"><a class="p" href="b36s23/16sq.rle">
+	    Skewed quad [20]</a></td>
+	<td><a class="p" href="b36s23/16hg.rle">hour&shy;glass;
+	    Four boats [11]</a></td>
+    </tr>
+    <tr>
+	<td class="y"><a class="p" href="b36s23/17dmtd.rle">
+	    Toad on diamond&sup1; [9]</a></td>
+	<td class="r"><a class="p" href="b36s23/17bvcvbl.rle">
+	    Block on very long cover on blinker&sup1; [9]</a></td>
+	<td><a class="p" href="b36s23/18usc.rle">Undead spark coil;
+	    House on house; JC&sup1; [4]</a></td>
+	<td><a class="p" href="b36s23/18sc.rle">
+	    Spark coil [4]</a></td>
+	<td class="r"><a class="p" href="b36s23/18rr.rle">
+	    Railroad crossing&sup1; [x]</a></td>
+	<td><a class="p" href="b36s23/21hsihs.rle">
+	    House on blinker on house&sup1; [7]</a></td>
+	<td colspan="2"><a class="p" href="b36s23/22dmdm.rle">
+	    Diamond on diamond&sup1; [6]</a></td>
+	<td><a class="p" href="b36s23/24fb.rle">Fore and back;
+	    Complem&shy;entary blinker [12]</a></td>
+	<td class="s">&nbsp;</td>
+    </tr>
+</table></p></div>
+<map name="36-p2">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,301,20,321" href="#bottom" />
+	<area coords="601,0,621,20" href="zip/36-p2.zip" />
+	<area coords="601,301,621,321" href="stamp/36-p2.rle" />
+	<area coords="0,0,70,90" href="b36s23/3bl.rle" />
+	<area coords="70,0,130,90" href="b36s23/6td.rle" />
+	<area coords="130,0,190,90" href="b36s23/6ck.rle" />
+	<area coords="190,0,250,90" href="b36s23/6bc.rle" />
+	<area coords="250,0,310,90" href="b36s23/8bp.rle" />
+	<area coords="310,0,370,90" href="b36s23/9it.rle" />
+	<area coords="370,0,430,90" href="b36s23/9tp.rle" />
+	<area coords="430,0,490,90" href="b36s23/10qp.rle" />
+	<area coords="490,0,550,90" href="b36s23/11pp.rle" />
+	<area coords="0,90,70,170" href="b36s23/12tt1.rle" />
+	<area coords="70,90,130,170" href="b36s23/12tt2.rle" />
+	<area coords="130,90,190,170" href="b36s23/12tdt.rle" />
+	<area coords="190,90,250,170" href="b36s23/12hsbl.rle" />
+	<area coords="250,90,310,170" href="b36s23/12lei.rle" />
+	<area coords="310,90,370,170" href="b36s23/12fx.rle" />
+	<area coords="370,90,430,170" href="b36s23/12px.rle" />
+	<area coords="430,90,490,170" href="b36s23/12hp.rle" />
+	<area coords="490,90,550,170" href="b36s23/14dmbl.rle" />
+	<area coords="0,170,70,250" href="b36s23/15tit.rle" />
+	<area coords="70,170,130,250" href="b36s23/15tditd1.rle" />
+	<area coords="130,170,190,250" href="b36s23/15hstd.rle" />
+	<area coords="190,170,250,250" href="b36s23/15p2-1.rle" />
+	<area coords="250,170,310,250" href="b36s23/15tditd2.rle" />
+	<area coords="310,170,370,250" href="b36s23/15hst.rle" />
+	<area coords="370,170,430,250" href="b36s23/16p2-9.rle" />
+	<area coords="430,170,490,250" href="b36s23/16qd.rle" />
+	<area coords="490,170,550,250" href="b36s23/16sq.rle" />
+	<area coords="550,170,621,250" href="b36s23/16hg.rle" />
+	<area coords="0,250,70,321" href="b36s23/17dmtd.rle" />
+	<area coords="70,250,130,321" href="b36s23/17bvcvbl.rle" />
+	<area coords="130,250,190,321" href="b36s23/18usc.rle" />
+	<area coords="190,250,250,321" href="b36s23/18sc.rle" />
+	<area coords="250,250,310,321" href="b36s23/18rr.rle" />
+	<area coords="310,250,370,321" href="b36s23/21hsihs.rle" />
+	<area coords="370,250,490,321" href="b36s23/22dmdm.rle" />
+	<area coords="490,250,550,321" href="b36s23/24fb.rle" />
+</map>
+<p>Dead spark coils and similar objects are still-lifes in Life, but come
+alive in HighLife, becoming period 2 oscillators with 1&times;1 rotors,
+something that is impossible in Life.</p>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Beacon">Beacon</a>,
+<a class="x" href="http://conwaylife.com/wiki/Bipole">Bipole</a>,
+<a class="x" href="http://conwaylife.com/wiki/Blinker">Blinker</a>,
+<a class="x" href="http://conwaylife.com/wiki/Block">Block</a>,
+<a class="x" href="http://conwaylife.com/wiki/Clock">Clock</a>,
+<a class="x" href="http://conwaylife.com/wiki/Dead_spark_coil">Dead spark coil</a>,
+<a class="x" href="http://conwaylife.com/wiki/Fore_and_back">Fore and back</a>,
+<a class="x" href="http://conwaylife.com/wiki/Four_boats">Four boats</a>,
+<a class="x" href="http://conwaylife.com/wiki/Fox">Fox</a>,
+<a class="x" href="http://conwaylife.com/wiki/Hexapole">Hexapole</a>,
+<a class="x" href="http://conwaylife.com/wiki/HighLife">HighLife</a>,
+<a class="x" href="http://conwaylife.com/wiki/Lei">Lei</a>,
+<a class="x" href="http://conwaylife.com/wiki/Pentapole">Pentapole</a>,
+<a class="x" href="http://conwaylife.com/wiki/Phoenix_1">Phoenix 1</a>,
+<a class="x" href="http://conwaylife.com/wiki/Quad">Quad</a>,
+<a class="x" href="http://conwaylife.com/wiki/Quadpole">Quadpole</a>,
+<a class="x" href="http://conwaylife.com/wiki/Skewed_quad">Skewed quad</a>,
+<a class="x" href="http://conwaylife.com/wiki/Spark_coil">Spark coil</a>,
+<a class="x" href="http://conwaylife.com/wiki/Toad">Toad</a>,
+<a class="x" href="http://conwaylife.com/wiki/Tripole">Tripole</a>.</p>
+</article>
+<hr /><article><a id="a6" name="a6"></a>
+<a id="36-pp2" name="36-pp2"></a>
+<h2>2 period 2 pseudo-oscillators</h2>
+<p><img src="map/36-pp2.png" alt="B36/S23 PP2"
+ width="141" height="61" usemap="#36-pp2" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_36-pp2" class="i" href="javascript:Nav('36-pp2')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a5">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a7">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/36-pp2.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/36-pp2.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/36-pp2.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/36-pp2.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/36-pp2.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/36-pp2.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/36-pp2.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=36-pp2" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_36-pp2"><p><table id="t-36-pp2" style="width:145px">
+    <colgroup><col span="2" style="width:72px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="b36s23/10bcbk.rle">
+	    Block on beacon [5]</a></td>
+	<td><a class="p" href="b36s23/11bcbt1.rle">
+	    Up boat on beacon [4]</a></td>
+    </tr>
+</table></p></div>
+<map name="36-pp2">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,41,20,61" href="#bottom" />
+	<area coords="121,0,141,20" href="zip/36-pp2.zip" />
+	<area coords="121,41,141,61" href="stamp/36-pp2.rle" />
+	<area coords="0,0,70,61" href="b36s23/10bcbk.rle" />
+	<area coords="70,0,141,61" href="b36s23/11bcbt1.rle" />
+</map>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Beacon">Beacon</a>,
+<a class="x" href="http://conwaylife.com/wiki/Block">Block</a>,
+<a class="x" href="http://conwaylife.com/wiki/Boat">Boat</a>,
+<a class="x" href="http://conwaylife.com/wiki/HighLife">HighLife</a>.</p>
+</article>
+<hr /><article><a id="a7" name="a7"></a>
+<a id="36-p3" name="36-p3"></a>
+<h2>23 period 3 oscillators</h2>
+<p><img src="map/36-p3.png" alt="B36/S23 period 3 oscillators"
+ width="501" height="341" usemap="#36-p3" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_36-p3" class="i" href="javascript:Nav('36-p3')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a6">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a8">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/36-p3.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/36-p3.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/36-p3.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/36-p3.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/36-p3.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/36-p3.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/36-p3.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=36-p3" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_36-p3"><p><table id="t-36-p3" style="width:505px">
+    <colgroup><col style="width:91px;" /><col span="4" style="width:80px;" />
+	<col style="width:92px;" /></colgroup>
+    <tr>
+	<td class="r"><a class="p" href="b36s23/14eet.rle">Eater eating eater;
+	    Two eaters [x]</a></td>
+	<td class="y"><a class="p" href="b36s23/16cfbk2.rle">Block on trans candle&shy;frobra;
+	    Cis-block and long hook eating tub [25]</a></td>
+	<td class="y"><a class="p" href="b36s23/16cfbk1.rle">Block on cis candle&shy;frobra;
+	    Trans-block and long hook eating tub [26]</a></td>
+	<td class="y"><a class="p" href="b36s23/16kyky3.rle">Bent keys;
+	    Candelabra between two trans tubs [18]</a></td>
+	<td class="r"><a class="p" href="b36s23/17kysp2.rle">
+	    Bent key and skewed pole [x]</a></td>
+	<td class="r"><a class="p" href="b36s23/19bw.rle">
+	    Bowed caterer [x]</a></td>
+    </tr>
+    <tr>
+	<td class="r"><a class="p" href="b36s23/18spsp1.rle">
+	    Cis skewed poles [x]</a></td>
+	<td class="y"><a class="p" href="b36s23/18p3.rle">
+	    18P3&sup1; [x]</a></td>
+	<td class="y"><a class="p" href="b36s23/18pq.rle">
+	    Pulsar quadrant [21]</a></td>
+	<td class="r"><a class="p" href="b36s23/18pqpq.rle">Two pulsar quadrants;
+	    Pulsar 18-22-20 [x]</a></td>
+	<td class="r"><a class="p" href="b36s23/18fk.rle">French kiss;
+	    Eaters plus [x]</a></td>
+	<td class="r"><a class="p" href="b36s23/18spsp2.rle">
+	    Trans skewed poles [x]</a></td>
+    </tr>
+    <tr>
+	<td class="r"><a class="p" href="b36s23/20p3-1.rle">
+	    20P3.1 [x]</a></td>
+	<td class="r"><a class="p" href="b36s23/20htw1.rle">Up weird thing
+	    below hook w/&#8203;tail [x]</a></td>
+	<td class="r"><a class="p" href="b36s23/20htw2.rle">Down weird thing
+	    below hook w/&#8203;tail [x]</a></td>
+	<td class="r"><a class="p" href="b36s23/20dbtw1.rle">Up weird thing
+	    below down boat w/&#8203;tail [x]</a></td>
+	<td class="r"><a class="p" href="b36s23/20ca2a.rle">
+	    Trans dual caterer [x]</a></td>
+	<td class="r"><a class="p" href="b36s23/20nblf.rle">
+	    Beluch&shy;enko&rsquo;s P3 w/&#8203;loaf [x]</a></td>
+    </tr>
+    <tr>
+	<td class="r"><a class="p" href="b36s23/20dbtw2.rle">Down weird thing
+	    below down boat w/&#8203;tail [x]</a></td>
+	<td class="r"><a class="p" href="b36s23/20nbtl.rle">
+	    Beluch&shy;enko&rsquo;s P3 w/&#8203;tail [x]</a></td>
+	<td class="r"><a class="p" href="b36s23/21catapb.rle">
+	    Caterer w/&#8203;table on pre-block [x]</a></td>
+	<td class="y"><a class="p" href="b36s23/24star.rle">
+	    Star [39]</a></td>
+	<td class="r"><a class="p" href="b36s23/28cross.rle">
+	    Cross [x]</a></td>
+	<td class="s">&nbsp;</td>
+    </tr>
+</table></p></div>
+<map name="36-p3">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,321,20,341" href="#bottom" />
+	<area coords="481,0,501,20" href="zip/36-p3.zip" />
+	<area coords="481,321,501,341" href="stamp/36-p3.rle" />
+	<area coords="0,0,90,90" href="b36s23/14eet.rle" />
+	<area coords="90,0,170,90" href="b36s23/16cfbk2.rle" />
+	<area coords="170,0,250,90" href="b36s23/16cfbk1.rle" />
+	<area coords="250,0,330,90" href="b36s23/16kyky3.rle" />
+	<area coords="330,0,410,90" href="b36s23/17kysp2.rle" />
+	<area coords="410,0,501,90" href="b36s23/19bw.rle" />
+	<area coords="0,90,90,170" href="b36s23/18spsp1.rle" />
+	<area coords="90,90,170,170" href="b36s23/18p3.rle" />
+	<area coords="170,90,250,170" href="b36s23/18pq.rle" />
+	<area coords="250,90,330,170" href="b36s23/18pqpq.rle" />
+	<area coords="330,90,410,170" href="b36s23/18fk.rle" />
+	<area coords="410,90,501,170" href="b36s23/18spsp2.rle" />
+	<area coords="0,170,90,250" href="b36s23/20p3-1.rle" />
+	<area coords="90,170,170,250" href="b36s23/20htw1.rle" />
+	<area coords="170,170,250,250" href="b36s23/20htw2.rle" />
+	<area coords="250,170,330,250" href="b36s23/20dbtw1.rle" />
+	<area coords="330,170,410,250" href="b36s23/20ca2a.rle" />
+	<area coords="410,170,501,250" href="b36s23/20nblf.rle" />
+	<area coords="0,250,90,341" href="b36s23/20dbtw2.rle" />
+	<area coords="90,250,170,341" href="b36s23/20nbtl.rle" />
+	<area coords="170,250,250,341" href="b36s23/21catapb.rle" />
+	<area coords="250,250,330,341" href="b36s23/24star.rle" />
+	<area coords="330,250,410,341" href="b36s23/28cross.rle" />
+</map>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Bent_keys">Bent keys</a>,
+<a class="x" href="http://conwaylife.com/wiki/Block">Block</a>,
+<a class="x" href="http://conwaylife.com/wiki/Candlefrobra">Candlefrobra</a>,
+<a class="x" href="http://conwaylife.com/wiki/Caterer">Caterer</a>,
+<a class="x" href="http://conwaylife.com/wiki/Cis-boat_with_tail">Cis-boat with tail</a>,
+<a class="x" href="http://conwaylife.com/wiki/Cross">Cross</a>,
+<a class="x" href="http://conwaylife.com/wiki/Eater_1">Eater 1</a>,
+<a class="x" href="http://conwaylife.com/wiki/French_kiss">French kiss</a>,
+<a class="x" href="http://conwaylife.com/wiki/HighLife">HighLife</a>,
+<a class="x" href="http://conwaylife.com/wiki/Hook_with_tail">Hook with tail</a>,
+<a class="x" href="http://conwaylife.com/wiki/Loaf">Loaf</a>,
+<a class="x" href="http://conwaylife.com/wiki/Pre-block">Pre-block</a>,
+<a class="x" href="http://conwaylife.com/wiki/Pulsar">Pulsar</a>,
+<a class="x" href="http://conwaylife.com/wiki/Pulsar_quadrant">Pulsar quadrant</a>,
+<a class="x" href="http://conwaylife.com/wiki/Star">Star</a>,
+<a class="x" href="http://conwaylife.com/wiki/Trans-block_and_long_hook_eating_tub">Trans-block and long hook eating tub</a>,
+<a class="x" href="http://conwaylife.com/wiki/Two_eaters">Two eaters</a>,
+<a class="x" href="http://conwaylife.com/wiki/Two_pulsar_quadrants">Two pulsar quadrants</a>.</p>
+</article>
+<hr /><article><a id="a8" name="a8"></a>
+<a id="36-p4" name="36-p4"></a>
+<h2>26 period 4 oscillators</h2>
+<p><img src="map/36-p4.png" alt="B36/S23 period 4 oscillators"
+ width="541" height="421" usemap="#36-p4" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_36-p4" class="i" href="javascript:Nav('36-p4')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a7">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a9">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/36-p4.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/36-p4.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/36-p4.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/36-p4.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/36-p4.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/36-p4.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/36-p4.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=36-p4" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_36-p4"><p><table id="t-36-p4" style="width:545px">
+    <colgroup><col style="width:91px;" /><col span="2" style="width:40px;" />
+	<col style="width:60px;" /><col style="width:20px;" />
+	<col style="width:80px;" /><col style="width:100px;" />
+	<col style="width:112px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="b36s23/12md.rle">
+	    Mold [9]</a></td>
+	<td colspan="2" class="y"><a class="p" href="b36s23/12mz.rle">
+	    Mazing [x+14]</a></td>
+	<td colspan="2" class="r"><a class="p" href="b36s23/18cupbk.rle">
+	    Block on cuphook w/&#8203;pre-block&sup1; [x]</a></td>
+	<td><a class="p" href="b36s23/18mg.rle">Monogram;
+	    Initials; JHC [15]</a></td>
+	<td class="r"><a class="p" href="b36s23/20eebf.rle">Eater block frob;
+	    Eater and block eating loaf w/&#8203;tail [x]</a></td>
+	<td class="r"><a class="p" href="b36s23/20ce.rle">
+	    Confused eaters [x]</a></td>
+    </tr>
+    <tr>
+	<td colspan="2" class="y"><a class="p" href="b36s23/22p4-1.rle">
+	    22P4.1 [29]</a></td>
+	<td colspan="2" class="r"><a class="p" href="b36s23/22p4-2.rle">
+	    22P4.2 [x]</a></td>
+	<td colspan="2" class="r"><a class="p" href="b36s23/24p4-2.rle">
+	    24P4.2 [x]</a></td>
+	<td class="r"><a class="p" href="b36s23/24p4-3.rle">
+	    24P4.3 [x]</a></td>
+	<td class="r"><a class="p" href="b36s23/28p4.rle">
+	    28P4; Four bookends&sup1; [x]</a></td>
+    </tr>
+    <tr>
+	<td colspan="2" class="r"><a class="p" href="b36s23/25p4.rle">
+	    25P4&sup1; [x]</a></td>
+	<td colspan="2" class="r"><a class="p" href="b36s23/25p4-1.rle">
+	    25P4.1 [x]</a></td>
+	<td colspan="2" class="r"><a class="p" href="b36s23/35pw.rle">Pinwheel;
+	    Catherine wheel [x]</a></td>
+	<td class="r"><a class="p" href="b36s23/35ckii.rle">Clock II;
+	    Clock 2 [x]</a></td>
+	<td class="r"><a class="p" href="b36s23/38me.rle">
+	    Minimal middleweight emulator&sup2; [x]</a></td>
+    </tr>
+    <tr>
+	<td colspan="2" class="r"><a class="p" href="b36s23/36le.rle">
+	    Minimal lightweight emulator&sup2; [x]</a></td>
+	<td colspan="2" class="r"><a class="p" href="b36s23/36p4sp2.rle">
+	    Snake pit 2&sup1; [x]</a></td>
+	<td colspan="2" class="r"><a class="p" href="b36s23/40le.rle">
+	    Lightweight emulator&sup2; [x]</a></td>
+	<td class="r"><a class="p" href="b36s23/40he.rle">
+	    Minimal heavyweight emulator&sup2; [x]</a></td>
+	<td class="r"><a class="p" href="b36s23/40p4.rle">
+	    40P4&sup1; [x]</a></td>
+    </tr>
+    <tr>
+	<td colspan="2" class="r"><a class="p" href="b36s23/42me.rle">
+	    Middleweight emulator&sup2; [x]</a></td>
+	<td colspan="2" class="r"><a class="p" href="b36s23/44he.rle">
+	    Heavyweight emulator&sup2; [x]</a></td>
+	<td colspan="2" class="r"><a class="p" href="b36s23/44p4.rle">
+	    44P4 [x]</a></td>
+	<td class="r"><a class="p" href="b36s23/48p4.rle">
+	    48P4 [x]</a></td>
+	<td class="r"><a class="p" href="b36s23/56p4.rle">
+	    56P4 [x]</a></td>
+    </tr>
+</table></p></div>
+<map name="36-p4">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,401,20,421" href="#bottom" />
+	<area coords="521,0,541,20" href="zip/36-p4.zip" />
+	<area coords="521,401,541,421" href="stamp/36-p4.rle" />
+	<area coords="0,0,90,90" href="b36s23/12md.rle" />
+	<area coords="90,0,170,90" href="b36s23/12mz.rle" />
+	<area coords="170,0,250,90" href="b36s23/18cupbk.rle" />
+	<area coords="250,0,330,90" href="b36s23/18mg.rle" />
+	<area coords="330,0,410,90" href="b36s23/20eebf.rle" />
+	<area coords="410,0,541,90" href="b36s23/20ce.rle" />
+	<area coords="0,90,130,170" href="b36s23/22p4-1.rle" />
+	<area coords="130,90,230,170" href="b36s23/22p4-2.rle" />
+	<area coords="230,90,330,170" href="b36s23/24p4-2.rle" />
+	<area coords="330,90,430,170" href="b36s23/24p4-3.rle" />
+	<area coords="430,90,541,170" href="b36s23/28p4.rle" />
+	<area coords="0,170,130,250" href="b36s23/25p4.rle" />
+	<area coords="130,170,230,250" href="b36s23/25p4-1.rle" />
+	<area coords="230,170,330,250" href="b36s23/35pw.rle" />
+	<area coords="330,170,430,250" href="b36s23/35ckii.rle" />
+	<area coords="430,170,541,250" href="b36s23/38me.rle" />
+	<area coords="0,250,130,330" href="b36s23/36le.rle" />
+	<area coords="130,250,230,330" href="b36s23/40le.rle" />
+	<area coords="230,250,330,330" href="b36s23/36p4sp2.rle" />
+	<area coords="330,250,430,330" href="b36s23/40he.rle" />
+	<area coords="430,250,541,330" href="b36s23/40p4.rle" />
+	<area coords="0,330,130,421" href="b36s23/42me.rle" />
+	<area coords="130,330,230,421" href="b36s23/44he.rle" />
+	<area coords="230,330,330,421" href="b36s23/44p4.rle" />
+	<area coords="330,330,430,421" href="b36s23/48p4.rle" />
+	<area coords="430,330,541,421" href="b36s23/56p4.rle" />
+</map>
+<p>The Cuphook and Snake pit 2 are
+<a class="i" href="p3.htm">period 3 oscillators</a>
+in Life, but period 4 oscillators in HighLife, so even though the starting
+generations are the same in both rules, these are distinct oscillators.</p>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Block">Block</a>,
+<a class="x" href="http://conwaylife.com/wiki/Clock_2">Clock 2</a>,
+<a class="x" href="http://conwaylife.com/wiki/Confused_eaters">Confused eaters</a>,
+<a class="x" href="http://conwaylife.com/wiki/Cuphook">Cuphook</a>,
+<a class="x" href="http://conwaylife.com/wiki/Eater_1">Eater 1</a>,
+<a class="x" href="http://conwaylife.com/wiki/Eater/block_frob">Eater/block frob</a>,
+<a class="x" href="http://conwaylife.com/wiki/Heavyweight_emulator">Heavyweight emulator</a>,
+<a class="x" href="http://conwaylife.com/wiki/HighLife">HighLife</a>,
+<a class="x" href="http://conwaylife.com/wiki/Lightweight_emulator">Lightweight emulator</a>,
+<a class="x" href="http://conwaylife.com/wiki/Loaf">Loaf</a>,
+<a class="x" href="http://conwaylife.com/wiki/Mazing">Mazing</a>,
+<a class="x" href="http://conwaylife.com/wiki/Middleweight_emulator">Middleweight emulator</a>,
+<a class="x" href="http://conwaylife.com/wiki/Mold">Mold</a>,
+<a class="x" href="http://conwaylife.com/wiki/Monogram">Monogram</a>,
+<a class="x" href="http://conwaylife.com/wiki/Pinwheel">Pinwheel</a>,
+<a class="x" href="http://conwaylife.com/wiki/Snake_pit_2">Snake pit 2</a>.</p>
+</article>
+<hr /><article><a id="a9" name="a9"></a>
+<a id="36-p5" name="36-p5"></a>
+<h2>2 period 5 oscillators</h2>
+<p><img src="map/36-p5.png" alt="B36/S23 period 5 oscillators"
+ width="181" height="81" usemap="#36-p5" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_36-p5" class="i" href="javascript:Nav('36-p5')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a8">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a10">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/36-p5.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/36-p5.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/36-p5.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/36-p5.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/36-p5.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/36-p5.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/36-p5.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=36-p5" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_36-p5"><p><table id="t-36-p5" style="width:185px">
+    <colgroup><col span="2" style="width:92px;" /></colgroup>
+    <tr>
+	<td class="r"><a class="p" href="b36s23/18fm.rle">
+	    Fumarole [x]</a></td>
+	<td class="r"><a class="p" href="b36s23/40p5-1.rle">
+	    40P5.1 [x]</a></td>
+    </tr>
+</table></p></div>
+<map name="36-p5">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,61,20,81" href="#bottom" />
+	<area coords="161,0,181,20" href="zip/36-p5.zip" />
+	<area coords="161,61,181,81" href="stamp/36-p5.rle" />
+	<area coords="0,0,90,81" href="b36s23/18fm.rle" />
+	<area coords="90,0,181,81" href="b36s23/40p5-1.rle" />
+</map>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Fumarole">Fumarole</a>,
+<a class="x" href="http://conwaylife.com/wiki/HighLife">HighLife</a>.</p>
+</article>
+<hr /><article><a id="a10" name="a10"></a>
+<a id="36-p6" name="36-p6"></a>
+<h2>2 period 6 oscillators</h2>
+<p><img src="map/36-p6.png" alt="B36/S23 period 6 oscillators"
+ width="221" height="101" usemap="#36-p6" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_36-p6" class="i" href="javascript:Nav('36-p6')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a9">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a11">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/36-p6.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/36-p6.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/36-p6.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/36-p6.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/36-p6.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/36-p6.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/36-p6.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=36-p6" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_36-p6"><p><table id="t-36-p6" style="width:225px">
+    <colgroup><col span="2" style="width:112px;" /></colgroup>
+    <tr>
+	<td class="y"><a class="p" href="b36s23/34td4ly.rle">Lonely bee
+	    hassled by four toads [54]</a></td>
+	<td class="r"><a class="p" href="b36s23/88p6.rle">
+	    88P6&sup2; [x]</a></td>
+    </tr>
+</table></p></div>
+<map name="36-p6">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,81,20,101" href="#bottom" />
+	<area coords="201,0,221,20" href="zip/36-p6.zip" />
+	<area coords="201,81,221,101" href="stamp/36-p6.rle" />
+	<area coords="0,0,110,101" href="b36s23/34td4ly.rle" />
+	<area coords="110,0,221,101" href="b36s23/88p6.rle" />
+</map>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/HighLife">HighLife</a>,
+<a class="x" href="http://conwaylife.com/wiki/Toad">Toad</a>,
+<a class="x" href="http://conwaylife.com/wiki/Worker_bee">Worker bee</a>.</p>
+</article>
+<hr /><article><a id="a11" name="a11"></a>
+<a id="36-p7" name="36-p7"></a>
+<h2>1 period 7 oscillator</h2>
+<p><img src="map/36-p7.png" alt="B36/S23 P7"
+ width="81" height="61" usemap="#36-p7" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_36-p7" class="i" href="javascript:Nav('36-p7')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a10">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a12">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/36-p7.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/36-p7.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/36-p7.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/36-p7.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/36-p7.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/36-p7.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/36-p7.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=36-p7" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_36-p7"><p><table id="t-36-p7" style="width:85px">
+    <colgroup><col style="width:83px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="b36s23/8p7.rle">8P7;
+	    Twin beehives&sup1; [3]</a></td>
+    </tr>
+</table></p></div>
+<map name="36-p7">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,41,20,61" href="#bottom" />
+	<area coords="61,0,81,20" href="zip/36-p7.zip" />
+	<area coords="61,41,81,61" href="stamp/36-p7.rle" />
+	<area coords="0,0,81,61" href="b36s23/8p7.rle" />
+</map>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Beehive">Beehive</a>,
+<a class="x" href="http://conwaylife.com/wiki/HighLife">HighLife</a>.</p>
+</article>
+<hr /><article><a id="a12" name="a12"></a>
+<a id="36-p8" name="36-p8"></a>
+<h2>4 period 8 oscillators</h2>
+<p><img src="map/36-p8.png" alt="B36/S23 period 8 oscillators"
+ width="421" height="101" usemap="#36-p8" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_36-p8" class="i" href="javascript:Nav('36-p8')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a11">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a13">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/36-p8.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/36-p8.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/36-p8.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/36-p8.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/36-p8.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/36-p8.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/36-p8.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=36-p8" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_36-p8"><p><table id="t-36-p8" style="width:425px">
+    <colgroup><col style="width:111px;" /><col span="2" style="width:100px;" />
+	<col style="width:112px;" /></colgroup>
+    <tr>
+	<td class="r"><a class="p" href="b36s23/17tc.rle">Coe&rsquo;s P8;
+	    Tim Coe&rsquo;s P8 [x]</a></td>
+	<td class="r"><a class="p" href="b36s23/35ro.rle">
+	    Roteightor [x]</a></td>
+	<td class="r"><a class="p" href="b36s23/38p8.rle">
+	    38P8&sup1; [x]</a></td>
+	<td class="r"><a class="p" href="b36s23/40et4hf.rle">
+	    Eater-bound honeyfarm [x]</a></td>
+    </tr>
+</table></p></div>
+<map name="36-p8">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,81,20,101" href="#bottom" />
+	<area coords="401,0,421,20" href="zip/36-p8.zip" />
+	<area coords="401,81,421,101" href="stamp/36-p8.rle" />
+	<area coords="0,0,110,101" href="b36s23/17tc.rle" />
+	<area coords="110,0,210,101" href="b36s23/35ro.rle" />
+	<area coords="210,0,310,101" href="b36s23/38p8.rle" />
+	<area coords="310,0,421,101" href="b36s23/40et4hf.rle" />
+</map>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Block">Block</a>,
+<a class="x" href="http://conwaylife.com/wiki/Coe's_p8">Coe&rsquo;s p8</a>,
+<a class="x" href="http://conwaylife.com/wiki/Eater_1">Eater 1</a>,
+<a class="x" href="http://conwaylife.com/wiki/HighLife">HighLife</a>,
+<a class="x" href="http://conwaylife.com/wiki/Honey_farm">Honey farm</a>,
+<a class="x" href="http://conwaylife.com/wiki/Roteightor">Roteightor</a>.</p>
+</article>
+<hr /><article><a id="a13" name="a13"></a>
+<a id="36-p9" name="36-p9"></a>
+<h2>7 period 9 oscillators</h2>
+<p><img src="map/36-p9.png" alt="B36/S23 period 9 oscillators"
+ width="381" height="201" usemap="#36-p9" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_36-p9" class="i" href="javascript:Nav('36-p9')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a12">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a14">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/36-p9.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/36-p9.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/36-p9.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/36-p9.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/36-p9.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/36-p9.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/36-p9.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=36-p9" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_36-p9"><p><table id="t-36-p9" style="width:385px">
+    <colgroup><col style="width:91px;" /><col style="width:40px;" />
+	<col span="2" style="width:60px;" /><col style="width:40px;" />
+	<col style="width:92px;" /></colgroup>
+    <tr>
+	<td class="y"><a class="p" href="b36s23/16p9.rle">
+	    16P9&sup1; [14]</a></td>
+	<td colspan="2" class="o"><a class="p" href="b36s23/26p9.rle">
+	    26P9&sup1; [x+16]</a></td>
+	<td colspan="2" class="y"><a class="p" href="b36s23/27p9.rle">
+	    27P9&sup1; [43]</a></td>
+	<td class="r"><a class="p" href="b36s23/34lyet4.rle">Lonely bee hassled by
+	    four eaters; Lonely bee; Worker bee [x]</a></td>
+    </tr>
+    <tr>
+	<td colspan="2" class="r"><a class="p" href="b36s23/40ly1et4.rle">Two close lonely bees
+	    hassled by four eaters; Two close lonely bees&sup1; [x]</a></td>
+	<td colspan="2" class="r"><a class="p" href="b36s23/40ly2et4.rle">Two lonely bees
+	    hassled by four eaters; Two lonely bees [x]</a></td>
+	<td colspan="2" class="r"><a class="p" href="b36s23/66p9.rle">
+	    66P9&sup1; [x]</a></td>
+    </tr>
+</table></p></div>
+<map name="36-p9">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,181,20,201" href="#bottom" />
+	<area coords="361,0,381,20" href="zip/36-p9.zip" />
+	<area coords="361,181,381,201" href="stamp/36-p9.rle" />
+	<area coords="0,0,90,110" href="b36s23/16p9.rle" />
+	<area coords="90,0,190,110" href="b36s23/26p9.rle" />
+	<area coords="190,0,290,110" href="b36s23/27p9.rle" />
+	<area coords="290,0,381,110" href="b36s23/34lyet4.rle" />
+	<area coords="0,110,130,201" href="b36s23/40ly1et4.rle" />
+	<area coords="130,110,250,201" href="b36s23/40ly2et4.rle" />
+	<area coords="250,110,381,201" href="b36s23/66p9.rle" />
+</map>
+<p>Multiple lonely bees can be chained together two spaces apart in both
+Life and HighLife. However, HighLife also allows them to be placed one
+space apart.</p>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Eater_1">Eater 1</a>,
+<a class="x" href="http://conwaylife.com/wiki/HighLife">HighLife</a>,
+<a class="x" href="http://conwaylife.com/wiki/Worker_bee">Worker bee</a>.</p>
+</article>
+<hr /><article><a id="a14" name="a14"></a>
+<a id="36-p10" name="36-p10"></a>
+<h2>2 period 10 oscillators</h2>
+<p><img src="map/36-p10.png" alt="B36/S23 P10"
+ width="141" height="81" usemap="#36-p10" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_36-p10" class="i" href="javascript:Nav('36-p10')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a13">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a15">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/36-p10.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/36-p10.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/36-p10.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/36-p10.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/36-p10.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/36-p10.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/36-p10.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=36-p10" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_36-p10"><p><table id="t-36-p10" style="width:145px">
+    <colgroup><col span="2" style="width:72px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="b36s23/8p10.rle">
+	    8P10&sup1; [3]</a></td>
+	<td class="r"><a class="p" href="b36s23/39p10.rle">
+	    39P10&sup1; [x]</a></td>
+    </tr>
+</table></p></div>
+<map name="36-p10">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,61,20,81" href="#bottom" />
+	<area coords="121,0,141,20" href="zip/36-p10.zip" />
+	<area coords="121,61,141,81" href="stamp/36-p10.rle" />
+	<area coords="0,0,70,81" href="b36s23/8p10.rle" />
+	<area coords="70,0,141,81" href="b36s23/39p10.rle" />
+</map>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/HighLife">HighLife</a>,
+<a class="x" href="http://conwaylife.com/wiki/Snake">Snake</a>.</p>
+</article>
+<hr /><article><a id="a15" name="a15"></a>
+<a id="36-p12" name="36-p12"></a>
+<h2>2 period 12 oscillators</h2>
+<p><img src="map/36-p12.png" alt="B36/S23 P12"
+ width="181" height="81" usemap="#36-p12" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_36-p12" class="i" href="javascript:Nav('36-p12')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a14">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a16">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/36-p12.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/36-p12.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/36-p12.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/36-p12.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/36-p12.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/36-p12.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/36-p12.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=36-p12" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_36-p12"><p><table id="t-36-p12" style="width:185px">
+    <colgroup><col span="2" style="width:92px;" /></colgroup>
+    <tr>
+	<td class="g"><a class="p" href="b36s23/16p12.rle">
+	    16P12&sup1; [16]</a></td>
+	<td class="r"><a class="p" href="b36s23/64p12.rle">
+	    64P12&sup1; [x]</a></td>
+    </tr>
+</table></p></div>
+<map name="36-p12">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,61,20,81" href="#bottom" />
+	<area coords="161,0,181,20" href="zip/36-p12.zip" />
+	<area coords="161,61,181,81" href="stamp/36-p12.rle" />
+	<area coords="0,0,92,81" href="b36s23/16p12.rle" />
+	<area coords="92,0,181,81" href="b36s23/64p12.rle" />
+</map>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/HighLife">HighLife</a>.</p>
+</article>
+<hr /><article><a id="a16" name="a16"></a>
+<a id="36-p13" name="36-p13"></a>
+<h2>1 period 13 oscillator</h2>
+<p><img src="map/36-p13.png" alt="B36/S23 P13"
+ width="101" height="101" usemap="#36-p13" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_36-p13" class="i" href="javascript:Nav('36-p13')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a15">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a17">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/36-p13.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/36-p13.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/36-p13.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/36-p13.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/36-p13.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/36-p13.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/36-p13.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=36-p13" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_36-p13"><p><table id="t-36-p13" style="width:105px">
+    <colgroup><col style="width:103px;" /></colgroup>
+    <tr>
+	<td class="r"><a class="p" href="b36s23/77p13.rle">
+	    77P13&sup1; [x]</a></td>
+    </tr>
+</table></p></div>
+<map name="36-p13">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,81,20,101" href="#bottom" />
+	<area coords="81,0,101,20" href="zip/36-p13.zip" />
+	<area coords="81,81,101,101" href="stamp/36-p13.rle" />
+	<area coords="0,0,101,101" href="b36s23/77p13.rle" />
+</map>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/HighLife">HighLife</a>,
+<a class="x" href="http://conwaylife.com/wiki/Snake">Snake</a>.</p>
+</article>
+<hr /><article><a id="a17" name="a17"></a>
+<a id="36-p14" name="36-p14"></a>
+<h2>1 period 14 oscillator</h2>
+<p><img src="map/36-p14.png" alt="B36/S23 P14"
+ width="81" height="81" usemap="#36-p14" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_36-p14" class="i" href="javascript:Nav('36-p14')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a16">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a18">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/36-p14.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/36-p14.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/36-p14.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/36-p14.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/36-p14.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/36-p14.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/36-p14.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=36-p14" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_36-p14"><p><table id="t-36-p14" style="width:85px">
+    <colgroup><col style="width:83px;" /></colgroup>
+    <tr>
+	<td class="r"><a class="p" href="b36s23/32p14.rle">
+	    32P14&sup1; [x]</a></td>
+    </tr>
+</table></p></div>
+<map name="36-p14">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,61,20,81" href="#bottom" />
+	<area coords="61,0,81,20" href="zip/36-p14.zip" />
+	<area coords="61,61,81,81" href="stamp/36-p14.rle" />
+	<area coords="0,0,81,81" href="b36s23/32p14.rle" />
+</map>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/HighLife">HighLife</a>.</p>
+</article>
+<hr /><article><a id="a18" name="a18"></a>
+<a id="36-p20" name="36-p20"></a>
+<h2>2 period 20 oscillators</h2>
+<p><img src="map/36-p20.png" alt="B36/S23 period 20 oscillators"
+ width="181" height="81" usemap="#36-p20" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_36-p20" class="i" href="javascript:Nav('36-p20')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a17">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a19">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/36-p20.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/36-p20.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/36-p20.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/36-p20.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/36-p20.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/36-p20.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/36-p20.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=36-p20" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_36-p20"><p><table id="t-36-p20" style="width:185px">
+    <colgroup><col span="2" style="width:92px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="b36s23/20p20.rle">
+	    20P20&sup1; [12]</a></td>
+	<td class="r"><a class="p" href="b36s23/30fmmd.rle">Fumarole and mold
+	    sharing sparks; Mold on fumarole [x]</a></td>
+    </tr>
+</table></p></div>
+<map name="36-p20">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,61,20,81" href="#bottom" />
+	<area coords="161,0,181,20" href="zip/36-p20.zip" />
+	<area coords="161,61,181,81" href="stamp/36-p20.rle" />
+	<area coords="0,0,90,81" href="b36s23/20p20.rle" />
+	<area coords="90,0,181,81" href="b36s23/30fmmd.rle" />
+</map>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Fumarole">Fumarole</a>,
+<a class="x" href="http://conwaylife.com/wiki/HighLife">HighLife</a>,
+<a class="x" href="http://conwaylife.com/wiki/Loaf">Loaf</a>,
+<a class="x" href="http://conwaylife.com/wiki/Mold">Mold</a>,
+<a class="x" href="http://conwaylife.com/wiki/Mold_on_fumarole">Mold on fumarole</a>.</p>
+</article>
+<hr /><article><a id="a19" name="a19"></a>
+<a id="36-p24" name="36-p24"></a>
+<h2>2 period 24 oscillators</h2>
+<p><img src="map/36-p24.png" alt="B36/S23 P24"
+ width="261" height="141" usemap="#36-p24" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_36-p24" class="i" href="javascript:Nav('36-p24')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a18">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a20">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/36-p24.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/36-p24.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/36-p24.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/36-p24.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/36-p24.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/36-p24.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/36-p24.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=36-p24" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_36-p24"><p><table id="t-36-p24" style="width:265px">
+    <colgroup><col span="2" style="width:132px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="b36s23/21p24-1.rle">21P24.1;
+	    Cis shuttle&sup1; [12]</a></td>
+	<td class="r"><a class="p" href="b36s23/59p24.rle">59P24;
+	    Replicator between four molds&sup1; [x]</a></td>
+    </tr>
+</table></p></div>
+<map name="36-p24">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,121,20,141" href="#bottom" />
+	<area coords="241,0,261,20" href="zip/36-p24.zip" />
+	<area coords="241,121,261,141" href="stamp/36-p24.rle" />
+	<area coords="0,0,132,141" href="b36s23/21p24-1.rle" />
+	<area coords="132,0,261,141" href="b36s23/59p24.rle" />
+</map>
+<p>There is a period 24 wick consisting of replicators spaced 12 spaces
+apart, that can be capped by pairs of molds at each end. The smallest
+instance of this is shown above.</p>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Eater_1">Eater 1</a>,
+<a class="x" href="http://conwaylife.com/wiki/HighLife">HighLife</a>,
+<a class="x" href="http://conwaylife.com/wiki/Loaf">Loaf</a>,
+<a class="x" href="http://conwaylife.com/wiki/Mold">Mold</a>,
+<a class="x" href="http://conwaylife.com/wiki/Replicator">Replicator</a>.</p>
+</article>
+<hr /><article><a id="a20" name="a20"></a>
+<a id="36-p28" name="36-p28"></a>
+<h2>1 period 28 oscillator</h2>
+<p><img src="map/36-p28.png" alt="B36/S23 P28 oscillator"
+ width="141" height="81" usemap="#36-p28" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_36-p28" class="i" href="javascript:Nav('36-p28')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a19">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a21">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/36-p28.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/36-p28.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/36-p28.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/36-p28.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/36-p28.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/36-p28.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/36-p28.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=36-p28" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_36-p28"><p><table id="t-36-p28" style="width:145px">
+    <colgroup><col style="width:143px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="b36s23/42p28.rle">
+	    42P28&sup1; [22]</a></td>
+    </tr>
+</table></p></div>
+<map name="36-p28">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,61,20,81" href="#bottom" />
+	<area coords="121,0,141,20" href="zip/36-p28.zip" />
+	<area coords="121,61,141,81" href="stamp/36-p28.rle" />
+	<area coords="0,0,141,81" href="b36s23/42p28.rle" />
+</map>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/HighLife">HighLife</a>.</p>
+</article>
+<hr /><article><a id="a21" name="a21"></a>
+<a id="36-p38" name="36-p38"></a>
+<h2>1 period 38 oscillator</h2>
+<p><img src="map/36-p38.png" alt="B36/S23 P38"
+ width="101" height="81" usemap="#36-p38" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_36-p38" class="i" href="javascript:Nav('36-p38')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a20">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a22">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/36-p38.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/36-p38.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/36-p38.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/36-p38.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/36-p38.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/36-p38.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/36-p38.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=36-p38" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_36-p38"><p><table id="t-36-p38" style="width:105px">
+    <colgroup><col style="width:103px;" /></colgroup>
+    <tr>
+	<td class="r"><a class="p" href="b36s23/24p38.rle">
+	    24P38&sup1; [x]</a></td>
+    </tr>
+</table></p></div>
+<map name="36-p38">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,61,20,81" href="#bottom" />
+	<area coords="81,0,101,20" href="zip/36-p38.zip" />
+	<area coords="81,61,101,81" href="stamp/36-p38.rle" />
+	<area coords="0,0,101,81" href="b36s23/24p38.rle" />
+</map>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/HighLife">HighLife</a>.</p>
+</article>
+<hr /><article><a id="a22" name="a22"></a>
+<a id="36-p48" name="36-p48"></a>
+<h2>2 period 48 oscillators</h2>
+<p><img src="map/36-p48.png" alt="B36/S23 period 48 oscillators"
+ width="261" height="141" usemap="#36-p48" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_36-p48" class="i" href="javascript:Nav('36-p48')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a21">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a23">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/36-p48.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/36-p48.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/36-p48.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/36-p48.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/36-p48.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/36-p48.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/36-p48.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=36-p48" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_36-p48"><p><table id="t-36-p48" style="width:265px">
+    <colgroup><col span="2" style="width:132px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="b36s23/26p48-1.rle">26P48.1;
+	    Replicator between two cis eaters&sup1; [10]</a></td>
+	<td><a class="p" href="b36s23/64p48.rle">64P48;
+	    Four replicators&sup1; [12]</a></td>
+    </tr>
+</table></p></div>
+<map name="36-p48">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,121,20,141" href="#bottom" />
+	<area coords="241,0,261,20" href="zip/36-p48.zip" />
+	<area coords="241,121,261,141" href="stamp/36-p48.rle" />
+	<area coords="0,0,130,141" href="b36s23/26p48-1.rle" />
+	<area coords="130,0,261,141" href="b36s23/64p48.rle" />
+</map>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Eater_1">Eater 1</a>,
+<a class="x" href="http://conwaylife.com/wiki/HighLife">HighLife</a>,
+<a class="x" href="http://conwaylife.com/wiki/Replicator">Replicator</a>.</p>
+</article>
+<hr /><article><a id="a23" name="a23"></a>
+<a id="36-p52" name="36-p52"></a>
+<h2>1 period 52 oscillator</h2>
+<p><img src="map/36-p52.png" alt="B36/S23 P52"
+ width="141" height="141" usemap="#36-p52" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_36-p52" class="i" href="javascript:Nav('36-p52')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a22">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a24">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/36-p52.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/36-p52.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/36-p52.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/36-p52.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/36-p52.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/36-p52.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/36-p52.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=36-p52" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_36-p52"><p><table id="t-36-p52" style="width:145px">
+    <colgroup><col style="width:143px;" /></colgroup>
+    <tr>
+	<td class="r"><a class="p" href="b36s23/83md4bb4.rle">
+	    Four molds hassling four block pairs [x]</a></td>
+    </tr>
+</table></p></div>
+<map name="36-p52">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,121,20,141" href="#bottom" />
+	<area coords="121,0,141,20" href="zip/36-p52.zip" />
+	<area coords="121,121,141,141" href="stamp/36-p52.rle" />
+	<area coords="0,0,141,141" href="b36s23/83md4bb4.rle" />
+</map>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Bi-block">Bi-block</a>,
+<a class="x" href="http://conwaylife.com/wiki/Block">Block</a>,
+<a class="x" href="http://conwaylife.com/wiki/HighLife">HighLife</a>,
+<a class="x" href="http://conwaylife.com/wiki/Loaf">Loaf</a>,
+<a class="x" href="http://conwaylife.com/wiki/Mold">Mold</a>.</p>
+</article>
+<hr /><article><a id="a24" name="a24"></a>
+<a id="36-p72" name="36-p72"></a>
+<h2>1 period 72 oscillator</h2>
+<p><img src="map/36-p72.png" alt="B36/S23 P72"
+ width="161" height="161" usemap="#36-p72" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_36-p72" class="i" href="javascript:Nav('36-p72')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a23">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a25">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/36-p72.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/36-p72.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/36-p72.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/36-p72.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/36-p72.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/36-p72.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/36-p72.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=36-p72" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_36-p72"><p><table id="t-36-p72" style="width:165px">
+    <colgroup><col style="width:163px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="b36s23/48p72-1.rle">47P72.1;
+	    Two replicators between two cis blocks&sup1; [10]</a></td>
+    </tr>
+</table></p></div>
+<map name="36-p72">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,141,20,161" href="#bottom" />
+	<area coords="141,0,161,20" href="zip/36-p72.zip" />
+	<area coords="141,141,161,161" href="stamp/36-p72.rle" />
+	<area coords="0,0,161,161" href="b36s23/48p72-1.rle" />
+</map>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Block">Block</a>,
+<a class="x" href="http://conwaylife.com/wiki/HighLife">HighLife</a>,
+<a class="x" href="http://conwaylife.com/wiki/Replicator">Replicator</a>.</p>
+</article>
+<hr /><article><a id="a25" name="a25"></a>
+<a id="36-p96" name="36-p96"></a>
+<h2>1 period 96 oscillator</h2>
+<p><img src="map/36-p96.png" alt="B36/S23 P96"
+ width="141" height="141" usemap="#36-p96" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_36-p96" class="i" href="javascript:Nav('36-p96')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a24">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a26">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/36-p96.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/36-p96.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/36-p96.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/36-p96.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/36-p96.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/36-p96.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/36-p96.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=36-p96" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_36-p96"><p><table id="t-36-p96" style="width:145px">
+    <colgroup><col style="width:143px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="b36s23/24p96-1.rle">Replicator
+	    between two cis blocks&sup1; [7]</a></td>
+    </tr>
+</table></p></div>
+<map name="36-p96">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,121,20,141" href="#bottom" />
+	<area coords="121,0,141,20" href="zip/36-p96.zip" />
+	<area coords="121,121,141,141" href="stamp/36-p96.rle" />
+	<area coords="0,0,141,141" href="b36s23/24p96-1.rle" />
+</map>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Block">Block</a>,
+<a class="x" href="http://conwaylife.com/wiki/HighLife">HighLife</a>,
+<a class="x" href="http://conwaylife.com/wiki/Replicator">Replicator</a>.</p>
+</article>
+<hr /><article><a id="a26" name="a26"></a>
+<a id="36-o2" name="36-o2"></a>
+<h2>9 <i>c</i>/2 orthogonal spaceships</h2>
+<p><img src="map/36-o2.png" alt="B36/S23 c/2 orthogonal spaceships"
+ width="621" height="401" usemap="#36-o2" /></p>
+<p><table><colgroup><col span="12" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_36-o2" class="i" href="javascript:Nav('36-o2')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a25">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a27">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/36-o2.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/36-o2.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/36-o2.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="lis/36-o2.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/36-o2.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/36-o2.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=36-o2" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_36-o2"><p><table id="t-36-o2" style="width:625px">
+    <colgroup><col style="width:131px;" /><col span="3" style="width:120px;" />
+	<col style="width:132px;" /></colgroup>
+    <tr>
+	<td class="r"><a class="p" href="b36s23/37p2h1.rle">Wings;
+	    37P2H1V0&sup1; [x]</a></td>
+	<td class="r"><a class="p" href="b36s23/48p2h1.rle">Glider 14006;
+	    48P2H1V0.1&sup1; [x]</a></td>
+	<td colspan="2" class="r"><a class="p" href="b36s23/94p2h1.rle">Bird;
+	    94P2H1V0&sup1; [x]</a></td>
+	<td class="r"><a class="p" href="b36s23/160p2h1.rle">
+	    160P2H1V0&sup1; [x]</a></td>
+    </tr>
+    <tr>
+	<td><a class="p" href="b36s23/9lw.rle">Lightweight spaceship;
+	    LWSS; Small fish; 9P4H2V0.1; Glider 1062 [3]</a></td>
+	<td><a class="p" href="b36s23/11mw.rle">Middleweight spaceship;
+	    MWSS; Medium fish; 11P4H2V0.1 [3]</a></td>
+	<td><a class="p" href="b36s23/13hw.rle">Heavyweight spaceship;
+	    HWSS; Big fish; 13P4H2V0.1 [5]</a></td>
+	<td><a class="p" href="b36s23/24hwsc.rle">Sidecar on HWSS;
+	    Sidecar near and one space ahead of HWSS; 24P4H2V0.7 [13]</a></td>
+	<td class="r"><a class="p" href="b36s23/231p6h3.rle">
+	    231P6H3V0&sup1; [x]</a></td>
+    </tr>
+</table></p></div>
+<map name="36-o2">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,381,20,401" href="#bottom" />
+	<area coords="601,0,621,20" href="zip/36-o2.zip" />
+	<area coords="601,381,621,401" href="stamp/36-o2.rle" />
+	<area coords="0,0,130,170" href="b36s23/37p2h1.rle" />
+	<area coords="130,0,250,170" href="b36s23/48p2h1.rle" />
+	<area coords="250,0,490,170" href="b36s23/94p2h1.rle" />
+	<area coords="490,0,621,170" href="b36s23/160p2h1.rle" />
+	<area coords="0,170,130,401" href="b36s23/9lw.rle" />
+	<area coords="130,170,250,401" href="b36s23/11mw.rle" />
+	<area coords="250,170,370,401" href="b36s23/13hw.rle" />
+	<area coords="370,170,490,401" href="b36s23/24hwsc.rle" />
+	<area coords="490,170,621,401" href="b36s23/231p6h3.rle" />
+</map>
+<p>Wings and Bird are the smallest two members of an infinite series of
+spaceships. Larger versions are obtained by replicating multiple bodies
+between the outer wings.</p>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Heavyweight_spaceship">Heavyweight spaceship</a>,
+<a class="x" href="http://conwaylife.com/wiki/HighLife">HighLife</a>,
+<a class="x" href="http://conwaylife.com/wiki/Lightweight_spaceship">Lightweight spaceship</a>,
+<a class="x" href="http://conwaylife.com/wiki/Middleweight_spaceship">Middleweight spaceship</a>,
+<a class="x" href="http://conwaylife.com/wiki/Sidecar">Sidecar</a>.</p>
+</article>
+<hr /><article><a id="a27" name="a27"></a>
+<a id="36-2o5" name="36-2o5"></a>
+<h2>4 2<i>c</i>/5 orthogonal spaceships</h2>
+<p><img src="map/36-2o5.png" alt="B36/S23 2c/5 orthogonal spaceships"
+ width="501" height="281" usemap="#36-2o5" /></p>
+<p><table><colgroup><col span="12" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_36-2o5" class="i" href="javascript:Nav('36-2o5')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a26">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a28">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/36-2o5.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/36-2o5.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/36-2o5.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="lis/36-2o5.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/36-2o5.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/36-2o5.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=36-2o5" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_36-2o5"><p><table id="t-36-2o5" style="width:505px">
+    <colgroup><col style="width:131px;" /><col span="2" style="width:120px;" />
+	<col style="width:132px;" /></colgroup>
+    <tr>
+	<td class="r"><a class="p" href="b36s23/106p5h2.rle">
+	    106P5H2V0&sup1; [x]</a></td>
+	<td class="r"><a class="p" href="b36s23/108p5h2.rle">
+	    108P5H2V0&sup1; [x]</a></td>
+	<td class="r"><a class="p" href="b36s23/160p5h2.rle">
+	    160P5H2V0&sup1; [x]</a></td>
+	<td class="r"><a class="p" href="b36s23/164p5h2.rle">
+	    Glider 20416; 164P5H2V0&sup1; [x]</a></td>
+    </tr>
+</table></p></div>
+<map name="36-2o5">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,261,20,281" href="#bottom" />
+	<area coords="481,0,501,20" href="zip/36-2o5.zip" />
+	<area coords="481,261,501,281" href="stamp/36-2o5.rle" />
+	<area coords="0,0,70,281" href="b36s23/106p5h2.rle" />
+	<area coords="70,0,130,281" href="b36s23/108p5h2.rle" />
+	<area coords="130,0,190,281" href="b36s23/160p5h2.rle" />
+	<area coords="190,0,501,281" href="b36s23/164p5h2.rle" />
+</map>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/HighLife">HighLife</a>.</p>
+</article>
+<hr /><article><a id="a28" name="a28"></a>
+<a id="36-o3" name="36-o3"></a>
+<h2>7 <i>c</i>/3 orthogonal spaceships</h2>
+<p><img src="map/36-o3.png" alt="B36/S23 c/3 orthogonal spaceships"
+ width="621" height="141" usemap="#36-o3" /></p>
+<p><table><colgroup><col span="12" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_36-o3" class="i" href="javascript:Nav('36-o3')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a27">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a29">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/36-o3.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/36-o3.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/36-o3.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="lis/36-o3.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/36-o3.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/36-o3.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=36-o3" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_36-o3"><p><table id="t-36-o3" style="width:625px">
+    <colgroup><col style="width:111px;" /><col style="width:100px;" />
+	<col span="4" style="width:80px;" /><col style="width:92px;" />
+	</colgroup>
+    <tr>
+	<td class="r"><a class="p" href="b36s23/27p3h1.rle">
+	    27P3H1V0&sup1; [x]</a></td>
+	<td class="r"><a class="p" href="b36s23/37p3h1.rle">
+	    37P3H1V0&sup1; [x]</a></td>
+	<td class="r"><a class="p" href="b36s23/43p3h1.rle">
+	    43P3H1V0&sup1; [x]</a></td>
+	<td class="r"><a class="p" href="b36s23/44turt.rle">Turtle;
+	    Glider 11302 [x]</a></td>
+	<td class="r"><a class="p" href="b36s23/97p3h1.rle">Glider 16573;
+	    97P3H1V0&sup1; [x]</a></td>
+	<td class="r"><a class="p" href="b36s23/84p6h2.rle">
+	    84P6H2V0&sup1; [x]</a></td>
+	<td class="r"><a class="p" href="b36s23/88p6h2.rle">
+	    88P6H2V0&sup1; [x]</a></td>
+    </tr>
+</table></p></div>
+<map name="36-o3">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,121,20,141" href="#bottom" />
+	<area coords="601,0,621,20" href="zip/36-o3.zip" />
+	<area coords="601,121,621,141" href="stamp/36-o3.rle" />
+	<area coords="0,0,110,141" href="b36s23/27p3h1.rle" />
+	<area coords="110,0,210,141" href="b36s23/37p3h1.rle" />
+	<area coords="210,0,290,141" href="b36s23/43p3h1.rle" />
+	<area coords="290,0,370,141" href="b36s23/44turt.rle" />
+	<area coords="370,0,450,141" href="b36s23/97p3h1.rle" />
+	<area coords="450,0,530,141" href="b36s23/84p6h2.rle" />
+	<area coords="530,0,621,141" href="b36s23/88p6h2.rle" />
+</map>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/HighLife">HighLife</a>,
+<a class="x" href="http://conwaylife.com/wiki/Turtle">Turtle</a>.</p>
+</article>
+<hr /><article><a id="a29" name="a29"></a>
+<a id="36-2o7" name="36-2o7"></a>
+<h2>2 2<i>c</i>/7 orthogonal spaceships</h2>
+<p><img src="map/36-2o7.png" alt="B36/S23 2c/7 orthogonal spaceships"
+ width="221" height="181" usemap="#36-2o7" /></p>
+<p><table><colgroup><col span="12" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_36-2o7" class="i" href="javascript:Nav('36-2o7')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a28">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a30">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/36-2o7.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/36-2o7.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/36-2o7.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="lis/36-2o7.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/36-2o7.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/36-2o7.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=36-2o7" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_36-2o7"><p><table id="t-36-2o7" style="width:225px">
+    <colgroup><col span="2" style="width:112px;" /></colgroup>
+    <tr>
+	<td class="r"><a class="p" href="b36s23/28p7h2.rle">
+	    28P7H2V0&sup1; [x]</a></td>
+	<td class="r"><a class="p" href="b36s23/139p7h2.rle">
+	    139P7H2V0&sup1; [x]</a></td>
+    </tr>
+</table></p></div>
+<map name="36-2o7">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,161,20,181" href="#bottom" />
+	<area coords="201,0,221,20" href="zip/36-2o7.zip" />
+	<area coords="201,161,221,181" href="stamp/36-2o7.rle" />
+	<area coords="0,0,110,181" href="b36s23/28p7h2.rle" />
+	<area coords="110,0,221,181" href="b36s23/139p7h2.rle" />
+</map>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/HighLife">HighLife</a>.</p>
+</article>
+<hr /><article><a id="a30" name="a30"></a>
+<a id="36-o4" name="36-o4"></a>
+<h2>6 <i>c</i>/4 orthogonal spaceships</h2>
+<p><img src="map/36-o4.png" alt="B36/S23 c/4 orthogonal spaceships"
+ width="521" height="201" usemap="#36-o4" /></p>
+<p><table><colgroup><col span="12" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_36-o4" class="i" href="javascript:Nav('36-o4')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a29">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a31">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/36-o4.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/36-o4.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/36-o4.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="lis/36-o4.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/36-o4.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/36-o4.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=36-o4" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_36-o4"><p><table id="t-36-o4" style="width:525px">
+    <colgroup><col style="width:111px;" /><col span="3" style="width:100px;" />
+	<col style="width:112px;" /></colgroup>
+    <tr>
+	<td colspan="2" class="r"><a class="p" href="b36s23/43p4h1.rle">
+	    43P4H1V0 [x]</a></td>
+	<td rowspan="2" class="r"><a class="p" href="b36s23/84p4h1.rle">
+	    84P4H1V0&sup1; [x]</a></td>
+	<td rowspan="2" class="r"><a class="p" href="b36s23/117p4h1.rle">
+	    117P4H1V0&sup1; [x]</a></td>
+	<td rowspan="2" class="r"><a class="p" href="b36s23/157p4h1.rle">Glider 20154;
+	    157P4H1V0; [x]</a></td>
+    </tr>
+    <tr>
+	<td class="r"><a class="p" href="b36s23/47p4h1.rle">
+	    47P4H1V0&sup1; [x]</a></td>
+	<td class="r"><a class="p" href="b36s23/69p4h1.rle">
+	    69P4H1V0&sup1; [x]</a></td>
+    </tr>
+</table></p></div>
+<map name="36-o4">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,181,20,201" href="#bottom" />
+	<area coords="501,0,521,20" href="zip/36-o4.zip" />
+	<area coords="501,181,521,201" href="stamp/36-o4.rle" />
+	<area coords="0,0,210,90" href="b36s23/43p4h1.rle" />
+	<area coords="210,0,310,90" href="b36s23/84p4h1.rle" />
+	<area coords="310,0,410,90" href="b36s23/117p4h1.rle" />
+	<area coords="410,0,521,90" href="b36s23/157p4h1.rle" />
+	<area coords="0,90,110,201" href="b36s23/47p4h1.rle" />
+	<area coords="110,90,210,201" href="b36s23/69p4h1.rle" />
+</map>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/HighLife">HighLife</a>.</p>
+</article>
+<hr /><article><a id="a31" name="a31"></a>
+<a id="36-o5" name="36-o5"></a>
+<h2>6 <i>c</i>/5 orthogonal spaceships</h2>
+<p><img src="map/36-o5.png" alt="B36/S23 c/5 orthogonal spaceships"
+ width="621" height="281" usemap="#36-o5" /></p>
+<p><table><colgroup><col span="12" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_36-o5" class="i" href="javascript:Nav('36-o5')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a30">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a32">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/36-o5.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/36-o5.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/36-o5.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="lis/36-o5.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/36-o5.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/36-o5.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=36-o5" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_36-o5"><p><table id="t-36-o5" style="width:625px">
+    <colgroup><col style="width:111px;" /><col span="4" style="width:100px;" />
+	<col style="width:112px;" /></colgroup>
+    <tr>
+	<td class="r"><a class="p" href="b36s23/52p5h1.rle">Glider 13182;
+	    52P5H1V0; [x]</a></td>
+	<td class="r"><a class="p" href="b36s23/65p5h1.rle">
+	    65P5H1V0; [x]</a></td>
+	<td class="r"><a class="p" href="b36s23/93p5h1.rle">
+	    93P5H1V0; [x]</a></td>
+	<td class="r"><a class="p" href="b36s23/106p5h1.rle">
+	    106P5H1V0; [x]</a></td>
+	<td class="r"><a class="p" href="b36s23/118p5h1.rle">
+	    118P5H1V0; [x]</a></td>
+	<td class="r"><a class="p" href="b36s23/121p5h1.rle">
+	    121P5H1V0; [x]</a></td>
+    </tr>
+</table></p></div>
+<map name="36-o5">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,261,20,281" href="#bottom" />
+	<area coords="601,0,621,20" href="zip/36-o5.zip" />
+	<area coords="601,261,621,281" href="stamp/36-o5.rle" />
+	<area coords="0,0,110,281" href="b36s23/52p5h1.rle" />
+	<area coords="110,0,210,281" href="b36s23/65p5h1.rle" />
+	<area coords="210,0,310,281" href="b36s23/93p5h1.rle" />
+	<area coords="310,0,410,281" href="b36s23/106p5h1.rle" />
+	<area coords="410,0,510,281" href="b36s23/118p5h1.rle" />
+	<area coords="510,0,621,281" href="b36s23/121p5h1.rle" />
+</map>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/HighLife">HighLife</a>.</p>
+</article>
+<hr /><article><a id="a32" name="a32"></a>
+<a id="36-o6" name="36-o6"></a>
+<h2>3 <i>c</i>/6 orthogonal spaceships</h2>
+<p><img src="map/36-o6.png" alt="B36/S23 c/6 orthogonal spaceships"
+ width="321" height="341" usemap="#36-o6" /></p>
+<p><table><colgroup><col span="12" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_36-o6" class="i" href="javascript:Nav('36-o6')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a31">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a33">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/36-o6.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/36-o6.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/36-o6.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="lis/36-o6.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/36-o6.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/36-o6.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=36-o6" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_36-o6"><p><table id="t-36-o6" style="width:325px">
+    <colgroup><col style="width:111px;" /><col style="width:100px;" />
+	<col style="width:112px;" /></colgroup>
+    <tr>
+	<td class="r"><a class="p" href="b36s23/179p6h1.rle">
+	    179P6H1V0&sup1; [x]</a></td>
+	<td class="r"><a class="p" href="b36s23/231p6h1.rle">
+	    231P6H1V0&sup1; [x]</a></td>
+	<td class="r"><a class="p" href="b36s23/310p6h1.rle">
+	    310P6H1V0&sup1; [x]</a></td>
+    </tr>
+</table></p></div>
+<map name="36-o6">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,321,20,341" href="#bottom" />
+	<area coords="301,0,321,20" href="zip/36-o6.zip" />
+	<area coords="301,321,321,341" href="stamp/36-o6.rle" />
+	<area coords="0,0,110,341" href="b36s23/179p6h1.rle" />
+	<area coords="110,0,210,341" href="b36s23/231p6h1.rle" />
+	<area coords="210,0,321,341" href="b36s23/310p6h1.rle" />
+</map>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/HighLife">HighLife</a>.</p>
+</article>
+<hr /><article><a id="a33" name="a33"></a>
+<a id="36-o8" name="36-o8"></a>
+<h2>1 <i>c</i>/8 orthogonal spaceship</h2>
+<p><img src="map/36-o8.png" alt="B36/S23 c/8 ss"
+ width="121" height="201" usemap="#36-o8" /></p>
+<p><table><colgroup><col span="12" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_36-o8" class="i" href="javascript:Nav('36-o8')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a32">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a34">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/36-o8.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/36-o8.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/36-o8.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="lis/36-o8.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/36-o8.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/36-o8.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=36-o8" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_36-o8"><p><table id="t-36-o8" style="width:125px">
+    <colgroup><col style="width:123px;" /></colgroup>
+    <tr>
+	<td class="r"><a class="p" href="b36s23/138p8h1.rle">
+	    138P8H1V0&sup1; [x]</a></td>
+    </tr>
+</table></p></div>
+<map name="36-o8">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,181,20,201" href="#bottom" />
+	<area coords="101,0,121,20" href="zip/36-o8.zip" />
+	<area coords="101,181,121,201" href="stamp/36-o8.rle" />
+	<area coords="0,0,121,201" href="b36s23/138p8h1.rle" />
+</map>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/HighLife">HighLife</a>.</p>
+</article>
+<hr /><article><a id="a34" name="a34"></a>
+<a id="36-o98" name="36-o98"></a>
+<h2>1 <i>c</i>/98 orthogonal spaceship</h2>
+<p><img src="map/36-o98.png" alt="B36/S23 c/98"
+ width="101" height="101" usemap="#36-o98" /></p>
+<p><table><colgroup><col span="12" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_36-o98" class="i" href="javascript:Nav('36-o98')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a33">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a35">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/36-o98.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/36-o98.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/36-o98.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="lis/36-o98.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/36-o98.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/36-o98.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=36-o98" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_36-o98"><p><table id="t-36-o98" style="width:105px">
+    <colgroup><col style="width:103px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="b36s23/24p98h1.rle">
+	    24P98H1V0&sup1; [10]</a></td>
+    </tr>
+</table></p></div>
+<map name="36-o98">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,81,20,101" href="#bottom" />
+	<area coords="81,0,101,20" href="zip/36-o98.zip" />
+	<area coords="81,81,101,101" href="stamp/36-o98.rle" />
+	<area coords="0,0,101,101" href="b36s23/24p98h1.rle" />
+</map>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/HighLife">HighLife</a>.</p>
+</article>
+<hr /><article><a id="a35" name="a35"></a>
+<a id="36-d4" name="36-d4"></a>
+<h2>2 <i>c</i>/4 diagonal spaceships</h2>
+<p><img src="map/36-d4.png" alt="B36/S23 c/4 diag"
+ width="181" height="101" usemap="#36-d4" /></p>
+<p><table><colgroup><col span="12" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_36-d4" class="i" href="javascript:Nav('36-d4')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a34">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a36">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/36-d4.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/36-d4.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/36-d4.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="lis/36-d4.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/36-d4.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/36-d4.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=36-d4" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_36-d4"><p><table id="t-36-d4" style="width:185px">
+    <colgroup><col span="2" style="width:92px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="b36s23/5gl.rle">Glider;
+	    Feather-weight spaceship; FWSS; 5P4H1V1.1; Glider 115 [2]</a></td>
+	<td class="r"><a class="p" href="b36s23/25crab.rle">Crab;
+	    Quarter; 25P4H1V1.1 [x]</a></td>
+    </tr>
+</table></p></div>
+<map name="36-d4">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,81,20,101" href="#bottom" />
+	<area coords="161,0,181,20" href="zip/36-d4.zip" />
+	<area coords="161,81,181,101" href="stamp/36-d4.rle" />
+	<area coords="0,0,90,101" href="b36s23/5gl.rle" />
+	<area coords="90,0,181,101" href="b36s23/25crab.rle" />
+</map>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Crab">Crab</a>,
+<a class="x" href="http://conwaylife.com/wiki/Glider">Glider</a>,
+<a class="x" href="http://conwaylife.com/wiki/HighLife">HighLife</a>.</p>
+</article>
+<hr /><article><a id="a36" name="a36"></a>
+<a id="36-d5" name="36-d5"></a>
+<h2>1 <i>c</i>/5 diagonal spaceship</h2>
+<p><img src="map/36-d5.png" alt="B36/S23 c/5 d"
+ width="101" height="101" usemap="#36-d5" /></p>
+<p><table><colgroup><col span="12" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_36-d5" class="i" href="javascript:Nav('36-d5')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a35">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a37">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/36-d5.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/36-d5.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/36-d5.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="lis/36-d5.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/36-d5.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/36-d5.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=36-d5" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_36-d5"><p><table id="t-36-d5" style="width:105px">
+    <colgroup><col style="width:103px;" /></colgroup>
+    <tr>
+	<td class="r"><a class="p" href="b36s23/28d5.rle">
+	    28P5H1V1&sup1; [x]</a></td>
+    </tr>
+</table></p></div>
+<map name="36-d5">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,81,20,101" href="#bottom" />
+	<area coords="81,0,101,20" href="zip/36-d5.zip" />
+	<area coords="81,81,101,101" href="stamp/36-d5.rle" />
+	<area coords="0,0,101,101" href="b36s23/28d5.rle" />
+</map>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/HighLife">HighLife</a>.</p>
+</article>
+<hr /><article><a id="a37" name="a37"></a>
+<a id="36-d6" name="36-d6"></a>
+<h2>1 <i>c</i>/6 diagonal spaceship</h2>
+<p><img src="map/36-d6.png" alt="B36/S23 c/6 d"
+ width="101" height="101" usemap="#36-d6" /></p>
+<p><table><colgroup><col span="12" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_36-d6" class="i" href="javascript:Nav('36-d6')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a36">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a38">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/36-d6.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/36-d6.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/36-d6.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="lis/36-d6.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/36-d6.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/36-d6.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=36-d6" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_36-d6"><p><table id="t-36-d6" style="width:105px">
+    <colgroup><col style="width:103px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="b36s23/19bm.rle">Bomber;
+	    Glider 12056; 19P48H8V8.1&sup1; [4]</a></td>
+    </tr>
+</table></p></div>
+<map name="36-d6">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,81,20,101" href="#bottom" />
+	<area coords="81,0,101,20" href="zip/36-d6.zip" />
+	<area coords="81,81,101,101" href="stamp/36-d6.rle" />
+	<area coords="0,0,101,101" href="b36s23/19bm.rle" />
+</map>
+<p>The Bomber is based on a mechanism where a replicator pulls a blinker
+behind itself. If the blinker is moved further away from the replicator,
+the front end advances at <i>c</i>/6 as usual, while the back end recedes at
+a slower speed, resulting in a moving wick-stretcher. (An unmoving
+wick-stretcher can also be created by capping the replicator with a block
+or eater).</p>
+<p>Dean Hickerson found a reaction in which two replicators can push a
+blinker ahead of themselves, again with a speed that depends on the
+length of the replicator chain. When one end is capped, this can also
+create wick stretchers of arbitrarily slow velocity. While patterns that
+can use this mechanism successfully are extremely large, the basic push
+mechanism is shown <a class="p" href="b36s23/blpush.rle">here</a>.
+It pushes a blinker up 3 and left 5 spaces. Two copies of it can push a
+blinker 8 spaces diagonally.</p>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/HighLife#Bomber">Bomber</a>,
+<a class="x" href="http://conwaylife.com/wiki/HighLife">HighLife</a>,
+<a class="x" href="http://conwaylife.com/wiki/Replicator">Replicator</a>.</p>
+</article>
+<hr /><article><a id="a38" name="a38"></a>
+<a id="36-bas" name="36-bas"></a>
+<h2>Basilisk spaceships</h2>
+<p>Around January 2013, Adam Goucher, Helmut Postl, and others constructed
+several Basilisk spaceships (not shown) that combine the blinker push and
+pull mechanisms. They explicitly constructed spaceships with diagonal
+velocities of <i>c</i>/24, <i>c</i>/32, <i>c</i>/63 and <i>c</i>/69,
+although theoretically infinitely many other velocities should be possible. 
+<a class="i" href="lifecred.htm#goucher">Adam P. Goucher</a>
+wrote an article
+<em><a class="x" href="https://cp4space.wordpress.com/2013/01/06/bombers-and-basilisks/">
+Bombers and Basilisks</a></em> describing their construction.
+Basilisks are extremely large, so they are too large to run in Golly.
+The <i>c</i>/69 Basilisk fits in a 339358288617&times;339358288604 bounding box.
+Its head and tail are shown <a class="p" href="b36s23/bas69.rle">here</a>.</p>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/HighLife#Bomber">Bomber</a>,
+<a class="x" href="http://conwaylife.com/wiki/HighLife">HighLife</a>,
+<a class="x" href="http://conwaylife.com/wiki/Replicator">Replicator</a>.</p>
+</article>
+<hr /><article><a id="a39" name="a39"></a>
+<a id="36-flot" name="36-flot"></a>
+<h2>Spaceship flotillae</h2>
+<p>Most spaceship flotillae involving the basic Life <i>c</i>/2 orthogonal
+spaceships continue to work in HighLife:</p>
+<p><ul>
+    <li>Most <a class="i" href="flotilla.htm#ss-2">basic 2-spaceship flotillae</a>
+	involving LWSS, MWSS, HWSS, and sidecars work, except the 3 that
+	involve pairs of side by side MWSS and/or HWSS. The other exotic
+	escorts (Coe ship, pushalong, X66, half X66, and 30P4&shy;H2V0.4)
+	fail.</li>
+    <li><a class="i" href="flotilla.htm#ss-2d">Block and boat draggers</a>
+	work.</li>
+    <li><a class="i" href="flotilla.htm#ss-2s">Schick ships</a> and
+	<a class="i" href="flotilla.htm#ss-2a">A draggers</a> fail.</li>
+    <li><a class="i" href="flotilla.htm#ss-3">Basic 3-spaceship flotillae</a>
+	composed of two working 2-spaceship flotillae work, as do the P20
+	Coe ship stabilizations. Ones involving B-heptominoes fail.</li>
+    <li><a class="i" href="flotilla.htm#ss-3d">3-spaceship block draggers</a>
+	fail.</li>
+    <li><a class="i" href="flotilla.htm#ss-3p">3-spaceship pre-block draggers</a>
+	work.</li>
+    <li>Most <a class="i" href="owss.htm">Overweight spaceships</a>
+	escorted by LWSS, MWSS and/or HWSS work, except those that
+	involve MWSS and/or HWSS that are side by side, or one step
+	advanced from the back of the OWSS.</li>
+    <li>The <a class="i" href="flotilla.htm#ss-4">Ecologist</a> fails.</li>
+    <li><a class="i" href="flotilla.htm#ss-4c">4-spaceship comma draggers</a> and
+	<a class="i" href="flotilla.htm#ss-4h">4-spaceship hive nudgers</a>
+	work.</li>
+</ul></p>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/30P4H2V0.4">30P4H2V0.4</a>,
+<a class="x" href="http://conwaylife.com/wiki/Beehive">Beehive</a>,
+<a class="x" href="http://conwaylife.com/wiki/Coe_ship">Coe ship</a>,
+<a class="x" href="http://conwaylife.com/wiki/Ecologist">Ecologist</a>,
+<a class="x" href="http://conwaylife.com/wiki/Heavyweight_spaceship">Heavyweight spaceship</a>,
+<a class="x" href="http://conwaylife.com/wiki/HighLife">HighLife</a>,
+<a class="x" href="http://conwaylife.com/wiki/Hivenudger">Hivenudger</a>,
+<a class="x" href="http://conwaylife.com/wiki/Lightweight_spaceship">Lightweight spaceship</a>,
+<a class="x" href="http://conwaylife.com/wiki/Middleweight_spaceship">Middleweight spaceship</a>,
+<a class="x" href="http://conwaylife.com/wiki/Puffer_2">Puffer 2</a>,
+<a class="x" href="http://conwaylife.com/wiki/Schick_engine">Schick engine</a>,
+<a class="x" href="http://conwaylife.com/wiki/Sidecar">Sidecar</a>,
+<a class="x" href="http://conwaylife.com/wiki/X66">X66</a>.</p>
+</article>
+<hr /><article><a id="a40" name="a40"></a>
+<a id="36-gun" name="36-gun"></a>
+<h2>3 guns</h2>
+<p>The populations increase at a linear rate. The average populations at time
+<i>t</i> are indicated at the end.</p>
+<p><img src="map/36-gun.png" alt="B36/S23 guns"
+ width="601" height="401" usemap="#36-gun" /></p>
+<p><table><colgroup><col span="12" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_36-gun" class="i" href="javascript:Nav('36-gun')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a39">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a41">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/36-gun.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/36-gun.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/36-gun.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="lis/36-gun.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/36-gun.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/36-gun.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=36-gun" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_36-gun"><p><table id="t-36-gun" style="width:605px">
+    <colgroup><col style="width:251px;" /><col style="width:352px;" />
+	</colgroup>
+    <tr>
+	<td><a class="p" href="b36s23/g24gl.rle">P24 shuttle-based glider
+	    gun&sup1; [30] <i>O</i>(5<i>t</i>/24)</a></td>
+	<td rowspan="2"><a class="p" href="b36s23/g192bm.rle">P192 bomber
+	    gun&sup1; [10] Maximum <i>O</i>(19<i>t</i>/192);
+	    Average <i>O</i>(107<i>t</i>/576)</a></td>
+    </tr>
+    <tr>
+	<td><a class="p" href="b36s23/g96gl.rle">P96 glider gun&sup1; [13]
+	    <i>O</i>(5<i>t</i>/96)</a></td>
+    </tr>
+</table></p></div>
+<map name="36-gun">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,381,20,401" href="#bottom" />
+	<area coords="581,0,601,20" href="zip/36-gun.zip" />
+	<area coords="581,381,601,401" href="stamp/36-gun.rle" />
+	<area coords="0,0,250,210" href="b36s23/g24gl.rle" />
+	<area coords="250,0,601,401" href="b36s23/g192bm.rle" />
+	<area coords="0,210,250,401" href="b36s23/g96gl.rle" />
+</map>
+<p>These involve replicators and bombers whose sparks interact to
+create gliders. All move diagonally at <i>c</i>/6.</p>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Block">Block</a>,
+<a class="x" href="http://conwaylife.com/wiki/HighLife#Bomber">Bomber</a>,
+<a class="x" href="http://conwaylife.com/wiki/Clock">Clock</a>,
+<a class="x" href="http://conwaylife.com/wiki/Eater_1">Eater 1</a>,
+<a class="x" href="http://conwaylife.com/wiki/Glider">Glider</a>,
+<a class="x" href="http://conwaylife.com/wiki/HighLife">HighLife</a>,
+<a class="x" href="http://conwaylife.com/wiki/Replicator">Replicator</a>.</p>
+</article>
+<hr /><article><a id="a41" name="a41"></a>
+<a id="36-puff" name="36-puff"></a>
+<h2>3 puffers</h2>
+<p>The populations increase at a linear rate. The average populations at time
+<i>t</i> are indicated at the end.</p>
+<p><img src="map/36-puff.png" alt="B36/S23 puffers"
+ width="621" height="301" usemap="#36-puff" /></p>
+<p><table><colgroup><col span="12" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_36-puff" class="i" href="javascript:Nav('36-puff')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a40">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a42">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/36-puff.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/36-puff.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/36-puff.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="lis/36-puff.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/36-puff.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/36-puff.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=36-puff" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_36-puff"><p><table id="t-36-puff" style="width:625px">
+    <colgroup><col style="width:211px;" /><col style="width:200px;" />
+	<col style="width:212px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="b36s23/p96side.rle">P96 sideways glider rake&sup1;
+	    [7] <i>O</i>(5<i>t</i>/96)</a></td>
+	<td><a class="p" href="b36s23/p48side.rle">P48 sideways glider rake&sup1;
+	    [8] <i>O</i>(5<i>t</i>/48)</a></td>
+	<td><a class="p" href="b36s23/p48back.rle">P48 backwards glider rake&sup1;
+	    [8] <i>O</i>(5<i>t</i>/48)</a></td>
+    </tr>
+</table></p></div>
+<map name="36-puff">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,281,20,301" href="#bottom" />
+	<area coords="601,0,621,20" href="zip/36-puff.zip" />
+	<area coords="601,281,621,301" href="stamp/36-puff.rle" />
+	<area coords="0,0,210,301" href="b36s23/p96side.rle" />
+	<area coords="210,0,410,301" href="b36s23/p48side.rle" />
+	<area coords="410,0,621,301" href="b36s23/p48back.rle" />
+</map>
+<p>These involve replicators and bombers whose sparks interact to
+create gliders. All move diagonally at <i>c</i>/6.</p>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/HighLife#Bomber">Bomber</a>,
+<a class="x" href="http://conwaylife.com/wiki/Glider">Glider</a>,
+<a class="x" href="http://conwaylife.com/wiki/HighLife">HighLife</a>,
+<a class="x" href="http://conwaylife.com/wiki/Replicator">Replicator</a>.</p>
+</article>
+<hr /><article><a id="a42" name="a42"></a>
+<a id="36-ws" name="36-ws"></a>
+<h2>3 wick-stretchers</h2>
+<p><img src="map/36-ws.png" alt="B36/S23 wick stretchers"
+ width="381" height="121" usemap="#36-ws" /></p>
+<p><table><colgroup><col span="12" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_36-ws" class="i" href="javascript:Nav('36-ws')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a41">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a43">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/36-ws.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/36-ws.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/36-ws.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="lis/36-ws.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/36-ws.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/36-ws.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=36-ws" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_36-ws"><p><table id="t-36-ws" style="width:385px">
+    <colgroup><col style="width:131px;" /><col style="width:120px;" />
+	<col style="width:132px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="b36s23/12re.rle">
+	    Replicator&sup1; [3]</a></td>
+	<td><a class="p" href="b36s23/19sw1.rle">
+	    Sawtooth 1&sup1; [5]</a></td>
+	<td><a class="p" href="b36s23/19sw2.rle">
+	    Sawtooth 2&sup1; [5]</a></td>
+    </tr>
+</table></p></div>
+<map name="36-ws">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,101,20,121" href="#bottom" />
+	<area coords="361,0,381,20" href="zip/36-ws.zip" />
+	<area coords="361,101,381,121" href="stamp/36-ws.rle" />
+	<area coords="0,0,130,121" href="b36s23/12re.rle" />
+	<area coords="130,0,250,121" href="b36s23/19sw1.rle" />
+	<area coords="250,0,381,121" href="b36s23/19sw2.rle" />
+</map>
+<p>These involve replicators and grow diagonally at <i>c</i>/6.
+The basic replicator makes copies of itself every 12 generations.
+Pairs of replicators annihilate each other, and the population increases
+and decreases in ever-increasing steps, so it is not periodic in the
+same way as other patterns are.</p>
+<p>The other two involve a replicator slowly dragging a blinker.
+The blinker moves much more slowly than the replicator, resulting in
+an ever-growing wick. The periodic behavior becomes more and more
+complex as the wick grows, and occurs in multiples of the base period.</p>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Blinker">Blinker</a>,
+<a class="x" href="http://conwaylife.com/wiki/HighLife#Bomber">Bomber</a>,
+<a class="x" href="http://conwaylife.com/wiki/HighLife">HighLife</a>,
+<a class="x" href="http://conwaylife.com/wiki/Replicator">Replicator</a>,
+<a class="x" href="http://conwaylife.com/wiki/Sawtooth">Sawtooth</a>.</p>
+</article>
+<hr /><article><a id="a43" name="a43"></a>
+<a id="36-br" name="36-br"></a>
+<h2>2 breeders</h2>
+<p>The populations increase at a super-linear rate. The average populations
+at time <i>t</i> are indicated at the end.</p>
+<p><img src="map/36-br.png" alt="B36/S23 breeders"
+ width="401" height="165" usemap="#36-br" /></p>
+<p><table><colgroup><col span="12" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_36-br" class="i" href="javascript:Nav('36-br')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a42">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a44">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/36-br.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/36-br.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/36-br.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="lis/36-br.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/36-br.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/36-br.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=36-br" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_36-br"><p><table id="t-36-br" style="width:405px">
+    <colgroup><col span="2" style="width:202px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="b36s23/p96mr.rle">P96 Replicator gun; MR
+	    breeder&sup1; [23] Maximum <i>O</i>(12(<i>t</i>/96)<sup><i>h</i></sup>);
+	    Average <i>O</i>(4(<i>t</i>/96)<sup><i>h</i></sup>);</a></td>
+	<td><a class="p" href="b36s23/p192smm.rle">P192 Rake gun; SMM breeder&sup1;
+	    [20] <i>O</i>(2(<i>t</i>/192)&sup2;)</a></td>
+    </tr>
+</table></p></div>
+<map name="36-br">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,145,20,165" href="#bottom" />
+	<area coords="381,0,401,20" href="zip/36-br.zip" />
+	<area coords="381,145,401,165" href="stamp/36-br.rle" />
+	<area coords="0,0,210,165" href="b36s23/p96mr.rle" />
+	<area coords="210,0,401,165" href="b36s23/p192smm.rle" />
+</map>
+<p>The SMM breeder is a pair of stationary P192 bomber guns that produce
+pairs of bombers that interact to yield P96 side-shooting rakes, that fill
+an area with gliders. The population is quadratic with respect to time.</p>
+<p>The MR breeder is three rakes whose output gliders produce replicators.
+Over time, they fill an area with replicators. Due to the XOR behavior of
+the replicators, and the fact that a new replicator is generated at each
+step of the previous replicators, these fill an area with a Sierpinski
+gasket whose nodes are replicators. The population is fractal with respect
+to time, and the <i>h</i> in the formula is the Hausdorff dimension of a
+Sierpinski Gasket, which is <i>log</i><sub>2</sub>(3), or approximately 1.58496.
+The rakes move diagonally at <i>c</i>/6.</p>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Block">Block</a>,
+<a class="x" href="http://conwaylife.com/wiki/Glider">Glider</a>,
+<a class="x" href="http://conwaylife.com/wiki/HighLife">HighLife</a>,
+<a class="x" href="http://conwaylife.com/wiki/Replicator">Replicator</a>.</p>
+</article>
+<hr /><article><a id="a44" name="a44"></a>
+<a id="36-cons" name="36-cons"></a>
+<h2>20 constellations</h2>
+<p><img src="map/36-cons.png" alt="B36/S23 constellations"
+ width="521" height="381" usemap="#36-cons" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_36-cons" class="i" href="javascript:Nav('36-cons')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a43">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a45">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/36-cons.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/36-cons.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/36-cons.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/36-cons.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/36-cons.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/36-cons.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/36-cons.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=36-cons" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_36-cons"><p><table id="t-36-cons" style="width:525px">
+    <colgroup><col style="width:71px;" /><col span="6" style="width:60px;" />
+	<col style="width:92px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="b36s23/8bkbk05.rle">
+	    Two blocks offset (5, 0) [2]</a></td>
+	<td><a class="p" href="b36s23/8bkbk06.rle">
+	    Two blocks offset (6, 0) [3]</a></td>
+	<td><a class="p" href="b36s23/8bkbk0a.rle">
+	    Two blocks offset (10, 0) [2]</a></td>
+	<td><a class="p" href="b36s23/8bkbk14.rle">
+	    Two blocks offset (4, 1) [2]</a></td>
+	<td><a class="p" href="b36s23/8bkbk15.rle">
+	    Two blocks offset (5, 1) [3]</a></td>
+	<td><a class="p" href="b36s23/8bkbk17.rle">
+	    Two blocks offset (7, 1) [3]</a></td>
+	<td><a class="p" href="b36s23/8bkbk1a.rle">
+	    Two blocks offset (10, 1) [3]</a></td>
+	<td><a class="p" href="b36s23/8bkbk24.rle">
+	    Two blocks offset (4, 2) [3]</a></td>
+    </tr>
+    <tr>
+	<td><a class="p" href="b36s23/8bkbk25.rle">
+	    Two blocks offset (5, 2) [3]</a></td>
+	<td><a class="p" href="b36s23/8bkbk33.rle">
+	    Two blocks offset (3, 3)&sup3; [3]</a></td>
+	<td><a class="p" href="b36s23/8bkbk45.rle">
+	    Two blocks offset (5, 4) [3]</a></td>
+	<td><a class="p" href="b36s23/8bkbk56.rle">
+	    Two blocks offset (6, 5) [3]</a></td>
+	<td><a class="p" href="b36s23/11lfbk0w.rle">
+	    Loaf and block offset (-4, 0) [2]</a></td>
+	<td><a class="p" href="b36s23/12acac3x.rle">
+	    Two carriers offset (-3, 3)&sup3; [2]</a></td>
+	<td><a class="p" href="b36s23/20bts2.rle">
+	    Two pairs of up boat on boat [2]</a></td>
+	<td><a class="p" href="b36s23/20hv2bk2.rle">
+	    Two beehives and two blocks [2]</a></td>
+    </tr>
+    <tr>
+	<td><a class="p" href="b36s23/6blbl08.rle">
+	    Two blinkers offset (0, 8) [2]</a></td>
+	<td><a class="p" href="b36s23/15acacbl.rle">
+	    Up trans carrier on carrier and blinker [2]</a></td>
+	<td colspan="2"><a class="p" href="b36s23/29lhbbb2.rle">
+	    Loaf, beehive, boat, blinker, and two blocks [2]</a></td>
+	<td colspan="4"><a class="p" href="b36s23/32h2bb3g.rle">
+	    Two beehives, blinker, block, block pair, and glider [2]</a></td>
+    </tr>
+</table></p></div>
+<map name="36-cons">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,361,20,381" href="#bottom" />
+	<area coords="501,0,521,20" href="zip/36-cons.zip" />
+	<area coords="501,361,521,381" href="stamp/36-cons.rle" />
+	<area coords="0,0,70,90" href="b36s23/8bkbk05.rle" />
+	<area coords="70,0,130,90" href="b36s23/8bkbk06.rle" />
+	<area coords="130,0,190,90" href="b36s23/8bkbk0a.rle" />
+	<area coords="190,0,250,90" href="b36s23/8bkbk14.rle" />
+	<area coords="250,0,310,90" href="b36s23/8bkbk15.rle" />
+	<area coords="310,0,370,90" href="b36s23/8bkbk17.rle" />
+	<area coords="370,0,430,90" href="b36s23/8bkbk1a.rle" />
+	<area coords="430,0,521,90" href="b36s23/8bkbk24.rle" />
+	<area coords="0,90,70,170" href="b36s23/8bkbk25.rle" />
+	<area coords="70,90,130,170" href="b36s23/8bkbk33.rle" />
+	<area coords="130,90,190,170" href="b36s23/8bkbk45.rle" />
+	<area coords="190,90,250,170" href="b36s23/8bkbk56.rle" />
+	<area coords="250,90,310,170" href="b36s23/11lfbk0w.rle" />
+	<area coords="310,90,370,170" href="b36s23/12acac3x.rle" />
+	<area coords="370,90,430,170" href="b36s23/20bts2.rle" />
+	<area coords="430,90,521,170" href="b36s23/20hv2bk2.rle" />
+	<area coords="0,170,70,381" href="b36s23/6blbl08.rle" />
+	<area coords="70,170,130,381" href="b36s23/15acacbl.rle" />
+	<area coords="130,170,250,381" href="b36s23/29lhbbb2.rle" />
+	<area coords="250,170,521,381" href="b36s23/32h2bb3g.rle" />
+</map>
+<p>Note &sup3;: These constellations are
+<a class="i" href="qp1.htm">quasi-still-lifes</a>.</p>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Aircraft_carrier">Aircraft carrier</a>,
+<a class="x" href="http://conwaylife.com/wiki/Beehive">Beehive</a>,
+<a class="x" href="http://conwaylife.com/wiki/Bi-block">Bi-block</a>,
+<a class="x" href="http://conwaylife.com/wiki/Blinker">Blinker</a>,
+<a class="x" href="http://conwaylife.com/wiki/Block">Block</a>,
+<a class="x" href="http://conwaylife.com/wiki/Boat">Boat</a>,
+<a class="x" href="http://conwaylife.com/wiki/Glider">Glider</a>,
+<a class="x" href="http://conwaylife.com/wiki/HighLife">HighLife</a>,
+<a class="x" href="http://conwaylife.com/wiki/Loaf">Loaf</a>.</p>
+</article>
+<hr /><article><a id="a45" name="a45"></a>
+<a id="36-meth" name="36-meth"></a>
+<h2>1 methuselah</h2>
+<p><img src="map/36-meth.png" alt="36 meth"
+ width="81" height="61" usemap="#36-meth" /></p>
+<p><table><colgroup><col span="12" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_36-meth" class="i" href="javascript:Nav('36-meth')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a44">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a46">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/36-meth.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/36-meth.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/36-meth.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="lis/36-meth.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/36-meth.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/36-meth.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=36-meth" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_36-meth"><p><table id="t-36-meth" style="width:85px">
+    <colgroup><col style="width:83px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="b36s23/7lm.rle">Lumps of muck; LOM&sup1; [4]</a></td>
+    </tr>
+    <tr>
+	<td><a class="p" href="b36s23/7lm.rle">Loaf, Block, 2 Beehives@552</a></td>
+    </tr>
+</table></p></div>
+<map name="36-meth">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,41,20,61" href="#bottom" />
+	<area coords="61,0,81,20" href="zip/36-meth.zip" />
+	<area coords="61,41,81,61" href="stamp/36-meth.rle" />
+	<area coords="0,0,81,61" href="b36s23/7lm.rle" />
+</map>
+<p>In 6 generations, this forms a 9-bit object that is a failed shuttle that in 78
+generations rotates 90&deg; and also leaves behind much debris that prevents it
+from rotating again. If the debris could be removed, this would form a P312
+oscillator.</p>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/HighLife">HighLife</a>,
+<a class="x" href="http://conwaylife.com/wiki/Lumps_of_muck">Lumps of muck</a>.</p>
+</article>
+<hr class="a" /><article><a id="a46" name="a46"></a>
+<a id="36-osc" name="36-osc"></a>
+<h2>42 oscillators that work in HighLife but not in Life</h2>
+<p><img src="map/36-osc.png" alt="B36/S23 oscillators not in Life"
+ width="637" height="477" usemap="#36-osc" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_36-osc" class="i" href="javascript:Nav('36-osc')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a45">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a47">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/36-osc.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/36-osc.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/36-osc.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/36-osc.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/36-osc.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/36-osc.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/36-osc.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=36-osc" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_36-osc"><p><table id="t-36-osc" style="width:641px">
+    <colgroup><col style="width:71px;" /><col span="3" style="width:20px;" />
+	<col style="width:60px;" /><col style="width:20px;" />
+	<col style="width:40px;" /><col style="width:20px;" />
+	<col style="width:40px;" /><col style="width:60px;" />
+	<col style="width:40px;" /><col style="width:20px;" />
+	<col style="width:60px;" /><col style="width:20px;" />
+	<col style="width:40px;" /><col style="width:20px;" />
+	<col style="width:68px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="b36s23/9it.rle">IT;
+	    Blinker on T&sup1; [6]</a></td>
+	<td colspan="3"><a class="p" href="b36s23/12tt1.rle">Close T on T;
+	    Small IHI&sup1; [9]</a></td>
+	<td><a class="p" href="b36s23/12tt2.rle">T on T;
+	    Medium IHI&sup1; [11]</a></td>
+	<td colspan="2" class="y"><a class="p" href="b36s23/12tdt.rle">
+	    T on toad&sup1; [17]</a></td>
+	<td colspan="2"><a class="p" href="b36s23/12hsbl.rle">
+	    Blinker on house&sup1; [4]</a></td>
+	<td><a class="p" href="b36s23/14dmbl.rle">
+	    Blinker on diamond&sup1; [9]</a></td>
+	<td colspan="2"><a class="p" href="b36s23/15tit.rle">T on blinker on T;
+	    Long IHI&sup1; [8]</a></td>
+	<td class="y"><a class="p" href="b36s23/15tditd1.rle">
+	    Up toad on I on toad&sup1; [30]</a></td>
+	<td colspan="2" class="y"><a class="p" href="b36s23/15hstd.rle">
+	    Toad on house&sup1; [17]</a></td>
+	<td colspan="2" class="y"><a class="p" href="b36s23/18p3.rle">
+	    18P3&sup1; [22]</a></td>
+    </tr>
+    <tr>
+	<td class="y"><a class="p" href="b36s23/15tditd2.rle">
+	    Down toad on I on toad&sup1; [28]</a></td>
+	<td colspan="3" class="y"><a class="p" href="b36s23/15hst.rle">
+	    T on house&sup1; [20]</a></td>
+	<td class="y"><a class="p" href="b36s23/17dmtd.rle">
+	    Toad on diamond&sup1; [9]</a></td>
+	<td colspan="2" class="r"><a class="p" href="b36s23/17bvcvbl.rle">
+	    Block on very long cover on blinker&sup1; [9]</a></td>
+	<td colspan="2"><a class="p" href="b36s23/18usc.rle">Undead spark coil;
+	    House on house&sup1; [4]</a></td>
+	<td class="r"><a class="p" href="b36s23/18rr.rle">
+	    Railroad crossing&sup1; [x]</a></td>
+	<td colspan="2"><a class="p" href="b36s23/21hsihs.rle">
+	    House on blinker on house&sup1; [7]</a></td>
+	<td><a class="p" href="b36s23/22dmdm.rle">
+	    Diamond on diamond&sup1; [6]</a></td>
+	<td colspan="4" class="s">&nbsp;</td>
+    </tr>
+    <tr>
+	<td class="r"><a class="p" href="b36s23/18cupbk.rle">
+	    Block on cuphook w/&#8203;pre-block&sup1; [x]</a></td>
+	<td colspan="3" class="r"><a class="p" href="b36s23/25p4.rle">
+	    25P4&sup1; [x]</a></td>
+	<td class="r"><a class="p" href="b36s23/28p4.rle">
+	    28P4; Four bookends&sup1; [x]</a></td>
+	<td colspan="2" class="r"><a class="p" href="b36s23/36p4sp2.rle">
+	    Snake pit 2&sup1; [x]</a></td>
+	<td colspan="2" class="r"><a class="p" href="b36s23/40p4.rle">
+	    40P4&sup1; [x]</a></td>
+	<td colspan="2" class="s">&nbsp;</td>
+	<td colspan="3"><a class="p" href="b36s23/8p7.rle">8P7;
+	    Twin beehives&sup1; [3]</a></td>
+	<td colspan="3" class="r"><a class="p" href="b36s23/38p8.rle">
+	    38P8&sup1; [x]</a></td>
+    </tr>
+    <tr>
+	<td colspan="2" class="y"><a class="p" href="b36s23/16p9.rle">
+	    16P9&sup1; [14]</a></td>
+	<td colspan="4" class="r"><a class="p" href="b36s23/40ly1et4.rle">
+	    Two close lonely bees hassled by four eaters;
+	    Two close lonely bees&sup1; [x]</a></td>
+	<td colspan="3"><a class="p" href="b36s23/8p10.rle">
+	    8P10&sup1; [3]</a></td>
+	<td colspan="2"><a class="p" href="b36s23/16p12.rle">
+	    16P12&sup1; [16]</a></td>
+	<td colspan="3"><a class="p" href="b36s23/21p24-1.rle">
+	    21P24.1; Cis shuttle&sup1; [12]</a></td>
+	<td rowspan="2" colspan="3" class="r"><a class="p" href="b36s23/59p24.rle">
+	    Replicator between four molds [x]</a></td>
+    </tr>
+    <tr>
+	<td colspan="3" class="r"><a class="p" href="b36s23/32p14.rle">
+	    32P14&sup1; [x]</a></td>
+	<td colspan="3"><a class="p" href="b36s23/20p20.rle">
+	    20P20&sup1; [12]</a></td>
+	<td colspan="5"><a class="p" href="b36s23/42p28.rle">
+	    42P28&sup1; [22]</a></td>
+	<td colspan="3" class="r"><a class="p" href="b36s23/24p38.rle">
+	    24P38&sup1; [x]</a></td>
+    </tr>
+    <tr>
+	<td colspan="4"><a class="p" href="b36s23/26p48-1.rle">
+	    Replicator between two cis eaters&sup1; [10]</a></td>
+	<td colspan="4"><a class="p" href="b36s23/64p48.rle">
+	    Four replicators&sup1; [12]</a></td>
+	<td colspan="4"><a class="p" href="b36s23/48p72-1.rle">48P72.1;
+	    Two replicators between two cis blocks&sup1; [10]</a></td>
+	<td colspan="5"><a class="p" href="b36s23/24p96-1.rle">Replicator
+	    between two cis blocks&sup1; [7]</a></td>
+    </tr>
+</table></p></div>
+<map name="36-osc">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,457,20,477" href="#bottom" />
+	<area coords="617,0,637,20" href="zip/36-osc.zip" />
+	<area coords="617,457,637,477" href="stamp/36-osc.rle" />
+	<area coords="0,0,70,50" href="b36s23/9it.rle" />
+	<area coords="70,0,130,50" href="b36s23/12tt1.rle" />
+	<area coords="130,0,190,50" href="b36s23/12tt2.rle" />
+	<area coords="190,0,250,50" href="b36s23/12tdt.rle" />
+	<area coords="250,0,310,50" href="b36s23/12hsbl.rle" />
+	<area coords="310,0,370,50" href="b36s23/14dmbl.rle" />
+	<area coords="370,0,430,50" href="b36s23/15tit.rle" />
+	<area coords="430,0,490,50" href="b36s23/15tditd1.rle" />
+	<area coords="490,0,570,50" href="b36s23/15hstd.rle" />
+	<area coords="570,0,637,50" href="b36s23/18p3.rle" />
+	<area coords="0,50,70,102" href="b36s23/15tditd2.rle" />
+	<area coords="70,50,130,102" href="b36s23/15hst.rle" />
+	<area coords="130,50,190,102" href="b36s23/17dmtd.rle" />
+	<area coords="190,50,250,102" href="b36s23/17bvcvbl.rle" />
+	<area coords="250,50,310,102" href="b36s23/18usc.rle" />
+	<area coords="310,50,370,102" href="b36s23/18rr.rle" />
+	<area coords="370,50,430,102" href="b36s23/21hsihs.rle" />
+	<area coords="430,50,490,102" href="b36s23/22dmdm.rle" />
+	<area coords="0,102,70,178" href="b36s23/18cupbk.rle" />
+	<area coords="70,102,130,178" href="b36s23/25p4.rle" />
+	<area coords="130,102,190,178" href="b36s23/28p4.rle" />
+	<area coords="190,102,250,178" href="b36s23/36p4sp2.rle" />
+	<area coords="250,102,310,178" href="b36s23/40p4.rle" />
+	<area coords="410,102,510,178" href="b36s23/8p7.rle" />
+	<area coords="510,102,637,178" href="b36s23/38p8.rle" />
+	<area coords="0,178,90,254" href="b36s23/16p9.rle" />
+	<area coords="90,178,210,254" href="b36s23/40ly1et4.rle" />
+	<area coords="210,178,310,254" href="b36s23/8p10.rle" />
+	<area coords="310,178,410,254" href="b36s23/16p12.rle" />
+	<area coords="410,178,510,254" href="b36s23/21p24-1.rle" />
+	<area coords="510,178,637,294" href="b36s23/59p24.rle" />
+	<area coords="0,254,110,330" href="b36s23/32p14.rle" />
+	<area coords="110,254,210,330" href="b36s23/20p20.rle" />
+	<area coords="210,254,370,330" href="b36s23/42p28.rle" />
+	<area coords="370,254,470,330" href="b36s23/24p38.rle" />
+	<area coords="0,330,130,477" href="b36s23/26p48-1.rle" />
+	<area coords="130,330,270,477" href="b36s23/64p48.rle" />
+	<area coords="270,330,430,477" href="b36s23/48p72-1.rle" />
+	<area coords="430,330,637,477" href="b36s23/24p96-1.rle" />
+</map>
+<p>Dead spark coils and similar objects are still-lifes in Life, but come
+alive in HighLife, becoming period 2 oscillators with 1&times;1 rotors,
+something that is impossible in Life.</p>
+<p>The Cuphook and Snake pit 2 are
+<a class="i" href="p3.htm">period 3 oscillators</a>
+in Life, but period 4 oscillators in HighLife, so even though the starting
+generations are the same in both rules, these are distinct oscillators.</p>
+<p>Multiple lonely bees can be chained together two spaces apart in both
+Life and HighLife. However, HighLife also allows them to be placed one
+space apart.</p>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Blinker">Blinker</a>,
+<a class="x" href="http://conwaylife.com/wiki/Block">Block</a>,
+<a class="x" href="http://conwaylife.com/wiki/Cuphook">Cuphook</a>,
+<a class="x" href="http://conwaylife.com/wiki/Dead_spark_coil">Dead spark coil</a>,
+<a class="x" href="http://conwaylife.com/wiki/Eater_1">Eater 1</a>,
+<a class="x" href="http://conwaylife.com/wiki/HighLife">HighLife</a>,
+<a class="x" href="http://conwaylife.com/wiki/Mold">Mold</a>,
+<a class="x" href="http://conwaylife.com/wiki/Replicator">Replicator</a>,
+<a class="x" href="http://conwaylife.com/wiki/Snake_pit_2">Snake pit 2</a>,
+<a class="x" href="http://conwaylife.com/wiki/Spark_coil">Spark coil</a>,
+<a class="x" href="http://conwaylife.com/wiki/Toad">Toad</a>,
+<a class="x" href="http://conwaylife.com/wiki/Worker_bee">Worker bee</a>.</p>
+</article>
+<hr class="a" /><article><a id="a47" name="a47"></a>
+<a id="36-link" name="36-link"></a>
+<h2>Links</h2>
+<p>These are a few sites describing HighLife:</p>
+<p><ul>
+    <li><a class="p" href="https://en.wikipedia.org/wiki/Highlife_(cellular_automaton)">
+	HighLife (cellular automaton)</a> on
+	<a class="p" href="https://en.wikipedia.org/">Wikipedia</a>.</li>
+    <li><a class="i" href="lifecred.htm#bell">David Bell&rsquo;s</a> paper,
+	<em><a class="x" target="_blank" href="http://www.tip.net.au/~dbell/articles/HighLife.zip">
+	HighLife &ndash; An Interesting Variant of Life</a></em>
+	(zipped text file).</li>
+    <li><a class="i" href="lifecred.htm#goucher">Adam P. Goucher&rsquo;s</a> article,
+<em><a class="x" href="https://cp4space.wordpress.com/2013/01/06/bombers-and-basilisks/">
+	Bombers and Basilisks"</a></em>.</li>
+</ul></p>
+</article>
+</main>
+<hr class="a" /><a id="a48" name="a48"></a>
+<a id="bottom" name="bottom"></a>
+<p><b>Other rules:</b>
+	<a class="i" href="lifepage.htm"><em>B3/S23</em> (Conway&rsquo;s Life)</a>,
+	<a class="i" href="b2s2.htm"><em>B2/S2</em> (2/2 Life)</a>,
+	<a class="i" href="b34s34.htm"><em>B34/S34</em> (3/4 Life)</a>,
+	<em>B36/S23</em> (HighLife),
+	<a class="i" href="b36s245.htm"><em>B36/S245</em> (Replicator rule)</a>,
+	<a class="i" href="b3xs23y.htm"><em>B3<i>x</i>/S23<i>y</i></em> (Life-like rules)</a>,
+	<a class="i" href="rulell.htm"><em>B2n3/S23-q</em> (LeapLife)</a>,
+	<a class="i" href="rulevl.htm"><em>B2n3-q5y6c/S23-k</em> (VesselLife)</a>,
+	<a class="i" href="rulemn.htm">Niemiec&rsquo;s Rules</a>,
+	<a class="i" href="color.htm">Multi-colored Life</a>.</p>
+<p><b>See also:</b>
+    <a href="lifestr.htm">structure</a>,
+    <a href="lifestyl.htm">style book</a>,
+    <a href="lifeterm.htm">definitions</a>,
+    <a href="lifemeth.htm">search methodologies</a>,
+    <a href="recipe.htm">conversion recipes</a>,
+    <a href="liferule.htm">other rules</a>,
+    <a href="lifenews.htm">news</a>,
+    <a href="lifecred.htm">credits</a>,
+    <a href="lifelink.htm">links</a>,
+    <a href="lifemap.htm">site map</a>,
+    <a class="i" target="lifesrch" href="lifesrch.htm">search</a>,
+    <a class="i" target="lifesrch" href="lifxsrch.htm">expanded search</a>,
+    <a class="i" target="srchhelp" href="srchhelp.htm">search help</a>.</p>
+<p><a href="index.htm">Home page</a> |
+<a href="lifepage.htm">Life page</a></p>
+<p><a href="lifepage.htm#copyright">Copyright &copy;
+1997, 1998, 1999, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022 by Mark. D. Niemiec.
+All rights reserved</a>.<br />
+This page was last updated on <em>2022-07-03</em>.</p>
+<script type="text/javascript"><!--
+"use strict";
+// Convert a named DOM object (id="id") into the actual object
+function Id (id) {
+    return document.getElementById (id);
+}
+// Expand or collapse stamp image text table
+function Nav (n) {
+    var v = Id ("a_" + n).childNodes[0].nodeValue === "+";
+    Id ("a_" + n).childNodes[0].nodeValue = v ? "\u2013" : "+";
+    Id ("b_" + n).style.display = v ? "block" : "none";
+}
+// Set alt and title attributes on an element
+function SetAltTitle (p, n) {
+    if (p && p.href) {
+	p.title = p.alt = n;
+    }
+}
+// Provide title tooltips for all stamp images
+function Titles () {
+    var q = [];				// name = q["id"][i];
+    var t = document.getElementsByTagName ("table");
+    for (i = 0; i < t.length; ++i) {
+	var n = t[i].id;		// table id
+	if (n) {
+	    var r = t[i].getElementsByTagName ("tr");
+	    var b = [];			// patterns in table
+	    for (var j = 0; j < r.length; ++j) {
+		var d = r[j].getElementsByTagName ("td");
+		for (var k = 0; k < d.length; ++k) {
+		    if (d[k].getElementsByTagName ("a"). length) {
+			// Get text in a way that works on most browsers
+			m = (d[k].textContent || d[k].innerText)
+			  .replace (/[\n\t]/g, " ") .replace (/   */g, " ")
+			  .replace (/^ /, "") .replace (/ $/, "")
+			  .replace (/[\xAD\u8230]/g, "");
+			b.push (m);
+		    }
+		}
+	    }
+	    q[n] = b;
+	}
+    }
+    var m = document.getElementsByTagName ("map");
+    for (var i = 0; i < m.length; ++i) {
+	var b = q["t-"+m[i].name];
+	var s = m[i].getElementsByTagName ("area");
+	if (s) {
+	    // First 4 areas are NW, SW, NE, SE corners; last is default
+	    // Others are in the same order as patterns in table
+	    SetAltTitle (s[0], "Top of page");
+	    SetAltTitle (s[1], "Bottom of page");
+	    if (s[3]) {
+		SetAltTitle (s[2], "Zip archive of all patterns");
+		SetAltTitle (s[3], "This stamp page");
+		for (var j = 4, k = 0; j < s.length; ++j) {
+		    var a = s[j].href;
+		    if ((n = a.indexOf ("~")) >= 0) {
+			SetAltTitle (s[j], a.substring (0, n));
+		    } else if (b && b[k]) {
+			SetAltTitle (s[j], b[k++]);
+		    }
+		}
+	    } else {
+		SetAltTitle (s[2], "This stamp page");
+	    }
+	}
+    }
+}
+Titles ();
+// -->
+</script>
+</body></html>

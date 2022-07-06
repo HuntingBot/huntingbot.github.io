@@ -1,0 +1,24 @@
+#N 82lambda.rle: Lambda ship: Pattern image
+#O Mark D. Niemiec's life synthesis database, Tue Jun 11 13:22:39 2013
+#C  ..OOOO.OOOO..
+#C  ...OO...OO...
+#C  .OOOOO.OOOOO.
+#C  ..OOOOOOOOO..
+#C  .............
+#C  .O.........O.
+#C  .O.........O.
+#C  .O.........O.
+#C  .OO.OOOOO.OO.
+#C  ....OO.OO....
+#C  OOO.O...O.OOO
+#C  .O.O.....O.O.
+#C  .............
+#C  ..O.......O..
+#C  .............
+#C  OOO.......OOO
+#C  ..O.......O..
+#C  OO.OO...OO.OO
+#C  ..O.......O..
+x = 13, y = 19, rule = B34/S34
+bb4xb4x$3bxx3bxx$b5xb5x$bb9x$$bx9bx$bx9bx$bx9bx$bxxb5xbxx$4bxxbxx$3xbx
+3bxb3x$bxbx5bxbx$$bbx7bx$$3x7b3x$bbx7bx$xxbxx3bxxbxx$bbx7bx!

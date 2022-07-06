@@ -1,0 +1,8 @@
+#N 8p10.rle: 8 bit P10: Synthesis
+#O Mark D. Niemiec's life synthesis database, Fri Aug 04 12:50:59 2017
+#C  OO.OO.
+#C  O.O.OO
+x = 112, y = 34, rule = B36/S23
+o$boo3bo$oo4bobo$6boo17bxxbxx65bxxbxx$25bxbxbxx64bxbxbxx5bxxbxbx$5boo
+100bxxbxx$5bobo$5bo4$79bobo$79boo$80bo5$78bo$77boo$54bo22bobo$54boo$
+53bobo9$39boo$38bobo$40bo!

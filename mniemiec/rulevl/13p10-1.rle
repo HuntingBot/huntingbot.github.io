@@ -1,0 +1,11 @@
+#N 13p10-1.rle: 13P10.1: Synthesis
+#O Mark D. Niemiec's life synthesis database, Fri Aug 07 03:46:00 2020
+#C  .OO....
+#C  OOO....
+#C  .O.O.O.
+#C  ....OOO
+#C  ....OO.
+x = 88, y = 9
+62bo$42bo17boo$obo19bxx19boo7boo7boo19bxx$boo19bxbbx16boo8bobbo25b3x$b
+o80bxbxbx$23bxbbx26bobbo8boo18b3x$3boo20bxx19boo7boo7boo19bxx$4boo41b
+oo17bo$3bo42bo!

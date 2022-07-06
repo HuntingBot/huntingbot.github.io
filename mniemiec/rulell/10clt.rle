@@ -1,0 +1,39 @@
+#N 10clt.rle: Claw w/tail; Great snake eater: Synthesis
+#O Mark D. Niemiec's life synthesis database, Mon Jul 27 22:40:24 2020
+#C  OO....
+#C  O..O..
+#C  .OO.O.
+#C  ....O.
+#C  ....OO
+x = 175, y = 158
+o$boo$oo15$3bo$4boo$3boo3$27bxx18boo18bxx18boo18bxx$28bx19bo19bx19bo
+19bx$28bxbxx16boboo16bxbxx16boboo16bxbxx$29bxbx17bobo17bxbx17bobo17bx
+bbx$111bxx$15boo$15bobo7by19bo45boobboo$15bo8byy18boo44bobobbobo$11boo
+11byy18boo46bobbo$12boo10by4byy13bo4boo$11bo16bybby16bobbo$28byby17bob
+o$29by19bo3$49b3o$51bo$50bo13$7boo18bxx18boo38boo$8bo18bxx19bo39bo$8bo
+boo36boboo36boboo$9bobbo36bobbo18bxx16bobbo18bxx$11boo32boo4boo18bxx
+18boo18bxx$44bobo38b3o$9bo36bo40bo$8boo76bo$8bobo6$123bo$106byy16bo$
+45bo18by21bobo16bybby13b3o$3boo38bobo17byby20boo17bybby$4boo38boo17by
+bby20bo18byy$3bo21by38byy56b3o21bxx$7boo16by21boo38boo35bobboo17bxbx$
+8bo16by22bo39bo34bo4bo19bx$8boboo19bx16boboo19bx16boboo19bx16boboo16bx
+bxx$9bobbo17bxbx16bobbo17bxbx16bobbo17bxbx16bobbo16bxbbx$11boo18bxx18b
+oo18bxx18boo17bxbx18boo18bxx$111bx6$24bo$24boo$23bobo$29bo90bo$27boo
+89bobo$28boo89boo$53byy50bx38bxx$53byy28b3o18bxbx16b3o18bxbx$60byy3bxb
+x17bo19bxbx17bo19bxbx$28bo8boo21byy3bxxbx15bobboo17bxbx15bobboo17bxbx$
+28bo9bo29bx19bo19bx19bo19bx$28bo9boboo26bxbxx16boboo16bxbxx16boboo16bx
+bxx$39bobbo10by3by11bxbbx16bobbo16bxbbx16bobbo16bxbbx$41boo10by3by13b
+xx18boo18bxx18boo18bxx$53by3by11$85bobo19bx$86boo18bxbx$86bo20bxx$$7b
+oo18bxx18boo18bxx18boo18bxx$8bo19bx19bo19bx19bo19bx$8boboo16bxbxx16bob
+oo16bxbxx16boboo16bxbxx$9bobbo16bxbbx16bobbo16bxbbx16bobbo16bxbbx$11b
+oo18bxx18boo17bxbbx17boo18bxx$71bxx3$30bx19bo$11boo16bxbx17bobobboo$
+10boo17bxbx17boboboo$6boo4bo17bx19bo4bo$7boo$6bo6$3b3o$5boboo14b3oboo
+18boo18boo18boo18boo18boo18boo18boo$4bo3bo16bobbo19bo19bo19bo19bo19bo
+6boo11bo19bo$8boboo12bo3boboo11b3obboboo12boobboboo16boboo16boboo16bob
+oobboo12boboo16boboo$9bobbo16bobbo12bo3bobbo10bobo3bobbo16bobbo16bobbo
+16bobbo3bo12bobbobboo12bobbo$11boo18boo11bo6boo12bo5boo18boo18boo18boo
+18booboo15boo$86boo68bo$85bobo19b3o63bo$87bo21bo62boo$108bo63bobo8$84b
+o22bobo19bobo$63bo21bo22boo20boo$44bo19boo17b3o22bo21bo$24bo20bo17boo$
+7boo16boboo14b3oboo18boo18boo18boo18boo18boo$8bo14b3obbo19bo19bo19bo
+19bo19bo19bo7bo$8boboo16boboo16boboo16boboo16boboo16boboo16boboo16bob
+oobboo$4bo4bobbo16bobbo16bobbo16bobbo16bobbo16bobbo16bobbo16bobbobboo$
+5boo4boo18boo18boo18boo18boo18boo18boo18boo$4boo!

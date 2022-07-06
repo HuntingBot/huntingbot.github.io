@@ -1,0 +1,11 @@
+#N 11snbt.rle: Snake tie boat; Boat on snake: Synthesis
+#O Mark D. Niemiec's life synthesis database, Wed Feb 02 18:24:12 2022
+#C  OO.O...
+#C  O.OO...
+#C  ....OO.
+#C  ....O.O
+#C  .....O.
+x = 75, y = 45
+53bo$54bo$52b3o$$56bo11bxxbx$55bo12bxbxx$55b3o14bxx$44bo27bxbx$14bo27b
+obo28bx$12boo29boo$13boo32boo$46bobo$29bx18bo10bo$bo26bxbx27bobo$bbo
+24bxbx27bobo$3o24bxx28boo$$4boo$3bobo$5bo23$32b3o$34bo$33bo!

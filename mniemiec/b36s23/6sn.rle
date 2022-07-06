@@ -1,0 +1,9 @@
+#N 6sn.rle: 6.1; Snake: Synthesis
+#O Mark D. Niemiec's life synthesis database, Fri Aug 04 15:34:54 2017
+#C  OO.O
+#C  O.OO
+x = 107, y = 10, rule = B36/S23
+6bobo41bo31boo$7boo33bo7bobo16byy11bobo$7bo28bo3bobo7boo17byby$9bo13b
+xxbx7bobo4boo10boo8bxxbx3by13bobo16bxxbx$4boobbo14bxbxx8boo10boo4bobo
+3by3bxbxx13boo3boo16bxbxx$3boo3b3o27boo7bobo3bo4byby20boo$5bo31bobo7bo
+11byy19bo$oo37bo$boo$o!

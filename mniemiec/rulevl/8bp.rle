@@ -1,0 +1,10 @@
+#N 8bp.rle: Bipole: Synthesis
+#O Mark D. Niemiec's life synthesis database, Fri Jul 31 22:03:23 2020
+#C  OO...
+#C  O.O..
+#C  .....
+#C  ..O.O
+#C  ...OO
+x = 40, y = 12
+6bo$4bobo$5boo$3o12b3o17bxx$bbo11bo20bxbx$bo12bo$16boo19bxbx$38bxx$8b
+3o$10bo3boo$9bo3boo$15bo!

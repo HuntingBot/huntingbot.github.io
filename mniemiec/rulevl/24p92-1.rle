@@ -1,0 +1,17 @@
+#N 24p92-1.rle: 24P92.1: Synthesis
+#O Mark D. Niemiec's life synthesis database, Mon Aug 31 16:22:09 2020
+#C  ..OOO......
+#C  ........OOO
+#C  .O.........
+#C  ..O.....OO.
+#C  ...O....O..
+#C  ..O....O...
+#C  .OO.....O..
+#C  .........O.
+#C  OOO........
+#C  ......OOO..
+x = 139, y = 30
+6bo$4bobo94bobo$5boo18bo75boo$24bo25b3x49bo27b3x$24b3o29b3x77b3x$49bx
+79bx$50bx5bxx72bx5bxx$51bx4bx46bo27bx4bx$50bx4bx47bobo24bx4bx$49bxx5bx
+46boo24bxx5bx$57bx79bx$3o45b3x77b3x$bbo51b3x77b3x$bo18boo$20bobo$20bo
+7$78boo$77bobo$79bo3$95b3o$95bo$96bo!

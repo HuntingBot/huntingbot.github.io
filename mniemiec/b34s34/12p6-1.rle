@@ -1,0 +1,8 @@
+#N 12p6-1.rle: 12-bit P6 #1: Pattern image
+#O Mark D. Niemiec's life synthesis database, Sun May 05 09:20:21 2013
+#C  .O.OO.O.
+#C  ........
+#C  OO....OO
+#C  ..OOOO..
+x = 8, y = 4, rule = B34/S34
+bb4x$xx4bxx$$bxbxxbx!

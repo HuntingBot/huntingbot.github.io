@@ -1,0 +1,10 @@
+#N 20p6.rle: 20-bit P6: Pattern image
+#O Mark D. Niemiec's life synthesis database, Sat Sep 23 01:11:00 2017
+#C  OO.OO..
+#C  OO.O...
+#C  .O.OO..
+#C  OO.O...
+#C  ...OOOO
+#C  ..OO..O
+x = 7, y = 6, rule = B3/S2ae3aeijr4-ckqy
+xxbxx$xxbx$bxbxx$xxbx$3b4x$bbxxbbx!

@@ -1,0 +1,33 @@
+#N 11lct.rle: Long claw w/tail: Synthesis
+#O Mark D. Niemiec's life synthesis database, Tue Jul 14 15:28:22 2020
+#C  OO..O..
+#C  O..O.O.
+#C  .OO..O.
+#C  .....OO
+x = 192, y = 97
+23bo$21boo$22boo$$92bobo$92boo$93bo$$bo49bobo18byy18boo$bboo48boo17by
+bby16bobbo$boo49bo19byby17bobo$25bxx18boo18bxx6by11boo6bo11bxx18boo18b
+xx18boo18bxx$6bobo17bx19bo7boo10bxbbx16bobbo16bxbbxx15bobboo15bxbbxx
+15bobboo15bxbbxx$7boo17bxbx17bobo5bobo9bxbxbx15bobobo15bxbxbx15bobobo
+15bxbxbx15bobobo15bxbxbbx$7bo19bxbx17bobo4bo12bxbx17bobo17bxbx17bobo
+17bx19bo19bxbbxx$28bx19bo19bx19bo19bx19bo$5boo163boobboo$6boo122b3o36b
+obobbobo$5bo124bo40bobbo$131bo8$84bobo$85boo$42bo42bo$b3o39bo$3boboo
+34b3oboo38boo38boo$bbo3bobboo35bobboo35bobboo35bobboo19bx$6bobobbo18b
+xx14bobobbo18bxx14bobobbo18bxx14bobobbo17bxbx$7bobboo18bxx15bobboo18b
+xx15bobboo18bxx15bobboo18bxx$123boo$122bobo$124bo6$128bo$128bobo$bo76b
+o49boo$bbo73bobo$3o74boo44bobo37bobo19bx$63bx38bxx20boo19bxx17boo18bxb
+x$41b3o18bxbx16b3o18bxbx19bo20bxx17bo20bxx$3o21bxx17bo19bxbx17bo19bxbx
+$bbobboo17bxbx15bobboo17bxbx15bobboo17bxbx18boo18bxx18boo18bxx$bo4bobb
+oo15bxbbxx15bobboo15bxbbxx15bobboo15bxbbxx15bobboo15bxbbxx15bobboo15bx
+bbxx$6bobobbo14bxbxbbx14bobobbo14bxbxbbx14bobobbo14bxbxbbx14bobobbo14b
+xbxbbx14bobobbo14bxbxbbx$7bobboo15bxbbxx15bobboo15bxbbxx15bobboo15bxbb
+xx15bobboo15bxbbxx15bobboo15bxbbxx17$5boo18boo18boo18boo18boo18boo18b
+oo$boo3bobboo15bobboo15bobboo15bobboo15bobboo15bobboo15bobboo$bboobbob
+obbo14bobobbo14bobobbo14bobobbo14bobobbo14bobobbo14bobobbo$bo5bobboo
+15bobboo15bobboobboo11bobboo15bobboo15bobboo15bobboo$53boo$26boo27bo
+16bo17bo15boo17boo$25bobo43boo16boo15bobo16bobo$27bo43bobo15bobo14bo
+18bo9$22bobo99bobo$23boo26bobo39bo18bo11boo$23bo28boo20bo17bo19bobo10b
+o$52bo20bo18b3o17boo$5boo18boo18boo18boo6b3o9boo18boo18boo$6bobboo15bo
+bboo15bobboo15bobboo15bobboo15bobboo15bobboo$6bobobbo14bobobbo14bobobb
+o14bobobbo14bobobbo14bobobbo14bobobbo$bbo4bobboo15bobboo15bobboo15bobb
+oo15bobboo15bobboo15bobboo$3boo$bboo!

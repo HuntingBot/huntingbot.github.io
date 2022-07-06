@@ -1,0 +1,14 @@
+#N 8bkbk.rle: Block on block; Two blocks; Bi-block: Synthesis
+#O Mark D. Niemiec's life synthesis database, Fri Aug 04 18:29:13 2017
+#C  OO.OO
+#C  OO.OO
+x = 141, y = 72, rule = B36/S23
+82bo$81bo$81b3o$79bo$39bo40bo34bo7bo$39bobo17bxx17b3o18bxx15bo6bobo13b
+xx$39boo18bxx38bxx13b3o6boo14bxx$37bo72b3o14boo$38bo20bxx38bxx11bo14bo
+bo9bxx$36b3o20bxx17b3o18bxx10bo15bo11bxx$41bobo36bo$41boo36bo$42bo38b
+3o$81bo$82bo15$122bo$bbo118bo$obo118b3o$boo76bo$4bo20bxx18boo18bxxbxx
+10boo3booboo10bx4bxxbxx10bo4booboo$4boo17bxbbx16bobbobboo12bxbbxbxbx8b
+oobbobbobobo8bxbxbxbbxbxbx8bobobobbobobo$3bobo17bxx18boo3boo13bxx4bx
+13boo4bo10bxxbxx4bx10booboo4bo9bxx$50bo88bxx$$139bxx$139bxx22$82bo$80b
+obo$81boo35bobo$119boo$119bo19bxx$80b3o19bx19bo16bxx$82bo19bx19bo$81bo
+20bx19bo16bxx$119bo19bxx$119boo$118bobo!

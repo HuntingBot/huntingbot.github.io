@@ -1,0 +1,9 @@
+#N 20p4-2.rle: 20-bit P4 #2: Pattern image
+#O Mark D. Niemiec's life synthesis database, Sun May 12 16:38:29 2013
+#C  .O............O.
+#C  OO.....OO.....OO
+#C  ..OO........OO..
+#C  .....OOOOOO.....
+#C  ....O......O....
+x = 16, y = 5, rule = B34/S34
+bx12bx$xx5bxx5bxx$bbxx8bxx$5b6x$4bx6bx!

@@ -1,0 +1,13 @@
+#N 11dlbt.rle: Down long boat w/tail; Cis-long boat w/tail: Synthesis
+#O Mark D. Niemiec's life synthesis database, Mon Aug 31 18:59:50 2020
+#C  OO....
+#C  .O..OO
+#C  .O.O.O
+#C  ..O.O.
+#C  ...O..
+x = 109, y = 21
+96bo$95bo$95b3o$$23bxx18boo18bxx18boo11bo6bxx$6bo17bxbbx16bobbo16bxbbx
+16bobbo7boo7bxbbxx$boo4boo15bxbxbx15bobobo15bxbxbx15bobobo6bobo6bxbxbx
+$obo3boo3boo12bxbx17bobo17bxbx17bobo17bxbx$bbo7bobo13bx19bo19bx19bo19b
+x$12bo3bo$15boo$15bobo$$36by19bo$35byby17bobo$35bybby16bobbo$36byy18b
+oo$$53boo$52bobo$54bo!

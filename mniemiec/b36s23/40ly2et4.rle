@@ -1,0 +1,16 @@
+#N 40ly2et4.rle: Two lonely bees hassled by four eaters; Two lonely bees: Pattern image
+#O Mark D. Niemiec's life synthesis database, Sat Aug 05 08:14:16 2017
+#C  OO....................OO
+#C  .O....................O.
+#C  .O.O................O.O.
+#C  ..OO................OO..
+#C  ........................
+#C  .....OOOOOO..OOOOOO.....
+#C  ........................
+#C  ..OO................OO..
+#C  .O.O................O.O.
+#C  .O....................O.
+#C  OO....................OO
+x = 24, y = 11, rule = B36/S23
+xx20bxx$bx20bx$bxbx16bxbx$bbxx16bxx$$5b6xbb6x$$bbxx16bxx$bxbx16bxbx$bx
+20bx$xx20bxx!

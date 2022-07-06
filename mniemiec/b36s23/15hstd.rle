@@ -1,0 +1,15 @@
+#N 15hstd.rle: Toad on house: Synthesis
+#O Mark D. Niemiec's life synthesis database, Thu Aug 24 01:28:41 2017
+#C  OO...O
+#C  O.O.OO
+#C  ..O.OO
+#C  O.O.O.
+#C  OO....
+x = 113, y = 25, rule = B36/S23
+91bobo$92boo$92bo4$59bo20bobbo$59bobo22bo12bobo$59boo19bo3bo3bo8boo$
+73bxx6b4o4bo3boo3bo$72bxbbx11b3obbobbo$72bxbx17bobo$61boo10bx19bo3bo$
+9bo46boobboo35bobo$10boo5bobo36bobo3bo34boo$bo7boo6boo8bxx18boo7bo10b
+xx18boo18bxx3bx$bbo15bo8bxbxbx15bobobo15bxbxbx15bobobo15bxbxbxx$3o26bx
+bx17bobo17bxbx4bxx11bobo4boo11bxbxx$4b3o20bxbxbx15bobobo5boo8bxbxbx3bx
+bbx8bobobo3bobbo8bxbxbx$6bo20bxx18boo8bobo7bxx7bxx9boo7boo9bxx$5bo51bo
+$54boo$53bobo41bo$55bo40boo$96bobo!

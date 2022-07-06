@@ -1,0 +1,15 @@
+#N 20zddwmb.rle: Medium blinker on two dominoes between Z and W: Partial synthesis
+#O Mark D. Niemiec's life synthesis database, Sat May 08 00:22:36 2021
+#C  OO.............
+#C  .O....O........
+#C  .OO.O.O.OO.....
+#C  ....O....O....O
+#C  .........OOO..O
+#C  ...........O..O
+#C  ..............O
+x = 171, y = 25
+19bo$19boo$17b4o$18boo12boo79bo$32boo79boo$30boobo77b4o$30b4o78boo42bx
+$69bx59bo26bxbbx$xx38boo27b3x57b3o24bxbb3x$bx4bx23b4o7bo4bo24bx4bx35b
+oo17bo4bo19bx4bx4bx$bxxbxbxbxx20boobo7booboboboo21bxxbxbxbxx31b4o16boo
+boboboo21bxxbxbxbxx$4bx4bx22boo10bo4bo24bx4bx33boo19bo4bo24bx4bx$9bxx
+21boo15boo28bxx32bo25boo28bxx9$88boo$88b3o$88boboo$89b3o!

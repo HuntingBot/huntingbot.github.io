@@ -1,0 +1,23 @@
+#N 16oc.rle: Octagon 2: Synthesis
+#O Mark D. Niemiec's life synthesis database, Sun May 23 13:55:06 2021
+#C  .O..O.
+#C  O.OO.O
+#C  .O..O.
+#C  .O..O.
+#C  O.OO.O
+#C  .O..O.
+x = 168, y = 89
+134bo$95bo39boo$93bobo38boo$94boo$117b3y17b3o$97bo$86bobo7bo$87boo7b3o
+$87bo$119bxbbx16bobbo16bxbbx$118bxbxxbx14boboobo14bxbxxbx$82boo35bxbbx
+16bobbo16bxbbx$83boo34bxbbx16bobbo16bxbbx$82bo35bxbxxbx4by9boboobo4bo
+9bxbxxbx$105bo13bxbbx5by10bobbo5bo10bxbbx$105bobo20by19bo$105boo44bo$
+109b3o38boo$109bo40bobo$110bo5$105boo$104boo$106bo$$100bo$100boo$99bob
+o13$123bo$124bo$122b3o$$154bx$121boo31bx$100b3x19boo6b3o21bx5b3x$72boo
+47bo$69bobbobo$67bobobbo$68boo70bo$99b3x27b3o6boo19b3x5bx$139boo26bx$
+167bx$$137b3o$137bo$138bo15$66bobo$66boo$4bo14bobo45bo75bo$4bo14boo13b
+xx28boo75boo$4bo5b3o7bo13bxbx3b3x21bobo3b3o26bxbbx26bobbo9boo15bxbbx$
+32bxxbx26boobo32bxbxxbx24boboobo24bxbxxbx$32bxbxx12bx13boboo12bo20bxbb
+x5b3y18bobbo5b3o18bxbbx$33bx12bxxbx13bo12boobo11b3y5bxbbx18b3o5bobbo
+26bxbbx$46bxbxx26boboo18bxbxxbx24boboobo24bxbxxbx$bo7b3o5bo21b3x3bxbx
+21b3o3bobo21bxbbx15boo9bobbo26bxbbx$boo14bo28bxx28boo41boo$obo14bo56bo
+43bo$74boo$73bobo!

@@ -1,0 +1,9 @@
+#N 18p6-1.rle: 18-bit P6 #1: Pattern image
+#O Mark D. Niemiec's life synthesis database, Sun May 12 16:46:03 2013
+#C  .O...........O.
+#C  OO.....O.....OO
+#C  ..OO.......OO..
+#C  .....OOOOO.....
+#C  ....O.....O....
+x = 15, y = 5, rule = B34/S34
+bx11bx$xx5bx5bxx$bbxx7bxx$5b5x$4bx5bx!

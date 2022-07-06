@@ -1,0 +1,10 @@
+#N 22-p4.rle: Period 4 oscillator: Stamp collection
+#O Mark D. Niemiec's life synthesis database, Sun Sep 17 20:01:18 2017
+x = 125, y = 50, rule = B2/S2
+5$5bobo17bo3bo16bo19bo18bo20bo$6bo19bobo16bo19bo20bo18bo$48bo17bo3bo
+35bo$47bo23bo14bo3bo19bo$70bo14bo5bo17bo$90bo21bo$111bo9$25bo3bo15bo3b
+o16bo18bo19bo11bo$5bo3bo16bobo17bobo16bo20bo19bo11bo$6bobo59bo16bo3bo
+3bo11bo3bo3bo3bo$67bo24bo19bo$9bobo18bo62bo3bo15bo$8bo3bo16bo18bobo20b
+o26bo$32bo14bo3bo18bo26bo$31bo41bo$72bo7$6bo19bo9bo$5bo19bo9bo$8bo19bo
+9bo$7bo19bo9bo$34bo$11bo19bo$10bo19bo$13bo19bo$12bo19bo$$16bo$15bo$18b
+o$17bo!

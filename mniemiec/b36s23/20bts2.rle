@@ -1,0 +1,12 @@
+#N 20bts2.rle: Two pairs of up boat on boat: Synthesis
+#O Mark D. Niemiec's life synthesis database, Sat Jul 29 22:13:01 2017
+#C  .O.....O.
+#C  O.O...O.O
+#C  OO.....OO
+#C  .........
+#C  OO.....OO
+#C  O.O...O.O
+#C  .O.....O.
+x = 30, y = 7, rule = B36/S23
+bo20bx5bx$bbo18bxbx3bxbx$3o18bxx5bxx$4boo$3boo16bxx5bxx$5bo15bxbx3bxbx
+$22bx5bx!

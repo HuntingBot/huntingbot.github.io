@@ -1,0 +1,8 @@
+#N 11acbt1.rle: Up boat on carrier: Synthesis
+#O Mark D. Niemiec's life synthesis database, Fri Jan 11 04:29:23 2013
+#C  OO....O.
+#C  O..O.O.O
+#C  ..OO.OO.
+x = 71, y = 7, rule = B36/S23
+50bo$3bobo17bxx18boo3boo13bxx4bx$4boo17bxbbx16bobbobboo12bxbbxbxbx$4bo
+20bxx18boo18bxxbxx$boo$obo$bbo!

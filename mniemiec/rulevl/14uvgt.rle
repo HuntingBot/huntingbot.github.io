@@ -1,0 +1,35 @@
+#N 14uvgt.rle: Up very long barge w/tail: Synthesis
+#O Mark D. Niemiec's life synthesis database, Sun May 23 19:15:44 2021
+#C  OO......
+#C  .O......
+#C  .O.O....
+#C  ..O.O...
+#C  ...O.O..
+#C  ....O.O.
+#C  .....O.O
+#C  ......O.
+x = 157, y = 128
+66bxx18boo18bxx18boo18bxx$9boo56bx19bo19bx19bo19bx$10boobobo51bxbx17bo
+bo17bxbx17bobo17bxbx$9bo3boo53bxbx17bobo17bxbx17bobo17bxbx$14bo54bxbx
+17bobo17bxbx17bobo17bxbx$70bxx18boo18bxbx17boo18bxbx$111bxbx21bo15bxbx
+$bo91bo18bx20boo17bx$boo90boo39boo$obo89bobo42$58boo$58bobo$58bo7$6boo
+18bxx18boo18bxx18boo18bxx18boo18bxx$7bo19bx19bo19bx19bo19bx19bo19bx$7b
+obo17bxbx17bobo17bxbx17bobo17bxbx17bobo17bxbx$8bobo17bxbx17bobo17bxbx
+17bobo17bxbx17bobo17bxbx$9bobo17bxbx17bobo17bxbx17bobo17bxbx17bobo17bx
+bx$10bobo17bxbx17bobo17bxbx17bobo17bxbx17bobo17bxbx$11bobo17bx19bobo
+17bx19bobo17bxx18bobo17bxx$12bo39bo39bo39bo4bo$15boo118boo$15bobo36b3o
+37bo20byy19boo17byy$15bo38bo39boo19byy38byy$55bo37bobo5$46bobo19by16bo
+bo17by$47boo18byby15boo17byby$47bo20byy16bo17byy$$6boo38boo38boo$7bo
+39bo20bx18bo20bx$7bobo37bobo17bxbx17bobo17bxbx$8bobo18bxx17bobo17bxbx
+17bobo17bxbx$4boo3bobo17bxbx17bobo17bxbx17bobo17bxbx$3bobo4bobo17bxbx
+17bobo17bxbx17bobo17bxbx$5bo5bobo17bxbx17bobo17bxbx17bobo17bxbx$12bo
+19bx19bo19bx19bo19bx9$108bobo12bo$109boo13bo17bo$bb3o104bo12b3o18boo$
+4bo137boo$3bobboo18boo18boo18boo18boo18boo18boo18boo$7bo19bo19bo19bo
+19bo19bo19bo19bo$7bobo17bobo17bobo17bobo17bobo17bobo17bobo17bobo$8bobo
+17bobo17bobo17bobo17bobo17bobo17bobo17bobo$9bobo17bobo17bobo17bobo17bo
+bo17bobo17bobo17bobo$10bobo17bobo17bobo17bobo17bobo17bobo17bobo17bobo$
+11bobo12boo3bobo17bobo17bobo17bobo17bobo17bobo17bobo$12bo12bobo4bo13b
+3o3bo14boo3bo19bo19bo19bo19bo$27bo20bo17bobo$47bo20bo19b3o$90bo$89bo5$
+9bo$9bobo$9boo$$6boo18boo5bo12boo$7bo19bo5bobo11bo$7bobo17bobo3boo12bo
+bo5bo$8bobo17bobo17bobo4bobo$9bobo17bobo17bobo3boo$10bobo17bobo17bobo$
+11bobo17bobo17bobo$12bo19bo19bo!

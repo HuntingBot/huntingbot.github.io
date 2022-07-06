@@ -1,0 +1,18 @@
+#N 13lb.rle: Large box: Synthesis
+#O Mark D. Niemiec's life synthesis database, Thu Jan 18 01:30:03 2018
+#C  ..O....
+#C  .O..O..
+#C  O.O..O.
+#C  ...O...
+#C  .O..O.O
+#C  ..O..O.
+#C  ....O..
+x = 141, y = 28
+6bo$6bobo$6boo$24bxx18boo18bxx18boo$24bxx18boo18bxx18boo$96bx19bo19bx$
+obo18bx19bo19bx19bo13bxbbx16bobbo16bxbbx$boo17bxbx17bobo17bxbx17bobo
+11bxbxbbx14bobobbo14bxbxbbx$bo18bxbbx9bo6bobbo16bxbbx16bobbo13bx4b3y
+12bo4b3o12bx$3boo16bxx8bobo7boo10bxx6bxx10boo6boo12bxbbxbx14bobbobo5b
+3o6bxbbxbx$3bobo26boo19bxx18boo21bxbbx16bobbo6bo9bxbbx$3bo25boo51bo15b
+x19bo8bo10bx$28bobo50boo$30bo50bobo4$57bx19bo$57bx19bo$57bx19bo$$38boo
+13b3x3b3x11b3o3b3o7bo$37boo49boo$39bo17bx19bo10bobo$57bx19bo$35boo20bx
+19bo$36boo$35bo!

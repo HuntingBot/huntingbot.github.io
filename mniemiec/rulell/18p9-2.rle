@@ -1,0 +1,13 @@
+#N 18p9-2.rle: Skewed cis 18P9.1: Synthesis
+#O Mark D. Niemiec's life synthesis database, Mon Apr 12 04:04:42 2021
+#C  OO................
+#C  O.O.............OO
+#C  .O.............O.O
+#C  .....O..........O.
+#C  ....OOO.....O.....
+#C  ...........OOO....
+x = 67, y = 22
+52bo$42bobo7bobo$42boo8boo7bxx$43bo17bxbx$7bo54bx$5boo$bo4boo15bx19bo
+21bx$bboo18bxbx17bobo19bxx$boo19bxbx17bobo20bx$23bx19bo3$24bx19bo$5boo
+16bxbx17bobo20bx$4boo17bxbx17bobo19bxx$oo4bo17bx19bo21bx$boo$o62bx$44b
+o17bxbx$43boo8boo7bxx$43bobo7bobo$53bo!

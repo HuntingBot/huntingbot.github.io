@@ -1,0 +1,9 @@
+#N 15dgta.rle: Wing w/tag-along: Pattern image
+#O Mark D. Niemiec's life synthesis database, Sun Sep 24 09:52:19 2017
+#C  ..O.......
+#C  .OO.......
+#C  OO...OOOO.
+#C  ......OOOO
+#C  ......OO..
+x = 10, y = 5, rule = B3/S2ae3aeijr4-ckqy
+bbx$bxx$xx3b4x$6b4x$6bxx!

@@ -1,0 +1,7 @@
+#N 8bkbk16.rle: Two blocks offset (6;  1): Synthesis
+#O Mark D. Niemiec's life synthesis database, Tue Jul 23 21:12:30 2013
+#C  OO......
+#C  OO....OO
+#C  ......OO
+x = 28, y = 7, rule = B3/S2ae3aeijr4-ckqy
+6bo$4boobo$5b3o12bxx$3o3bo13bxx4bxx$oboo22bxx$3bo$bbo!

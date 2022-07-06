@@ -1,0 +1,18 @@
+#N 40p4sn.rle: Super nebula: Pattern image
+#O Mark D. Niemiec's life synthesis database, Fri Nov 16 21:28:01 2018
+#C  ......O......
+#C  ..O..O.O..O..
+#C  .OO.OO.OO.OO.
+#C  .............
+#C  ..O.......O..
+#C  .OO.......OO.
+#C  O...........O
+#C  .OO.......OO.
+#C  ..O.......O..
+#C  .............
+#C  .OO.OO.OO.OO.
+#C  ..O..O.O..O..
+#C  ......O......
+x = 13, y = 13
+6bo$bbobbobobbo$booboobooboo$$bbo7bo$boo7boo$o11bo$boo7boo$bbo7bo$$boo
+boobooboo$bbobbobobbo$6bo!

@@ -1,0 +1,10 @@
+#N 22notn0.rle: Smallest still-life that doesn't work in version 0: Pattern image
+#O Mark D. Niemiec's life synthesis database, Thu Jun 09 00:58:08 2016
+#C  ...OO.......
+#C  ....O......O
+#C  ..O.OO.O.OOO
+#C  OOO.O.OO.O..
+#C  O......O....
+#C  .......OO...
+x = 12, y = 6, rule = B3/S2ae3aeijr4-ckqy
+3bxx$4bx6bx$bbxbxxbxb3x$3xbxbxxbx$x6bx$7bxx!

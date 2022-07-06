@@ -1,0 +1,30 @@
+#N 16betwg6.rle: Down cis wing on bookend w/tub: Synthesis
+#O Mark D. Niemiec's life synthesis database, Wed Jun 02 22:37:20 2021
+#C  .O...OO..
+#C  O.O..O.O.
+#C  .O.O.O..O
+#C  ...O..OO.
+#C  ..OO.....
+x = 172, y = 93
+6bo21bx$7bo19bxbx$5b3o20bxbbx$bo27b3x$boo$obo4b3o17b3x$9bo17bxbbx$8bo
+19bxbx$29bx12$8bo19bx19bo19bx19bo19bx19bo19bx$7bobo17bxbx17bobo17bxbx
+17bobo4boo11bxbx17bobo17bxbx$8bobbo16bx19bobbo16bx19bobboboo13bx19bobb
+o16bx$9b3o37b3o37b3o3bo33b3o$$7b3o37b3o37b3o37b3o$7bobbo36bobbo36bobbo
+36bobbo$8bobo37bobo37bobo37bobo$9bo39bo39bo39bo$$9boo40bo77boo$8bobo
+40boo76bobo$10bo39bobo76bo8$8bo19bx19bo6bo12bx$7bobo17bxbx17bobo3boo
+12bxbx4bx$8bobbo15bxbbx17bobbobboo12bxbbxbxbx$9b3o16bxbx18b3o17b3xbxx$
+29bx$7b3o37b3o17b3x$7bobbo36bobbo16bxbbx$8bobo37bobo17bxbx$9bo39bo19bx
+$$5b3o$7bo$6bo4$109bobo13bobo$110boo14boo$110bo15bo16bo$144boo$8bo19bo
+19bo19bo19bo19bo19bo14boo3bo19bo$7bobo17bobo17bobo17bobo17bobo17bobo
+17bobo17bobo17bobo$8bobbo16bobbo16bobbo16bobbo16bobbo16bobbo16bobbo16b
+obbo11bo4bobbo$3boo4b3o17b3o17b3o17b3o17b3o17b3o17b3o17b3o12boo3b3o$4b
+oo17boo138boo$3bo3b3o14boob3o13boobb3o17b3o17b3o17b3o17b3o17b3o17b3o$
+7bobbo12bo3bobbo13boobobbo12boobbobbo16bobbo16bobbo16bobbo16bobbo16bo
+bbo$8bobo17bobo12bo4bobo13boobbobo17bobo17bobo17bobo17bobo17bobo$9bo
+19bo19bo13bo5bo19bo19bo19bo19bo19bo$$87bo$87boo$86bobo6$112bobo$112boo
+$8bo19bo19bo19bo19bo19bo4bo14bo$7bobo17bobo17bobo17bobo17bobo17bobo17b
+obo5bo$8bobbo16bobbo16bobbo16bobbo16bobbo16bobbo16bobboboo$9b3o17b3o
+17b3o17b3o17b3o17b3o17b3obboo$14boo$7b3o3boo12b3o17b3o17b3o17b3o17b3o
+17b3o$7bobbo4bo11bobbobboo12bobbo16bobbo16bobbo16bobbo16bobbo$8bobo17b
+oboboo14bobo17bobo17bobo17bobo17bobo$9bo19bo4bo14bo19bo19bo19bo19bo$
+52b3o$52bo18b3o17boo$53bo17bo19bobo$72bo18bo!

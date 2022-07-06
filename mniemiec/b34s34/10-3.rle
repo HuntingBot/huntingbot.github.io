@@ -1,0 +1,11 @@
+#N 10-3.rle: 10.3: Synthesis
+#O Mark D. Niemiec's life synthesis database, Fri Aug 21 22:46:24 1998
+#C  OO.O..
+#C  O.O.OO
+#C  O.O.O.
+x = 150, y = 12, rule = B34/S34
+43boo3boo27boo$42bobo3bobo26boo$42b4ob4o23bob4o53boo$obb4o37bo3bo23b3o
+57bobbo$oobboo66b3o58boo$oo23bxbx17bobo15bxbxbxbx4bob4o3bobobobo14bxxb
+xbx14boobobo3boo9bxxbx$o24bxbx17bobo16bxbxbx8boo5bobobo15bxbxbx15bobob
+o15bxbxbxx$24bxxbxx15booboo15bxbxbx8boo5bobobo15bxbxbx15bobobo4boo9bxb
+xbx$26bx19bo85b4o$4b4o$5boo$5boo!

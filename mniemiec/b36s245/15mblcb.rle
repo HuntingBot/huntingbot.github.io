@@ -1,0 +1,11 @@
+#N 15mblcb.rle: Medium blinker on long crab: Partial synthesis
+#O Mark D. Niemiec's life synthesis database, Fri Apr 24 23:02:43 2020
+#C  O.....O.
+#C  O..O.O.O
+#C  O..OOOO.
+#C  O....O..
+#C  .....OO.
+x = 55, y = 46
+35b3o$35boobo$36b3o$37boo20$19bo4bo$19boobboo$17b4obb4o$18boo4boo12$
+50b4x3$bxx18boo28bxx$bbx19bo29bx$b4x16b4o26b4x$xbxbx15bobobo25bxbxbx$b
+x19bo29bx!

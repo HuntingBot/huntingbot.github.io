@@ -1,0 +1,28 @@
+#N 36-br.rle: Breeder: Stamp collection
+#O Mark D. Niemiec's life synthesis database, Sat Aug 26 06:02:27 2017
+x = 401, y = 165, rule = B36/S23
+22$21bo231boo$20boo226boo3boo$19bobo3bo222boo90boo$18b3o4bo309bo4boo$
+335bo3$20boo4$274boo$275boo$272boboo$52b3o217b3o$51bo5boo214bo$51bo4bo
+$51bo8bo$60bo$53bo6bo$52bo$52bo208b3o$260bo5boo$260bo4bo$260bo$56bobo$
+56b3o203bo$56boo203bo$261bo40b3o$51boo248bo3bo$301bo4bo$301bobbobbo$
+302bo4bo$47bo4b3o248bo3bo$47bo3bobo15bo234b3o$51boo14boobo$51bo19bo32b
+oo$103bo$68bo34boobo$102boobb3o$100b3o$99bobo8bo$99bo10bo$101boo3bo3b
+oo195bo$102bo10bo192b3o$102bo8bobo191boobo$111boo191boo$104bobo198boo$
+77b3o26bo186bo$107bo185bo$95b3o9boo168b3o12bo$94bo12boo168bobbo$93bo3b
+obo177bo3bo12bo$92bo185bobbo7bo4bo$79bo11bo7bobo177b3o5boo5bo$77bobo
+11bo6bo192b3o$78boo11bobo3bo3bobo$96bo7bo$93bobo7bo$105boo$95bobo3bo$
+100bo$97b3o4$109bo$108bo$82bo25b3o$81boo251b3x$80bobo3bo222by17bx$79b
+3o4bo220byy18bx$308byy16bxbx$88b3o236bx$289by30bxx5bx$81boo204byy30b3x
+17bx$288byy29bxbx16b3x$68b3o266bxxbx$67bobbo198by66bxx$66bo3bo196byy
+68bxx$66bobbo15bobo180byy55bx$66b3o15bobbo237bx$85bobo21bx31bx110boo
+63bx6bx$78b3o27b3x29b3x102boo4bo65bx$78bobo16b3o7bxb3x27bxb3x108boo63b
+x8bx$78b3o18bo6b3xbbxx25b3xbbxx176bx4bx$71bo26bo6bxbxx3bxx23bxbxx3bxx
+173bxx5bx$71bo32b3xbxxbb3x21b3xbxxbb3x176b3x$71bo31bxb3xb3xbx21bxb3xb
+3xbx105bo$102b3xbbxxb3x21b3xbbxxb3x105boo$103bxx3bxxbx23bxx3bxxbx$104b
+xxbb3x25bxxbb3x$105b3xbx27b3xbx$106b3x29b3x$107bx31bx7$366b3x$341by17b
+x$339byy18bx$340byy16bxbx$359bx$321by30bxx5bx$319byy30b3x17bx$320byy
+29bxbx16b3x$369bxxbx$301by66bxx$299byy68bxx$300byy55bx$357bx$109bx171b
+y67bx6bx$108b3x168byy68bx$107bxb3x168byy67bx8bx$106b3xbbxx240bx4bx$
+105bxbxx3bxx147by89bxx5bx$104b3xbxxbb3x144byy94b3x$103bxb3xb3xbx146byy
+$102b3xbbxxb3x$103bxx3bxxbx129by$104bxxbb3x128byy$105b3xbx130byy$106b
+3x$107bx113by$219byy$220byy!

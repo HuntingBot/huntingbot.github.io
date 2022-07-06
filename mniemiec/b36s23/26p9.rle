@@ -1,0 +1,32 @@
+#N 26p9.rle: 26P9: Partial synthesis
+#O Mark D. Niemiec's life synthesis database, Mon Dec 31 13:31:47 2018
+#C  OO.OO.......
+#C  .O.O...O....
+#C  .O..OO.O....
+#C  ..OO..O.....
+#C  ....O.......
+#C  .O.O....OO..
+#C  .OO.....O...
+#C  .........OOO
+#C  ...........O
+x = 152, y = 66
+91bo$60bxxbxx15booboo5bo9bxxbxx15booboo15bxxbxx$61bxbx17bobo6b3o8bxbx
+17bobo17bxbxbbx$61bxbbx16bobbo16bxbb3x14bobb3o3bobo8bxbb3x$62bxxbx16b
+oobobboo12bxxbbx15boobbo3boo10bxx$64bx19bobboo15bx19bo6bo12bx$61bxbx
+17bobo5bo11bxbx17bobo4bo12bxbx$61bxx18boo18bxx18boo5boo11bxx$127bobo
+13$40booboo15bxxbxx15booboo15bxxbxx15booboo15bxxbxx$41bobobbo14bxbxbbx
+14bobobbo14bxbxbbx14bobobbo14bxbxbbx$41bobb3o14bxbb3x14bobb3o14bxbb3x
+14bobb3o14bxbb3x$42boo18bxx18boo18bxx18boo18bxx$44bo19bx19bo19bx19bo
+19bx$41bobo17bxbx17bobo17bxbx4bx12bobo4bo12bxbx4bx$41boo18bxx18boo18b
+xx4bxbx11boo4bobo11bxx4bxbx$47bobo16b3x17b3ob3o14bxbbx16bobbo17bxbx$
+47boo41bo17bxx18boo19bx$48bo42bo33boo$124bobo$47boo77bo$46boo$48bo6$
+135bo$133boo$134boo3$125bobo$126boo7bo$126bo6boo$134boo3$ooboo15bxxbxx
+15booboo15bxxbxx15booboo15bxxbxx15booboo15bxxbxx$bobobbo14bxbxbbx14bob
+obbo14bxbxbbx14bobobbo14bxbxbbx14bobobbo14bxbx3bx$bobb3o14bxbb3x14bobb
+3o14bxbb3x14bobb3o14bxbb3x14bobb3o14bxbbxxbx$bboo18bxx18boo18bxx18boo
+18bxx18boo18bxxbbx$4bo19bx19bo19bx19bo19bx19bo19bx$bobo4bo12bxbx4bx12b
+obo4bo12bxbx4bxx11bobo4boo11bxbx4bxx11bobo4boo11bxbx4bxx$boo4bobo11bxx
+4bxbx11boo4bobo11bxx5bx12boo5bo12bxx5bx12boo5bo12bxx5bx$8bobo17bxbx17b
+obo20bx19bo17b3x17b3o17b3x$9bo19bxbx17bobo18bxx18boo19bx19bo19bx$14bo
+15bx15bo3bo$12boo32boo$9boobboo30bobo41b3o$9bobo38bo38bo$9bo39boo39bo$
+49bobo!

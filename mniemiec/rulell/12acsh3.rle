@@ -1,0 +1,14 @@
+#N 12acsh3.rle: Up ship below carrier: Synthesis
+#O Mark D. Niemiec's life synthesis database, Mon Jul 13 20:43:58 2020
+#C  OO.....
+#C  O....OO
+#C  ..O.O.O
+#C  .OO.OO.
+x = 127, y = 36
+123bxx$37bx4bx14bo4bo14bx4bx14bo4bo20bxbbx$35bxxb4xbxx10boob4oboo10bxx
+b4xbxx10boob4oboo20bxx$37bx4bx14bo4bo14bx4bx14bo4bo$125bxx$124bxbx$13b
+o111bx$obo9boo89boo$boo5bo3bobo13byy18boo54boo19by$bo6boo18byy18boo53b
+o20byby$7bobo114byby$48bo76by$48boo$47bobo7$63boo18bxx18boo18bxx$63bo
+bbo16bxbbx16bobbo16bxbbx$65boo18bxx18boo18bxx$$65boo18bxx18boo18bxx$
+64bobo17bxbx17bobo17bxbx$65bo19bx19bo18bxx$$65bo$64bobo32boobboo$64bob
+o31bobobbobo$65bo34bobbo$$65boo$65bobo$65bo!

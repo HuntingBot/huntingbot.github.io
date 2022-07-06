@@ -1,0 +1,15 @@
+#N 12itlhk.rle: Integral w/tail and hook: Synthesis
+#O Mark D. Niemiec's life synthesis database, Sat Jul 11 20:51:03 2020
+#C  O.O....
+#C  OO.O.OO
+#C  ...O.O.
+#C  ...O.O.
+#C  ....O..
+x = 140, y = 35
+5bo$6boo$5boo18bx19bo10bo8bx$9b3o12bxbx4byy11bobo4booboo8bxbx$bbo8bo
+12bxbx4byy11bobo4boobboo7bxbx$obo7bo12bxxbxx15booboo15bxxbxx$boo13$12b
+o$13boo72by3by25bo3bo$12boo73by3by25bo3bo$5bo10bobo6bx19bo29bx11by3by
+13bo11bo3bo13bx$4bobo9boo6bxbx9bx7bobo9bo17bxbx27bobo27bxbx$4bobo10bo
+6bxbx9bx7bobo9bo17bxbx27bobo27bxbx$3booboo15bxxbxx8bx6booboo8bo16bxxbx
+bxx3byy18booboboo3boo18bxxbxbxx$77bxbx3byy22bobo3boo22bxbx$90byy28boo$
+90byy28boobboo$55boo67bobo$56boo66bo$55bo$59bobo$59boo$60bo!

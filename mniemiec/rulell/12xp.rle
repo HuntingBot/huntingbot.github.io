@@ -1,0 +1,23 @@
+#N 12xp.rle: Extra long ship: Synthesis
+#O Mark D. Niemiec's life synthesis database, Wed Jun 02 22:01:26 2021
+#C  OO....
+#C  O.O...
+#C  .O.O..
+#C  ..O.O.
+#C  ...O.O
+#C  ....OO
+x = 151, y = 82
+44bo$42bobo$43boo$$25bxx16bo21bxx18boo18bxx18boo18bxx$25bxbx15boo20bxx
+18boo18bxbx17bobbo16bxbx$3boo21bxbx13bobo61bxbx17b3o17bxbx$4boo21bxbx
+77bxbx37bxbx$3bo24bxbx61bo15bxbx15b3o19bxbx$12bo16bxx59boo17bxx15bobbo
+bbo16bxx$11bo79boo34boobbo$11b3o72b3o42b3o$88bo$7b3o77bo$7bo$8bo13$5b
+oo$4boo$6bo$bbo$obo$boo$25bxx18boo18bxx18boo18bxx$25bxbx17bobo17bxbx
+17bobo17bxbx$26bxbx17bobo17bxbx17bobo17bxbx$27bxbx17bobo17bxbx17bobo
+17bxbx$28bx19bo19bxbx17bobo17bxbx$69bx19bo19bxx$54bo18by19bo$52boo18by
+by17bobobboo$53boo16bybby16bobboboo$boo45b3o21byy18boo4bo$bboo46bo$bo
+47bo9$5boo18bxx18boo18bxx$5bobo17bxbx17bobo17bxbx$6bobo17bxx18bobo17bx
+bx$7bobo37bobo17bxbx$8bobo37bobo17bxx$9boo16by21boo$26byby$12bo14by24b
+oo$12boo38bobo$11bobo38bo9$61bo$boo59boo$bbooboo18boo18boo14boobboo$bo
+3bobo17bobo17bobo17bobo$6bobo17bobo17bobo17bobo$7bobo17bobo17bobo17bob
+o$8bobo12boo3bobo17bobo17bobo$9boo11bobo4boo12b3o3boo18boo$24bo20bo$
+44bo!

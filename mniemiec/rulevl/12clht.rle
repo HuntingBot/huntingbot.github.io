@@ -1,0 +1,11 @@
+#N 12clht.rle: Snorkel loop; Claw w/hooked tail: Synthesis
+#O Mark D. Niemiec's life synthesis database, Thu May 27 12:01:02 2021
+#C  OO....
+#C  O.O.OO
+#C  ..O.O.
+#C  .O..O.
+#C  ..OO..
+x = 74, y = 11
+10bo$11boo$10boo37boo$14bobo33bo$o13boo31boo$boo12bo30bobo$oo5bobo22b
+xx13bo24bxx$8boo18bxxbxbx34bxxbxbx$8bo20bxbx16boo19bxbx$29bxbbx14bobo
+19bxbbx$30bxx17bo20bxx!

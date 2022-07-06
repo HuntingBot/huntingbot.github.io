@@ -1,0 +1,9 @@
+#N 12snsh1.rle: Up ship on snake: Synthesis
+#O Mark D. Niemiec's life synthesis database, Mon Jul 13 20:40:44 2020
+#C  OO......
+#C  O.O.O.OO
+#C  .OO.OO.O
+x = 116, y = 22
+99bo$98bo$98b3o3$55bo42b3o$53boo19bx19bo3bo15bxx$28bxxbx16boobobboo12b
+xxbxbxbx12boobobobo3bo8bxxbxbxbx$6bo21bxbxx16boboo16bxbxxbxx13bobooboo
+13bxbxxbxx$7boobo$6boobbobo$10boo$$boo$obo$bbo4$9boo$9bobo$9bo!

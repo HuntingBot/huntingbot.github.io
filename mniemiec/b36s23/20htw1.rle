@@ -1,0 +1,10 @@
+#N 20htw1.rle: Up weird thing below hook w/tail: Pattern image
+#O Mark D. Niemiec's life synthesis database, Sat Aug 05 02:41:56 2017
+#C  O...........
+#C  OOO....OO.OO
+#C  ...O.OO....O
+#C  ..O......OO.
+#C  ..OO.O.O....
+#C  .......O....
+x = 6, y = 12, rule = B36/S23
+xx$bx$bxbxx$bbxbx$$bbxbx$bbx$bxbbxx$bx$3bx$bxbx$bxx!

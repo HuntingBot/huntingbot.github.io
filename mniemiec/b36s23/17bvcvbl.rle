@@ -1,0 +1,10 @@
+#N 17bvcvbl.rle: Block on very long cover on blinker: Pattern image
+#O Mark D. Niemiec's life synthesis database, Thu Sep 28 22:30:14 2017
+#C  OO.OO..
+#C  .O.OO..
+#C  .O.....
+#C  ..OOOOO
+#C  ......O
+#C  ..OOO..
+x = 7, y = 6, rule = B36/S23
+xxbxx$bxbxx$bx$bb5x$6bx$bb3x!

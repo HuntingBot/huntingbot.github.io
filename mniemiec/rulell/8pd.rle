@@ -1,0 +1,24 @@
+#N 8pd.rle: Pond: Synthesis
+#O Mark D. Niemiec's life synthesis database, Fri Jul 17 14:36:06 2020
+#C  .OO.
+#C  O..O
+#C  O..O
+#C  .OO.
+x = 188, y = 110
+126bo$3bo123bo$4boo119b3o$3boo20bxx38bxx38bxx38bxx38bxx$24bxbbx36bxbbx
+16bobo17bxbbx16bo19bxbbx13bo3boo17bxbbx$3bo20bxbbx20bobo13bxbbx17boo
+17bxbbx16boo18bxbbx14boboo18bxbbx$3boo20bxx22boo14bxx18bo19bxx16bobo
+19bxx13b3o3bo18bxx$bbobo44bo$84boo$47boo34bobo$48boo35bo$47bo12$25bxx
+38bxx18boo18bxx18boo18bxx18boo18bxx$24bxbbx36bxbbx16bobbo16bxbbx17bobo
+16bxbbx17bobo16bxbbx$24bxbbx36bxbbx17boo17bxbbx18bobo15bxbbx18bobo15bx
+bbx$25bxx38bxx38bxx20bo17bxx20bo17bxx$$83boobboo38boo38boo$3boo77bobo
+bbobo36bobo38bobo$4boo78bobbo40bo38bo$3bo40bo3boo$7boo36boobobo$7boo
+35boo3bo10$5boo18bxx18boo18bxx38bxx18boo18bxx18boo18bxx$4bobbo16bxbbx
+16bobbo16bxbbx16boo18bxbbx17bobo16bxbbx17boo17bxbbx$4bobobo15bxbbx16bo
+bobo15bxbbx16bobo17bxbbx18bobboo13bxbbx22bo13bxbbx$5bobo17bxx18bobo17b
+xx19bo18bxx20boobo14bxx18booboo15bxx$6bo39bo39boboobboo70bobobboo$49b
+oo36boboboo37boo33bo$8b3o38bobo41bo36bobo$8bo40bo80bo$9bo12$5boo18bxx$
+4bobbo16bxbbx$4bobobo15bxbbx$5bobbo16bxx$6boo$10boo$10bobo$10bo13$5boo
+18bxx18boo18bxx$4bobbo17bxx17bobbo17bxbbx$4bobbo36bobbo19bxx$5boo38boo
+$$8b3o33bo$8bo35boobboo$9bo33bobobbobo$48bo12$5boo18boo$oobbobbo16bobb
+o$boobobbo16bobbo$o4boo18boo$20b3o$22bo$21bo!

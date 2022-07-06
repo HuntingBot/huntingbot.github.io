@@ -1,0 +1,11 @@
+#N ll-p6.rle: Period 6 oscillator: Stamp collection
+#O Mark D. Niemiec's life synthesis database, Fri Jun 04 11:24:36 2021
+x = 125, y = 35
+5$5bo4bo15b3o17b3o16boo$6bobbo15bo3bo20bo14bobobobobo$5bo4bo14bo3bo15b
+o4bo15bo3bobo$6bobbo15bo3bo15bo4bo$5bo4bo15b3o16bo$47b3o20bobo$69bobob
+o9$5bobobobbobobo8boo18bobobo16boo18b3o17boo4boo$6bobo4bobo9bobobobobo
+12bobo16bobbobobobo10bo3bo15bobbobbobbo$26bo3bobo19bobobo9boo3bobo11bo
+3bo6b3o7bobobbobo$53bobo29bo3bo5bo3bo7bo4bo$6bobo4bobo30bobo37b3o6bo3b
+o$5bobobobbobobo9bo3bobo12bobobo16boo3bobo21bo3bo7bo4bo$25bobobobobo
+19bobo9bobbobobobo21b3o9bobbo$25boo25bobobo9boo39bo4bo$108bobbo$107bo
+4bo!

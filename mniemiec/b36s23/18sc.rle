@@ -1,0 +1,10 @@
+#N 18sc.rle: Spark coil: Synthesis
+#O Mark D. Niemiec's life synthesis database, Fri Aug 04 04:03:33 2017
+#C  OO....OO
+#C  O.O..O.O
+#C  ..O..O..
+#C  O.O..O.O
+#C  OO....OO
+x = 35, y = 7, rule = B36/S23
+16bo$bo13bo11bxx4bxx$bbo12b3o9bxbxbbxbx$3o16b3o7bxbbx$4b3o12bo7bxbxbbx
+bx$6bo13bo6bxx4bxx$5bo!

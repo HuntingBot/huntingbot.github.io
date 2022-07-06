@@ -1,0 +1,12 @@
+#N 13lcbk1.rle: block on long canoe: Synthesis
+#O Mark D. Niemiec's life synthesis database, Mon Jul 13 18:24:09 2020
+#C  OO.OO....
+#C  OO.O.O...
+#C  ......O..
+#C  .......O.
+#C  ........O
+#C  .......OO
+x = 65, y = 14
+19bxx18boo18bxx$19bxbx17bobo17bxbx$obo9bo9bx19bo19bx$boo9bobo8bx19bo
+19bx$bo10boo10bx19bo19bx$3bo19bxx18boo18bxx$3boo$bbobo37bo20bxx$42boo
+19bxx$41bobo$$46boo$46bobo$46bo!

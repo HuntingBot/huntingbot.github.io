@@ -1,0 +1,37 @@
+#N 10hvt.rle: Beehive w/tail: Synthesis
+#O Mark D. Niemiec's life synthesis database, Sun Jul 19 04:53:22 2020
+#C  OO....
+#C  .O....
+#C  .O.OO.
+#C  ..O..O
+#C  ...OO.
+x = 170, y = 146
+36bo$37boo$36boo14$76bo29bo$75bo29bo$75b3o27b3o7$6bo$4bobo56bo29bo$5b
+oo57boo28boo$63boo28boo$5bo21bxx38boo28boo$5boo20bxx38boo28boo20byy7b
+yy9boo7boo$4bobo111bybby7by8bobbo7bobboo$118byby6by10bobo6bo3boo$119by
+7byy10bo7boo4bo$$135b3o$137bo$136bo4$84bxx38bxx18boo18bxx$85bx39bx19bo
+19bx$85bxbxx36bxbxx16boboo16bxbxx$86bxbbx36bxbbx16bobbo16bxbbx$87bxx
+38bxx18boo18bxx12$92bo$91bo$91b3o$$4boo18bxx18boo18bxx18boo18bxx$5bo
+19bx19bo19bx19bo5b3o11bx$5boboo16bxbxx16boboo16bxbxx16bobo3bo13bxbxx$
+6bobo17bxbbx16bobo3bo13bxbbx16bobo3bo13bxbbx$27bxx18bo3bo15bxx18boo18b
+xx$51b3o$8boo$9boo$8bo3boo37b3o$12bobo36bo$12bo39bo$81bo$81boo$80bobo$
+40bo45bo$41bo42boo$39b3o43boo$110byy$110byy$39b3o21bxx52byy3bxbx$4boo
+18bxx15bobboo17bxbx19bo8boo21byy3bxxbx$5bo19bx14bo4bo19bx19bo9bo29bx$
+5boboo16bxbx17boboo16bxbxx16bo9boboo26bxbxx$6bobbo16bxx18bobbo16bxbbx
+26bobbo10by3by11bxbbx$7boo38boo18bxx28boo11by3by12bxx$110by3by$10b3o$
+10bo$11bo4$87bo$87bobo$37bo49boo$35bobo$36boo44bobo37bobo19bx$22bx38b
+xx20boo19bxx17boo18bxbx$3o18bxbx16b3o18bxbx19bo20bxx17bo20bxx$bbo19bxb
+x17bo19bxbx$bobboo17bxbx15bobboo17bxbx18boo18bxx18boo18bxx$5bo19bx19bo
+19bx19bo19bx19bo19bx$5boboo16bxbxx16boboo16bxbxx16boboo16bxbxx16boboo
+16bxbxx$6bobbo16bxbbx16bobbo16bxbbx16bobbo16bxbbx16bobbo16bxbbx$7boo
+18bxx18boo18bxx18boo18bxx18boo18bxx12$165bobo$148bo16boo$130bo17bobo
+15bo$111bo18bobo15boo$4boo18boo18boo18boo18boo18boo5bobo10boo4boo12boo
+18boo$5bo19bo19bo19bo19bo19bo5boo12bo19bo19bo$5boboo16boboo16boboo16bo
+boo16boboo16boboo16boboo16boboo16boboo$6bobbo16bobbo16bobbo16bobbo16bo
+bbo16bobbo16bobbo16bobbo16bobbo$bboo3boo18boo18boo18boo18boo18boo18boo
+18boo18boo$bobo18b3o$3bo20bo19boo19bo23bo$23bo19bobo19boo22boo$45bo18b
+obo21bobo8$21bo19bobo19bobo19bobo18bobo$o21bo19boo20boo20boo19boo$boo
+17b3o19bo21bo21bo20bo21bobo$oo128boo$4boo18boo18boo18boo18boo18boo18b
+oo4bo$5bo19bo19bo19bo19bo19bo19bo$5boboo16boboo16boboo16boboo16boboo
+16boboo16boboo$6bobbo16bobbo16bobbo16bobbo16bobbo16bobbo16bobbo$7boo
+18boo18boo18boo18boo18boo18boo!

@@ -1,0 +1,17 @@
+#N 14p5-1.rle: 14P5.1; Enterprise: Synthesis
+#O Mark D. Niemiec's life synthesis database, Wed Jun 15 19:39:08 2022
+#C  OOO.....
+#C  ....O...
+#C  ...O....
+#C  ....O...
+#C  OOO...O.
+#C  .....O.O
+#C  ......OO
+x = 171, y = 27
+130bo$130bobo$130boo$122bo20bo11bo$120bobo18boo10boo$121boo19boo10boo
+3$78bobo42bo$79boo43bo$79bo42b3o$37bo61bxx28boo$3bobo32bo59bxbx27bobo
+32bxx$4boo18bxx10b3o5boo12b3x3bxx12b3o3boo12bxx4bxx22boo4boo27bxbx$4bo
+18bxbx17bobo17bxbx17bobo17bxbx27bobo28bx3b3x$bo21bxx13bo4boo18bxx18boo
+18bxx17b3o8boo31bx$boo4bo30boo84bo42bx$obo3boo29bobo83bo42bx$6bobo159b
+3x$103bx29bo$81boo19bxbx27bobo3bo$82boo18bxbx27bobobboo$81bo4boo15bx
+29bo3bobo$85boo$87bo66boo$153boo$155bo!

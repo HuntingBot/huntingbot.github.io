@@ -1,0 +1,7 @@
+#N 10snbk.rle: Block on snake: Synthesis
+#O Mark D. Niemiec's life synthesis database, Sun May 23 10:13:32 2021
+#C  OO.OO.O
+#C  OO.O.OO
+x = 37, y = 11
+6bo$7bo9bobo$5b3o9boo$18bo11bxxbxbxx$10bo19bxbxxbxx$10boo7b3o$9bobo7bo
+$20bo$boo$obo$bbo!

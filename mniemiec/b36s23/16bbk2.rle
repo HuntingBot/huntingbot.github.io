@@ -1,0 +1,10 @@
+#N 16bbk2.rle: Block pair on block pair: Synthesis
+#O Mark D. Niemiec's life synthesis database, Fri Aug 11 04:01:52 2017
+#C  OO.OO
+#C  OO.OO
+#C  .....
+#C  OO.OO
+#C  OO.OO
+x = 33, y = 5, rule = B36/S23
+6bo11bo9bxxbxx$4bobo11bobo7bxxbxx$boobboo7boobboo$obo11bobo11bxxbxx$bb
+o11bo13bxxbxx!

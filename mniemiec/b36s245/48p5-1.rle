@@ -1,0 +1,14 @@
+#N 48p5-1.rle: 48P5.1: Pattern image
+#O Mark D. Niemiec's life synthesis database, Tue Apr 21 14:07:38 2020
+#C  ....OO....
+#C  .OOOOOOOO.
+#C  .O.O..O.O.
+#C  .OOO..OOO.
+#C  OO......OO
+#C  OO......OO
+#C  .OOO..OOO.
+#C  .O.O..O.O.
+#C  .OOOOOOOO.
+#C  ....OO....
+x = 10, y = 10
+4bxx$b8x$bxbxbbxbx$b3xbb3x$xx6bxx$xx6bxx$b3xbb3x$bxbxbbxbx$b8x$4bxx!

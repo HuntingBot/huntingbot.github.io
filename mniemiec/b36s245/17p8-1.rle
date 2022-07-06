@@ -1,0 +1,12 @@
+#N 17p8-1.rle: 17P8.1: Pattern image
+#O Mark D. Niemiec's life synthesis database, Fri Apr 24 08:18:59 2020
+#C  .OO.....
+#C  ...O....
+#C  OOO.OO..
+#C  .....O..
+#C  ...O..O.
+#C  ..O..O.O
+#C  .....O.O
+#C  .....O..
+x = 8, y = 8
+bxx$3bx$3xbxx$5bx$3bxbbx$bbxbbxbx$5bxbx$5bx!

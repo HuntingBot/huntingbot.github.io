@@ -1,0 +1,12 @@
+#N 17co.rle: Corner: Pattern image
+#O Mark D. Niemiec's life synthesis database, Wed Jul 24 02:13:42 2013
+#C  .O..O...
+#C  .OOOO...
+#C  OO......
+#C  ....O.OO
+#C  ......O.
+#C  ......O.
+#C  .....OOO
+#C  .....O..
+x = 8, y = 8, rule = B3/S2ae3aeijr4-ckqy
+bxbbx$b4x$xx$4bxbxx$6bx$6bx$5b3x$5bx!

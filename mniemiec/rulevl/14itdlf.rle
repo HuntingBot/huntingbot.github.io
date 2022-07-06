@@ -1,0 +1,28 @@
+#N 14itdlf.rle: Integral w/tub and down loaf: Synthesis
+#O Mark D. Niemiec's life synthesis database, Sun May 23 19:27:44 2021
+#C  .OO.....
+#C  O..O....
+#C  .O.O....
+#C  ..O.....
+#C  ...OOO..
+#C  ......O.
+#C  .....O.O
+#C  ......O.
+x = 192, y = 63
+5boo$6boo17bx19bo19bx19bo19bx$5bo18bxbx17bobo17bxbx17bobo17bxbx$9boo
+14bxbx17bobo17bxbx17bobo17bxbx$8boo17bx19bo19bx19bo19bx$10bo16bxbx17bo
+bo17bxbxx16bobo17bxbxx$28bxbx17bobo17bxbbx16bobo17bxbbx$29bx19bo19bxbx
+17bo19bxbx$70bx39bx$11b3o34boo38boo$11bo36bobo36bobo$12bo35bo40bo16$
+82bobo41bo38bo$82boo17byy21bobo38bobo$83bo17byy22boo38boo$144bx39bx$5b
+o19bx19bo19bx19bo39bo17bxbx19bo17bxbx$4bobo17bxbx17bobo17bxbx17bobo18b
+xx17bobo16bxbbx17bobo16bxbbx$5bobo17bxx18bobo17bxbx17bobo17bxbx17bobo
+16bxxbx17bobo16bxxbx$7bo39bo19bx19bo19bx19bo19bx19bo19bx$7boboo36boboo
+16bxbx17boboo16bxbxx16boboo16bxbxx16boboo16bxbxx$8bobbo36bobbo16bxx18b
+obbo16bxbbx16bobbo16bxbbx16bobbo16bxbbx$4boo3bobo37bobo37bobo17bxbx17b
+obo17bxbx17bobo17bxbx$3bobo4bo39bo39bo19bx19bo19bx19bo19bx$5bo$52b3o$
+52bo$53bo7$89bo$89bobo19bo$5bo19bo19bo19bo19bo3boo14bo3boo14bo4bobo$4b
+obo17bobo17bobo17bobo17bobo17bobo3boo12bobo3boo$5bobo17bobo17bobo17bob
+o17bobo17bobo17bobo3bo$boo4bo19bo19bo19bo19bo19bo19bo$obo4boboo16boboo
+16boboo16boboo16boboo16boboo16boboo$bbo5bobbo16bobbo16bobbo16bobbo16bo
+bbo16bobbo16bobbo$9bobo11b3o3bobo17bobo17bobo17bobo17bobo17bobo$10bo
+14bo4bo13b3o3bo19bo19bo19bo19bo$24bo21bo$45bo20b3o$68bo$67bo!

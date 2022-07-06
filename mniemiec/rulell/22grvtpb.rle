@@ -1,0 +1,14 @@
+#N 22grvtpb.rle: Cis griddle on very long table w/pre-block: Synthesis
+#O Mark D. Niemiec's life synthesis database, Fri Apr 09 13:58:37 2021
+#C  ..OO.OO..
+#C  O..O.O.O.
+#C  OO.O.O.O.
+#C  ...O.O..O
+#C  ...O.O...
+#C  ..OO.OO..
+x = 103, y = 23
+35bo$36bo$34b3o$39bobo$39boo$40bo$$35bo23bx19bo19bx$bo34boo22bxx18boo
+18bxx$bbo18bxx12boo4boo14bx4bx14bo4bo14bx4bx$3o18bxx18boo14b6x14b6o14b
+6x$$3o18bxx18boo14b6x14b6o14b6x$bbo18bxx12boo4boo14bx4bx14bo4bo14bx4bx
+$bo34boo22bxx18boo18bx$35bo23bx19bo20bxx$$40bo34bo$39boo34boo$39bobo
+32bobo$34b3o$36bo$35bo!

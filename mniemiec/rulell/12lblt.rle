@@ -1,0 +1,14 @@
+#N 12lblt.rle: Long boat w/long tail: Synthesis
+#O Mark D. Niemiec's life synthesis database, Sun Jul 19 05:00:35 2020
+#C  OO.....
+#C  O.O....
+#C  .O.O...
+#C  ..O..OO
+#C  ...OO.O
+x = 158, y = 21
+7bo$8bo$6b3o4$11bobo$11boo$12bo20bxx18boo18bxx18boo18bxx18boo18bxx$3o
+31bx19bo19bx19bo19bx19bo19bx$bbo7b3o20bx19bo19bx19bo19bx19bo19bx$bo8bo
+22bxx18boobbo15bxbx17bobo17bxbx17bobo17bxbx$11bo44bo17bxbx17bobo17bxbx
+17bobo17bxbx$56b3o16bxbx17bo19bxbx17bobo17bxbx$76bxx38bx19bo19bxx$61b
+oo38bo18by19bo$61bobo35boo18byby17bobobboo$61bo38boo16bybby16bobboboo$
+95b3o21byy18boo4bo$97bo$96bo!

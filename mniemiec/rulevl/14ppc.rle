@@ -1,0 +1,10 @@
+#N 14ppc.rle: Paperclip: Synthesis
+#O Mark D. Niemiec's life synthesis database, Tue Sep 01 02:45:52 2020
+#C  .OO...
+#C  O.OOO.
+#C  O....O
+#C  .OOO.O
+#C  ...OO.
+x = 28, y = 15
+3bo$4bo$bb3o$24bxx$8bo14bxbbx$6boo15bxxbx$7boo15bxbxx$24bxbbx$3o22bxx$
+bbo$bo$$3b3o$3bo$4bo!

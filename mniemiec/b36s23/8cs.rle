@@ -1,0 +1,13 @@
+#N 8cs.rle: 8.9; Canoe; Sinking ship; Cis snake: Synthesis
+#O Mark D. Niemiec's life synthesis database, Sun Aug 06 12:14:00 2017
+#C  OO...
+#C  O.O..
+#C  ...O.
+#C  ....O
+#C  ...OO
+x = 156, y = 15, rule = B36/S23
+12bo18bxx18boo18bxx18boo18bxx18boo18bxx$11bo19bxbx17bobo17bxbx17bobo
+17bxbx17bobo17bxbx$11b3o18bxbx17bobo17bxbx17bobo17bxbx17bobo19bx$5b3o
+25bx19bo19bxbx17bobo17bxbx17bobo19bx$7bo50bo15bx19bo19bxx14boobboo18b
+xx$6bo49boo71bobo$53boobboo41boo29bo$6boo45bobo40bobboo32boo$bo4bobo
+44bo42boo3bo31bobo$boo3bo88bobo35bo$obo$$100boo$99boo$101bo!

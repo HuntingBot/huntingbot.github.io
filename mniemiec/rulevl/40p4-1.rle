@@ -1,0 +1,68 @@
+#N 40p4-1.rle: 40P4.1: Synthesis
+#O Mark D. Niemiec's life synthesis database, Fri Aug 07 05:04:09 2020
+#C  OOO.....OOO
+#C  ...OO.OO...
+#C  ....O.O....
+#C  ....O.O....
+#C  .OOO...OOO.
+#C  ...........
+#C  .OOO...OOO.
+#C  ....O.O....
+#C  ....O.O....
+#C  ...OO.OO...
+#C  OOO.....OOO
+x = 279, y = 222
+208bo$204bo3bobo$205booboo$107bo96boo$108boo149bxx$107boobbobo144bxbbx
+$111boo146bxbx$112bo9bobo135bx$122boo84b3o$123bo41bxx3bxx38bo4boo3boo
+43bxx3bxx$26bobo136bxx3bxx37bo5boo3boo43bxx3bxx$26boo96b3o$27bo96bo$
+16bo108bo$16bobo6boo$12bo3boo6boo$13boo11bo$12boo$64bxx5bxx41boo5boo
+41bxx5bxx41boo5boo41bxx5bxx$64bxx5bxx41boo5boo41bxx5bxx41boo5boo41bxx
+5bxx4$64bxx5bxx41boo5boo41bxx5bxx41boo5boo41bxx5bxx$64bxx5bxx41boo5boo
+41bxx5bxx41boo5boo41bxx5bxx$23boo$10bo11boo$11boo6boo3bo$10boo6bobo$
+20bo90bo$9bo102bo$9boo99b3o$8bobo154bxx3bxx43boo3boo5bo37bxx3bxx$113bo
+51bxx3bxx43boo3boo4bo38bxx3bxx$113boo111b3o$112bobo9bo151bx$124boo149b
+xbx$123bobobboo145bxbbx$127boo147bxx$129bo101boo$227booboo$226bobo3bo$
+228bo8$28bo$26bobo3bo$27booboo$31boo$9boo48bxx15bxx31boo15boo31bxx15b
+xx31boo15boo31bxx15bxx$8bobbo46bxbbx13bxbbx29bobbo13bobbo29bxbbx13bxbb
+x29bobbo13bobbo29bxbbx13bxbbx$9bobo47bxbx13bxbx31bobo13bobo31bxbx13bxb
+x31bobo13bobo31bxbx13bxbx$10bo49bx15bx33bo15bo33bx15bx33bo15bo33bx15bx
+$26b3o$15boo3boo4bo38bxx3bxx43boo3boo36bxx5bxx3bxx5bxx29boo5boo3boo36b
+xx5bxx3bxx5bxx$15boo3boo5bo37bxx3bxx43boo3boo36bxx5bxx3bxx5bxx29boo5b
+oo3boo36bxx5bxx3bxx5bxx$$104bo127bo$105boo123boo$104boo125boo$$103bo
+129bo$103boo127boo$14boo5boo41bxx5bxx29bobo9boo5boo41bxx5bxx41boo5boo
+9bobo29bxx5bxx$14boo5boo41bxx5bxx41boo5boo41bxx5bxx41boo5boo41bxx5bxx
+4$14boo5boo41bxx5bxx41boo5boo41bxx5bxx41boo5boo41bxx5bxx$14boo5boo41b
+xx5bxx41boo5boo9bobo29bxx5bxx29bobo9boo5boo41bxx5bxx$132boo69boo$133bo
+69bo$$131boo71boo$130boo73boo$132bo71bo$$9bo5boo3boo43bxx3bxx43boo3boo
+36bxx5bxx3bxx5bxx36boo3boo5boo29bxx5bxx3bxx5bxx$10bo4boo3boo43bxx3bxx
+43boo3boo36bxx5bxx3bxx5bxx36boo3boo5boo29bxx5bxx3bxx5bxx$8b3o$26bo33bx
+15bx33bo15bo33bx15bx33bo15bo33bx15bx$25bobo31bxbx13bxbx31bobo13bobo31b
+xbx13bxbx31bobo13bobo31bxbx13bxbx$25bobbo29bxbbx13bxbbx29bobbo13bobbo
+29bxbbx13bxbbx29bobbo13bobbo29bxbbx13bxbbx$26boo31bxx15bxx31boo15boo
+31bxx15bxx31boo15boo31bxx15bxx$4boo$5booboo$4bo3bobo$8bo22$9boo15boo
+31bxx15bxx31boo15boo31bxx15bxx$8bobbo13bobbo29bxbbx13bxbbx29bobbo13bo
+bbo29bxbbx13bxbbx$9bobo13bobo31bxbx13bxbx31bobo13bobo31bxbx13bxbx$10bo
+15bo33bx15bx33bo15bo33bx15bx$$8boo5boo3boo5boo29bxx5bxx3bxx5bxx29boo5b
+oo3boo5boo29bxx5bxx3bxx5bxx$8boo5boo3boo5boo29bxx5bxx3bxx5bxx29boo5boo
+3boo5boo29bxx5bxx3bxx5bxx$bo133bo$bbo131bo$3o131b3o$55bxx48boo48bxx$3b
+o51bxx48boo26bo21bxx$3boo127boo$bbobo127bobo$14boo5boo41bxx5bxx41boo5b
+oo41bxx5bxx$14boo5boo41bxx5bxx41boo5boo41bxx5bxx4$14boo5boo41bxx5bxx
+41boo5boo41bxx5bxx$14boo5boo41bxx5bxx41boo5boo41bxx5bxx$32bobo67bobo$
+32boo69boo$33bo69bo26boo23bxx23bxx$130boo23bxx23bxx$34b3o63b3o$34bo67b
+o$35bo65bo$8boo5boo3boo5boo29bxx5bxx3bxx5bxx29boo5boo3boo5boo29bxx5bxx
+3bxx5bxx$8boo5boo3boo5boo29bxx5bxx3bxx5bxx29boo5boo3boo5boo29bxx5bxx3b
+xx5bxx$$10bo15bo33bx15bx33bo15bo33bx15bx$9bobo13bobo31bxbx13bxbx31bobo
+13bobo31bxbx13bxbx$8bobbo13bobbo29bxbbx13bxbbx29bobbo13bobbo29bxbbx13b
+xbbx$9boo15boo31bxx15bxx31boo15boo31bxx15bxx13$7bo$5bobo$6boo11$9boo
+15boo$8bobbo13bobbo$9bobo13bobo$10bo15bo$$3bo4boo5boo3boo5boo4bo$4boo
+bboo5boo3boo5boobboo$3boo27boo$$103bo$5boo23boo69bobo$5boo23boo70boo$
+63b3x5b3x39b3o5b3o39b3x5b3x$51by3by10bxxbxx10by3by15bo3bo10booboo10bo
+3bo30bxxbxx$14boo5boo27bybybyby10bxbx10bybybyby13bobobobo10bobo10bobob
+obo30bxbx$14boo5boo28byybyy11bxbx11byybyy15booboo11bobo11booboo31bxbx$
+64b3x3b3x41b3o3b3o41b3x3b3x$$64b3x3b3x41b3o3b3o41b3x3b3x$14boo5boo28b
+yybyy11bxbx11byybyy15booboo11bobo11booboo31bxbx$14boo5boo27bybybyby10b
+xbx10bybybyby13bobobobo10bobo10bobobobo30bxbx$51by3by10bxxbxx10by3by
+15bo3bo10booboo10bo3bo30bxxbxx$63b3x5b3x39b3o5b3o39b3x5b3x$5boo23boo
+101boo$5boo23boo101bobo$133bo$$3boo27boo$4boobboo5boo3boo5boobboo$3bo
+4boo5boo3boo5boo4bo$$10bo15bo$9bobo13bobo$8bobbo13bobbo$9boo15boo11$
+29boo$29bobo$29bo!

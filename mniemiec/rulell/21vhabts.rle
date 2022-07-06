@@ -1,0 +1,15 @@
+#N 21vhabts.rle: Two boats on elevenloop: Synthesis
+#O Mark D. Niemiec's life synthesis database, Thu Jul 16 13:58:55 2020
+#C  .O.......
+#C  O.O.O.OO.
+#C  .OO.OO..O
+#C  .......O.
+#C  .OO.OOO..
+#C  O.O.O....
+#C  .O.......
+x = 114, y = 24
+15bo$15bobo68bobo3bobo13bx3bx$15boo70boo3boo13bxbxbxbx$87bo5bo14bxxbxx
+$64bo$28bxxbxx6byy7booboo6booboo4bxxbxx15booboo15bxxbxx$5boo22bxbx7byy
+8bobo7boobboo4bxbx17bobo17bxbx$4boo23bxbbx16bobbo16bxbbx16bobbo16bxbbx
+$o5bo23bxbx17bobo17bxbx17bobo17bxbx$boo28bx19bo19bx19bo19bx$oo11$16boo
+$16bobo$16bo!

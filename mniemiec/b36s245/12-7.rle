@@ -1,0 +1,19 @@
+#N 12-7.rle: 12.7; Up chair tie up chair: Synthesis
+#O Mark D. Niemiec's life synthesis database, Tue Apr 21 21:36:17 2020
+#C  O.O...
+#C  OOO...
+#C  ..OO..
+#C  ...OOO
+#C  ...O.O
+x = 152, y = 71
+88b3o$89boo16bxx18boo18bxx$90bo17bx19bo19bx$107b3x17b3o17b3x$109b3x17b
+3o17b3x$110bx19bo19bx$90bo19bxx18boo18bxx$84b3obboo$83boboob3o$83b3o
+18b3y17b3o$83boo36boo$119booboo$123bo$122bo$122bo3$46b3o$47boo$48bo$$
+24byy18boo$23bybby16bobbo$23b4y16b4o10$bboobboo118bobb3o$bboobboo118bo
+bboobo$oobobboboo117bobb3o$4obb4o113booboo3boo$125boo3$28bx19bo19bx19b
+o19bx19bo$27bxbx17bobo17bxbx17bobo17bxbx17bobo17bxx$28bx19bo19bx19bo
+19bx19bo19bx$27b3x17b3o17b3x17b3o17b3x17b3o17b3x$29b3x17b3o17b3x17b3o
+17b3x17b3o17b3x$30bx19bo19bx19bo19bx19bo19bx$29bxbx17bobo17bxbx17bobo
+18bxx18boo18bxx$30bx19bo19bx19bo3$92boo$9b4obb4o67boo3booboo$9boobobbo
+boo67b3obbo$11boobboo69boboobbo$11boobboo70b3obbo10$32b4y16b4o$32bybby
+16bobbo$33byy18boo$$50bo$50boo$50b3o!

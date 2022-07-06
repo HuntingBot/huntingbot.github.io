@@ -1,0 +1,14 @@
+#N 15acacbl.rle: Up trans carrier on carrier and blinker: Synthesis
+#O Mark D. Niemiec's life synthesis database, Sun Jul 30 05:49:47 2017
+#C  ..OO.OO..
+#C  O..O.O..O
+#C  OO.....OO
+#C  .........
+#C  ....O....
+#C  ....O....
+#C  ....O....
+x = 66, y = 40, rule = B36/S23
+21bx39bx$21bx39bx$21bx39bx$bbo37b3o$obo14bxx5bxx16bo14bxx5bxx$boo14bx
+bbxbxbbx15bo15bxbbxbxbbx$19bxxbxx20bo14bxxbxx$43boo$bb3o38bobo$4bo$3bo
+20$61bx$61bx$21bxx18boo18bx$oo20bx19bo$boo17bx19bo16bxx5bxx$o19bxx18b
+oo15bxbbxbxbbx$3b3o53bxxbxx$3bo38boo$4bo37bobo$42bo!

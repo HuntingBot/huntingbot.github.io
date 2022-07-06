@@ -1,0 +1,13 @@
+#N 13bpbtt.rle: Block on pre-block siamese tub w/tail: Synthesis
+#O Mark D. Niemiec's life synthesis database, Tue Sep 01 02:10:01 2020
+#C  .O......
+#C  O.O...OO
+#C  .O....OO
+#C  ..OOO...
+#C  ....OO..
+x = 98, y = 32
+21bo$19boo$20boo4$43bo$44bo$42b3o4$10bo30b3o$9boo14bxx16bo11bxx18boo
+18bxx$9bobo13bxx15bo3boo7bxx18boo18bxx$23bx21boo6bx19bo19bx$bo21bxx22b
+o5bxx18boo18bxx$boo21bx29bx19bo19bx$obo21bxbx27bxbx17bobo17bxbx$5boo
+18bxbx27bxbx3bxx12bobo3boo12bxbx$4boo20bx29bx4bxx13bo4boo13bx$6bo50b3x
+17b3o$59bxx18boo$$82bo$81boo$81bobo3$77boo$78boo$77bo!

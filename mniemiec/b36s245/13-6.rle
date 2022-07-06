@@ -1,0 +1,11 @@
+#N 13-6.rle: 13.6; Elephant w/front shoe: Partial synthesis
+#O Mark D. Niemiec's life synthesis database, Sat Apr 25 01:27:58 2020
+#C  O.O...
+#C  OO.O..
+#C  ..OOOO
+#C  ..O..O
+#C  .OO...
+x = 46, y = 27
+xbx17bobo17bxbx$xxbx16boobo16bxxbx$bb4x16b4o16b4x$bbxbbx16bobbo16bxbbx
+$41bxx6$17b4obb4o$17boobobboboo$19boobboo$19boobboo10$15boo$14b4o$16b
+oo$16bo!

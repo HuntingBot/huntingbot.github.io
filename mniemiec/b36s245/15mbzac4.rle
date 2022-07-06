@@ -1,0 +1,12 @@
+#N 15mbzac4.rle: Medium blinker on down Z below carrier: Synthesis
+#O Mark D. Niemiec's life synthesis database, Fri Apr 24 23:33:42 2020
+#C  OO.......O
+#C  O.....O..O
+#C  ..O.OOO..O
+#C  .OO.O....O
+x = 126, y = 81
+60boo$62bo$61bobo$60bobbo20$40b4obb4o$40boobobboboo$42boobboo$42boobb
+oo7$3bo3bo64bxx18boo28bxx$3bo3bo64bxbbx16bobbo26bxbbx$4bobo67bxx18boo
+28bxx$ooboobooboo$bboo3boo15bxx18boo28bxx18boo28bxx$24bx19bo29bx19bo
+29bx$oo21bxx18boo28bxx18boo28bxx$3o$oboo$b3o118b4x12$90boo4boo$89b4obb
+4o$91boobboo$91bo4bo20$109boo$108b3o$107boobo$107b3o!

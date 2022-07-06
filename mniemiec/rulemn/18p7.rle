@@ -1,0 +1,18 @@
+#N 18p7.rle: 18-bit P7: Synthesis
+#O Mark D. Niemiec's life synthesis database, Sun Oct 29 08:40:24 2017
+#C  OO.OO..
+#C  O...O..
+#C  .....OO
+#C  O.O...O
+#C  O..O...
+#C  ......O
+#C  ..OO.OO
+x = 120, y = 68, rule = B3/S2aei3aeijr4-cknqy
+85bo$83boobo$83b4o$85bo3$77boo$78bo$75bo37bxxbxx$76boo35bx3bx$14bo103b
+xx$13bo39bxx28boo10boo16bxbx3bx$13boobo36bx29bo10boobo15bxbbx$11bobb3o
+39bx29bo8boo22bx$11boo42bxx28boo8boo18bxxbxx$10boboo$11boo3$90boo$88bo
+bbo$88bo$89bo7$6bo$7bo$4boboo$4b3o$$bboo$3bo$o$boo$43bxx38boo$43bxx38b
+oo4$75bo$74bo$74boobo$71boobb3o$70boboo$71boo40bxxbxx$71boo40bx3bx$26b
+oo90bxx$25boobo84bxbx3bx$25bo87bxbbx$25boo31bxx38boo19bx$22boo34bxx38b
+oo15bxxbxx$20bobbo$20bo$21bo3$91boo$91bo$91boobo$92boo$90bo$88b4o$88b
+oobo$90bo!

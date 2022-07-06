@@ -1,0 +1,5 @@
+#N ex36.rle: Still-lifes that work in Life but not in HighLife: Stamp collection
+#O Mark D. Niemiec's life synthesis database, Sun Aug 06 13:40:11 2017
+x = 65, y = 15, rule = B3/S23
+5$5boo13booboo11boo12boo3boo$5bobo13bobobo9bobbo11bobobobo$6boo12bobbo
+bo9bobo14bobo$20boobbo11bob3o9bobobobo$38bobbo8boo3boo$38bobo$39bo!

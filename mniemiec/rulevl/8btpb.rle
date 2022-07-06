@@ -1,0 +1,26 @@
+#N 8btpb.rle: Pre-block on boat: Synthesis
+#O Mark D. Niemiec's life synthesis database, Thu May 27 12:02:50 2021
+#C  OO...
+#C  O....
+#C  ..OO.
+#C  ..O.O
+#C  ...O.
+x = 192, y = 113
+6bo$bboboo$obobboo$boo38bo5bo$19bo22bo5bo$17boo21b3o3b3o$18boo7bx39bx$
+26bxbx37bxbx$27bxx21boo15bxx$30bx5boo4b3o5boo18bx$29bxx6boo5bo24bxx$
+36bo6bo4bo$48boo$5boo40bobo$4bobo$6bo9$95boo$94b4o$5bobo19bx19bo11bo7b
+x19bo7bobo9bx$6boo18bxbx17bobo9bo7bxbx17bobo6boo9bxbx$6bo20bxx18boo9b
+3o6bxx18boo18bxx$74bxx18boo14bx$5boo50bo16bxx18boo13bxx$4bobo49boo$6bo
+49bobo44b3o$103bo$104bo12$7bo19bx19bo19bx19bo19bx19bo19bx19bo19bx$6bob
+o17bxbx17bobo17bxbx17bobo17bxbx17bobo17bxbx3byy12bobo17bxbx$7boo18bx
+19boo18bxx18boo18bxx18boo4boo12bxx3byby12boo18bxx$10bo21by17bo39bo39bo
+boo19by16bo$9boo21by16boo38boo38boo3bo34boobboo$32by80by58boo16byy$8b
+oo40bo20byy19bo20by60bo15byy$7bobo40boo18byby19boo19by$9bo39bobo19by
+19bobo9$83bo59byy$84bo37boo19byy$43bo38b3o38boo$bb3obbo36bobbo39bo34bo
+4bo$4bobobo33b3obobo37bobo37bobo18bxx$3bo3boo38boo38boo38boo18bxx$10bo
+18bxx19bo18bxx19bo18bxx19bo19bx$9boo18bxx18boo18bxx18boo18bxx18boo18b
+xx12$4bo$5bo$3b3o$$7bo19bx$6bobo17bxbx$7boo18bxx$10bo19bx$9boo18bxx12$
+88bo$86bobo$87boo$$7bo19bo19bo19bo19bo19bo$bb3obobo17bobo17bobo17bobo
+17bobo17bobo4boo$4bobboo18boo18boo18boo18boo18boo3boo$3bo6bo11b3o5bo
+19bo19bo19bo19bo3bo$9boo13bo4boo13boo3boo14bo3boo18boo18boo$23bo19bobo
+19boo$45bo18bobo!

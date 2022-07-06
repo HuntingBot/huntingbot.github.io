@@ -1,0 +1,9 @@
+#N 10bkta.rle: 10.4; Block on table; Block and table: Synthesis
+#O Mark D. Niemiec's life synthesis database, Thu Sep 14 09:17:27 2017
+#C  OO.OO
+#C  OO.O.
+#C  ...O.
+#C  ...OO
+x = 29, y = 17, rule = B36/S23
+7bo$5bobo$6boo$o$boo5bo$oo6bobo$8boo15bxbbx$25b4x$$25bxx$25bxx$7boo$7b
+obo$7bo$boo$obo$bbo!

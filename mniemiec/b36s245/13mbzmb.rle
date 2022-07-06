@@ -1,0 +1,16 @@
+#N 13mbzmb.rle: Medium blinker on Z on medium blinker: Synthesis
+#O Mark D. Niemiec's life synthesis database, Sat May 08 18:34:19 2021
+#C  O........
+#C  O..O....O
+#C  O..OOO..O
+#C  O....O..O
+#C  ........O
+x = 170, y = 122
+150b3o$150boobo$151b3o$152boo20$134bo4bo$134boobboo$132b4obb4o$133boo
+4boo12$34b3o128b4x$33boboo$33b3o$33boo21bxx18boo28bxx28boo28bxx$57bx
+19bo29bx29bo29bx$35boo3boo15bxx18boo28bxx28boo28bxx$33booboobooboo$37b
+obo$36bo3bo65b4x26b4o26b4x$36bo3bo11$74boo4boo$73b4obb4o$75boobboo$75b
+o4bo20$93boo$92b3o$91boobo$91b3o18$51bo$51bo42bo$50bo42boo$50booboo38b
+4o$51boo41boo$47bo$47boobboo18byy18boo$45b4obooboo15b3y17b3o$46boobbo$
+51bo14bxx18boo18bxx$51bo15bx19bo19bx$67bxx18boo18bxx3$26b4x16b4o16b4x
+16b4o16b4x$7b3o$oo4boboo$3o3b3o$oboobboo$b3o!

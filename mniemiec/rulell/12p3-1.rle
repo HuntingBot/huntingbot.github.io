@@ -1,0 +1,16 @@
+#N 12p3-1.rle: 12P3.1: Synthesis
+#O Mark D. Niemiec's life synthesis database, Sat Apr 10 05:32:58 2021
+#C  OOO....
+#C  .......
+#C  ...O...
+#C  ....O..
+#C  .O....O
+#C  O.O...O
+#C  .O....O
+x = 154, y = 21
+57bo$40bx17bo11bo29bx29bo$39bxbx14b3o10bobo16bx10bxbx16bo10bobo16bx4bx
+$39bxbbx26bobbo14bxbx9bxbbx14bobo9bobbo14bxbx3bx$40bxx18boo8boo16bxbx
+9bxx16bobo9boo16bx4bx$14bo45bobo26bx29bo5boo24bx$13bo46bo64bobo22bx$9b
+o3b3o109bo6bo$10boo119boo14b3x$9boo120bobo$120b3o$120bo$121bo$$bbobo
+22bxx28boo28bxx28boo$3boo21bxbbx26bobbo26bxbbx26bobbo$3bo23bxbx27bobo
+27bxbx27bobo3boo$28bx29bo29bx29bo3boo$boo121bo$obo$bbo!

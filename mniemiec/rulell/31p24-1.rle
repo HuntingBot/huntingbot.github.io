@@ -1,0 +1,20 @@
+#N 31p24-1.rle: 31P24.1; House between cis stars: Synthesis
+#O Mark D. Niemiec's life synthesis database, Sun Dec 20 19:23:52 2020
+#C  ...O........O..........O...
+#C  .O...O.....O.O.......O...O.
+#C  ..O.O.....O...........O.O..
+#C  O.....O....O.O......O.....O
+#C  ..O.O.......O.........O.O..
+#C  .O...O...............O...O.
+#C  ...O...................O...
+x = 183, y = 46
+115bo$113bobo$114boo15bo12bo14bx19bx$130bo13bobo10bx3bx15bx3bx$130b3o
+11boo12bxbx7bx9bxbx$140boo14bx5bx4bxbx6bx5bx$140bobo15bxbx5bx11bxbx$
+140bo16bx3bx5bxbx7bx3bx$159bx8bx10bx$110boo$109bobo$111bo13bo$125boo$
+124bobo18$bbo$obo76bx19bx19bo19bo19bx19bx$boo35bo21bo16bx3bx15bx3bx15b
+o3bo15bo3bo15bx3bx15bx3bx$18bx17bobo9bo11bobo15bxbx17bxbx17bobo7bo9bob
+o17bxbx7bx9bxbx$3bo13bxbx17boo8bobo10boo14bx5bx13bx5bx13bo5bo4bobo6bo
+5bo13bx5bx4bxbx6bx5bx$3boo11bxbbx13boo11bobbo14boo12bxbx17bxbx17bobo5b
+obbo8bobo17bxbx5bx11bxbx$bbobo12bxx13bobo12boo15bobo10bx3bx15bx3bx15bo
+3bo5boo8bo3bo15bx3bx5bxbx7bx3bx$34bo29bo14bx19bx19bo19bo19bx8bx10bx5$
+135bo$134boo$134bobo!

@@ -1,0 +1,11 @@
+#N 25p4-1.rle: 25-bit P4 #1: Pattern image
+#O Mark D. Niemiec's life synthesis database, Fri Nov 16 22:29:01 2018
+#C  .O.O.O.
+#C  .O.O.O.
+#C  OOOOOOO
+#C  .......
+#C  OOOOOOO
+#C  .O...O.
+#C  .O.O.O.
+x = 7, y = 7
+bbxbx$3xb3x$bbxbx$3xbxbx$bbxbx$3xb3x$bbxbx!

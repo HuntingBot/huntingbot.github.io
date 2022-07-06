@@ -1,0 +1,5 @@
+#N 6blbl08.rle: Two blinkers offset (0;  8): Synthesis
+#O Mark D. Niemiec's life synthesis database, Sat Jul 29 22:11:29 2017
+#C  OOO.....OOO
+x = 28, y = 10, rule = B36/S23
+17b3x5b3x3$3bo$4bo$bb3o$$bo$boo$obo!

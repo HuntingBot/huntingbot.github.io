@@ -1,0 +1,9 @@
+#N 14p14-1.rle: 14P14.1: Synthesis
+#O Mark D. Niemiec's life synthesis database, Fri Aug 21 22:24:08 2020
+#C  O.O..O
+#C  O.OO.O
+#C  O.OO.O
+#C  O..O.O
+x = 66, y = 14
+43bo$42b3o$42bo3$23bx19bo16bxbxbbx$3bobo16bxbx17bobo15bxbxxbx$4boo15bx
+bx17bobo16bxbxxbx$4bo17bx19bo17bxbbxbx$bo$boo$obo40bo$41b3o$42bo!

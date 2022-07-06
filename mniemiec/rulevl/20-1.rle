@@ -1,0 +1,31 @@
+#N 20-1.rle: Up long tables w/pre-blocks: Synthesis
+#O Mark D. Niemiec's life synthesis database, Sun May 23 19:52:35 2021
+#C  ..OO.OO..
+#C  O..O.O..O
+#C  OO.O.O.OO
+#C  ...O.O...
+#C  ..OO.OO..
+x = 149, y = 125
+115bobo$115boo$9bo106bo$7bobo83by19bo$8boo21bx29bo31by19bo$30bxbx27bob
+o30by19bo$11bo19bxbx27bobo8b3o$11boo19bxx28boo9bo$10bobo61bo4$86bxx18b
+oo18bxx$46bo39bx3bxx14bo3boo14bx3bxx$46boo36bx6bx12bo6bo12bx6bx$45bobo
+36b7x13b7o13b7x$$59bo24b7x13b7o13b7x$59bobo22bx6bx12bo6bo12bx6bx$59boo
+25bx3bxx14bo3boo14bx3bxx$56bo29bxx18boo18bxx$57bo$55b3o$$74bo$73bo$72b
+3o$93by19bo$93by19bo$93by19bo$116bo$115boo$115bobo6$73bo$72boo$72bobo
+8$13bo$14bo37bobo$12b3o38boo$53bo$6boo18bxx18boo18bxx18boo18bxx18boo
+18bxx$6bo3boo14bx19bo3boo14bx19bo3boobbobo9bx19bo3boobbo11bx$4bo6bo12b
+x3bx15bo6bo12bx3bx15bo6bobboo8bx3bx15bo6bobbobo7bx3bx$4b7o13b5x15b7o
+13b5x15b7o4bo8b5x15b7o3boo8b5x$$4b7o13b5x15b7o13b5x15b7o4bo8b5x15b7o3b
+oo8b5x$4bo6bo12bx3bx15bo6bo12bx3bx15bo6bobboo8bx3bx15bo6bobbobo7bx3bx$
+6bo3boo14bx19bo3boo14bx19bo3boobbobo9bx19bo3boobbo11bx$6boo18bxx18boo
+18bxx18boo18bxx18boo18bxx$53bo$12b3o38boo$14bo37bobo$13bo8$6boo18bxx$
+6bo19bxx$4bo3bo$4b5o12b3y$$4b5o$4bo3bo$6bo$6boo$$9boo$9bobo$9bo8$6boo
+18boo18boo18boo18boo$6bo19bo19bo19bo19bo$oobbo3bo15bo3bo15bo3bo15bo3bo
+15bo3bo$boob5o15b5o15b5o15b5o15b5o$o$4b5o15b5o15b5o15b5o15b5o$4bo3bo
+15bo3bo15bo3bo15bo3bo15bo3bo$6bo13boo4bo19bo19bo19bo$6boo13boo3boo12b
+3o3boo18boo18boo$20bo21bo$41bo20b3o20boo$64bo19bobo$63bo22bo7$11boo$6b
+oobboo14boo3boo13boo18boo18boo18boo$6bo5bo13bo3boo14bo19bo19bo19bo$4bo
+3bo15bo3bo3bo11bo3bobboo11bo3bo15bo3bo15bo3bo$4b5o15b5o15b5oboo12b5o
+15b5o15b5o$52bo$4b5o15b5o15b5o15b5o15b5o15b5o$4bo3bo15bo3bo15bo3bo15bo
+3bo15bo3bo15bo3bo$6bo19bo19bo19bo19bo19bo$6boo18boo18boo18boobboo14boo
+18boo$70bobo17boo$70bo18boo18b3o$91bo17bo$110bo!

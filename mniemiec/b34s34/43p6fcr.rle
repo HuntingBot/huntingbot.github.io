@@ -1,0 +1,14 @@
+#N 43p6fcr.rle: Frog chain ripple: Pattern image
+#O Mark D. Niemiec's life synthesis database, Tue Jun 11 15:23:40 2013
+#C  .O.OO.OO..
+#C  OOOOOOO.O.
+#C  .......O.O
+#C  OOOOOOO.OO
+#C  .O.O..O.O.
+#C  ......O.OO
+#C  .....OO.OO
+#C  ......O.O.
+#C  .....OO.OO
+#C  ......O.O.
+x = 10, y = 10, rule = B34/S34
+bbxxbxxbx$bxb7x$xbx$xxb7x$bxbxbbxbx$xxbx$xxbxx$bxbx$xxbxx$bxbx!

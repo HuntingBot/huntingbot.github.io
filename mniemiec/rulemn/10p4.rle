@@ -1,0 +1,9 @@
+#N 10p4.rle: 10-bit P4: Pattern image
+#O Mark D. Niemiec's life synthesis database, Wed Jul 24 02:21:18 2013
+#C  OO.O.
+#C  O..O.
+#C  ....O
+#C  OO.O.
+#C  ..O..
+x = 5, y = 5, rule = B3/S2ae3aeijr4-ckqy
+xxbx$xbbx$4bx$xxbx$bbx!

@@ -1,0 +1,20 @@
+#N 22p4-1.rle: 22-bit P4 #1: Synthesis
+#O Mark D. Niemiec's life synthesis database, Wed Jul 11 23:48:53 2018
+#C  OOO......OOO
+#C  ...OO..OO...
+#C  ............
+#C  .OOOOOOOOOO.
+#C  .....OO.....
+x = 197, y = 33
+147bo$145bobo$146boo$$156bo$157bo$155b3o$143bo34bo$42bo101boo30boo$43b
+o19bx29bo29bx19boo8bo3bobo17boo$41b3o18bxbx27bobo27bxbx27bobobboo10bo$
+62bxbx27bobo27bxbx27bobo3bo8boo$38b3o22bx29bo29bx29bo14boo$40bo122bo$
+39bo124boo$5bo157boo$3bobo5bo13bxx18boo18bxx24bo3boo13bo14bxx28boo$4b
+oo5bobo11bxx3bxx13boo3boo13bxx3bxx17bobo3boo3boo8bobo8bxxbbxx3bxx7bxx
+10boobboo3boo7boo$boo8boo17bxx18boo5bo12bxx18boo8boo8boo9bxx7bxx7bxx
+10boo7boo7boo$obo11boo41bobo27boo24boo33bo24bo$bbo11bobo40boo27bobo24b
+obo33bo22bo$14bo12bxx18boo5boo11bxx4bxx13bo8boo4boo8bo13bxx4bxx12b3o7b
+oo4boo7b3o15bxx$6b3o18bxx18boo5bobo10bxx4bxx22boo4boo22bxx4bxx22boo4b
+oo21b10x$8bo45bo96boo16boo$7bo144boo14boo18bxxbbxx$9b3o139bo18bo14b3x
+6b3x$9bo57bxx28boo28bxx4bxx22boo4boo$10bo35b3o18bxx28boo4b3o21bxx4bxx
+22boo4boo$48bo54bo$47bo56bo$49b3o48b3o$49bo52bo$50bo50bo!

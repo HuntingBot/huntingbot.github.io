@@ -1,0 +1,21 @@
+#N 22grgr6.rle: Cis griddle on griddle;  advanced 5: Synthesis
+#O Mark D. Niemiec's life synthesis database, Fri Apr 09 13:42:48 2021
+#C  ..OO.OO..
+#C  .O.O.O...
+#C  .O.O.O..O
+#C  O..O.O.O.
+#C  ...O.O.O.
+#C  ..OO.OO..
+x = 150, y = 57
+82bo$83bo$81b3o$86bobo$86boo$87bo$$82bo23bx19bo19bx$48bo34boo22bxx18b
+oo18bxx$49bo18bxx12boo4boo14bx4bx14bo4bo14bx4bx$47b3o18bxx18boo14b6x
+14b6o14b6x$$47b3o18bxx18boo14b6x14b6o14b6x$49bo18bxx12boo4boo14bx4bx
+14bo4bo14bx4bx$48bo34boo22bxx18boo16bxbxx$82bo23bx19bo20bx$$87bo$86boo
+$86bobo$81b3o$83bo36b3o$82bo39bo$121bo$129bo$128boo$128bobo11$6bo19bx
+19bo19bx19bo19bx19bo19bx$7boo18bxx18boo18bxx18boo18bxx18boo18bxx$4bo4b
+o14bx4bx14bo4bo14bx4bx14bo4bo14bx4bx14bo4bo14bx4bx$4b6o14b6x14b6o14b6x
+14b6o14b6x14b6o14b6x$$4b6o14b6x14b6o14b6x14b6o14b6x14b6o14b6x$4bo4bo
+14bx4bx14bo4bo14bx4bx14bo4bo14bx4bx14bo4bo14bx4bx$5boboo17bxx18boo17b
+xx18boo19bxx18boo17bxx$7bo18b3x17b3o17bxbx17bobo16bx19bo21bx$67bx19bo
+19bx19bo4$bo39boo38boo38b3o$boo37bobo39boo39bo$obo39bo38bo40bo$128bo$
+8boo38boo37b3o37boo$8bobo36boo38bo39bobo$8bo40bo38bo!

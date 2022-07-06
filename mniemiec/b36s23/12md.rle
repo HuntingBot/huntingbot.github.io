@@ -1,0 +1,14 @@
+#N 12md.rle: Mold: Synthesis
+#O Mark D. Niemiec's life synthesis database, Fri Aug 04 15:02:39 2017
+#C  .OO...
+#C  O..O..
+#C  O.O.O.
+#C  .O..O.
+#C  .....O
+#C  ..O.O.
+x = 73, y = 47, rule = B36/S23
+45bo$46bo$44b3o$$46bo$46boo$45bobo$$9boo18bx19bo4bobo11bxx$5boobbobo
+16bxbx12bo4bobo3boo11bxbbx$6boobo19bxbx11boo4bobo3bo11bxbxbbx$5bo24bx
+11bobo5bo17bx$69bxxbx$boo43boo23bx$obo43bobo6boo$bbo43bo8bobo$55bo22$
+48boo18bxx$47bobbo16bxbbx$47bobobobb3o10bxbxbbx$48bobo3bo13bx$49bo5bo
+13bxxbx$53bo17bx$48boo3boo$47bobobbobo$49bo!

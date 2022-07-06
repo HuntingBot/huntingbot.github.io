@@ -1,0 +1,15 @@
+#N 14hb.rle: Half bakery; Loaf side tie loaf; Loaf on loaf; Bi-loaf 1: Synthesis
+#O Mark D. Niemiec's life synthesis database, Sun Aug 09 02:15:45 2020
+#C  .OO....
+#C  O..O...
+#C  .O.O...
+#C  ..O.OO.
+#C  ...O..O
+#C  ....O.O
+#C  .....O.
+x = 107, y = 20
+34bo$32bobo$33boo5$24bxx20bobo15bxx38bxx$obo20bxbbx19boo15bxbbx17bo3bo
+14bxbbx$boo20bxbx14boo5bo15bxbx17bobobo15bxbx$bo5boo12bxxbx14bobo19bxx
+bx17bobobb3o11bxxbx$7bobo10bxbbx17bobb3o13bxbbx17bobo16bxbbx$bb3obbo
+12bxbx21bo15bxbx19bo17bxbx$4bo16bx23bo15bx39bx$3bo78boo$81bobo$9boo72b
+o$8boo40boo$10bo39bobo$50bo!

@@ -1,0 +1,10 @@
+#N 20p4-3.rle: 20-bit P4 #3: Pattern image
+#O Mark D. Niemiec's life synthesis database, Fri Nov 16 22:25:48 2018
+#C  .OO.O..
+#C  .O.O.OO
+#C  O.O.OO.
+#C  ..O.O..
+#C  OOO.OO.
+#C  ..O.O..
+x = 7, y = 6
+bxxbx$bxbxbxx$xbxbxx$bbxbx$3xbxx$bbxbx!

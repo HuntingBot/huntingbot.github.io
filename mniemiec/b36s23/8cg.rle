@@ -1,0 +1,10 @@
+#N 8cg.rle: 8.4; Mango; Cigar: Synthesis
+#O Mark D. Niemiec's life synthesis database, Fri Aug 04 16:15:10 2017
+#C  .OO..
+#C  O..O.
+#C  .O..O
+#C  ..OO.
+x = 71, y = 12, rule = B36/S23
+39bo$40bo$5bo32b3o$bobbo17b3y17b3o$bbob3o$3o$$5bo21bxx18boo18bxx$5boo
+19bxbbx16bobbo16bxbbx$4bobobboo16bxbbx16bobbo16bxbbx$8boo18bxx18boo18b
+xx$10bo!

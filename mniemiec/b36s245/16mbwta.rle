@@ -1,0 +1,11 @@
+#N 16mbwta.rle: Medium blinker on W tie table: Partial synthesis
+#O Mark D. Niemiec's life synthesis database, Tue Apr 28 22:07:16 2020
+#C  O........
+#C  O..O.O.OO
+#C  O..OOO.O.
+#C  O....OOO.
+#C  .....O...
+x = 79, y = 22
+41bo$40boo$40b4o$41boo35bx$xxbxbx14boobobo44bxxbxbxbbx$bxb3x15bob3o45b
+xb3xbbx$b3x17b3o17boo28b3x4bx$3bx19bo16b4o29bx$40boo$41bo9$65boo$64b3o
+$63boobo$63b3o!

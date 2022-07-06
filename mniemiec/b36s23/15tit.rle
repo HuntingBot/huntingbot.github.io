@@ -1,0 +1,9 @@
+#N 15tit.rle: T on blinker on T; Long IHI: Synthesis
+#O Mark D. Niemiec's life synthesis database, Wed Jul 11 14:30:23 2018
+#C  O.O...O.O
+#C  O.OOOOO.O
+#C  O.O...O.O
+x = 65, y = 25
+34bo$26bobo3bobo$27boo4boo12bobo$27bo19boo$42bo5bo$42bobo$42boo3$bo$bb
+oo$boo$$bo$boo$obo18b3x17b3o12bxbx3bxbx$56bxb5xbx$39bo16bxbx3bxbx$40bo
+$38b3o3$39boo$38bobo$40bo!

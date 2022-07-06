@@ -1,0 +1,17 @@
+#N 28p9-1.rle: 28P9.1; Four blocks hassling two stars: Synthesis
+#O Mark D. Niemiec's life synthesis database, Tue Jun 01 12:51:37 2021
+#C  .O.............O.
+#C  OO...OO...OO...OO
+#C  ....OO.....OO....
+#C  ....O.......O....
+#C  .......O.O.......
+#C  ...O.........O...
+#C  ......O...O......
+#C  ..O...........O..
+#C  ..OO.........OO..
+x = 105, y = 52
+60boo$60b3o$41bo$39bobo19bobo$40boo19boo$62bo11$bbo$obo$boo94bx$96bxx$
+bo21bxx38boo38bxx$boo20bxx27bo10boo36bxbbx$obo47bobo45bxx$51boo24bo19b
+xx$75boo20bx4bx$53bo22boo22bx$52boo$52bobo45bx$97bx4bx$97bxx$98bxx$
+101bxbbx$103bxx$96bxx$97bx6$45boo$45bobboo$49bo3boo$47bobobbobo$54bo5$
+73bo$72boo$72bobo!

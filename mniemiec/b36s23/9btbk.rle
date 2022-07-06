@@ -1,0 +1,27 @@
+#N 9btbk.rle: Block on boat: Synthesis
+#O Mark D. Niemiec's life synthesis database, Fri Aug 04 16:44:05 2017
+#C  OO.OO.
+#C  OO.O.O
+#C  ....O.
+x = 187, y = 93, rule = B36/S23
+82bo$43bo39bo39bo$3bo37bobo37b3o40bo39bo$4boo19bx16boo21bx39bx16b3o20b
+x19bo19bx$3boo19bxbx37bxbx37bxbx37bxbx16b3o18bxbx$25bxx38bxx38bxx38bxx
+38bxx$$25bxx20bo17bxx20boo16bxx38bxx18booboo15bxx$4b3o18bxx19bo18bxx
+16bobboo17bxx19boo17bxx17bobobobo14bxx$6bo39b3o35bo3bo37bobo37bobo$5bo
+76b3o41bo$7b3o37b3o$7bo41bo74boo$8bo39bo74bobo$125bo9$43bobo19bx$44boo
+18bxbx$44bo20bxx$$25bxx18boo18bxx$4boo20bx19bo19bx$5boo17bx19bo19bx$4b
+o19bxx18boo18bxx$7b3o$7bo$8bo10$5bo19bx19bo19bx19bo19bx19bo19bx19bo19b
+x$4bobo17bxbx17bobo17bxbx17bobo17bxbx17bobo17bxbx17bobo17bxbx$5boo18b
+xx18boo18bxx18boo18bxx18boo18bxx18boo18bxx$$5boo18bxx18boo18bxx18boo
+18bxx18boo18bxx18boo18bxx$6bo18bxx13boo4bo18bxx19bo18bxx19bo18bxx19bo
+18bxx$o3bo36boobo39bo39bo39bo$booboo34bo3boo38boo38boo38boo$oo$85bo40b
+o37bo$85boo39boo35boo$84bobo38bobo35bobo8$4bo39bo$5bo19bx16bobo20bx17b
+obo19bx19bo19bx$3b3o18bxbx16boo19bxbx17boo18bxbx17bobo17bxbx$25bxx38b
+xx17bo20bxx14bo3boo18bxx$122bo$5boo18bxx12bo3boboo18bxx18boo18bxx13b3o
+bboo18bxx$5boo18bxx13booboobo18bxx19bo19bx19bo18bxx$39boo42b3o17b3x17b
+3o$bb3o78bo19bx19bo$4bo31b3o$3bo34bo$37bo4$122bobo$122boo$49boo36bo35b
+o$47bobobo35bobo$45bobobo34bobboo30bobo$46boo37bo34boo$41boo22bx17b3o
+19bx14bo24bx$42boo20bxbx21b3o13bxbx18boo17bxbx$41bo23bxx21bo16bxx13boo
+3boo18bxx$5bo83bo29bobbo$3bobo19bxx18boo18bxx18boo18bxx12bobbobboo18b
+xx$4boo19bxx18boo18bxx18boo18bxx9bo3boo3boo18bxx$boo114bo$obo112b3obbo
+$bbo117boo$119bobo!

@@ -1,0 +1,6 @@
+#N c-pp1.rle: Colored pseudo-still-life: Stamp collection
+#O Mark D. Niemiec's life synthesis database, Thu May 11 23:52:11 2017
+x = 125, y = 15, rule = Life4c
+5$5.AA.BB15.AA.BB16.AA.BB15.A19.A18.AA.AA$5.AA.BB15.AA.B.B14.A.A.B.B
+13.A.A.BB14.A.A.BB14.AA.AA$29.B16.A3.B15.AA.B.B13.A.A.BB$70.B15.A18.AB
+.AA$105.BB.BA!

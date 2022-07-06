@@ -1,0 +1,26 @@
+#N 5bt.rle: Boat: Synthesis
+#O Mark D. Niemiec's life synthesis database, Tue Sep 01 04:45:42 2020
+#C  OO.
+#C  O.O
+#C  .O.
+x = 193, y = 131
+11bo80bo$11bobo76bobo$11boo78boo$49bobo$11bo17bxx18boo18bxx20bo17bxx
+38bxx22bo15bxx$10boo17bxbx13boo3bo18bxbx18boo17bxbx16b3ob3o14bxbx16b3o
+bo16bxbx$10bobo17bx14bobo22bx19bobo17bx21bo17bx21b3o15bx$45bo87bo12$
+46bobo$46boo17byy$47bo17byy$$49bo$9boo18bxx17bobo18bxx18boo18bxx18boo
+18bxx18boo18bxx$9boo18bxbx17bobo17bxbx17bobo17bxbx17bobbo16bxbx17bobbo
+16bxbx$30bx19bo19bx19bobo17bx39bx39bx$91bo38bobbo36bobbo$13bo118boo38b
+oo$12boo79b3o$12bobo78bo81bo$94bo39boo39boo$8b3o124boo37bobo$10bo123bo
+$9bo5$bo$bbo$3o$$bo$boo7bo18bxx18boo18bxx$obo6bobo17bxbx17bobbo16bxbx$
+10bo19bx39bx$50bobbo$52boo$$55bo$54boo$54bobo9$45boo$46boo20bx$45bo21b
+xbx83bxx$9boo18bxx18boo17bxbx18boo18bxx19bo3boo14bxbbxbx13boo18bxx$9bo
+bo17bxbx17bobo17bxbx17bobo17bxx18boboboo14bxbxbbx14bobo17bxbx$10bo19b
+xx18bo19bx19bo39boo3bo14bx19bo4bo14bxbx$175bobo13bx$92bo20byy60boo$92b
+oo19byy$91bobo77b3o$173bo$172bo$10boobboo$11boobobo$10bo3bo9$9boo18bxx
+$9bobo17bxbx$10bo19bx$13boo$13bobo$13bo13$5boo$6boo17boo$5bo3boo15boob
+oo18boo18boo18boo18boo18boo$9bobo13bo3bobo13boobbobo17bobo17bobo17bobo
+17bobo$10bo19bo15boobbo19bo19bo19bo19bo$45bo19b3o$67bo18b3o19bo21boo$
+66bo21bo19boo19bobo$87bo19bobo21bo11$5bo$6boo18bo$5boo20bo$9boo14b3ob
+oo18boo18boo18boo18boo18boo$9bobo17bobo17bobo17bobo17bobo17bobo17bobo$
+10bo19bo15bo3bo14bo4bo19bo19bo19bo$47boo17boo$46boo17boo21bo21boo20boo
+$87boo21bobo19bobo$87bobo20bo21bo!

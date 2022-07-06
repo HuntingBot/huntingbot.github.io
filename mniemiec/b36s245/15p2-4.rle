@@ -1,0 +1,10 @@
+#N 15p2-4.rle: 15P2.4; Two tables flipping a P: Pattern image
+#O Mark D. Niemiec's life synthesis database, Fri Apr 24 21:59:09 2020
+#C  O.O....
+#C  OOO....
+#C  ..OOO..
+#C  ...OO..
+#C  ....OOO
+#C  ....O.O
+x = 6, y = 7
+xx$bx$4x$bbxx$3b3x$4bx$4bxx!

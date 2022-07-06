@@ -1,0 +1,13 @@
+#N 50p1a.rle: 50-bit Fort #1: Pattern image
+#O Mark D. Niemiec's life synthesis database, Sun May 05 04:39:40 2013
+#C  .OO.O.O.OO.
+#C  O.OOOOOOO.O
+#C  OO.......OO
+#C  .O.OO.OO.O.
+#C  OO.OOOOO.OO
+#C  O.O.....O.O
+#C  .O.OOOOO.O.
+#C  ..OO.O.OO..
+x = 11, y = 8, rule = B34/S34
+bxxbxbxbxx$xb7xbx$xx7bxx$bxbxxbxxbx$xxb5xbxx$xbx5bxbx$bxb5xbx$bbxxbxb
+xx!

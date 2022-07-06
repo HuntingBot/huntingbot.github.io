@@ -1,0 +1,9 @@
+#N 8cc1.rle: Siamese crowns: Pattern image
+#O Mark D. Niemiec's life synthesis database, Mon May 13 07:40:22 2013
+#C  O...O...
+#C  .O.O....
+#C  ........
+#C  ....O.O.
+#C  ...O...O
+x = 8, y = 5, rule = B2/S2
+x3bx$bxbx$$4bxbx$3bx3bx!

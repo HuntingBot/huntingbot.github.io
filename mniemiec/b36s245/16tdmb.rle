@@ -1,0 +1,26 @@
+#N 16tdmb.rle: Medium blinker on toad: Synthesis
+#O Mark D. Niemiec's life synthesis database, Sat May 02 23:27:30 2020
+#C  .O.O.....
+#C  ..O......
+#C  O...O.OOO
+#C  O...O.OOO
+#C  ..O......
+#C  .O.O.....
+x = 157, y = 156
+89b4obb4o$89boobobboboo$73bxx16boobboo16bxx18boo18bxx$71bx4bx14boobboo
+14bx4bx14bo4bo14bx4bx$oo70bxbbx36bxbbx16bobbo16bxbbx$3obb4o14bxx18boo
+26bx4bx34bx4bx14bo4bo14bx4bx$obooboboo13bxbbx16bobbo27bxx38bxx18boo18b
+xx$b3oboo16bxx18boo$5boo66bxx38bxx18boo18bxx$73bxx38bxx18boo18bxx$73b
+xx38bxx18boo18bxx$113bxx18boo$$131boo$85bo45b3o$84bobo44boboo$87bo44b
+3o$41boobboo39bo$41boobboo$39boobobboboo$39b4obb4o31boo24boo$80b3o22b
+3o$80boboo20boobo$81b3o20b3o16$60bobbo$61bobo$62bo$60boo19$41boobb4o
+14bxx12bobbobboobbobbo$41boobboboo14bxx12bobo3boo3bobo12bxx18boo28bxx$
+39boobobboo16bxx13bo4boo4bo11bx4bx14bo4bo24bx4bx$39b4obboo16bxx14boobb
+oobboo13bxbbx16bobbo26bxbbx$101bx4bx14bo4bo24bx4bx$103bxx18boo28bxx$$
+153bxx$153bxx$153bxx11$119b4obb4o$119boobobboboo$121boobboo$121boobboo
+20$138boo$137booboo$137bo$138bo$138bo20$129b4obb4o$129boobobboboo$131b
+oobboo$131boobboo5$112bo$111bobo$114bo$113bo$70boo$70b3obb4o14bxx38boo
+$70bobooboboo13bxbbx36bobbo17bxx$71b3oboo16bxx38boo16bx4bx$75boo75bxbb
+x$151bx4bx$153bxx$$53bxx18boo18bxx38boo18bxx$34bo18bxx18boo18bxx38boo
+18bxx$34bo18bxx18boo18bxx38boo18bxx$27boo6bo$25booboobooboo$29bo3boo$
+28bo$28bo!

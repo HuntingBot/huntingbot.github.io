@@ -1,0 +1,44 @@
+#N 9p5tbtb.rle: P5 between two tubs: Synthesis
+#O Mark D. Niemiec's life synthesis database, Thu May 27 17:28:04 2021
+#C  .O.....
+#C  O.O....
+#C  .O.....
+#C  ...O...
+#C  .....O.
+#C  ....O.O
+#C  .....O.
+x = 196, y = 130
+bbo160bo$obo158bobo$boo159boo$27bx17bobo19bx19bo19bx18bo60bx$11bo14bxb
+x17boo18bxbx17bobo17bxbx18bo19bxx10bo7boo17bxbx$10bo16bx18bo20bxx18boo
+18bx17b3o19bxbbx8boo6bobbo16bx$3bo6b3o16bx79bx48bobo17bobo8bx$3boo26bx
+13boo64bx36bxbbx16bobbo6boo11bx$bbobo25bxbx11bobo63bxbx15boo20bxx18boo
+7bo10bxbx$31bx14bo39bo4b3o17bx15bobo61bx$86boo3bo37bo45boo$85bobo4bo
+82bobo$175bo11$7bo7bo11bx19bo19bx19bo19bx19bo5bobo11bx19bo19bx$6bobo4b
+oo11bxbx17bobo17bxbx17bobo17bxbx17bobo4boo11bxbx17bobo17bxbx5byy$7bo6b
+oo11bx19bo19bx19bo8bo10bx19bo6bo12bx19bo7boo10bx6byy$9bo39bo39bo4boo
+33bo22byy15bo4boo$11bo39bo39bo3boo34bo20byy17bo4bo$10bobo18byy17bobo3b
+o33bobo16b3ybby15bobo37bobo17byy$11bo19byy18bobboo20by14bo22by16bo39bo
+18byy$55boo18byby36by$74bybby$75byy11$7bo19bx19bo6bobo10bx19bo6bo12bx
+19bo19bx19bo19bx$6bobo5bobo9bxbx17bobo5boo10bxbx17bobo5bobo9bxbx17bobo
+17bxbx17bobo7bo9bxbx$7bo6boo11bxx18bo7bo11bxx18bo6boo11bxx18bo19bxx18b
+o6boo11bxx$9bo5bo33bo39bo39bo6bo32bo5boo$11bo39bo39bo39bobboo35bo$10bo
+bo37bobo37bobo37bobobboo33bobo$11bo39bo39bo39bo39bo14$7bo7bo11bx19bo
+19bx19bo19bx19bo19bx19bo19bx$6bobo5bo11bxbx17bobo17bxbx17bobo17bxbx17b
+obo17bxbx17bobo17bxbx$7bo6b3o10bxx18bo19bxx18bo19bxx18bo19bxx18bo7bo
+11bxbx$9bo39bo39bo39bo39bo5bobo10bx$11bo39bo39bo39bo3boo34bo3boo$10bob
+o37bobo37bobo37boboboo34bobo$11bo39bo39bo39bo4bo34bo$54boo39boo$54bobo
+37boo$54bo41bo11$7bo19bx19bo19bx19bo8bo10bx19bo19bx19bo19bx$6bobo17bxb
+x17bobo6bo10bxbx17bobo5boo10bxbx17bobo17bxbx17bobo17bxbx$7bo19bxbx17bo
+6bo12bxbx17bo7boo10bxbx17bo19bxbx17bo19bx$9bo18bx20bo4b3o11bxbx18bo18b
+xbx18bo18bxbx18bo19bx$11bo39bo17bx21bo17bxbx19bo17bxbx19bo19bx$10bobo
+37bobo37bobo17bxx18bobo17bxbx17bobo17bxbx$11bo39bo39bo39bo19bx19bo19bx
+$$14b3o118boo38boo$14bo120bobo36boo$15bo119bo40bo8$3bo$3boo122bo$bbobo
+bbo14boo3bo14b3obbo19bo19bo19bo18bobo18bo$6bobo14boobobo15bobobo17bobo
+17bobo17bobo18bo18bobo$7bo14bo4bo15bo3bo19bo19bo19bo21bo17bo$9bo19bo
+19bo19bo19bo19bo21bo17bo$11bo19bo19bo10boo7bo19bo19bo18bobo18bo$10bobo
+17bobo17bobo8bobo6bobo9b3o5bobo17bobo18bo18bobo$11bo19bo19bo11bo7bo12b
+o6bo11boo6bo11b3o18boo5bo$83bo20boo19bo19boo$103bo20bo19bo9$bobo18bo$
+bboo19bo$bbo18b3o18bo20bo$7bo19bo15boobbo16bobbo19bo19bo$6bobo17bobo
+13boobbobo13b3obobo17bobo17bobo$7bo19bo19bo19bo19bo19bo$9bo19bo19bo19b
+o19bo19bo$11bo19bo19bo19bo11bo7bo12bo6bo$10bobo17bobo17bobo17bobo11boo
+4bobo12bo4bobo$11bo19bo19bo19bo11boo6bo11b3o5bo!

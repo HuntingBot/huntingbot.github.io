@@ -1,0 +1,27 @@
+#N 22p22-1.rle: Rollor; 22P22.1: Synthesis
+#O Mark D. Niemiec's life synthesis database, Tue Dec 15 19:37:51 2020
+#C  OOO........
+#C  O..O.......
+#C  .O..O......
+#C  ..OO.......
+#C  ....OO.....
+#C  ......O....
+#C  ......O.O..
+#C  .......O.O.
+#C  .......O..O
+#C  ........O.O
+#C  .........OO
+x = 139, y = 201
+98bo$99bo6bobo$97b3o6boo$107bo$93bo$94boo$93boo3$116bo11b3x$114boo12bx
+bbx$72bx29bo12boo12bxbbx$42bo28bxbx27bobo26bxx$41bo30bxx28boo28bxx$41b
+3o30bxx28boo28bx$74bxbx27bobo27bxbx$45bo29bx29bo29bxbx$44boo89bxbbx$
+44bobo68boo19bxbx$115bobo19bxx$115bo$$112bo$111boo$111bobo9$52b3o$52bo
+$53bo16$9bo$10bo$8b3o18$15bo$16bo$14b3o5$22bo$23bo$21b3o29$128b3x$128b
+xbbx$53bo75bxbbx$53boo75bxx$52bobo77bxx$57boo75bx$57bobo74bxbx$57bo77b
+xbx$135bxbbx$136bxbx$137bxx3$74bo$73boo$73bobo3$17bo$17boo$16bobo15$
+87boo$87bobo$87bo$bo$boo$obo35boo$39boo$38bo55boo$94bobo$94bo4$114boo$
+114bobo$114bo6$18boo$19boo$18bo22$38b3o27b3x27b3o27b3x$38bobbo26bxbbx
+26bobbo26bxbbx$39bobbo26bxbbx26bobbo26bxbbx$40boo28bxx28boo28bxx$42boo
+28bxx28boo28bxx$44bo29bx29bo29bx$44bobo27bxbx27bobo20bx6bxbx$45bobo19b
+x7bxbx16bo10bobo18bx8bxbx$45bobbo17bx8bxbbx15boo9bobbo17b3x6bxbbx$37bo
+8bobo17b3x7bxbx14bobo10bobo27bxbx$37boo8boo28bxx28boo28bxx$36bobo!

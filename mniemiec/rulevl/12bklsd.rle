@@ -1,0 +1,11 @@
+#N 12bklsd.rle: Block on long side: Synthesis
+#O Mark D. Niemiec's life synthesis database, Tue Sep 01 01:40:20 2020
+#C  OO....
+#C  OO..OO
+#C  ...O.O
+#C  OOO...
+#C  O.....
+x = 101, y = 9
+6bo$7boo$6boo27bx29bo29bx$oo33b3x27b3o27b3x$boo27by7bxbx19bo7bobo27bxb
+x$o13boo13byby3bxxbbxx18bobo3boobboo24bxxbbxx$4boo8bobo13bybybbxx18boo
+3bobobboo28bxx$3boo9bo16by24boo3bo$5bo49bo!

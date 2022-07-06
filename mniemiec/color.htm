@@ -1,0 +1,2235 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="copyright" content="1997,1998,1999,2013,2015,2016,2017,2018,2019,2020,2021,2022 Mark D. Niemiec" />
+<title>Multi-colored Life</title>
+<meta name="description"
+content="Conway's Game of Life: Multi-colored life pattern lists and glider syntheses" />
+<meta name="keywords" content="conway game life multi-colored pattern object list glider synthesis" />
+<link rel="prev" href="rulemn.htm" />
+<link rel="next" href="onag.htm" />
+<link rel="search" href="lifesrch.htm" />
+<link rel="author" href="lifecred.htm#niemiec" />
+<link rel="license" href="lifepage.htm#copyright" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="shortcut icon" href="images/23c-64.ico" />
+<style type="text/css">
+    body{lang="en-US";hyphens:auto;color:black;background-color:white;
+      margin-top:0;padding:0;border:0;height:100%;
+      font-family:Verdana,Arial,Helvetica,sans-serif;}
+    hr.a{border-style:solid;border-width:3px;border-color:#000000;}
+    h1{text-align:center;
+      font-family:Verdana,Arial,Helvetica,sans-serif;font-variant:small-caps;}
+    h2{font-family:Verdana,Arial,Helvetica,sans-serif;font-variant:small-caps;}
+    h3{font-family:Verdana,Arial,Helvetica,sans-serif;font-variant:small-caps;}
+    i{font-family:"Times New Roman",Times,serif;}
+    pre{hyphens:manual;}
+    img{border:2px black solid;}
+    ul,ol{margin-left:0px;padding-left:1en;}
+    table{border:1px black solid;border-spacing:0px;border-collapse:collapse;
+      table-layout:fixed;}
+    td,th{border:1px black solid;vertical-align:top;font-size:12px;padding:1px;}
+    td a{display:block;}
+    a{text-decoration:none;}
+    a:focus{text-decoration:underline;} a:hover{text-decoration:underline;}
+    a.p:link{color:#008000;} a.p:visited{color:#00C000;}
+    a.i:link{color:#000080;} a.i:visited{color:#0000C0;}
+    a.j:link{color:#008080;} a.j:visited{color:#00C0C0;}
+    a.x:link{color:#800000;} a.x:visited{color:#C00000;}
+    td:hover{background-color:#F0F0F0;}
+    .s{background-color:#E0E0E0;} td.s:hover{background-color:#E0E0E0;}
+    .b{background-color:#C0C0FF;} td.b:hover{background-color:#E0E0FF;}
+    .g{background-color:#C0FFC0;} td.g:hover{background-color:#E0FFE0;}
+    .t{background-color:#C0FFFF;} td.t:hover{background-color:#E0FFFF;}
+    .r{background-color:#FFC0C0;} td.r:hover{background-color:#FFE0E0;}
+    .m{background-color:#FFC0FF;} td.m:hover{background-color:#FFE0FF;}
+    .y{background-color:#FFFFC0;} td.y:hover{background-color:#FFFFE0;}
+    .o{background-color:#FFD0AA;} td.o:hover{background-color:#FFE8D5;}
+    .v{background-color:#FFAAD0;} td.v:hover{background-color:#FFD5E8;}
+    .h{background-color:#E0E0FF;} td.h:hover{background-color:#F0F0FF;}
+    .k{background-color:#000000;color:#FFFFFF;} td.k:hover{background-color:#C0C0C0;}
+    .n{background-color:#F0F0F0;text-align:center;} th.n:hover{background-color:#F8F8F8;}
+    .c{text-align:center;} .u{display:none;}
+</style>
+</head>
+<body>
+<a id="top" name="top"></a>
+<h1>Multi-colored Life</h1>
+<p class="c">
+	<b><a class="j" href="#c-color">Color Variants</a>:</b>
+	  <a class="j" href="#c-imm">Immigration</a> |
+	  <a class="j" href="#c-quad">Quad-Life</a> |
+	  <a class="j" href="#c-oct">Oct-Life</a> |
+	  <a class="j" href="#c-gen">General</a> |
+	  <a class="j" href="#c-rat">Rational</a> |
+	  <a class="j" href="#c-multi">Multiple</a><br />
+	<b><a class="j" href="#c-synth">Syntheses</a>:</b>
+	  <a class="j" href="#c-run">Running patterns</a> |
+	  <a class="j" href="#c-p1">Still-lifes</a> |
+	  <a class="j" href="#c-pp1">Pseudo-still-lifes</a> |
+	  <a class="j" href="#c-qp1">Quasi-still-lifes</a> |
+	  <a class="j" href="#c-p2">P2 oscillators</a> |
+	  <a class="j" href="#c-qp2">P2 quasi-oscillators</a> |
+	  <a class="j" href="#c-p3">P3 oscillators</a> |
+	  <a class="j" href="#c-p4">P4 oscillators</a> |
+	  <a class="j" href="#c-p5">P5 oscillators</a> |
+	  <a class="j" href="#c-p6">P6 oscillators</a> |
+	  <a class="j" href="#c-p8">P8 oscillators</a> |
+	  <a class="j" href="#c-p9">P9 oscillators</a> |
+	  <a class="j" href="#c-p10">P10 oscillators</a> |
+	  <a class="j" href="#c-p12">P12 oscillators</a> |
+	  <a class="j" href="#c-p14">P14 oscillators</a> |
+	  <a class="j" href="#c-p15">P15 oscillators</a> |
+	  <a class="j" href="#c-p16">P16 oscillators</a> |
+	  <a class="j" href="#c-p18">P18 oscillators</a> |
+	  <a class="j" href="#c-p24">P24 oscillators</a> |
+	  <a class="j" href="#c-p26">P26 oscillators</a> |
+	  <a class="j" href="#c-p30">P30 oscillator</a> |
+	  <a class="j" href="#c-p36">P36 oscillator</a> |
+	  <a class="j" href="#c-p72">P72 oscillator</a> |
+	  <a class="j" href="#c-ss">Spaceships</a> |
+	  <a class="j" href="#c-cons">Constellations</a><br />
+	<b><a class="j" href="#c-link">Links</a></b>
+</p>
+<hr class="a" /><main>
+<article><a id="a0" name="a0"></a>
+<a id="c-color" name="c-color"></a>
+<h2>Color variants</h2>
+<p>An interesting variation of the Life rules is to use several distinct
+living state, with each behaving according to Life rules, but, in
+addition, carrying independent color information. The color of each
+newly-born bit is determined by the color of its parents. Resulting patterns
+have exactly the same life/death behavior as in normal Life, but the colors
+of resulting bits provides interesting additional complexity.</p>
+<p>All the coloring variants discussed here are supersets of ordinary
+Life (i.e. bits whose parents are all of the same color will be born
+in that same color).</p>
+<p>Multi-color (hybrid) patterns can exist in all variants.
+Patterns with permanent bits (such as still-lifes, and oscillators with
+stators) typically have many different color variants, the number of which
+increases exponentially with the number of stator bits. There are also many
+oscillators and spaceships with multi-color forms, but these tend to be more
+fragile, as the general tendency in such rules is for one color to
+dominate. (For example, in examining all the ways that two gliders
+of different colors can collide and not die, in less than 1/6 of them does the
+census includes bits of both colors).</p>
+</article>
+<hr /><article><a id="a1" name="a1"></a>
+<a id="c-imm" name="c-imm"></a>
+<h2>Immigration (two-color Life)</h2>
+<p>Immigration is a coloring variant that uses two different symmetric
+colors. The sole rule that determines the color of births is simple:</p>
+<p><ul>
+    <li>Each bit&rsquo;s color is the same color as the majority of its parents.</li>
+</ul></p>
+<p>(The name <em>Immigration</em> is used, because this variant was
+originally designed for a two-player Life-based game with the same name,
+where players added bits of their own colors to the edge of the field, at
+which point the bits would immigrate to the field itself. The object was to
+dominate the field with one&rsquo;s color,
+at the expense of one&rsquo;s opponent&rsquo;s.)</p>
+</article>
+<hr /><article><a id="a2" name="a2"></a>
+<a id="c-quad" name="c-quad"></a>
+<h2>Quad-Life (four-color Life)</h2>
+<p>Quad-Life is a coloring variant that uses four different symmetric colors.
+The two rules that determines the color of births are:</p>
+<p><ul>
+    <li>If two parents have the same color (i.e. they form a
+	majority), the child has the same color.
+	(This is the same as Life and Immigration).</li>
+    <li>If there is no majority (i.e. all 3 parents have different colors),
+	the child is of the fourth color.</li>
+</ul></p>
+<p>Quad-Life is a superset of both normal Life and Immigration. Its most
+interesting feature is that populations where one color has totally died out
+can give birth to that same color again. Only if two colors die out (reducing
+this to Immigration) is such color death necessarily permanent.</p>
+<p>Also, in many cases, oscillator and spaceships that include 3 or 4 colors
+may have higher periods than their normal Life counterparts, cycling through
+several different color combinations. For example, the 4-color Glider has one
+side of one color, while the two bits on the other side are of different colors,
+and cycle through the three different permutations of the two other colors,
+giving the resulting multi-color Glider a period of 12, rather than the usual 4.
+Whenever such multi-colored patterns have one or more periods that differ from
+those of the original patterns, those periods are shown in parentheses at the
+end (if known).</p>
+</article>
+<hr /><article><a id="a3" name="a3"></a>
+<a id="c-oct" name="c-oct"></a>
+<h2>Oct-Life (eight-color Life)</h2>
+<p>Oct-Life is a coloring variant that uses a sets of four different symmetric
+colors, and another set of their complements. Colors in each of the two sets are
+symmetric with each other, but not with colors of the opposite set. The rules
+that determine the color of births are:</p>
+<p><ul>
+    <li>If two parents have the same color (i.e. they form a
+	majority), the child has the same color.
+	(This is the same as Life, Immigration, and Quad-Life).</li>
+    <li>If two parents have opposite colors, they cancel, and
+	the child has the same color as the third parent.</li>
+    <li>Otherwise, if one parent has the opposite type from the other two,
+	the child inherits its color.</li>
+    <li>Otherwise, when all three parents have the same type, the child
+	is of the opposite type of the fourth color.
+	(This is similar to, but quite different than Quad-Life)</li>
+</ul></p>
+<p>It turns out that these rules can be simplified into a single rule (that
+is generalized in the following section). If one conceptualizes the color
+space as a cube with the four primary colors at the non-adjacent even-numbered
+vertices, and their complements at the respective diametrically opposite
+odd-numbered vertices, then the child color is chosen in such a way that the
+sum of the lengths of the minimal paths along the cube edges from each parent
+to the child is minimized.</p>
+<p>Oct-Life is a superset of both normal Life and Immigration, but not of
+Quad-Life, since the child of three different colors is the opposite of the
+fourth color. This makes more sense logically. For example, if one chooses
+physical colors (e.g. red, blue, green and black, and their respective
+complements teal, brown, purple and white), a child&rsquo;s color
+is often the one most closely matching a mixing of the parents (e.g.
+red+blue+green=white, black+white+green=green, etc.). Unfortunately, the
+colors of resulting Life patterns are nowhere nearly as interesting as those
+of Quad-Life, as extinct colors cannot spontaneously re-appear.</p>
+</article>
+<hr /><article><a id="a4" name="a4"></a>
+<a id="c-gen" name="c-gen"></a>
+<h2>More general colorizations</h2>
+<p>The single geometric rule used in Oct-Life can be generalized to any
+geometric figure, and any number of colors, and this works even for other rules
+with births on numbers of parents other than three. The following rules
+apply:</p>
+<p><ul>
+    <li>Arrange the colors at the vertices of a regular polygon, polyhedron,
+	polytope, etc. (e.g. Life uses a point, Immigration uses a line,
+	Quad-Life uses a tetrahedron, and Oct-Life uses a cube).</li>
+    <li>The behavior of colors will only be symmetric with respect to
+	all other colors if every vertex on the figure has the same
+	relationship to every other vertex (e.g. this is true of Life,
+	Immigration and Quad-Life, and also any rule with three colors,
+	but not Oct-Life).</li>
+    <li>(Non-regular polyhedra, polytopes, etc. like pyramids and Johnson
+	solids can also be used, but the relative symmetry of the colors
+	space is further reduced).</li>
+    <li>For each child vertex on the figure, compute the sum of the minimal
+	paths from that vertex all parents.</li>
+    <li>Choose the vertex with the smallest sum.</li>
+    <li>If two or more vertices share the smallest sum, eliminate them
+	all from consideration, and try again.</li>
+    <li>If no vertices remain, choose an arbitrary color (typically
+	color #1).</li>
+</ul></p>
+<p>The last rule breaks color symmetry if more than one color is used, and
+should be avoided if at all possible. It can occur in any of the following
+situations:</p>
+<p><ul>
+    <li>Any rules that permit birth on 0</li>
+    <li><em>GCD</em> (number of colors, any birth condition) exceeds 1</li>
+    <li>Any birth-on-<i>n</i> condition where there are <i>n</i>+2 or more
+	totally symmetric vertices (this is why polygons usually work better
+	than polyhedra or polytopes, even though they have less symmetry).</li>
+</ul></p>
+<p>These place the following restrictions on birth conditions:</p>
+<p><ul>
+    <li>Birth on <i>n</i>: <i>n</i>-dimensional triangular polytope with
+	<i>n</i>+1 vertices is always allowed.</li>
+    <li>Birth on 0: Only one color is allowed.</li>
+    <li>Birth on 1: No restrictions.</li>
+    <li>Birth on 2, 4, 8: Odd polygons.</li>
+    <li>Birth on 3: 2 colors, even polygons not divisible by 3,
+	polyhedra, polytopes without triangular sides.</li>
+    <li>Birth on 5: 2 colors, polygons not divisible by 5, polyhedra except
+	dodecahedrons, polytopes.</li>
+    <li>Birth on 6: Any polygons not divisible by 2 or 3.</li>
+    <li>Birth on 7: 2 colors, polygons not divisible by 7, polyhedra,
+	polytopes.</li>
+</ul></p>
+<p>Multiple birth conditions combine all restrictions. For example, the rules
+<a class="i" href="b34s34.htm"><em>B34/S34</em></a> and
+<a class="i" href="b36s23.htm"><em>B36/S23 (HighLife)</em></a>
+require exactly 1 color, or at least 5 colors, and a pentagon works, but a
+hyper-tetrahedron does not, since birth on 3 would not know which of the two
+remaining colors to choose.</p>
+</article>
+<hr /><article><a id="a5" name="a5"></a>
+<a id="c-rat" name="c-rat"></a>
+<h2>Rational colorizations</h2>
+<p>Rather than having a finite number of discrete color states, another
+approach is to treat the colors as a spectrum, represented by a rational
+number (e.g. 0 for black and 1 for white, with many shades of grey
+inbetween), or a vector of such numbers (e.g. 0,0,0 for black, 1,1,1 for
+white 1,0,0 for red, 0,1,0 for green, and 0,0,1 for blue). When a child is
+born, its color is simply the average color of its parents.</p>
+<p>Under such rules, colors tend to bleed together, and usually reach an
+equilibrium. For example, in oscillators with bushings of multiple colors,
+nearby rotor cells often approximate rational sums of nearby bushing cells.
+Oscillators with no bushings (and also spaceships, since they can never have
+bushings) usually approximate a single blended color.</p>
+<p>One kind of exception to this occurs when one part of the oscillator or
+spaceship has a colorization totally independent of any other, because other
+parts may cause deaths, but never contribute births (or if they do, these are
+typically of short-lived sparks that in turn turn only contribute subsequent
+deaths). Another kind happens when one part of the oscillator is sandwiched
+between two or more independently-colored parts &mdash; all of which contribute
+colors much like multi-colored bushings do (e.g. if a toad is hassled by two
+oscillators of different colors, the rotor bits of the toad will eventually
+approach rational fractions of the sums of the colors of the two hasslers).</p>
+<p>In the same way that it is possible to construct Life machinery that can
+have populations that are asymptotic to irrational numbers, it should be
+possible to construct similar mechanisms to generate colorizations that are
+asymptotic to irrational numbers as well.</p>
+</article>
+<hr /><article><a id="a6" name="a6"></a>
+<a id="c-multi" name="c-multi"></a>
+<h2>Multiple colorizations</h2>
+<p>Just as it&rsquo;s possible to add colorization to Life to add
+an additional but independent data channel to a Life pattern,
+it&rsquo;s possible to add multiple independent colorizations
+simultaneously. For example, one could have one Quad-life colorization of red,
+green, blue and yellow, and another one of square, round, triangular and
+hexagonal, yielding 16 possible living states.</p>
+</article>
+<hr class="a" /><article><a id="a7" name="a7"></a>
+<a id="c-synth" name="c-synth"></a>
+<h2>Syntheses</h2>
+<p>In the synthesis files contained here, each file contains methods for
+synthesizing one or more Immigration and/or Quad-Life colorization of a normal
+Life. Instead of the normal convention used elsewhere on this site (i.e.
+color 1 = before state, color 2 = after state, color 3 (where necessary) =
+useless debris that must be subsequently eliminated), both &ldquo;before&rdquo; and
+&ldquo;after&rdquo; images here use the same colors, representing up to four different
+colors of Life bits. Whenever four colors are not needed (e.g. for two-color
+Immigration colorizations), colors 2, 3, and sometimes 4 are used, while color
+1 is used to represent &ldquo;don&rsquo;t care&rdquo; bits (e.g. an incoming glider
+whose colorization is irrelevant in the final result, because, while it affects
+the states of other bits, it does not affect their color, and its own bits all
+die.) This is especially true in the case of two-color (i.e. Immigration)
+results; gliders of the default color may be replaced by either color.</p>
+<p>The lists of patterns (and, indeed, the specific multi-color forms
+synthesized) are not intended to be exhaustive; instead, they are merely small
+samplings of what is possible. The number of possible multi-color forms
+increases exponentially. For example, for an asymmetric <i>n</i>-bit still-life or
+pseudo-still-life, the number of distinct non-trivial <i>k</i>-color
+colorizations is
+<i>k</i><sup><i>n</i></sup>/<i>k</i>! &ndash; (<i>k</i>-1)<sup><i>n</i></sup>/(<i>k</i>-1)!.
+The number of possible symmetric patterns is smaller for combinatorical
+reasons. The number of possible oscillators and spaceships is also usually much
+smaller because, while stators can have the same number of variations as
+still-lifes, rotors and spaceships are much more restricted, as color
+information is frequently lost with cell births and deaths.</p>
+<p>For some of the smaller patterns, the lists show syntheses for all 2-color
+variants (or these can be deduced from examples shown); these syntheses are
+marked with a *. If they also show all 4-color variants, they are marked with
+**.</p>
+<p>Larger patterns consisting of multiple distinct parts can often be trivially
+hybridized by constructing different independent parts from components of
+different colors, so these are not shown here, unless they are otherwise
+notable.</p>
+<p>The stamp collections each show a single colorization of each pattern.
+Most of the syntheses include more than one colorization, so the costs in
+gliders frequently show ranges, as some colorizations are more expensive to
+synthesize than others, and some may not yet have known syntheses.
+As some colorizations create patterns whose periods are multiples of the base
+pattern&rsquo;s period, if multiple periods are possible, they are shown in the
+table below the stamp collection. Oscillators whose periods are increased in
+this manner are shown in stamps of their base periods, and also those of their
+increased periods. (This is not done for spaceships, as all spaceships are
+shown on a single stamp collection.)</p>
+</article>
+<hr /><article><a id="a8" name="a8"></a>
+<a id="c-run" name="c-run"></a>
+<h2>Running Patterns</h2>
+<p>The patterns on this page can be run by Golly versions 2.5 and later,
+but require the following rule file to first be downloaded and installed:
+<a class="p" href="rules/Life4c.rule" download="Life4c.rule">Life4c.rule</a>.
+It can either be installed for all users (in the Rules directory directly
+under where the Golly application is installed), or in the current
+user&rsquo;s personal Rule directory. (To find out where this is, run Golly,
+select <em>File/Preferences&hellip;</em>, and look at the <em>Control</em> tab.
+It is displayed right next to the <em>Your Rules&hellip;</em> button.)</p>
+</article>
+<hr class="a" /><article><a id="a9" name="a9"></a>
+<a id="c-p1" name="c-p1"></a>
+<h2>34 Multi-color
+<a class="i" href="p1.htm">still-lifes</a></h2>
+<p><img src="map/c-p1.png" alt="multi-color still-lifes"
+ width="637" height="261" usemap="#c-p1" /></p>
+<p><table><colgroup><col span="12" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_c-p1" class="i" href="javascript:Nav('c-p1')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a8">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a10">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/c-p1.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/c-p1.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/c-p1.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="lis/c-p1.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/c-p1.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/c-p1.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=c-p1" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_c-p1"><p><table id="t-c-p1" style="width:641px">
+    <colgroup><col style="width:71px;" /><col span="7" style="width:60px;" />
+	<col style="width:80px;" /><col style="width:68px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="0/c4bk.rle">4.1; Block** [2&hellip;16]</a></td>
+	<td><a class="p" href="0/c4tb.rle">
+	    4.2; Tub**; Diamond [3&hellip;16]</a></td>
+	<td class="s">&nbsp;</td>
+	<td><a class="p" href="0/c5bt.rle">5.1; Boat** [3&hellip;10]</a></td>
+	<td rowspan="2" class="s">&nbsp;</td>
+	<td><a class="p" href="0/c6sn.rle">6.1; Snake [4&hellip;7]</a></td>
+	<td><a class="p" href="0/c6sh.rle">6.2; Ship [3&hellip;7]</a></td>
+	<td><a class="p" href="0/c6hv.rle">6.3; Beehive [3&hellip;5]</a></td>
+	<td><a class="p" href="0/c6ac.rle">
+	    6.4; Aircraft Carrier; Carrier [4&hellip;7]</a></td>
+	<td><a class="p" href="0/c6bg.rle">6.5; Barge [3&hellip;6]</a></td>
+    </tr>
+    <tr>
+	<td><a class="p" href="0/c7ls.rle">
+	    7.1; Python; Long snake [4&hellip;11]</a></td>
+	<td><a class="p" href="0/c7lf.rle">7.2; Loaf; Burloaf [2&hellip;5]</a></td>
+	<td><a class="p" href="0/c7et.rle">
+	    7.3; Eater; Eater 1; Fishhook [2&hellip;5]</a></td>
+	<td><a class="p" href="0/c7lb.rle">7.4; Long boat [3&hellip;12]</a></td>
+	<td><a class="p" href="14/c14-79.rle">
+	    14.79; Paper&shy;clip [4]</a></td>
+	<td><a class="p" href="14/c14-507.rle">
+	    14.507; Side&shy;walk Pave&shy;ment [4&hellip;10]</a></td>
+	<td class="s">&nbsp;</td>
+	<td><a class="p" href="18/c18-287.rle">
+	    18.287; Dead spark coil; JC; House on house [4&hellip;16]</a></td>
+	<td><a class="p" href="18/c18-6707.rle">
+	    18. 6707; Skewed house on house [4&hellip;10]</a></td>
+    </tr>
+    <tr>
+	<td><a class="p" href="0/c8sl.rle">8.1; Shil&shy;lelagh [4&hellip;9]</a></td>
+	<td><a class="p" href="0/c8pd.rle">8.2; Pond [3&hellip;8]</a></td>
+	<td><a class="p" href="0/c8lp.rle">8.3; Long ship [4&hellip;8]</a></td>
+	<td><a class="p" href="0/c8cg.rle">8.4; Mango; Cigar [4]</a></td>
+	<td><a class="p" href="0/c8ht.rle">
+	    8.5; Hook w/&#8203;tail; Snake eater [4&hellip;8]</a></td>
+	<td><a class="p" href="0/c8vs.rle">
+	    8.6; Very long snake [5&hellip;11]</a></td>
+	<td><a class="p" href="0/c8lg.rle">8.7; Long barge [4&hellip;8]</a></td>
+	<td><a class="p" href="0/c8tt.rle">
+	    8.8; Tub w/&#8203;tail; Twit [4&hellip;9]</a></td>
+	<td><a class="p" href="0/c8cs.rle">
+	    8.9; Canoe; Sinking ship; Cis snake [4&hellip;15]</a></td>
+	<td class="s">&nbsp;</td>
+    </tr>
+    <tr>
+	<td><a class="p" href="0/c9-2.rle">
+	    9.2; Extra long snake [5&hellip;15]</a></td>
+	<td><a class="p" href="0/c9-3.rle">
+	    9.3; Long canoe; Long sinking ship [4]</a></td>
+	<td><a class="p" href="0/c9-4.rle">
+	    9.4; Integral; Integral sign [5&hellip;8]</a></td>
+	<td><a class="p" href="0/c9-5.rle">
+	    9.5; Up boat w/&#8203;tail; Trans-boat w/&#8203;tail [4&hellip;8]</a></td>
+	<td><a class="p" href="0/c9-6.rle">
+	    9.6; Down boat w/&#8203;tail; Cis-boat w/&#8203;tail [4]</a></td>
+	<td><a class="p" href="0/c9-7.rle">
+	    9.7; Long shil&shy;lelagh [4&hellip;7]</a></td>
+	<td><a class="p" href="0/c9-8.rle">
+	    9.8; Long hook w/&#8203;tail [5&hellip;6]</a></td>
+	<td><a class="p" href="0/c9-9.rle">
+	    9.9; Tub w/&#8203;long tail; Shil&shy;lelagh w/&#8203;tub [5&hellip;6]</a></td>
+	<td><a class="p" href="0/c9-10.rle">9.10; Hat [3&hellip;10]</a></td>
+	<td><a class="p" href="20/c20-5320.rle">20.5320; Dock on dock;
+	    Docks; Mirrored dock [4]</a></td>
+    </tr>
+</table></p></div>
+<map name="c-p1">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,241,20,261" href="#bottom" />
+	<area coords="617,0,637,20" href="zip/c-p1.zip" />
+	<area coords="617,241,637,261" href="stamp/c-p1.rle" />
+	<area coords="0,0,70,70" href="0/c4bk.rle" />
+	<area coords="70,0,130,70" href="0/c4tb.rle" />
+	<area coords="190,0,250,70" href="0/c5bt.rle" />
+	<area coords="310,0,370,70" href="0/c6sn.rle" />
+	<area coords="370,0,430,70" href="0/c6sh.rle" />
+	<area coords="430,0,490,70" href="0/c6hv.rle" />
+	<area coords="490,0,570,70" href="0/c6ac.rle" />
+	<area coords="570,0,637,70" href="0/c6bg.rle" />
+	<area coords="0,70,70,130" href="0/c7ls.rle" />
+	<area coords="70,70,130,130" href="0/c7lf.rle" />
+	<area coords="130,70,190,130" href="0/c7et.rle" />
+	<area coords="190,70,250,130" href="0/c7lb.rle" />
+	<area coords="310,70,370,130" href="14/c14-79.rle" />
+	<area coords="370,70,430,130" href="14/c14-507.rle" />
+	<area coords="490,70,570,130" href="18/c18-287.rle" />
+	<area coords="570,70,637,130" href="18/c18-6707.rle" />
+	<area coords="0,130,70,190" href="0/c8sl.rle" />
+	<area coords="70,130,130,190" href="0/c8pd.rle" />
+	<area coords="130,130,190,190" href="0/c8lp.rle" />
+	<area coords="190,130,250,190" href="0/c8cg.rle" />
+	<area coords="250,130,310,190" href="0/c8ht.rle" />
+	<area coords="310,130,370,190" href="0/c8vs.rle" />
+	<area coords="370,130,430,190" href="0/c8lg.rle" />
+	<area coords="430,130,490,190" href="0/c8tt.rle" />
+	<area coords="490,130,570,190" href="0/c8cs.rle" />
+	<area coords="0,190,70,261" href="0/c9-2.rle" />
+	<area coords="70,190,130,261" href="0/c9-3.rle" />
+	<area coords="130,190,190,261" href="0/c9-4.rle" />
+	<area coords="190,190,250,261" href="0/c9-5.rle" />
+	<area coords="250,190,310,261" href="0/c9-6.rle" />
+	<area coords="310,190,370,261" href="0/c9-7.rle" />
+	<area coords="370,190,430,261" href="0/c9-8.rle" />
+	<area coords="430,190,490,261" href="0/c9-9.rle" />
+	<area coords="490,190,570,261" href="0/c9-10.rle" />
+	<area coords="570,190,637,261" href="20/c20-5320.rle" />
+</map>
+<p>Many more multi-colored beehives can be formed by adding a one-bit spark to a
+multi-colored block in several different ways. Some of these are shown; any of
+several ways to generate a one-bit spark an be used.</p>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Aircraft_carrier">Aircraft carrier</a>,
+<a class="x" href="http://conwaylife.com/wiki/Barge">Barge</a>,
+<a class="x" href="http://conwaylife.com/wiki/Beehive">Beehive</a>,
+<a class="x" href="http://conwaylife.com/wiki/Block">Block</a>,
+<a class="x" href="http://conwaylife.com/wiki/Boat">Boat</a>,
+<a class="x" href="http://conwaylife.com/wiki/Canoe">Canoe</a>,
+<a class="x" href="http://conwaylife.com/wiki/Cis-boat_with_tail">Cis-boat with tail</a>,
+<a class="x" href="http://conwaylife.com/wiki/Dead_spark_coil">Dead spark coil</a>,
+<a class="x" href="http://conwaylife.com/wiki/Eater_1">Eater 1</a>,
+<a class="x" href="http://conwaylife.com/wiki/Extra_long_snake">Extra long snake</a>,
+<a class="x" href="http://conwaylife.com/wiki/Grin">Grin</a>,
+<a class="x" href="http://conwaylife.com/wiki/Hat">Hat</a>,
+<a class="x" href="http://conwaylife.com/wiki/Hook_with_tail">Hook with tail</a>,
+<a class="x" href="http://conwaylife.com/wiki/Integral_sign">Integral sign</a>,
+<a class="x" href="http://conwaylife.com/wiki/List_of_common_still_lifes">List of common still lifes</a>,
+<a class="x" href="http://conwaylife.com/wiki/Loaf">Loaf</a>,
+<a class="x" href="http://conwaylife.com/wiki/Long_barge">Long barge</a>,
+<a class="x" href="http://conwaylife.com/wiki/Long_boat">Long boat</a>,
+<a class="x" href="http://conwaylife.com/wiki/Long_canoe">Long canoe</a>,
+<a class="x" href="http://conwaylife.com/wiki/Long_hook_with_tail">Long hook with tail</a>,
+<a class="x" href="http://conwaylife.com/wiki/Long_shillelagh">Long shillelagh</a>,
+<a class="x" href="http://conwaylife.com/wiki/Long_ship">Long ship</a>,
+<a class="x" href="http://conwaylife.com/wiki/Long_snake">Long snake</a>,
+<a class="x" href="http://conwaylife.com/wiki/Mango">Mango</a>,
+<a class="x" href="http://conwaylife.com/wiki/Mirrored_dock">Mirrored dock</a>,
+<a class="x" href="http://conwaylife.com/wiki/Paperclip">Paperclip</a>,
+<a class="x" href="http://conwaylife.com/wiki/Pond">Pond</a>,
+<a class="x" href="http://conwaylife.com/wiki/Pre-block">Pre-block</a>,
+<a class="x" href="http://conwaylife.com/wiki/Shillelagh">Shillelagh</a>,
+<a class="x" href="http://conwaylife.com/wiki/Ship">Ship</a>,
+<a class="x" href="http://conwaylife.com/wiki/Sidewalk">Sidewalk</a>,
+<a class="x" href="http://conwaylife.com/wiki/Snake">Snake</a>,
+<a class="x" href="http://conwaylife.com/wiki/Trans-boat_with_tail">Trans-boat with tail</a>,
+<a class="x" href="http://conwaylife.com/wiki/Tub">Tub</a>,
+<a class="x" href="http://conwaylife.com/wiki/Tub_with_long_tail">Tub with long tail</a>,
+<a class="x" href="http://conwaylife.com/wiki/Tub_with_tail">Tub with tail</a>,
+<a class="x" href="http://conwaylife.com/wiki/Very_long_snake">Very long snake</a>.</p>
+</article>
+<hr /><article><a id="a10" name="a10"></a>
+<a id="c-pp1" name="c-pp1"></a>
+<h2>6 Multi-color
+<a class="i" href="pp1.htm">pseudo-still-lifes</a></h2>
+<p><img src="map/c-pp1.png" alt="multi-color pseudo-still-lifes"
+ width="501" height="61" usemap="#c-pp1" /></p>
+<p><table><colgroup><col span="12" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_c-pp1" class="i" href="javascript:Nav('c-pp1')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a9">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a11">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/c-pp1.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/c-pp1.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/c-pp1.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="lis/c-pp1.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/c-pp1.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/c-pp1.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=c-pp1" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_c-pp1"><p><table id="t-c-pp1" style="width:505px">
+    <colgroup><col style="width:91px;" /><col span="4" style="width:80px;" />
+	<col style="width:92px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="0/c8bkbk.rle">
+	    Block on block; Bi-block [2&hellip;8]</a></td>
+	<td><a class="p" href="0/c9btbk.rle">
+	    Block on boat [3&hellip;11]</a></td>
+	<td><a class="p" href="10/c10btbt1.rle">
+	    Up boat on boat; Bi-boat [4&hellip;6]</a></td>
+	<td><a class="p" href="10/c10btbt2.rle">
+	    Down boat on boat [4&hellip;6]</a></td>
+	<td><a class="p" href="10/c10hvbk.rle">
+	    Block on beehive [3&hellip;6]</a></td>
+	<td><a class="p" href="16/c16bbk2.rle">
+	    Two blocks on two blocks [8]</a></td>
+    </tr>
+</table></p></div>
+<map name="c-pp1">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,41,20,61" href="#bottom" />
+	<area coords="481,0,501,20" href="zip/c-pp1.zip" />
+	<area coords="481,41,501,61" href="stamp/c-pp1.rle" />
+	<area coords="0,0,90,61" href="0/c8bkbk.rle" />
+	<area coords="90,0,170,61" href="0/c9btbk.rle" />
+	<area coords="170,0,250,61" href="10/c10btbt1.rle" />
+	<area coords="250,0,330,61" href="10/c10btbt2.rle" />
+	<area coords="330,0,410,61" href="10/c10hvbk.rle" />
+	<area coords="410,0,501,61" href="16/c16bbk2.rle" />
+</map>
+<p>In most cases, multi-color pseudo-still-lifes (and other pseudo-objects) are
+not very interesting, since most of them are formed either from synthesizing
+two objects simultaneously back-to-back, or adding one object to a
+previously-synthesized object. In either case, it is usually trivial to make one
+piece of one color, and the other piece of a different color. Cases like the
+ones shown above, where pseudo-objects form spontaneously, are more
+interesting.</p>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Beehive">Beehive</a>,
+<a class="x" href="http://conwaylife.com/wiki/Bi-block">Bi-block</a>,
+<a class="x" href="http://conwaylife.com/wiki/Bi-boat">Bi-boat</a>,
+<a class="x" href="http://conwaylife.com/wiki/Block">Block</a>,
+<a class="x" href="http://conwaylife.com/wiki/Block_on_boat">Block on boat</a>,
+<a class="x" href="http://conwaylife.com/wiki/Boat">Boat</a>.</p>
+</article>
+<hr /><article><a id="a11" name="a11"></a>
+<a id="c-qp1" name="c-qp1"></a>
+<h2>3 Multi-color
+<a class="i" href="qp1.htm">quasi-still-lifes</a></h2>
+<p><img src="map/c-qp1.png" alt="multi-color qs"
+ width="261" height="81" usemap="#c-qp1" /></p>
+<p><table><colgroup><col span="12" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_c-qp1" class="i" href="javascript:Nav('c-qp1')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a10">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a12">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/c-qp1.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/c-qp1.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/c-qp1.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="lis/c-qp1.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/c-qp1.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/c-qp1.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=c-qp1" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_c-qp1"><p><table id="t-c-qp1" style="width:265px">
+    <colgroup><col style="width:91px;" /><col style="width:80px;" />
+	<col style="width:92px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="10/c10btbt3.rle">
+	    Two up point-to-point boats [3&hellip;6]</a></td>
+	<td><a class="p" href="24/c24shf.rle">
+	    Small honeyfarm [6]</a></td>
+	<td><a class="p" href="28/c28by.rle">
+	    Bakery [4&hellip;26]</a></td>
+    </tr>
+</table></p></div>
+<map name="c-qp1">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,61,20,81" href="#bottom" />
+	<area coords="241,0,261,20" href="zip/c-qp1.zip" />
+	<area coords="241,61,261,81" href="stamp/c-qp1.rle" />
+	<area coords="0,0,90,81" href="10/c10btbt3.rle" />
+	<area coords="90,0,170,81" href="28/c28by.rle" />
+</map>
+<p>In most cases, multi-color quasi-still-lifes (and other quasi-objects) are
+not very interesting, since most of them are formed either from synthesizing
+two objects simultaneously, or adding one object to a previously-synthesized
+object. In either case, it is usually trivial to make one piece of one color,
+and the other piece of a different color. Cases like the ones shown above,
+where quasi-objects form spontaneously, are more interesting.</p>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Bakery">Bakery</a>,
+<a class="x" href="http://conwaylife.com/wiki/Beehive">Beehive</a>,
+<a class="x" href="http://conwaylife.com/wiki/Boat">Boat</a>,
+<a class="x" href="http://conwaylife.com/wiki/Honey_farm">Honey farm</a>,
+<a class="x" href="http://conwaylife.com/wiki/Loaf">Loaf</a>.</p>
+</article>
+<hr /><article><a id="a12" name="a12"></a>
+<a id="c-p2" name="c-p2"></a>
+<h2>17 Multi-color
+<a class="i" href="p2.htm">period 2 oscillators</a></h2>
+<p><img src="map/c-p2.png" alt="multi-color period 2 oscillators"
+ width="561" height="121" usemap="#c-p2" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_c-p2" class="i" href="javascript:Nav('c-p2')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a11">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a13">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/c-p2.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/c-p2.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/c-p2.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/c-p2.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/c-p2.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/c-p2.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/c-p2.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=c-p2" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_c-p2"><p><table id="t-c-p2" style="width:565px">
+    <colgroup><col style="width:71px;" /><col span="7" style="width:60px;" />
+	<col style="width:72px;" /></colgroup>
+    <tr>
+	<td class="y"><a class="p" href="0/c3bl.rle">
+	    Blinker** [8]</a></td>
+	<td><a class="p" href="0/c6td.rle">
+	    Toad [3&hellip;x] (P2, P4, P8)</a></td>
+	<td><a class="p" href="0/c6ck.rle">
+	    Clock [4&hellip;x] (P2, P4, P8)</a></td>
+	<td><a class="p" href="0/c6bc.rle">
+	    Beacon [3]</a></td>
+	<td class="y"><a class="p" href="0/c8bp.rle">
+	    Bipole [12&hellip;x] (P2, P4, P6)</a></td>
+	<td><a class="p" href="0/c9tp.rle">
+	    Tripole [6&hellip;x] (P2, P4, P6)</a></td>
+	<td><a class="p" href="10/c10qp.rle">
+	    Quad&shy;pole [5&hellip;x] (P2, P6, P8)</a></td>
+	<td><a class="p" href="14/c14tdtsy.rle">Why not; 
+	    Griddles on tub and Y [7&hellip;x] (P2, P4)</a></td>
+	<td><a class="p" href="14/c14p2-11.rle">
+	    14P2.11 [8&hellip;x] (P2, P4, P6, P8, P16, P24)</a></td>
+    </tr>
+    <tr>
+	<td><a class="p" href="12/c12lei.rle">
+	    Lei [9&hellip;x] (P2, P8)</a></td>
+	<td class="g"><a class="p" href="12/c12fx.rle">
+	    Fox; Gnome [12&hellip;x] (P2, P6, P8, P16, P18)</a></td>
+	<td><a class="p" href="12/c12px.rle">
+	    Phoenix [6&hellip;10]</a></td>
+	<td><a class="p" href="12/c12hp.rle">
+	    Hexapole [8&hellip;x] (P2, P6, P26)</a></td>
+	<td><a class="p" href="13/c13ydtsy.rle">By flops; Butter&shy;fly;
+	    Griddles on two Ys [9&hellip;x] (P2, P4)</a></td>
+	<td><a class="p" href="15/c15dtbk.rle">Block on griddle;
+	    Griddle and block; Singular flip-flop [6]</a></td>
+	<td><a class="p" href="15/c15mm1.rle">Muttering moat 1 [11&hellip;x]
+	    (P2, P4, P6, P8, P10, P12, P14, P16, P18, P24, P26)</a></td>
+	<td><a class="p" href="18/c18sc.rle">
+	    Spark Coil [4&hellip;10]</a></td>
+	<td class="y"><a class="p" href="24/c24fb.rle">Fore and back;
+	    Complem&shy;entary blinker [20] (P2, P4, P6)</a></td>
+    </tr>
+</table></p></div>
+<map name="c-p2">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,101,20,121" href="#bottom" />
+	<area coords="541,0,561,20" href="zip/c-p2.zip" />
+	<area coords="541,101,561,121" href="stamp/c-p2.rle" />
+	<area coords="0,0,70,70" href="0/c3bl.rle" />
+	<area coords="70,0,130,70" href="0/c6td.rle" />
+	<area coords="130,0,190,70" href="0/c6ck.rle" />
+	<area coords="190,0,250,70" href="0/c6bc.rle" />
+	<area coords="250,0,310,70" href="0/c8bp.rle" />
+	<area coords="310,0,370,70" href="0/c9tp.rle" />
+	<area coords="370,0,430,70" href="10/c10qp.rle" />
+	<area coords="430,0,490,70" href="14/c14tdtsy.rle" />
+	<area coords="490,0,561,70" href="14/c14p2-11.rle" />
+	<area coords="0,70,70,121" href="12/c12lei.rle" />
+	<area coords="70,70,130,121" href="12/c12fx.rle" />
+	<area coords="130,70,190,121" href="12/c12px.rle" />
+	<area coords="190,70,250,121" href="12/c12hp.rle" />
+	<area coords="250,70,310,121" href="13/c13ydtsy.rle" />
+	<area coords="310,70,370,121" href="15/c15dtbk.rle" />
+	<area coords="370,70,430,121" href="15/c15mm1.rle" />
+	<area coords="430,70,490,121" href="18/c18sc.rle" />
+	<area coords="490,70,561,121" href="24/c24fb.rle" />
+</map>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Beacon">Beacon</a>,
+<a class="x" href="http://conwaylife.com/wiki/Bipole">Bipole</a>,
+<a class="x" href="http://conwaylife.com/wiki/Blinker">Blinker</a>,
+<a class="x" href="http://conwaylife.com/wiki/By_flops">By flops</a>,
+<a class="x" href="http://conwaylife.com/wiki/Clock">Clock</a>,
+<a class="x" href="http://conwaylife.com/wiki/Fore_and_back">Fore and back</a>,
+<a class="x" href="http://conwaylife.com/wiki/Fox">Fox</a>,
+<a class="x" href="http://conwaylife.com/wiki/Griddle_and_block">Griddle and block</a>,
+<a class="x" href="http://conwaylife.com/wiki/Hexapole">Hexapole</a>,
+<a class="x" href="http://conwaylife.com/wiki/Lei">Lei</a>,
+<a class="x" href="http://conwaylife.com/wiki/List_of_common_oscillators">List of common oscillators</a>,
+<a class="x" href="http://conwaylife.com/wiki/Muttering_moat_1">Muttering moat 1</a>,
+<a class="x" href="http://conwaylife.com/wiki/Phoenix_1">Phoenix 1</a>,
+<a class="x" href="http://conwaylife.com/wiki/Quadpole">Quadpole</a>,
+<a class="x" href="http://conwaylife.com/wiki/Spark_coil">Spark coil</a>,
+<a class="x" href="http://conwaylife.com/wiki/Toad">Toad</a>,
+<a class="x" href="http://conwaylife.com/wiki/Tripole">Tripole</a>,
+<a class="x" href="http://conwaylife.com/wiki/Tub">Tub</a>,
+<a class="x" href="http://conwaylife.com/wiki/Why_not">Why not</a>.</p>
+</article>
+<hr /><article><a id="a13" name="a13"></a>
+<a id="c-qp2" name="c-qp2"></a>
+<h2>2 Multi-color
+<a class="i" href="qp2.htm">period 2 quasi-oscillators</a></h2>
+<p><img src="map/c-qp2.png" alt="multi-color qp2"
+ width="141" height="61" usemap="#c-qp2" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_c-qp2" class="i" href="javascript:Nav('c-qp2')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a12">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a14">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/c-qp2.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/c-qp2.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/c-qp2.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/c-qp2.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/c-qp2.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/c-qp2.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/c-qp2.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=c-qp2" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_c-qp2"><p><table id="t-c-qp2" style="width:145px">
+    <colgroup><col span="2" style="width:72px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="0/c6blbl04.rle">Two blinkers offset
+	    (0, 4) [3]</a></td>
+	<td><a class="p" href="12/c12tl.rle">Traffic light;
+	    TL [5&hellip;9]</a></td>
+    </tr>
+</table></p></div>
+<map name="c-qp2">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,41,20,61" href="#bottom" />
+	<area coords="121,0,141,20" href="zip/c-qp2.zip" />
+	<area coords="121,41,141,61" href="stamp/c-qp2.rle" />
+	<area coords="0,0,70,61" href="0/c6blbl04.rle" />
+	<area coords="70,0,130,61" href="12/c12tl.rle" />
+</map>
+<p>In most cases, multi-color quasi-oscillators (and other quasi-objects) are
+not very interesting, since most of them are formed either from synthesizing
+two objects simultaneously, or adding one object to a previously-synthesized
+object. In either case, it is usually trivial to make one piece of one color,
+and the other piece of a different color. Cases like the ones shown above,
+where quasi-objects form spontaneously, are more interesting.</p>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Blinker">Blinker</a>,
+<a class="x" href="http://conwaylife.com/wiki/Traffic_light">Traffic light</a>.</p>
+</article>
+<hr /><article><a id="a14" name="a14"></a>
+<a id="c-p3" name="c-p3"></a>
+<h2>14 Multi-color
+<a class="i" href="p3.htm">period 3 oscillators</a></h2>
+<p><img src="map/c-p3.png" alt="multi-color period 3 oscillators"
+ width="581" height="181" usemap="#c-p3" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_c-p3" class="i" href="javascript:Nav('c-p3')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a13">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a15">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/c-p3.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/c-p3.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/c-p3.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/c-p3.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/c-p3.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/c-p3.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/c-p3.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=c-p3" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_c-p3"><p><table id="t-c-p3" style="width:585px">
+    <colgroup><col style="width:91px;" /><col span="5" style="width:80px;" />
+	<col style="width:92px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="12/c12ca.rle">
+	    Caterer [7&hellip;x] (P3, P6)</a></td>
+	<td><a class="p" href="13/c13jm.rle">
+	    Jam [6&hellip;x] (P3, P6, P12, P18)</a></td>
+	<td><a class="p" href="14/c14eet.rle">
+	    Two eaters; Eater eating eater [8&hellip;x] (P3, P6, P9, P18)</a></td>
+	<td><a class="p" href="16/c16cfbk2.rle">
+	    Block on down candle&shy;frobra [7&hellip;x] (P3, P6, P9, P12)</a></td>
+	<td><a class="p" href="16/c16kyky1.rle">
+	    Short Keys [6&hellip;x] (P3, P9)</a></td>
+	<td><a class="p" href="16/c16kyky2.rle">
+	    Odd Keys [9&hellip;x] (P3, P6, P9, P12, P18, P36)</a></td>
+	<td><a class="p" href="16/c16kyky3.rle">
+	    Bent Keys [8&hellip;x] (P3, P6, P9, P12)</a></td>
+    </tr>
+    <tr>
+	<td><a class="p" href="17/c17cfbt3.rle">Up boat on down candle&shy;frobra;
+	    Cis-boat and long hook eating tub [9&hellip;x]
+	    (P3, P6, P9, P12)</a></td>
+	<td><a class="p" href="17/c17kysp2.rle">Bent key and skewed pole
+	    [8&hellip;x] (P3, P6, P9,P12, P18, P36)</a></td>
+	<td><a class="p" href="18/c18cfhv1.rle">
+	    Beehive on up candle&shy;frobra [7&hellip;x] (P3, P6, P9, P12)</a></td>
+	<td><a class="p" href="18/c18spsp1.rle">
+	    Cis skewed poles [8&hellip;x] (P3, P6, P9)</a></td>
+	<td><a class="p" href="18/c18cupbk.rle">
+	    Block on cuphook w/&#8203;pre-block [8&hellip;15]</a></td>
+	<td><a class="p" href="18/c18cutb1.rle">
+	    Block on up cuphook w/&#8203;tail; M.I.T. Oscillator [8&hellip;13]</a></td>
+	<td><a class="p" href="lg/c48pu.rle">Pulsar; Pulsar CP 48-54-72
+	    [4&hellip;x] (P3, P6, P9, P18, P24, P72)</a></td>
+    </tr>
+</table></p></div>
+<map name="c-p3">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,161,20,181" href="#bottom" />
+	<area coords="561,0,581,20" href="zip/c-p3.zip" />
+	<area coords="561,161,581,181" href="stamp/c-p3.rle" />
+	<area coords="0,0,90,90" href="12/c12ca.rle" />
+	<area coords="90,0,170,90" href="13/c13jm.rle" />
+	<area coords="170,0,250,90" href="14/c14eet.rle" />
+	<area coords="250,0,330,90" href="16/c16cfbk2.rle" />
+	<area coords="330,0,410,90" href="16/c16kyky1.rle" />
+	<area coords="410,0,490,90" href="16/c16kyky2.rle" />
+	<area coords="490,0,581,90" href="16/c16kyky3.rle" />
+	<area coords="0,90,90,181" href="17/c17cfbt3.rle" />
+	<area coords="90,90,170,181" href="17/c17kysp2.rle" />
+	<area coords="170,90,250,181" href="18/c18cfhv1.rle" />
+	<area coords="250,90,330,181" href="18/c18spsp1.rle" />
+	<area coords="330,90,410,181" href="18/c18cupbk.rle" />
+	<area coords="410,90,490,181" href="18/c18cutb1.rle" />
+	<area coords="490,90,581,181" href="lg/c48pu.rle" />
+</map>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Beehive">Beehive</a>,
+<a class="x" href="http://conwaylife.com/wiki/Bent_keys">Bent keys</a>,
+<a class="x" href="http://conwaylife.com/wiki/Block">Block</a>,
+<a class="x" href="http://conwaylife.com/wiki/Boat">Boat</a>,
+<a class="x" href="http://conwaylife.com/wiki/Candlefrobra">Candlefrobra</a>,
+<a class="x" href="http://conwaylife.com/wiki/Caterer">Caterer</a>,
+<a class="x" href="http://conwaylife.com/wiki/Cis-block_and_long_hook_eating_tub">Cis-block and long hook eating tub</a>,
+<a class="x" href="http://conwaylife.com/wiki/Cis-boat_and_long_hook_eating_tub">Cis-boat and long hook eating tub</a>,
+<a class="x" href="http://conwaylife.com/wiki/Cuphook">Cuphook</a>,
+<a class="x" href="http://conwaylife.com/wiki/Eater_1">Eater 1</a>,
+<a class="x" href="http://conwaylife.com/wiki/Jam">Jam</a>,
+<a class="x" href="http://conwaylife.com/wiki/List_of_common_oscillators">List of common oscillators</a>,
+<a class="x" href="http://conwaylife.com/wiki/Loaf">Loaf</a>,
+<a class="x" href="http://conwaylife.com/wiki/Odd_keys">Odd keys</a>,
+<a class="x" href="http://conwaylife.com/wiki/Pulsar">Pulsar</a>,
+<a class="x" href="http://conwaylife.com/wiki/Short_keys">Short keys</a>,
+<a class="x" href="http://conwaylife.com/wiki/Two_eaters">Two eaters</a>.</p>
+</article>
+<hr /><article><a id="a15" name="a15"></a>
+<a id="c-p4" name="c-p4"></a>
+<h2>11 Multi-color
+<a class="i" href="p4.htm">period 4 oscillators</a></h2>
+<p><img src="map/c-p4.png" alt="multi-color period 4 oscillators"
+ width="561" height="161" usemap="#c-p4" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_c-p4" class="i" href="javascript:Nav('c-p4')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a14">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a16">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/c-p4.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/c-p4.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/c-p4.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/c-p4.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/c-p4.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/c-p4.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/c-p4.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=c-p4" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_c-p4"><p><table id="t-c-p4" style="width:565px">
+    <colgroup><col style="width:71px;" /><col span="7" style="width:60px;" />
+	<col style="width:72px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="0/c6td.rle">
+	    Toad [4&hellip;x] (P2, P4, P8)</a></td>
+	<td><a class="p" href="0/c6ck.rle">
+	    Clock [9&hellip;x] (P2, P4, P8)</a></td>
+	<td class="r"><a class="p" href="0/c8bp.rle">
+	    Bipole [x] (P2, P4, P6)</a></td>
+	<td class="r"><a class="p" href="0/c9tp.rle">
+	    Tripole [x] (P2, P4, P6)</a></td>
+	<td class="r"><a class="p" href="13/c13ydtsy.rle">By flops; Butter&shy;fly;
+	    Griddles on two Ys [x] (P2, P4)</a></td>
+	<td class="r"><a class="p" href="14/14tdtsy.rle">
+	    Why not; Griddles on tub and Y [x] (P2, P4)</a></td>
+	<td class="r"><a class="p" href="14/c14p2-11.rle">
+	    14P2.11 [x] (P2, P4, P6, P8, P16, P24)</a></td>
+	<td class="r"><a class="p" href="15/c15mm1.rle">Muttering moat 1 [x]
+	    (P2, P4, P6, P8, P10, P12, P14, P16, P18, P24, P26)</a></td>
+	<td class="r"><a class="p" href="24/c24fb.rle">Fore and back;
+	    Complem&shy;entary blinker [x] (P2, P4, P6)</a></td>
+    </tr>
+    <tr>
+	<td class="y"><a class="p" href="12/c12md.rle">
+	    Mold [14&hellip;x] (P4, P12)</a></td>
+	<td><a class="p" href="12/c12mz.rle">
+	    Mazing [5]</a></td>
+	<td><a class="p" href="18/c18mg.rle">
+	    Mono&shy;gram; Init&shy;ials; JHC [15]</a></td>
+	<td colspan="6" class="s">&nbsp;</td>
+    </tr>
+</table></p></div>
+<map name="c-p4">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,141,20,161" href="#bottom" />
+	<area coords="541,0,561,20" href="zip/c-p4.zip" />
+	<area coords="541,141,561,161" href="stamp/c-p4.rle" />
+	<area coords="0,0,70,90" href="0/c6td.rle" />
+	<area coords="70,0,130,90" href="0/c6ck.rle" />
+	<area coords="130,0,190,90" href="0/c8bp.rle" />
+	<area coords="190,0,250,90" href="0/c9tp.rle" />
+	<area coords="250,0,310,90" href="13/c13ydtsy.rle" />
+	<area coords="310,0,370,90" href="14/c14tdtsy.rle" />
+	<area coords="370,0,430,90" href="14/c14p2-11.rle" />
+	<area coords="430,0,490,90" href="15/c15mm1.rle" />
+	<area coords="490,0,561,90" href="24/c24fb.rle" />
+	<area coords="0,90,70,161" href="12/c12md.rle" />
+	<area coords="70,90,130,161" href="12/c12mz.rle" />
+	<area coords="130,90,190,161" href="18/c18mg.rle" />
+</map>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Bipole">Bipole</a>,
+<a class="x" href="http://conwaylife.com/wiki/By_flops">By flops</a>,
+<a class="x" href="http://conwaylife.com/wiki/Clock">Clock</a>,
+<a class="x" href="http://conwaylife.com/wiki/Fore_and_back">Fore and back</a>,
+<a class="x" href="http://conwaylife.com/wiki/List_of_common_oscillators">List of common oscillators</a>,
+<a class="x" href="http://conwaylife.com/wiki/Loaf">Loaf</a>,
+<a class="x" href="http://conwaylife.com/wiki/Mazing">Mazing</a>,
+<a class="x" href="http://conwaylife.com/wiki/Mold">Mold</a>,
+<a class="x" href="http://conwaylife.com/wiki/Monogram">Monogram</a>,
+<a class="x" href="http://conwaylife.com/wiki/Muttering_moat_1">Muttering moat 1</a>,
+<a class="x" href="http://conwaylife.com/wiki/Toad">Toad</a>,
+<a class="x" href="http://conwaylife.com/wiki/Tripole">Tripole</a>,
+<a class="x" href="http://conwaylife.com/wiki/Tub">Tub</a>.</p>
+</article>
+<hr /><article><a id="a16" name="a16"></a>
+<a id="c-p5" name="c-p5"></a>
+<h2>4 Multi-color
+<a class="i" href="p5.htm">period 5 oscillators</a></h2>
+<p><img src="map/c-p5.png" alt="multi-color period 5 oscillators"
+ width="341" height="81" usemap="#c-p5" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_c-p5" class="i" href="javascript:Nav('c-p5')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a15">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a17">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/c-p5.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/c-p5.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/c-p5.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/c-p5.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/c-p5.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/c-p5.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/c-p5.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=c-p5" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_c-p5"><p><table id="t-c-p5" style="width:345px">
+    <colgroup><col style="width:91px;" /><col span="2" style="width:80px;" />
+	<col style="width:92px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="15/c15ap.rle">Pseudo-barber&shy;pole;
+	    Flammen&shy;kamp&rsquo;s P5 [13&hellip;x] (P5, P15)</a></td>
+	<td><a class="p" href="16/c16oc.rle">
+	    Octagon 2 [10&hellip;22]</a></td>
+	<td><a class="p" href="17/c17svac.rle">
+	    Silver&rsquo;s P5 on carrier [14&hellip;x] (P5, P10, P15)</a></td>
+	<td><a class="p" href="20/c20et2z.rle">
+	    Pentoad; Pentoad between two eaters [12]</a></td>
+    </tr>
+</table></p></div>
+<map name="c-p5">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,61,20,81" href="#bottom" />
+	<area coords="321,0,341,20" href="zip/c-p5.zip" />
+	<area coords="321,61,341,81" href="stamp/c-p5.rle" />
+	<area coords="0,0,90,81" href="15/c15ap.rle" />
+	<area coords="90,0,170,81" href="16/c16oc.rle" />
+	<area coords="170,0,250,81" href="17/c17svac.rle" />
+	<area coords="250,0,341,81" href="20/c20et2z.rle" />
+</map>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Aircraft_carrier">Aircraft carrier</a>,
+<a class="x" href="http://conwaylife.com/wiki/Eater_1">Eater 1</a>,
+<a class="x" href="http://conwaylife.com/wiki/List_of_common_oscillators">List of common oscillators</a>,
+<a class="x" href="http://conwaylife.com/wiki/Octagon_2">Octagon 2</a>,
+<a class="x" href="http://conwaylife.com/wiki/Pentoad">Pentoad</a>,
+<a class="x" href="http://conwaylife.com/wiki/Pseudo-barberpole">Pseudo-barberpole</a>,
+<a class="x" href="http://conwaylife.com/wiki/Silver's_p5">Silver&rsquo;s p5</a>.</p>
+</article>
+<hr /><article><a id="a17" name="a17"></a>
+<a id="c-p6" name="c-p6"></a>
+<h2>20 Multi-color
+<a class="i" href="p6.htm">period 6 oscillators</a></h2>
+<p><img src="map/c-p6.png" alt="multi-color P6 oscillators"
+ width="581" height="261" usemap="#c-p6" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_c-p6" class="i" href="javascript:Nav('c-p6')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a16">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a18">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/c-p6.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/c-p6.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/c-p6.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/c-p6.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/c-p6.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/c-p6.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/c-p6.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=c-p6" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_c-p6"><p><table id="t-c-p6" style="width:585px">
+    <colgroup><col style="width:91px;" /><col span="5" style="width:80px;" />
+	<col style="width:92px;" /></colgroup>
+    <tr>
+	<td class="r"><a class="p" href="0/c8bp.rle">
+	    Bipole [x] (P2, P4, P6)</a></td>
+	<td class="r"><a class="p" href="0/c9tp.rle">
+	    Tripole [x] (P2, P4, P6)</a></td>
+	<td class="r"><a class="p" href="10/c10qp.rle">
+	    Quad&shy;pole [x] (P2, P4, P8)</a></td>
+	<td class="r"><a class="p" href="12/c12fx.rle">
+	    Fox; Gnome [x] (P2, P6, P8, P16, P18)</a></td>
+	<td class="r"><a class="p" href="12/c12hp.rle">
+	    Hexapole [8&hellip;x] (P2, P6, P26)</a></td>
+	<td class="r"><a class="p" href="14/c14p2-11.rle">
+	    14P2.11 [x] (P2, P4, P6, P8, P16, P24)</a></td>
+	<td class="r"><a class="p" href="15/c15mm1.rle">Muttering moat 1 [x]
+	    (P2, P4, P6, P8, P10, P12, P14, P16, P18, P24, P26)</a></td>
+    </tr>
+    <tr>
+	<td class="r"><a class="p" href="24/c24fb.rle">Fore and back;
+	    Complem&shy;entary blinker [x] (P2, P4, P6)</a></td>
+	<td class="r"><a class="p" href="12/c12ca.rle">
+	    Caterer [x] (P3, P6)</a></td>
+	<td class="r"><a class="p" href="13/c13jm.rle">
+	    Jam [x] (P3, P6, P12, P18)</a></td>
+	<td class="r"><a class="p" href="14/c14eet.rle">
+	    Two eaters; Eater eating eater [x] (P3, P6, P9, P18)</a></td>
+	<td class="r"><a class="p" href="16/c16cfbk2.rle">
+	    Block on down candle&shy;frobra [x] (P3, P6, P9, P12)</a></td>
+	<td class="r"><a class="p" href="16/c16kyky2.rle">
+	    Odd Keys [x] (P3, P6, P9, P12, P18, P36)</a></td>
+	<td class="r"><a class="p" href="16/c16kyky3.rle">
+	    Bent Keys [x] (P3, P6, P9, P12)</a></td>
+    </tr>
+    <tr>
+	<td class="r"><a class="p" href="17/c17cfbt3.rle">
+	    Up boat on down candle&shy;frobra; Cis-boat
+	    and long hook eating tub [x] (P3, P6, P9, P12)</a></td>
+	<td class="r"><a class="p" href="17/c17kysp2.rle">
+	    Bent key and skewed pole [x] (P3, P6, P9, P12, P18, P36)</a></td>
+	<td class="r"><a class="p" href="18/c18cfhv1.rle">
+	    Beehive on up candle&shy;frobra [x] (P3, P6, P9, P12)</a></td>
+	<td class="r"><a class="p" href="18/c18spsp1.rle">
+	    Cis skewed poles [x] (P3, P6, P9)</a></td>
+	<td class="r"><a class="p" href="lg/c48pu.rle">Pulsar; Pulsar CP 48-54-72
+	    [x] (P3, P6, P9, P18, P24, P72)</a></td>
+	<td><a class="p" href="16/c16ux.rle">Unix;
+	    Two blocks hassling long barge [7&hellip;15] (P6, P18)</a></td>
+	<td><a class="p" href="28/c28a4all.rle">28P6.5;
+	    A for all [12]</a></td>
+    </tr>
+</table></p></div>
+<map name="c-p6">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,241,20,261" href="#bottom" />
+	<area coords="561,0,581,20" href="zip/c-p6.zip" />
+	<area coords="561,241,581,261" href="stamp/c-p6.rle" />
+	<area coords="0,0,90,90" href="0/c8bp.rle" />
+	<area coords="90,0,170,90" href="0/c9tp.rle" />
+	<area coords="170,0,250,90" href="10/c10qp.rle" />
+	<area coords="250,0,330,90" href="12/c12fx.rle" />
+	<area coords="330,0,410,90" href="12/c12hp.rle" />
+	<area coords="410,0,490,90" href="14/c14p2-11.rle" />
+	<area coords="490,0,581,90" href="15/c15mm1.rle" />
+	<area coords="0,90,90,170" href="24/c24fb.rle" />
+	<area coords="90,90,170,170" href="12/c12ca.rle" />
+	<area coords="170,90,250,170" href="13/c13jm.rle" />
+	<area coords="250,90,330,170" href="14/c14eet.rle" />
+	<area coords="330,90,410,170" href="16/c16cfbk2.rle" />
+	<area coords="410,90,490,170" href="16/16kyky2.rle" />
+	<area coords="490,90,581,170" href="16/16kyky3.rle" />
+	<area coords="0,170,90,261" href="17/c17cfbt3.rle" />
+	<area coords="90,170,170,261" href="17/c17kysp2.rle" />
+	<area coords="170,170,250,261" href="18/c18cfhv1.rle" />
+	<area coords="250,170,330,261" href="18/c18spsp1.rle" />
+	<area coords="330,170,410,261" href="lg/c48pu.rle" />
+	<area coords="410,170,490,261" href="16/c16ux.rle" />
+	<area coords="490,170,581,261" href="28/c28a4all.rle" />
+</map>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/A_for_all">A for all</a>,
+<a class="x" href="http://conwaylife.com/wiki/Beehive">Beehive</a>,
+<a class="x" href="http://conwaylife.com/wiki/Bent_keys">Bent keys</a>,
+<a class="x" href="http://conwaylife.com/wiki/Bipole">Bipole</a>,
+<a class="x" href="http://conwaylife.com/wiki/Block">Block</a>,
+<a class="x" href="http://conwaylife.com/wiki/Boat">Boat</a>,
+<a class="x" href="http://conwaylife.com/wiki/Candlefrobra">Candlefrobra</a>,
+<a class="x" href="http://conwaylife.com/wiki/Caterer">Caterer</a>,
+<a class="x" href="http://conwaylife.com/wiki/Cis-block_and_long_hook_eating_tub">Cis-block and long hook eating tub</a>,
+<a class="x" href="http://conwaylife.com/wiki/Cis-boat_and_long_hook_eating_tub">Cis-boat and long hook eating tub</a>,
+<a class="x" href="http://conwaylife.com/wiki/Eater_1">Eater 1</a>,
+<a class="x" href="http://conwaylife.com/wiki/Fore_and_back">Fore and back</a>,
+<a class="x" href="http://conwaylife.com/wiki/Fox">Fox</a>,
+<a class="x" href="http://conwaylife.com/wiki/Hexapole">Hexapole</a>,
+<a class="x" href="http://conwaylife.com/wiki/Jam">Jam</a>,
+<a class="x" href="http://conwaylife.com/wiki/List_of_common_oscillators">List of common oscillators</a>,
+<a class="x" href="http://conwaylife.com/wiki/Loaf">Loaf</a>,
+<a class="x" href="http://conwaylife.com/wiki/Long_barge">Long barge</a>,
+<a class="x" href="http://conwaylife.com/wiki/Muttering_moat_1">Muttering moat 1</a>,
+<a class="x" href="http://conwaylife.com/wiki/Odd_keys">Odd keys</a>,
+<a class="x" href="http://conwaylife.com/wiki/Pulsar">Pulsar</a>,
+<a class="x" href="http://conwaylife.com/wiki/Quadpole">Quadpole</a>,
+<a class="x" href="http://conwaylife.com/wiki/Tripole">Tripole</a>,
+<a class="x" href="http://conwaylife.com/wiki/Two_eaters">Two eaters</a>,
+<a class="x" href="http://conwaylife.com/wiki/Unix">Unix</a>.</p>
+</article>
+<hr /><article><a id="a18" name="a18"></a>
+<a id="c-p8" name="c-p8"></a>
+<h2>9 Multi-color
+<a class="i" href="p8.htm">period 8 oscillators</a></h2>
+<p><img src="map/c-p8.png" alt="multi-color period 8 oscillators"
+ width="581" height="161" usemap="#c-p8" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_c-p8" class="i" href="javascript:Nav('c-p8')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a17">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a19">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/c-p8.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/c-p8.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/c-p8.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/c-p8.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/c-p8.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/c-p8.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/c-p8.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=c-p8" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_c-p8"><p><table id="t-c-p8" style="width:585px">
+    <colgroup><col style="width:91px;" /><col span="5" style="width:80px;" />
+	<col style="width:92px;" /></colgroup>
+    <tr>
+	<td class="r"><a class="p" href="0/c6td.rle">
+	    Toad [x] (P2, P4, P8)</a></td>
+	<td class="r"><a class="p" href="0/c6ck.rle">
+	    Clock [x] (P2, P4, P8)</a></td>
+	<td class="r"><a class="p" href="10/c10qp.rle">
+	    Quad&shy;pole [x] (P2, P6, P8)</a></td>
+	<td class="r"><a class="p" href="12/c12lei.rle">
+	    Lei [x] (P2, P8)</a></td>
+	<td class="r"><a class="p" href="12/c12fx.rle">
+	    Fox; Gnome [x] (P2, P6, P8, P16, P18)</a></td>
+	<td class="r"><a class="p" href="14/c14p2-11.rle">
+	    14P2.11 [x] (P2, P4, P6, P8, P16, P24)</a></td>
+	<td class="r"><a class="p" href="15/c15mm1.rle">Muttering moat 1 [x]
+	    (P2, P4, P6, P8, P10, P12, P14, P16, P18, P24, P26)</a></td>
+    </tr>
+    <tr>
+	<td><a class="p" href="12/c12fg.rle">
+	    Figure 8; Big beacon [7-20]</a></td>
+	<td><a class="p" href="15/c15br.rle">
+	    Blocker [5&hellip;x] (P8, P24)</a></td>
+	<td><a class="p" href="17/c17tc.rle">
+	    Coe&rsquo;s P8 [5&hellip;16] (P8, P16)</a></td>
+	<td><a class="p" href="28/c28gy.rle">
+	    Kok&rsquo;s galaxy [11&hellip;x] (P8, P16)</a></td>
+	<td colspan="3" class="s">&nbsp;</td>
+    </tr>
+</table></p></div>
+<map name="c-p8">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,141,20,161" href="#bottom" />
+	<area coords="561,0,581,20" href="zip/c-p8.zip" />
+	<area coords="561,141,581,161" href="stamp/c-p8.rle" />
+	<area coords="0,0,70,90" href="0/c6td.rle" />
+	<area coords="70,0,130,90" href="0/c6ck.rle" />
+	<area coords="130,0,190,90" href="10/c10qp.rle" />
+	<area coords="190,0,250,90" href="12/c12lei.rle" />
+	<area coords="250,0,310,90" href="12/c12fx.rle" />
+	<area coords="310,0,370,90" href="14/c14p2-11.rle" />
+	<area coords="370,0,581,90" href="15/c15mm1.rle" />
+	<area coords="0,90,70,161" href="12/c12fg.rle" />
+	<area coords="70,90,130,161" href="15/c15br.rle" />
+	<area coords="130,90,190,161" href="17/c17tc.rle" />
+	<area coords="190,90,250,161" href="28/c28gy.rle" />
+</map>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Block">Block</a>,
+<a class="x" href="http://conwaylife.com/wiki/Blocker">Blocker</a>,
+<a class="x" href="http://conwaylife.com/wiki/Clock">Clock</a>,
+<a class="x" href="http://conwaylife.com/wiki/Coe's_p8">Coe&rsquo;s p8</a>,
+<a class="x" href="http://conwaylife.com/wiki/Figure_eight">Figure eight</a>,
+<a class="x" href="http://conwaylife.com/wiki/Fox">Fox</a>,
+<a class="x" href="http://conwaylife.com/wiki/Kok's_Galaxy">Kok&rsquo;s Galaxy</a>,
+<a class="x" href="http://conwaylife.com/wiki/Lei">Lei</a>,
+<a class="x" href="http://conwaylife.com/wiki/List_of_common_oscillators">List of common oscillators</a>,
+<a class="x" href="http://conwaylife.com/wiki/Muttering_moat_1">Muttering moat 1</a>,
+<a class="x" href="http://conwaylife.com/wiki/Quadpole">Quadpole</a>,
+<a class="x" href="http://conwaylife.com/wiki/Toad">Toad</a>.</p>
+</article>
+<hr /><article><a id="a19" name="a19"></a>
+<a id="c-p9" name="c-p9"></a>
+<h2>10 Multi-color
+<a class="i" href="p9.htm">period 9 oscillators</a></h2>
+<p><img src="map/c-p9.png" alt="multi-color P9 oscillators"
+ width="421" height="181" usemap="#c-p9" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_c-p9" class="i" href="javascript:Nav('c-p9')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a18">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a20">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/c-p9.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/c-p9.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/c-p9.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/c-p9.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/c-p9.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/c-p9.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/c-p9.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=c-p9" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_c-p9"><p><table id="t-c-p9" style="width:425px">
+    <colgroup><col style="width:91px;" /><col span="3" style="width:80px;" />
+	<col style="width:92px;" /></colgroup>
+    <tr>
+	<td class="r"><a class="p" href="14/c14eet.rle">
+	    Two eaters; Eater eating eater [x] (P3, P6, P9, P18)</a></td>
+	<td class="r"><a class="p" href="16/c16cfbk2.rle">
+	    Block on down candle&shy;frobra [x] (P3, P6, P9, P12)</a></td>
+	<td class="r"><a class="p" href="16/c16kyky1.rle">
+	    Short Keys [x] (P3, P9)</a></td>
+	<td class="r"><a class="p" href="16/c16kyky2.rle">
+	    Odd Keys [x] (P3, P6, P9, P12, P18, P36)</a></td>
+	<td class="r"><a class="p" href="16/c16kyky3.rle">
+	    Bent Keys [x] (P3, P6, P9, P12)</a></td>
+    </tr>
+    <tr>
+	<td class="r"><a class="p" href="17/c17cfbt3.rle">Up boat on down candle&shy;frobra;
+	    Cis-boat and long hook eating tub [x] (P3, P6, P9, P12)</a></td>
+	<td class="r"><a class="p" href="17/c17kysp2.rle">
+	    Bent key and skewed pole [x] (P3, P6, P9, P12, P18, P36)</a></td>
+	<td class="r"><a class="p" href="18/c18cfhv1.rle">
+	    Beehive on up candle&shy;frobra [x] (P3, P6, P9, P12)</a></td>
+	<td class="r"><a class="p" href="18/c18spsp1.rle">
+	    Cis skewed poles [x] (P3, P6, P9)</a></td>
+	<td class="r"><a class="p" href="lg/c48pu.rle">Pulsar; Pulsar CP 48-54-72
+	    [x] (P3, P6, P9, P18, P24, P72)</a></td>
+    </tr>
+</table></p></div>
+<map name="c-p9">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,161,20,181" href="#bottom" />
+	<area coords="401,0,421,20" href="zip/c-p9.zip" />
+	<area coords="401,161,421,181" href="stamp/c-p9.rle" />
+	<area coords="0,0,90,90" href="14/c14eet.rle" />
+	<area coords="90,0,170,90" href="16/c16cfbk2.rle" />
+	<area coords="170,0,250,90" href="16/c16kyky1.rle" />
+	<area coords="250,0,330,90" href="16/c16kyky2.rle" />
+	<area coords="330,0,421,90" href="16/c16kyky3.rle" />
+	<area coords="0,90,90,181" href="17/c17cfbt3.rle" />
+	<area coords="90,90,170,181" href="17/c17kysp2.rle" />
+	<area coords="170,90,250,181" href="18/c18cfhv1.rle" />
+	<area coords="250,90,330,181" href="18/c18spsp1.rle" />
+	<area coords="330,90,421,181" href="lg/c48pu.rle" />
+</map>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Beehive">Beehive</a>,
+<a class="x" href="http://conwaylife.com/wiki/Bent_keys">Bent keys</a>,
+<a class="x" href="http://conwaylife.com/wiki/Block">Block</a>,
+<a class="x" href="http://conwaylife.com/wiki/Boat">Boat</a>,
+<a class="x" href="http://conwaylife.com/wiki/Candlefrobra">Candlefrobra</a>,
+<a class="x" href="http://conwaylife.com/wiki/Cis-block_and_long_hook_eating_tub">Cis-block and long hook eating tub</a>,
+<a class="x" href="http://conwaylife.com/wiki/Cis-boat_and_long_hook_eating_tub">Cis-boat and long hook eating tub</a>,
+<a class="x" href="http://conwaylife.com/wiki/Eater_1">Eater 1</a>,
+<a class="x" href="http://conwaylife.com/wiki/List_of_common_oscillators">List of common oscillators</a>,
+<a class="x" href="http://conwaylife.com/wiki/Odd_keys">Odd keys</a>,
+<a class="x" href="http://conwaylife.com/wiki/Pulsar">Pulsar</a>,
+<a class="x" href="http://conwaylife.com/wiki/Short_keys">Short keys</a>,
+<a class="x" href="http://conwaylife.com/wiki/Two_eaters">Two eaters</a>.</p>
+</article>
+<hr /><article><a id="a20" name="a20"></a>
+<a id="c-p10" name="c-p10"></a>
+<h2>2 Multi-color
+<a class="i" href="p10.htm">period 10 oscillators</a></h2>
+<p><img src="map/c-p10.png" alt="color P10"
+ width="181" height="81" usemap="#c-p10" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_c-p10" class="i" href="javascript:Nav('c-p10')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a19">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a21">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/c-p10.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/c-p10.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/c-p10.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/c-p10.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/c-p10.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/c-p10.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/c-p10.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=c-p10" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_c-p10"><p><table id="t-c-p10" style="width:185px">
+    <colgroup><col span="2" style="width:92px;" /></colgroup>
+    <tr>
+	<td class="r"><a class="p" href="15/c15mm1.rle">Muttering moat 1 [x]
+	    (P2, P4, P6, P8, P10, P12, P14, P16, P18, P24, P26)</a></td>
+	<td class="r"><a class="p" href="17/c17svac.rle">
+	    Silver&rsquo;s P5 on carrier [x] (P5, P10, P15)</a></td>
+    </tr>
+</table></p></div>
+<map name="c-p10">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,61,20,81" href="#bottom" />
+	<area coords="161,0,181,20" href="zip/c-p10.zip" />
+	<area coords="161,61,181,81" href="stamp/c-p10.rle" />
+	<area coords="0,0,90,81" href="15/c15mm1.rle" />
+	<area coords="90,0,181,81" href="17/c17svac.rle" />
+</map>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Muttering_moat_1">Muttering moat 1</a>,
+<a class="x" href="http://conwaylife.com/wiki/Silver's_p10">Silver&rsquo;s p10</a>.</p>
+</article>
+<hr /><article><a id="a21" name="a21"></a>
+<a id="c-p12" name="c-p12"></a>
+<h2>9 Multi-color
+<a class="i" href="p12.htm">period 12 oscillators</a></h2>
+<p><img src="map/c-p12.png" alt="multi-color P12"
+ width="621" height="61" usemap="#c-p12" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_c-p12" class="i" href="javascript:Nav('c-p12')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a20">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a22">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/c-p12.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/c-p12.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/c-p12.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/c-p12.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/c-p12.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/c-p12.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/c-p12.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=c-p12" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_c-p12"><p><table id="t-c-p12" style="width:625px">
+    <colgroup><col style="width:71px;" /><col span="3" style="width:60px;" />
+	<col style="width:80px;" /><col style="width:60px;" />
+	<col span="2" style="width:80px;" /><col style="width:72px;" />
+	</colgroup>
+    <tr>
+	<td class="r"><a class="p" href="15/c15mm1.rle">Muttering moat 1 [x]
+	    (P2, P4, P6, P8, P10, P12, P14, P16, P18, P24, P26)</a></td>
+	<td class="r"><a class="p" href="13/c13jm.rle">
+	    Jam [x] (P3, P6, P12, P18)</a></td>
+	<td class="r"><a class="p" href="16/c16cfbk2.rle">
+	    Block on down candle&shy;frobra [x] (P3, P6, P9, P12)</a></td>
+	<td class="r"><a class="p" href="16/c16kyky2.rle">
+	    Odd Keys [x] (P3, P6, P9, P12, P18, P36)</a></td>
+	<td class="r"><a class="p" href="16/c16kyky3.rle">
+	    Bent Keys [x] (P3, P6, P9, P12)</a></td>
+	<td class="r"><a class="p" href="17/c17cfbt3.rle">Up boat on down candle&shy;frobra;
+	    Cis-boat and long hook eating tub [x] (P3, P6, P9, P12)</a></td>
+	<td class="r"><a class="p" href="17/c17kysp2.rle">
+	    Bent key and skewed pole [x] (P3, P6, P9, P12, P18, P36)</a></td>
+	<td class="r"><a class="p" href="18/c18cfhv1.rle">
+	    Beehive on up candle&shy;frobra [x] (P3, P6, P9, P12)</a></td>
+	<td class="r"><a class="p" href="12/c12md.rle">
+	    Mold [x] (P4, P12)</a></td>
+    </tr>
+</table></p></div>
+<map name="c-p12">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,41,20,61" href="#bottom" />
+	<area coords="601,0,621,20" href="zip/c-p12.zip" />
+	<area coords="601,41,621,61" href="stamp/c-p12.rle" />
+	<area coords="0,0,70,61" href="15/c15mm1.rle" />
+	<area coords="70,0,130,61" href="13/c13jm.rle" />
+	<area coords="130,0,190,61" href="16/c16cfbk2.rle" />
+	<area coords="190,0,250,61" href="16/c16kyky2.rle" />
+	<area coords="250,0,330,61" href="16/c16kyky3.rle" />
+	<area coords="330,0,390,61" href="17/c17cfbt3.rle" />
+	<area coords="390,0,470,61" href="17/c17kysp2.rle" />
+	<area coords="470,0,550,61" href="18/c18cfhv1.rle" />
+	<area coords="550,0,621,61" href="12/c12md.rle" />
+</map>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Beehive">Beehive</a>,
+<a class="x" href="http://conwaylife.com/wiki/Bent_keys">Bent keys</a>,
+<a class="x" href="http://conwaylife.com/wiki/Block">Block</a>,
+<a class="x" href="http://conwaylife.com/wiki/Boat">Boat</a>,
+<a class="x" href="http://conwaylife.com/wiki/Candlefrobra">Candlefrobra</a>,
+<a class="x" href="http://conwaylife.com/wiki/Cis-block_and_long_hook_eating_tub">Cis-block and long hook eating tub</a>,
+<a class="x" href="http://conwaylife.com/wiki/Cis-boat_and_long_hook_eating_tub">Cis-boat and long hook eating tub</a>,
+<a class="x" href="http://conwaylife.com/wiki/Jam">Jam</a>,
+<a class="x" href="http://conwaylife.com/wiki/List_of_common_oscillators">List of common oscillators</a>,
+<a class="x" href="http://conwaylife.com/wiki/Loaf">Loaf</a>,
+<a class="x" href="http://conwaylife.com/wiki/Mold">Mold</a>,
+<a class="x" href="http://conwaylife.com/wiki/Muttering_moat_1">Muttering moat 1</a>,
+<a class="x" href="http://conwaylife.com/wiki/Odd_keys">Odd keys</a>.</p>
+</article>
+<hr /><article><a id="a22" name="a22"></a>
+<a id="c-p14" name="c-p14"></a>
+<h2>2 Multi-color
+<a class="i" href="p14.htm">period 14 oscillators</a></h2>
+<p><img src="map/c-p14.png" alt="color P14"
+ width="181" height="61" usemap="#c-p14" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_c-p14" class="i" href="javascript:Nav('c-p14')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a21">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a23">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/c-p14.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/c-p14.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/c-p14.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/c-p14.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/c-p14.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/c-p14.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/c-p14.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=c-p14" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_c-p14"><p><table id="t-c-p14" style="width:185px">
+    <colgroup><col span="2" style="width:92px;" /></colgroup>
+    <tr>
+	<td class="r"><a class="p" href="15/c15mm1.rle">Muttering moat 1 [x]
+	    (P2, P4, P6, P8, P10, P12, P14, P16, P18, P24, P26)</a></td>
+	<td><a class="p" href="16/c16tu.rle">
+	    Tumbler [6&hellip;10]</a></td>
+    </tr>
+</table></p></div>
+<map name="c-p14">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,41,20,61" href="#bottom" />
+	<area coords="161,0,181,20" href="zip/c-p14.zip" />
+	<area coords="161,41,181,61" href="stamp/c-p14.rle" />
+	<area coords="0,0,90,61" href="15/c15mm1.rle" />
+	<area coords="90,0,181,61" href="16/c16tu.rle" />
+</map>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/List_of_common_oscillators">List of common oscillators</a>,
+<a class="x" href="http://conwaylife.com/wiki/Muttering_moat_1">Muttering moat 1</a>,
+<a class="x" href="http://conwaylife.com/wiki/Tumbler">Tumbler</a>.</p>
+</article>
+<hr /><article><a id="a23" name="a23"></a>
+<a id="c-p15" name="c-p15"></a>
+<h2>3 Multi-color
+<a class="i" href="p15.htm">period 15 oscillators</a></h2>
+<p><img src="map/c-p15.png" alt="color P15"
+ width="261" height="81" usemap="#c-p15" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_c-p15" class="i" href="javascript:Nav('c-p15')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a22">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a24">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/c-p15.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/c-p15.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/c-p15.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/c-p15.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/c-p15.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/c-p15.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/c-p15.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=c-p15" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_c-p15"><p><table id="t-c-p15" style="width:265px">
+    <colgroup><col style="width:91px;" /><col style="width:80px;" />
+	<col style="width:92px;" /></colgroup>
+    <tr>
+	<td class="r"><a class="p" href="15/c15ap.rle">Pseudo-barber&shy;pole;
+	    Flammen&shy;kamp&rsquo;s P5 [x] (P5, P15)</a></td>
+	<td class="r"><a class="p" href="17/c17svac.rle">
+	    Silver&rsquo;s P5 on carrier [x] (P5, P15)</a></td>
+	<td><a class="p" href="12/c12pc.rle">
+	    Penta&shy;decath&shy;lon [4]</a></td>
+    </tr>
+</table></p></div>
+<map name="c-p15">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,61,20,81" href="#bottom" />
+	<area coords="241,0,261,20" href="zip/c-p15.zip" />
+	<area coords="241,61,261,81" href="stamp/c-p15.rle" />
+	<area coords="0,0,90,81" href="15/c15ap.rle" />
+	<area coords="90,0,170,81" href="17/c17svac.rle" />
+	<area coords="170,0,261,81" href="12/c12pc.rle" />
+</map>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/List_of_common_oscillators">List of common oscillators</a>,
+<a class="x" href="http://conwaylife.com/wiki/Pentadecathlon">Pentadecathlon</a>,
+<a class="x" href="http://conwaylife.com/wiki/Pseudo_barberpole">Pseudo barberpole</a>,
+<a class="x" href="http://conwaylife.com/wiki/Silver's_p5">Silver&rsquo;s p5</a>.</p>
+</article>
+<hr /><article><a id="a24" name="a24"></a>
+<a id="c-p16" name="c-p16"></a>
+<h2>3 Multi-color
+<a class="i" href="p16.htm">period 16 oscillators</a></h2>
+<p><img src="map/c-p16.png" alt="multi-color P16"
+ width="421" height="81" usemap="#c-p16" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_c-p16" class="i" href="javascript:Nav('c-p16')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a23">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a25">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/c-p16.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/c-p16.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/c-p16.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/c-p16.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/c-p16.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/c-p16.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/c-p16.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=c-p16" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_c-p16"><p><table id="t-c-p16" style="width:425px">
+    <colgroup><col style="width:91px;" /><col span="3" style="width:80px;" />
+	<col style="width:92px;" /></colgroup>
+    <tr>
+	<td class="r"><a class="p" href="12/c12fx.rle">
+	    Fox; Gnome [x] (P2, P6, P8, P16, P18)</a></td>
+	<td class="r"><a class="p" href="14/c14p2-11.rle">
+	    14P2.11 [x] (P2, P4, P6, P8, P16, P24)</a></td>
+	<td class="r"><a class="p" href="15/c15mm1.rle">Muttering moat 1 [x]
+	    (P2, P4, P6, P8, P10, P12, P14, P16, P18, P24, P26)</a></td>
+	<td><a class="p" href="17/c17tc.rle">
+	    Coe&rsquo;s P8 [16] (P8, P16)</a></td>
+	<td class="r"><a class="p" href="28/c28gy.rle">
+	    Kok&rsquo;s galaxy [x] (P8, P16)</a></td>
+    </tr>
+</table></p></div>
+<map name="c-p16">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,61,20,81" href="#bottom" />
+	<area coords="401,0,421,20" href="zip/c-p16.zip" />
+	<area coords="401,61,421,81" href="stamp/c-p16.rle" />
+	<area coords="0,0,90,81" href="12/c12fx.rle" />
+	<area coords="90,0,170,81" href="14/c14p2-11.rle" />
+	<area coords="170,0,250,81" href="15/c15mm1.rle" />
+	<area coords="250,0,330,81" href="17/c17tc.rle" />
+	<area coords="330,0,421,81" href="28/c28gy.rle" />
+</map>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Block">Block</a>,
+<a class="x" href="http://conwaylife.com/wiki/Coe's_p8">Coe&rsquo;s p8</a>,
+<a class="x" href="http://conwaylife.com/wiki/Fox">Fox</a>,
+<a class="x" href="http://conwaylife.com/wiki/Kok's_galaxy">Kok&rsquo;s galaxy</a>,
+<a class="x" href="http://conwaylife.com/wiki/List_of_common_oscillators">List of common oscillators</a>,
+<a class="x" href="http://conwaylife.com/wiki/Muttering_moat_1">Muttering moat 1</a>.</p>
+</article>
+<hr /><article><a id="a25" name="a25"></a>
+<a id="c-p18" name="c-p18"></a>
+<h2>7 Multi-color
+period 18 oscillators</h2>
+<p>The ones involving keys have a pseudo-period of 18, a composite of
+<a class="j" href="#c-p6">6</a> and
+<a class="j" href="#c-p9">9</a>.</p>
+<p><img src="map/c-p18.png" alt="multi-color P18 oscillators"
+ width="637" height="101" usemap="#c-p18" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_c-p18" class="i" href="javascript:Nav('c-p18')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a24">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a26">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/c-p18.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/c-p18.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/c-p18.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/c-p18.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/c-p18.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/c-p18.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/c-p18.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=c-p18" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_c-p18"><p><table id="t-c-p18" style="width:641px">
+    <colgroup><col style="width:71px;" /><col span="3" style="width:60px;" />
+	<col span="4" style="width:80px;" /><col style="width:68px;" />
+	</colgroup>
+    <tr>
+	<td class="r"><a class="p" href="12/c12fx.rle">
+	    Fox; Gnome [x] (P2, P6, P8, P16, P18)</a></td>
+	<td class="r"><a class="p" href="15/c15mm1.rle">Muttering moat 1 [x]
+	    (P2, P4, P6, P8, P10, P12, P14, P16, P18, P24, P26)</a></td>
+	<td class="r"><a class="p" href="13/c13jm.rle">
+	    Jam [x] (P3, P6, P12, P18)</a></td>
+	<td class="r"><a class="p" href="14/c14eet.rle">
+	    Two eaters; Eater eating eater [x] (P3, P6, P9, P18)</a></td>
+	<td class="r"><a class="p" href="16/c16kyky2.rle">
+	    Odd Keys [x] (P3, P6, P9, P12, P18, P36)</a></td>
+	<td class="r"><a class="p" href="17/c17kysp2.rle">
+	    Bent key and skewed pole [x] (P3, P6, P9, P12, P18, P36)</a></td>
+	<td class="r"><a class="p" href="18/c18spsp1.rle">
+	    Cis skewed poles [x] (P3, P6, P9)</a></td>
+	<td class="r"><a class="p" href="lg/c48pu.rle">Pulsar; Pulsar CP 48-54-72
+	    [x] (P3, P6, P9, P18, P24, P72)</a></td>
+	<td class="y"><a class="p" href="16/c16ux.rle">Unix;
+	    Two blocks hassling long barge [14] (P6, P18)</a></td>
+    </tr>
+</table></p></div>
+<map name="c-p18">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,81,20,101" href="#bottom" />
+	<area coords="617,0,637,20" href="zip/c-p18.zip" />
+	<area coords="617,81,637,101" href="stamp/c-p18.rle" />
+	<area coords="0,0,70,101" href="12/c12fx.rle" />
+	<area coords="70,0,130,101" href="15/c15mm1.rle" />
+	<area coords="130,0,190,101" href="13/c13jm.rle" />
+	<area coords="190,0,250,101" href="14/c14eet.rle" />
+	<area coords="250,0,330,101" href="16/c16kyky2.rle" />
+	<area coords="330,0,410,101" href="17/c17kysp2.rle" />
+	<area coords="410,0,490,101" href="18/c18spsp1.rle" />
+	<area coords="490,0,570,101" href="lg/c48pu.rle" />
+	<area coords="570,0,637,101" href="16/c16ux.rle" />
+</map>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Block">Block</a>,
+<a class="x" href="http://conwaylife.com/wiki/Eater_1">Eater 1</a>,
+<a class="x" href="http://conwaylife.com/wiki/Fox">Fox</a>,
+<a class="x" href="http://conwaylife.com/wiki/Jam">Jam</a>,
+<a class="x" href="http://conwaylife.com/wiki/List_of_common_oscillators">List of common oscillators</a>,
+<a class="x" href="http://conwaylife.com/wiki/Loaf">Loaf</a>,
+<a class="x" href="http://conwaylife.com/wiki/Long_barge">Long barge</a>,
+<a class="x" href="http://conwaylife.com/wiki/Muttering_moat_1">Muttering moat 1</a>,
+<a class="x" href="http://conwaylife.com/wiki/Odd_keys">Odd keys</a>,
+<a class="x" href="http://conwaylife.com/wiki/Pulsar">Pulsar</a>,
+<a class="x" href="http://conwaylife.com/wiki/Two_eaters">Two eaters</a>,
+<a class="x" href="http://conwaylife.com/wiki/Unix">Unix</a>.</p>
+</article>
+<hr /><article><a id="a26" name="a26"></a>
+<a id="c-p24" name="c-p24"></a>
+<h2>3 Multi-color
+<a class="i" href="p24.htm">period 24 oscillators</a></h2>
+<p><img src="map/c-p24.png" alt="color P24"
+ width="341" height="101" usemap="#c-p24" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_c-p24" class="i" href="javascript:Nav('c-p24')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a25">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a27">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/c-p24.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/c-p24.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/c-p24.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/c-p24.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/c-p24.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/c-p24.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/c-p24.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=c-p24" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_c-p24"><p><table id="t-c-p24" style="width:345px">
+    <colgroup><col style="width:91px;" /><col span="2" style="width:80px;" />
+	<col style="width:92px;" /></colgroup>
+    <tr>
+	<td class="r"><a class="p" href="14/c14p2-11.rle">
+	    14P2.11 [x] (P2, P4, P6, P8, P16, P24)</a></td>
+	<td class="r"><a class="p" href="15/c15mm1.rle">Muttering moat 1 [x]
+	    (P2, P4, P6, P8, P10, P12, P14, P16, P18, P24, P26)</a></td>
+	<td class="r"><a class="p" href="lg/c48pu.rle">Pulsar; Pulsar CP 48-54-72
+	    [x] (P3, P6, P9, P18, P24, P72)</a></td>
+	<td class="x"><a class="p" href="15/c15br.rle">
+	    Blocker [x] (P8, P24)</a></td>
+    </tr>
+</table></p></div>
+<map name="c-p24">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,81,20,101" href="#bottom" />
+	<area coords="321,0,341,20" href="zip/c-p24.zip" />
+	<area coords="321,81,341,101" href="stamp/c-p24.rle" />
+	<area coords="0,0,90,101" href="14/c14p2-11.rle" />
+	<area coords="90,0,170,101" href="15/c15mm1.rle" />
+	<area coords="170,0,250,101" href="lg/c48pu.rle" />
+	<area coords="250,0,341,101" href="15/c15br.rle" />
+</map>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Block">Block</a>,
+<a class="x" href="http://conwaylife.com/wiki/Blocker">Blocker</a>,
+<a class="x" href="http://conwaylife.com/wiki/List_of_common_oscillators">List of common oscillators</a>,
+<a class="x" href="http://conwaylife.com/wiki/Muttering_moat_1">Muttering moat 1</a>,
+<a class="x" href="http://conwaylife.com/wiki/Pulsar">Pulsar</a>.</p>
+</article>
+<hr /><article><a id="a27" name="a27"></a>
+<a id="c-p26" name="c-p26"></a>
+<h2>2 Multi-color
+period 26 oscillators</h2>
+<p><img src="map/c-p26.png" alt="color P26"
+ width="161" height="61" usemap="#c-p26" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_c-p26" class="i" href="javascript:Nav('c-p26')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a26">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a28">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/c-p26.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/c-p26.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/c-p26.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/c-p26.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/c-p26.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/c-p26.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/c-p26.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=c-p26" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_c-p26"><p><table id="t-c-p26" style="width:165px">
+    <colgroup><col style="width:91px;" /><col style="width:72px;" /></colgroup>
+    <tr>
+	<td class="r"><a class="p" href="12/c12hp.rle">
+	    Hexapole [8&hellip;x] (P2, P6, P26)</a></td>
+	<td class="r"><a class="p" href="15/c15mm1.rle">Muttering moat 1 [x]
+	    (P2, P4, P6, P8, P10, P12, P14, P16, P18, P24, P26)</a></td>
+    </tr>
+</table></p></div>
+<map name="c-p26">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,41,20,61" href="#bottom" />
+	<area coords="141,0,161,20" href="zip/c-p26.zip" />
+	<area coords="141,41,161,61" href="stamp/c-p26.rle" />
+	<area coords="0,0,90,61" href="12/c12hp.rle" />
+	<area coords="90,0,161,61" href="15/c15mm1.rle" />
+</map>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Hexapole">Hexapole</a>,
+<a class="x" href="http://conwaylife.com/wiki/Muttering_moat_1">Muttering moat 1</a>.</p>
+</article>
+<hr /><article><a id="a28" name="a28"></a>
+<a id="c-p30" name="c-p30"></a>
+<h2>1 Multi-color
+<a class="i" href="p30.htm">period 30 oscillator</a></h2>
+<p><img src="map/c-p30.png" alt="color P30"
+ width="121" height="61" usemap="#c-p30" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_c-p30" class="i" href="javascript:Nav('c-p30')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a27">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a29">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/c-p30.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/c-p30.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/c-p30.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/c-p30.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/c-p30.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/c-p30.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/c-p30.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=c-p30" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_c-p30"><p><table id="t-c-p30" style="width:125px">
+    <colgroup><col style="width:123px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="20/c20bqbk1.rle">
+	    Queen bee shuttle between cis blocks [6&hellip;7]</a></td>
+    </tr>
+</table></p></div>
+<map name="c-p30">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,41,20,61" href="#bottom" />
+	<area coords="101,0,121,20" href="zip/c-p30.zip" />
+	<area coords="101,41,121,61" href="stamp/c-p30.rle" />
+	<area coords="0,0,121,61" href="20/c20bqbk1.rle" />
+</map>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Block">Block</a>,
+<a class="x" href="http://conwaylife.com/wiki/List_of_common_oscillators">List of common oscillators</a>,
+<a class="x" href="http://conwaylife.com/wiki/Queen_bee_shuttle">Queen bee shuttle</a>.</p>
+</article>
+<hr /><article><a id="a29" name="a29"></a>
+<a id="c-p36" name="c-p36"></a>
+<h2>1 Multi-color
+<a class="i" href="p36.htm">period 36 oscillators</a></h2>
+<p>These all have a pseudo-period of 36, a composite of
+<a class="j" href="#c-p9">9</a> and
+<a class="j" href="#c-p12">12</a>.</p>
+<p><img src="map/c-p36.png" alt="multi-color P36 oscillators"
+ width="181" height="81" usemap="#c-p36" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_c-p36" class="i" href="javascript:Nav('c-p36')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a28">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a30">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/c-p36.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/c-p36.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/c-p36.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/c-p36.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/c-p36.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/c-p36.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/c-p36.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=c-p36" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_c-p36"><p><table id="t-c-p36" style="width:185px">
+    <colgroup><col span="2" style="width:92px;" /></colgroup>
+    <tr>
+	<td class="r"><a class="p" href="16/c16kyky2.rle">
+	    Odd Keys [x] (P3, P6, P9, P12, P18, P36)</a></td>
+	<td class="r"><a class="p" href="17/c17kysp2.rle">
+	    Bent key and skewed pole [x] (P3, P6, P9, P12, P18, P36)</a></td>
+    </tr>
+</table></p></div>
+<map name="c-p36">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,61,20,81" href="#bottom" />
+	<area coords="161,0,181,20" href="zip/c-p36.zip" />
+	<area coords="161,61,181,81" href="stamp/c-p36.rle" />
+	<area coords="0,0,90,81" href="16/c16kyky2.rle" />
+	<area coords="90,0,181,81" href="17/c17kysp2.rle" />
+</map>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Odd_keys">Odd keys</a>.</p>
+</article>
+<hr /><article><a id="a30" name="a30"></a>
+<a id="c-p72" name="c-p72"></a>
+<h2>1 Multi-color
+period 72 oscillator</h2>
+<p><img src="map/c-p72.png" alt="color P72"
+ width="101" height="101" usemap="#c-p72" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_c-p72" class="i" href="javascript:Nav('c-p72')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a29">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a31">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/c-p72.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/c-p72.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/c-p72.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/c-p72.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/c-p72.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/c-p72.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/c-p72.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=c-p72" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_c-p72"><p><table id="t-c-p72" style="width:105px">
+    <colgroup><col style="width:103px;" /></colgroup>
+    <tr>
+	<td class="r"><a class="p" href="lg/c48pu.rle">Pulsar; Pulsar CP 48-54-72
+	    [x] (P3, P6, P9, P18, P24, P72)</a></td>
+    </tr>
+</table></p></div>
+<map name="c-p72">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,81,20,101" href="#bottom" />
+	<area coords="81,0,101,20" href="zip/c-p72.zip" />
+	<area coords="81,81,101,101" href="stamp/c-p72.rle" />
+	<area coords="0,0,101,101" href="lg/c48pu.rle" />
+</map>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/List_of_common_oscillators">List of common oscillators</a>,
+<a class="x" href="http://conwaylife.com/wiki/Pulsar">Pulsar</a>.</p>
+</article>
+<hr /><article><a id="a31" name="a31"></a>
+<a id="c-ss" name="c-ss"></a>
+<h2>14 Multi-color
+<a class="i" href="ss.htm">spaceships</a></h2>
+<p><img src="map/c-ss.png" alt="multi-color spaceships"
+ width="601" height="221" usemap="#c-ss" /></p>
+<p><table><colgroup><col span="12" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_c-ss" class="i" href="javascript:Nav('c-ss')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a30">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a32">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/c-ss.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/c-ss.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/c-ss.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="lis/c-ss.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/c-ss.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/c-ss.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=c-ss" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_c-ss"><p><table id="t-c-ss" style="width:605px">
+    <colgroup><col style="width:91px;" /><col span="3" style="width:80px;" />
+	<col span="2" style="width:100px;" /><col style="width:72px;" />
+	</colgroup>
+    <tr>
+	<td rowspan="2" class="y"><a class="p" href="0/c9lw.rle">
+	    Light-weight space&shy;ship; LWSS; Small fish;
+	    9P4&shy;H2V0.1; Glider 1062 [25&hellip;x] (P4, P8, P16)</a></td>
+	<td rowspan="2" class="y"><a class="p" href="11/c11mw.rle">
+	    Middle-weight space&shy;ship; MWSS; Medium fish;
+	    11P4&shy;H2V0.1 [23&hellip;x] (P4, P8, P16)</a></td>
+	<td rowspan="2" class="y"><a class="p" href="13/c13hw.rle">
+	    Heavy-weight space&shy;ship HWSS; Big fish;
+	    13P4&shy;H2V0.1 [21&hellip;x] (P4, P8, P16)</a></td>
+	<td rowspan="2"><a class="p" href="lg/c39lsl.rle">Schick ship behind two LWSS;
+	    Glider 13374 [10&hellip;x] (P12, P36)</a></td>
+	<td class="y"><a class="p" href="25/c25o3-1.rle">25P3&shy;H1V0.1;
+	    Glider 13881 [47]</a></td>
+	<td rowspan="2"><a class="p" href="34/c34dart.rle">
+	    Dart [25]</a></td>
+	<td rowspan="2" class="r"><a class="p" href="lg/c44turt.rle">
+	    Turtle; Glider 11302 [x] (P3, P24)</a></td>
+    </tr>
+    <tr>
+	<td class="y"><a class="p" href="25/25o3-2.rle">25P3&shy;H1V0.2;
+	    [26]</a></td>
+    </tr>
+    <tr>
+	<td><a class="p" href="0/c5gl.rle">Glider; Feather-weight
+	    space&shy;ship; FWSS; 5P4&shy;H1V1.1; Glider 115 [4&hellip;16]
+	    (P4, P12)</a></td>
+	<td><a class="p" href="25/c25crab.rle">Crab;
+	    Quarter [21]</a></td>
+	<td><a class="p" href="29/c29b29.rle">29P4&shy;H1V1.1;;
+	    B29 [25]</a></td>
+	<td class="s">&nbsp;</td>
+	<td class="y"><a class="p" href="lg/c36we.rle">Weekender;
+	    Glider 14105 [87&hellip;89] (P7, P14)</a></td>
+	<td><a class="p" href="20/c20lfr.rle">20P7&shy;H7V0.1;
+	    Loafer; [8]</a></td>
+	<td><a class="p" href="28/c28ch.rle">28P10&shy;H10V0.1;
+	    Copper&shy;head [14&hellip;22]</a></td>
+    </tr>
+</table></p></div>
+<map name="c-ss">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,201,20,221" href="#bottom" />
+	<area coords="581,0,601,20" href="zip/c-ss.zip" />
+	<area coords="581,201,601,221" href="stamp/c-ss.rle" />
+	<area coords="0,0,90,90" href="0/c9lw.rle" />
+	<area coords="90,0,170,90" href="11/c11mw.rle" />
+	<area coords="170,0,250,90" href="13/c13hw.rle" />
+	<area coords="250,0,330,90" href="lg/c39lsl.rle" />
+	<area coords="330,0,430,50" href="25/c25o3-1.rle" />
+	<area coords="430,0,530,90" href="34/c34dart.rle" />
+	<area coords="530,0,601,90" href="lg/c44turt.rle" />
+	<area coords="330,50,430,130" href="25/c25o3-2.rle" />
+	<area coords="0,130,90,221" href="0/c5gl.rle" />
+	<area coords="90,130,170,221" href="25/c25crab.rle" />
+	<area coords="170,130,250,221" href="29/c29b29.rle" />
+	<area coords="330,130,430,221" href="lg/c36we.rle" />
+	<area coords="430,130,530,221" href="20/c20lfr.rle" />
+	<area coords="530,130,601,221" href="28/c28ch.rle" />
+</map>
+<p>There are actually four different basic arrangements of escort ships for the
+<a class="i" href="flotilla.htm#ss-2s">Schick ship</a>, but only one is shown here, as
+the engine only cares about the colors of the tail sparks. All the examples
+shown here show escort ships whose tail sparks are a single color. Schick ships
+with multi-colored escort ships are also possible.</p>
+<p>The Turtle cannot yet be synthesized, but it is included here because of its
+interesting hybrid colorization.</p>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/25P3H1V0.1">25P3H1V0.1</a>,
+<a class="x" href="http://conwaylife.com/wiki/B29">B29</a>,
+<a class="x" href="http://conwaylife.com/wiki/Copperhead">Copperhead</a>,
+<a class="x" href="http://conwaylife.com/wiki/Dart">Dart</a>,
+<a class="x" href="http://conwaylife.com/wiki/Edge-repair_spaceship_1">Edge-repair spaceship 1</a>,
+<a class="x" href="http://conwaylife.com/wiki/Glider">Glider</a>,
+<a class="x" href="http://conwaylife.com/wiki/Heavyweight_spaceship">Heavyweight spaceship</a>,
+<a class="x" href="http://conwaylife.com/wiki/Lightweight_spaceship">Lightweight spaceship</a>,
+<a class="x" href="http://conwaylife.com/wiki/Loafer">Loafer</a>,
+<a class="x" href="http://conwaylife.com/wiki/Middleweight_spaceship">Middleweight spaceship</a>,
+<a class="x" href="http://conwaylife.com/wiki/Orion_2">Orion 2</a>,
+<a class="x" href="http://conwaylife.com/wiki/Schick_engine">Schick engine</a>,
+<a class="x" href="http://conwaylife.com/wiki/Turtle">Turtle</a>.</p>
+</article>
+<hr /><article><a id="a32" name="a32"></a>
+<a id="c-cons" name="c-cons"></a>
+<h2>12 Multi-color
+<a class="i" href="cons.htm">constellations</a></h2>
+<p><img src="map/c-cons.png" alt="multi-color constellations"
+ width="581" height="161" usemap="#c-cons" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_c-cons" class="i" href="javascript:Nav('c-cons')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a31">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a33">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/c-cons.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/c-cons.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/c-cons.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/c-cons.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/c-cons.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/c-cons.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/c-cons.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=c-cons" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_c-cons"><p><table id="t-c-cons" style="width:585px">
+    <colgroup><col style="width:91px;" /><col span="5" style="width:80px;" />
+	<col style="width:92px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="0/c8bkbk14.rle">
+	    Two blocks offset (4, 1) [2&hellip;8]</a></td>
+	<td><a class="p" href="10/c10btbt3.rle">
+	    Two up point-to-point boats&sup1; [3&hellip;6]</a></td>
+	<td><a class="p" href="16/c16bk4a.rle">
+	    Four skewed blocks [2]</a></td>
+	<td><a class="p" href="24/c24fl.rle">
+	    Fleet [3]</a></td>
+	<td><a class="p" href="24/c24shf.rle">
+	    Small honeyfarm&sup1; [6]</a></td>
+	<td><a class="p" href="24/c24hf.rle">
+	    Honeyfarm; HF [4]</a></td>
+	<td><a class="p" href="28/c28by.rle">
+	    Bakery&sup1; [4&hellip;26]</a></td>
+    </tr>
+    <tr>
+	<td colspan="2"><a class="p" href="16/c16lm.rle">
+	    Blockade (via Lumps of muck) [2]</a></td>
+	<td><a class="p" href="0/c6blbl04.rle">
+	    Two blinkers offset&sup2; (4, 0) [3]</a></td>
+	<td><a class="p" href="10/c10lfbl.rle">
+	    Loaf and blinker [2]</a></td>
+	<td><a class="p" href="12/c12tl.rle">
+	    Traffic light; TL&sup2; [5&hellip;9]</a></td>
+	<td><a class="p" href="18/c18ic.rle">
+	    Interchange [2]</a></td>
+	<td class="s">&nbsp;</td>
+    </tr>
+</table></p></div>
+<map name="c-cons">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,141,20,161" href="#bottom" />
+	<area coords="561,0,581,20" href="zip/c-cons.zip" />
+	<area coords="561,141,581,161" href="stamp/c-cons.rle" />
+	<area coords="0,0,90,90" href="0/c8bkbk14.rle" />
+	<area coords="90,0,170,90" href="10/c10btbt3.rle" />
+	<area coords="170,0,250,90" href="16/c16bk4a.rle" />
+	<area coords="250,0,330,90" href="24/c24fl.rle" />
+	<area coords="330,0,410,90" href="24/c24shf.rle" />
+	<area coords="410,0,490,90" href="24/c24hf.rle" />
+	<area coords="490,0,581,90" href="28/c28by.rle" />
+	<area coords="0,90,170,161" href="16/c16lm.rle" />
+	<area coords="170,90,250,161" href="0/c6blbl04.rle" />
+	<area coords="250,90,330,161" href="10/c10lfbl.rle" />
+	<area coords="330,90,410,161" href="12/c12tl.rle" />
+	<area coords="410,90,490,161" href="18/c18ic.rle" />
+</map>
+<p>Note &sup1;: These constellations are
+<a class="i" href="qp1.htm">quasi-still-lifes</a>.</p>
+<p>Note &sup2;: These constellations are
+<a class="i" href="qosc.htm">quasi-oscillators</a>.</p>
+<p>In most cases, multi-color constellations are not very interesting, since
+most of them are formed either from synthesizing two or more patterns
+simultaneously back-to-back, or adding one pattern to a previously-synthesized
+pattern. In either case, it is usually trivial to make one piece of one color,
+and the other piece of a different color. Cases like the ones shown above,
+where separate objects form spontaneously, are more interesting.</p>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Bakery">Bakery</a>,
+<a class="x" href="http://conwaylife.com/wiki/Beehive">Beehive</a>,
+<a class="x" href="http://conwaylife.com/wiki/Blinker">Blinker</a>,
+<a class="x" href="http://conwaylife.com/wiki/Block">Block</a>,
+<a class="x" href="http://conwaylife.com/wiki/Blockade">Blockade</a>,
+<a class="x" href="http://conwaylife.com/wiki/Boat">Boat</a>,
+<a class="x" href="http://conwaylife.com/wiki/Fleet">Fleet</a>,
+<a class="x" href="http://conwaylife.com/wiki/Four_skewed_blocks">Four skewed blocks</a>,
+<a class="x" href="http://conwaylife.com/wiki/Honey_farm">Honey farm</a>,
+<a class="x" href="http://conwaylife.com/wiki/Interchange">Interchange</a>,
+<a class="x" href="http://conwaylife.com/wiki/Loaf">Loaf</a>,
+<a class="x" href="http://conwaylife.com/wiki/Lumps_of_muck">Lumps of muck</a>,
+<a class="x" href="http://conwaylife.com/wiki/Ship">Ship</a>,
+<a class="x" href="http://conwaylife.com/wiki/Traffic_light">Traffic light</a>.</p>
+</article>
+<hr class="a" /><article><a id="a33" name="a33"></a>
+<a id="c-link" name="c-link"></a>
+<h2>Links</h2>
+<p>Some of the earliest research on Immigration was first published in several
+issues of <a class="p" href="http://conwaylife.com/wiki/Lifeline">Lifeline</a>, a
+newsletter published by
+<a class="i" href="lifecred.htm#wainwright">Robert T. Wainwright</a>
+in the early 1970s:</p>
+<p><ul>
+    <li><a class="p" href="http://conwaylife.com/wiki/Lifeline_Volume_2">Volume
+	2</a>, June 1971
+	(<a class="x" href="http://conwaylife.com/wiki/File:Lifeline_vol_2_p14.jpg">page
+	14</a>).</li>
+    <li><a class="p" href="http://conwaylife.com/wiki/Lifeline_Volume_3">Volume
+	3</a>, September 1971
+	(<a class="x" href="http://conwaylife.com/wiki/File:Lifeline_vol_3_p31.jpg">page
+	31</a>).</li>
+    <li><a class="p" href="http://conwaylife.com/wiki/Lifeline_Volume_9">Volume
+	9</a>, March 1973
+	(<a class="x" href="http://conwaylife.com/wiki/File:Lifeline_vol_9_p5.jpg">page
+	5</a>).</li>
+    <li><a class="p" href="http://conwaylife.com/wiki/Lifeline_Volume_11">Volume
+	11</a>, September 1973
+	(<a class="x" href="http://conwaylife.com/wiki/File:Lifeline_vol_11_p12.jpg">page
+	12</a>,
+	<a class="x" href="http://conwaylife.com/wiki/File:Lifeline_vol_11_p13.jpg">page
+	13</a>).</li>
+</ul></p>
+</article>
+</main>
+<hr class="a" /><a id="a34" name="a34"></a>
+<a id="bottom" name="bottom"></a>
+<p><b>Other types:</b>
+	<a class="i" href="p1.htm">still-lifes</a>,
+	<a class="i" href="pp1.htm">pseudo-still-lifes</a>,
+	<a class="i" href="qp1.htm">quasi-still-lifes</a>,
+	<a class="i" href="osc.htm">oscillators</a>,
+	<a class="i" href="period.htm">oscillators by period</a>,
+	<a class="i" href="posc.htm">pseudo-oscillators</a>,
+	<a class="i" href="pperiod.htm">pseudo-oscillators by period</a>,
+	<a class="i" href="qosc.htm">quasi-oscillators</a>,
+	<a class="i" href="qperiod.htm">quasi-oscillators by period</a>,
+	<a class="i" href="gun.htm">guns</a>,
+	multi-colored Life,
+	<a class="i" href="ss.htm">small spaceships</a>,
+	<a class="i" href="pss.htm">pseudo-spaceships</a>,
+	<a class="i" href="qss.htm">quasi-spaceships</a>,
+	<a class="i" href="exotic.htm">exotic spaceships</a>,
+	<a class="i" href="flotilla.htm">spaceship flotillae</a>,
+	<a class="i" href="owss.htm">overweight spaceships</a>,
+	<a class="i" href="puff.htm">puffers</a>,
+	<a class="i" href="cons.htm">constellations</a>,
+	<a class="i" href="meth.htm">methuselahs</a>,
+	<a class="i" href="bad.htm">not quite stable patterns</a>.</p>
+<p><b>See also:</b> Life patterns sorted by:
+	<a class="i" href="objcount.htm">counts</a>,
+	<a class="i" href="common.htm">frequency of occurrence</a>,
+	<a class="i" href="objcost.htm">cost in gliders</a>,
+	<a class="i" href="objname.htm">name</a>,
+	<a class="i" href="objsize.htm">size in bits</a>,
+	or <a class="i" href="objtype.htm">type</a>.</p>
+<p><a href="index.htm">Home page</a> |
+<a href="lifepage.htm">Life page</a></p>
+<p><a href="lifepage.htm#copyright">Copyright &copy;
+1997, 1998, 1999, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022 by Mark. D. Niemiec.
+All rights reserved</a>.<br />
+This page was last updated on <em>2022-07-03</em>.</p>
+<script type="text/javascript"><!--
+"use strict";
+// Convert a named DOM object (id="id") into the actual object
+function Id (id) {
+    return document.getElementById (id);
+}
+// Expand or collapse stamp image text table
+function Nav (n) {
+    var v = Id ("a_" + n).childNodes[0].nodeValue === "+";
+    Id ("a_" + n).childNodes[0].nodeValue = v ? "\u2013" : "+";
+    Id ("b_" + n).style.display = v ? "block" : "none";
+}
+// Set alt and title attributes on an element
+function SetAltTitle (p, n) {
+    if (p && p.href) {
+	p.title = p.alt = n;
+    }
+}
+// Provide title tooltips for all stamp images
+function Titles () {
+    var q = [];				// name = q["id"][i];
+    var t = document.getElementsByTagName ("table");
+    for (i = 0; i < t.length; ++i) {
+	var n = t[i].id;		// table id
+	if (n) {
+	    var r = t[i].getElementsByTagName ("tr");
+	    var b = [];			// patterns in table
+	    for (var j = 0; j < r.length; ++j) {
+		var d = r[j].getElementsByTagName ("td");
+		for (var k = 0; k < d.length; ++k) {
+		    if (d[k].getElementsByTagName ("a"). length) {
+			// Get text in a way that works on most browsers
+			m = (d[k].textContent || d[k].innerText)
+			  .replace (/[\n\t]/g, " ") .replace (/   */g, " ")
+			  .replace (/^ /, "") .replace (/ $/, "")
+			  .replace (/[\xAD\u8230]/g, "");
+			b.push (m);
+		    }
+		}
+	    }
+	    q[n] = b;
+	}
+    }
+    var m = document.getElementsByTagName ("map");
+    for (var i = 0; i < m.length; ++i) {
+	var b = q["t-"+m[i].name];
+	var s = m[i].getElementsByTagName ("area");
+	if (s) {
+	    // First 4 areas are NW, SW, NE, SE corners; last is default
+	    // Others are in the same order as patterns in table
+	    SetAltTitle (s[0], "Top of page");
+	    SetAltTitle (s[1], "Bottom of page");
+	    if (s[3]) {
+		SetAltTitle (s[2], "Zip archive of all patterns");
+		SetAltTitle (s[3], "This stamp page");
+		for (var j = 4, k = 0; j < s.length; ++j) {
+		    var a = s[j].href;
+		    if ((n = a.indexOf ("~")) >= 0) {
+			SetAltTitle (s[j], a.substring (0, n));
+		    } else if (b && b[k]) {
+			SetAltTitle (s[j], b[k++]);
+		    }
+		}
+	    } else {
+		SetAltTitle (s[2], "This stamp page");
+	    }
+	}
+    }
+}
+Titles ();
+// -->
+</script>
+</body></html>

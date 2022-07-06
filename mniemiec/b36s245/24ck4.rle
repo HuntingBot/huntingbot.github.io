@@ -1,0 +1,12 @@
+#N 24ck4.rle: Four clocks: Pattern image
+#O Mark D. Niemiec's life synthesis database, Tue Apr 21 04:40:56 2020
+#C  ...O....
+#C  .OOO..O.
+#C  ..O.OOO.
+#C  ..O...OO
+#C  OO...O..
+#C  .OOO.O..
+#C  .O..OOO.
+#C  ....O...
+x = 8, y = 8
+3bx$b3xbbx$bbxb3x$bbx3bxx$xx3bx$b3xbx$bxbb3x$4bx!

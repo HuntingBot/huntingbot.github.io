@@ -1,0 +1,11 @@
+#N 8p7.rle: 8-bit P7; Twin beehives: Synthesis
+#O Mark D. Niemiec's life synthesis database, Fri Aug 11 05:08:25 2017
+#C  OO.O...
+#C  .O.....
+#C  .....O.
+#C  ...O.OO
+x = 67, y = 39, rule = B36/S23
+39bo$40bo9bo$bo36b3o8bo$bbo17bxxbx25b3o8bxxbx$3o18bx39bx$25bx39bx$23bx
+bxx8b3o25bxbxx$bo35bo8b3o$boo33bo9bo$obo44bo$14boo$13boo$15bo19$6bo$7b
+oo40bo$bo4boo39boo11bxxbx$bbo18bxxbxx15booboobboo11bx$3o18bxxbxx11boo
+bbooboo19bx$4boo32boo23bxbxx$3bobo31bo$5bo!

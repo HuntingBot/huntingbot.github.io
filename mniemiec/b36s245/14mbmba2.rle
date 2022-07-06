@@ -1,0 +1,17 @@
+#N 14mbmba2.rle: Medium blinker on medium blinker below carrier: Synthesis
+#O Mark D. Niemiec's life synthesis database, Wed Apr 22 01:44:30 2020
+#C  OO........
+#C  O....O...O
+#C  ..O..O...O
+#C  .OO..O...O
+#C  .....O...O
+x = 164, y = 115
+32bo$33bo$30bobo$31bo17bxx18boo28bxx28boo28bxx$49bxbbx16bobbo26bxbbx
+26bobbo26bxbbx$32boo17bxx18boo28bxx28boo28bxx$31b3o$30boobo$30b3o67b4x
+26b4o26b4x4$160b4x8$68boo4boo$67b4obb4o$69boobboo$69bo4bo$128boo4boo$
+127b4obb4o$129boobboo$129bo4bo16$87boo$86b3o$85boobo$85b3o$147boo$146b
+3o$145boobo$145b3o10$55b3o89boo$55boobo90bo$56b3o89bobo$57boo88bobbo
+20$39bo4bo82b4obb4o$39boobboo82boobobboboo$37b4obb4o82boobboo$38boo4b
+oo83boobboo7$159bxx$159bxbbx$161bxx3$70b4x36b4x16b4o26b4x4$20b4x16b4o
+26b4x36b4x16b4o26b4x$3o$oobo4boo$b3o3b3o79bo4bo$bboobboobo79boobboo$6b
+3o78b4obb4o$88boo4boo3$86bo10bo$85bobo8bobo$88bo6bo$87bo8bo!

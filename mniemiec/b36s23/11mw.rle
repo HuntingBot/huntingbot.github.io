@@ -1,0 +1,25 @@
+#N 11mw.rle: Middleweight spaceship; MWSS; Medium fish; 11P4H2V0.1: Synthesis
+#O Mark D. Niemiec's life synthesis database, Fri Aug 04 02:08:21 2017
+#C  OOO..
+#C  O..O.
+#C  O....
+#C  O...O
+#C  O....
+#C  .O.O.
+x = 193, y = 81, rule = B36/S23
+45bobo$46boo$46bo$6bobo77bobo77bobo$7boo78boo78boo$7bo79bo79bo$127bobo
+$46boo80boo$28b3x15boobbobo15b3x18bo18b3x17bo19b3x12bobboboo18b3x$7boo
+19bxbbx18boo16bxbbx17bo18bxbbx36bxbbx9bobobboobo18bxbbx$6bobo19bx22bo
+16bx20bo18bx19boo18bx13boo24bx$8bo19bx3bx35bx3bx14bo20bx3bx15bobo17bx
+3bx35bx3bx$11boo15bx39bx18boo19bx15b3obbo18bx39bx$11bobo15bxbx37bxbx
+14bobo20bxbx14bo22bxbx37bxbx$11bo113bo16$125bobo$126boo$126bo$6bobo37b
+obo37bobo$7boo38boo38boo41bo$7bo39bo35bo3bo40bobo$44bo39bo44boo36bobo$
+42bobo37b3o83boo$8boo18b3x12boo3boo18b3x17boo18b3x20bo16b3x17bo19b3x$
+9bo18bxbbx17bo18bxbbx13boobbo18bxbbx18bo17bxbbx11bo24bxbbx$5bobbo19bx
+17b3o19bx16boboo19bx21b3o15bx15boobboo18bx$3bobobboo18bx3bx13bo21bx3bx
+35bx3bx35bx3bx10boobbobbo17bx3bx$4boo22bx39bx39bx39bx18bobbo17bx$29bxb
+x37bxbx37bxbx37bxbx16boo19bxbx$$132bo28b3o$131boo30bo$131bobo28bo13$bb
+o12bo$3bo10bo$b3o7bobb3o$9bobo$10boo$6boo$5bobbo38bobo$5bobbo39boo$6b
+oo20b3x17bo19b3x$3bo24bxbbx36bxbbx$4bo23bx19boo18bx$bb3o23bx3bx15bobo
+17bx3bx$28bx15b3obbo18bx$29bxbx11bobbo22bxbx$boo43bo$obo43bo16b3y$bbo
+17b5x18bobo$20bx4bx$20bx$21bx3bx$23bx!

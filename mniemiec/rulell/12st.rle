@@ -1,0 +1,30 @@
+#N 12st.rle: Star: Synthesis
+#O Mark D. Niemiec's life synthesis database, Fri Jun 19 19:03:11 2020
+#C  .OOO.
+#C  O...O
+#C  O...O
+#C  O...O
+#C  .OOO.
+x = 191, y = 92
+4bobo$5boo38bo$5bo21b3x16boo19b3x37b3x37b3x37b3x$3bo22bx3bx14boo19bx3b
+x15bo19bx3bx35bx3bx35bx3bx$3boo21bx3bx35bx3bx16boo17bx3bx14bo3bo16bx3b
+x18bo16bx3bx$bbobo21bx3bx35bx3bx15boo18bx3bx12bobobboo16bx3bx17boo16bx
+3bx$27b3x11boo24b3x20b3o14b3x14boobbobo16b3x13bo4bobo16b3x$42boo46bo
+73boo$41bo49bo71boo12$49boo76b3o$43b3obbobbo34booboo$6boo19b3x15bobbo
+bbo15b3x16booboo16b3x37b3x$6bobo17bx3bx13bo4boo15bx3bx35bx3bx17boo16bx
+3bx$7bo18bx3bx35bx3bx15booboo15bx3bx16bobo16bx3bx$26bx3bx35bx3bx15boob
+oo15bx3bx18bo16bx3bx$27b3x37b3x12boo23b3x37b3x$3b3o77boo$5bo76bo$4bo
+13$7b3o17b3x17b3o17b3x17b3o17b3x$6bo3bo15bx3bx15bo3bo15bx3bx15bo3bo15b
+x3bx$6bo3bo15bx3bx15bo3bo15bx3bx15bo3bo15bx3bx$6bo3bo15bx3bx15bo3bo15b
+x3bx15bo3bo15bx3bx$7b3o17b3x17b3o17b3x17b3o17b3x4$48bo35bo$8b3o37boo
+34boo$10bo36bobo33bobo$9bo8$141boo$3o4b3o17b3o17b3o11bo5b3o17b3o17b3o
+17b3o10bobo4b3o$bbo3bo3bo15bo3bo15bo3bo10boo3bo3bo10bo4bo3bo15bo3bo15b
+o3bo11bo3bo3bo$bo4bo3bo15bo3bo15bo3bo9bobo3bo3bo10boo3bo3bo10bo4bo3bo
+15bo3bo15bo3bo$6bo3bo15bo3bo15bo3bo15bo3bo9bobo3bo3bo10boo3bo3bo10bo4b
+o3bo15bo3bo$7b3o10b3o4b3o17b3o17b3o17b3o10bobo4b3o11boo4b3o17b3o$22bo
+19boo76bobo$21bo19bobo$43bo13$7b3o17b3o10bo6b3o17b3o17b3o17b3o17b3o10b
+oo5b3o$6bo3bo15bo3bo9boo4bo3bo15bo3bo15bo3bo15bo3bo15bo3bo10boo3bo3bo$
+6bo3bo15bo3bo8bobo4bo3bo9boo4bo3bo15bo3bo15bo3bo15bo3bo9bo5bo3bo$boo3b
+o3bo15bo3bo15bo3bo8bobo4bo3bo15bo3bo15bo3bo15bo3bo15bo3bo$obo4b3o17b3o
+17b3o11bo5b3o11b3o3b3o17b3o17b3o17b3o$bbo18boo60bo17b3o$20bobo59bo20bo
+$22bo79bo18b3o$123bo$122bo!

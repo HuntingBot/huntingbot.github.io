@@ -1,0 +1,14 @@
+#N 14itlug.rle: Integral w/tail and up barge: Synthesis
+#O Mark D. Niemiec's life synthesis database, Tue Jul 07 17:56:01 2020
+#C  .O......
+#C  O.O.....
+#C  .O.O....
+#C  ..O.O.OO
+#C  ....O.O.
+#C  ....O.O.
+#C  .....O..
+x = 111, y = 9
+5bo$6boo$5boo18bx19bo10bo8bx19bo19bx$9b3o12bxbx4byy11bobo4booboo8bxbx
+17bobo17bxbx$bbo8bo12bxbx4byy11bobo4boobboo7bxbx17bobo17bxbx$obo7bo12b
+xxbxx15booboo15bxxbxx15booboobbo12bxxbxbx$boo86bo17bxbx$89b3o16bxbx$
+109bx!

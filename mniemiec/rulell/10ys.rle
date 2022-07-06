@@ -1,0 +1,29 @@
+#N 10ys.rle: 10-bit snake; extra extra long snake: Synthesis
+#O Mark D. Niemiec's life synthesis database, Sat Jul 18 19:25:09 2020
+#C  OO......
+#C  O.O.....
+#C  ...O....
+#C  ....O...
+#C  .....O.O
+#C  ......OO
+x = 196, y = 92
+80bo$81boo$80boo3$9bo$10boo92bxx18boo18bxx$9boo43b3o47bxbx17bobo17bxbx
+$54bo25boo25bx19bo19bx$27b3x17b3o5bo11b3x9bobo5b3o18bx19bo9bo9bx$8boo
+71bo27bxbxbyy14bobobooboo11bxbx$9boo41boo19bxx18boo15bxxbyy15booboobb
+oo11bxx$8bo44boo18bxbx17bobo$52bo21bx19bo3$94boobboo$93bobobbobo$95bo
+bbo$$41bo$42bo$40b3o$51bo$52bo$10bo39b3o$11bo43bo8bxx18boo18bxx$9b3o
+42bo9bxbx17bobo17bxbx$28bx11boo6bo5b3o10bx19bo19bx$28bx12boo5bo19bx19b
+o9bo9bx$8b3o17bx11bo7bo20bxbxbyy14bobobooboo11bxbx$10bo41boo16bxxbyy
+15booboobboo11bxx$9bo41bobo$53bo$54bo$52bobo$52bobo10$4boo18bxx18boo
+18bxx18boo18bxx18boo18bxx$4bobo17bxx18bobo17bxx18bobo17bxx18bobo17bxbx
+$7bo39bo39bo39bo17bx$8bo39bo39bo39bo$9bobo37bobo37bobo37bobo$10boo3bo
+34boo38boobboo34boo$13boo78boo$14boo30b3o46bo34bo$48bo81boo$47bo81bobo
+6$96bo$95bo$95b3o$$12bobbo$4boo4bobobbobo6bxx18boo7bo10bxx18boo7bo10b
+xx18boo18bxx18boo18bxx$4bobo4boobboo7bxbx17bobo4bobo10bxbx6bx10bobo4bo
+bo10bxbx6bxx9bobo17bxbx17bobo17bxbx$7bo19bx19bo4boo13bx4bxbx12bo4boo
+13bx4bxbx12bo7bo11bx19bo7bo11bx$8bo19bxbbxx15bo19bxbbxbx14bo19bxbbxbx
+14bo4boo13bx19bo4boo13bx5bx$9bobo17bxbbx16bobo17bxbbx16bobo17bxbbx16bo
+bobboo13bxbxbxx14bobobboo13bxbxbxbx$10boo18bxx18boo18bxx18boo18bxx18b
+oo18bxxbxx15boo18bxxbxx$$137b3o$137bo$138bo8$oo$boo$o59bo$4boo14boobb
+oo18boo15booboo$4bobo14boobobo17bobo13boobbobo$7bo12bo6bo12boo5bo19bo$
+8bo19bo12boo5bo19bo$9bobo17bobo8bo8bobo17bobo$10boo18boo18boo18boo!

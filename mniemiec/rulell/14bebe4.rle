@@ -1,0 +1,12 @@
+#N 14bebe4.rle: Down trans bookend on bookend: Synthesis
+#O Mark D. Niemiec's life synthesis database, Fri Jun 19 16:09:14 2020
+#C  OO.....
+#C  O.O....
+#C  ..O....
+#C  .OO.OO.
+#C  ....O..
+#C  ....O.O
+#C  .....OO
+x = 30, y = 20
+13bo$13bobo$13boo$$o$boo20bxx$oo21bxbbx$4bo19b3x$4bobo$4boo20b3x$26bx
+bbx$28bxx6$14boo$14bobo$14bo!

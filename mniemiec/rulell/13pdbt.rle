@@ -1,0 +1,29 @@
+#N 13pdbt.rle: Boat on pond: Synthesis
+#O Mark D. Niemiec's life synthesis database, Wed Jun 02 23:52:09 2021
+#C  .OO...O.
+#C  O..O.O.O
+#C  O..O.OO.
+#C  .OO.....
+x = 197, y = 92
+34bxx$11bo21bxbbx$11bobo19bxbbx$11boo21bxx$$14b3o17bxx$14bo18bxbx$15bo
+18bx$3o$bbo$bo6$13bobo38bobo34bo46bo$14boo38boo36bo44bo$14bo40bo34b3o
+44b3o$$14boo38boo38boo38boo38boo18bxx$13bobbo36bobbo36bobbo36bobbo36bo
+bbo16bxbbx$13bobbo36bobbo36bobbo17bxx17bobbo17bxx17bobbo16bxbbx$14boo
+38boo38boo18bxx18boo18bxx18boo18bxx$$14boo18bxx18boo18bxx18boo18bxx18b
+oo18bxx18boo$13bobo17bxbx17bobo17bxbx17bobo17bxbx17bobo17bxbx17bobo$
+14bo19bx19bo19bx19bo19bx19bo19bx19bo$$176bo$175boo$175bobo9$14boo18bxx
+18boo18bxx$13bobbo16bxbbx16bobbo16bxbbx$13bobbo16bxbbx16bobbo16bxbbx$
+14boo18bxx18boo18bxx$$14boo18bxx18boo18bxx$13bobo17bxbx17bobo17bxbx$
+14bo19bx19bo19bx$10boo$9bobo38b3o$11bo40bo$51bo6$111bo$109bobo17bo$
+110boo18boo$9boo3boo18boo18boo18boo18boo18boo13boo3boo18boo$10boobobbo
+12boobbobbo16bobbo16bobbo16bobbo16bobbo16bobbo16bobbo$9bo3bobbo13boobo
+bbo16bobbo16bobbo16bobbo16bobbo16bobbo16bobbo$14boo13bo4boo18boo18boo
+18boo18boo18boo18boo$49b3o$14boo18boo15bobboo18boo18boo18boo18boo14bo
+3boo$13bobo17bobo14bobbobo13b3obobo17bobo17bobo17bobo15bobobo$14bo19bo
+19bo16bobbo19bo19bo19bo14b3obbo$70bo$96bo$96boo$95bobo9$14boo18boo18b
+oo18boo18boo18boo18boo4bo13boo$13bobbobboo12bobbo16bobbo16bobbo16bobbo
+16bobbo16bobboboo13bobbo$13bobboboo13bobbo16bobbo16bobbo16bobbo16bobbo
+16bobbobboo12bobbo3bo$14boo4bo13boo18boo18boo18boo18boo18boo18boobboo$
+159boo$14boo18boo18boo18boo18boo18boo18boo18boo$13bobo17bobobboo13bobo
+17bobo17bobo17bobo17bobo17bobo$14bo19bobboo15bo3boo14bo19bo19bo19bo19b
+o$39bo17boo18boo$59bo17bobo16b3o13boo$77bo18bo15bobo$97bo14bo!

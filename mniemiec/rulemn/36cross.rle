@@ -1,0 +1,19 @@
+#N 36cross.rle: Cross: Synthesis
+#O Mark D. Niemiec's life synthesis database, Wed Jul 24 01:05:20 2013
+#C  ..OO.OO..
+#C  ...O.O...
+#C  O..O.O..O
+#C  OOOO.OOOO
+#C  .........
+#C  OOOO.OOOO
+#C  O..O.O..O
+#C  ...O.O...
+#C  ..OO.OO..
+x = 143, y = 15, rule = B3/S2ae3aeijr4-ckqy
+40bo45bo$41bo43bo$38bobbo43bobbo29b3o5b3o$38boo47boo29b3o5b3o7bxxbxx$
+118boo7boo8bxbx$20bxbxbxbx13bobobobo14bxxbxbx14boobobo14bxxbxx15booboo
+8bxbbxbxbbx$boo17b3xb3x13b3ob3o14bxxb3x14boob3o14bxxbxx15booboo8b4xb4x
+$oboo$boo3bo13b3xb3x13b3ob3o14bxxb3x14boob3o14bxxbxx15booboo8b4xb4x$bo
+3b3o12bxbxbxbx13bobobobo14bxxbxbx14boobobo14bxxbxx15booboo8bxbbxbxbbx$
+4boobo110boo7boo8bxbx$6bo31boo47boo29b3o5b3o7bxxbxx$38bobbo43bobbo29b
+3o5b3o$41bo43bo$40bo45bo!

@@ -1,0 +1,22 @@
+#N 16cfbk1.rle: Block on cis candlefrobra; Trans-block and long hook eating tub: Synthesis
+#O Mark D. Niemiec's life synthesis database, Thu Sep 14 09:20:20 2017
+#C  OO.OO.....
+#C  OO.O....O.
+#C  ...O...O.O
+#C  ...O.OO.O.
+#C  ....O.....
+x = 151, y = 45, rule = B36/S23
+89bo$90bo39bo$88b3o38bo19bx$129b3o16bxbx$7bo83bobo3bo50bxbx$5bobo47boo
+34boo4bobo32b3o14bx$6boo41bobo3bobo34bo4boo33bo$o49boo3bo77bo$boo5bo
+41bo58bx19bo19bx$oo6bobo57bxx18boo4b3o11bxbx17bobo17bxbx$8boo15bxbbx
+16bobbo16bx3bx15bo3bo4bo10bx3bx15bo3bo15bx3bx$25b4x16b4o16b4x16b4o6bo
+9b4x16b4o16b4x$$25bxx18boo7boo9bxx18boo18bxx18boo18bxx$25bxx18boo3bobb
+oo10bxx18boo18bxx18boo18bxx$7boo41boo3bo$7bobo39bobo$7bo$boo$obo51boo$
+bbo50boo$55bo6$7bo$6bo76bobo$6b3o75boo$84bo$86bo41bo$3bobo3bo4bo33bo
+36bo40bobo$4boobbobobbo32bobo36b3o35boobboo$4bo3bobobb3o27boobboo75boo
+7bo$9bo34boo77bo7boo14bx$43bo23bx19bo20bx19bo3boo12bxbx$28bx19bo17bxbx
+17bobo18bxbx17bobo17bx$9bo17bxbx17bobo17bxbx17bobo17bxbbx16bobbo17bx$
+8bobo17bxbx17bobo17bxbx17bobo17bxbx17bobo17bx$5bo3bo15bx3bx15bo3bo15bx
+3bx15bo3bo15bx3bx15bo3bo15bx3bx$5b4o16b4x16b4o16b4x16b4o16b4x16b4o16b
+4x$$5boo18bxx18boo18bxx18boo18bxx18boo18bxx$5boo18bxx18boo18bxx18boo
+18bxx18boo18bxx!

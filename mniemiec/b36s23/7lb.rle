@@ -1,0 +1,13 @@
+#N 7lb.rle: 7.4; Long boat: Synthesis
+#O Mark D. Niemiec's life synthesis database, Wed Aug 23 11:02:32 2017
+#C  OO..
+#C  O.O.
+#C  .O.O
+#C  ..O.
+x = 75, y = 49, rule = B36/S23
+52bo18bxx$51bo19bxbx$51b3o18bxbx$45b3o25bx$47bo$46bo$$46boo$41bo4bobo$
+41boo3bo$40bobo7$10bobo$11boo$11bo$13b3o15bxx18boo18bxx$13bo17bxbx17bo
+bo17bxbx$14bo17bx19bo19bxbx$11bo45bo15bx$11boo42boo$10bobo39boobboo$
+52bobo$52bo12$6bo$4bobo24bxx18boo18bxx$boobboo24bxbx17bobo17bxbx$obo
+29bxbx17bobo17bxbx$bbo30bx19bo19bx$16bo8by15bo3bo$16bobo5byby15bobobo$
+12boobboo7byby12b3obbobo$12bobo11byy18boo$12bo!

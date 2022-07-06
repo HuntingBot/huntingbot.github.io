@@ -1,0 +1,18 @@
+#N 12mbcb.rle: Medium blinker on crab: Synthesis
+#O Mark D. Niemiec's life synthesis database, Sun May 09 07:08:02 2021
+#C  OO.....
+#C  .O....O
+#C  O.OO..O
+#C  .O.O..O
+#C  ......O
+x = 111, y = 114
+91b3o$91boobo$92b3o$93boo20$75bo4bo$75boobboo$73b4obb4o$74boo4boo12$
+38b3o65b4x$37boboo$37b3o$37boo3boo13bxx18boo28bxx$41b3o14bx19bo29bx$
+40boobo13bxbxx16boboo26bxbxx$40b3o15bxbx17bobo27bxbx$34bo$34boo$34b3o
+21$26b4x16b4o16b4x16b4o16b4x$7b3o$oo4boboo$3o3b3o58bxx18boo18bxx$oboo
+bboo36bo23bx19bo19bx$b3o40bo23bxx18boo18bxx$45bobboo$41booboob4o12b3y
+17b3o$43boobboo14byy18boo$48bo$43boo35boo$41booboo33b4o$45bo35boo$44bo
+36bo$44bo16$36b4o26b4x16b4o16b4x$46boo$46boo$37boo7boboo17bxx18boo18b
+xx$38bo7b4o18bx19bo19bx$38boo28b3x17b3o16bxbxx$70bx19bo17bxbx$46b4o33b
+oo$46boboo32b4o$46boo36boo$46boo12boo22bo$59b4o23boo$59boo24booboo$60b
+o24bo$86bo$86bo!

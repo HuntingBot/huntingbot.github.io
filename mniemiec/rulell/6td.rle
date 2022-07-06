@@ -1,0 +1,32 @@
+#N 6td.rle: Toad: Synthesis
+#O Mark D. Niemiec's life synthesis database, Thu Jun 03 00:24:43 2021
+#C  .OO.
+#C  O...
+#C  ...O
+#C  .OO.
+x = 242, y = 124
+5bo$3bobo$4boo$$3o86bo$bbo87boo$bo43bo43boo$46bo46bo68bo$44b3o46bobo
+67boo$93boo14bxx18boo31boo5boo36bo$26b3x37b3x39bxbbx16bobbo14b3x17bobo
+bo15b3x18b3o16b3x$27b3x37b3x38bxbbx16bobbo15b3x16boo19b3x20bo16b3x$17b
+oo23b3o64bxx14bo3boo78boo$16boo26bo8bo69bobo$18bo24bo8boo70boo$52bobo
+153b3o$210bo$105bx19bo83bo$104bxbx17bobo$104bxbbx16bobbo$105bxx18boo
+13$41bo39bo$42bo36bobo$7bobo30b3o37boo$8boo$8bo$12bo189bo3bo$10b3o73bo
+37boo43boo30bobobobo$9bo16b3x37b3x15bobo19b3x16bo5bo14b3x19booboo13b3x
+12bobobobo18b3x$8bobo16b3x37b3x15boo20b3x14bo4boo16b3x19b4o14b3x12bo3b
+o20b3x$9bobo112bobo3boo38boo$10bo36bobo75bobo73bo$47boo18by17b3o19by
+18boo38b3o31boo$48bo17byby18bo18byby59bo31bobo$66bybby16bo19bybby57bo$
+46boo19byy38byy$46bobo$46bo5$45boo6bo$45bobo3boo$46bobbobboo$49bo73boo
+$47bo35boobboo34boo109byy$9boo36bobbo33boobobo35bo107byby$6boobbo15b3x
+20bobo14b3x14bo5boo15b3x16bo20b3x18boobbobo12b3x23bobboo9b3x6by$6bo20b
+3x20bo16b3x19boo16b3x9b3oboo22b3x17bo19b3x20bobobbobo9b3x$6bobo79bo32b
+oboo43b4obbo36boo3bobbo$88bo31bo3bobo46boo44bo$7bo81boo34boo90bo$7boo
+80boo85boo13b3y23bobbo$6bobo167bobo40bobo17b3y$176bo43bo11$125boo$7bo
+39bo77bobo$7b3o16b3x18b3o16b3x37b3x17b4o16b3x$10bo16b3x20bo16b3x37b3x
+17boobo16b3x$9boo38boo37boo37bobbo$9bo39bo38boo5bo32boo$11bo39bo43bo$
+10boo38boo43bo28b3o$85boo39bo$10bo18byy20bo19byy13boo37bo$9boo17bybby
+19boo17bybby11bo$9bobo16bybby18bobo17bybby$29byy40byy8$bboo$3boo38bo$
+bbo3b3o13boobb3o14boob3o17b3o17b3o17b3o$7b3o11bobo3b3o12bobobb3o17b3o
+17b3o17b3o$23bo$63boo$62bobo18b3o19bo$64bo20bo19boo$84bo19bobo9$104bo
+21bobo18bobo$83bo21bo21boo19boo$62bo21bo18b3o21bo20bo$63boo17b3o$62boo
+$6b3o14bobb3o13bobob3o17b3o17b3o17b3o17b3o17b3o$bbo4b3o11bobo3b3o13boo
+bb3o17b3o17b3o17b3o17b3o17b3o$3boo17boo19bo$bboo!

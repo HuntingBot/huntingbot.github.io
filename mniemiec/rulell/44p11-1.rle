@@ -1,0 +1,19 @@
+#N 44p11-1.rle: 44P11.1: Pattern image
+#O Mark D. Niemiec's life synthesis database, Tue Dec 15 19:23:40 2020
+#C  OOOO.......OOOO
+#C  O.............O
+#C  O.....O.O.....O
+#C  ..O.........O..
+#C  ...OOO...OOO...
+#C  ...............
+#C  ...OOO...OOO...
+#C  ..O.........O..
+#C  O.....O.O.....O
+#C  O.............O
+#C  OOOO.......OOOO
+x = 48, y = 50
+4x7b4x$x13bx$x5bxbx5bx$bbx9bx$3b3x3b3x$$3b3x3b3x$bbx9bx$x5bxbx5bx$x13b
+x$4x7b4x20$4o7b4o15b4x7b4x$o13bo15bx13bx$o5bobo5bo15bx5bxbx5bx$bbo9bo
+19bx9bx$3b3o3b3o21b3x3b3x$$3b3o3b3o21b3x3b3x$bbo9bo19bx9bx$o5bobo5bo
+15bx5bxbx5bx$o13bo15bx13bx$4o7b4o15b4x7b4x5$16boo$16bobo$16bo28bxbx$
+46bxx$46bx!

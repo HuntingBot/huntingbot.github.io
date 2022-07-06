@@ -1,0 +1,28 @@
+#N 17pmbcb1.rle: Up P on medium blinker on crab: Synthesis
+#O Mark D. Niemiec's life synthesis database, Sun May 09 07:19:36 2021
+#C  OO..........
+#C  .O....O.....
+#C  O.OO..O...OO
+#C  .O.O..O..OOO
+#C  ......O.....
+x = 157, y = 174
+57b3o$57boobo$58b3o$59boo20$41bo4bo42boo$41boobboo42boo$39b4obb4o38boo
+bo$40boo4boo39b4o3$87b4o$87boobo4bo40b3o$89boo3boo40boobo$89boo3b4o15b
+xx18boobb3o$95boo16bx19bo4boo13bxx$112bxx18boo19bxx$153bx3$b3o68b4x16b
+4o16b4x16b4o16b4x$oboo$3o$oo21bxx18boo28bxx18boo18bxx18boo18bxx$24bx
+19bo29bx19bo19bx19bo19bx$bboo3boo15bxx18boo28bxx18boo18bxx18boo18bxx$
+ooboobooboo$4bobo$3bo3bo$3bo3bo16$83boo28bxx18boo18bxx$83boo28bxx18boo
+18bxx$83bo29bx19bo19bx3$82b4o26b4x16b4o16b4x$92boo$92boo$83boo7boboo
+17bxx18boo18bxx$84bo7b4o18bx12bo6bo19bx$84boo28b3x10bo6b3o16bxbxx$116b
+x11bo7bo17bxbx$92b4o28booboo$92boboo30boobboo$92boo35b4o$92boo12boo23b
+oo$105b4o22bo$105boo$106bo9$49boo$49boobboo$47boobo4bo$47b4o3bobo16bxx
+18boo18bxx18boo18bxx$53bobbo16bxx18boo18bxx18boo18bxx$73bx19bo19bx19bo
+19bx3$112b4x16b4o16b4x3$153bxx$130bo23bx$130bo23bxx$131bobboo$127boob
+oob4o12b3y$129boobboo14byy$134bo$129boo$127booboo$90boo4boo33bo$89b4o
+bb4o31bo$91boobboo33bo$91bo4bo20$109boo$108b3o$107boobo$107b3o17$43boo
+18bxx18boo28bxx18boo18bxx$43boo18bxx18boo28bxx18boo18bxx$43bo19bx19bo
+29bx19bo19bx3$42b4o16b4x16b4o26b4x16b4o16b4x$92boo$92boo$43boo18bxx18b
+oo7boboo17bxx18boo18bxx$44bo19bx19bo7b4o18bx19bo19bx$44boo18bxx18boo
+28b3x17b3o16bxbxx$116bx19bo17bxbx$39b3o50b4o33boo$39boo51boboo32b4o$
+92boo36boo$36boo54boo12boo22bo$35b4o66b4o23boo$37boo66boo24booboo$37bo
+68bo24bo$132bo$132bo!

@@ -1,0 +1,9 @@
+#N 8glbl.rle: Glider and blinker: Synthesis
+#O Mark D. Niemiec's life synthesis database, Fri Jul 31 01:00:52 2020
+#C  OOO.............
+#C  O...............
+#C  .O.............O
+#C  ...............O
+#C  ...............O
+x = 33, y = 7
+bo15b3x$o16bx$3o15bx13bx$32bx$4bo27bx$4boo$3bobo!

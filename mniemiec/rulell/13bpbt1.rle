@@ -1,0 +1,11 @@
+#N 13bpbt1.rle: Up boat on bipole; Boat on bipole: Synthesis
+#O Mark D. Niemiec's life synthesis database, Mon Jul 13 18:09:03 2020
+#C  OO.......
+#C  O........
+#C  .O.O...O.
+#C  ....O.O.O
+#C  ...OO.OO.
+x = 80, y = 30
+35bxx18boo18bxx$35bxbx17bobo17bxbx$$37bxbx17bobo17bxbx$38bxx18boo18bxx
+$15bo4bobo$14bo5boo35bo20bxx$14b3o4bo35boo18bxbx$56bobo19bx$18boo$18bo
+bo$18bo9$18b3o$18bo$19bo5$bo$boo$obo!

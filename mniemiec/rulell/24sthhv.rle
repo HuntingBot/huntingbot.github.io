@@ -1,0 +1,15 @@
+#N 24sthhv.rle: Traffic light and Bi-beehive: Synthesis
+#O Mark D. Niemiec's life synthesis database, Fri Jun 19 17:56:34 2020
+#C  OOO..........
+#C  OOO.....OOO..
+#C  .............
+#C  ......O.....O
+#C  OOO...O.....O
+#C  OOO...O.....O
+#C  .............
+#C  ........OOO..
+x = 80, y = 20
+29b3x17b3o17b3x$$27bx5bx3b3x7bo5bo3b3o7bx5bx3b3x$27bx5bx3b3x7bo5bo3b3o
+7bx5bx3b3x$27bx5bx13bo5bo13bx5bx$$29b3x5b3x9b3o5b3o9b3x5b3x$37b3x17b3o
+17b3x$10boo$9bobo$11bo16byy18boo$oo25bybby16bobbo$boo12bo11byby17bobo$
+o13boo12by19bo$14bobo$44b3o$46bo$9bo35bo$9boo$8bobo!

@@ -1,0 +1,17 @@
+#N 15mbacz1.rle: Medium blinker on carrier on up Z: Synthesis
+#O Mark D. Niemiec's life synthesis database, Sat May 08 16:58:47 2021
+#C  O..........
+#C  OOO.OO....O
+#C  ..O.O..O..O
+#C  ......OO..O
+#C  ..........O
+x = 146, y = 65
+102bo$38b3o5b3obb3o48boo$37boboo5boo4boo46b4o$37b3o6bo6bo47boo32bx$37b
+oo19bxx58boo15bxbbxx$58bxbbxbx54bobbobo11bxbbxbbxbx$39bo20bxxb3x35boo
+17boob3o9bx4bxxb3x$38bobo5bo18bx34b4o21bo19bx$37bo7bobo54boo$38bo5bo
+57bo$45bo8$77boo$77b3o$77boboo$78b3o9$115bo15bo$115boo13bo$113b4o14bob
+o$114boo16bo5$98bo$98boo$96b4o$49boo46boo12boo$b3obbo42boo60boo$oboobb
+o42boboo26bxx28boobo6boo$3obbo43b4o26bx29b4o6bo18bxx$oo3booboo13bx39bo
+17bxbx37bobo14bxbbxbx$6boo15b3x37b3o14bxxb3x34boob3o14bxxb3x$25bx23b4o
+12bo19bx23b4o12bo19bx$6boo41boboo56boobo$5booboo39boo60boo$5bo43boo60b
+oo$6bo$6bo9$26bobbo$26bobo$27bo$28boo!

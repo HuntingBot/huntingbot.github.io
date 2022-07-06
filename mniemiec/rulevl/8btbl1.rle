@@ -1,0 +1,28 @@
+#N 8btbl1.rle: Cis blinker near boat: Synthesis
+#O Mark D. Niemiec's life synthesis database, Tue Sep 01 16:22:20 2020
+#C  OOO..O.
+#C  ....O.O
+#C  ....OO.
+x = 191, y = 129
+4bo$5boobbo15bxbb3x$4boo3boo13bxbx$8bobbo13bxx$9boo16$80bo40bo$oo3bobb
+3o17b3x9b3obbobb3o17b3x10boobbobb3o17b3x11bobbobb3o17b3x14bobb3o14bx$b
+oobobo35bobobo33boobbobo33b3obobo37bobo17bxbx$o4boo34bo3boo38boo38boo
+38boo5boo11bxx$171boo$173bo11$131bobo$131boo40bo$132bo38boo$172boo$$5b
+obb3o14bx19bobb3o14bx19bobb3o14bx19bobb3o14bx19bobb3o14bx$4bobo17bxbx
+17bobo17bxbx17bobo17bxbx17bobo17bxbx17bobo17bxbx$5boo18bxx18boo5b3o10b
+xx18boo18bxx18boo18bxx18boo18bxx$12bo39bo38b3o$11boo40bo37bo$11bobo78b
+o10$12bo$11bo41bo$11b3o38bo$52b3o$$5bobb3o14bx19bobb3o14bx19bobb3o14bx
+19bobb3o14bx19bobb3o14bxbb3x$4bobo17bxbx17bobo17bxbx17bobo17bxbx17bobo
+17bxbx17bobo17bxbx$5boo18bxx18boo18bxx18boo18bx19boo18bx19boo18bx$$88b
+o39b3o52bxx$87boo39bo35b3o16bxbx$87bobo39bo34bo19bx$165bo13$5bobb3o14b
+obb3o14bobb3o14bobb3o14bobb3o14bobb3o$oobbobo13b3obobo17bobo17bobo17bo
+bo17bobo$boobboo15bobboo18boo18boo18boo18boo$o20bo$42bo19boo20bo23bo$
+42boo17bobo20boo22boo$41bobo19bo19bobo21bobo8$87bo$48bobo16bo20bo$12bo
+36boo17boo16b3o15bobo$10bobo36bo17boo36boo14bo$11boo92bo16bo$120b3o$5b
+obb3o34bobb3o14bobb3o14bobb3o14bobb3o14bobb3o9bo4bobb3o10bo3bobb3o$4bo
+bo37bobo17bobo17bobo17bobo17bobo14boobobo15bobobo$5boo38boo18boo18boo
+18boo18boo13boo3boo13b3obboo12$151bo$129bobo18bo$129boo19b3o$130bo3$5b
+obb3o14bobb3o14bobb3o14bobb3o14bobb3o14bobb3o14bobb3o14bobb3o14bobb3o$
+4bobo6boo9bobo17bobo17bobo17bobo17bobo17bobo17bobo17bobo$5boo5boo11boo
+18boo18boo18boo18boo18boo18boo18boo5bo$14bo15boo51bo86boo$29boo18bo32b
+oo87boo$31bo16boo15b3o14bobo17b3o$48bobo14bo36bo$66bo36bo!

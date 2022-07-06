@@ -1,0 +1,16 @@
+#N 13bksbpl.rle: Small box between block and pole: Synthesis
+#O Mark D. Niemiec's life synthesis database, Thu May 09 05:19:12 2019
+#C  OO.....
+#C  OO.....
+#C  ..OOO..
+#C  ..OOO..
+#C  ..OOOO.
+#C  ......O
+#C  .....OO
+x = 165, y = 42
+150bo$148boo$149boo11$129bo$105bobo22boo$106boo21boo$106bo$134bo$132b
+oo$133boo5$3bo$boo$bboo154bxx$158bxbx$bo160bx$bbo27bxx28boo21b3x4bxx
+31b3o4boo27bxbxbx$3o27bxx18bo9boo28bxx38boo28bx$48bobo30bx5bx33bo5bo
+33bxbbx$49boobboo26bx5bx33bo5bo35bxx$35bx16bobo10bo15bx5bx7bx25bo5bo7b
+o$34bxbx17bo9bobo27bxbx37bobo$35bx29bo17b3x9bx27b3o9bo4$12b3o$12bo$13b
+o!

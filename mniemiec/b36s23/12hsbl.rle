@@ -1,0 +1,13 @@
+#N 12hsbl.rle: Blinker on house: Synthesis
+#O Mark D. Niemiec's life synthesis database, Thu Aug 24 01:05:44 2017
+#C  OO.OO
+#C  O...O
+#C  .OOO.
+#C  .....
+#C  .OOO.
+x = 72, y = 42, rule = B36/S23
+49bo$50boo5bobo$41bo7boo6boo8bxx$42bo15bo8bxbxbx$40b3o26bxbx$44b3o20bx
+bxbx$46bo20bxx$45bo20$55bo$55bobo$55boo$61bo$15bo43boo$bo12bo12bxx3bxx
+13boo3boo6boo5bxx$bbo11b3o10bxbxbxbx13bobobobo13bxbxbx$3o15b3o8bxbx17b
+obo5boo10bxbx$4b3o11bo8bxbxbxbx13bobobobobboo9bxbxbx$6bo12bo7bxx3bxx
+13boo3boo4bo8bxx$5bo$$55boo$55bobo$55bo!

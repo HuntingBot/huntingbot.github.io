@@ -1,0 +1,11 @@
+#N 15bebb3.rle: Block on block and bookend: Synthesis
+#O Mark D. Niemiec's life synthesis database, Tue Sep 01 03:16:38 2020
+#C  OO.....
+#C  O..O.OO
+#C  .OOO.OO
+#C  .......
+#C  ...OO..
+#C  ...OO..
+x = 41, y = 24
+14bo$12bobo$13boo$10boo$10bobo$10bo$$39bxx$34bxxbxbbx$34bxxb3x$18bo$
+17boo17bxx$17bobo16bxx9$3o$bbo$bo!

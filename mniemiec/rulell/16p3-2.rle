@@ -1,0 +1,16 @@
+#N 16p3-2.rle: 16P3.2: Synthesis
+#O Mark D. Niemiec's life synthesis database, Tue Jun 01 12:37:58 2021
+#C  OO.......
+#C  OO.OO....
+#C  ....O.O..
+#C  .....O...
+#C  ......OO.
+#C  .......O.
+#C  .........
+#C  .......OO
+#C  .......OO
+x = 109, y = 15
+39bo4bo$40boobo$39boobb3o$60bxx18boo18bxx$60bxx18boo18bxx$bo$bbo46bo
+51bx$3o19bx19bo6bobo10bx19bo18bxx$21bxbx17bobo5boo10bxbx13b3obobo19bx$
+4boo16bxbx17bobo17bxbx14bobbobo17bxbx$4bobo16bx19bo6bo12bx3bxx9bo4bo3b
+oo15bxxbxx$4bo44boo16bxx18boo18bxx$49bobo30boo$81bobo$83bo!

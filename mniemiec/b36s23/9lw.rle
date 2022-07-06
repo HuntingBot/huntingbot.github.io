@@ -1,0 +1,29 @@
+#N 9lw.rle: Lightweight spaceship; LWSS; Small fish; 9P4H2V0.1; Glider 1062: Synthesis
+#O Mark D. Niemiec's life synthesis database, Fri Aug 04 01:44:52 2017
+#C  OOO.
+#C  O..O
+#C  O...
+#C  O...
+#C  .O.O
+x = 190, y = 114, rule = B36/S23
+164bobo$49boo114boo$8boo39bobo113bo$8bobo29bo8bo35bobo37bobo$bobo4bo
+32boo43boo38boo$bboo22b3x11boo3bo20b3x17bo19b3x17bo19b3x37b3x$bbo3bo
+19bxbbx15boo19bxbbx36bxbbx36bxbbx16b3o17bxbbx$6boo18bx17bobo19bx19boo
+18bx19boo18bx39bx$5bobo18bx39bx19boo18bx19boo18bx39bx$27bxbx37bxbx12b
+3o22bxbx13boo22bxbx14b3o20bxbx$84bo37bobo41bo$83bo40bo40bo16$3bobo$4b
+oo$4bo$44bobo77bobo37bobo$45boo78boo38boo$45bo79bo31bobo5bo$6boo32bobo
+42bobo70boo$5bobo33boo43boo70bo$6bo19b3x12bo4boo18b3x17bo19b3x17boo18b
+3x17boo18b3x$26bxbbx17bo18bxbbx36bxbbx17bo18bxbbx17bo18bxbbx$26bx17b3o
+19bx19boo18bx19bo19bx14bobobbo19bx$6boo18bx17bo21bx15bo3boo18bx19boo
+18bx15boobboo18bx$5bobo19bxbx37bxbx13boo22bxbx12boo23bxbx12bo24bxbx$7b
+o74boobboo33bobo$86boo35bo19$44bobo$45boo76bo$45bo78bo$5bobo114b3o$6b
+oo$6bo19b3x17boo18b3x37b3x37b3x$26bxbbx17bo18bxbbx36bxbbx36bxbbx$6boo
+18bx19bo19bx39bx39bx$7bo18bx19bobo17bx39bx39bx$5bo21bxbx17boo18bxbx37b
+xbx23bo13bxbx$5boo85bo39bo$90boo40b3o$6bo37b3o44boo35b3o$6boo38bo81bo
+18bxbx$5bobo37bo83bo16bx$146bx$146bxbbx$146b3x$80bo$81boo39b3o$80boo
+42bo$84boo37bo$85boo21byy$84bo23byby$109by14$60b5x$23bxx35bx4bx32b3x$
+22b4x34bx36b5x$21bxxbxx35bx3bx30bxxb3x$22bxx39bx33bxx$boobboo34bo3boo$
+obobbo21bxbx11boobbo21bxbx37bxbx$bbo4bo18bx13bobo4bo18bx39bx$6boo18bx
+19boo18bx17bobo19bx$26bxbbx36bxbbx15boo19bxbbx$6bo19b3x17bo19b3x11boo
+3bo20b3x$6boo38boo33boo$5bobo37bobo32bo8bo$76boo11bobo$75bobo11boo$77b
+o!

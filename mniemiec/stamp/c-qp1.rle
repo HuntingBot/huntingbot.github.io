@@ -1,0 +1,6 @@
+#N c-qp1.rle: Colored quasi-still-life: Stamp collection
+#O Mark D. Niemiec's life synthesis database, Thu Jun 06 11:25:22 2019
+x = 65, y = 20, rule = Life4c
+5$5.BB3.AA18.A18.AA$5.B.B.A.A17.B.A16.A..A$6.B3.A18.A.A16.A.A$30.A15.
+BB.A3.A$26.BA5.AA10.B..B3.A.A$25.A..A3.A..A9.B.B3.A..A$26.AA5.AB11.B3.
+B.AA$30.A18.B.B$29.A.A16.B..B$29.A.B17.BB$30.A!

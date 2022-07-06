@@ -1,0 +1,8 @@
+#N 21p2.rle: 21-bit P2 oscillator: Pattern image
+#O Mark D. Niemiec's life synthesis database, Wed Jul 24 02:10:38 2013
+#C  OO.OO.OO.OO
+#C  OO.O...O.OO
+#C  ...OOOOO...
+#C  ...O...O...
+x = 11, y = 4, rule = B3/S2ae3aeijr4-ckqy
+xxbxxbxxbxx$xxbx3bxbxx$3b5x$3bx3bx!

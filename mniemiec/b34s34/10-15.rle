@@ -1,0 +1,8 @@
+#N 10-15.rle: 10.15: Pattern image
+#O Mark D. Niemiec's life synthesis database, Sun May 05 06:58:39 2013
+#C  O.O.O.
+#C  .O..OO
+#C  .OOO..
+#C  ...O..
+x = 6, y = 4, rule = B34/S34
+xbxbx$bxbbxx$b3x$3bx!

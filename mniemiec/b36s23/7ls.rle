@@ -1,0 +1,11 @@
+#N 7ls.rle: 7.1; Python; Long snake: Synthesis
+#O Mark D. Niemiec's life synthesis database, Fri Aug 04 16:01:06 2017
+#C  OO...
+#C  O.O.O
+#C  ...OO
+x = 148, y = 16, rule = B36/S23
+91bo$6bobo82bobo$7boo40bo41boo$7bo41bobo$9bo13bxxbx16boobobboo12bxxbxb
+xx13booboboo3b3o7bxx18boo18bxx$4boobbo14bxbxx16boboo5boo9bxbxxbxx13bob
+ooboo3bo9bxbxbx15bobobo15bxbxbx$3boo3b3o41bobo39bo11bxx18boo18bxx$5bo
+46bo$oo$boo104byy18boo$o87b3o16byy18boo$88bo$89bo39boo$85boo42bobo$86b
+oo41bo$85bo!

@@ -1,0 +1,12 @@
+#N 28cross.rle: Cross: Pattern image
+#O Mark D. Niemiec's life synthesis database, Sat Aug 05 02:07:18 2017
+#C  ..OOOO..
+#C  ..O..O..
+#C  OOO..OOO
+#C  O......O
+#C  O......O
+#C  OOO..OOO
+#C  ..O..O..
+#C  ..OOOO..
+x = 8, y = 8, rule = B36/S23
+bb4x$bbxbbx$3xbb3x$x6bx$x6bx$3xbb3x$bbxbbx$bb4x!

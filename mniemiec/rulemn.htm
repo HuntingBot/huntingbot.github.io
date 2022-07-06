@@ -1,0 +1,2311 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="copyright" content="1997,1998,1999,2013,2015,2016,2017,2018,2019,2020,2021,2022 Mark D. Niemiec" />
+<title>Life Variant: Niemiec's Rules</title>
+<meta name="description"
+content="Life Variant: Niemiec's Rules pattern lists and glider syntheses" />
+<meta name="keywords"
+content="conway game life variant niemiec's rules life still life oscillator spaceship puffer gun replicator pattern object list glider synthesis" />
+<link rel="prev" href="rulevl.htm" />
+<link rel="next" href="color.htm" />
+<link rel="search" href="lifesrch.htm" />
+<link rel="author" href="lifecred.htm#niemiec" />
+<link rel="license" href="lifepage.htm#copyright" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="shortcut icon" href="images/n1-64.ico" />
+<style type="text/css">
+    body{lang="en-US";hyphens:auto;color:black;background-color:white;
+      margin-top:0;padding:0;border:0;height:100%;
+      font-family:Verdana,Arial,Helvetica,sans-serif;}
+    hr.a{border-style:solid;border-width:3px;border-color:#000000;}
+    h1{text-align:center;
+      font-family:Verdana,Arial,Helvetica,sans-serif;font-variant:small-caps;}
+    h2{font-family:Verdana,Arial,Helvetica,sans-serif;font-variant:small-caps;}
+    h3{font-family:Verdana,Arial,Helvetica,sans-serif;font-variant:small-caps;}
+    i{font-family:"Times New Roman",Times,serif;}
+    pre{hyphens:manual;}
+    img{border:2px black solid;}
+    ul,ol{margin-left:0px;padding-left:1en;}
+    table{border:1px black solid;border-spacing:0px;border-collapse:collapse;
+      table-layout:fixed;}
+    td,th{border:1px black solid;vertical-align:top;font-size:12px;padding:1px;}
+    td a{display:block;}
+    a{text-decoration:none;}
+    a:focus{text-decoration:underline;} a:hover{text-decoration:underline;}
+    a.p:link{color:#008000;} a.p:visited{color:#00C000;}
+    a.i:link{color:#000080;} a.i:visited{color:#0000C0;}
+    a.j:link{color:#008080;} a.j:visited{color:#00C0C0;}
+    a.x:link{color:#800000;} a.x:visited{color:#C00000;}
+    td:hover{background-color:#F0F0F0;}
+    .s{background-color:#E0E0E0;} td.s:hover{background-color:#E0E0E0;}
+    .b{background-color:#C0C0FF;} td.b:hover{background-color:#E0E0FF;}
+    .g{background-color:#C0FFC0;} td.g:hover{background-color:#E0FFE0;}
+    .t{background-color:#C0FFFF;} td.t:hover{background-color:#E0FFFF;}
+    .r{background-color:#FFC0C0;} td.r:hover{background-color:#FFE0E0;}
+    .m{background-color:#FFC0FF;} td.m:hover{background-color:#FFE0FF;}
+    .y{background-color:#FFFFC0;} td.y:hover{background-color:#FFFFE0;}
+    .o{background-color:#FFD0AA;} td.o:hover{background-color:#FFE8D5;}
+    .v{background-color:#FFAAD0;} td.v:hover{background-color:#FFD5E8;}
+    .h{background-color:#E0E0FF;} td.h:hover{background-color:#F0F0FF;}
+    .k{background-color:#000000;color:#FFFFFF;} td.k:hover{background-color:#C0C0C0;}
+    .n{background-color:#F0F0F0;text-align:center;} th.n:hover{background-color:#F8F8F8;}
+    .c{text-align:center;} .u{display:none;}
+</style>
+</head>
+<body>
+<a id="top" name="top"></a>
+<h1>Life Variant: Niemiec&rsquo;s Rules</h1>
+<p class="c">
+	<a class="j" href="#n1-intro">Introduction</a> |
+	<a class="j" href="#n1-p1">Still-lifes</a> |
+	<a class="j" href="#n1-pp1">Pseudo-still-lifes</a> |
+	<a class="j" href="#n1-qp1">Quasi-still-lifes</a> |
+	<a class="j" href="#n1-p2">P2 oscillators</a> |
+	<a class="j" href="#n1-pp2">P2 pseudo-oscillator</a> |
+	<a class="j" href="#n1-p3">P3 oscillators</a> |
+	<a class="j" href="#n1-p4">P4 oscillator</a> |
+	<a class="j" href="#n1-p5">P5 oscillator</a> |
+	<a class="j" href="#n1-p6">P6 oscillators</a> |
+	<a class="j" href="#n1-p8">P8 oscillator</a> |
+	<a class="j" href="#n1-p16">P16 oscillator</a> |
+	<a class="j" href="#n1-p40">P40 oscillator</a> |
+	<a class="j" href="#n1-p64">P64 oscillator</a> |
+	<a class="j" href="#n1-p140">P140 oscillator</a> |
+	<a class="j" href="#n1-p280">P280 oscillator</a> |
+	<a class="j" href="#n1-ss">Spaceships</a> |
+	<a class="j" href="#n1-pss">Pseudo-spaceships</a> |
+	<a class="j" href="#n1-cons">Constellations</a> |
+	<a class="j" href="#n1-meth">Methuselah</a> |
+	<a class="j" href="#n1-gun">Guns</a> |
+	<a class="j" href="#n1-puff">Puffers</a> |
+	<a class="j" href="#n1-br">Breeder</a><br />
+	<b><a class="j" href="#n0-intro">Variant 0:</a></b>
+	<a class="j" href="#n0-p4">P4 oscillator</a> |
+	<a class="j" href="#n0-ss">Spaceships</a> |
+	<a class="j" href="#n0-puff">Puffers</a> |
+	<a class="j" href="#n0-gun">Gun</a><br />
+	<b><a class="j" href="#n2-intro">Variant 2:</a></b>
+	<a class="j" href="#n2-p2">P2 oscillators</a> |
+	<a class="j" href="#n2-p4">P4 oscillator</a> |
+	<a class="j" href="#n2-p6">P6 oscillator</a> |
+	<a class="j" href="#n2-p7">P7 oscillator</a> |
+	<a class="j" href="#n2-p11">P11 oscillator</a> |
+	<a class="j" href="#n2-p12">P12 oscillator</a> |
+	<a class="j" href="#n2-p14">P14 oscillator</a> |
+	<a class="j" href="#n2-p15">P15 oscillator</a> |
+	<a class="j" href="#n2-p30">P30 oscillator</a> |
+	<a class="j" href="#n2-p36">P36 oscillator</a> |
+	<a class="j" href="#n2-p48">P48 oscillator</a> |
+	<a class="j" href="#n2-p60">P60 oscillator</a> |
+	<a class="j" href="#n2-p60a">another P60 oscillator</a> |
+	<a class="j" href="#n2-ss">Spaceships</a> |
+	<a class="j" href="#n2-ws">Wick-stretcher</a> |
+	<a class="j" href="#n2-gun">Gun</a><br />
+	<b><a class="j" href="#n4-intro">Variant 4:</a></b>
+	<a class="j" href="#n4-puff">Puffer</a><br />
+	<b><a class="j" href="#n5-intro">Variant 5:</a></b>
+	<a class="j" href="#n5-ss">Spaceships</a> |
+	<a class="j" href="#n5-puff">Puffers</a> |
+	<a class="j" href="#n5-meth">Methuselah</a>
+</p>
+<hr class="a" /><main>
+<article><a id="a0" name="a0"></a>
+<a id="n1-intro" name="n1-intro"></a>
+<h2>Introduction</h2>
+<p>This is actually several closely-related rules. While the birth conditions
+are outer totalistic (and, in fact, the same as Life&rsquo;s), the survival
+conditions are not totalistic &mdash; i.e. they depend not only on the number of
+neighbors, but also their relative positions. Birth occurs on any 3 neighbors,
+while survival occurs on 2&hellip;4 neighbors that are orthogonally connected to the
+original cell (i.e. diagonal neighbors are allowed only if they are themselves
+adjacent to one or two orthogonal neighbors). Most common patterns are shared
+by all variants. All variants share the common rule string
+<em>B3/S2ae3aeijr4-cknqy</em>.
+The variants arise by tweaking three of the survival conditions:</p>
+<p><ul>
+    <li>1: Three on one side, plus a fourth on a diagonal (<em>S4n</em>).
+	If allowed, this enables a (5,6)<i>c</i>/19 clean oblique puffer;
+	otherwise, it enables a related (2,3)<i>c</i>/15 clean oblique puffer.</li>
+    <li>2: Two opposite neighbors (<em>S2i</em>). If allowed, this enables the
+	Blinker; otherwise, it enables a 2<i>c</i>/9 diagonal glider
+	(the Tadpole).</li>
+    <li>4: Three on one side, plus both other diagonals (<em>S5e</em>).
+	If allowed, this enables a 7<i>c</i>/27 orthogonal glider.</li>
+</ul></p>
+<p>This leads to 8 possible rule variants, by combining any of the above
+tweaks to the base rule:</p>
+<p><ul>
+    <li>Variant 0 (<em>B3/S2ae3aeijr4-cknqy</em>): none of the above.</li>
+    <li>Variant 1 (<em>B3/S2ae3aeijr4-ckqy</em>): 1 above but not 2 or 4.</li>
+    <li>Variant 2 (<em>B3/S2aei3aeijr4-cknqy</em>): 2 above but not 1 or 4.</li>
+    <li>Variant 3 (<em>B3/S2aei3aeijr4-ckqy</em>): 1 and 2 above but not 4.</li>
+    <li>Variant 4 (<em>B3/S2ae3aeijr4-cknqy5e</em>): 4 above but not 1 or 2.</li>
+    <li>Variant 5 (<em>B3/S2ae3aeijr4-ckqy5e</em>): 1 and 4 above but not 2.</li>
+    <li>Variant 6 (<em>B3/S2aei3aeijr4-cknqy5e</em>): 2 and 4 above but not 1.</li>
+    <li>Variant 7 (<em>B3/S2aei3aeijr4-ckqy5e</em>): all 3 of the above.</li>
+</ul></p>
+<p>(The above rules are specified in
+<a class="x" target="_blank" href="http://www.ibiblio.org/lifepatterns/neighbors2.html">
+Alan Hensel&rsquo;s notation</a> for non-totalistic neighbors in a Moore
+neighborhood. These are supported natively in Golly version 2.8 and later.</p>
+<p>Variant 0 (i.e. none of the above) has a period 28 <i>c</i>/14
+non-monotonic orthogonal glider. It also has a <i>c</i>/2 orthogonal spaceship
+that does not quite work in other variants, but pairs of them do.
+Variant 1 (i.e. 1 but not 2 or 4) has a period 280 (mod 70) shuttle with
+useful sparks. Variant 5 (i.e. 1 and 4 but not 2) has a 7<i>c</i>/27 orthogonal
+glider. Variants 1 and 5 (i.e. 1 but not 2; 4 is irrelevant) have a failed
+common replicator. The replicator also exists in other variants, but
+fails more quickly. In variant 4, two of them together form a dirty puffer.
+All of the variants possess two other common spaceships of different
+velocities (<i>c</i>/3 diagonal, <i>c</i>/3 orthogonal).</p>
+<p>Except for the last few sections that briefly discuss variants
+<a class="j" href="#n0-intro">0</a>, 
+<a class="j" href="#n2-intro">2</a>, 
+<a class="j" href="#n4-intro">4</a>, and
+<a class="j" href="#n5-intro">5</a>, most of this page deals with
+variant 1. Most of the things that work in variant 1 also work in variants 0
+and 4, with the few exceptions marked with &sup1;, and in variant 5,
+with the few exceptions marked with &sup2;.</p>
+<p>Due to the survival rule favoring ominoes (and almost nothing else), it
+follows that almost all still-lifes are composed entirely of ominoes or
+groups of disconnected ominoes. It is also interesting that most of the
+oscillators and spaceships, and even the replicator, have phases that consist
+entirely of ominoes.</p>
+<p>It is also curious that most of the common objects are very closely related
+by structure:</p>
+<p><ul>
+    <li>The smallest phase of the replicator differs from the block in only
+	one bit.</li>
+    <li>The smallest phase of the replicator differs from the orthogonal
+	glider in only one bit.</li>
+    <li>One phase of the tadpole differs from the orthogonal glider in only
+	one bit.</li>
+    <li>One phase of the puffer engine differs from the orthogonal glider in
+	only two bits.</li>
+    <li>One phase of the puffer engine differs from the diagonal glider in
+	only two bits.</li>
+    <li>The period 280 shuttle differs from the orthogonal glider in only one
+	bit.</li>
+    <li>The period 8 eater is composed of two colliding replicators.</li>
+    <li>The variant 0 spaceship Moth is the same as one phase of the replicator
+	with an even rather than odd axis of symmetry.</li>
+</ul></p>
+<p>These rules were originally developed to find a less explosive version of
+<a class="i" href="lifecred.htm#wainwright">Wainwright&rsquo;s</a> <em>NewLife</em>,
+(<em>B3/S2ain34</em>). It has the same birth condition as Life, and survival is
+on 3 or 4 neighbors, or on 2 neighbors which form an omino with the center cell.
+It shares some of the same still-lifes (e.g. block, ship, snake, carrier) and
+period 2 oscillators (e.g. blinker, clock, bipole, tripole, phoenix, griddle)
+as Life. It also shares the <i>c</i>/3 diagonal glider and some omino-based
+still-lifes with the above variants. Unfortunately, most patterns develop into
+large slowly-expanding patterns resembling brain coral.</p>
+</article>
+<hr class="a" /><article><a id="a1" name="a1"></a>
+<a id="n1-p1" name="n1-p1"></a>
+<h2>40 Still-lifes</h2>
+<p>These are all the still-lifes up to 10 bits, plus a few others for which
+syntheses are known. Several show techniques that can be used to make many
+still-lifes infinitely extensible.</p>
+<p><img src="map/n1-p1.png" alt="Niemiec1 still-lifes"
+ width="501" height="321" usemap="#n1-p1" /></p>
+<p><table><colgroup><col span="12" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_n1-p1" class="i" href="javascript:Nav('n1-p1')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a0">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a2">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/n1-p1.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/n1-p1.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/n1-p1.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="lis/n1-p1.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/n1-p1.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/n1-p1.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=n1-p1" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_n1-p1"><p><table id="t-n1-p1" style="width:505px">
+    <colgroup><col style="width:71px;" /><col span="6" style="width:60px;" />
+	<col style="width:72px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="rulemn/4bk.rle">Block [2]</a></td>
+	<td><a class="p" href="rulemn/5z.rle">Z [3]</a></td>
+	<td><a class="p" href="rulemn/6ac.rle">Carrier [3]</a></td>
+	<td><a class="p" href="rulemn/7w.rle">W [5]</a></td>
+	<td><a class="p" href="rulemn/8zz.rle">Z siamese Z [7]</a></td>
+	<td><a class="p" href="rulemn/9acz.rle">Carrier siamese Z [7]</a></td>
+	<td><a class="p" href="rulemn/9wtl.rle">W w/&#8203;tail [7]</a></td>
+	<td><a class="p" href="rulemn/11bmst1.rle">
+	    Up block on medium stool [4]</a></td>
+    </tr>
+    <tr>
+	<td><a class="p" href="rulemn/10stst1.rle">
+	    Cis stool on stool [3]</a></td>
+	<td><a class="p" href="rulemn/10rr2.rle">Down R tie R [8]</a></td>
+	<td><a class="p" href="rulemn/10rr1.rle">Up R tie R [6]</a></td>
+	<td><a class="p" href="rulemn/10bkta.rle">Block on table [11]</a></td>
+	<td class="r"><a class="p" href="rulemn/10acac.rle">
+	    Carrier siamese carrier [x]</a></td>
+	<td><a class="p" href="rulemn/10stst2.rle">
+	    Trans stool on stool [4]</a></td>
+	<td><a class="p" href="rulemn/10acta.rle">
+	    Carrier siamese table [9]</a></td>
+	<td><a class="p" href="rulemn/10wz.rle">
+	    W siamese Z [9]</a></td>
+    </tr>
+    <tr>
+	<td><a class="p" href="rulemn/12tata1.rle">
+	    Cis table on table [10]</a></td>
+	<td><a class="p" href="rulemn/14msms1.rle">
+	    Up cis medium stool on medium stool [4]</a></td>
+	<td><a class="p" href="rulemn/14jst1.rle">
+	    Cis stool on J [4]</a></td>
+	<td><a class="p" href="rulemn/14jst3.rle">
+	    Down trans stool on J [4]</a></td>
+	<td><a class="p" href="rulemn/14jst2.rle">
+	    Up trans stool on J [4]</a></td>
+	<td><a class="p" href="rulemn/15bkcv.rle">
+	    Block on cover [6]</a></td>
+	<td><a class="p" href="rulemn/18jj1.rle">
+	    Up cis J on J [4]</a></td>
+	<td><a class="p" href="rulemn/18hshs1.rle">
+	    Cis heavy stool on heavy stool [4]</a></td>
+    </tr>
+    <tr>
+	<td><a class="p" href="rulemn/18ust1.rle">
+	    Cis stool on U [7]</a></td>
+	<td><a class="p" href="rulemn/18hshs2.rle">
+	    Trans heavy stool on heavy stool [4]</a></td>
+	<td><a class="p" href="rulemn/18jj5.rle">
+	    Down trans J on down J [4]</a></td>
+	<td><a class="p" href="rulemn/18jj2.rle">
+	    Down cis J on J [4]</a></td>
+	<td><a class="p" href="rulemn/18ust2.rle">
+	    Trans stool on U [7]</a></td>
+	<td><a class="p" href="rulemn/18jj3.rle">
+	    Up trans J on J [4]</a></td>
+	<td><a class="p" href="rulemn/18jj4.rle">
+	    Down trans J on J [4]</a></td>
+	<td><a class="p" href="rulemn/20htas1.rle">
+	    Cis heavy table on heavy table [3]</a></td>
+    </tr>
+    <tr>
+	<td class="r"><a class="p" href="rulemn/22notn0.rle">Smallest
+	    still-life that doesn&rsquo;t work in variant 0&sup1; [x]</a></td>
+	<td><a class="p" href="rulemn/22mstas.rle">
+	    Pair of medium stools siamese tables [7]</a></td>
+	<td><a class="p" href="rulemn/22uj1.rle">
+	    Cis J on U [7]</a></td>
+	<td><a class="p" href="rulemn/22uj3.rle">
+	    Down trans J on U [7]</a></td>
+	<td><a class="p" href="rulemn/22uj2.rle">
+	    Up trans J on U [7]</a></td>
+	<td><a class="p" href="rulemn/26uu1.rle">
+	    Cis U on U [10]</a></td>
+	<td><a class="p" href="rulemn/26uu2.rle">
+	    Trans U on U [10]</a></td>
+	<td><a class="p" href="rulemn/36cross.rle">
+	    Cross [12]</a></td>
+    </tr>
+</table></p></div>
+<map name="n1-p1">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,301,20,321" href="#bottom" />
+	<area coords="481,0,501,20" href="zip/n1-p1.zip" />
+	<area coords="481,301,501,321" href="stamp/n1-p1.rle" />
+	<area coords="0,0,70,70" href="rulemn/4bk.rle" />
+	<area coords="70,0,130,70" href="rulemn/5z.rle" />
+	<area coords="130,0,190,70" href="rulemn/6ac.rle" />
+	<area coords="190,0,250,70" href="rulemn/7w.rle" />
+	<area coords="250,0,310,70" href="rulemn/8zz.rle" />
+	<area coords="310,0,370,70" href="rulemn/9acz.rle" />
+	<area coords="370,0,430,70" href="rulemn/9wtl.rle" />
+	<area coords="430,0,501,70" href="rulemn/11bmst1.rle" />
+	<area coords="0,70,70,130" href="rulemn/10stst1.rle" />
+	<area coords="70,70,130,130" href="rulemn/10rr2.rle" />
+	<area coords="130,70,190,130" href="rulemn/10rr1.rle" />
+	<area coords="190,70,250,130" href="rulemn/10bkta.rle" />
+	<area coords="250,70,310,130" href="rulemn/10acac.rle" />
+	<area coords="310,70,370,130" href="rulemn/10stst2.rle" />
+	<area coords="370,70,430,130" href="rulemn/10acta.rle" />
+	<area coords="430,70,501,130" href="rulemn/10wz.rle" />
+	<area coords="0,130,70,190" href="rulemn/12tata1.rle" />
+	<area coords="70,130,130,190" href="rulemn/14msms1.rle" />
+	<area coords="130,130,190,190" href="rulemn/14jst1.rle" />
+	<area coords="190,130,250,190" href="rulemn/14jst3.rle" />
+	<area coords="250,130,310,190" href="rulemn/14jst2.rle" />
+	<area coords="310,130,370,190" href="rulemn/15bkcv.rle" />
+	<area coords="370,130,430,190" href="rulemn/18jj1.rle" />
+	<area coords="430,130,501,190" href="rulemn/18hshs1.rle" />
+	<area coords="0,190,70,250" href="rulemn/18ust1.rle" />
+	<area coords="70,190,130,250" href="rulemn/18hshs2.rle" />
+	<area coords="130,190,190,250" href="rulemn/18jj5.rle" />
+	<area coords="190,190,250,250" href="rulemn/18jj2.rle" />
+	<area coords="250,190,310,250" href="rulemn/18ust2.rle" />
+	<area coords="310,190,370,250" href="rulemn/18jj3.rle" />
+	<area coords="370,190,430,250" href="rulemn/18jj4.rle" />
+	<area coords="430,190,501,250" href="rulemn/20htas1.rle" />
+	<area coords="0,250,70,321" href="rulemn/22notn0.rle" />
+	<area coords="70,250,130,321" href="rulemn/22mstas.rle" />
+	<area coords="130,250,190,321" href="rulemn/22uj1.rle" />
+	<area coords="190,250,250,321" href="rulemn/22uj3.rle" />
+	<area coords="250,250,310,321" href="rulemn/22uj2.rle" />
+	<area coords="310,250,370,321" href="rulemn/26uu1.rle" />
+	<area coords="370,250,430,321" href="rulemn/26uu2.rle" />
+	<area coords="430,250,501,321" href="rulemn/36cross.rle" />
+</map>
+<p>Although not generally considered a still-life, the empty field (i.e.
+<a href="rulemn/0vacuum.rle">vacuum</a>) technically fulfills most the
+criteria, and it occurs sufficiently frequently to warrant being mentioned.
+For example, it is the most common result of two gliders colliding. (Since
+it has no living cells, it fails to be an actual object, in much the same
+way that 1 is not considered a prime number, even though it has no other
+prime factors.)</p>
+<p>Because so many two-glider collisions die,
+only a small number of them are shown.</p>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Aircraft_carrier">Aircraft carrier</a>,
+<a class="x" href="http://conwaylife.com/wiki/Block">Block</a>,
+<a class="x" href="http://conwaylife.com/wiki/Block_on_cover">Block on cover</a>,
+<a class="x" href="http://conwaylife.com/wiki/Pre-block">Pre-block</a>,
+<a class="x" href="http://conwaylife.com/wiki/Table_on_table">Table on table</a>,
+<a class="x" href="http://conwaylife.com/wiki/Vacuum_(empty_space)">Vacuum (empty space)</a>.</p>
+</article>
+<hr /><article><a id="a2" name="a2"></a>
+<a id="n1-pp1" name="n1-pp1"></a>
+<h2>6 Pseudo-still-lifes</h2>
+<p><img src="map/n1-pp1.png" alt="Niemiec1 pseudo-still-lifes"
+ width="381" height="61" usemap="#n1-pp1" /></p>
+<p><table><colgroup><col span="12" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_n1-pp1" class="i" href="javascript:Nav('n1-pp1')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a1">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a3">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/n1-pp1.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/n1-pp1.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/n1-pp1.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="lis/n1-pp1.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/n1-pp1.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/n1-pp1.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=n1-pp1" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_n1-pp1"><p><table id="t-n1-pp1" style="width:385px">
+    <colgroup><col style="width:71px;" /><col span="4" style="width:60px;" />
+	<col style="width:72px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="rulemn/8bkbk.rle">
+	    Block on block; Bi-block [2]</a></td>
+	<td><a class="p" href="rulemn/10acbk1.rle">
+	    Block on carrier [6]</a></td>
+	<td><a class="p" href="rulemn/10acbk2.rle">
+	    Block below carrier [6]</a></td>
+	<td><a class="p" href="rulemn/16bbbb.rle">
+	    Block pair on block pair [6]</a></td>
+	<td><a class="p" href="rulemn/18bsts.rle">
+	    Block pair on pair of stools [4]</a></td>
+	<td><a class="p" href="rulemn/20st4.rle">
+	    Two pairs of stools [2]</a></td>
+    </tr>
+</table></p></div>
+<map name="n1-pp1">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,41,20,61" href="#bottom" />
+	<area coords="361,0,381,20" href="zip/n1-pp1.zip" />
+	<area coords="361,41,381,61" href="stamp/n1-pp1.rle" />
+	<area coords="0,0,70,61" href="rulemn/8bkbk.rle" />
+	<area coords="70,0,130,61" href="rulemn/10acbk1.rle" />
+	<area coords="130,0,190,61" href="rulemn/10acbk2.rle" />
+	<area coords="190,0,250,61" href="rulemn/16bbbb.rle" />
+	<area coords="250,0,310,61" href="rulemn/18bsts.rle" />
+	<area coords="310,0,381,61" href="rulemn/20st4.rle" />
+</map>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Aircraft_carrier">Aircraft carrier</a>,
+<a class="x" href="http://conwaylife.com/wiki/Bi-block">Bi-block</a>,
+<a class="x" href="http://conwaylife.com/wiki/Block">Block</a>.</p>
+</article>
+<hr /><article><a id="a3" name="a3"></a>
+<a id="n1-qp1" name="n1-qp1"></a>
+<h2>2 Quasi-still-lifes</h2>
+<p><img src="map/n1-qp1.png" alt="Niemiec1 qp1tellations"
+ width="141" height="61" usemap="#n1-qp1" /></p>
+<p><table><colgroup><col span="12" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_n1-qp1" class="i" href="javascript:Nav('n1-qp1')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a2">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a4">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/n1-qp1.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/n1-qp1.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/n1-qp1.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="lis/n1-qp1.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/n1-qp1.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/n1-qp1.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=n1-qp1" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_n1-qp1"><p><table id="t-n1-qp1" style="width:145px">
+    <colgroup><col span="2" style="width:72px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="rulemn/8bkbk33.rle">
+	    Two blocks offset (3, 3)&sup3; [2]</a></td>
+	<td><a class="p" href="rulemn/12bk3a.rle">
+	    Three staggered blocks&sup3; [3]</a></td>
+    </tr>
+</table></p></div>
+<map name="n1-qp1">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,41,20,61" href="#bottom" />
+	<area coords="121,0,141,20" href="zip/n1-qp1.zip" />
+	<area coords="121,41,141,61" href="stamp/n1-qp1.rle" />
+	<area coords="0,0,70,61" href="rulemn/8bkbk33.rle" />
+	<area coords="70,0,141,61" href="rulemn/12bk3a.rle" />
+</map>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Block">Block</a>.</p>
+</article>
+<hr /><article><a id="a4" name="a4"></a>
+<a id="n1-p2" name="n1-p2"></a>
+<h2>11 Period 2 oscillators</h2>
+<p><img src="map/n1-p2.png" alt="Niemiec1 period 2 oscillators"
+ width="441" height="161" usemap="#n1-p2" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_n1-p2" class="i" href="javascript:Nav('n1-p2')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a3">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a5">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/n1-p2.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/n1-p2.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/n1-p2.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/n1-p2.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/n1-p2.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/n1-p2.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/n1-p2.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=n1-p2" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_n1-p2"><p><table id="t-n1-p2" style="width:445px">
+    <colgroup><col style="width:71px;" /><col span="5" style="width:60px;" />
+	<col style="width:72px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="rulemn/6bc.rle">
+	    Beacon [2]</a></td>
+	<td><a class="p" href="rulemn/10bbc.rle">
+	    Beacon tie block [4]</a></td>
+	<td class="r"><a class="p" href="rulemn/12mg.rle">
+	    Mini-griddles [x]</a></td>
+	<td class="r"><a class="p" href="rulemn/12bcs.rle">
+	    Bridged beacons [x]</a></td>
+	<td class="r"><a class="p" href="rulemn/12cy.rle">
+	    Cyclone [x]</a></td>
+	<td class="r"><a class="p" href="rulemn/12px.rle">
+	    Phoenix [x]</a></td>
+	<td><a class="p" href="rulemn/12bcbc.rle">
+	    Beacon tie beacon [4]</a></td>
+    </tr>
+    <tr>
+	<td class="r"><a class="p" href="rulemn/17p2.rle">
+	    17-bit P2 oscillator&sup1; [x]</a></td>
+	<td colspan="2" class="r"><a class="p" href="rulemn/18px12.rle">
+	    2&times;1 Phoenix [x]</a></td>
+	<td class="r"><a class="p" href="rulemn/20st4a.rle">
+	    Four stools [x]</a></td>
+	<td class="r"><a class="p" href="rulemn/21p2.rle">
+	    21-bit P2 oscillator [x]</a></td>
+	<td colspan="2" class="s">&nbsp;</td>
+    </tr>
+</table></p></div>
+<map name="n1-p2">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,141,20,161" href="#bottom" />
+	<area coords="421,0,441,20" href="zip/n1-p2.zip" />
+	<area coords="421,141,441,161" href="stamp/n1-p2.rle" />
+	<area coords="0,0,70,90" href="rulemn/6bc.rle" />
+	<area coords="70,0,130,90" href="rulemn/10bbc.rle" />
+	<area coords="130,0,190,90" href="rulemn/12mg.rle" />
+	<area coords="190,0,250,90" href="rulemn/12bcs.rle" />
+	<area coords="250,0,310,90" href="rulemn/12cy.rle" />
+	<area coords="310,0,370,90" href="rulemn/12px.rle" />
+	<area coords="370,0,441,90" href="rulemn/12bcbc.rle" />
+	<area coords="0,90,70,161" href="rulemn/17p2.rle" />
+	<area coords="70,90,190,161" href="rulemn/18px12.rle" />
+	<area coords="190,90,250,161" href="rulemn/20st4a.rle" />
+	<area coords="250,90,310,161" href="rulemn/21p2.rle" />
+</map>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Beacon">Beacon</a>,
+<a class="x" href="http://conwaylife.com/wiki/Block">Block</a>,
+<a class="x" href="http://conwaylife.com/wiki/Phoenix_1">Phoenix 1</a>.</p>
+</article>
+<hr /><article><a id="a5" name="a5"></a>
+<a id="n1-pp2" name="n1-pp2"></a>
+<h2>1 Period 2 pseudo-oscillator</h2>
+<p><img src="map/n1-pp2.png" alt="N1 PP2"
+ width="81" height="61" usemap="#n1-pp2" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_n1-pp2" class="i" href="javascript:Nav('n1-pp2')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a4">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a6">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/n1-pp2.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/n1-pp2.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/n1-pp2.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/n1-pp2.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/n1-pp2.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/n1-pp2.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/n1-pp2.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=n1-pp2" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_n1-pp2"><p><table id="t-n1-pp2" style="width:85px">
+    <colgroup><col style="width:83px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="rulemn/10bcbk.rle">Block on beacon [5]</a></td>
+    </tr>
+</table></p></div>
+<map name="n1-pp2">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,41,20,61" href="#bottom" />
+	<area coords="61,0,81,20" href="zip/n1-pp2.zip" />
+	<area coords="61,41,81,61" href="stamp/n1-pp2.rle" />
+	<area coords="0,0,81,61" href="rulemn/10bcbk.rle" />
+</map>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Beacon">Beacon</a>,
+<a class="x" href="http://conwaylife.com/wiki/Block">Block</a>.</p>
+</article>
+<hr /><article><a id="a6" name="a6"></a>
+<a id="n1-p3" name="n1-p3"></a>
+<h2>3 Period 3 oscillators</h2>
+<p><img src="map/n1-p3.png" alt="Niemiec1 P3s"
+ width="201" height="81" usemap="#n1-p3" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_n1-p3" class="i" href="javascript:Nav('n1-p3')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a5">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a7">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/n1-p3.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/n1-p3.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/n1-p3.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/n1-p3.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/n1-p3.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/n1-p3.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/n1-p3.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=n1-p3" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_n1-p3"><p><table id="t-n1-p3" style="width:205px">
+    <colgroup><col style="width:71px;" /><col style="width:60px;" />
+	<col style="width:72px;" /></colgroup>
+    <tr>
+	<td class="r"><a class="p" href="rulemn/17co.rle">
+	    Corner [x]</a></td>
+	<td class="r"><a class="p" href="rulemn/20gb.rle">
+	    Gumball&sup1; [x]</a></td>
+	<td class="r">
+	    <a class="p" href="rulemn/29jl.rle">Jacob&rsquo;s ladder&sup1; [x]</a></td>
+    </tr>
+</table></p></div>
+<map name="n1-p3">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,61,20,81" href="#bottom" />
+	<area coords="181,0,201,20" href="zip/n1-p3.zip" />
+	<area coords="181,61,201,81" href="stamp/n1-p3.rle" />
+	<area coords="0,0,70,81" href="rulemn/17co.rle" />
+	<area coords="70,0,130,81" href="rulemn/20gb.rle" />
+	<area coords="130,0,190,81" href="rulemn/29jl.rle" />
+</map>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Block">Block</a>.</p>
+</article>
+<hr /><article><a id="a7" name="a7"></a>
+<a id="n1-p4" name="n1-p4"></a>
+<h2>1 Period 4 oscillator</h2>
+<p><img src="map/n1-p4.png" alt="N1 P4"
+ width="61" height="61" usemap="#n1-p4" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_n1-p4" class="i" href="javascript:Nav('n1-p4')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a6">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a8">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/n1-p4.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/n1-p4.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/n1-p4.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/n1-p4.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/n1-p4.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/n1-p4.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/n1-p4.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=n1-p4" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_n1-p4"><p><table id="t-n1-p4" style="width:65px">
+    <colgroup><col style="width:63px;" /></colgroup>
+    <tr>
+	<td class="r"><a class="p" href="rulemn/10p4.rle">10-bit P4&sup1; [x]</a></td>
+    </tr>
+</table></p></div>
+<map name="n1-p4">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,41,20,61" href="#bottom" />
+	<area coords="41,0,61,20" href="zip/n1-p4.zip" />
+	<area coords="41,41,61,61" href="stamp/n1-p4.rle" />
+	<area coords="0,0,61,61" href="rulemn/10p4.rle" />
+</map>
+</article>
+<hr /><article><a id="a8" name="a8"></a>
+<a id="n1-p5" name="n1-p5"></a>
+<h2>1 Period 5 oscillator</h2>
+<p><img src="map/n1-p5.png" alt="N1 P5"
+ width="81" height="81" usemap="#n1-p5" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_n1-p5" class="i" href="javascript:Nav('n1-p5')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a7">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a9">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/n1-p5.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/n1-p5.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/n1-p5.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/n1-p5.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/n1-p5.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/n1-p5.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/n1-p5.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=n1-p5" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_n1-p5"><p><table id="t-n1-p5" style="width:85px">
+    <colgroup><col style="width:83px;" /></colgroup>
+    <tr>
+	<td class="r"><a class="p" href="rulemn/24p5.rle">24-bit P5 [x]</a></td>
+    </tr>
+</table></p></div>
+<map name="n1-p5">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,61,20,81" href="#bottom" />
+	<area coords="61,0,81,20" href="zip/n1-p5.zip" />
+	<area coords="61,61,81,81" href="stamp/n1-p5.rle" />
+	<area coords="0,0,81,81" href="rulemn/24p5.rle" />
+</map>
+</article>
+<hr /><article><a id="a9" name="a9"></a>
+<a id="n1-p6" name="n1-p6"></a>
+<h2>3 Period 6 oscillators</h2>
+<p><img src="map/n1-p6.png" alt="N1 P6"
+ width="201" height="61" usemap="#n1-p6" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_n1-p6" class="i" href="javascript:Nav('n1-p6')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a8">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a10">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/n1-p6.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/n1-p6.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/n1-p6.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/n1-p6.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/n1-p6.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/n1-p6.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/n1-p6.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=n1-p6" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_n1-p6"><p><table id="t-n1-p6" style="width:205px">
+    <colgroup><col style="width:71px;" /><col style="width:60px;" />
+	<col style="width:72px;" /></colgroup>
+    <tr>
+	<td class="r"><a class="p" href="rulemn/12p6.rle">12-bit P6 [x]</a></td>
+	<td class="r"><a class="p" href="rulemn/19p6.rle">19-bit P6 [x]</a></td>
+	<td class="r"><a class="p" href="rulemn/20p6.rle">20-bit P6 [x]</a></td>
+    </tr>
+</table></p></div>
+<map name="n1-p6">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,41,20,61" href="#bottom" />
+	<area coords="181,0,201,20" href="zip/n1-p6.zip" />
+	<area coords="181,41,201,61" href="stamp/n1-p6.rle" />
+	<area coords="0,0,70,61" href="rulemn/12p6.rle" />
+	<area coords="70,0,130,61" href="rulemn/19p6.rle" />
+	<area coords="130,0,201,61" href="rulemn/20p6.rle" />
+</map>
+</article>
+<hr /><article><a id="a10" name="a10"></a>
+<a id="n1-p8" name="n1-p8"></a>
+<a id="n1-p16" name="n1-p16"></a>
+<a id="n1-p40" name="n1-p40"></a>
+<a id="n1-p64" name="n1-p64"></a>
+<h2>4 Period 8<em>n</em> oscillators</h2>
+<p><img src="map/n1-p8.png" alt="Niemiec1 P8n oscillators"
+ width="421" height="121" usemap="#n1-p8" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_n1-p8" class="i" href="javascript:Nav('n1-p8')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a9">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a11">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/n1-p8.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/n1-p8.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/n1-p8.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/n1-p8.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/n1-p8.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/n1-p8.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/n1-p8.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=n1-p8" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_n1-p8"><p><table id="t-n1-p8" style="width:425px">
+    <colgroup><col style="width:111px;" /><col span="2" style="width:100px;" />
+	<col style="width:112px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="rulemn/10et.rle">
+	    P8 eater [2]</a></td>
+	<td><a class="p" href="rulemn/25p16pp.rle">
+	    P16 ping pong [8]</a></td>
+	<td><a class="p" href="rulemn/25p40pp.rle">
+	    P40 ping pong [8]</a></td>
+	<td><a class="p" href="rulemn/25p64pp.rle">
+	    P64 ping pong [8]</a></td>
+    </tr>
+</table></p></div>
+<map name="n1-p8">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,101,20,121" href="#bottom" />
+	<area coords="401,0,421,20" href="zip/n1-p8.zip" />
+	<area coords="401,101,421,121" href="stamp/n1-p8.rle" />
+	<area coords="0,0,110,121" href="rulemn/10et.rle" />
+	<area coords="110,0,210,121" href="rulemn/25p16pp.rle" />
+	<area coords="210,0,310,121" href="rulemn/25p40pp.rle" />
+	<area coords="310,0,421,121" href="rulemn/25p64pp.rle" />
+</map>
+<p>The period 8 oscillator is one of the two commonly-occurring oscillators
+with periods above 2. It is called the Eater, because it can eat all of the
+basic spaceships, which is very convenient, since the simplest
+<a class="j" href="#n1-gun">glider guns</a> are based on the
+<a class="j" href="#n1-p140">period 280 shuttle</a>, and 280 is multiple of 8.</p>
+<p>The oscillator can also reflect diagonal gliders, allowing for simple
+glider-loop oscillators of all periods 16+24<i>n</i>, <i>n</i>&ge;0. The first three of
+these are shown above.</p>
+</article>
+<hr /><article><a id="a11" name="a11"></a>
+<a id="n1-p140" name="n1-p140"></a>
+<h2>1 Period 140 oscillator</h2>
+<p><img src="map/n1-p140.png" alt="Niemiec1 P140 oscillator"
+ width="241" height="141" usemap="#n1-p140" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_n1-p140" class="i" href="javascript:Nav('n1-p140')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a10">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a12">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/n1-p140.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/n1-p140.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/n1-p140.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/n1-p140.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/n1-p140.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/n1-p140.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/n1-p140.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=n1-p140" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_n1-p140"><p><table id="t-n1-p140" style="width:245px">
+    <colgroup><col style="width:243px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="rulemn/14p140.rle">
+	    P140 (mod 70) Two interleaved shuttles&sup1; [4]</a></td>
+    </tr>
+</table></p></div>
+<map name="n1-p140">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,121,20,141" href="#bottom" />
+	<area coords="221,0,241,20" href="zip/n1-p140.zip" />
+	<area coords="221,121,241,141" href="stamp/n1-p140.rle" />
+	<area coords="0,0,241,141" href="rulemn/14p140.rle" />
+</map>
+<p>Two of the period 280 shuttles can occupy the same area. If these are exactly
+140 generations out of phase, this effectively makes a period 140 oscillator.
+While not all shuttle pairs interact with each other, in this arrangement, the
+dying sparks from both shuttles interact non-trivially, which makes this an true
+object and oscillator, rather than a constellation of two oscillators. Since the
+minimum phase separation between adjacent shuttles is 100 generations, three
+shuttles cannot be combined in this way.</p>
+</article>
+<hr /><article><a id="a12" name="a12"></a>
+<a id="n1-p280" name="n1-p280"></a>
+<h2>1 Period 280 oscillator</h2>
+<p><img src="map/n1-p280.png" alt="Niemiec1 P280 oscillator"
+ width="141" height="141" usemap="#n1-p280" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_n1-p280" class="i" href="javascript:Nav('n1-p280')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a11">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a13">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/n1-p280.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/n1-p280.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/n1-p280.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/n1-p280.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/n1-p280.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/n1-p280.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/n1-p280.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=n1-p280" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_n1-p280"><p><table id="t-n1-p280" style="width:145px">
+    <colgroup><col style="width:143px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="rulemn/7p280.rle">
+	    P280 (mod 70) Shuttle&sup1; [2]</a></td>
+    </tr>
+</table></p></div>
+<map name="n1-p280">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,121,20,141" href="#bottom" />
+	<area coords="121,0,141,20" href="zip/n1-p280.zip" />
+	<area coords="121,121,141,141" href="stamp/n1-p280.rle" />
+	<area coords="0,0,141,141" href="rulemn/7p280.rle" />
+</map>
+<p>There is a common 7-bit shuttle that generates huge clean plumes of debris
+and rotates 90 degrees every 70 generations, yielding a period 280 oscillator.
+Because the central core is so small, it is shown with the smallest population
+of the core (7) rather than the smallest total population (27) that occurs 19
+generations later. The large debris plumes are useful, in that they can eat
+gliders, and even rub against others to create
+<a class="j" href="#n1-gun">glider guns</a>.</p>
+</article>
+<hr /><article><a id="a13" name="a13"></a>
+<a id="n1-ss" name="n1-ss"></a>
+<h2>10 Spaceships</h2>
+<p><img src="map/n1-ss.png" alt="Niemiec1 spaceships"
+ width="561" height="161" usemap="#n1-ss" /></p>
+<p><table><colgroup><col span="12" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_n1-ss" class="i" href="javascript:Nav('n1-ss')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a12">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a14">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/n1-ss.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/n1-ss.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/n1-ss.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="lis/n1-ss.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/n1-ss.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/n1-ss.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=n1-ss" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_n1-ss"><p><table id="t-n1-ss" style="width:565px">
+    <colgroup><col style="width:91px;" /><col style="width:80px;" />
+	<col style="width:120px;" /><col style="width:80px;" />
+	<col style="width:60px;" /><col style="width:40px;" />
+	<col style="width:20px;" /><col style="width:72px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="rulemn/5dg.rle">Wing;
+	    P3 <i>c</i>/3 diagonal glider [2]</a></td>
+	<td><a class="p" href="rulemn/6tp.rle">Tadpole;
+	    P18 2<i>c</i>/9 diagonal glider [2]</a></td>
+	<td><a class="p" href="rulemn/11op.rle">Oblique puffer;
+	    P19 (6, 5)<i>c</i>/19 clean oblique puffer&sup1; [2]</a></td>
+	<td><a class="p" href="rulemn/6gl.rle">Glider; Ortho&shy;gonal glider;
+	    P6 <i>c</i>/3 ortho&shy;gonal space&shy;ship [2]</a></td>
+	<td class="r"><a class="p" href="rulemn/12o2.rle">12-bit
+	    P2 <i>c</i>/2 ortho&shy;gonal space&shy;ship [x]</a></td>
+	<td colspan="2" class="r"><a class="p" href="rulemn/17o2.rle">17-bit
+	    P2 <i>c</i>/2 ortho&shy;gonal space&shy;ship [x]</a></td>
+	<td class="r"><a class="p" href="rulemn/32o2.rle">18-bit
+	    P2 <i>c</i>/2 ortho&shy;gonal space&shy;ship [x]</a></td>
+    </tr>
+    <tr>
+	<td class="r"><a class="p" href="rulemn/15dgta.rle">
+	    Wing w/&#8203; tag-along [x]</a></td>
+	<td colspan="3" class="s">&nbsp;</td>
+	<td colspan="2" class="r"><a class="p" href="rulemn/30o2.rle">
+	    P8 <i>c</i>/2 ortho&shy;gonal space&shy;ship [x]</a></td>
+	<td colspan="2" class="r"><a class="p" href="rulemn/32o2.rle">
+	    P16 <i>c</i>/2 ortho&shy;gonal space&shy;ship [x]</a></td>
+    </tr>
+</table></p></div>
+<map name="n1-ss">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,141,20,161" href="#bottom" />
+	<area coords="541,0,561,20" href="zip/n1-ss.zip" />
+	<area coords="541,141,561,161" href="stamp/n1-ss.rle" />
+	<area coords="0,0,90,90" href="rulemn/5dg.rle" />
+	<area coords="90,0,170,90" href="rulemn/6tp.rle" />
+	<area coords="170,0,290,90" href="rulemn/11op.rle" />
+	<area coords="290,0,370,90" href="rulemn/6gl.rle" />
+	<area coords="370,0,430,90" href="rulemn/12o2.rle" />
+	<area coords="430,0,490,90" href="rulemn/17o2.rle" />
+	<area coords="490,0,561,90" href="rulemn/18o2.rle" />
+	<area coords="0,90,90,161" href="rulemn/15dgta.rle" />
+	<area coords="370,90,470,161" href="rulemn/30o2.rle" />
+	<area coords="470,90,561,161" href="rulemn/32o2.rle" />
+</map>
+<p>This rule includes 4 basic common spaceships, all of which have different
+periods and velocities. The orthogonal one is the most common, and forms the
+basis for all syntheses. It can also form pseudo-spaceships, the smallest
+two of which sometimes are common, and are shown below.</p>
+<p>One side of a wing can drag a tag-along; it is also possible to drag one
+tag-along on each side. Two wings with tag-alongs can interact to form a
+<a class="j" href="#n0-puff">dirty puffer</a> in variant 0.</p>
+<p>There is a <i>c</i>/2 orthogonal spaceship that works in
+<a class="j" href="#n5-ss">variant 5</a>, but does not quite work here.
+However, two of them can be combined in several ways to produce working
+spaceships. These are all members of a large class of related <i>c</i>/2
+orthogonal spaceships.</p>
+</article>
+<hr /><article><a id="a14" name="a14"></a>
+<a id="n1-pss" name="n1-pss"></a>
+<h2>2 Pseudo-spaceships</h2>
+<p><img src="map/n1-pss.png" alt="Niemiec1 pseudo-SS"
+ width="181" height="61" usemap="#n1-pss" /></p>
+<p><table><colgroup><col span="12" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_n1-pss" class="i" href="javascript:Nav('n1-pss')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a13">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a15">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/n1-pss.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/n1-pss.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/n1-pss.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="lis/n1-pss.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/n1-pss.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/n1-pss.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=n1-pss" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_n1-pss"><p><table id="t-n1-pss" style="width:185px">
+    <colgroup><col span="2" style="width:92px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="rulemn/12glgl1.rle">
+	    Inward glider on glider [4]</a></td>
+	<td><a class="p" href="rulemn/12glgl2.rle">
+	    Outward glider on glider [6]</a></td>
+    </tr>
+</table></p></div>
+<map name="n1-pss">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,41,20,61" href="#bottom" />
+	<area coords="161,0,181,20" href="zip/n1-pss.zip" />
+	<area coords="161,41,181,61" href="stamp/n1-pss.rle" />
+	<area coords="0,0,90,61" href="rulemn/12glgl1.rle" />
+	<area coords="90,0,181,61" href="rulemn/12glgl2.rle" />
+</map>
+</article>
+<hr /><article><a id="a15" name="a15"></a>
+<a id="n1-cons" name="n1-cons"></a>
+<h2>19 Constellations</h2>
+<p>These are all the constellations that can be formed from two gliders
+(excluding those that include one or more gliders), and several constellations
+consisting of blocks that can be formed from three gliders.</p>
+<p><img src="map/n1-cons.png" alt="Niemiec1 constellations"
+ width="521" height="301" usemap="#n1-cons" /></p>
+<p><table><colgroup><col span="12" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_n1-cons" class="i" href="javascript:Nav('n1-cons')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a14">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a16">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/n1-cons.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/n1-cons.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/n1-cons.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="lis/n1-cons.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/n1-cons.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/n1-cons.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=n1-cons" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_n1-cons"><p><table id="t-n1-cons" style="width:525px">
+    <colgroup><col style="width:111px;" /><col span="3" style="width:100px;" />
+	<col style="width:112px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="rulemn/8bkbk06.rle">
+	    Two blocks offset (6, 0) [2]</a></td>
+	<td><a class="p" href="rulemn/8bkbk07.rle">
+	    Two blocks offset (7, 0) [2]</a></td>
+	<td><a class="p" href="rulemn/8bkbk0b.rle">
+	    Two blocks offset (11, 0) [3]</a></td>
+	<td><a class="p" href="rulemn/8bkbk14.rle">
+	    Two blocks offset (4, 1) [2]</a></td>
+	<td><a class="p" href="rulemn/8bkbk15.rle">
+	    Two blocks offset (5, 1) [2]</a></td>
+    </tr>
+    <tr>
+	<td><a class="p" href="rulemn/8bkbk16.rle">
+	    Two blocks offset (6, 1) [2]</a></td>
+	<td><a class="p" href="rulemn/8bkbk24.rle">
+	    Two blocks offset (4, 2) [3]</a></td>
+	<td><a class="p" href="rulemn/8bkbk27.rle">
+	    Two blocks offset (7, 2) [2]</a></td>
+	<td><a class="p" href="rulemn/8bkbk2i.rle">
+	    Two blocks offset (18, 2) [3]</a></td>
+	<td><a class="p" href="rulemn/8bkbk33.rle">
+	    Two blocks offset (3, 3)&sup3; [2]</a></td>
+    </tr>
+    <tr>
+	<td><a class="p" href="rulemn/8bkbk37.rle">
+	    Two blocks offset (7, 3) [2]</a></td>
+	<td><a class="p" href="rulemn/8bkbk38.rle">
+	    Two blocks offset (8, 3) [2]</a></td>
+	<td><a class="p" href="rulemn/8bkbk59.rle">
+	    Two blocks offset (9, 5) [3]</a></td>
+	<td><a class="p" href="rulemn/8bkbk7f.rle">
+	    Two blocks offset (15, 7) [2]</a></td>
+	<td><a class="p" href="rulemn/12bk3a.rle">
+	    Three staggered blocks&sup3; [3]</a></td>
+    </tr>
+    <tr>
+	<td><a class="p" href="rulemn/12bk3b.rle">
+	    Three blocks far apart [2]</a></td>
+	<td><a class="p" href="rulemn/16bk4a.rle">
+	    Two pairs of two blocks [2]</a></td>
+	<td><a class="p" href="rulemn/16bk4b.rle">
+	    Blockade [2]</a></td>
+	<td colspan="2"><a class="p" href="rulemn/48bk12.rle">
+	    Twelve blocks [2]</a></td>
+    </tr>
+</table></p></div>
+<map name="n1-cons">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,281,20,301" href="#bottom" />
+	<area coords="501,0,521,20" href="zip/n1-cons.zip" />
+	<area coords="501,281,521,301" href="stamp/n1-cons.rle" />
+	<area coords="0,0,110,70" href="rulemn/8bkbk06.rle" />
+	<area coords="110,0,210,70" href="rulemn/8bkbk07.rle" />
+	<area coords="210,0,310,70" href="rulemn/8bkbk0b.rle" />
+	<area coords="310,0,410,70" href="rulemn/8bkbk14.rle" />
+	<area coords="410,0,521,70" href="rulemn/8bkbk15.rle" />
+	<area coords="0,70,110,130" href="rulemn/8bkbk16.rle" />
+	<area coords="110,70,210,130" href="rulemn/8bkbk24.rle" />
+	<area coords="210,70,310,130" href="rulemn/8bkbk27.rle" />
+	<area coords="310,70,410,130" href="rulemn/8bkbk2i.rle" />
+	<area coords="410,70,521,130" href="rulemn/8bkbk33.rle" />
+	<area coords="0,130,110,190" href="rulemn/8bkbk37.rle" />
+	<area coords="110,130,210,190" href="rulemn/8bkbk38.rle" />
+	<area coords="210,130,310,190" href="rulemn/8bkbk59.rle" />
+	<area coords="310,130,410,190" href="rulemn/8bkbk7f.rle" />
+	<area coords="410,130,521,190" href="rulemn/12bk3a.rle" />
+	<area coords="0,190,110,301" href="rulemn/12bk3b.rle" />
+	<area coords="110,190,210,301" href="rulemn/16bk4a.rle" />
+	<area coords="210,190,310,301" href="rulemn/16bk4b.rle" />
+	<area coords="310,190,521,301" href="rulemn/48bk12.rle" />
+</map>
+<p>Note &sup3;: These constellations are
+<a class="i" href="qp1.htm">quasi-still-lifes</a>.</p>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Block">Block</a>.</p>
+</article>
+<hr /><article><a id="a16" name="a16"></a>
+<a id="n1-meth" name="n1-meth"></a>
+<h2>1 Methuselah</h2>
+<p><img src="map/n1-meth.png" alt="N1 meth"
+ width="81" height="61" usemap="#n1-meth" /></p>
+<p><table><colgroup><col span="12" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_n1-meth" class="i" href="javascript:Nav('n1-meth')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a15">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a17">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/n1-meth.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/n1-meth.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/n1-meth.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="lis/n1-meth.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/n1-meth.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/n1-meth.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=n1-meth" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_n1-meth"><p><table id="t-n1-meth" style="width:85px">
+    <colgroup><col style="width:83px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="rulemn/4p.rle">P; P190 P replicator&sup1;&sup2; [2]</a></td>
+    </tr>
+    <tr>
+	<td><a class="p" href="rulemn/4prun.rle">Run P&hellip;</a></td>
+    </tr>
+</table></p></div>
+<map name="n1-meth">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,41,20,61" href="#bottom" />
+	<area coords="61,0,81,20" href="zip/n1-meth.zip" />
+	<area coords="61,41,81,61" href="stamp/n1-meth.rle" />
+	<area coords="0,0,81,61" href="rulemn/4p.rle" />
+</map>
+<p>This rule features a very common 5-bit replicator, the P pentomino. Every 95
+generations, it turns into two copies of itself rotated 90 degrees, 7 spaces
+forward, and 17 to either side, so the corners expand diagonally at a speed of
+12<i>c</i>/95, with diagonal glide symmetry, similar to Life&rsquo;s switch
+engine. It starts out as a clean binary sawtooth, but unfortunately, on the
+fourth and subsequent cycles, the interior consists of irregular debris. It
+emits large numbers of gliders of all types in all directions, and its corners
+tend to expand in a regular manner. It does occasionally expand at a faster rate
+than 12<i>c</i>/95, as most gliders escape at <i>c</i>/3 or close to it,
+and sometimes these collide to create new replicators far away from the
+original one.</p>
+<p>It is theoretically possible that this might eventually stabilize, but after
+22000 generations with a population of almost 2.5 million, it shows no indication
+of doing so, having spawned new copies of itself over 500 spaces beyond its
+corners, and multiple others much closer to itself, so the ultimate fate of
+this object is unknown. Unfortunately, since its behavior is irregular, it is
+not conducive to rapid computation using hashing algorithms. (Contrast with the
+<a class="j" href="#n1-br">breeder</a> below, which is extremely regular. At generation
+1e497, Golly computes 1e495 generations every 8 seconds, on an 2.2 GHz
+CPU.)</p>
+<p>This rule is frequently explosive, as many random patterns develop
+replicators near an edge, causing that edge to rapidly explode, sometimes
+apparently forever.</p>
+<p>Many other mechanisms in this rule closely resemble the replicator, including
+the <a class="j" href="#n1-p140">shuttle</a>,
+<a class="j" href="#n1-puff">puffer</a>, and
+<a class="j" href="#n1-p8">eater</a>.</p>
+<p>As this replicator&rsquo;s behavior is erratic, it is considered a
+methuselah with an unknown (presumably infinite) census. Its smallest
+predecessor has 4 bits. Most other methuselahs in this rule appear to be
+replicators surrounded by other things; they are far too numerous to list
+individually.</p>
+<p>(In <a class="j" href="#n5-meth">variant 5</a>, this is as also a
+failed replicator, but works differently; it replicates once after 40
+generations, then again in a different way after 48 more, and then
+stabilizes without replicating a third time.)</p>
+</article>
+<hr /><article><a id="a17" name="a17"></a>
+<a id="n1-gun" name="n1-gun"></a>
+<h2>4 Glider Guns</h2>
+<p>There are many ways to rub the sparks from two
+<a class="j" href="#n1-p280">period 280 shuttles</a> together
+to create glider guns. 4 of these are shown here. Both are symmetric guns
+that shoot two gliders in opposite directions; the examples shown here have
+eaters to suppress one of the two gliders. There is also another arrangement
+(not shown) that shoots two of each type of glider.</p>
+<p>Two orthogonal guns can also shoot gliders at each other, in such a way that
+the gliders collide to either make any of the four kinds of spaceships.
+&ldquo;Tee-guns&rdquo; are useful at inserting a glider stream close to another.</p>
+<p><img src="map/n1-gun.png" alt="Niemiec1 guns"
+ width="526" height="202" usemap="#n1-gun" /></p>
+<p><table><colgroup><col span="12" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_n1-gun" class="i" href="javascript:Nav('n1-gun')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a16">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a18">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/n1-gun.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/n1-gun.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/n1-gun.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="lis/n1-gun.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/n1-gun.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/n1-gun.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=n1-gun" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_n1-gun"><p><table id="t-n1-gun" style="width:530px">
+    <colgroup><col style="width:311px;" /><col style="width:217px;" />
+	</colgroup>
+    <tr>
+	<td><a class="p" href="rulemn/g280gl.rle">
+	    P280 orthogonal glider gun&sup1; [4&hellip;6]</a></td>
+	<td><a class="p" href="rulemn/g280dg.rle">
+	    P280 diagonal glider gun&sup1;&sup2; [4&hellip;6]</a></td>
+    </tr>
+</table></p></div>
+<map name="n1-gun">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,182,20,202" href="#bottom" />
+	<area coords="506,0,526,20" href="zip/n1-gun.zip" />
+	<area coords="506,182,526,202" href="stamp/n1-gun.rle" />
+	<area coords="0,0,310,202" href="rulemn/g280gl.rle" />
+	<area coords="310,0,526,202" href="rulemn/g280dg.rle" />
+</map>
+</article>
+<hr /><article><a id="a18" name="a18"></a>
+<a id="n1-puff" name="n1-puff"></a>
+<h2>1 Puffer</h2>
+<p>There are many ways to rub the sparks from two
+<a class="j" href="#n1-ss">period 19 oblique puffers engines</a>
+together to create puffers. 1 of these is shown here.
+Three tandem engines can yield a clean puffer that produces gliders and
+a debris block, which a fourth cleans up. Two tandem engines produce a mess,
+so some extra cleanup is required until the third engine is in place.</p>
+<p><img src="map/n1-puff.png" alt="Niemiec1 spaceships"
+ width="321" height="301" usemap="#n1-puff" /></p>
+<p><table><colgroup><col span="12" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_n1-puff" class="i" href="javascript:Nav('n1-puff')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a17">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a19">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/n1-puff.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/n1-puff.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/n1-puff.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="lis/n1-puff.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/n1-puff.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/n1-puff.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=n1-puff" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_n1-puff"><p><table id="t-n1-puff" style="width:325px">
+    <colgroup><col style="width:323px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="rulemn/puff57gl.rle">P57 sideways
+	    orthogonal glider rake&sup2; [12]</a></td>
+    </tr>
+</table></p></div>
+<map name="n1-puff">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,281,20,301" href="#bottom" />
+	<area coords="301,0,321,20" href="zip/n1-puff.zip" />
+	<area coords="301,281,321,301" href="stamp/n1-puff.rle" />
+	<area coords="0,0,321,301" href="rulemn/puff57gl.rle" />
+</map>
+</article>
+<hr /><article><a id="a19" name="a19"></a>
+<a id="n1-br" name="n1-br"></a>
+<h2>1 Breeder</h2>
+<p>This is an SMM breeder that uses three of the four basic glider types.
+It consists of five basic sections:</p>
+<p>The west section consists of five orthogonal glider guns. The westmost one
+makes one eastbound glider A. The next two form a tee-gun producing another
+eastbound glider B southwest of A. The next two form another tee-gun making a
+third eastbound glider C southwest of B.</p>
+<p>The east section is similar arrangement of five orthogonal glider guns.
+The eastmost one makes one westbound glider D. The next two form a tee-gun
+making another eastbound glider E southwest of D. The next two form a tee-gun
+making another eastbound glider F southwest of E. These are much closer together
+than the western guns.</p>
+<p>The north section is similar arrangement of five orthogonal glider guns.
+The northernmost one makes one southbound glider G. The next two form a tee-gun
+making another southbound glider H slightly east and substantially north of G.
+The next two form a tee-gun making another southbound glider I west and slightly
+south of G.</p>
+<p>The northeast section contains three guns. The southmost of these makes a
+a diagonal glider J heading southwest. The other two form a tee-gun that makes
+an oblique puffer engine K heading south-southwest. (Due to the placement of the
+two guns, the topmost eaters suppressing north-bound diagonal gliders can be
+removed, as the two spurious diagonal gliders harmlessly annihilate each other.)
+Because the two streams have directions that are very similar but not identical,
+these guns must be placed unusually far away for the rest of the breeder to
+allow the two streams to converge on the same area.</p>
+<p>The middle section is where all the components come together. The three
+pairs of gliders A+D, B+E, C+F from the east and west make three synchronous
+oblique puffer engines heading southwest. One engine by itself is a clean puffer.
+Three together form a rake that shoots one orthogonal gliders westward every
+three cycles (i.e. every 57 generations), and also leaves two spurious blocks
+behind. Puffer engine K comes up behind the new three-engine rake, and uses its
+smoke to clean up these blocks at its own leisure.</p>
+<p>Unfortunately, two engines together form a dirty puffer that produces much
+toxic debris. For the short duration when there are only two engines in place,
+gliders J and G respectively hit the toxic debris clouds from the first two
+cycles, suppressing them.</p>
+<p>The first time the three-engine combination puffs, it leaves behind two
+additional spurious blocks. Subsequent cycles do not do this, because the
+new smoke interacts with the previous cycle&rsquo;s smoke to suppress
+these. Glider H removes the northernmost of these two blocks, and puffer engine
+K just happens to cleanly eliminate the other one as it passes by.</p>
+<p>The breeder creates a wave of four-engine rakes heading south-southwest,
+with waves of gliders heading west. Unfortunately, the first five glider waves
+would normally destroy the west-side guns. The last four of these are easily
+suppressed by eaters. The first cannot be eaten, because the eater would be in
+the path of the west-side gliders, so glider I is used to remove it.</p>
+<p>As <i>n</i> approaches infinity, at generation <i>n</i>, the population is
+asymptotic to 0.00022452 <i>n</i>&sup2; (43 <i>n</i>&sup2;/191520).
+There are around 3.13283e-5 <i>n</i>&sup2; (<i>n</i>&sup2;/31920)
+generated gliders in the field, and around 0.0142857 <i>n</i> (<i>n</i>/70)
+generated puffer engines.</p>
+<p>The static parts of the breeder consists of 36 shuttles and 56 eaters, all
+of which are glider-constructible, so in theory, it should be possible to
+synthesize the breeder from gliders, although the synthesis would be rather
+large (184 gliders, plus possibly a few more needed to suppress output from
+components constructed before other components are ready).</p>
+<p>This image (reduced to half size) shows the breeder at generation 1120,
+after four 280-generation cycles. Four rakes can be clearly seen, with the
+front three emitting waves of gliders.</p>
+<p><img src="map/n1-br.png" alt="Niemiec1 breeder"
+ width="475" height="455" usemap="#n1-br" /></p>
+<p><table><colgroup><col span="11" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_n1-br" class="i" href="javascript:Nav('n1-br')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a18">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a20">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/n1-br.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/n1-br.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/n1-br.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="lis/n1-br.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="zip/n1-br.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=n1-br" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_n1-br"><p><table id="t-n1-br" style="width:479px">
+    <colgroup><col style="width:477px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="rulemn/breeder.rle">
+	    P280 breeder&sup1;&sup2; [184]</a></td>
+    </tr>
+</table></p></div>
+<map name="n1-br">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,435,20,455" href="#bottom" />
+	<area coords="455,0,475,20" href="zip/n1-br.zip" />
+	<area coords="455,435,475,455" href="stamp/n1-br.rle" />
+	<area coords="0,0,475,455" href="rulemn/breeder.rle" />
+</map>
+</article>
+<hr class="a" /><article><a id="a20" name="a20"></a>
+<a id="n0-intro" name="n0-intro"></a>
+<h2>Rule Variant 0</h2>
+<p>Rule variant 0 is generally less interesting than variant 1, so it is just
+being mentioned briefly. Most things from variant 1 still work (except for a
+few things marked with &sup1;). In particular, the oblique puffer, replicator,
+and rotator no longer work. (The replicator mechanism still exists, but it works
+differently and is much less explosive; the replicator by itself turns into 2
+gliders after only 2 cycles.) However, there are two new notable spaceships
+that are clean puffer engines that can be used to form other puffers.</p>
+</article>
+<hr /><article><a id="a21" name="a21"></a>
+<a id="n0-p4" name="n0-p4"></a>
+<h2>1 Period 4 oscillator</h2>
+<p><img src="map/n0-p4.png" alt="N0 P4"
+ width="81" height="81" usemap="#n0-p4" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_n0-p4" class="i" href="javascript:Nav('n0-p4')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a20">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a22">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/n0-p4.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/n0-p4.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/n0-p4.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/n0-p4.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/n0-p4.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/n0-p4.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/n0-p4.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=n0-p4" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_n0-p4"><p><table id="t-n0-p4" style="width:85px">
+    <colgroup><col style="width:83px;" /></colgroup>
+    <tr>
+	<td class="r"><a class="p" href="rulemn/24mz.rle">Mazing;&sup1; [x]</a></td>
+    </tr>
+</table></p></div>
+<map name="n0-p4">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,61,20,81" href="#bottom" />
+	<area coords="61,0,81,20" href="zip/n0-p4.zip" />
+	<area coords="61,61,81,81" href="stamp/n0-p4.rle" />
+	<area coords="0,0,81,81" href="rulemn/24mz.rle" />
+</map>
+<p>Mazing has been seen in a random soup, and a potential glider synthesis is
+shown here. Unfortunately, it is not yet known how to get the two moths into
+their required positions, so this is currently listed as having no known
+synthesis.</p>
+</article>
+<hr /><article><a id="a22" name="a22"></a>
+<a id="n0-ss" name="n0-ss"></a>
+<h2>7 Spaceships</h2>
+<p>All the spaceships from <a class="j" href="#n1-ss">variant 1</a>
+work except the oblique puffer. There are three additional common spaceships
+in this variant &mdash; a <i>c</i>/2 orthogonal ship that doesn't work alone in
+variant 0, but pairs of them do (as well as many other related variants),
+a different clean oblique puffer, and Moth, which is a very slow-moving
+clean puffer that generates huge plumes of clean smoke in all directions,
+and is useful in constructing <a class="j" href="#n0-puff">puffers</a>.
+It can also eat spaceships and reflect them.</p>
+<p><img src="map/n0-ss.png" alt="Niemiec0 spaceships"
+ width="481" height="181" usemap="#n0-ss" /></p>
+<p><table><colgroup><col span="12" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_n0-ss" class="i" href="javascript:Nav('n0-ss')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a21">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a23">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/n0-ss.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/n0-ss.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/n0-ss.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="lis/n0-ss.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/n0-ss.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/n0-ss.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=n0-ss" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_n0-ss"><p><table id="t-n0-ss" style="width:485px">
+    <colgroup><col style="width:91px;" /><col style="width:120px;" />
+	<col style="width:100px;" /><col style="width:80px;" />
+	<col style="width:92px;" /></colgroup>
+    <tr>
+	<td rowspan="2" class="r"><a class="p" href="rulemn/25wg2ta.rle">Tag along
+	    behind two wings&sup2; [x]</a></td>
+	<td><a class="p" href="rulemn/10op.rle">P15 (3,2)<i>c</i>/15
+	    Clean oblique puffer&sup2; [2]</a></td>
+	<td class="r"><a class="p" href="rulemn/11o2.rle">11-bit P2 <i>c</i>/2
+	    ortho&shy;gonal spaceship&sup2; [x]</a></td>
+	<td rowspan="2"><a class="p" href="rulemn/15o2.rle">P4 <i>c</i>/2
+	    ortho&shy;gonal spaceship&sup2; [7]</a></td>
+	<td rowspan="2"><a class="p" href="rulemn/12moth.rle">P28 <i>c</i>/14
+	    ortho&shy;gonal moth&sup2; [2]</a></td>
+    </tr>
+    <tr>
+	<td><a class="p" href="rulemn/24op2.rle">P30 (3,2)<i>c</i>/15
+	    Two oblique puffers&sup2; [4]</a></td>
+	<td class="r"><a class="p" href="rulemn/26o2.rle">26-bit P2 <i>c</i>/2
+	    ortho&shy;gonal spaceship&sup2; [x]</a></td>
+    </tr>
+</table></p></div>
+<map name="n0-ss">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,161,20,181" href="#bottom" />
+	<area coords="461,0,481,20" href="zip/n0-ss.zip" />
+	<area coords="461,161,481,181" href="stamp/n0-ss.rle" />
+	<area coords="0,0,90,181" href="rulemn/25wg2ta.rle" />
+	<area coords="90,0,210,90" href="rulemn/10op.rle" />
+	<area coords="210,0,310,90" href="rulemn/11o2.rle" />
+	<area coords="310,0,390,90" href="rulemn/15o2.rle" />
+	<area coords="390,0,481,90" href="rulemn/12moth.rle" />
+	<area coords="90,90,210,181" href="rulemn/24op2.rle" />
+	<area coords="210,90,310,181" href="rulemn/26o2.rle" />
+</map>
+</article>
+<hr /><article><a id="a23" name="a23"></a>
+<a id="n0-puff" name="n0-puff"></a>
+<h2>3 Puffers</h2>
+<p><img src="map/n0-puff.png" alt="Niemiec0 puffers"
+ width="637" height="361" usemap="#n0-puff" /></p>
+<p><table><colgroup><col span="12" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_n0-puff" class="i" href="javascript:Nav('n0-puff')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a22">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a24">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/n0-puff.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/n0-puff.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/n0-puff.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="lis/n0-puff.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/n0-puff.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/n0-puff.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=n0-puff" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_n0-puff"><p><table id="t-n0-puff" style="width:641px">
+    <colgroup><col style="width:371px;" /><col style="width:268px;" />
+	</colgroup>
+    <tr>
+	<td rowspan="2"><a class="p" href="rulemn/p42bk2.rle">
+	    P42 two block puffer&sup2; [8]</a></td>
+	<td><a class="p" href="rulemn/p84gl.rle">
+	    P84 sideways rake&sup2; [4]</a></td>
+    </tr>
+    <tr>
+	<td><a class="p" href="rulemn/p28dg.rle">
+	    P28 diagonal back rake&sup2; [4]</a></td>
+    </tr>
+</table></p></div>
+<map name="n0-puff">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,341,20,361" href="#bottom" />
+	<area coords="617,0,637,20" href="zip/n0-puff.zip" />
+	<area coords="617,341,637,361" href="stamp/n0-puff.rle" />
+	<area coords="0,0,370,361" href="rulemn/p42bk2.rle" />
+	<area coords="370,0,637,170" href="rulemn/p84gl.rle" />
+	<area coords="370,170,637,361" href="rulemn/p28dg.rle" />
+</map>
+<p>Moths produce huge plumes of smoke that can interact with each other.
+Several of these can produce puffers. 2 of these are shown here.</p>
+<p>Two wings with tag-alongs can interact to form a puffer whose engine has a
+period of 6, and a period 42 exhaust.</p>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Block">Block</a>.</p>
+</article>
+<hr /><article><a id="a24" name="a24"></a>
+<a id="n0-gun" name="n0-gun"></a>
+<h2>1 Glider Gun</h2>
+<p>Even though the <a class="j" href="#n1-meth">variant 1 failed replicator</a>
+does not work in this variant, two of them together create a period 168 gun
+which emits sets of 3 gliders in 2 opposite directions and flips over every 84
+generations.</p>
+<p><img src="map/n0-gun.png" alt="Niemiec0 guns"
+ width="541" height="141" usemap="#n0-gun" /></p>
+<p><table><colgroup><col span="12" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_n0-gun" class="i" href="javascript:Nav('n0-gun')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a23">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a25">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/n0-gun.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/n0-gun.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/n0-gun.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="lis/n0-gun.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/n0-gun.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/n0-gun.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=n0-gun" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_n0-gun"><p><table id="t-n0-gun" style="width:545px">
+    <colgroup><col style="width:543px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="rulemn/g168gl6.rle">
+	    P168 bi-directional glider gun&sup2; [4]</a></td>
+    </tr>
+</table></p></div>
+<map name="n0-gun">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,121,20,141" href="#bottom" />
+	<area coords="521,0,541,20" href="zip/n0-gun.zip" />
+	<area coords="521,121,541,141" href="stamp/n0-gun.rle" />
+	<area coords="0,0,541,141" href="rulemn/g168gl6.rle" />
+</map>
+</article>
+<hr class="a" /><article><a id="a25" name="a25"></a>
+<a id="n2-intro" name="n2-intro"></a>
+<h2>Rule Variant 2</h2>
+<p>Rule variant 2 is generally less interesting than variant 0, so it is just
+being mentioned briefly. Most things from variant 0 still work. In particular,
+the orthogonal spaceships and common gun no longer work. The diagonal puffer
+produces waves of P15 oblique spaceships rather than blocks. The replicator
+mechanism works differently; combined with a block, it can form a cyclic
+glider gun. There are two new notable spaceships. The additional survival
+condition also permits oscillators like Life's blinker.</p>
+</article>
+<hr /><article><a id="a26" name="a26"></a>
+<a id="n2-p2" name="n2-p2"></a>
+<h2>2 Period 2 oscillators</h2>
+<p><img src="map/n2-p2.png" alt="Niemiec2 P2s"
+ width="141" height="61" usemap="#n2-p2" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_n2-p2" class="i" href="javascript:Nav('n2-p2')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a25">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a27">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/n2-p2.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/n2-p2.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/n2-p2.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/n2-p2.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/n2-p2.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/n2-p2.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/n2-p2.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=n2-p2" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_n2-p2"><p><table id="t-n2-p2" style="width:145px">
+    <colgroup><col span="2" style="width:72px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="rulemn/3bl.rle">
+	    Blinker&sup1;&sup2; [2]</a></td>
+	<td class="g"><a class="p" href="rulemn/6bl2.rle">
+	    Two blinkers&sup1;&sup2; [6]</a></td>
+    </tr>
+</table></p></div>
+<map name="n2-p2">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,41,20,61" href="#bottom" />
+	<area coords="121,0,141,20" href="zip/n2-p2.zip" />
+	<area coords="121,41,141,61" href="stamp/n2-p2.rle" />
+	<area coords="0,0,70,61" href="rulemn/3bl.rle" />
+	<area coords="70,0,141,61" href="rulemn/6bl2.rle" />
+</map>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Blinker">Blinker</a>.</p>
+</article>
+<hr /><article><a id="a27" name="a27"></a>
+<a id="n2-p4" name="n2-p4"></a>
+<h2>1 Period 4 oscillator</h2>
+<p><img src="map/n2-p4.png" alt="n2 P4"
+ width="61" height="61" usemap="#n2-p4" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_n2-p4" class="i" href="javascript:Nav('n2-p4')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a26">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a28">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/n2-p4.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/n2-p4.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/n2-p4.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/n2-p4.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/n2-p4.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/n2-p4.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/n2-p4.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=n2-p4" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_n2-p4"><p><table id="t-n2-p4" style="width:65px">
+    <colgroup><col style="width:63px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="rulemn/12p4-2x6.rle">2&times;6 Block &sup1;&sup2; [6]</a></td>
+    </tr>
+</table></p></div>
+<map name="n2-p4">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,41,20,61" href="#bottom" />
+	<area coords="41,0,61,20" href="zip/n2-p4.zip" />
+	<area coords="41,41,61,61" href="stamp/n2-p4.rle" />
+	<area coords="0,0,61,61" href="rulemn/12p4-2x6.rle" />
+</map>
+</article>
+<hr /><article><a id="a28" name="a28"></a>
+<a id="n2-p6" name="n2-p6"></a>
+<h2>1 Period 6 oscillator</h2>
+<p><img src="map/n2-p6.png" alt="n2 P6"
+ width="61" height="61" usemap="#n2-p6" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_n2-p6" class="i" href="javascript:Nav('n2-p6')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a27">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a29">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/n2-p6.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/n2-p6.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/n2-p6.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/n2-p6.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/n2-p6.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/n2-p6.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/n2-p6.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=n2-p6" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_n2-p6"><p><table id="t-n2-p6" style="width:65px">
+    <colgroup><col style="width:63px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="rulemn/12p6.rle">
+	    12-bit P6&sup1;&sup2; [8]</a></td>
+    </tr>
+</table></p></div>
+<map name="n2-p6">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,41,20,61" href="#bottom" />
+	<area coords="41,0,61,20" href="zip/n2-p6.zip" />
+	<area coords="41,41,61,61" href="stamp/n2-p6.rle" />
+	<area coords="0,0,61,61" href="rulemn/12p6.rle" />
+</map>
+<p>This produces sparks at the end and sides that can eat gliders in
+several ways.</p>
+</article>
+<hr /><article><a id="a29" name="a29"></a>
+<a id="n2-p7" name="n2-p7"></a>
+<h2>1 Period 7 oscillator</h2>
+<p><img src="map/n2-p7.png" alt="n2 P7"
+ width="81" height="81" usemap="#n2-p7" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_n2-p7" class="i" href="javascript:Nav('n2-p7')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a28">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a30">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/n2-p7.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/n2-p7.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/n2-p7.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/n2-p7.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/n2-p7.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/n2-p7.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/n2-p7.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=n2-p7" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_n2-p7"><p><table id="t-n2-p7" style="width:85px">
+    <colgroup><col style="width:83px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="rulemn/18p7.rle">
+	    18-bit P7&sup1;&sup2; [6]</a></td>
+    </tr>
+</table></p></div>
+<map name="n2-p7">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,61,20,81" href="#bottom" />
+	<area coords="61,0,81,20" href="zip/n2-p7.zip" />
+	<area coords="61,61,81,81" href="stamp/n2-p7.rle" />
+	<area coords="0,0,81,81" href="rulemn/18p7.rle" />
+</map>
+</article>
+<hr /><article><a id="a30" name="a30"></a>
+<a id="n2-p11" name="n2-p11"></a>
+<h2>1 Period 11 oscillator</h2>
+<p><img src="map/n2-p11.png" alt="n2 P11"
+ width="81" height="81" usemap="#n2-p11" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_n2-p11" class="i" href="javascript:Nav('n2-p11')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a29">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a31">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/n2-p11.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/n2-p11.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/n2-p11.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/n2-p11.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/n2-p11.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/n2-p11.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/n2-p11.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=n2-p11" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_n2-p11"><p><table id="t-n2-p11" style="width:85px">
+    <colgroup><col style="width:83px;" /></colgroup>
+    <tr>
+	<td class="o"><a class="p" href="rulemn/29p11.rle">
+	    29-bit P11&sup1;&sup2; [x+2]</a></td>
+    </tr>
+</table></p></div>
+<map name="n2-p11">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,61,20,81" href="#bottom" />
+	<area coords="61,0,81,20" href="zip/n2-p11.zip" />
+	<area coords="61,61,81,81" href="stamp/n2-p11.rle" />
+	<area coords="0,0,81,81" href="rulemn/29p11.rle" />
+</map>
+<p>A block can hassle the <a class="j" href="#n2-p15">period 15 oscillator</a>
+and alters its period to 11.</p>
+</article>
+<hr /><article><a id="a31" name="a31"></a>
+<a id="n2-p12" name="n2-p12"></a>
+<a id="n2-p36" name="n2-p36"></a>
+<a id="n2-p48" name="n2-p48"></a>
+<a id="n2-p60" name="n2-p60"></a>
+<h2>4 Period 12<em>n</em> oscillators</h2>
+<p><img src="map/n2-p12.png" alt="niemiec2 period 12n oscillators"
+ width="621" height="181" usemap="#n2-p12" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_n2-p12" class="i" href="javascript:Nav('n2-p12')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a30">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a32">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/n2-p12.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/n2-p12.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/n2-p12.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/n2-p12.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/n2-p12.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/n2-p12.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/n2-p12.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=n2-p12" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_n2-p12"><p><table id="t-n2-p12" style="width:625px">
+    <colgroup><col style="width:91px;" /><col style="width:200px;" />
+	<col style="width:160px;" /><col style="width:172px;" /></colgroup>
+    <tr>
+	<td class="r"><a class="p" href="rulemn/21p12.rle">
+	    21-bit P12 [x]</a></td>
+	<td class="r"><a class="p" href="rulemn/116p36gl.rle">
+	    P36 glider loop [x]</a></td>
+	<td class="r"><a class="p" href="rulemn/100p48gl.rle">
+	    P48 glider loop [x]</a></td>
+	<td class="r"><a class="p" href="rulemn/100p60gl.rle">
+	    P60 glider loop [x]</a></td>
+    </tr>
+</table></p></div>
+<map name="n2-p12">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,161,20,181" href="#bottom" />
+	<area coords="601,0,621,20" href="zip/n2-p12.zip" />
+	<area coords="601,161,621,181" href="stamp/n2-p12.rle" />
+	<area coords="0,0,90,181" href="rulemn/21p12.rle" />
+	<area coords="90,0,290,181" href="rulemn/116p36gl.rle" />
+	<area coords="290,0,450,181" href="rulemn/100p48gl.rle" />
+	<area coords="450,0,621,181" href="rulemn/100p60gl.rle" />
+</map>
+<p>The period 12 oscillator produces a large spark at the end and small
+sparks on the sides, all of which can eat gliders in many ways. They can
+also reflect gliders in several different ways. The 90&deg; reflection
+can be used to make a period 36+48<i>n</i> glider shuttle oscillator. The
+first three examples of this are shown above.</p>
+</article>
+<hr /><article><a id="a32" name="a32"></a>
+<a id="n2-p14" name="n2-p14"></a>
+<h2>1 Period 14 oscillator</h2>
+<p><img src="map/n2-p14.png" alt="n2 P14"
+ width="101" height="81" usemap="#n2-p14" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_n2-p14" class="i" href="javascript:Nav('n2-p14')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a31">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a33">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/n2-p14.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/n2-p14.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/n2-p14.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/n2-p14.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/n2-p14.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/n2-p14.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/n2-p14.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=n2-p14" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_n2-p14"><p><table id="t-n2-p14" style="width:105px">
+    <colgroup><col style="width:103px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="rulemn/40p14.rle">
+	    40-bit P14&sup1;&sup2; [10]</a></td>
+    </tr>
+</table></p></div>
+<map name="n2-p14">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,61,20,81" href="#bottom" />
+	<area coords="81,0,101,20" href="zip/n2-p14.zip" />
+	<area coords="81,61,101,81" href="stamp/n2-p14.rle" />
+	<area coords="0,0,101,81" href="rulemn/40p14.rle" />
+</map>
+<p>The period 14 oscillator is a collision of four gliders into four
+blocks, that remarkably turns into the same four gliders heading into
+the same four blocks. It produces sparks on all sides, all of which
+can eat gliders in many ways, and in one case, forms a 45&deg;
+reflector.</p>
+</article>
+<hr /><article><a id="a33" name="a33"></a>
+<a id="n2-p15" name="n2-p15"></a>
+<a id="n2-p30" name="n2-p30"></a>
+<a id="n2-p60a" name="n2-p60a"></a>
+<h2>3 Period 15<em>n</em> oscillators</h2>
+<p><img src="map/n2-p15.png" alt="n2 P15"
+ width="421" height="101" usemap="#n2-p15" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_n2-p15" class="i" href="javascript:Nav('n2-p15')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a32">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a34">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/n2-p15.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/n2-p15.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/n2-p15.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/n2-p15.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/n2-p15.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/n2-p15.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/n2-p15.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=n2-p15" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_n2-p15"><p><table id="t-n2-p15" style="width:425px">
+    <colgroup><col style="width:91px;" /><col style="width:160px;" />
+	<col style="width:172px;" /></colgroup>
+    <tr>
+	<td class="r"><a class="p" href="rulemn/25p15.rle">
+	    25-bit P15 [x]</a></td>
+	<td class="r"><a class="p" href="rulemn/60p30pp.rle">
+	    P30 ping pong [x]</a></td>
+	<td class="r"><a class="p" href="rulemn/58p60pp.rle">
+	    P60 ping pong [x]</a></td>
+    </tr>
+</table></p></div>
+<map name="n2-p15">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,81,20,101" href="#bottom" />
+	<area coords="401,0,421,20" href="zip/n2-p15.zip" />
+	<area coords="401,81,421,101" href="stamp/n2-p15.rle" />
+	<area coords="0,0,90,101" href="rulemn/25p15.rle" />
+	<area coords="90,0,250,101" href="rulemn/60p30pp.rle" />
+	<area coords="250,0,421,101" href="rulemn/58p60pp.rle" />
+</map>
+<p>The period 15 oscillator produces a large spark, which can eat gliders
+in many ways. There are too many to show here, but one example is shown for
+every possible lane. This can also reflect gliders in several different ways.
+One of the 180&deg; reflectors can be used to make a period 30+30<i>n</i> glider
+shuttle oscillator. The first two examples of this are shown here.
+Theoretically, it should be possible to combine many copies of the 45&deg;
+reflectors to create tracks of periods 60+15<i>n</i>. (Period 45 is not possible,
+since the parity of the orthogonal gliders requires the track have a figure-8
+arrangement, which requires at least one pair of crossing streams, and that
+requires gliders to be at least 60 generations apart.) There are also several
+ways a glider can delay the oscillator&rsquo;s phase by 11 steps. A block can also
+hassle the oscillator, changing it to <a class="j" href="#n2-p11">period 11</a>.</p>
+</article>
+<hr /><article><a id="a34" name="a34"></a>
+<a id="n2-ss" name="n2-ss"></a>
+<h2>9 Spaceships</h2>
+<p><img src="map/n2-ss.png" alt="n2 ss"
+ width="421" height="161" usemap="#n2-ss" /></p>
+<p><table><colgroup><col span="12" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_n2-ss" class="i" href="javascript:Nav('n2-ss')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a33">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a35">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/n2-ss.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/n2-ss.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/n2-ss.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="lis/n2-ss.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/n2-ss.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/n2-ss.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=n2-ss" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_n2-ss"><p><table id="t-n2-ss" style="width:425px">
+    <colgroup><col style="width:91px;" /><col span="3" style="width:80px;" />
+	<col style="width:92px;" /></colgroup>
+    <tr>
+	<td class="r"><a class="p" href="rulemn/28d3.rle">Two wings
+	    w/&#8203;tag along&sup1;&sup2; [x]</a></td>
+	<td class="r"><a class="p" href="rulemn/16o2.rle">16-bit P2 <i>c</i>/2
+	    spaceship&sup1;&sup2; [x]</a></td>
+	<td class="r"><a class="p" href="rulemn/17o2a.rle">17-bit P2 <i>c</i>/2
+	    spaceship #1&sup1;&sup2; [x]</a></td>
+	<td class="r"><a class="p" href="rulemn/17o2b.rle">17-bit P2 <i>c</i>/2
+	    spaceship #2&sup1;&sup2; [x]</a></td>
+	<td class="r"><a class="p" href="rulemn/18o2.rle">18-bit P2 <i>c</i>/2
+	    spaceship&sup1;&sup2; [x]</a></td>
+    </tr>
+    <tr>
+	<td class="s">&nbsp;</td>
+	<td class="r"><a class="p" href="rulemn/24o2.rle">24-bit P4 <i>c</i>/2
+	    spaceship&sup1;&sup2; [x]</a></td>
+	<td><a class="p" href="rulemn/14o2.rle">14-bit P6 <i>c</i>/2
+	    orthogonal spaceship&sup1;&sup2; [4]</a></td>
+	<td><a class="p" href="rulemn/14o4.rle">P4 <i>c</i>/4
+	    spaceship&sup1;&sup2; [4]</a></td>
+	<td><a class="p" href="rulemn/18o20.rle">P20 <i>c</i>/20
+	    spaceship&sup1;&sup2; [10]</a></td>
+    </tr>
+</table></p></div>
+<map name="n2-ss">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,141,20,161" href="#bottom" />
+	<area coords="401,0,421,20" href="zip/n2-ss.zip" />
+	<area coords="401,141,421,161" href="stamp/n2-ss.rle" />
+	<area coords="0,0,90,90" href="rulemn/28d3.rle" />
+	<area coords="90,0,170,90" href="rulemn/16o2.rle" />
+	<area coords="170,0,250,90" href="rulemn/17o2a.rle" />
+	<area coords="250,0,330,90" href="rulemn/17o2b.rle" />
+	<area coords="330,0,421,90" href="rulemn/18o2.rle" />
+	<area coords="90,90,170,161" href="rulemn/24o2.rle" />
+	<area coords="170,90,250,161" href="rulemn/14o2.rle" />
+	<area coords="250,90,330,161" href="rulemn/14o4.rle" />
+	<area coords="330,90,421,161" href="rulemn/18o20.rle" />
+</map>
+</article>
+<hr /><article><a id="a35" name="a35"></a>
+<a id="n2-ws" name="n2-ws"></a>
+<h2>1 Wick-stretcher</h2>
+<p><img src="map/n2-ws.png" alt="n2 WS"
+ width="81" height="81" usemap="#n2-ws" /></p>
+<p><table><colgroup><col span="12" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_n2-ws" class="i" href="javascript:Nav('n2-ws')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a34">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a36">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/n2-ws.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/n2-ws.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/n2-ws.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="lis/n2-ws.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/n2-ws.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/n2-ws.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=n2-ws" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_n2-ws"><p><table id="t-n2-ws" style="width:85px">
+    <colgroup><col style="width:83px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="rulemn/p8zipper.rle">
+	    P8 zipper&sup1;&sup2; [7]</a></td>
+    </tr>
+</table></p></div>
+<map name="n2-ws">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,61,20,81" href="#bottom" />
+	<area coords="61,0,81,20" href="zip/n2-ws.zip" />
+	<area coords="61,61,81,81" href="stamp/n2-ws.rle" />
+	<area coords="0,0,81,81" href="rulemn/p8zipper.rle" />
+</map>
+<p>The <i>c</i>/4 spaceship can extrude a still-life.</p>
+</article>
+<hr /><article><a id="a36" name="a36"></a>
+<a id="n2-gun" name="n2-gun"></a>
+<h2>1 Glider Gun</h2>
+<p>If the failed replicator is combined with a block, every 276 generations,
+it releases 3 diagonal gliders and rotates 90&deg;. This creates a period 1104
+glider gun that shoots 12 diagonal gliders every cycle. If 12 eaters are
+placed to eat the gliders, this makes a period 1104 oscillator.</p>
+<p><img src="map/n2-gun.png" alt="n2 gun"
+ width="101" height="81" usemap="#n2-gun" /></p>
+<p><table><colgroup><col span="12" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_n2-gun" class="i" href="javascript:Nav('n2-gun')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a35">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a37">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/n2-gun.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/n2-gun.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/n2-gun.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="lis/n2-gun.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/n2-gun.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/n2-gun.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=n2-gun" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_n2-gun"><p><table id="t-n2-gun" style="width:105px">
+    <colgroup><col style="width:103px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="rulemn/g1104dgc.rle">
+	    P1104 cyclic gun [4]</a></td>
+    </tr>
+</table></p></div>
+<map name="n2-gun">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,61,20,81" href="#bottom" />
+	<area coords="81,0,101,20" href="zip/n2-gun.zip" />
+	<area coords="81,61,101,81" href="stamp/n2-gun.rle" />
+	<area coords="0,0,101,81" href="rulemn/g1104dgc.rle" />
+</map>
+</article>
+<hr class="a" /><article><a id="a37" name="a37"></a>
+<a id="n4-intro" name="n4-intro"></a>
+<h2>Rule Variant 4</h2>
+<p>Rule variant 4 is generally less interesting than variant 0, so it is just
+being mentioned briefly. The new spaceships from variant 0 no longer work.
+The replicator mechanism does not work, but two replicators together form a
+new dirty puffer.</p>
+</article>
+<hr /><article><a id="a38" name="a38"></a>
+<a id="n4-puff" name="n4-puff"></a>
+<h2>1 Puffer</h2>
+<p>Even though the variant 1 replicator does not work in this variant, two of
+them together form a period 108 7<i>c</i>/27 dirty diagonal puffer. The front sides
+produces two advancing orthogonal gliders every 54 generations, while the rear
+produces 14 blocks, 2 advancing tadpoles, and 4 receding orthogonal gliders
+every 108 generations.</p>
+<p><img src="map/n4-puff.png" alt="Niemiec4 puffer"
+ width="474" height="474" usemap="#n4-puff" /></p>
+<p><table><colgroup><col span="12" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_n4-puff" class="i" href="javascript:Nav('n4-puff')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a37">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a39">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/n4-puff.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/n4-puff.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/n4-puff.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="lis/n4-puff.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/n4-puff.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/n4-puff.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=n4-puff" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_n4-puff"><p><table id="t-n4-puff" style="width:478px">
+    <colgroup><col style="width:476px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="rulemn/p108puff.rle">
+	    P108 7<i>c</i>/27 dirty diagonal puffer [4]</a></td>
+    </tr>
+</table></p></div>
+<map name="n4-puff">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,454,20,474" href="#bottom" />
+	<area coords="454,0,474,20" href="zip/n4-puff.zip" />
+	<area coords="454,454,474,474" href="stamp/n4-puff.rle" />
+	<area coords="0,0,450,474" href="rulemn/p108puff.rle" />
+</map>
+</article>
+<hr class="a" /><article><a id="a39" name="a39"></a>
+<a id="n5-intro" name="n5-intro"></a>
+<h2>Rule Variant 5</h2>
+<p>Rule variant 5 is very similar to, but slightly less interesting than,
+variant 1, so it is just being mentioned briefly. Most things from variant 1
+still work (except for a few things marked with &sup2;). The replicator works
+differently. Some spark interactions also act differently, which cause the
+diagonal glider gun, orthogonal spaceship puffer, and breeder to fail.
+However, there is one new notable spaceship that is a clean puffer engine
+that can be used to form other puffers.</p>
+</article>
+<hr /><article><a id="a40" name="a40"></a>
+<a id="n5-ss" name="n5-ss"></a>
+<h2>1 Spaceship</h2>
+<p>All the spaceships from <a class="j" href="#n1-ss">variant 1</a>
+work. There is one additional common spaceship in this variant &mdash;
+a clean orthogonal puffer, which is useful in constructing
+<a class="j" href="#n5-puff">puffers</a>.
+It can also eat spaceships and reflect them.</p>
+<p><img src="map/n5-ss.png" alt="Niemiec5 spaceship"
+ width="81" height="81" usemap="#n5-ss" /></p>
+<p><table><colgroup><col span="12" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_n5-ss" class="i" href="javascript:Nav('n5-ss')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a39">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a41">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/n5-ss.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/n5-ss.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/n5-ss.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="lis/n5-ss.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/n5-ss.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/n5-ss.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=n5-ss" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_n5-ss"><p><table id="t-n5-ss" style="width:85px">
+    <colgroup><col style="width:83px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="rulemn/7ss7o27.rle">
+	    7<i>c</i>/27 Clean orthogonal puffer&sup1; [6]</a></td>
+    </tr>
+</table></p></div>
+<map name="n5-ss">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,61,20,81" href="#bottom" />
+	<area coords="61,0,81,20" href="zip/n5-ss.zip" />
+	<area coords="61,61,81,81" href="stamp/n5-ss.rle" />
+	<area coords="0,0,81,81" href="rulemn/7ss7o27.rle" />
+</map>
+</article>
+<hr /><article><a id="a41" name="a41"></a>
+<a id="n5-puff" name="n5-puff"></a>
+<h2>3 Puffers</h2>
+<p>The new orthogonal spaceships produce plumes of smoke that can interact with
+each other. Several of these can produce puffers. 3 of these are
+shown here.</p>
+<p><img src="map/n5-puff.png" alt="Niemiec0 puffers"
+ width="481" height="221" usemap="#n5-puff" /></p>
+<p><table><colgroup><col span="12" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_n5-puff" class="i" href="javascript:Nav('n5-puff')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a40">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a42">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/n5-puff.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/n5-puff.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/n5-puff.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="lis/n5-puff.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/n5-puff.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/n5-puff.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=n5-puff" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_n5-puff"><p><table id="t-n5-puff" style="width:485px">
+    <colgroup><col style="width:131px;" /><col style="width:120px;" />
+	<col style="width:232px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="rulemn/p80bk6.rle">
+	    P80 <i>c</i>/10 diagonal puffer&sup1; [4]</a></td>
+	<td><a class="p" href="rulemn/p54bk.rle">
+	    P54 7<i>c</i>/27 orthogonal block puffer&sup1; [12]</a></td>
+	<td><a class="p" href="rulemn/p54gls.rle">
+	    P54 7<i>c</i>/27 sideways rake&sup1; [12]</a></td>
+    </tr>
+</table></p></div>
+<map name="n5-puff">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,201,20,221" href="#bottom" />
+	<area coords="461,0,481,20" href="zip/n5-puff.zip" />
+	<area coords="461,201,481,221" href="stamp/n5-puff.rle" />
+	<area coords="0,0,130,221" href="javascript:R('%BD/%BD/p80o6.')" />
+	<area coords="130,0,250,221" href="rulemn/p54bk.rle" />
+	<area coords="250,0,481,221" href="rulemn/p54gls.rle" />
+</map>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Block">Block</a>.</p>
+</article>
+<hr /><article><a id="a42" name="a42"></a>
+<a id="n5-meth" name="n5-meth"></a>
+<h2>1 Methuselah</h2>
+<p><img src="map/n5-meth.png" alt="N5 meth"
+ width="81" height="61" usemap="#n5-meth" /></p>
+<p><table><colgroup><col span="12" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_n5-meth" class="i" href="javascript:Nav('n5-meth')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a41">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a43">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/n5-meth.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/n5-meth.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/n5-meth.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="lis/n5-meth.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/n5-meth.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/n5-meth.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=n5-meth" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_n5-meth"><p><table id="t-n5-meth" style="width:85px">
+    <colgroup><col style="width:83px;" /></colgroup>
+    <tr>
+	<td><a class="p" href="rulemn/4t.rle">T; T replicator&sup1; [2]</a></td>
+    </tr>
+    <tr>
+	<td><a class="p" href="rulemn/4trun.rle">4 blocks</a></td>
+    </tr>
+</table></p></div>
+<map name="n5-meth">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,41,20,61" href="#bottom" />
+	<area coords="61,0,81,20" href="zip/n5-meth.zip" />
+	<area coords="61,41,81,61" href="stamp/n5-meth.rle" />
+	<area coords="0,0,81,61" href="rulemn/4t.rle" />
+</map>
+<p>This variant contains the same failed replicator as in
+<a class="j" href="#n1-meth">variant 1</a>, but it evolves fairly differently.
+The first recurring form in the bullet heptomino, which first occurs at
+generation 2, then forms 2 blocks plus 2 copies of itself reflected vertically
+and moved 6 spaces sideways in each direction at generation 40, then at
+generation 48 each of those turns into some debris plus a another bullet moved
+forward 7 spaces and sideways 2 spaces and rotates 90 degrees. This does not
+replicate a third time, but stabilizes into 4 blocks at generation 131.</p>
+<p>This pattern forms easily, and many random random patterns develop replicators
+near an edge, causing the edge to explode temporarily, but unlike with variant 1,
+such explosions are temporary. No patterns have been yet observed to expand
+chaotically apparently forever.</p>
+</article>
+</main>
+<hr class="a" /><a id="a43" name="a43"></a>
+<a id="bottom" name="bottom"></a>
+<p><b>Other rules:</b>
+	<a class="i" href="lifepage.htm"><em>B3/S23</em> (Conway&rsquo;s Life)</a>,
+	<a class="i" href="b2s2.htm"><em>B2/S2</em> (2/2 Life)</a>,
+	<a class="i" href="b34s34.htm"><em>B34/S34</em> (3/4 Life)</a>,
+	<a class="i" href="b36s23.htm"><em>B36/S23</em> (HighLife)</a>,
+	<a class="i" href="b36s245.htm"><em>B36/S245</em> (Replicator rule)</a>,
+	<a class="i" href="b3xs23y.htm"><em>B3<i>x</i>/S23<i>y</i></em> (Life-like rules)</a>,
+	<a class="i" href="rulell.htm"><em>B2n3/S23-q</em> (LeapLife)</a>,
+	<a class="i" href="rulevl.htm"><em>B2n3-q5y6c/S23-k</em> (VesselLife)</a>,
+	Niemiec&rsquo;s Rules,
+	<a class="i" href="color.htm">Multi-colored Life</a>.</p>
+<p><b>See also:</b>
+    <a href="lifestr.htm">structure</a>,
+    <a href="lifestyl.htm">style book</a>,
+    <a href="lifeterm.htm">definitions</a>,
+    <a href="lifemeth.htm">search methodologies</a>,
+    <a href="recipe.htm">conversion recipes</a>,
+    <a href="liferule.htm">other rules</a>,
+    <a href="lifenews.htm">news</a>,
+    <a href="lifecred.htm">credits</a>,
+    <a href="lifelink.htm">links</a>,
+    <a href="lifemap.htm">site map</a>,
+    <a class="i" target="lifesrch" href="lifesrch.htm">search</a>,
+    <a class="i" target="lifesrch" href="lifxsrch.htm">expanded search</a>,
+    <a class="i" target="srchhelp" href="srchhelp.htm">search help</a>.</p>
+<p><a href="index.htm">Home page</a> |
+<a href="lifepage.htm">Life page</a></p>
+<p><a href="lifepage.htm#copyright">Copyright &copy;
+1997, 1998, 1999, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022 by Mark. D. Niemiec.
+All rights reserved</a>.<br />
+This page was last updated on <em>2022-07-03</em>.</p>
+<script type="text/javascript"><!--
+"use strict";
+// Convert a named DOM object (id="id") into the actual object
+function Id (id) {
+    return document.getElementById (id);
+}
+// Expand or collapse stamp image text table
+function Nav (n) {
+    var v = Id ("a_" + n).childNodes[0].nodeValue === "+";
+    Id ("a_" + n).childNodes[0].nodeValue = v ? "\u2013" : "+";
+    Id ("b_" + n).style.display = v ? "block" : "none";
+}
+// Set alt and title attributes on an element
+function SetAltTitle (p, n) {
+    if (p && p.href) {
+	p.title = p.alt = n;
+    }
+}
+// Provide title tooltips for all stamp images
+function Titles () {
+    var q = [];				// name = q["id"][i];
+    var t = document.getElementsByTagName ("table");
+    for (i = 0; i < t.length; ++i) {
+	var n = t[i].id;		// table id
+	if (n) {
+	    var r = t[i].getElementsByTagName ("tr");
+	    var b = [];			// patterns in table
+	    for (var j = 0; j < r.length; ++j) {
+		var d = r[j].getElementsByTagName ("td");
+		for (var k = 0; k < d.length; ++k) {
+		    if (d[k].getElementsByTagName ("a"). length) {
+			// Get text in a way that works on most browsers
+			m = (d[k].textContent || d[k].innerText)
+			  .replace (/[\n\t]/g, " ") .replace (/   */g, " ")
+			  .replace (/^ /, "") .replace (/ $/, "")
+			  .replace (/[\xAD\u8230]/g, "");
+			b.push (m);
+		    }
+		}
+	    }
+	    q[n] = b;
+	}
+    }
+    var m = document.getElementsByTagName ("map");
+    for (var i = 0; i < m.length; ++i) {
+	var b = q["t-"+m[i].name];
+	var s = m[i].getElementsByTagName ("area");
+	if (s) {
+	    // First 4 areas are NW, SW, NE, SE corners; last is default
+	    // Others are in the same order as patterns in table
+	    SetAltTitle (s[0], "Top of page");
+	    SetAltTitle (s[1], "Bottom of page");
+	    if (s[3]) {
+		SetAltTitle (s[2], "Zip archive of all patterns");
+		SetAltTitle (s[3], "This stamp page");
+		for (var j = 4, k = 0; j < s.length; ++j) {
+		    var a = s[j].href;
+		    if ((n = a.indexOf ("~")) >= 0) {
+			SetAltTitle (s[j], a.substring (0, n));
+		    } else if (b && b[k]) {
+			SetAltTitle (s[j], b[k++]);
+		    }
+		}
+	    } else {
+		SetAltTitle (s[2], "This stamp page");
+	    }
+	}
+    }
+}
+Titles ();
+// -->
+</script>
+</body></html>

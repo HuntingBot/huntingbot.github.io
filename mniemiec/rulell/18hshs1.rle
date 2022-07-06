@@ -1,0 +1,34 @@
+#N 18hshs1.rle: House on house; Dead spark coil: Synthesis
+#O Mark D. Niemiec's life synthesis database, Tue Feb 08 18:40:32 2022
+#C  OO...OO
+#C  O.O.O.O
+#C  ..O.O..
+#C  O.O.O.O
+#C  OO...OO
+x = 149, y = 129
+91bobo$91boo29bo$47bo44bo30bo$48boobobo67b3o$47boobboo16bxx18boo15bxx
+18boo$52bo15bxbbx16bobbo13bxbbx16bobbo15bxxbxx$68bxbbx16bobbo13bxbx17b
+obo16bx3bx$69bxx18boo15bx19bo18b3x$$69bxx18boo15bx19bo18b3x$68bxbbx16b
+obbo13bxbx17bobo16bx3bx$52bo15bxbbx16bobbo13bxbbx16bobbo15bxxbxx$47boo
+bboo16bxx18boo15bxx18boo$48boobobo67b3o$47bo44bo30bo$91boo29bo$91bobo
+11$120bo$121bo$119b3o$115boo$43bo38boo32boo$44bo3bo18bxx14boobboo26bo$
+42b3oboo18bxbbx12bo3bobbo$8bo38boo17bxbbx16bobbo17bx19bo$6boo59bxx18b
+oo17bxbx17bobo15bxxbxx$7boo98bx19bo16bx3bx$145b3x$7bo$6boo18bx19bo19bx
+19bo19bx19bo18b3x$6bobo16bxbx17bobo17bxbx17bobo17bxbx17bobo16bx3bx$24b
+xbbx16bobbo16bxbbx16bobbo16bxbbx16bobbo16bxxbxx$25bxx18boo18bxx18boo
+18bxx18boo5$134boo$134bobo$134bo8$120bo$121bo$119b3o$115boo$116boo$45b
+o69bo$45bobo$41boobboo20bx19bo19bx19bo$40bobo23bxbx17bobo17bxbx17bobo
+15bxxbxx$42bo5b3o16bx19bo19bx19bo16bx3bx$48bo96b3x$49bo33bo$84bo60b3x$
+82b3o5bo14bx19bo18bx3bx$90bobo11bxbx17bobo17bxxbxx$86boobboo13bx19bo$
+85bobo$87bo49bo$135boo$136boo$131b3o$131bo$132bo15$66bxx18boo18bxx18b
+oo18bxx$65bxbbx16bobbo16bxbbx16bobbo16bxbbx$44bobo18bxbx17bobo17bxbx
+17bobo17bxbx$45boo19bx19bo19bx19bo19bx$45bo$146bx$44boo60bxx18boo17bxb
+x$45boo58bxbbx16bobbo17bx$44bo39bo20bxbbx12bo3bobbo$84boobboo16bxx14b
+oobboo$83boboboo32boo$89bo6$122bo$123bo$121b3o$6boo18bxx18boo18bxx18b
+oo18bxx18boo$5bobbo16bxbbx16bobbo16bxbbx16bobbo16bxbbx16bobbo15bxxbxx$
+5bobo17bxbx17bobo17bxbx17bobo17bxbx17bobo16bx3bx$6bo19bx19bo19bx19bo
+19bx19bo18b3x$$6bo19bx19bo19bx19bo19bx19bo18b3x$5bobo17bxbx17bobo17bxb
+x17bobo17bxbx17bobo16bx3bx$6bo17bxbx17bobo17bxbx17bobo18bxbbx16bobbo
+15bxxbxx$25bx19bo19bx19bo20bxx18boo$o20by19bo79b3o$boo17byby17bobo41b
+oo37bo$oo18bybby16bobbo40bobo35bo$4b3o14byy13boo3boo41bo$4bo32boo$5bo
+30bo!

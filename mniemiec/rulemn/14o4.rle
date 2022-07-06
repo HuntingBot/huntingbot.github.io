@@ -1,0 +1,10 @@
+#N 14o4.rle: P4 c/4 spaceship: Synthesis
+#O Mark D. Niemiec's life synthesis database, Tue Sep 26 20:39:33 2017
+#C  OO.....OO
+#C  O..O.O..O
+#C  ...O.O...
+#C  ...O.O...
+#C  ...O.O...
+x = 34, y = 9, rule = B3/S2aei3aeijr4-cknqy
+bbo13bo$bboo11boo$boboo9boobo7bxx5bxx$bboo11boo8bxbbxbxbbx$28bxbx$bo
+15bo10bxbx$3o13b3o9bxbx$oboo11boobo$bo15bo!

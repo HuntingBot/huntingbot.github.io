@@ -1,0 +1,35 @@
+#N 22-1.rle: Block on pre-block siamese tub w/two up trans tails siamese pre-block on block: Synthesis
+#O Mark D. Niemiec's life synthesis database, Thu May 27 11:59:49 2021
+#C  ..OO......
+#C  ..OO......
+#C  O.........
+#C  OO........
+#C  .O........
+#C  .O.O......
+#C  ..O.O...OO
+#C  ...O....OO
+#C  ....OOO...
+#C  ......OO..
+x = 190, y = 94
+30bxx38bxx19boo17bxx38bxx$28b3x37b3x21boo14b3x37b3x$27bx4bxx17bobo13bx
+4bxx17bo15bx4bxx33bx4bxx$26bxbx3bxx17boo13bxbx3bxx20boo10bxbx3bxx32bxb
+x3bxx$25bxbx23bo13bxbx26boo9bxbx37bxbx$25bx39bx39bx39bx$18bo5bxx26b3o
+9bxx28boo8bxx38bxx$16boo6bx27bo11bx28bobo8bx39bx$13bo3boo7bxx25bo12bxx
+24bobo11bxx38bxx$14bo11bxx38bxx25bo12bxx38bxx$12b3o3$159byy$13b3o110bo
+bo29byby$15bo110boobo30by$14bo114bo$129boo$133bo$131boo$132boo$42boo$
+43boo$42bo7$70bxx$68b3x$18bo30by17bx4bxx$17bobo29by16bxbx3bxx$17boo30b
+y15bxbx$15bo49bx$15boo47bxx$19boo43bx$18boo31byy13bxx$20bo29bybby12bxx
+$51byby$52by15$8bo83bobo17byy42by$6bobo83boo18byy41byy$7boo46bo37bo60b
+ybby$27b3y25bobo76b3o18byy$10boo38boo3boo13byy18boo38boobbo35boo4bo$8b
+3o37b3o19byby15b3o37b3o4bo12bx19b3o4bo12bxx$7bo4boo18byy13bo4boo17by
+15bo4boo13bx19bo4boo13bxbx17bo4boob3o9bxbx$6bobo3boo18byy12bobo3boo12b
+xx18bobo3boo12bxbx17bobo3boo12bxbx17bobo3boo12bxbx$5bobo37bobo17bxbx
+17bobo17bxbx17bobo17bxbx17bobo17bxbx$5bo39bo19bx19bo19bx19bo19bx19bo
+19bx$4boo38boo18bxx18boo18bxx18boo18bxx18boo18bxx$4bo21bx17bo19bx19bo
+19bx19bo19bx19bo19bx$6boo17bxbx18boo18bxx18boo18bxx18boo18bxx18boo18b
+xx$6boo18bxx18boo18bxx18boo18bxx18boo18bxx18boo18bxx11$10boo18boo18boo
+18boo18boo$8b3o17b3o17b3o17b3o17b3o$7bo4boo13bo4boo13bo4boo13bo4boo13b
+o4boo$6bobo3boo12bobo3boo12bobo3boo12bobo3boo12bobo3boo$5bobo17bobo17b
+obo17bobo17bobo$5bo19bo19bo19bo19bo$4boo18boo18boo18boo18boo$3obo19bo
+19bo19bo19bo$bbo3boo18boo18boo18boo18boo$bo4boo13boo3boo18boo18boob3o
+14boo$20bobo19boo25bo$22bo18bobo26bo18b3o$43bo45bo$90bo!

@@ -1,0 +1,33 @@
+#N 34p15-1.rle: 34P15.1: Synthesis
+#O Mark D. Niemiec's life synthesis database, Fri Aug 07 04:16:10 2020
+#C  ........OO........
+#C  OO......OO......OO
+#C  OO..............OO
+#C  .....O......O.....
+#C  ....O........O....
+#C  ....O........O....
+#C  ....O........O....
+#C  .....O......O.....
+#C  OO..............OO
+#C  OO......OO......OO
+#C  ........OO........
+x = 186, y = 102
+10bobo17bo31bxx48boo$11boo15boo32bxbbx46bobbo$11bo17boo46bxx29bo18boo
+5b3o21bx3bx18bx3bx$63bxbbx10bxbbx28bo3bobbo10bobbo3bo23bx3bx18bx3bx$
+13boo17bo32bxx40b3o5boo18bo22bx3bx18bx3bx$14boo15boo45bxbbx46bobbo$13b
+o17bobo46bxx48boo24$104bobo$105boo$105bo$20bo110bo$18bobo85boo21bobo$
+19boo3bo82boo21boo3bo$22boo82bo26boo$23boo109boo$71bxx48boo37bxx9bxx9b
+xx$71bxx48boo37bxx9bxx9bxx3$8bo3bo18bo3bo22bx3bx18bx3bx22bo3bo18bo3bo
+22bx3bx18bx3bx$8bo3bo18bo3bo22bx3bx18bx3bx22bo3bo18bo3bo22bx3bx18bx3bx
+$8bo3bo18bo3bo22bx3bx18bx3bx22bo3bo18bo3bo22bx3bx18bx3bx3$71bxx48boo
+37bxx9bxx9bxx$71bxx48boo37bxx9bxx9bxx$19boo87boo$20boo87boo26bo$19bo3b
+oo83bo3boo21boo$23bobo86bobo21boo$23bo88bo$138bo$137boo$137bobo9$11bo$
+10bo$10b3o$$37bo65bo36bo$6bo29bo67boo32boo$4bobo29b3o64boo34boo$5boo$
+56b3y26b3y18b3o26b3o$$41boo$41bobo$41bo$10boo9boo9boo37bxx48boo48bxx$
+10boo9boo9boo29bxx6bxx6bxx32boo6boo6boo32bxx6bxx6bxx$63bxx14bxx32boo
+14boo32bxx14bxx$68bx6bx42bo6bo42bx6bx$8bo3bo18bo3bo31bx8bx40bo8bo40bx
+8bx$8bo3bo18bo3bo31bx8bx40bo8bo40bx8bx$8bo3bo18bo3bo31bx8bx40bo8bo40bx
+8bx$68bx6bx42bo6bo42bx6bx$63bxx14bxx32boo14boo32bxx14bxx$10boo9boo9boo
+29bxx6bxx6bxx32boo6boo6boo32bxx6bxx6bxx$10boo9boo9boo37bxx48boo48bxx$
+bbo$obo$boo$$56b3y26b3y18b3o26b3o$37boo$5b3o29bobo63boo34boo$7bo29bo
+66boo32boo$6bo96bo36bo$$31b3o$33bo$32bo!

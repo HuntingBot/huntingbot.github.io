@@ -1,0 +1,35 @@
+#N 9dbt.rle: Down boat w/tail; Cis-boat w/tail: Synthesis
+#O Mark D. Niemiec's life synthesis database, Fri Oct 02 23:17:18 2020
+#C  OO...
+#C  .O...
+#C  .O.OO
+#C  ..O.O
+#C  ...O.
+x = 169, y = 117
+22bo$20boo$21boo5$52bo$o50bo$boo48b3o78bo$oo129bo$24bxx18boo18bxx18boo
+18bxx18boo5b3o10bxx$5bobo17bx19bo5b3o11bx19bo19bx19bobbo16bx$6boo17bxb
+x17bobo3bo13bxbxx16boboo16bxbxx16bobobo15bxbxx$6bo19bxbx17bobo3bo13bxb
+x17bobo17bxbx17bobbo16bxbx$27bx19bo19bx39bx19boo18bx$4boo$5boo84bo$4bo
+84boo$86bo3boo$86boo$85bobo$121bo$121boo$120bobo$80bo45bo$81bo42boo$
+79b3o43boo$150byy$150byy$79b3o21bxx52byy3bxbx$4boo38boo18bxx15bobboo
+17bxbx19bo8boo21byy3bxxbx$5bo39bo19bx14bo4bo19bx19bo9bo29bx$5boboo18b
+xx16boboo16bxbx17boboo16bxbxx16bo9boboo26bxbxx$6bobo18bxx17bobo17bxx
+18bobo17bxbx27bobo11by3by11bxbx$bboo3bo39bo39bo19bx29bo12by3by12bx$bob
+o46boo98by3by$3bo46bobo$50bo7$37bo$35bobo$36boo$22bx38bxx$3o18bxbx16b
+3o18bxbx$bbo19bxbx17bo19bxbx$bobboo17bxbx15bobboo17bxbx18boo18bxx18boo
+18bxx$5bo19bx19bo19bx19bo19bx19bo19bx$5boboo16bxbxx16boboo16bxbxx16bob
+oo16bxbxx16boboo16bxbxx$6bobo17bxbx17bobo17bxbx17bobo17bxbbx16bobo3bo
+13bxbbx$7bo19bx19bo19bx19bo19bxx18bo3bo15bxx$131b3o$$88boobboo$87bobo
+bbobo36b3o$89bobbo38bo$132bo$$7bo$7bobo$7boo$$bbobo37bobo19bx$3boo19b
+xx17boo18bxbx$3bo20bxx17bo20bxx$$4boo18bxx18boo18bxx$5bo19bx19bo19bx$
+5boboo16bxbxx16boboo16bxbxx$6bobo17bxbx17bobo17bxbx$7bo19bx19bo19bx15$
+3o$bboboo14b3oboo18boo18boo18boo18boo18boo18boo18boo$bo3bo16bobbo19bo
+19bo19bo19bo19bo19bo19bo$5boboo12bo3boboo11b3obbobo17boboo16boboo16bob
+oo16boboo16boboo16boboo$6bobo17bobo13bo3bobo17bobo17bobo17bobo17bobobb
+oo13bobo17bobo$7bo19bo13bo5boo18bo19bo19bo19bobboo15bo19bo$132bo$64boo
+20boo21bo36boo17bo$63bobo19bobo21boo35bobo15boo$65bo21bo20bobo35bo17bo
+bo8$61bo19bobo22bobo$40bo21bo19boo23boo$21bo19boo17b3o19bo24bo$bo20bo
+17boo$bboboo14b3oboo18boo18boo18boo18boo18boo18boo$3obbo19bo19bo19bo
+19bo19bo19bo19bo6bo$5boboo16boboo16boboo16boboo16boboo16boboo16boboo
+16bobooboo$6bobo17bobo17bobo17bobo17bobo17bobo17bobo3bo13bobobboo$7bo
+19bo19bo19bo19bo19bo19bobboo15bo$131boo!

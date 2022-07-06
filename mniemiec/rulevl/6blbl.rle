@@ -1,0 +1,29 @@
+#N 6blbl.rle: Blinker on blinker: Synthesis
+#O Mark D. Niemiec's life synthesis database, Thu May 27 17:12:34 2021
+#C  OOO..
+#C  ....O
+#C  ....O
+#C  ....O
+x = 190, y = 112
+3bobo117bobo$4boo118boo36bo$4bo119bo38boo3bo$162boo3bobo$bb3o19b3x17b
+3o4bo12b3x24bo30b3o19b3x21bo15b3x$4bo44boo17bx20boo17bx15bo3bo19bx17bo
+21bx$3bo46boo16bx21boo16bx14bo4bo19bx15bo23bx$68bx39bx19bo19bx14bobo
+22bx$164bo$48b3o37b3o$48bo39bo$49bo39bo13$7bo16b3x37b3x$6bobo19bx29byy
+8bx$5bobo20bx13booboo11byy8bx$4bobo21bx7boobbobbobobbo19bx$3bobo3b3o
+25boobooboboboo$bbobo4bo26bo6bobo$bbo7bo31booboo$boo11$91bo$91bobo$4b
+3o17b3x17b3o17b3x17b3o4boo11b3x17b3o17b3x17b3o17b3x$8bo39bo39bo39bo39b
+o$8bo39bo39bo39bo39bo$8bo39bo39bo39bo39bo$5bo38boo85boo38bo$5boo36bobo
+85bobo36boo$4bobo38bo85bo38bobo9$3bobo40bobo$4boo41boo18bx$4bo42bo18bx
+bx$25bx39bxbbx$24bxbx39bxx$4b3o18bxx17b3o37b3o17b3x17b3o17b3x17b3o17b
+3x$8bo19bx19bo19bx19bo4bo14bxx18bo19bxx18bo$8bo19bx19bo19bx19bobboo15b
+xbx17bo3boo14bxbx17bo18bxx$8bo19bx19bo19bx19bo3boo15bx18bobboo16bx18bo
+18bxbx$133bo54bx$168boo$167bobo$169bo10$3o$bbo$bo$4b3o14boob3o17b3o17b
+3o17b3o17b3o17b3o17b3o17b3o17b3o$8bo11bobo5bo19bo19bo19bo19bo19bo19bo
+19bo19bo$8bo13bo5bo11b3o5bo19bo19bo19bo19bo19bo19bo19bo$8bo19bo13bo5bo
+12b3o4bo13boo4bo19bo19bo19bo19bo19bo$41bo21bo17bobo18b3o18b3o$62bo20bo
+20bo20bo18b3o18boo20boo$103bo20bo21bo17bobo19bobo$145bo20bo21bo8$64bob
+o14bobo82bo$65boo15boo80bobo14bo$65bo16bo17bo50bo13boo15bo$101boo46bob
+o28b3o$100boo48boo$4b3o17b3o17b3o17b3o17b3o17b3o17b3o17b3o17b3o17b3o$
+8bo19bo19bo19bo19bo19bo19bo19bo19bo19bo$8bo19bo19bo19bo19bo19bo13bo5bo
+19bo19bo19bo$8bo19bo19bo19bo19bo19bo14boo3bo19bo19bo19bo$4bo117boo$4b
+oo20bo21boo$3bobo20boo21boo$25bobo20bo!

@@ -1,0 +1,12 @@
+#N 16p6dn.rle: Donut: Pattern image
+#O Mark D. Niemiec's life synthesis database, Fri Jun 21 22:03:39 2013
+#C  .O...O..
+#C  ...O.O.O
+#C  OO......
+#C  ......O.
+#C  .O......
+#C  ......OO
+#C  O.O.O...
+#C  ..O...O.
+x = 8, y = 8, rule = B34/S34
+bx3bx$3bxbxbx$xx$6bx$bx$6bxx$xbxbx$bbx3bx!

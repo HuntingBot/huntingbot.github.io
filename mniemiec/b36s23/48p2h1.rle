@@ -1,0 +1,21 @@
+#N 48p2h1.rle: Glider 14006; c/2 orthogonal glider; 48P2H1V0.1: Pattern image
+#O Mark D. Niemiec's life synthesis database, Thu Aug 03 23:51:10 2017
+#C  ....O....
+#C  ..OO.OO..
+#C  .O..O..O.
+#C  O...O...O
+#C  O.......O
+#C  ..OO.OO..
+#C  .O.O.O.O.
+#C  ...OOO...
+#C  .OOO.O...
+#C  ....O.O..
+#C  ..OOOOOO.
+#C  ....O.OOO
+#C  .....O.O.
+#C  ....O.OO.
+#C  .....O...
+#C  ....OO...
+x = 9, y = 16
+4bx$bbxxbxx$bxbbxbbx$x3bx3bx$x7bx$bbxxbxx$bxbxbxbx$3b3x$b3xbx$4bxbx$bb
+6x$4bxb3x$5bxbx$4bxbxx$5bx$4bxx!

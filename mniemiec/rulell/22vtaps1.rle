@@ -1,0 +1,15 @@
+#N 22vtaps1.rle: Cis up very long tables w/pre-block: Synthesis
+#O Mark D. Niemiec's life synthesis database, Fri Apr 09 14:00:07 2021
+#C  ..OO.OO..
+#C  O..O.O..O
+#C  OO.O.O.OO
+#C  ...O.O...
+#C  ...O.O...
+#C  ..OO.OO..
+x = 143, y = 23
+35bo$36bo$34b3o$39bobo32bobo$39boo34boo$40bo34bo$$35bo23bx19bo20bxx18b
+oo18bxx$bo34boo22bxx18boo18bx19bo19bx$bbo18bxx12boo4boo14bx4bx14bo4bo
+14bx4bx14bo4bo14bx4bx$3o18bxx18boo14b6x14b6o14b6x14b6o14b6x$$3o18bxx
+18boo14b6x14b6o14b6x14b6o14b6x$bbo18bxx12boo4boo14bx4bx14bo4bo14bx4bx
+14bo4bo14bx4bx$bo34boo22bxx18boo18bxx18boo18bx$35bo23bx19bo19bx19bo20b
+xx$$40bo74bo$39boo74boo$39bobo72bobo$34b3o$36bo$35bo!

@@ -1,0 +1,14 @@
+#N 40p12-2.rle: Trans doubled carnival shuttle: Pattern image
+#O Mark D. Niemiec's life synthesis database, Sun Dec 20 19:30:45 2020
+#C  .OOO.............................
+#C  O...O............................
+#C  O...O............................
+#C  O...O....O.O..O...O..O.O.........
+#C  .OOO.....O...O.....O...O.....OOO.
+#C  .........O.O..O...O..O.O....O...O
+#C  ............................O...O
+#C  ............................O...O
+#C  .............................OOO.
+x = 33, y = 9
+b3x$x3bx$x3bx$x3bx4bxbxbbx3bxbbxbx$b3x5bx3bx5bx3bx5b3x$9bxbxbbx3bxbbxb
+x4bx3bx$28bx3bx$28bx3bx$29b3x!

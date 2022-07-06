@@ -1,0 +1,30 @@
+#N 7bkbl22.rle: Block and blinker offset (2;  2): Synthesis
+#O Mark D. Niemiec's life synthesis database, Thu May 27 18:02:23 2021
+#C  OOO..
+#C  .....
+#C  ...OO
+#C  ...OO
+x = 191, y = 146
+9bobo$10boo122bo$10bo123bobo$129boo3boo$129bobo$10boobbobo113bobo$11b
+ooboo34bo80boo$10bo4bo33bo$49b3o$25bxx38bxx38bxx38bxx38bxx$25bxx38bxx
+17bo20bxx38bxx38bxx$45boobo34boboo$27b3x15boboo18b3x13boobo20b3x37b3x
+37b3x$85bobo73bobo$85boo74boo$162bo$84b3o$86bo75boo$85bo74b3o$159bo4b
+oo$126boo30bobo3boo$126bobo28bobo$127bo29bo$129bo26boo$131bo24bo$130bo
+bo25boo$131boo25boo$$127bo$25bxx78bxx20boo16bxx$25bxx78bxx19bobo16bxx
+$$27b3x77b3x37b3x5$70boo6boo$69bobbo5bobo$boo66bobobboobbo$obbo66bo3bo
+bo$obo72bo$bo$$bboo$bbobo$3bo3boo$7bobo$7bo11$5boo18bxx18boo18bxx18boo
+18bxx18boo18bxx18boo18bxx$5boo18bxx18boo18bxx18boo18bxbx17boo18bxx18b
+oo18bxx$106bx41bxx22bo15bxx$7b3o37b3o37b3o37b3ob3o14bxbx16b3obo16bxbx$
+131bo17bx21b3o15bx$51boo31boo46bo$4b3o43boo33boo$6bo45bo31bo$5bo10$
+102bxx$81boo18bxbx$5boo18bxx18boo18bxx13bobobboo15bxbbxx15bobboo18bxx$
+5boo18bxbx17boo18bxbbx13bobboo18bxx13bobobboo15bxbbxx$26bxbx40bx51boo
+18bxbx$7b3o17bxbx17b3o16bxbbx17b3o17b3x17b3o12bxx3b3x$28bxbx36bxx$11b
+oo16bxbx19b3o$11bobo16bxx19bo$11bo40bo10$boo$bboo$bo$5boo18boo18boo18b
+oo18boo18boo18boo18boo18boo$5boo14boobboo14boobboo18boo18boo18boo18boo
+18boo18boo$22boo16bobo18boo$7b3o11bo5b3o12bo4b3o12boo3b3o11boo4b3o11b
+3o3b3o12bo4b3o13bo3b3o17b3o$61bo20boo19bo18boo19boo19bo$81bo20bo18bobo
+18bobo19boo$163bobo10$81bo20bo$82boo19bo$81boo18b3o17bo20bo$122boo19bo
+18bo$5boo18boo18boo18boo18boo18boo14boobboo14b3oboo13bobobboo$5boo18b
+oo18boo18boo18boo18boo18boo18boo14boobboo$$7b3o17b3o17b3o17b3o17b3o17b
+3o17b3o17b3o17b3o$$3b3o64boo$5bo19bo22boo19bobo$4bo20boo20bobo21bo$24b
+obo22bo12$5boo18boo$5boo18boo4b3o$31bo$7b3o17b3obbo$11b3o$11bo$12bo!

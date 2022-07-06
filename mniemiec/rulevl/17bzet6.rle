@@ -1,0 +1,9 @@
+#N 17bzet6.rle: Block on Z on down eater tail: Synthesis
+#O Mark D. Niemiec's life synthesis database, Tue Sep 01 05:33:51 2020
+#C  OO.OO..OO
+#C  OO.O....O
+#C  ...O.OOO.
+#C  ..OO.O...
+x = 27, y = 10
+9bo$10bo14bxx$4bo3b3o14bxx$bbobo18bx$3boo18b4x$26bx$bo4b3o14bxx$boo5bo
+15bx$obo4bo16bxbx$25bxx!

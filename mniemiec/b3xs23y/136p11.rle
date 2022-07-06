@@ -1,0 +1,29 @@
+#N 136p11.rle: 136-bit P11: Pattern image
+#O Mark D. Niemiec's life synthesis database, Sat Jan 13 12:49:07 2018
+#C  ....O...........O....
+#C  ...O.O.OO...OO.O.O...
+#C  ...O.O.O.O.O.O.O.O...
+#C  .OO.O....O.O....O.OO.
+#C  O..O.....O.O.....O..O
+#C  .OO......O.O......OO.
+#C  .......O.O.O.O.......
+#C  .OO...OO.O.O.OO...OO.
+#C  .O......O...O......O.
+#C  ..OOOOOO.....OOOOOO..
+#C  .....................
+#C  ..OOOOOO.....OOOOOO..
+#C  .O......O...O......O.
+#C  .OO...OO.O.O.OO...OO.
+#C  .......O.O.O.O.......
+#C  .OO......O.O......OO.
+#C  O..O.....O.O.....O..O
+#C  .OO.O....O.O....O.OO.
+#C  ...O.O.O.O.O.O.O.O...
+#C  ...O.O.OO...OO.O.O...
+#C  ....O...........O....
+x = 21, y = 21
+4bx11bx$3bxbxbxx3bxxbxbx$3bxbxbxbxbxbxbxbx$bxxbx4bxbx4bxbxx$xbbx5bxbx
+5bxbbx$bxx6bxbx6bxx$7bxbxbxbx$bxx3bxxbxbxbxx3bxx$bx6bx3bx6bx$bb6x5b6x
+$$bb6x5b6x$bx6bx3bx6bx$bxx3bxxbxbxbxx3bxx$7bxbxbxbx$bxx6bxbx6bxx$xbbx
+5bxbx5bxbbx$bxxbx4bxbx4bxbxx$3bxbxbxbxbxbxbxbx$3bxbxbxx3bxxbxbx$4bx11b
+x!

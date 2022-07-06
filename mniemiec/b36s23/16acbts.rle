@@ -1,0 +1,9 @@
+#N 16acbts.rle: Two up boats on carrier: Synthesis
+#O Mark D. Niemiec's life synthesis database, Sun Jul 30 07:23:10 2017
+#C  .OO.OO....O.
+#C  O.O.O..O.O.O
+#C  .O....OO.OO.
+x = 111, y = 7, rule = B36/S23
+50bo$3bobo17bxx18boo3boo13bxx4bx13boo4bo10bxxbxx4bx$4boo17bxbbx16bobbo
+bboo12bxbbxbxbx8boobbobbobobo8bxbxbxbbxbxbx$4bo20bxx18boo18bxxbxx10boo
+3booboo10bx4bxxbxx$boo76bo$obo$bbo!

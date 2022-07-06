@@ -1,0 +1,15 @@
+#N 4mb.rle: Medium blinker: Synthesis
+#O Mark D. Niemiec's life synthesis database, Fri May 01 06:30:15 2020
+#C  OOOO
+x = 150, y = 123
+129boo$128bo$127bobo$46boo37b3o39bobbo$46b3o36boo4boo$26b4x16boboo16b
+4x15bo4b3o13b4x19boo15b4x$7b3o37b3o39boobo35b3o$oo4boboo41boo36b3o35b
+oobo$3o3b3o41booboo72b3o$oboobboo42bo$b3o47bo$51bo24$66b4x36b4x17bobo
+16b4x$128bo$128boo$82b3o6b3o28b4o$82boo8boo28boobo$82bo10bo30boo$124b
+oo4$84boo4boo$83b4obb4o$34boo4boo43boobboo$33b4obb4o42bo4bo$35boobboo$
+35bo4bo15$126b4o$$123boo18bxx$121booboo15bxxbxx$125bo19bx$53boo69bo19b
+x$52b3o69bo19bx$51boobo$51b3o18$boo$b3o17boo$boboo16b3o$bb3o16boboo16b
+oo$6b4o12b3ob4o11b3obb4o11b4ob4o16b4o16b4o$41boboo16boobo16b4o18boo$
+42b3o18boo16boobo16booboo$63boo18boo20bo$83boo19bo$104bo15$6b4o16b4o
+16b4o16b4o16b4o$$3boo$3b3o17b4o18boo20boo$3boboo16boobo18b3o19b3o17b4o
+$4b3o18boo18boboo18boboo16boobo$25boo19b3o19b3o18boo$89boo!

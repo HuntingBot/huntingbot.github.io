@@ -1,0 +1,14 @@
+#N 22hhvhvs.rle: Bi-beehive and two beehives: Synthesis
+#O Mark D. Niemiec's life synthesis database, Fri Apr 09 22:16:11 2021
+#C  .OO.......
+#C  O..O.O.O.O
+#C  .OO...O.O.
+#C  ..........
+#C  ..........
+#C  .OO...O.O.
+#C  O..O.O.O.O
+#C  .OO.......
+x = 32, y = 19
+3bo8bo$bobo8bobo$bboo8boo$25bx4bx$26bxbbx$4bobobbobo13bx4bx$5boobboo
+15bxbbx$5bo4bo14bx4bx$$25bx4bx$24bxbxbbxbx$oo12boo8bxbxbbxbx$boo10boo
+10bx4bx$o14bo3$bboo8boo$bobo8bobo$3bo8bo!

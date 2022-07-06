@@ -1,0 +1,10 @@
+#N 12vsbk1.rle: Block on very long snake: Synthesis
+#O Mark D. Niemiec's life synthesis database, Mon Jul 13 18:16:15 2020
+#C  OO.OO....
+#C  OO.O.O...
+#C  ......O.O
+#C  .......OO
+x = 75, y = 14
+26bxx18boo7bo10bxx$4bo21bxbx17bobo4boo11bxbx$5bo23bxbx17bobobboo13bxbx
+bxx$3b3obboo20bxx18boo18bxxbxx$7boo$bo7bo47b3o$oo55bo$obo55bo4$8boo$7b
+oo$9bo!

@@ -1,0 +1,8 @@
+#N 16bk4.rle: Block on block on block on block: Synthesis
+#O Mark D. Niemiec's life synthesis database, Fri Aug 11 05:30:36 2017
+#C  OO.OO.OO.OO
+#C  OO.OO.OO.OO
+x = 31, y = 25, rule = B36/S23
+3bobo$4boo$4bo$12bobo$12boo$13bo$$29bxx$29bxx$5bo7bo$6bo6bobo13bxx$4b
+3o6boo14bxx$3o14boo$bbo14bobo9bxx$bo15bo11bxx$$29bxx$29bxx$$13bo$12boo
+$12bobo$4bo$4boo$3bobo!

@@ -1,0 +1,23 @@
+#N 24p3-1.rle: 24P3.1: Pattern image
+#O Mark D. Niemiec's life synthesis database, Tue Aug 25 01:29:33 2020
+#C  OO.....OO
+#C  O...O...O
+#C  ....O....
+#C  ....O....
+#C  .OOO.OOO.
+#C  ....O....
+#C  ....O....
+#C  O...O...O
+#C  OO.....OO
+x = 158, y = 50
+5bxx5bxx$5bx3bx3bx$9bx$9bx$6b3xb3x$9bx$9bx$5bx3bx3bx$5bxx5bxx10$115bxx
+$96boo17bxbx$5boo5boo11bxx18boo5boo11bxx7byy9boo5booboo8bxx5bxxbbx8boo
+5boo11bxx5bxx$5bo3bo3bob3o7bxx18bo3bo3bo11bxbx6byy9bo3bo3bo3bo7bx3bx3b
+x11bo3bo3bo11bx3bx3bx$9bo5bo33bo16bxx21bo19bx19bo19bx$9bo6bo32bo39bo
+19bx19bo19bx$6b3ob3o33b3ob3o33b3ob3o13b3xb3x13b3ob3o13b3xb3x$9bo39bo
+39bo19bx19bo19bx5bxx$9bo39bo39bo19bx19bo6boo11bx5bxbx$5bo3bo3bo31bo3bo
+3bo31bo3bo3bo11bx3bx3bx11bo3bo3boboo8bx3bx3bxbbx$5boo5boo31boo5boobboo
+27boo5boo11bxx5bxx11boo5boo3bo7bxx5bxx$55boo$57bo10$5boo5boo11boo5boo
+11boo5boo$boobbo3bo3bo11bo3bo3bo11bo3bo3bo$obo6bo19bo19bo$bbo6bo19bo
+19bo$6b3ob3o13b3ob3o13b3ob3o$9bo19bo19bo$9bo19bo19bo$5bo3bo3bo7boobbo
+3bo3bo7boobbo3bo3bo$5boo5boo6bobobboo5boo8booboo5boo$22bo18bo!

@@ -1,0 +1,15 @@
+#N 19p8-1.rle: 19P8.1: Synthesis
+#O Mark D. Niemiec's life synthesis database, Thu Oct 01 15:26:30 2020
+#C  ...OO....
+#C  ..O.O....
+#C  .OO......
+#C  O......O.
+#C  O...O...O
+#C  .O......O
+#C  ......OO.
+#C  ....O.O..
+#C  ....OO...
+x = 44, y = 21
+bo$bboo$boo$10b3o$10bo6bo$11bo3boo$bbo13boo20bxx$obo34bxbx$boo33bxx$
+35bx6bx$35bx3bx3bx$36bx6bx$16boo23bxx$16bobo20bxbx$boo13bo22bxx$bboo3b
+o$bo6bo$6b3o$16boo$15boo$17bo!

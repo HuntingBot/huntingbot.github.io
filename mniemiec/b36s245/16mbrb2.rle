@@ -1,0 +1,13 @@
+#N 16mbrb2.rle: Medium blinker above rabbit: Partial synthesis
+#O Mark D. Niemiec's life synthesis database, Tue Apr 28 22:32:07 2020
+#C  OOOO....
+#C  ........
+#C  ........
+#C  .OO..O.O
+#C  .O..O.OO
+#C  ...OOO..
+#C  .....O..
+x = 57, y = 45
+34b3o$34boobo$35b3o$36boo20$18bo4bo$18boobboo$16b4obb4o$17boo4boo12$
+49b4x3$xxbbxbx13boobbobo23bxxbbxbx$xbbxbxx13bobboboo23bxbbxbxx$bb3x17b
+3o27b3x$4bx19bo29bx!

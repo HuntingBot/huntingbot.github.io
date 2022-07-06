@@ -1,0 +1,8 @@
+#N 11lfbk0w.rle: Loaf and block offset (-4;  0): Synthesis
+#O Mark D. Niemiec's life synthesis database, Sat Jul 29 22:11:54 2017
+#C  OO...OO.
+#C  OO..O..O
+#C  ....O.O.
+#C  .....O..
+x = 28, y = 7, rule = B36/S23
+4bo$5bo14bxx3bxx$3b3o14bxxbbxbbx$24bxbx$boo22bx$obo$bbo!

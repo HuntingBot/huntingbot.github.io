@@ -1,0 +1,15 @@
+#N 15mblfmb.rle: Medium blinker on loaf on medium blinker: Synthesis
+#O Mark D. Niemiec's life synthesis database, Fri Apr 24 23:55:36 2020
+#C  OOOO...
+#C  .......
+#C  .......
+#C  .OO...O
+#C  O..O..O
+#C  .O.O..O
+#C  ..O...O
+x = 159, y = 60
+60b3o$60boobo$61b3o$62boo20$44bo4bo$44boobboo$42b4obb4o$43boo4boo8$3b
+oo$bbo$bobo$bobbo$75b4x40bo5b4o26b4x$119boo$117b4o$26bxx18boo28bxx40b
+oo6boo24bx3bxx$25bxbbx16bobbo26bxbbx46bobbo23bxbbxbbx$25bxbx17bobo27bx
+bx47bobo24bxbbxbx$26bx19bo29bx41boo6bo25bx3bx$bboobboo109b4o$bboobboo
+111boo$oobobboboo109bo$4obb4o8$94boo$94b3o$94boboo$95b3o!

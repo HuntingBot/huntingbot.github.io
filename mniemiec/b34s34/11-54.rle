@@ -1,0 +1,13 @@
+#N 11-54.rle: 11.54; Semaphore tie cis Y: Synthesis
+#O Mark D. Niemiec's life synthesis database, Thu Aug 20 21:23:02 1998
+#C  O.O.....
+#C  .O.OO...
+#C  .O.O....
+#C  .....O..
+#C  ......OO
+#C  ......O.
+x = 108, y = 24, rule = B34/S34
+4boo$4boo$3b4o$48boo$47bobbo$bbo45boo$boboo15bxbxbx15bobobo3boo10bxbx
+17bobo17bxbx$boboo16bxbx17bobo17bxbxx16boboo8bo7bxbxx$bbo18bxbx17bobo
+4boo11bxbx17bobo9b3o5bxbx$47b4o42b3o9bx$93bo12bxx$106bx$89b4o$90boo$
+90boo5$87boo$87boo$4o82bobbo$boo84boo$boo!

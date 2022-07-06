@@ -1,0 +1,15 @@
+#N 15mbacz4.rle: Medium blinker on carrier above down Z: Synthesis
+#O Mark D. Niemiec's life synthesis database, Fri Apr 24 23:27:29 2020
+#C  OOOO....
+#C  ........
+#C  ........
+#C  .OO.....
+#C  .O.....O
+#C  ...O.OOO
+#C  ..OO.O..
+x = 156, y = 51
+60boo$62bo$61bobo$60bobbo20$40b4obb4o$40boobobboboo$42boobboo$42boobb
+oo3$116bo$116boo$114b4o$115boo32bx$3bo3bo64bxx58boo15bxbbxx$3bo3bo64bx
+bbx56bobbo13bxbbxbbx$4bobo67bxx39boo17boo13bx4bxx$ooboobooboo103b4o$bb
+oo3boo15bxx18boo28bxx40boo16boo18bxx$24bx19bo29bx41bo17bo19bx$oo21bxx
+18boo28bxx58boo18bxx$3o$oboo$b3o5$91boo$91b3o$91boboo$92b3o!

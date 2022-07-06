@@ -1,0 +1,24 @@
+#N 18p3.rle: 18P3: Synthesis
+#O Mark D. Niemiec's life synthesis database, Sat Dec 22 08:25:56 2018
+#C  ..OO....
+#C  .O..O...
+#C  O.O.....
+#C  O...O.O.
+#C  .O.O...O
+#C  .....O.O
+#C  ...O..O.
+#C  ....OO..
+x = 142, y = 83
+11bo75bo$11bobo74boobobo33bx$11boo74boobboo34bx$92bo34bx$$4bobo$5boo$
+5bo$42bxx38boo38bxx$bb3o37bxbx37bobo16bo20bxbx$4bo38bx39bo15boo22bx$3b
+o96boo$$80bo20bo$78bobo19boo18bxx$79boo19bobo17bxx17b3x$76boo$13bo61bo
+bo$12bo40bx23bo15bo39bx$12b3o37bxbx37bobo37bxbx$53bxx38boo38bxx$11bo
+115bxx$10boo75b3o37bxx$10bobo74bo$88bo$84b3o$4boo80bo$3bobo79bo$5bo15$
+85bo$83bobo$14bo69boo$12boo$4bo8boo31by39bo$5bo40by39bo$3b3o40by39bo$$
+7bo$7bo$7bo5$bboo21bobo$bbobo20boo$3bo22bo10by39bo$36byby7bxx22b3o3bob
+o7boo38bxx$36byby6bxbbx23bo3bobo6bobbo36bxbbx$37by6bxbx24bo5bo6bobo37b
+xbx$oo42bx3bxbx33bo3bobo33bx3bxbx$oo17b3o23bxbx3bx33bobo3bo33bxbx3bx$
+38byy9bxbx11b3y12boo9bobo11b3o23bxbx$23boo13byy7bxbbx27boo7bobbo16b3o
+17bxbbx$13bo9bobo22bxx38boo17bo20bxx$12bobo8bo84bo$13boo$7boo$7boo$45b
+yy38boo$45byy3byy33boo3boo$49bybby36bobbo$50byy38boo4$90boo$89bobo$91b
+o!

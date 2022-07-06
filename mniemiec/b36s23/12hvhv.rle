@@ -1,0 +1,15 @@
+#N 12hvhv.rle: Beehive on beehive: Synthesis
+#O Mark D. Niemiec's life synthesis database, Fri Aug 04 16:54:39 2017
+#C  .O...O.
+#C  O.O.O.O
+#C  O.O.O.O
+#C  .O...O.
+x = 110, y = 55, rule = B36/S23
+46bo39bo$44bobo37bobo$8bo36boo38boo$6bobo39bo39bo$7boo18bxx19bobo16bxx
+19bobo16bxx$26bxbbx18boo16bxbbx18boo16bxbbx$8bo18bxx38bxx38bxx$7bo$7b
+3o17bxx38bxx38bxx$26bxbbx18boo16bxbbx16boo18bxbbx$27bxx19bobo16bxx16bo
+bo19bxx$bo46bo38bo$boo42boo42boo$obo41bobo42bobo$46bo42bo7$8bo$6bobo
+37bo$7boo38boo$46boo19bxx$66bxbbx$6b3o19bx19bo18bxx$8bo19bx19bo$7bo20b
+x19bo18bxx$66bxbbx$46boo19bxx$47boo$46bo12$27bxx18boo18bxx$6boo18bxbbx
+16bobbo16bxbbx$5bobo19bxx18boo18bxx$7bo$9boo56bxx$9bobo29bo12bo11bxbbx
+$9bo32boo8boo13bxx$41boo10boo$45boobboo$44bobobbobo$46bobbo!

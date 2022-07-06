@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="copyright" content="1997,1998,1999,2013,2015,2016,2017,2018,2019,2020,2021,2022 Mark D. Niemiec" />
+<title>Life Variant: 2/2 Life (B2/S2)</title>
+<meta name="22-description"
+content="Life Variant: 2/2 Life: B2/S2 pattern lists and glider syntheses" />
+<meta name="22-keywords"
+content="conway game life variant 22 life still life oscillator spaceship pattern object list glider synthesis" />
+<link rel="prev" href="liferule.htm" />
+<link rel="next" href="b34s34.htm" />
+<link rel="search" href="lifesrch.htm" />
+<link rel="author" href="lifecred.htm#niemiec" />
+<link rel="license" href="lifepage.htm#copyright" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="shortcut icon" href="images/22-64.ico" />
+<style type="text/css">
+    body{lang="en-US";hyphens:auto;color:black;background-color:white;
+      margin-top:0;padding:0;border:0;height:100%;
+      font-family:Verdana,Arial,Helvetica,sans-serif;}
+    hr.a{border-style:solid;border-width:3px;border-color:#000000;}
+    h1{text-align:center;
+      font-family:Verdana,Arial,Helvetica,sans-serif;font-variant:small-caps;}
+    h2{font-family:Verdana,Arial,Helvetica,sans-serif;font-variant:small-caps;}
+    h3{font-family:Verdana,Arial,Helvetica,sans-serif;font-variant:small-caps;}
+    i{font-family:"Times New Roman",Times,serif;}
+    pre{hyphens:manual;}
+    img{border:2px black solid;}
+    ul,ol{margin-left:0px;padding-left:1en;}
+    table{border:1px black solid;border-spacing:0px;border-collapse:collapse;
+      table-layout:fixed;}
+    td,th{border:1px black solid;vertical-align:top;font-size:12px;padding:1px;}
+    td a{display:block;}
+    a{text-decoration:none;}
+    a:focus{text-decoration:underline;} a:hover{text-decoration:underline;}
+    a.p:link{color:#008000;} a.p:visited{color:#00C000;}
+    a.i:link{color:#000080;} a.i:visited{color:#0000C0;}
+    a.j:link{color:#008080;} a.j:visited{color:#00C0C0;}
+    a.x:link{color:#800000;} a.x:visited{color:#C00000;}
+    td:hover{background-color:#F0F0F0;}
+    .s{background-color:#E0E0E0;} td.s:hover{background-color:#E0E0E0;}
+    .b{background-color:#C0C0FF;} td.b:hover{background-color:#E0E0FF;}
+    .g{background-color:#C0FFC0;} td.g:hover{background-color:#E0FFE0;}
+    .t{background-color:#C0FFFF;} td.t:hover{background-color:#E0FFFF;}
+    .r{background-color:#FFC0C0;} td.r:hover{background-color:#FFE0E0;}
+    .m{background-color:#FFC0FF;} td.m:hover{background-color:#FFE0FF;}
+    .y{background-color:#FFFFC0;} td.y:hover{background-color:#FFFFE0;}
+    .o{background-color:#FFD0AA;} td.o:hover{background-color:#FFE8D5;}
+    .v{background-color:#FFAAD0;} td.v:hover{background-color:#FFD5E8;}
+    .h{background-color:#E0E0FF;} td.h:hover{background-color:#F0F0FF;}
+    .k{background-color:#000000;color:#FFFFFF;} td.k:hover{background-color:#C0C0C0;}
+    .n{background-color:#F0F0F0;text-align:center;} th.n:hover{background-color:#F8F8F8;}
+    .c{text-align:center;} .u{display:none;}
+</style>
+</head>
+<body>
+<a id="top" name="top"></a>
+<h1>Life Variant: 2/2 Life (B2/S2)</h1>
+<p class="c">
+	<a class="j" href="#22-intro">Introduction</a> |
+	<a class="j" href="#22-count">Object Counts</a> |
+	<a class="j" href="#22-p1">Still-lifes</a> |
+	<a class="j" href="#22-p2">P2 Oscillators</a> |
+	<a class="j" href="#22-p4">P4 Oscillators</a> |
+	<a class="j" href="#22-btc">Billiard table oscillators</a> |
+	<a class="j" href="#22-ss">Spaceships</a> |
+	<a class="j" href="#22-ws">Wick-stretchers</a>
+</p>
+<hr class="a" /><main>
+<article><a id="a0" name="a0"></a>
+<a id="22-intro" name="22-intro"></a>
+<h2>Introduction</h2>
+<p>The <em>B2/S2 rule</em> is similar to Life, except both birth and survival
+occur on exactly 2 living neighbors. This rule has the following interesting
+properties:</p>
+<p><ul>
+    <li>The birth-on-2 rule makes any leading surface containing a domino expand
+	forever at a speed of <i>c</i>, making it impossible for anything to
+	catch up and stop it. This makes possible a very simple
+	<a class="j" href="#22-ss">spaceship</a>, as well as infinitely many
+	dirty puffers. This also makes this rule very difficult to work with,
+	since almost every pattern expands without limit.</li>
+    <li>Due to the birth-on-2 rule, pseudo-objects and quasi-objects are not
+	possible.</li>
+    <li>Survival-on-2, combined with lack of birth on 3&hellip;6, make possible
+	solid walls that are totally impervious to assault from either side.
+	In essence, they are immovable objects, except at their ends. If such
+	walls bend around corners, their inside corners are also impervious.
+	Four such walls surrounding an enclosed space make the space totally
+	contained, and useful for creating
+	<a class="j" href="#22-btc">billiard table</a> oscillators of arbitrarily
+	high periods.</li>
+    <li><a class="j" href="#22-p1">Still-lifes</a> are possible, but they are
+	all rare. They must all be surrounded by L trominoes, and if sufficiently
+	large, may also contain enclosed chains of walls (see previous
+	section).</li>
+    <li>Since the birth and survival rules are identical, a cell does not
+	participate in its subsequent state. I.e., no information is transferred
+	directly from a cell and its child. Information can only be transferred
+	from a cell to its subsequent generation by moving to an alternate cell
+	and coming back later. This principle attaches parity to information,
+	and it is no surprise that most oscillators have periods of
+	<a class="j" href="#22-p2">2</a>, or sometimes
+	<a class="j" href="#22-p4">4</a>. The one common
+	<a class="j" href="#22-ss">spaceship</a> mechanism has a period of 1 and
+	a velocity of <i>c</i>, demonstrating the same parity principle. The many
+	dirty puffers derived from it all appear to have even periods.</li>
+    <li>Unlike Life, where &ldquo;cool&rdquo; broth exteriors usually muddle
+	around and occasionally expand, the birth-on-2 rule causes almost every
+	broth to expand in every orthogonal direction. In terms of object
+	synthesis, the practical result of this is extremely difficult to
+	collide gliders together to leave only small usable sparks. It is even
+	extremely difficult to even destroy an object with gliders. For this
+	reason, all syntheses on this page also include object destructor
+	mechanisms, if available.</li>
+</ul></p>
+</article>
+<hr /><article><a id="a1" name="a1"></a>
+<a id="22-count" name="22-count"></a>
+<h2>Object Counts</h2>
+<p>Computer searches have counted
+<a class="j" href="#22-p1">still-lifes</a> up to 30 bits and
+<a class="j" href="#22-p2">period 2 oscillators</a> up to 16 bits.</p>
+<p>Numbers in <b>bold face</b> have been confirmed by computer search. Other
+given numbers are believed to be complete, but have not yet been verified.
+Lists with large numbers of objects that have not yet been counted are shown
+with &ldquo;many&rdquo;.</p>
+<p>Status of object lists on this page is shown by background color:</p>
+<p><ul>
+    <li>White (or <span class="h">light blue</span>) indicates small complete
+	object list; may have syntheses for some.</li>
+    <li><span class="r">Red</span> indicates complete object count; may have
+	syntheses for some.</li>
+    <li><span class="s">Grey</span> indicates objects not counted; may have
+	syntheses for some.</li>
+</ul></p>
+<p><table style="width:954px">
+    <colgroup><col style="width:161px;" /><col span="11" style="width:20px;" />
+	<col span="3" style="width:30px;" /><col style="width:40px;" />
+	<col span="14" style="width:20px;" /><col style="width:161px;" />
+	</colgroup>
+    <tr>
+	<td class="h"><b>Population</b></td>
+	<td class="h"><b>2</b></td><td class="h"><b>3</b></td>
+	<td class="h"><b>4</b></td><td class="h"><b>5</b></td>
+	<td class="h"><b>6</b></td><td class="h"><b>7</b></td>
+	<td class="h"><b>8</b></td><td class="h"><b>9</b></td>
+	<td class="h"><b>10</b></td><td class="h"><b>11</b></td>
+	<td class="h"><b>12</b></td><td class="h"><b>13</b></td>
+	<td class="h"><b>14</b></td><td class="h"><b>15</b></td>
+	<td class="h"><b>16</b></td><td class="h"><b>17</b></td>
+	<td class="h"><b>18</b></td><td class="h"><b>19</b></td>
+	<td class="h"><b>20</b></td><td class="h"><b>21</b></td>
+	<td class="h"><b>22</b></td><td class="h"><b>23</b></td>
+	<td class="h"><b>24</b></td><td class="h"><b>25</b></td>
+	<td class="h"><b>26</b></td><td class="h"><b>27</b></td>
+	<td class="h"><b>28</b></td><td class="h"><b>29</b></td>
+	<td class="h"><b>30</b></td>
+	<td class="h"><b>Population</b></td>
+    </tr>
+    <tr>
+	<td class="h"><b><a class="j" href="#22-p1">Still-lifes</a></b></td>
+	<td><b>-</b></td><td><b>-</b></td><td><b>-</b></td>
+	<td class="h"><b>-</b></td><td><b>-</b></td><td><b>-</b></td>
+	<td><b>-</b></td><td><b>-</b></td>
+	<td class="h"><b>-</b></td><td><b>-</b></td><td><b>1</b></td>
+	<td><b>0</b></td><td><b>0</b></td>
+	<td class="h"><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+	<td><b>1</b></td>
+	<td><b>0</b></td>
+	<td class="h"><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+	<td><b>0</b></td><td><b>4</b></td>
+	<td class="h"><b>0</b></td><td><b>0</b></td><td><b>3</b></td>
+	<td><b>0</b></td><td><b>0</b></td>
+	<td class="h"><b>13</b></td>
+	<td class="h"><b><a class="j" href="#22-p1">Still-lifes</a></b></td>
+    </tr>
+    <tr>
+	<td class="h"><b><a class="j" href="#22-p2">P2 oscillators</a></b></td>
+	<td><b>1</b></td><td><b>1</b></td><td><b>0</b></td>
+	<td class="h"><b>0</b></td><td><b>3</b></td><td><b>3</b></td>
+	<td><b>5</b></td><td><b>2</b></td><td class="h"><b>15</b></td>
+	<td><b>26</b></td><td class="r"><b>56</b></td>
+	<td class="r"><b>103</b></td><td class="r"><b>250</b></td>
+	<td class="r"><b>478</b></td><td class="r"><b>1129</b></td>
+	<td colspan="14" class="s">many</td>
+	<td class="h"><b><a class="j" href="#22-p2">P2 oscillators</a></b></td>
+    </tr>
+    <tr>
+	<td class="h"><b><a class="j" href="#22-p4">P4 oscillators</a></b></td>
+	<td><b>-</b></td><td><b>1</b></td><td><b>2</b></td>
+	<td class="h"><b>0</b></td><td>1</td><td>2</td><td>4</td><td>0</td>
+	<td class="h">2</td><td class="r">8</td><td class="r">21</td>
+	<td class="r">13</td><td colspan="17" class="s">many</td>
+	<td class="h"><b><a class="j" href="#22-p4">P4 oscillators</a></b></td>
+    </tr>
+    <tr>
+	<td class="h"><b><a class="j" href="#22-ss">Spaceships</a></b></td>
+	<td><b>-</b></td><td><b>-</b></td><td><b>1</b></td>
+	<td class="h"><b>0</b></td><td>0</td><td>0</td><td>0</td><td>0</td>
+	<td class="h">0</td><td>0</td><td>0</td><td>2</td>
+	<td class="r">1</td><td class="r">1</td><td class="r">1</td>
+	<td class="r">1</td><td class="r">1</td><td class="r">1</td>
+	<td class="r">1</td><td class="r">1</td><td class="r">4</td>
+	<td class="r">7</td><td colspan="7" class="s">many</td>
+	<td class="h"><b><a class="j" href="#22-ss">Spaceships</a></b></td>
+    </tr>
+</table></p>
+</article>
+<hr class="a" /><article><a id="a2" name="a2"></a>
+<a id="22-p1" name="22-p1"></a>
+<h2>62 Still-lifes</h2>
+<p>Still-lifes are extremely rare in this rule. They are all highly artificial,
+and must employ extensive frameworks to induct all unwanted births on the
+outside. Since survival can only happen on 2, the only components permitted are
+L trominoes and circular chains of bits (typically rounded rectangles, although
+at larger sizes, concave lakes are also possible). Since births can only occur
+on 2 neighbors, and such chains are bounded by empty cells with more than 2
+everywhere except at outside corners, they act as stable immovable objects
+everywhere except at their outside corners. (As a side-effect, this permits
+construction of totally safe billiard table enclosures, since no matter what
+happens on the inside, the outside is safe from harm.)</p>
+<p>Stable arrangements can be made of rectangular arrays of L trominoes
+containing at least 2 in each dimension. Furthermore, one rectangular corner can
+be removed, yielding an L-shaped arrangement, as long as the two arms have width
+2 or more. Thus, it is possible to create still-lifes of any population
+3(<i>xy</i>+<i>xj</i>+<i>iy</i>) where <i>x</i>,<i>y</i>&ge;2 and
+<i>i</i>,<i>j</i>&ge;0. This simplifies to 3<i>n</i> for <i>n</i> in 4, 6,
+or any number 8 and larger.</p>
+<p>A single pond can be stabilized by 16 trominoes, allowing still-lifes of
+populations 56+3(3<i>i</i>+2<i>j</i>) where <i>i</i>,<i>j</i>&ge;0,
+or 56+3<i>n</i> where <i>n</i>&ge;0.</p>
+<p>Finally, a hollow box with 6 or more bits on the side can be stabilized by
+3 L trominoes on each corner, yielding still-lifes of populations 60+2<i>n</i>.
+If an additional L tromino is added on an inside corner, this yields still-lifes
+of populations 63+2<i>n</i>.</p>
+<p>Thus, still-lifes are possible with populations 12, 18, 24, 27, 30, 33,
+36, 39, 42, 45, 48, 51, 54, 56, 57, 60, and all sizes 62 and larger.</p>
+<p>The following table shows all still-lifes up to 30 bits, plus a sampling
+of all other known sizes up to 65 bits. (Note that the number above each
+object indicates its population; none can be synthesized from gliders,
+and individual pattern files are not provided.)</p>
+<p><img src="map/22-p1.png" alt="B2/S2 still-lifes"
+ width="637" height="441" usemap="#22-p1" /></p>
+<p><table><colgroup><col span="10" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a1">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a3">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/22-p1.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/22-p1.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/22-p1.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="lis/22-p1.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/22-p1.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/22-p1.zip" target="_blank">ZIP</a></th>
+</tr></table></p>
+<p>
+</p>
+<map name="22-p1">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,421,20,441" href="#bottom" />
+	<area coords="617,0,637,20" href="zip/22-p1.zip" />
+	<area coords="617,421,637,441" href="stamp/22-p1.rle" />
+	<area coords="0,0,90,58" href="javascript:R('&&(:#P6$')" />
+	<area coords="90,0,170,58" href="javascript:R('&)) ;0 8V 2P @')" />
+	<area coords="170,0,250,58" href="javascript:R('&,) ;2 ;V 2V D')" />
+	<area coords="250,0,330,58" href="javascript:R('&,)(;: #VP26 $')" />
+	<area coords="330,0,410,58" href="javascript:R('))) ;0 8R 6P @& %22P @')" />
+	<area coords="410,0,490,58" href="javascript:R('))2 V@ P: +8 0# !8 0')" />
+	<area coords="490,0,570,58" href="javascript:R('))) ;0 8R 6P @V 2P @')" />
+	<area coords="570,0,637,58" href="javascript:R('))) ;0 8V 2P @V 2P @')" />
+	<area coords="0,58,90,106" href="javascript:R('))2 V@ P: +8 0; )8 0')" />
+	<area coords="90,58,170,106" href="javascript:R('&/)( ;:0 #8VP 26P $@')" />
+	<area coords="170,58,250,106" href="javascript:R('&/)) ;;0`8VV 22P`@')" />
+	<area coords="250,58,330,106" href="javascript:R('\'0(`:$@#-HP ,6S $A8`0')" />
+	<area coords="330,58,410,106" href="javascript:R('\'0(`:0@#9HP ,6; $)8`0')" />
+	<area coords="410,58,490,106" href="javascript:R('(0(`:0 #80P!86; $(, !H`@')" />
+	<area coords="490,58,570,106" href="javascript:R('),! #2 ;+ :6 TV 2P @')" />
+	<area coords="570,58,637,106" href="javascript:R('),( :2#;P 6V%22DP 6 $')" />
+	<area coords="0,106,90,154" href="javascript:R('),) ;0 8V 4* ;& %22V D')" />
+	<area coords="90,106,170,154" href="javascript:R('),) ;2 ;R 6V 4& %22P @')" />
+	<area coords="170,106,250,154" href="javascript:R('),)(;: #V02V $ P 6 $')" />
+	<area coords="250,106,330,154" href="javascript:R('),2 VD V: +3 :# !8 0')" />
+	<area coords="330,106,410,154" href="javascript:R('),20VT &;0); %22 8 + %22')" />
+	<area coords="410,106,490,154" href="javascript:R(')0$`6`P0 #80:!8(;`(, !H`@')" />
+	<area coords="490,106,570,154" href="javascript:R('),( :2#;P 66%22TP 6P$@')" />
+	<area coords="570,106,637,154" href="javascript:R('),( :2#;P 6V$DP 6V$D')" />
+	<area coords="0,154,90,202" href="javascript:R('),( :2#;P 6V%22DP 6V$D')" />
+	<area coords="90,154,170,202" href="javascript:R('),( :2#;P 6V%224P 6V$D')" />
+	<area coords="170,154,250,202" href="javascript:R('),) ;2 ;V 2V DV 2V D')" />
+	<area coords="250,154,330,202" href="javascript:R('),) ;2 ;V 2V 4V 2V D')" />
+	<area coords="330,154,410,202" href="javascript:R('&2(`:22#;;P`6VV$DD')" />
+	<area coords="410,154,490,202" href="javascript:R('&2)`;22 ;;V`2VV DD')" />
+	<area coords="490,154,570,202" href="javascript:R('&2)( ;:2 #;VP 26V $D')" />
+	<area coords="570,154,637,202" href="javascript:R(')/(`:20#;8P`6VP%224@P`6P $@')" />
+	<area coords="0,202,90,250" href="javascript:R(')/(`:20#;8P`62P%22V@P`6V $D')" />
+	<area coords="90,202,170,250" href="javascript:R(')/(`:20#;8P`6RP%226@P`6V $D')" />
+	<area coords="170,202,250,250" href="javascript:R(')/)`;20 ;8V`2RP 6@V`2V`D')" />
+	<area coords="250,202,330,250" href="javascript:R(')/)`;20 ;8V`2VP 2@V`2V`D')" />
+	<area coords="330,202,430,250" href="javascript:R('&5(a:220#;;8Pa6VVP$DD@')" />
+	<area coords="430,202,530,250" href="javascript:R('&5)a;220 ;;8Va2VVP DD@')" />
+	<area coords="530,202,637,250" href="javascript:R('&5)(`;:20 #;8VP`26VP $D@')" />
+	<area coords="0,250,90,298" href="javascript:R(')/(`:20#;8P`6VP$D@P`6VP$D@')" />
+	<area coords="90,250,170,298" href="javascript:R(')/(`:20#;8P`6VP%22D@P`6VP$D@')" />
+	<area coords="170,250,250,298" href="javascript:R(')/(`:20#;8P`6VP%224@P`6VP$D@')" />
+	<area coords="250,250,330,298" href="javascript:R(')/(`:20#;8P`6VP%222@P`6VP$D@')" />
+	<area coords="330,250,410,298" href="javascript:R(')/)`;20 ;8V`2VP D@V`2VP D@')" />
+	<area coords="410,250,490,298" href="javascript:R(')/)`;20 ;8V`2VP 4@V`2VP D@')" />
+	<area coords="490,250,570,298" href="javascript:R(')/)`;20 ;8V`2VP 2@V`2VP D@')" />
+	<area coords="0,298,90,358" href="javascript:R(',,( :2#;P 6V%22DP 6 $ P 6 $')" />
+	<area coords="90,298,170,358" href="javascript:R(',,( :2#;P 6F%22TP 66%22TP 6P$@')" />
+	<area coords="170,298,250,358" href="javascript:R(',,( :2#;P 66%22TP 66%22TP 6P$@')" />
+	<area coords="250,298,330,358" href="javascript:R(',,( :2#;( :2#;P 66%22TP 6P$@')" />
+	<area coords="330,298,410,358" href="javascript:R(',,( :2#;( :2#;P 6V$DP 6V$D')" />
+	<area coords="410,298,490,358" href="javascript:R(',/(`:20#;8(`:20#;8P`6VP%22D@P`6`$')" />
+	<area coords="490,298,570,358" href="javascript:R(',/(`:20#;8(`:30#:8P`66P%22T@P`6P $@')" />
+	<area coords="570,298,637,358" href="javascript:R(',/(`:20#;8(`:20#;8P`6RP%226@P`6V $D')" />
+	<area coords="0,358,90,441" href="javascript:R('// %22`&@ @P%22T &&@ PP-* %25+8 P06& RT`0 ;`)8`0')" />
+	<area coords="90,358,170,441" href="javascript:R('.0 !`#0 08!: ##0088VE %22EL88(+# !: 8( +`%22')" />
+	<area coords="170,358,250,441" href="javascript:R('10 !`#0 08!: ##0088VE %22EL88(+# !: 8( +`%22`8`+`%22')" />
+	<area coords="250,358,330,441" href="javascript:R('..%22$ +- 8!@#\\ T%22P4%22@$%22 $%22 4%22@T%22P#\\ 8!@+- %22$')" />
+	<area coords="330,358,410,441" href="javascript:R('./%22%22 +&@8 P#^ T!84!0$! $! 4!0T!8#^ 8 P+&@%22%22')" />
+	<area coords="410,358,490,441" href="javascript:R('..%22$ +- 8!@#\\ T%22P5B@%25%22 $%22 4%22@T%22P#\\ 8!@+- %22$')" />
+	<area coords="490,358,570,441" href="javascript:R('.0%22! +#08 8#_ T L4 H$ @$ @4 HT L#_ 8 8+#0%22!')" />
+	<area coords="570,358,637,441" href="javascript:R('./%22%22 +&@8 P#^ T!85A0%25! $! 4!0T!8#^ 8 P+&@%22%22')" />
+</map>
+<p>Although not generally considered a still-life, the empty field (i.e.
+<a href="b2s2/0vacuum.rle">vacuum</a>) technically fulfills most the
+criteria, and it occurs sufficiently frequently to warrant being mentioned.
+For example, it is the most common result of two gliders colliding. (Since
+it has no living cells, it fails to be an actual object, in much the same
+way that 1 is not considered a prime number, even though it has no other
+prime factors.)</p>
+<p>In this rule, it is extremely rare for any patterns to totally die out. Also,
+unlike any of the other still-lifes, vacuum can be synthesized from gliders.
+Finally, there are only three collisions of two gliders that don&rsquo;t expand
+infinitely, and one of them results in vacuum.</p>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Vacuum_(empty_space)">Vacuum (empty space)</a>.</p>
+</article>
+<hr /><article><a id="a3" name="a3"></a>
+<a id="22-p2" name="22-p2"></a>
+<h2>58 Period 2 Oscillators</h2>
+<p>These are the 56 period 2 oscillators up to 11 bits, plus two larger ones
+for which syntheses are known (and that are both infinitely extensible*).</p>
+<p><img src="map/22-p2.png" alt="B2/S2 period 2 oscillators"
+ width="621" height="381" usemap="#22-p2" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_22-p2" class="i" href="javascript:Nav('22-p2')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a2">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a4">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/22-p2.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/22-p2.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/22-p2.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/22-p2.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/22-p2.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/22-p2.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/22-p2.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=22-p2" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_22-p2"><p><table id="t-22-p2" style="width:625px">
+    <colgroup><col style="width:71px;" /><col span="8" style="width:60px;" />
+	<col style="width:72px;" /></colgroup>
+    <tr>
+	<td class="y"><a class="p" href="b2s2/2-1.rle">
+	    Blinker; Duoplet (2.1) [6]</a></td>
+	<td class="y"><a class="p" href="b2s2/3-1.rle">
+	    Yoyo (3.1) [8]</a></td>
+	<td class="r">6.1 [x]</td>
+	<td class="r">6.2 [x]</td>
+	<td class="r">6.3 [x]</td>
+	<td class="r">7.1 [x]</td>
+	<td class="r">7.2 [x]</td>
+	<td class="r">7.3 [x]</td>
+	<td class="r">8.1 [x]</td>
+	<td class="r">8.2 [x]</td>
+    </tr>
+    <tr>
+	<td class="r">8.3 [x]</td>
+	<td class="r">8.4 [x]</td>
+	<td class="r">8.5 [x]</td>
+	<td class="r">9.1 [x]</td>
+	<td class="r">9.2 [x]</td>
+	<td class="r">10.1 [x]</td>
+	<td class="r">10.2 [x]</td>
+	<td class="r">10.3 [x]</td>
+	<td class="r">10.4 [x]</td>
+	<td class="r">10.5 [x]</td>
+    </tr>
+    <tr>
+	<td class="r">10.6 [x]</td>
+	<td class="r">10.7 [x]</td>
+	<td><a class="p" href="b2s2/10-8.rle">Lines (10.8) [2]</a></td>
+	<td class="r">10.9 [x]</td>
+	<td class="r">10.10 [x]</td>
+	<td class="r">10.11 [x]</td>
+	<td class="r">10.12 [x]</td>
+	<td class="r">10.13 [x]</td>
+	<td class="r">10.14 [x]</td>
+	<td class="r">10.15 [x]</td>
+    </tr>
+    <tr>
+	<td class="r">11.1 [x]</td>
+	<td class="r">11.2 [x]</td>
+	<td class="r">11.3 [x]</td>
+	<td class="r">11.4 [x]</td>
+	<td class="r">11.5 [x]</td>
+	<td class="r">11.6 [x]</td>
+	<td class="r">11.7 [x]</td>
+	<td class="r">11.8 [x]</td>
+	<td class="r">11.9 [x]</td>
+	<td class="r">11.10 [x]</td>
+    </tr>
+    <tr>
+	<td class="r">11.11 [x]</td>
+	<td class="r">11.12 [x]</td>
+	<td class="r">11.13 [x]</td>
+	<td class="r">11.14 [x]</td>
+	<td class="r">11.15 [x]</td>
+	<td class="r">11.16 [x]</td>
+	<td class="r">11.17 [x]</td>
+	<td class="r">11.18 [x]</td>
+	<td class="r">11.19 [x]</td>
+	<td class="r">11.20 [x]</td>
+    </tr>
+    <tr>
+	<td class="r">11.21 [x]</td>
+	<td class="r">11.22 [x]</td>
+	<td class="r">11.23 [x]</td>
+	<td class="r">11.24 [x]</td>
+	<td class="r">11.25 [x]</td>
+	<td class="r">11.26 [x]</td>
+	<td class="r"><a class="p" href="b2s2/14et.rle">
+	    Eater* [x]</a></td>
+	<td colspan="2"><a class="p" href="b2s2/21lll.rle">
+	    Three lines* [4]</a></td>
+	<td><a class="p" href="b2s2/22ll.rle">
+	    Long lines* [4]</a></td>
+    </tr>
+</table></p></div>
+<map name="22-p2">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,361,20,381" href="#bottom" />
+	<area coords="601,0,621,20" href="zip/22-p2.zip" />
+	<area coords="601,361,621,381" href="stamp/22-p2.rle" />
+	<area coords="0,0,70,70" href="b2s2/2-1.rle" />
+	<area coords="70,0,130,70" href="b2s2/3-1.rle" />
+	<area coords="130,130,190,190" href="b2s2/10-8.rle" />
+	<area coords="370,310,430,381" href="b2s2/14et.rle" />
+	<area coords="430,310,550,381" href="b2s2/21lll.rle" />
+	<area coords="550,310,621,381" href="b2s2/22ll.rle" />
+</map>
+<p>Long lines can eat gliders. Any pattern with an edge of length 8 or longer
+can also do this. The Eater is the smallest pattern with this property.</p>
+<p><b>LifeWiki:</b>
+<a class="x" href="http://conwaylife.com/wiki/Duoplet">Duoplet</a>.</p>
+</article>
+<hr /><article><a id="a4" name="a4"></a>
+<a id="22-p4" name="22-p4"></a>
+<h2>14 Period 4 Oscillators</h2>
+<p>Other than the numerous <a class="j" href="#22-p2">period 2 oscillators</a>,
+and the eccentric large <a class="j" href="#22-btc">billiard tables</a>, the only
+other known oscillators are three small period 4 pulsators, plus their trivial
+extensions. Ones marked * are infinitely extensible. All up to 10 bits are
+shown, plus a few larger ones.</p>
+<p><img src="map/22-p4.png" alt="B2/S2 period 4 oscillators"
+ width="501" height="201" usemap="#22-p4" /></p>
+<p><table><colgroup><col span="13" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_22-p4" class="i" href="javascript:Nav('22-p4')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a3">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a5">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/22-p4.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/22-p4.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/22-p4.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/22-p4.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/22-p4.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/22-p4.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/22-p4.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=22-p4" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_22-p4"><p><table id="t-22-p4" style="width:505px">
+    <colgroup><col style="width:91px;" /><col span="4" style="width:80px;" />
+	<col style="width:92px;" /></colgroup>
+    <tr>
+	<td class="y"><a class="p" href="b2s2/3v.rle">
+	    V [5]</a></td>
+	<td class="y"><a class="p" href="b2s2/4cr.rle">
+	    Crown [10]</a></td>
+	<td class="y"><a class="p" href="b2s2/4sl.rle">
+	    Slash [10]</a></td>
+	<td class="y"><a class="p" href="b2s2/6vv.rle">
+	    V on v* [10]</a></td>
+	<td class="y"><a class="p" href="b2s2/7cv.rle">
+	    Crown on v* [15]</a></td>
+	<td class="y"><a class="p" href="b2s2/7sv.rle">
+	    Slash on v* [15]</a></td>
+    </tr>
+    <tr>
+	<td class="r"><a class="p" href="b2s2/8cc1.rle">
+	    Siamese crowns* [x]</a></td>
+	<td class="r"><a class="p" href="b2s2/8cs.rle">
+	    Crown on slash* [x]</a></td>
+	<td class="r"><a class="p" href="b2s2/8cc2.rle">
+	    Crown on crown* [x]</a></td>
+	<td class="y"><a class="p" href="b2s2/8ss.rle">
+	    Slash on slash* [12]</a></td>
+	<td class="y"><a class="p" href="b2s2/10vvv1.rle">
+	    Trans v on v on v* [15]</a></td>
+	<td class="y"><a class="p" href="b2s2/10vvv2.rle">
+	    Cis v on v on v* [15]</a></td>
+    </tr>
+    <tr>
+	<td class="y"><a class="p" href="b2s2/12sss1.rle">
+	    Trans slash on slash on slash* [22]</a></td>
+	<td class="r"><a class="p" href="b2s2/13sss2.rle">
+	    Cis slash on slash on slash* [x]</a></td>
+	<td colspan="4" class="s">&nbsp;</td>
+    </tr>
+</table></p></div>
+<map name="22-p4">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,181,20,201" href="#bottom" />
+	<area coords="481,0,501,20" href="zip/22-p4.zip" />
+	<area coords="481,181,501,201" href="stamp/22-p4.rle" />
+	<area coords="0,0,90,70" href="b2s2/3v.rle" />
+	<area coords="90,0,170,70" href="b2s2/4cr.rle" />
+	<area coords="170,0,250,70" href="b2s2/4sl.rle" />
+	<area coords="250,0,330,70" href="b2s2/6vv.rle" />
+	<area coords="330,0,410,70" href="b2s2/7cv.rle" />
+	<area coords="410,0,501,70" href="b2s2/7sv.rle" />
+	<area coords="0,70,90,130" href="b2s2/8cc1.rle" />
+	<area coords="90,70,170,130" href="b2s2/8cs.rle" />
+	<area coords="170,70,250,130" href="b2s2/8cc2.rle" />
+	<area coords="250,70,330,130" href="b2s2/8ss.rle" />
+	<area coords="330,70,410,130" href="b2s2/10vvv1.rle" />
+	<area coords="410,70,501,130" href="b2s2/10vvv2.rle" />
+	<area coords="0,130,90,201" href="b2s2/12sss1.rle" />
+	<area coords="90,130,170,201" href="b2s2/13sss2.rle" />
+</map>
+</article>
+<hr /><article><a id="a5" name="a5"></a>
+<a id="22-btc" name="22-btc"></a>
+<h2>15 Billiard Table Oscillators</h2>
+<p>Since <a class="j" href="#22-p1">still-lifes</a> rely on heavily inducting
+the outsides of interiors that are inherently unstable, the same mechanisms used
+to construct them can also construct a variety of billiard table oscillators.
+A few small ones work with only L tromino stabilizations, but most work
+safely within a totally enclosed box. Since birth only occurs on 2 live cells,
+and all border cells on the interior of the box have 3 or 4, it is impossible
+for anything inside the box to affect the box or anything outside it.</p>
+<p>The period 5 oscillator shown below is infinitely extensible; a domino placed
+5 or more cells away from both edges of a channel is a bi-directional period 5
+glider gun that shoots gliders into the walls at both ends.</p>
+<p>(None of these oscillators can be synthesized from gliders, and individual
+pattern files are not provided.)</p>
+<p><img src="map/22-btc.png" alt="B2/S2 billiard tables"
+ width="601" height="281" usemap="#22-btc" /></p>
+<p><table><colgroup><col span="11" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a4">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a6">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/22-btc.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/22-btc.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/22-btc.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="hrd/22-btc.hrd" target="_blank">HRD</a></th>
+    <th class="n"><a class="p" href="lis/22-btc.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/22-btc.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=22-btc" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<p>
+</p>
+<map name="22-btc">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,261,20,281" href="#bottom" />
+	<area coords="581,0,601,20" nohref="nohref" />
+	<area coords="581,261,601,281" href="stamp/22-btc.rle" />
+	<area coords="0,0,90,90" href="javascript:R('),( :2#;P 66%22DP 6V$D')" />
+	<area coords="90,0,170,90" href="javascript:R('./%22%22 +&@8 P#^ T!84I0%25) $! 4!0T!8#^ 8 P+&@%22%22')" />
+	<area coords="170,0,250,90" href="javascript:R('))$@6PP %25800U`8;0)')" />
+	<area coords="250,0,330,90" href="javascript:R(',/(`:20#;8P`6DP%22*@P4 6HP%222@P`6VP$D@')" />
+	<area coords="330,0,410,90" href="javascript:R(',/(`:20#;8P`64P%22R@P`6FP%224@P`6VP$D@')" />
+	<area coords="410,0,490,90" href="javascript:R('./%22%22 +&@8 P#^ T!85I0$! $! 4M0T!8#^ 8 P+&@%22%22')" />
+	<area coords="490,0,601,90" href="javascript:R('.1%22 @+!H8 ,#_@T 64 4$(0$(04 4T 6#_@8 ,+!H%22 @')" />
+	<area coords="0,90,90,170" href="javascript:R('./%22%22 +&@8 P#^ T!84!0$I $! 4!0T!8#^ 8 P+&@%22%22')" />
+	<area coords="90,90,170,170" href="javascript:R('.1%22 @+!H8 ,#_@T 64(4$$0$$04(4T 6#_@8 ,+!H%22 @')" />
+	<area coords="170,90,290,170" href="javascript:R('.6%22 ! + #08`8#__ T`L4#@H$%22@@$%22@@4#@HT`L#__ 8`8+ #0%22 !')" />
+	<area coords="290,90,410,170" href="javascript:R('.6%22 ! + #08`8#__ T`L4( H$F @$F @4( HT`L#__ 8`8+ #0%22 !')" />
+	<area coords="410,90,490,170" href="javascript:R('/0%22! +#08 8#_ T L4DH$\\@$ @$ @4 HT L#_ 8 8+#0%22!')" />
+	<area coords="490,90,601,170" href="javascript:R('.6%22 ! + #08`8#__ T`L5 %22H$# @$# @5 %22HT`L#__ 8`8+ #0%22 !')" />
+	<area coords="0,170,90,281" href="javascript:R('//%22%22 +&@8 P#^ T!8490$! $I $! 4!0T!8#^ 8 P+&@%22%22')" />
+	<area coords="90,170,210,281" href="javascript:R('66%22 ! + #08`8#__ T`L4Z H$F @$@ @$`@$ $@$ $@$%22 @$$L@$ $@$`@$`@4`HT`L#__ 8`8+ #0%22 !')" />
+</map>
+<p>The last example shown is not really an oscillator at all.
+It was originally believed to be an oscillator with a period in excess of
+20000, but was finally analyzed by Golly, using its HashLife algorithm,
+and the interior stablizes into a single blinker after 2,878,904
+generations. It is a good illustration of the total robustness of billiard
+table interiors in this rule.</p>
+</article>
+<hr /><article><a id="a6" name="a6"></a>
+<a id="22-ss" name="22-ss"></a>
+<h2>7 Spaceships</h2>
+<p>There is one basic spaceship, that has a period of 1, and moves with a
+velocity of <i>c</i>. Most variations of it produce incredibly dirty puffers
+with even periods, although there are a few that are clean spaceships and
+wick stretchers. Spaceships of any period 2<sup><i>n</i></sup> can be
+constructed by extending the examples below.</p>
+<p>Two other spaceships have been found with velocities slower than <i>c</i>
+but these are very rare in this rule.</p>
+<p><img src="map/22-ss.png" alt="B2/S2 spaceships"
+ width="301" height="281" usemap="#22-ss" /></p>
+<p><table><colgroup><col span="12" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_22-ss" class="i" href="javascript:Nav('22-ss')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a5">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a7">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/22-ss.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/22-ss.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/22-ss.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="lis/22-ss.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/22-ss.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/22-ss.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=22-ss" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_22-ss"><p><table id="t-22-ss" style="width:305px">
+    <colgroup><col style="width:91px;" /><col style="width:80px;" />
+	<col style="width:132px;" /></colgroup>
+    <tr>
+	<td class="r"><a class="p" href="b2s2/30p4gl.rle">
+	    P4 Escorted domino Spaceship [x]</a></td>
+	<td class="r"><a class="p" href="b2s2/38p8gl.rle">
+	    P8 Escorted domino Spaceship [x]</a></td>
+	<td rowspan="3" class="r">
+	    <a class="p" href="b2s2/g21193.rle"><i>c</i>/2
+	    Glider 21193 [x]</a></td>
+    </tr>
+    <tr>
+	<td class="r"><a class="p" href="b2s2/13p2gl.rle">
+	    P2 Spaceship [x]</a></td>
+	<td class="r"><a class="p" href="b2s2/22p2gl.rle">
+	    P2 Escorted domino Spaceship [x]</a></td>
+    </tr>
+    <tr>
+	<td class="g"><a class="p" href="b2s2/4gl.rle">
+	    P1 Glider; Glider 230 [4]</a></td>
+	<td class="r"><a class="p" href="b2s2/13g9588.rle">
+	    <i>c</i>/3 Glider 9588 [x]</a></td>
+    </tr>
+</table></p></div>
+<map name="22-ss">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,261,20,281" href="#bottom" />
+	<area coords="281,0,301,20" href="zip/22-ss.zip" />
+	<area coords="281,261,301,281" href="stamp/22-ss.rle" />
+	<area coords="0,0,90,130" href="b2s2/30p4gl.rle" />
+	<area coords="90,0,170,130" href="b2s2/38p8gl.rle" />
+	<area coords="170,0,301,281" href="b2s2/g21193.rle" />
+	<area coords="0,130,90,210" href="b2s2/13p2gl.rle" />
+	<area coords="90,130,170,210" href="b2s2/22p2gl.rle" />
+	<area coords="0,210,90,281" href="b2s2/4gl.rle" />
+	<area coords="90,210,170,281" href="b2s2/13g9588.rle" />
+</map>
+</article>
+<hr /><article><a id="a7" name="a7"></a>
+<a id="22-ws" name="22-ws"></a>
+<h2>5 Wick-stretchers</h2>
+<p>The basic <i>c</i> spaceship can cleanly extend lines perpendicular to its
+direction of travel. This makes construction of wick-stretchers easy.</p>
+<p>The tube-stretchers are special wick-stretchers that extrude an
+ever-expanding tube similar to a billiard table. Anything can be safely put
+inside, as it cannot escape; the bottom and sides are impervious, and
+the top is receding at <i>c</i>, so nothing can catch up to it. The rightmost example
+shows how a single extra bit can foment total chaos, but in this case, the
+chaos is contained within a constrained area.</p>
+<p><img src="map/22-ws.png" alt="B2/S2 wick-stretchers"
+ width="421" height="121" usemap="#22-ws" /></p>
+<p><table><colgroup><col span="12" style="width:40px;" /></colgroup><tr>
+    <th class="n"><a id="a_22-ws" class="i" href="javascript:Nav('22-ws')">&ndash;</a></th>
+    <th class="n"><a class="j" href="#top">&#8679;</a></th>
+    <th class="n"><a class="j" href="#a6">&#8593;</a></th>
+    <th class="n"><a class="j" href="#a8">&#8595;</a></th>
+    <th class="n"><a class="j" href="#bottom">&#8681;</a></th>
+    <th class="n"><a class="p" href="map/22-ws.png" target="_blank">PNG</a></th>
+    <th class="n"><a class="p" href="stamp/22-ws.rle" target="_blank">RLE</a></th>
+    <th class="n"><a class="p" href="apg/22-ws.apg" target="_blank">APG</a></th>
+    <th class="n"><a class="p" href="lis/22-ws.lis" target="_blank">LIS</a></th>
+    <th class="n"><a class="p" href="sof/22-ws.sof" target="_blank">SOF</a></th>
+    <th class="n"><a class="p" href="zip/22-ws.zip" target="_blank">ZIP</a></th>
+    <th class="n"><a class="i" href="lifesrch.htm?auto=22-ws" target="lifesrch">SRCH</a></th>
+</tr></table></p>
+<div id="b_22-ws"><p><table id="t-22-ws" style="width:425px">
+    <colgroup><col style="width:91px;" /><col span="3" style="width:80px;" />
+	<col style="width:92px;" /></colgroup>
+    <tr>
+	<td class="r"><a class="p" href="b2s2/12wsll.rle">
+	    Two-line wick-stretcher [x]</a></td>
+	<td class="r"><a class="p" href="b2s2/19wsbl.rle">
+	    Blinkers on line wick-stretcher [x]</a></td>
+	<td class="r"><a class="p" href="b2s2/44wsgl.rle">
+	    Empty tube-stretcher [x]</a></td>
+	<td class="r"><a class="p" href="b2s2/56wsgg.rle">
+	    Glider-filled tube-stretcher [x]</a></td>
+	<td class="r"><a class="p" href="b2s2/52wsjk.rle">
+	    Chaos-filled tube-stretcher [x]</a></td>
+    </tr>
+</table></p></div>
+<map name="22-ws">
+	<area coords="0,0,20,20" href="#top" />
+	<area coords="0,101,20,121" href="#bottom" />
+	<area coords="401,0,421,20" href="zip/22-ws.zip" />
+	<area coords="401,101,421,121" href="stamp/22-ws.rle" />
+	<area coords="0,0,90,121" href="b2s2/12wsll.rle" />
+	<area coords="90,0,170,121" href="b2s2/19wsbl.rle" />
+	<area coords="170,0,250,121" href="b2s2/44wsgl.rle" />
+	<area coords="250,0,330,121" href="b2s2/56wsgg.rle" />
+	<area coords="330,0,421,121" href="b2s2/52wsjk.rle" />
+</map>
+</article>
+</main>
+<hr class="a" /><a id="a8" name="a8"></a>
+<a id="bottom" name="bottom"></a>
+<p><b>Other rules:</b>
+	<a class="i" href="lifepage.htm"><em>B3/S23</em> (Conway&rsquo;s Life)</a>,
+	<em>B2/S2</em> (2/2 Life),
+	<a class="i" href="b34s34.htm"><em>B34/S34</em> (3/4 Life)</a>,
+	<a class="i" href="b36s23.htm"><em>B36/S23</em> (HighLife)</a>,
+	<a class="i" href="b36s245.htm"><em>B36/S245</em> (Replicator rule)</a>,
+	<a class="i" href="b3xs23y.htm"><em>B3<i>x</i>/S23<i>y</i></em> (Life-like rules)</a>,
+	<a class="i" href="rulell.htm"><em>B2n3/S23-q</em> (LeapLife)</a>,
+	<a class="i" href="rulevl.htm"><em>B2n3-q5y6c/S23-k</em> (VesselLife)</a>,
+	<a class="i" href="rulemn.htm">Niemiec&rsquo;s Rules</a>,
+	<a class="i" href="color.htm">Multi-colored Life</a>.</p>
+<p><b>See also:</b>
+    <a href="lifestr.htm">structure</a>,
+    <a href="lifestyl.htm">style book</a>,
+    <a href="lifeterm.htm">definitions</a>,
+    <a href="lifemeth.htm">search methodologies</a>,
+    <a href="recipe.htm">conversion recipes</a>,
+    <a href="liferule.htm">other rules</a>,
+    <a href="lifenews.htm">news</a>,
+    <a href="lifecred.htm">credits</a>,
+    <a href="lifelink.htm">links</a>,
+    <a href="lifemap.htm">site map</a>,
+    <a class="i" target="lifesrch" href="lifesrch.htm">search</a>,
+    <a class="i" target="lifesrch" href="lifxsrch.htm">expanded search</a>,
+    <a class="i" target="srchhelp" href="srchhelp.htm">search help</a>.</p>
+<p><a href="index.htm">Home page</a> |
+<a href="lifepage.htm">Life page</a></p>
+<script type="text/javascript"><!--
+"use strict";
+// Pattern globals
+var wid, hgt, field, rles;
+// Convert library Life pattern into binary
+function Lib2Bin (s) {
+    var i = 0;					// Index into library string
+    hgt = s.charCodeAt (i++) - 0x20;		// Height
+    wid = s.charCodeAt (i++) - 0x20;		// Width
+    field = [];					// Returned field
+    var n = 0;					// Number of queued-up spaces
+    var k;					// Next 6 bits
+    for (var y = 0; y < hgt; ++y) {
+	for (var x = 0; x <= wid; ++x, k <<= 1) {
+	    if (x%6 === 0) {
+		if (n < 0) {			// Coasting on stored newline
+		    k = 0;
+		} else if (n) {			// Coasting on stored blanks
+		    --n;
+		    k = 0;
+		} else if (i >= s.length) {	// End of pattern
+		    k = 0;
+		} else if ((k = s.charCodeAt (i++) - 0x20) >= 0x40 || k < 0) {
+		    n = k-0x40+2 - 1;		// Blank run or newline
+		    k = 0;
+		}				// Otherwise, 6 bits of data
+	    }
+	    field[y*(wid+1)+x] = (k >> 5) & 1;	// Living or dead cell
+	}
+	if (n < 0) {				// Reset newline status
+	    n = 0;
+	}
+    }
+}
+// Add a run to an RLE image
+function Rle (n, c) {
+    var t = "";
+    c = (n > 1 ? n : "") + c;
+    if (rles.length + c.length > 70) {
+	t = rles + "\n";
+	rles = "";
+    }
+    rles += c;
+    return t;
+}
+// Convert binary Life pattern into RLE
+function Bin2Rle () {
+    var t = rles = "";
+    for (var y = 0, d = 0; y < hgt; ++y, ++d) {
+	for (var x = 0, n = 0; x <= wid; ++x) {
+	    if (field[y*(wid+1)+x]) {	// living cell
+		if (d) {
+		    t += Rle (d, "$");
+		    d = 0;
+		}
+		if (n < 0) {
+		    t += Rle (-n, "b");
+		    n = 0;
+		}
+		++n;
+	    } else {			// dead cell
+		if (n > 0) {
+		    t += Rle (n, "o");
+		    n = 0;
+		}
+		--n;
+	    }
+	}
+    }
+    t += Rle (1, "!");
+    return t + rles + "\n";
+}
+// Convert binary Life pattern into text
+function Bin2Txt (p, s) {
+    var t = "";
+    for (var y = 0; y < hgt; ++y) {
+	t += p;
+	for (var x = 0; x < wid; ++x) {
+	    t += field[y*(wid+1)+x] ? "o" : ".";
+	}
+	t += s;
+    }
+    return t;
+}
+// given x="[pattern name~]library-image", launch RLE image in a separate window
+function R (x) {
+    var w = open ("", "lifesrch_rle");
+    if (w) {
+	var s = "", t = "", i = x.indexOf ("~");
+	if (i >= 0) {
+	    s = "#N " + (t = x.substring (0, i) + ": Pattern") + "\n";
+	    x = x.substring (i+1);
+	}
+	Lib2Bin (x);
+	s += "#O Mark D. Niemiec\"s Life web pages, " + new Date ().toUTCString () + "\n";
+	s += Bin2Txt ("#C ", "\n");
+	s += "x = " + wid + ", y = " + hgt + ", rule = B2/S2\n";
+	s += Bin2Rle ();
+	w.document.write ("<html><head>" + (t.length ? "<title>" + t + "</title>" : "") +
+	  "</head><body><pre>" + s + "</pre></body></html>");
+    }
+}
+//-->
+</script>
+<p><a href="lifepage.htm#copyright">Copyright &copy;
+1997, 1998, 1999, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022 by Mark. D. Niemiec.
+All rights reserved</a>.<br />
+This page was last updated on <em>2022-07-03</em>.</p>
+<script type="text/javascript"><!--
+"use strict";
+// Convert a named DOM object (id="id") into the actual object
+function Id (id) {
+    return document.getElementById (id);
+}
+// Expand or collapse stamp image text table
+function Nav (n) {
+    var v = Id ("a_" + n).childNodes[0].nodeValue === "+";
+    Id ("a_" + n).childNodes[0].nodeValue = v ? "\u2013" : "+";
+    Id ("b_" + n).style.display = v ? "block" : "none";
+}
+// Set alt and title attributes on an element
+function SetAltTitle (p, n) {
+    if (p && p.href) {
+	p.title = p.alt = n;
+    }
+}
+// Provide title tooltips for all stamp images
+function Titles () {
+    var q = [];				// name = q["id"][i];
+    var t = document.getElementsByTagName ("table");
+    for (i = 0; i < t.length; ++i) {
+	var n = t[i].id;		// table id
+	if (n) {
+	    var r = t[i].getElementsByTagName ("tr");
+	    var b = [];			// patterns in table
+	    for (var j = 0; j < r.length; ++j) {
+		var d = r[j].getElementsByTagName ("td");
+		for (var k = 0; k < d.length; ++k) {
+		    if (d[k].getElementsByTagName ("a"). length) {
+			// Get text in a way that works on most browsers
+			m = (d[k].textContent || d[k].innerText)
+			  .replace (/[\n\t]/g, " ") .replace (/   */g, " ")
+			  .replace (/^ /, "") .replace (/ $/, "")
+			  .replace (/[\xAD\u8230]/g, "");
+			b.push (m);
+		    }
+		}
+	    }
+	    q[n] = b;
+	}
+    }
+    var m = document.getElementsByTagName ("map");
+    for (var i = 0; i < m.length; ++i) {
+	var b = q["t-"+m[i].name];
+	var s = m[i].getElementsByTagName ("area");
+	if (s) {
+	    // First 4 areas are NW, SW, NE, SE corners; last is default
+	    // Others are in the same order as patterns in table
+	    SetAltTitle (s[0], "Top of page");
+	    SetAltTitle (s[1], "Bottom of page");
+	    if (s[3]) {
+		SetAltTitle (s[2], "Zip archive of all patterns");
+		SetAltTitle (s[3], "This stamp page");
+		for (var j = 4, k = 0; j < s.length; ++j) {
+		    var a = s[j].href;
+		    if ((n = a.indexOf ("~")) >= 0) {
+			SetAltTitle (s[j], a.substring (0, n));
+		    } else if (b && b[k]) {
+			SetAltTitle (s[j], b[k++]);
+		    }
+		}
+	    } else {
+		SetAltTitle (s[2], "This stamp page");
+	    }
+	}
+    }
+}
+Titles ();
+// -->
+</script>
+</body></html>

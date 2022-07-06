@@ -1,0 +1,21 @@
+#N 20p2-5.rle: 20P2.5: Synthesis
+#O Mark D. Niemiec's life synthesis database, Tue Apr 21 12:57:09 2020
+#C  ...OO...
+#C  O......O
+#C  OOO..OOO
+#C  ..O..O..
+#C  ..OOOO..
+#C  .OOO....
+#C  ...O....
+x = 136, y = 63
+40bo$40boo$38b4o83bo$39boo12boo69boo$53boo69b4o$51boobo56boo12boo$6b4o
+bb4o35b4o56boo$6boobobboboo64bx19bo10boboo15bx$8boobboo17bxx28boo17b3x
+17b3o8b4o15b3x$8boobboo18bx18b4o7bo19bx19bo29bxbbx$32b3x16boobo7b3o17b
+3x17b3o27b4x$31b3x19boo6b3o17b3x17b3o7b4o16b3x$33bx19boo8bo19bx19bo7bo
+boo18bx$111boo$boo108boo$4o$bboo$bbo18$109bo$21bo86boo$20boo86b4o$20b
+4o85boo$21boo9$101boobboo$13boobboo82boobboo$13boobboo58bo21boobobbob
+oo$11boobobboboo55boo21b4obb4o$11b4obb4o55b4o$63boo12boo$63boo$63boboo
+$63b4o56bxx$10bo19bx19bo29bx6bx12bo6bo12bx6bx$10b3o17b3xbbxx13b3obboo
+23b3xbb3x12b3obb3o12b3xbb3x$12bobbo16bxbbx16bobbo7b4o15bxbbx16bobbo16b
+xbbx$12b4o16b4x16b4o7boboo15b4x16b4o16b4x$11b3o17b3x17b3o9boo16b3x17b
+3o17b3x$13bo19bx19bo9boo18bx19bo19bx!

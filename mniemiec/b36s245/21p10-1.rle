@@ -1,0 +1,12 @@
+#N 21p10-1.rle: 21P10.1: Pattern image
+#O Mark D. Niemiec's life synthesis database, Fri Apr 24 08:25:43 2020
+#C  OO......
+#C  .O......
+#C  OOO...OO
+#C  ..OO..O.
+#C  ...OOOOO
+#C  ...O.O..
+#C  ...OO...
+#C  .....O..
+x = 8, y = 8
+xx$bx$3x3bxx$bbxxbbx$3b5x$3bxbx$3bxx$5bx!

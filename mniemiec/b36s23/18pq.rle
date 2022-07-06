@@ -1,0 +1,20 @@
+#N 18pq.rle: Pulsar quadrant: Synthesis
+#O Mark D. Niemiec's life synthesis database, Mon Jan 14 06:46:26 2019
+#C  ..OOO...
+#C  ........
+#C  O....O..
+#C  O...O.O.
+#C  O..O..O.
+#C  ..O...OO
+#C  ...OOO..
+#C  .....O..
+x = 192, y = 29
+45bo$44bo$44b3o$$39bo$40bo11bo113bo$38b3o11bobo110bo$52boo111b3o$59bo$
+58bo$58b3o5bx29bo29bx29bo29bx$51bo14b3x27b3o27b3x27b3o5bo21b3x$5bo45bo
+bo10bxx3bx24boo3bo24bxx3bx24boo3bo3bo20bxx3bx$3bobo19bxx18boo4boobboo
+8bxbbx26bobbo26bxbbx26bobbo4b3o19bxbbxbbx$4boo19bxx11bo6boo8bobo7bxbx
+27bobo27bxbx27bobo27bxbx3bx$boo35boo15bo10bx29bo29bx29bo10b3o16bx4bx$o
+bo34bobo127bo$bbo100bo64bo18b3x$43boo58bobo27bxx28boo$43bobo6boo45b3ob
+oo27bxbbx20boo4bobbo$43bo8bobo46bo30bxbx20bobo4bobo6boo$52bo47bo32bx
+16boo5bo5bo6boo$149bobo20bo$151bo7boo$159bobo$159bo$165bo$164boo$164bo
+bo!

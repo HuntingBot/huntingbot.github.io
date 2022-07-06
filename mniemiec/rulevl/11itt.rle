@@ -1,0 +1,27 @@
+#N 11itt.rle: Integral w/tub and tub: Synthesis
+#O Mark D. Niemiec's life synthesis database, Thu Aug 27 14:20:03 2020
+#C  .O.....
+#C  O.O....
+#C  .O.O...
+#C  ...O...
+#C  ...O.O.
+#C  ....O.O
+#C  .....O.
+x = 191, y = 72
+5boo$6boo17bx$5bo18bxbx$9boo14bxbx$8boo17bx$10bo16bxbx$28bxbx$29bx$$
+11b3o$11bo$12bo10$5bo19bx19bo19bx19bo19bx$4bobo17bxbx17bobo17bxbx17bob
+o17bxbx$5bobo17bxx18bobo17bxx18bobo16bxx$7bo39bo39bo$7bobo37bobo37bobo
+$8bobo37bobo37bobo$3b3o3bo34boo3bo39bo$5bo37bobo$4bo40bo41bo$87boo$86b
+obo10$5bo39bo19bx19bo19bx19bo19bx$4bobo37bobo17bxbx17bobo17bxbx17bobo
+17bxbx$5bobo37bobo17bxbx17bobo17bxbx17bobo17bxbx$7bo20bx18bo19bx19bo
+19bx19bo19bx$b3o3bobo17bxbx17bobo17bxbx17bobo17bxbxx16bobo17bxbxx$3bo
+4bobo16bxbbx17bobo17bxx18bobo17bxbbx16bobo17bxbbx$bbo6bo18bxx19bo39bo
+19bxbx17bo19bxbx$110bx39bx$51bo20byy14boo38boo$51boo19byy14bobo36bobo$
+50bobo35bo40bo6$145bo$143bobo15bo$144boo16bo$160b3o$5bo19bo19bo19bo19b
+o19bo19bo19bo19bo19bo$4bobo17bobo17bobo17bobo17bobo17bobo17bobo17bobo
+17bobo17bobo$5bobo17bobo17bobo17bobo17bobo17bobo17bobo17bobo17bobo13bo
+3bobo$3o4bo19bo19bo19bo19bo19bo19bo19bo19bo14boo3bo$bbo4bobo13bo3bobo
+17bobo17bobo17bobo17bobo17bobo17bobo17bobo11boo4bobo$bo6bobo12boo3bobo
+12boo3bobo17bobo17bobo17bobo17bobo17bobo17bobo17bobo$9bo12bobo4bo14boo
+3bo19bo19bo19bo19bo19bo19bo19bo$43bo20b3o18boo$66bo17bobo18b3o21boo$
+65bo20bo20bo20bobo$106bo23bo!

@@ -1,0 +1,17 @@
+#N 24mz.rle: Mazing: Pattern image
+#O Mark D. Niemiec's life synthesis database, Sun Sep 24 20:35:40 2017
+#C  ...O......
+#C  ..O.O.....
+#C  .O...O....
+#C  ....O.....
+#C  OO.OO..O..
+#C  O..O.OO.O.
+#C  ....OO...O
+#C  ........O.
+#C  .....O.O..
+#C  ....OO....
+x = 58, y = 42, rule = B3/S2ae3aeijr4-cknqy
+25bo$23boobo$23b4o$25bo6$23bo$22b4o$21boobbo$24boo12boo$38bo$38boobo$
+28boobboo5boo$28boobboo$29b4o$$53b3x$53b3x$11bo41b3x$10boo42b4x$boo6b
+oo12boo24b3x4bx$boo7bobo10boo24b4xbbx$oboo6b3o36b4xbx$boo49bxx$52bx$
+15boo$15b3o$17bo$17bo$15b3o$15boo5$12b3o$12boboo$15bo$14bo!

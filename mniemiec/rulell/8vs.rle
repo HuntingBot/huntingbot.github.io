@@ -1,0 +1,24 @@
+#N 8vs.rle: Very long snake; Long long snake: Synthesis
+#O Mark D. Niemiec's life synthesis database, Sat Jul 18 20:04:21 2020
+#C  OO....
+#C  O.O...
+#C  ...O.O
+#C  ....OO
+x = 190, y = 88
+26bxx18boo5bo12bxx$4bo21bxbx17bobbobbo13bxbx$5bo23bxbx16boobb3o14bxbx$
+3b3obboo20bxx38bxx$7boo$bo7bo42b3o$oo50bo$obo50bo4$8boo$7boo$9bo7$6boo
+18bxx18boo18bxx18boo18bxx18boo18bxx18boo18bxx$6bobo17bxx18bobo17bxx18b
+obo17bxbx17bobo17bxbx17bobo17bxbx$9bobo37bobo37bobo15bx21bobo15bx21bob
+o15bxbx$10boo3bo34boo38boo38boo38boo4bo11bxx$13boo159boo$14boo35bo38bo
+39bo39bo4boo$50boo38boo37boo38boo$50bobo36bobo37bobo37bobo6$136bo$135b
+o$135b3o$$52bobbo$50bobobbobo35bo39bo$51boobboo34bobo19bx17bobo19bxx$
+6boo18bxx18boo18bxx18boo4boo12bxx4bxbx11boo4boo12bxx4bxbx$6bobo17bxbx
+17bobo17bxbxbbxx13bobo17bxbxbbxbx12bobo17bxbxbbxbx$9bobo15bxbx19bobo
+17bxbbx16bobo17bxbbx16bobo17bxbbx$10boo16bx21boo18bxx18boo18bxx18boo
+18bxx4$11boo$10boo$12bo$7boo$8boo$7bo8$6boo7bo10bxx18boo7bo10bxx$6bobo
+4boo11bxbx17bobo4boo11bxbx5bx$9bobobboo13bxbxbxx14bobobboo13bxbxbxbx$
+10boo18bxxbxx15boo18bxxbxx$$17b3o$17bo$18bo9$123bobo18bobo$bboo120boo
+19boo$3boo119bo20bo$bbo99bo$6boo14boobboo18boo18boo18boo15booboo18boo
+18boo$6bobo14boobobo17bobo17bobo17bobo13boobbobo17bobo17bobo$9bobo10bo
+6bobo10boo5bobo17bobo10bo6bobo17bobo17bobo17bobo$10boo18boo11boo5boo
+18boo11boo5boo18boo18boo18boo$42bo39boo$68bo$68boo$67bobo!

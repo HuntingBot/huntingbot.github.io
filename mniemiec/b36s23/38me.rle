@@ -1,0 +1,13 @@
+#N 38me.rle: Minimal middleweight emulator: Pattern image
+#O Mark D. Niemiec's life synthesis database, Sat Aug 05 06:01:07 2017
+#C  O.............O
+#C  OOO....O....OOO
+#C  ...O.O...O.O...
+#C  ..O.........O..
+#C  .O.OO.....OO.O.
+#C  O.O..OOOOO..O.O
+#C  O..O.......O..O
+#C  .OO.........OO.
+x = 15, y = 8, rule = B36/S23
+x13bx$3x4bx4b3x$3bxbx3bxbx$bbx9bx$bxbxx5bxxbx$xbxbb5xbbxbx$xbbx7bxbbx$
+bxx9bxx!

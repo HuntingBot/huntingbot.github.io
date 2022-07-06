@@ -1,0 +1,23 @@
+#N 17pmbpd.rle: P on medium blinker on pond: Synthesis
+#O Mark D. Niemiec's life synthesis database, Wed Apr 29 04:20:21 2020
+#C  .OO...O.....
+#C  O..O..O..OOO
+#C  O..O..O...OO
+#C  .OO...O.....
+x = 199, y = 107
+100b3o$100boobo$101b3o$102boo20$84bo4bo42boo$84boobboo42boo$82b4obb4o
+38boobo$83boo4boo39b4o3$130b4o$130boobo4bo40b3o$132boo3boo40boobo$132b
+oo3b4o15bxx18boobb3o$138boo16bx19bo4boo13bxx$155bxx18boo19bxx$196bx$$
+45b3o$45boobo66b4x16b4o16b4x16b4o16b4x$46b3o$47boo$40bobbo22bxx18boo
+28bxx18boo18bxx18boo18bxx$40bobo22bxbbx16bobbo26bxbbx16bobbo16bxbbx16b
+obbo16bxbbx$41bo5boo16bxbbx16bobbo26bxbbx16bobbo16bxbbx16bobbo16bxbbx$
+42boobb3o17bxx18boo28bxx18boo18bxx18boo18bxx$45boobo$45b3o14$bboo$bboo
+bboo$oobo4bo$4o3bobo16bxx18boo28bxx18boo18bxx18boo18bxx18boo18bxx$6bo
+bbo16bxx18boo28bxx18boo18bxx18boo18bxx18boo18bxx$26bx19bo29bx19bo19bx
+19bo19bx19bo19bx3$75b4x16b4o16b4x16b4o16b4x16b4o16b4x3$116bxx18boo18b
+xx18boo18bxx$115bxbbx16bobbo16bxbbx16bobbo16bxbbx$94boobboo16bxx18boo
+18bxx18boo17bxbbx$94boobboo96bxx$92boobobboboo71boo$92b4obb4o70bo5boo$
+171bobo3b3o$171bobboboobo$93boo4boo75b3o$43boo4boo40booboobbooboo11byy
+bbyy14boobboo$42b4obb4o43bobbo16bybby16bobbo$44boobboo44bo4bo14b6y14b
+6o$44bo4bo44bo4bo16byy18boo$$132bobbo$132bobo$133bo$134boo15$62boo$61b
+3o$60boobo$60b3o!

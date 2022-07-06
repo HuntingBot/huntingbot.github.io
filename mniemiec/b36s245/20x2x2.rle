@@ -1,0 +1,15 @@
+#N 20x2x2.rle: 2x2 Xs: Synthesis
+#O Mark D. Niemiec's life synthesis database, Sat Apr 25 00:03:10 2020
+#C  O.O.O.O
+#C  .O...O.
+#C  O.O.O.O
+#C  .......
+#C  O.O.O.O
+#C  .O...O.
+#C  O.O.O.O
+x = 91, y = 21
+41bo$41boo$6boo31b4o20boo$6boo32boo21boo$4boobo55boboo$4b4o16bxbx27bob
+o6b4o$25bx29bo$obbo20bxbx27bobo27bxbxbxbx$obo60b4o18bx3bx$bo48boo11bob
+oo17bxbxbxbx$bboo7boo37boo11boo$13bo34boobo11boo19bxbxbxbx$12bobo33b4o
+33bx3bx$11bobbo13bxbx27bobo23bxbxbxbx$29bx29bo$7b4o17bxbx17b4o6bobo$7b
+oboo37boobo$7boo41boo21boo$7boo41boo20b4o$72boo$73bo!

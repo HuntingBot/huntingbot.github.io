@@ -1,0 +1,9 @@
+#N 12-6.rle: 12.6: Synthesis
+#O Mark D. Niemiec's life synthesis database, Sat Mar 01 00:52:24 1997
+#C  O.OO..
+#C  O...OO
+#C  OO...O
+#C  ..OO.O
+x = 31, y = 14, rule = B34/S34
+14bo$12bobbo$12boo$bbo9b3o$bobbo$3boo20bxbxx$bb3o20bx3bxx$11b3o11bxx3b
+x$11boo14bxxbx$11bobbo$b3o9bo$bboo$obbo$bo!

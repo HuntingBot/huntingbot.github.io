@@ -1,0 +1,13 @@
+#N 15p2-7.rle: 15P2.7; W and Z tossing light blinker: Partial synthesis
+#O Mark D. Niemiec's life synthesis database, Fri Apr 24 22:41:06 2020
+#C  ..OO....
+#C  ..O.....
+#C  OOO.....
+#C  O.OOO...
+#C  .......O
+#C  .....OOO
+#C  .....O..
+x = 66, y = 13
+32boo$32boo$bxx27boobo7boo18bxx$bx28b4o7bo19bx$3x37b3o16b4x$bbx39bo16b
+xbbx$bbx27b4o8bo19bx$4bxx24boobo10boo18bxx$4bx27boo10bo19bx$3bxx13boo
+12boo9boo18bxx$17b4o$19boo$19bo!

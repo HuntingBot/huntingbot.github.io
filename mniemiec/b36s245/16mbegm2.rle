@@ -1,0 +1,11 @@
+#N 16mbegm2.rle: Medium blinker on advanced egg on medium blinker: Synthesis
+#O Mark D. Niemiec's life synthesis database, Tue Apr 28 23:08:50 2020
+#C  O...O....O
+#C  O..O.OO..O
+#C  O..O.OO..O
+#C  O...O....O
+x = 140, y = 49
+46bo$46bo74b3o$47bo73boobo$43booboo74b3o$45boo76boo20$105bo4bo$65bo4bo
+34boobboo$65boobboo32b4obb4o$63b4obb4o31boo4boo$64boo4boo11$136b4x3$
+87bxx18boo28bxx$b3o82bxbbx16bobbo26bxbbx$oboobboo79bxx18boo28bxx$3o3b
+3o78bxx18boo28bxx$oo4boboo$7b3o$26b4x36b4o16b4x16b4o26b4x!

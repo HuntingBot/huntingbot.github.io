@@ -1,0 +1,14 @@
+#N 16mbss2b.rle: Medium blinker below shuriken w/cis shoes: Synthesis
+#O Mark D. Niemiec's life synthesis database, Tue Apr 28 22:12:46 2020
+#C  O.......
+#C  O..O..O.
+#C  O..OOOO.
+#C  O....OOO
+#C  .....O..
+#C  ....OO..
+x = 149, y = 25
+65bo$64boo$13bo50b4o$12boo37boo12boo44bo$12b4o35boo57boo$13boo36boboo
+55b4o$51b4o56boo35bx$22bx19bo29bxbbx16bobbo46bxbbxbbx$22b3x17b3o27b4x
+16b4o46b4xbbx$21b3x17b3o7b4o16b3x17b3o17boo28b3x4bx$bboobboo15bx19bo7b
+oboo18bx19bo16b4o29bx$bboobboo15bxx18boo6boo20bxx18boo15boo31bxx$oobo
+bboboo41boo58bo$4obb4o8$135boo$134b3o$133boobo$133b3o!

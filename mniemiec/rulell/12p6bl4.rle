@@ -1,0 +1,15 @@
+#N 12p6bl4.rle: James' P6; Four blinkers: Synthesis
+#O Mark D. Niemiec's life synthesis database, Tue Jan 26 12:58:47 2021
+#C  .OOO..
+#C  .....O
+#C  O....O
+#C  O....O
+#C  O.....
+#C  ..OOO.
+x = 150, y = 20
+107bo$105bobo$106boo$121bo3bo$48bo70bobobbo$49boo69boobb3o$48boo30bxx
+28boo$25b3x27b3o21bxbbxbb3x14b3o4bobbobb3o27b3x$5boo41bo30bxbbx21bo4bo
+bbo36bx$5bobo40boo14bobo13bxx21bo6boo32bx4bx$5bo41bobo14boo26bxx28boo
+6bo13bx4bx$bo63bo25bxbbx26bobbo4bo14bx$boo23b3x27b3o27b3xbbxbbx21b3obb
+obbo4b3o14b3x$obo61boo26bxx28boo$63boo42b3obboo$7b3o55bo43bobbobo$7bo
+100bo3bo$8bo117boo$126bobo$126bo!

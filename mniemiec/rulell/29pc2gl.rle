@@ -1,0 +1,24 @@
+#N 29pc2gl.rle: Two pentadathlons shuttling a glider: Synthesis
+#O Mark D. Niemiec's life synthesis database, Fri Jun 19 21:28:19 2020
+#C  .O.................
+#C  .O.................
+#C  O.O................
+#C  .O.................
+#C  .O.................
+#C  .O.................
+#C  .O......O.O......O.
+#C  O.O......OO......O.
+#C  .O.......O......O.O
+#C  .O...............O.
+#C  .................O.
+#C  .................O.
+#C  .................O.
+#C  ................O.O
+#C  .................O.
+#C  .................O.
+x = 141, y = 22
+37bx4bx14bo4bo14bx4bx14bo4bo24bx4bx$35bxxb4xbxx10boob4oboo10bxxb4xbxx
+10boob4oboo20bxxb4xbxx$37bx4bx14bo4bo14bx4bx14bo4bo24bx4bx3$13bo$obo9b
+oo$boo5bo3bobo13byy18boo$bo6boo18byy18boo83bxx$7bobo122bxx$48bo85bx$
+48boo$47bobo46bo9b3o6bo$97bo8bo7bo$95b3o9bo6b3o$$133bx4bx$131bxxb4xbxx
+$133bx4bx$99b3o8b3o$101bo8bo$100bo10bo!

@@ -1,0 +1,12 @@
+#N 8bkbk14.rle: Two blocks offset (4;  1): Synthesis
+#O Mark D. Niemiec's life synthesis database, Fri Aug 04 16:36:26 2017
+#C  OO....
+#C  OO..OO
+#C  ....OO
+x = 109, y = 70, rule = B36/S23
+89bo$88bo$88b3o$$86bo$43bo43bo$44bo40b3o$42b3o18bxx16b3o19bxx$46boo15b
+xxbbxx14bo19bxxbbxx$45bobo19bxx13bo24bxx$47bo22$22bxx18boo18bxx18boo$b
+oo18bxbbx16bobbo17bxbx17bobo$obo19bxx18boo19bx19bo$bbo35b3o$4boo34bo
+43b3o$4bobo32bo44bo18bxx$4bo80bo17bxxbbxx$107bxx26$44bo$42bobo44boo$
+39boobboobb3o13b3x17b3obboo13bxx$38bobo6bo16b3x17b3o3bo12bxxbbxx$40bo
+7bo58bxx!

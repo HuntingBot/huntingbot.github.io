@@ -1,0 +1,23 @@
+#N 88p6.rle: 88-bit P6: Pattern image
+#O Mark D. Niemiec's life synthesis database, Sat Aug 05 22:01:26 2017
+#C  ...OO..........OO...
+#C  ..O..O........O..O..
+#C  .O.O.O........O.O.O.
+#C  O.OO.OO......OO.OO.O
+#C  O....O.............O
+#C  .OOO..O......OO.OOO.
+#C  ...O..O......OO.O...
+#C  ...........O........
+#C  ........OOOO........
+#C  ........O...........
+#C  ...O.OO......O..O...
+#C  .OOO.OO......O..OOO.
+#C  O.............O....O
+#C  O.OO.OO......OO.OO.O
+#C  .O.O.O........O.O.O.
+#C  ..O..O........O..O..
+#C  ...OO..........OO...
+x = 20, y = 17, rule = B36/S23
+3bxx10bxx$bbxbbx8bxbbx$bxbxbx8bxbxbx$xbxxbxx6bxxbxxbx$x4bx13bx$b3xbbx
+6bxxb3x$3bxbbx6bxxbx$11bx$8b4x$8bx$3bxbxx6bxbbx$b3xbxx6bxbb3x$x13bx4bx
+$xbxxbxx6bxxbxxbx$bxbxbx8bxbxbx$bbxbbx8bxbbx$3bxx10bxx!

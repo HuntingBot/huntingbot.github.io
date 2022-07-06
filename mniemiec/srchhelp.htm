@@ -1,0 +1,1360 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="copyright" content="1997,1998,1999,2013,2015,2016,2017,2018,2019,2020,2021,2022 Mark D. Niemiec" />
+<title>Search Help</title>
+<meta name="description"
+content="John Horton Conway's Game of Life pattern search help" />
+<meta name="keywords"
+content="cellular automata conway game life pattern search help" />
+<link rel="prev" href="lifemap.htm" />
+<link rel="next" href="objcount.htm" />
+<link rel="search" href="lifesrch.htm" />
+<link rel="author" href="lifecred.htm#niemiec" />
+<link rel="license" href="lifepage.htm#copyright" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="shortcut icon" href="images/23-64.ico" />
+<style type="text/css">
+    body{lang="en-US";hyphens:auto;color:black;background-color:white;
+      margin-top:0;padding:0;border:0;height:100%;
+      font-family:Verdana,Arial,Helvetica,sans-serif;}
+    hr.a{border-style:solid;border-width:3px;border-color:#000000;}
+    h1{text-align:center;
+      font-family:Verdana,Arial,Helvetica,sans-serif;font-variant:small-caps;}
+    h2{font-family:Verdana,Arial,Helvetica,sans-serif;font-variant:small-caps;}
+    h3{font-family:Verdana,Arial,Helvetica,sans-serif;font-variant:small-caps;}
+    i{font-family:"Times New Roman",Times,serif;}
+    pre{hyphens:manual;}
+    img{border:2px black solid;}
+    ul,ol{margin-left:0px;padding-left:1en;}
+    table{border:1px black solid;border-spacing:0px;border-collapse:collapse;
+      table-layout:fixed;}
+    td,th{border:1px black solid;vertical-align:top;font-size:12px;padding:1px;}
+    td a{display:block;}
+    a{text-decoration:none;}
+    a:focus{text-decoration:underline;} a:hover{text-decoration:underline;}
+    a.p:link{color:#008000;} a.p:visited{color:#00C000;}
+    a.i:link{color:#000080;} a.i:visited{color:#0000C0;}
+    a.j:link{color:#008080;} a.j:visited{color:#00C0C0;}
+    a.x:link{color:#800000;} a.x:visited{color:#C00000;}
+    td:hover{background-color:#F0F0F0;}
+    .s{background-color:#E0E0E0;} td.s:hover{background-color:#E0E0E0;}
+    .b{background-color:#C0C0FF;} td.b:hover{background-color:#E0E0FF;}
+    .g{background-color:#C0FFC0;} td.g:hover{background-color:#E0FFE0;}
+    .t{background-color:#C0FFFF;} td.t:hover{background-color:#E0FFFF;}
+    .r{background-color:#FFC0C0;} td.r:hover{background-color:#FFE0E0;}
+    .m{background-color:#FFC0FF;} td.m:hover{background-color:#FFE0FF;}
+    .y{background-color:#FFFFC0;} td.y:hover{background-color:#FFFFE0;}
+    .o{background-color:#FFD0AA;} td.o:hover{background-color:#FFE8D5;}
+    .v{background-color:#FFAAD0;} td.v:hover{background-color:#FFD5E8;}
+    .h{background-color:#E0E0FF;} td.h:hover{background-color:#F0F0FF;}
+    .k{background-color:#000000;color:#FFFFFF;} td.k:hover{background-color:#C0C0C0;}
+    .n{background-color:#F0F0F0;text-align:center;} th.n:hover{background-color:#F8F8F8;}
+    .c{text-align:center;} .u{display:none;}
+</style>
+</head>
+<body>
+<h1>Search Help</h1>
+<p class="c">
+	<b><a class="j" href="#intro">Introduction</a></b><br />
+	<b><a class="j" href="#pat">Search for pattern:</a></b>
+	<a class="j" href="#check">Checks</a> |
+	<a class="j" href="#common">Common</a> |
+	<a class="j" href="#uncommon">Uncommon</a> |
+	<a class="j" href="#boxes">Boxes</a> |
+	<a class="j" href="#text">Text</a> |
+	<a class="j" href="#results">Results</a> |
+	<a class="j" href="#details">Details</a><br />
+	<b><a class="j" href="#still">Search for still life</a></b> |
+	<b><a class="j" href="#rule">Search for rule</a></b><br />
+	<b><a class="j" href="#cat">Search Catagolue</a></b> |
+	<a class="j" href="#tips">Tips</a> |
+	<a class="j" href="#issues">Known issues</a> |
+	<a class="j" href="#browser">Browser issues</a> |
+	<a class="j" href="#privacy">Privacy policy</a>
+</p>
+<hr /><main>
+<article><a id="a0" name="a0"></a>
+<a id="intro" name="intro"></a>
+<h2>Introduction</h2>
+<p>This page contains four independent search engines, each used for a different
+purpose:</p>
+<p><ul>
+    <li><a class="j" href="#pat">Search for pattern</a> lets you search for one
+	or more patterns that match search criteria. A list of matching
+	patterns is produced, and for each matching pattern found, many
+	details about the pattern are displayed.</li>
+    <li><a class="j" href="#still">Search for still life</a> lets you search for
+	a still-life or difficult still-life in Life by its index number.
+	For each still-life found, the synthesis can be displayed, if
+	available.</li>
+    <li><a class="j" href="#cat">Search Catagolue</a> lets you search Catagolue
+	by any search criteria Catagolue supports.</li>
+    <li><a class="j" href="#rule">Search for rule</a> lets you search for
+	outer totalistic or non-totalistic rules, and converts between RLE
+	rule strings, neighborhood descriptions, and Golly rule tables.</li>
+</ul></p>
+</article>
+<hr class="a" /><article><a id="a1" name="a1"></a>
+<a id="pat" name="pat"></a>
+<h2>Search for pattern</h2>
+<p>Search for pattern is the primary focus of this page. It lets you search
+for patterns using a wide variety of criteria. To perform a search, select
+search criteria in the table at the top, press the <em>Search</em> button,
+then examine the search results below. Selecting a pattern from the search
+results displays details about the pattern, and shows the pattern image.</p>
+<p>The top section contains one line, <b>Add constraint:</b>, with five
+drop-down lists containing constraints to use to qualify the search. These
+are:</p>
+<p><ul>
+   <li><a class="j" href="#check">CHECKS</a> for selections determined by check
+	boxes or multiple-selection drop-down lists.</li>
+   <li><a class="j" href="#common">COMMON</a> for common numeric
+	measurements.</li>
+   <li><a class="j" href="#uncommon">UNCOMMON</a> for less common numeric
+	measurements.</li>
+   <li><a class="j" href="#boxes">BOXES</a> for bounding box numeric
+	measurements.</li>
+   <li><a class="j" href="#text">TEXT</a> for textual (non-numeric) criteria,
+	including search by pattern image or glider number.</li>
+</ul></p>
+<p>The bottom section contains options that affect result display. Altering
+any of these after a search has been performed will have an immediate effect
+on the displayed results, without needing to perform a new search. Changes
+to any other constraints will not take effect until a new search is
+actually performed (although enabling or disabling search criteria may also
+affect which columns are shown in the result table).</p>
+<p><ul>
+    <li id="by"><b>Show results by:</b> lets you choose to see the matched
+	patterns by List, which shows a text table with one row per pattern, or
+	by Stamp Page, which shows the patterns in a graphical table, like the
+	patterns on other pages on this site. The Stamp view is more readable,
+	but the List view provides much more information, and can show more
+	results at once if large objects are involved. The default is List.</li>
+    <li><b>Show tool tips</b>, when checked, shows tips about all controls and
+	result fields on this page, by hovering the mouse over them for a few
+	seconds. This is turned off by default.</li>
+    <li><b>Maximum results:</b> When viewing results by list, this limits the
+	number of results shown per page. This defaults to 20.
+	<span id="fixed">(The maximum number of views displayed on the stamp
+	view depends on the size of the largest result pattern and the
+	<em>Stamp zoom</em> factor. This can be up to 10&times;11 for &times;4
+	zoom, 13&times;15 for &times;3 zoom, 20&times;23 for &times;2 zoom, and
+	41&times;46 for &times;1 zoom.)</span></li>
+    <li><b>Stamp zoom:</b> When viewing results by stamp page, this sets the
+	zoom factor to &times;1, &times;2, &times;3, or &times;4.
+	The default is &times;4</li>
+    <li><b>Sort results by:</b> lets you choose the order to view the results.
+	By default, this is by ascending population, then period, then name.
+	The default criteria are also used to sort patterns within each matching
+	group. If search results are displayed in a list, the criterion used for
+	sorting is also displayed in the list.</li>
+    <li><b>Show number as:</b> lets you choose what format to display numbers.
+	(e.g. the same number shows as 1.5 under Decimal, 3/2 under Rational,
+	and 1&frac12; under Mixed). Integers are always just displayed as
+	integers (e.g. 42). Irrational numbers always use decimal format.
+	Numbers too large to display always use scientific notation, e.g.
+	1.25e10. Velocity is always shown as rational, if possible regardless
+	of this setting.</li>
+</ul></p>
+<p>The sections inbetween show selected criteria. For convenience, the most
+common constraints (Rule, Category, Period, and Minimum population) are
+pre-selected, as they are the most frequently used. Each criterion has a check
+box to the left; if that check box is un-selected, the criterion is removed.
+Note that irrelevant criteria are hidden, even if they are selected (e.g.
+if the Category criterion is set to only search for still-lifes, Heat,
+Modulus, Period, Slope, and Velocity are all irrelevant, so they are hidden
+and ignored).</p>
+<p>Below the criterion table is a control bar with the following controls:</p>
+<p><ul>
+    <li><b>Search</b>: Pressing this starts a new search using the selected
+	criteria.</li>
+    <li><b>Reset</b>: Pressing this resets all criteria on the page to their
+	defaults.</li>
+    <li><b>Help</b>: Pressing this launches this help page. This can also be
+	done at any time by pressing the F1 key.</li>
+    <li>The search status and search result summary is displayed on the right.</li>
+</ul></p>
+<p>The search normally takes one or two seconds. If you specify a particularly
+broad search that can find thousands of matches (e.g.
+<em>Pattern name: Contains &ldquo;e&rdquo;</em>, to find all patterns whose names
+contain the letter &ldquo;e&rdquo;), the search can take considerably longer,
+and may trigger a browser warning about a slow or unresponsive script.
+Please be patient.</p>
+</article>
+<hr /><article><a id="a2" name="a2"></a>
+<a id="check" name="check"></a>
+<h3>Check</h3>
+<p>This section includes constraints that are specified by check boxes or
+drop-down lists.</p>
+<p><b>Category</b> specifies which category or category of patterns to search
+for:</p>
+<p><ul>
+    <li><em>Any</em> finds all patterns.</li>
+    <li><em>Still-life</em> finds still-lifes: stationary objects with a period
+	of 1.</li>
+    <li><em>Pseudo-still-life</em> finds pseudo-lifes: stationary pseudo-objects
+	with a period of 1.</li>
+    <li><em>Quasi-still-life</em> finds quasi-lifes: stationary quasi-objects
+	with a period of 1.</li>
+    <li><em>Oscillator</em> finds oscillators: stationary objects with periods
+	&gt;1.</li>
+    <li><em>Pseudo-oscillator</em> finds pseudo-oscillators: stationary
+	pseudo-objects with periods &gt;1.</li>
+    <li><em>Quasi-oscillator</em> finds quasi-oscillators: stationary
+	quasi-objects with periods &gt;1.</li>
+    <li><em>Spaceship</em> finds spaceships: objects with non-zero
+	velocities.</li>
+    <li><em>Pseudo-spaceship</em> finds pseudo-spaceships: pseudo-objects with
+	non-zero velocities.</li>
+    <li><em>Quasi-spaceship</em> finds pseudo-spaceships: quasi-objects with
+	non-zero velocities.</li>
+    <li><em>Wick-stretcher</em> finds wick-stretchers: growing objects with a
+	non-zero velocity and a linear growth rate, that produce a fixed number
+	of ever-growing objects.</li>
+    <li><em>Puffer</em> finds puffer trains: growing objects with a non-zero
+	velocity and a linear growth rate, that produce an ever-increasing number
+	of fixed-size objects.</li>
+    <li><em>Gun</em> finds guns: stationary growing objects with a linear growth
+	rate, that produce an ever-increasing number of moving objects.</li>
+    <li><em>Breeder</em> finds breeders: objects with a super-linear growth
+	rate.</li>
+    <li><em>Constellation</em> finds constellations: collections of separated
+	objects and pseudo-objects. Quasi-objects are a subset of these.
+	Most constellations involve still-lifes and oscillators, but a few also
+	include spaceships.</li>
+    <li><em>Methuselah</em> finds methuselahs: small unstable objects that evolve
+	for a long time before finally settling down.</li>
+    <li><em>Multiple&hellip;</em> brings up a small pop-up window that allows
+	you to select multiple categories.</li>
+</ul></p>
+<p>If your search can include still-lifes, checking <em>Difficult?</em> includes
+only those still-lifes in the 14&hellip;18-bit range from the
+difficult-to-synthesize list (i.e. those that were determined by the expert
+system to not have trivial syntheses based on existing conversion recipes).
+All of these still-lifes have since been found to have syntheses, and additional
+recipes have since been added; however, for numbering purposes, these lists have
+not been changed.)</p>
+<p>Checking <em>Multiple colors</em> only includes patterns that have
+multi-color syntheses in multi-color Life.</p>
+<p>Checking <em>Multiple files</em> only shows patterns that have two or more
+synthesis files. This can happen in one of three circumstances:</p>
+<p><ul>
+    <li>Some very large (or difficult to synthesize) objects may have multiple
+	syntheses separated into different files, or a single synthesis split
+	into multiple parts.</li>
+    <li>Many methuselahs that produce large results, especially those that
+	release multiple gliders, have one file showing multiple syntheses,
+	and another containing only one, that allows the methuselah to be run
+	to completion without multiple copies interfering with each other.</li>
+    <li>Some patterns have additional properties that are best illustrated in a
+	separate file (e.g. the Queen bee&rsquo;s ability to eat gliders in many
+	different ways).</li>
+</ul></p>
+<p>Checking <em>Multiple pattern names</em> shows only patterns that are known
+by two or more different listed names. This frequently happens for larger
+still-lifes that have descriptive names as well as their numeric designations.
+It also happens frequently for common objects that are independently discovered
+or named by different people.</p>
+<p>For period 2 oscillators, <b>P2 rotor</b> selects the kind of rotors
+that are matched:</p>
+<p><ul>
+    <li><em>Flip-flop</em> shows only oscillators whose rotor cells die only
+	from under-population.</li>
+    <li><em>On-off</em> shows only oscillators whose rotor cells die only
+	from over-population.</li>
+    <li><em>Either</em> shows both flip-flops and on-offs.</li>
+    <li><em>Not flip-flop</em>, <em>Not on-off</em>, and <em>Neither</em>
+	reverse these searches.</li>
+</ul></p>
+<p><b>Phoenix</b> selects patterns based on their survivability:</p>
+<p><ul>
+    <li><em>Phoenix</em> shows only patterns that have no cells that survive
+	(e.g. Life patterns that would work in a rule <em>B3/S</em>), such as
+	oscillators with no stator cells. In some non-Life rules (e.g. B2/S2),
+	there are also spaceships that are phoenixes.</li>
+    <li><em>Not Phoenix</em> shows only patterns that are not phoenixes.</li>
+    <li><em>Any</em> includes all patterns.</li>
+</ul></p>
+<p>When searching for oscillators, <b>Raging river</b> selects the rotor
+size:</p>
+<p><ul>
+    <li><em>Raging river</em> shows only oscillators whose rotors are
+	completely contained in a 2&times;<i>n</i> rectangle.</li>
+    <li><em>Not raging river</em> excludes raging rivers.</li>
+    <li><em>Any</em> shows both kinds of oscillators.</li>
+</ul></p>
+<p>When searching for oscillators, <b>Rotor</b> selects the rotor
+shape:</p>
+<p><ul>
+    <li><em>Babbling brook</em> shows only oscillators whose rotor consists
+	entirely of a single open-ended chain of cells.</li>
+    <li><em>Muttering moat</em> shows only oscillators whose rotor consists
+	entirely of a single closed-ended chain of cells.</li>
+    <li><em>Either</em> shows both of the above.</li>
+    <li><em>Not babbling brook</em>, <em>Not muttering moat</em>, and
+	<em>Neither</em> exclude oscillators of the above types.</li>
+    <li><em>Any</em> shows all kinds of oscillators.</li>
+</ul></p>
+<p><b>Rule</b> is a drop-down list that selects the rule whose patterns
+are searched:</p>
+<p><ul>
+    <li><em>B3/S23</em> (Life) is the most popular rule, and the one that has
+	the most patterns on this site. This is the default.</li>
+    <li><em>B2/S2</em> and <em>B34/S34</em> are explosive totalistic rules.</li>
+    <li><em>B36/S23</em> (HighLife) is another widely studied rule very similar
+	to Life.</li>
+    <li><em>B36/S245</em> (Replicator rule) is rule with a small replicator.</li>
+    <li><em>B3/S238</em> (EightLife), <em>B38/S23</em> (Pedestrian Life), and
+	<em>B38/S238</em> (Honey Life) are rules that are almost identical to
+	Life.</li>
+    <li><em>Niemiec0&hellip;Niemiec5</em> are a group of related non-totalistic
+	rules that include several small common spaceships, puffers, and
+	replicators.</li>
+    <li><em>Any</em> includes patterns from all of the above rules.</li>
+</ul></p>
+<p>(Note that when searching for a pattern image, if a RLE pattern is entered
+and contains a rule specification, that rule overrides any rule specified in
+this section.)</p>
+<p><b>Symmetry</b> qualifies patterns by what kind of symmetry they
+possess:</p>
+<p><ul>
+    <li><em>C1</em> selects patterns that have no symmetry.</li>
+    <li><em>C2</em> selects patterns that have 180&deg; rotational
+	symmetry around a point, but have no other symmetry.</li>
+    <li><em>C4</em> selects patterns that have 90&deg; rotational
+	symmetry around a point, but have no other symmetry.</li>
+    <li><em>C2|4</em> selects both of the above.</li>
+    <li><em>C4 D8</em> selects patterns that have 90&deg; rotational
+	symmetry around a point, and may also be reflected in an axis.</li>
+    <li><em>C2|4 D4|8</em> selects patterns that have 180&deg; rotational
+	symmetry around a point, and may or may not also have 90&deg;
+	rotational symmetry and/or be reflected in an axis.</li>
+    <li><em>D2_+</em> selects patterns that are reflected in an
+	orthogonal axis, but have no other symmetry.</li>
+    <li><em>D2_x</em> selects patterns that are reflected in an
+	diagonal axis, but have no other symmetry.</li>
+    <li><em>D2</em> selects both of the above.</li>
+    <li><em>D4_+</em> selects patterns that are reflected in two
+	orthogonal axes, but have no other symmetry.</li>
+    <li><em>D4_x</em> selects patterns that are reflected in two
+	diagonal axes, but have no other symmetry.</li>
+    <li><em>D4</em> selects both of the above.</li>
+    <li><em>D2|4|8_+</em> selects patterns that are reflected in one or two
+	orthogonal axes, and perhaps also in both diagonal axes.</li>
+    <li><em>D2|4|8_x</em> selects patterns that are reflected in two
+	diagonal axes, and perhaps also in both orthogonal axes.</li>
+    <li><em>D2|4|8</em> selects patterns that are reflected in two
+	axes, and perhaps also in both other axes.</li>
+    <li><em>D4|8_+</em> selects patterns that are reflected in two
+	orthogonal axes, and perhaps also in both diagonal axes.</li>
+    <li><em>D4|8_x</em> selects patterns that are reflected in two
+	diagonal axes, and perhaps also in both orthogonal axes.</li>
+    <li><em>D4|8</em> selects patterns that are reflected in two
+	axes, and perhaps also in both other axes.</li>
+    <li><em>C2|4 D2|4|8</em> selects patterns that have at least one
+	point or axis of symmetry.</li>
+    <li><em>Any</em> selects all patterns, even those without symmetry.</li>
+</ul></p>
+<p>In all of the above except <em>C1</em> and <em>D2_x</em>, these must also be
+qualified by whether the point or axis of symmetry passes through the center of
+a cell (1), an edge between two cells (2), or the corner between four cells (4).
+You can select one or more of these, or <em>Any</em> to allow all of them.</p>
+<p><b>Glide symmetry</b> qualifies patterns by what kind of glide
+symmetry they possess. Glide symmetry occurs in oscillators and
+spaceships that appear rotated or reflected before returning to
+their original orientation.</p>
+<p><ul>
+    <li><em>C1</em> selects patterns that have no glide symmetry.</li>
+    <li><em>C2</em> selects patterns that have 180&deg; rotational glide
+	symmetry around a point, but have no other glide symmetry.</li>
+    <li><em>C4</em> selects patterns that have 90&deg; rotational glide
+	symmetry around a point, but have no other glide symmetry.</li>
+    <li><em>C2|4</em> selects both of the above.</li>
+    <li><em>D2_+</em> selects patterns that get reflected in an
+	orthogonal axis, but have no other glide symmetry.</li>
+    <li><em>D2_x</em> selects patterns that get reflected in an
+	diagonal axis, but have no other glide symmetry.</li>
+    <li><em>D2</em> selects both of the above.</li>
+    <li><em>C2|4 D2</em> selects patterns with any glide symmetry.</li>
+    <li><em>Any</em> selects all patterns, even those without glide
+	symmetry.</li>
+</ul></p>
+<p>In all of the above except <em>C1</em> and <em>D2_x</em>, these must also be
+qualified in the same way Symmetry is qualified. The same qualifier is used for
+both. This is also necessary if both Symmetry and Glide Symmetry are D2_x.</p>
+</article>
+<hr /><article><a id="a3" name="a3"></a>
+<a id="common" name="common"></a>
+<h3>Common</h3>
+<p>This section includes common numeric constraints.</p>
+<p>Numeric constraints have a drop-down list indicating the kind of comparison
+to perform against an property (e.g. population, period, etc.). Most of these
+comparisons also require a numeric parameter on the left (<i>y</i>), and a
+few also require a numeric parameter on the right (<i>x</i>).
+The following comparisons are available:</p>
+<p><ul>
+    <li><b>Any</b>: no constraint is applied. This is the default.</li>
+    <li><b>= <i>y</i></b>: the property must exactly equal <i>y</i>.</li>
+    <li><b>&ne; <i>y</i></b>: the property must be anything except
+	<i>y</i>.</li>
+    <li><b>&lt; <i>y</i></b>: the property must be less than but not
+	equal to than <i>y</i>.</li>
+    <li><b>&le; <i>y</i></b>: the property must be less than or equal to
+	<i>y</i>.</li>
+    <li><b>&gt; <i>y</i></b>: the property must be more than but not
+	equal to <i>y</i>.</li>
+    <li><b>&ge; <i>y</i></b>: the property must be more than or equal to
+	<i>y</i>.</li>
+    <li><b><i>x</i> &ndash; <i>y</i></b>: the property lie within the range
+	bracketed by numbers <i>x</i> and <i>y</i> inclusive (i.e.
+	<i>x</i> &le; property &le; <i>y</i> or <i>x</i> &ge; property &ge; <i>y</i>).</li>
+    <li><b><i>x</i> ~ <i>y</i></b>: the property must not lie within the range
+	bracketed by numbers <i>x</i> and <i>y</i> inclusive.</li>
+    <li><b>&infin;</b>: the property must be infinite (same as = _).</li>
+    <li><b>?</b>: the property must be unknown (same as = ?).</li>
+    <li>(In cases where special values like &infin; or <em>Unknown</em> (?)
+	can occur, these can be directly selected from the selection list
+	without having to type them in manually).</li>
+</ul></p>
+<p>A few additional ones are also available for Cost in gliders:</p>
+<p><ul>
+    <li><b>Known</b>: a synthesis is known to exist, but the exact number of
+	gliders has not yet been computed.</li>
+    <li><b>Unknown</b>: no synthesis is currently known (same as &ge; x).</li>
+    <li><b>Partial</b>: a partial synthesis is known (same as &gt; x).</li>
+    <li><b>TBD</b>: the information about whether or not syntheses for this
+	object is known or not has not yet been added to the database.</li>
+</ul></p>
+<p>Any field where you need to enter a number gives you great flexibility in
+entering one. You may enter any of the following:</p>
+<p><ul>
+    <li>An empty field is treated as the default value (which is
+	usually zero, except for some mathematical operators
+	like multiplication and division).</li>
+    <li>Integers (e.g. 1), real numbers (e.g. 1.5), or
+	scientific notation (e.g. 1.5e6).</li>
+    <li>Special fractions &frac14; &frac12; and
+	&frac34; mixed numbers like 1&frac12;.</li>
+    <li>Infinity, by typing _ or &infin; or
+	<em>infinity</em>.</li>
+    <li>Some mathematical constants (<i>e</i>, <i>&pi;</i>,
+	<i>&tau;</i>, <i>&straightphi;</i>).</li>
+    <li>For unknown values, such as gliders for objects without
+	synthesis, frequency or rarity for uncommon objects,
+	or heat for extremely large spaceships, enter <em>?</em>
+	or <em>x</em> or <em>unknown</em>. (Partial syntheses
+	can be specified by forms like <em>x+2</em>.)</li>
+    <li>Some simple algebra is allowed (e.g. <i>x</i>+2, 1e6-1, 2<i>&pi;</i>
+	or 2*<i>&pi;</i> or 2&times;<i>&pi;</i>, 2/3, 3&divide;4, <i>&pi;</i>^2
+	or <i>&pi;</i>&sup2;, &radic;2, 3&radic;10, 3!).</li>
+    <li>You can also enter multiple numbers separated by
+	semicolons. With = the numbers are joined with
+	<em>or</em> (e.g. <em>= 1;2;4</em> means
+	<em>is 1 or 2 or 4</em>). With any other comparison
+	type, the numbers are joined with <em>and</em> (e.g.
+	<em>&ne; 1;2;4</em> means
+	<em>is not 1, and is not 2, and is not 4</em>).
+	Specifying multiple numbers for anything other than =
+	or &ne; is not likely to be useful (e.g.
+	<em>&lt; 1;2;3</em> is the same as
+	<em>&lt; 1</em>).</li>
+</ul></p>
+<p><b>Gliders</b> selects the minimum number of gliders needed to synthesize
+the pattern. You can also select <em>Unknown</em> for patterns with no known
+syntheses, <em>Partial</em> for patterns with simple syntheses based on an
+as-yet-unsynthesized predecessors, and <em>TBD</em> for patterns for which
+syntheses are planned, but have not yet been attempted, so their synthesis
+status is not yet known. You can also select <em>Known</em> for patterns for
+which syntheses have not yet been attempted, but it has been proven that
+syntheses definitely exist using standard techniques.</p>
+<p><b>Gliders/bit</b> selects the relative cost in gliders, i.e. number
+of gliders divided by minimum population. (This is treated as the same as
+the number of gliders in cases when the number of gliders is unknown,
+i.e. Unknown, Partial, TBD, or Known). Other pages on this site take
+particular interest of patterns for which this value =1 or &gt;1.</p>
+<p><b>Modulus</b> selects a modulus that should be matched. This is usually
+the same as period, but may be period/2 for patterns with glide symmetry, and
+may also be period/4 for asymmetric patterns with 90&deg; rotational glide
+symmetry. You can also qualify by the ratio of modulus to period.</p>
+<p><b>Period</b> selects the pattern&rsquo;s repetition period. This is the
+minimum number of generations that it takes for the pattern to return to its
+original state. The meaning varies, depending on the pattern type:</p>
+<p><ul>
+    <li>Still-lifes, pseudo-still-lifes, and quasi-still-lifes always have a
+	period of 1, so this criterion is ignored when only searching for
+	them.</li>
+    <li>Oscillators, pseudo-oscillators, and quasi-oscillators return to their
+	original state.</li>
+    <li>Spaceships, pseudo-spaceships, and quasi-spaceships return to their
+	original state, translated in space.</li>
+    <li>Constellations contain multiple copies of the above, and are
+	treated similarly.</li>
+    <li>Guns return to their original state, but also release spaceships.</li>
+    <li>Puffers and wick-stretchers return to their original state, translated
+	in space, and leave behind periodic debris such as still-lifes,
+	oscillators, or spaceships.</li>
+    <li>Breeders return to their original state, possibly translated in space,
+	and leave behind growing debris such as guns, puffers, or
+	wick-stretchers.</li>
+    <li>Methuselahs are unstable and aren&rsquo;t periodic, so they have no periods.
+	For search purposes, however, measurements of their period and other
+	oscillating properties (such as modulus, heat, volatility, bounding
+	box, etc.) are measurements of those properties for their final
+	census.</li>
+</ul></p>
+<p><b>Population (min.)</b> selects patterns based on their minimum population
+or range of populations. If a pattern has multiple phases with different
+populations, the lowest population is used for search purposes, and is
+also the criterion used on the rest of this site for categorizing objects by
+population. For growing patterns, such as guns, puffers, wick-stretchers, and
+breeders, this is the population of their first recurring state, before they
+have produced any output.</p>
+<p><b>Population (max.)</b> selects patterns based on their maximum population
+or range of populations. If a pattern has multiple phases with different
+populations, this is the population of the largest phase. Growing patterns like
+guns, puffers, wick-stretchers, and breeders have infinite maximum populations.
+The maximum population of methuselahs is defined as the population of the
+largest phase of its final census.</p>
+<p><b>Population (avg.)</b> selects patterns based on their mean population or
+range of populations. If a pattern has multiple phases with different
+populations, this is the mean population of all phases. Growing patterns like
+guns, puffers, wick-stretchers, and breeders may have infinite average
+populations. The average population of a methuselah is defined as the mean of
+the populations of all phases of its final census.</p>
+<p><b>Population (min./max.)</b> selects patterns based on the ratio of
+minimum to maximum population. This will be 0 for infinitely growing patterns,
+and 1 for still-lifes, including the empty field.</p>
+<p><b>Slope</b> selects moving patterns based on their slope of movement.
+These vary from 0 for orthogonal movement to &frac12; for diagonal movement.
+It is not defined for non-moving patterns, and is ignored for them.</p>
+<p><b>Velocity</b> selects patterns based on their velocities or range of
+velocities. Velocities are described as fractions of <i>c</i> (the speed of light).
+Spaceships, pseudo-spaceships, quasi-spaceships, puffers, and wick-stretchers
+have non-zero velocities. Still-lifes, pseudo-still-lifes, quasi-still-lifes,
+oscillators, pseudo-oscillators, quasi-oscillators, and methuselahs have
+zero velocities. Constellations and breeders can be either. For non-zero
+velocities, you can also select a specific direction, or search all
+directions. (This is basically the same as selecting Slope, but is simpler.)
+Velocity is always measured along the major axis of movement; e.g. an oblique
+(2,1)<i>c</i>/6 spaceship would be indicated by 2<i>c</i>/6, or more simply, <i>c</i>/3.)</p>
+</article>
+<hr /><article><a id="a4" name="a4"></a>
+<a id="uncommon" name="uncommon"></a>
+<h3>Uncommon</h3>
+<p>This section includes less common numeric constraints.</p>
+<p><b>Active rotor cells</b> is the number of cells in an oscillator that
+change. This is zero for still-lifes. It is infinite for moving and growing
+patterns. For pseudo-objects, quasi-objects, and constellations, this is the
+sum of the number of rotor cells in the component objects. For methuselahs,
+this is the number of active rotor cells in the final census.</p>
+<p><b>Density (min/)</b> is the ratio of minimum population and and influence.
+This is always between 0 and 1. In Life, this is always less than &frac12;.</p>
+<p><b>Density (max.)</b> is the ratio of maximum population and and influence.
+This is always between 0 and 1.</p>
+<p><b>Density (avg.)</b> is the ratio of average population and and influence.
+This is always between 0 and 1. In Life, this is always less than &frac12; for
+still-lifes and period 2 oscillators.</p>
+<p><b>E.F.</b> (Evolutionary Factor) is the ratio of T.T.S. (Time to
+Stabilize) to minimum population. This is non-zero only for unstable
+patterns (e.g. methuselahs).</p>
+<p><b>Frequency</b> is the relative number of times an objects occurred in
+Achim Flammenkamp&rsquo;s random soup experiments. It is 1/rarity. Except for a
+small number of common objects, most objects have frequencies of 0. This only
+applies to still-lifes and oscillators in the Life rule; all other categories
+are considered to have frequencies of <em>N/A</em> for search purposes.</p>
+<p><b>Heat</b> is the average number of unstable cells. It is zero for
+still-lifes, and can be infinite for growing patterns. For methuselahs, this is
+the heat of the final census.</p>
+<p><b>Influence</b> is the number of cells in a pattern&rsquo;s area of
+influence. A cell is within a patterns area of influence it is is living cell
+at any time during any of the pattern&rsquo;s phases, or is ever adjacent to
+any of a pattern&rsquo;s living cells. This is infinite for moving or growing
+patterns. For methuselahs, this is the influence of the final census.</p>
+<p><b>Number of rotors</b> is the number of distinct disjoint rotors in an
+oscillator. This is 0 for still-lifes. This is 1 for basic oscillators, although
+in some cases e.g. Tumbler) two adjacent rotors interact without touching.
+For pseudo-objects, quasi-objects, and constellations, this is the sum of
+the number of rotors in the component objects. For methuselahs, this is the
+number of rotors in the final census.</p>
+<p><b>Rarity</b> is the inverse of Frequency. Except for a small number of
+common objects, most objects have infinite rarity. This only applies to
+still-lifes and oscillators in the Life rule; all other categories are
+considered to have rarities of <em>N/A</em> for search purposes.</p>
+<p><b>Temperature</b> is the ratio of heat to the number of active rotor cells.
+This is always between 0 and 1 inclusive. It is defined for moving and growing
+patterns, even though those have infinite temperature and active rotor
+cells.</p>
+<p><b>Time to stabilize (T.T.S.)</b> is the number of generations it takes
+the pattern to reach a periodic form. This is non-zero only for unstable
+patterns (e.g. methuselahs) and is measured from their smallest form.</p>
+<p><b>Volatility</b> is the number of active rotor cells divided by the
+minimum population. This always varies between 0 for still-lifes and 1 for
+phoenixes. This is also 1 for moving and expanding patterns.</p>
+<p><b>Volatility (strict)</b> is similar to Volatility, except only rotor
+cells whose period is the same as that of the whole pattern are considered.
+This always varies between 0 and the volatility.</p>
+<p><b>Volatility (relative)</b> is the ratio of Strict volatility to
+Volatility. This always varies between 0 (for patterns with pseudo-periods,
+e.g. with two independent rotors of different periods), and 1 (for patterns
+with non-trivial rotors, and all patterns whose periods are prime or 1).</p>
+</article>
+<hr /><article><a id="a5" name="a5"></a>
+<a id="boxes" name="boxes"></a>
+<h3>Boxes</h3>
+<p>This section includes bounding boxes.</p>
+<p><b>Box (hull)</b> selects the bounding box that includes all generations.
+This is similar to the largest box, but may be slightly larger, and can be
+infinite for moving and growing patterns.</p>
+<p><b>Box (largest)</b> selects the largest bounding box the pattern fits
+in. For growing patterns (e.g. guns, puffers, wick-stretchers, and
+methuselahs that release gliders), this can be infinite. For methuselahs,
+this is the largest box achieved once the pattern stabilizes.</p>
+<p><b>Box (smallest)</b> selects the smallest bounding box the pattern fits
+in. For patterns with multiple generations (e.g. oscillators and spaceships),
+this may not necessarily be the size of the box in the pattern with the
+smallest population.</p>
+<p><b>Rotor box</b> is the size of the box that completely encloses all the
+rotor cells in a pattern. This is defined for oscillators. It is zero for
+still-lifes. For pseudo-objects, quasi-objects, and constellations, it is
+defined as the smallest box that encloses the rotors in all the component
+objects. For methuselahs, this is defined based on the final census.</p>
+<p>Each of the above categories has six separate properties:</p>
+<p><ul>
+    <li><b>Width</b> is the length of the shorter dimension.</li>
+    <li><b>Height</b> is the length of the shorter dimension.</li>
+    <li><b>Area</b> is the area of the box, i.e. width &times; height.</li>
+    <li><b>Circumference</b> is the circumference of the box, i.e.
+	2 (width + height).</li>
+    <li><b>Diagonal</b> is the length of the diagonal, i.e.
+	&radic;(width&sup2; + height&sup2;).</li>
+    <li><b>Squareness</b> is the ratio of height/width. It varies from 0
+	for patterns that grow infinitely in one direction, to 1 for
+	square patterns.</li>
+</ul></p>
+</article>
+<hr /><article><a id="a6" name="a6"></a>
+<a id="text" name="text"></a>
+<h3>Text</h3>
+<p>This section includes constraints that are specified by text strings
+rather than numeric values.</p>
+<p>Most of these include a drop-down list:</p>
+<p><ul>
+    <li><em>Any</em> ignores this constraint.</li>
+    <li><em>Is</em> matches the whole name.</li>
+    <li><em>Begins with</em> matches the beginning of the name.</li>
+    <li><em>Ends with</em> matches the end of the name.</li>
+    <li><em>Contains</em> matches any part of the name.</li>
+    <li><em>Does not begin with</em>, <em>Does not end with</em>, and
+	<em>Does not contain</em> are similar, but they exclude all
+	patterns whose names match as above, rather than include them.</li>
+</ul></p>
+<p>Names can contain wildcards &mdash; a ? matches a single character, while a
+* matches any number of characters. A * at the beginning of a name is the same
+as <em>Ends with</em>, a * at the end of a name is the same as
+<em>Begins with</em>, and a * at both ends is the same as <em>Contains</em>.
+Multiple names can be separated by , or ; to indicate <em>or</em>.
+A ~ between names means <em>and not</em>, and at the front means <em>not</em>.
+For example, <em>Is &ldquo;~*jam*&rdquo;</em> is the same as
+<em>Doesn&rsquo;t contain &ldquo;jam&rdquo;</em>, and
+<em>Contains &ldquo;snake~block~boat&rdquo;</em> means
+<em>Contains &ldquo;snake&rdquo; but neither &ldquo;block&rdquo;
+nor &ldquo;boat&rdquo;</em>.</p>
+<p><b>APG name</b> allows for searching for a pattern by its canonical
+apgcode, as used by apgsearch and Catagolue. This is well defined for
+still-lifes, oscillators, and spaceships. It is also well defined for
+pseudo-objects, quasi-objects, and constellations containing these,
+although apgsearch and Catagolue currently do not track them. This is
+not defined for constellations containing patterns of different
+velocities, or methuselahs. There is also a definition that covers
+patterns with linear growth (e.g. guns, puffers, and wick-stretchers),
+but this only describes the pattern&rsquo;s growth signature, rather than
+the pattern&rsquo;s image, so it is not necessarily unique. Because it is
+difficult to compute, it is provided for all puffers and guns in the
+pattern collection, but is not computed for patterns that are entered
+manually. APG names contain lower-case letters, digits, and underscores.
+All other punctuation is ignored.</p>
+<p><b>File name</b> allows for searching by a pattern&rsquo;s file name.
+This is always a name from 1-8 characters long, containing digits,
+hyphens, and lower-case letters. It usually begins with a number,
+that is the minimum population, except in cases of growing patterns
+(e.g. guns, puffers, wick-stretchers, and breeders). Letter case is
+ignored. Other punctuation characters are ignored. If a path or extension
+is given, it is ignored (e.g. searching for <em>/directory/5gl.rle</em>
+will search for the name <em>5gl</em>.</p>
+<p><b>Glider number (all)</b> allows for searching for specific gliders in
+David Eppstein&rsquo;s glider repository, within the list of all gliders in all
+rules. Gliders are numbered sequentially, beginning with 1. Only certain
+iconic gliders are listed.</p>
+<p><b>Glider number (rule)</b> allows for searching for specific gliders in
+David Eppstein&rsquo;s glider repository, within the currently-selected rule.
+Gliders are numbered sequentially in each rule, beginning with 1. Only certain
+iconic gliders are listed.</p>
+<p><b>Header name</b> allows for searching for patterns within specific groups
+within the pattern database. Header names contain digits, hyphens, and
+lower-case letters. Case is ignored. All other punctuation is ignored. These
+groups correspond to how data is arranged in various articles elsewhere on this
+site, and on how data is arranged in the internal database. This is normally
+only done for internal purposes, or for specialized pattern groups that
+aren&rsquo;t easily qualified by category, period, and population. Sometimes,
+the name is intuitive (e.g. <i>p3-lg</i> is period 3 oscillators with
+populations &ge;35, <i>pp2-12</i> is 12-bit period 2 pseudo-oscillators,
+<i>ss-2o5</i> is 2<i>c</i>/5 orthogonal spaceships, and <i>34-p8</i> is period 8
+oscillators in B34/S34.)</p>
+<p><b>Hickerson Rotor Descriptor</b> (HRD) allows for searching oscillators
+and similar patterns by the signature of their rotors.</p>
+<p><b>LifeWiki page</b> allows for searching for patterns that refer to a
+particular page on the LifeWiki. Wiki names contain digits, lower- and
+upper-case letters, underscores (in place of spaces), and certain punctuation
+characters, including hyphens, apostrophes, $, and parentheses.</p>
+<p><b>LIS name</b> allows for searching for a pattern by its LIS encoding,
+which is the format used by Niemiec&rsquo;s still-life search program, and is
+the format used by the database that runs this site and its search engine.
+This is only well-defined for patterns with sizes up to 223&times;223.</p>
+<p><b>Neighborhoods</b> allows for searching for all patterns that work
+within a certain group of related outer totalistic rules. If you enter a
+string of the form <em>B<i>aa-bb</i>/S<i>cc-dd</i></em>, only patterns
+that require birth conditions <i>aa</i> but not <i>bb</i> and survival
+conditions <i>cc</i> but not <i>dd</i>, are matched. Conditions that
+are neither required nor forbidden may be either present or absent
+(e.g. <b>B3/S23</b> matches <b>B3/S23</b>, <b>B3/S238</b>, <b>B36/S23</b>,
+<b>B38/S23</b>, and <b>B38/S238</b>).</p>
+<p><b>Pattern name</b> allows for searching for a pattern by its
+human-readable pattern name. Letters, digits, periods, $, and &uuml; are used.
+Case is ignored. All other punctuation is ignored. The phrases <em>with</em>
+and <em>w/</em> are considered equivalent.</p>
+<p><b>SOF name</b> allows for searching for a pattern by its SOF encoding,
+which is the canonical format used on
+<a class="x" target="_blank" href="http://pentadecathlon.com">pentadecathlon.com</a>. This is well
+defined for still-lifes, oscillators, and spaceships. It is also well defined
+for pseudo-objects, quasi-objects, and constellations containing these,
+although pentadecathlon.com does not currently track them. This is
+not defined for constellations containing patterns of different
+velocities, methuselahs, or growing patterns. SOF names contain
+digits, lower- and upper-case letters, and any of the punctuation
+characters +-:;&lt;=&gt;?@[\]^_`{|}~ and ending with a period (which may
+be omitted, since it is always present in the format, so it is assumed).</p>
+<p><b>Pattern image</b> allows for searching for a pattern by its image.
+Because this image is usually large or two-dimensional, the entry field
+for the pattern is placed at the bottom of the search criteria. The pattern
+can be in one of several different input formats. You can specify an image
+format, or select Auto, in which case the format is automatically detected.
+Currently supported are APG, Cells, Life 1.05, Life 1.06, LIS, RLE, SOF.
+If the format is unknown, Cells is assumed. If this field is empty,
+the search is not constrained by pattern image. To explicitly search for an
+empty pattern, enter at least a comment or an empty cell. The window is
+initially tall enough to enter two lines of text, but you can adjust the
+window height to be larger, if desired.</p>
+<p>The easiest way to enter a pattern is to copy and paste it from another
+Life program like Golly. Pattern orientation is not important. Phase is not
+important for oscillators, pseudo-oscillators, quasi-oscillators, spaceships,
+pseudo-spaceships, quasi-spaceships, or constellations. Extra spaces outside
+the pattern are ignored. The exact pattern must be specified (e.g. oscillators
+and spaceships must include their sparks). For methuselahs or growing patterns,
+the database only stores a small number of generations, so it may be more
+useful to search for them by category, as the lists of patterns in those
+categories are small.</p>
+<p>A pattern can also be entered manually. Spaces, punctuation and
+line-drawing characters (- + and |) are treated as dead cells, and all others
+as living cells. Avoid using # characters at at the start of a line, or !
+character anywhere, as these may cause the pattern to be interpreted as one
+of the special file formats.</p>
+<p>When using Cells, RLE, or Life 1.05 formats (but not Life 1.06, APG,
+LIS, or SOF), the ? character has special meaning. Cells indicated by ? are
+wildcards &mdash; they match either living or dead cells. This allows one to
+search for specific pieces of patterns (e.g. patterns with an eater tail on
+one side, patterns with mold rotors, etc.) Note, however, that using wildcards
+to match pattern images is extremely time-consuming. It is generally faster to
+combine such wildcards with other constraints, especially when searching for
+oscillators or spaceships (e.g. when searching for patterns that contain mold
+rotors, one should also also specify period=4, or possibly period&ge;4, if one
+also wants to include period-multiplied oscillators).</p>
+</article>
+<hr /><article><a id="a7" name="a7"></a>
+<a id="results" name="results"></a>
+<h3>Results</h3>
+<p>The search results are displayed as a list of patterns
+<span id="res">or a stamp page showing images of patterns</span>
+below the search criteria table. Clicking on a pattern&rsquo;s name
+<span id="click">or image</span> selects it and displays detailed information
+about it. If the search finds exactly one result (which usually happens when one
+enters an image, or a pattern by name with no wildcards), that result is
+automatically selected.</p>
+<p>The List view shows several columns of data. A column is shown for every
+search criterion that is selected, whether it contributes to the search or not.
+(E.g. to display the Heat of all patterns, select the Heat criterion, and
+set it to <em>Any</em>.). A column is also included for the criterion used for
+sorting. In any case, columns are always included for Minimum population,
+Period, Pattern name(s), and Image.</p>
+<p>In the List view, clicking on a column heading changes the sort order,
+and clicking on a second time reverses the sort direction. If results
+from multiple rules are shown, clicking on a rule&rsquo;s heading
+collapses the results for that rule, allowing easier access to results from
+other rules (especially if a large number of results have been found).
+Clicking on it a second time re-displays the hidden results.</p>
+<p>Clicking on the pattern name or image selects the pattern, and displays
+details about that pattern in the table below. In addition, clicking on some
+other fields in the table have other effects:</p>
+<p><ul>
+    <li>Clicking on Category goes to the main category page for patterns in
+	that category, or for non-Life rules, the section for such
+	patterns.</li>
+    <li>For Life, clicking on the population goes to the page for all
+	patterns with that population.</li>
+    <li>Oscillators and spaceships with glide symmetry show period and also the
+	number of times the pattern recurs. For example, the Queen Bee shows a
+	period of 30(/2), which means its period is 30, its modulus is 15, and
+	it recurs twice during its cycle. Clicking on the period goes to the
+	page for the main category page for patterns with that period, or for
+	non-Life rules, the section for such patterns. This only works for
+	still-lifes, pseudo-still-lifes, quasi-still-lifes, oscillators, 
+	pseudo-oscillators, quasi-oscillators, and constellations,
+	and also methuselahs in Life.</li>
+    <li>Clicking on the velocity goes to the section for spaceships
+	with that velocity</li>
+    <li>For Life, clicking on Gliders goes to the page for patterns that
+	cost that number of gliders (2-7 or &ge;100), or other groups that are
+	tracked (i.e. 1 glider/bit, &gt; 1 glider/bit, partial, unknown).</li>
+    <li>For Life, clicking on Gl./bit goes to the page for patterns that
+	cost that number of gliders (i.e. 1 glider/bit, &gt; 1 glider/bit,
+	partial, unknown).</li>
+    <li>Clicking on Freq. or Rarity brings up the page for common objects.</li>
+    <li>For spaceships, clicking on Glider # or Gl. # (rule) brings up the
+	Glider Repository page for all rules or this rule, respectively.</li>
+    <li>Clicking on APG or SOF name brings up the Catagolue or pentadecathlon
+	page for this pattern, respectively.</li>
+    <li>Clicking on Header brings up the corresponding article on the page
+	associated with the related category (or rule page, if not Life).</li>
+    <li>Clicking on File brings up the synthesis file.</li>
+</ul></p>
+<p><div id="stamp">In the Stamp view, clicking on a pattern selects it, and
+displays details about that pattern in the table below. Clicking on the top or
+bottom left corners of the stamp behave respectively as <em>Page Up</em> or
+<em>Page Down</em> to scroll through multiple results. Clicking on the bottom
+right corner opens an RLE file of the stamp page itself. Below the stamp is
+a standard stamp navigation bar with the following buttons:
+<ul>
+    <li><b>&uArr;</b> and <b>&dArr;</b> respectively go to the top and bottom of
+	the page.</li>
+    <li><b>PNG</b> opens the stamp page image.</li>
+    <li><b>RLE</b> opens the RLE image of the stamp page.</li>
+    <li><b>APG</b>, <b>LIS</b>, and <b>SOF</b> return lists of all search
+	results in the selected format.</li>
+</ul></div></p>
+<p>If there are too many results to fit on one page, navigation buttons are
+available above and below the search results to allow scrolling through the
+different pages.</p>
+</article>
+<hr /><article><a id="a8" name="a8"></a>
+<a id="details" name="details"></a>
+<h3>Details</h3>
+<p>When a result pattern has been selected, its details are displayed below
+the search results. If a search only finds one pattern, that pattern is
+automatically selected. If a pattern search yields no results, the entered
+pattern may be shown with some information deduced about it, but most
+properties will not be shown.</p>
+<p>The information is displayed in a two-column table, with property names
+on the left and property values on the right. Clicking on a property name
+usually loads a page for that property in general, while clicking on the
+property value usually loads a page for that property value in particular.
+Properties that are unknown or not applicable are omitted. The following
+properties may be displayed:</p>
+<p><ul>
+    <li><b>Rule</b> is the rule that applies to this pattern.
+	Clicking on the rule opens the page for that rule.</li>
+    <li><b>Name(s)</b> is the name or names given to this pattern.</li>
+    <li><b>Smallest box</b> is the box for the smallest phase of the pattern,
+	or the smallest initial phase for methuselahs.</li>
+    <li><b>Largest box</b> is the box for the largest phase of the pattern,
+	or the largest census phase for methuselahs.</li>
+    <li><b>Hull</b> is the box that includes all phases of the pattern,
+	or all census phases for methuselahs. (Each of these boxes includes
+	width &times; height, &#9646; area, &#9647; circumference, &#9026;
+	diagonal, squareness (i.e. height/width));</li>
+    <li><b>Population</b> shows the minimum, maximum, and average populations.
+	For methuselahs, minimum population is for the smallest predecessor, and
+	average and maximum populations are for the census. Clicking on this
+	opens a page for all patterns of that population.</li>
+    <li><b>Symmetry</b> shows the pattern&rsquo;s symmetry and glide symmetry.</li>
+    <li><b>Category</b> shows the pattern&rsquo;s category. Clicking on this opens
+	a page for all patterns of that category. If other sub-categories are
+	appropriate, they are also listed here. (E.g. constellations may also be
+	quasi-still-lifes; oscillators may also be flip-flops.)</li>
+    <li><b>Density</b> shows the minimum, maximum, and average densities,
+	i.e. ratios of corresponding populations and influence.</li>
+    <li><b>Frequency</b> shows frequency of occurrence for common objects.</li>
+    <li><b>Gliders</b> shows the minimum number of gliders required to
+	synthesize the pattern. Clicking on this opens a page for all patterns
+	with a similar cost in gliders.</li>
+    <li><b>Heat</b> shows the pattern&rsquo;s heat.</li>
+    <li><b>Influence</b> shows the pattern&rsquo;s influence.</li>
+    <li><b>Period</b> shows the pattern&rsquo;s period, and also modulus, if
+	different. Clicking on this opens a page for all patterns with the
+	same period.</li>
+    <li><b>Rule(s)</b> shows the range of rules in which this pattern works.
+	Note that this does not include rules where the pattern behaves
+	similarly but has some phases with trivial differences.</li>
+    <li><b>Rotor</b> shows information about an oscillator&rsquo;s rotor,
+	including the number of rotors, number of rotor cells, and the
+	rotor box.</li>
+    <li><b>Temperature</b> shows the pattern&rsquo;s temperature.</li>
+    <li><b>T.T.S.</b> (Time To Stabilize) shows how long it takes a methuselah
+	to reach its final census, and also the E.F. (Evolutionary Factor),
+	which is T.T.S./initial population.</li>
+    <li><b>Velocity</b> shows the velocity of a moving pattern, and also
+	its slope.</li>
+    <li><b>Volatility</b> shows the volatility of a pattern, and also its
+	strict volatility, if different.</li>
+    <li><b>Pattern</b>: clicking on <em>View pattern</em> brings up an RLE
+	file of the pattern itself.</li>
+    <li><b>Synthesis</b> lists the synthesis file for the pattern.
+	Clicking on this brings up the RLE file of the synthesis. Some
+	patterns may have two synthesis files.</li>
+    <li><b>Multi-color</b> lists the multi-color synthesis file for the pattern.
+	Clicking on this brings up the RLE file of the multi-color synthesis.
+	</li>
+    <li><b>APG</b> shows the APG encoding of a pattern, as used by Catagolue.
+	Clicking on this opens the Catagolue page for that pattern.</li>
+    <li><b>SOF</b> shows the SOF encoding of a pattern, as used by
+	pentadecathlon.com. Clicking on this opens the pentadecathlon.com page
+	for that pattern.</li>
+    <li><b>LIS</b> shows the LIS encoding of a pattern, as used internally by
+	this site, and is used for ordering most of the pattern lists, including
+	the sequences of still-lifes from 15 bits and up.</li>
+    <li><b>Gliders</b> shows a spaceship&rsquo;s glider number in David
+	Eppstein&rsquo;s Glider repository. Clicking on this opens up the
+	repository page for the spaceship.</li>
+    <li><b>HRD</b> Shows the Hickerson Rotor Descriptor for oscillators and
+	similar patterns. Click <i>See similar</i> to repeat the current search
+	but restricting the results to patterns with the same rotor descriptor.</li>
+    <li><b>LifeWiki</b> shows one or more LifeWiki links related to this
+	pattern. Clicking on them opens up the respective LifeWiki pages.</li>
+</ul></p>
+<div id="img"><p>The pattern image is displayed below the details table.
+Huge patterns are not displayed, to avoid very long browser delays. (The only
+patterns currently affected are the
+<a class="i" href="exotic.htm">huge spaceships</a> and the
+<a class="i" href="puff.htm#puff-geminoid">Geminoid replicators</a>.)
+The pattern is shown in a canonical representation (i.e. initial generation and
+specific orientation), which may differ from what was originally entered, if the
+search was by image.</p></div>
+<p>There is a control bar below the pattern, with the following controls:</p>
+<p><ul>
+    <li><b>Export as</b> lets you select a format for the Export function. This
+	is one of RLE (the default), Cells (plain text), Life 1.05, Life 1.06,
+	Apg, LIS, or SOF.</li>
+    <li><b>Export</b> converts the pattern image into a text format, as selected
+	above, and displays it in a box below the control bar. These can then
+	be copied and pasted into a text editor or Life program.</li>
+    <li><b>Save Search</b> saves all the search criteria on the page into a
+	text string, and displays it in the box below the control bar. This
+	lets you save complex search criteria by cutting and pasting them into
+	a text file for later use.</li>
+    <li><b>Load Search</b> loads search criteria previously saved by
+	<em>save Search</em> from the text box.</li>
+</ul></p>
+</article>
+<hr class="a" /><article><a id="a9" name="a9"></a>
+<a id="still" name="still"></a>
+<h2>Search for still-life</h2>
+<p>This section lets you search for still-lifes or difficult still-lifes in
+Life by number.</p>
+<p>First, select the still-life size from the left drop-down list, from
+4&hellip;24. Next, select the type of search from the middle list, either .
+(for still-life) or # (for difficult still-life). Finally, select the still-life
+number into the right text box and press Search. If the selected still-life has
+an associated synthesis file, that file is opened.</p>
+<p>Still-lifes have numbers beginning with 1 (e.g. 14.1&hellip;619). All
+syntheses up to 14 bits are available.</p>
+<p>Difficult still-lifes are defined from 14&hellip;18 bits. From
+14&hellip;16 bits, they have numbers beginning with 1 (i.e. 14#1&hellip;4,
+15#1&hellip;18, 16#1&hellip;94), and from 17&hellip;18 bits, they have numbers
+beginning with 100 (i.e. 17#100&hellip;398 and 18#100&hellip;790). All
+difficult syntheses up to 17 bits are available.</p>
+</article>
+<hr class="a" /><article><a id="a10" name="a10"></a>
+<a id="rule" name="rule"></a>
+<h2>Search for rule</h2>
+<p>This section lets you search for outer totalistic and non-totalistic rules
+based on their arrangements of neighbors.</p>
+<p>This section displays a cellular automata rule in four formats. Any change
+made in any one of the fields is immediately reflected in all the others.</p>
+<p>At the top is a graphical map of all possible neighborhoods. The left half
+shows birth conditions, while the right half shows survival conditions. In each
+half, the numbers on the left indicate outer totalistic neighbors, while the
+images beside them show individual non-totalistic sub-neighborhoods. Clicking on
+a sub-neighborhood toggles inclusion of that sub-neighborhood, while clicking on
+a number toggles inclusion of all sub-neighborhoods that are subsets of one
+outer totalistic neighborhood. (For example, clicking on the grey 1 toggles
+birth on 1 neighbor in any position, while clicking on image beside it toggles
+birth on one diagonal neighbor.)</p>
+<p>Below this is a text table of all possible neighborhoods. This is in the same
+format as the graphical map. Each neighborhood is shown in white if it is not
+selected, and green if it is selected. Outer totalistic neighborhoods for which
+some subsets are selected but others aren&rsquo;t selected are shown in yellow.
+There are also three additional buttons at the top right. <em>Undo</em> reverses
+the action of the most recent button click. <em>Moore</em> and <em>Hex</em>
+switch between 8-cell Moore neighborhood and 6-cell hexagonal neighborhood.</p>
+<p>In the middle is a RLE-file rule string, as supported by Golly or other Life
+programs. Most Life programs accept outer totalistic rule strings. Golly also
+accepts non-totalistic strings in the Moore neighborhood, and outer totalistic
+strings in the hexagonal neighborhood. (It does not yet accept non-totalistic
+strings in the hexagonal neighborhood; to use such rules with Golly, one must
+currently copy the rule table into a file, place it in Golly&rsquo;s <em>Rules</em>
+directory, and use Golly&rsquo;s Rule Loader to load it.) Golly also supports 4-cell
+Von Neumann neighborhoods, but this search tool does not, as it only supports
+rules with two states, and Von Neumann rules need more than two states to be
+interesting.</p>
+<p>The rule string is typically of the form <em>B<i>bbb</i>/S<i>sss</i></em>,
+where <i>bbb</i> is a list of 0 or more digits representing birth conditions,
+and <i>sss</i> is a list of 0 or more digits representing survival conditions.
+For non-totalistic rules, each digit may be followed by one or more letters
+that describe specific sub-neighborhoods to be included. If most are included,
+it is easier to specify the digits, a minus sign, and a list of
+sub-neighborhoods to be excluded instead. Finally, an <em>H</em> at the end
+indicates that a hexagonal neighborhood is used, rather than the default
+Moore neighborhood. More details about this format can be found in
+Golly&rsquo;s documentation.</p>
+<p>On input, this field has a fair bit of flexibility. Letter case is ignored.
+The / may be omitted. The digits and sub-neighborhood letters may be specified
+in any order, and need not be unique. The legacy format of
+<em><i>sss</i>/<i>bbb</i></em> is also supported. Once any change is made in
+either of the two rule tables above, this rule string is re-generated in its
+canonical form.</p>
+<p>Directly below the RLE rule is a MAP rule that describes the 512 possible
+Moore neighborhoods or 128 possible hexagonal neighborhoods, encoded in base64
+encoding. (This field is read-only, and cannot be used to convert MAP rules
+into RLE rule strings.)</p>
+<p>At the bottom is a rule table, suitable for use by Golly&rsquo;s Rule Loader.
+To use this table, copy it to a text file, and save it in Golly&rsquo;s
+<em>Rules</em> directory. (This field is read-only, and cannot be used to
+convert Golly rule tables into RLE rule strings.) The description of the format
+used for this table can be found in Golly&rsquo;s documentation.</p>
+<p>Below the rule string is a link to the
+<a class="p" href="https://catagolue.hatsya.com/">Catagolue</a> search results
+for the selected rule. (This page will be empty, if no searches for that rule
+have yet been performed).</p>
+<p>If a rule is outer totalistic, an additional link is provided to David
+Eppstein&rsquo;s glider repository, showing all a list of spaceships listed there
+for the selected rule. Note that that list is merely representative, rather than
+exhaustive. In rules that have been studied extensively (such as Life), there
+may be many additional known spaceships that are not listed there.</p>
+</article>
+<hr class="a" /><article><a id="a11" name="a11"></a>
+<a id="cat" name="cat"></a>
+<h2>Search Catagolue</h2>
+<p>This section lets you search Catagolue.</p>
+<p>In the first line, select the type of search to perform:</p>
+<p><ul>
+    <li><b>Attribute</b>: This is similar to Object, but displays any additional
+	attribute information associated with a particular object.</li>
+    <li><b>Census</b>: This is the most commonly selected search. It provides
+	census information about searches for a rule, a symmetry within a rule,
+	or a category of objects within a symmetry result. From a category,
+	you can get a list of objects found in that category.</li> 
+    <li><b>Haul</b>: This provides a list of hauls related to a particular
+	rule and symmetry. You must specify whether you want to see hauls
+	that have not yet been committed, hauls that has not yet been verified,
+	or hauls that have been verified. You can also limit the list to hauls
+	submitted by a particular user.</li>
+    <li><b>Home</b>: This shows the Catagolue home page.</li>
+    <li><b>Object</b>: By entering an apgcode for an object, you can get a
+	list of all soups found that contain that object. You can also search
+	via the apgsearch of a pattern found by a previous Pattern Search.</li>
+    <li><b>Object Count</b>: This is like Census, but just shows the number of
+	objects found in each category in an editable text format arranged as
+	a CSV table.</li>
+    <li><b>Object List</b>: This is like Census, but just shows a list of all
+	objects found in an editable text format as a CSV table.</li>
+    <li><b>Rules</b>: This points to the Catagolue rules page.</li>
+    <li><b>Statistics</b>: This shows statistics about searches in the Life
+	rule.</li>
+    <li><b>Synthesis List</b> and <b>Synthesis Table</b>: These display census
+	results for a specific pattern type within a given rule. These are
+	respectively similar to Object List and Census, except the patterns are
+	sorted in order of decreasing synthesis cost, in three groups: first,
+	patterns without syntheses (showing a cost of infinity), objects, and
+	non-objects (including pseudo-objects, quasi-objects, and
+	constellations).</li>
+    <li><b>User</b>: This shows information about contributions by a specific
+	user.</li>
+</ul></p>
+<p>The other lines specify other search criteria, and are only shown if they
+apply to the search being performed.</p>
+<p>If you are performing a User or Haul search, you should enter the
+user&rsquo;s nickname or email address in the Name field.</p>
+<p>If you are performing an Object or Attribute search, you should select
+<em>Here</em> from the drop box and enter the APG code of the object. If you
+had previously used the pattern search to find the object, select <em>Pattern
+search</em> from the drop box and the result of that search will be used
+instead.</p>
+<p>If you are performing a Census, Object, Object List, Object Count,
+Synthesis List, or Synthesis Table search, you must select a rule from the
+drop down list. If the rule you want is not on the list, select
+<em>Other</em> and type in a rule. You can select <em>From Search
+rule&hellip;</em> to use the rule determined by the Search Rule section above.
+You can select <em>Any</em> in a Census search, in which case a list of the
+most recently searched rules is shown.</p>
+<p>If you are performing a Census, Object, Object List or Object Count
+search, you must select a symmetry from the drop down list. If you want
+to select a non-standard symmetry, select <em>Other</em> and type in the
+symmetry. You can select <em>Any</em> in a Census search, in which case a
+list of all common symmetries is shown.</p>
+<p>If you are performing a Census search, you can select a date, by selecting
+year, month, and day from drop down lists. If you specify a date, statistics
+are displayed as of that date. If you select <em>Any</em>, the most recent
+statistics are displayed.</p>
+<p>If you are performing a Census search, you should select an object type
+from the drop down list. If you select <em>Any</em>, a list of all categories
+for which objects have been found is shown. If you select a category, you
+must provide additional information:</p>
+<p><ul>
+    <li>For Still-lifes, you must specify the population.</li>
+    <li>For oscillators and spaceships, you must specify the period.</li>
+    <li>For puffers and guns, you must specify the repeat factor. (This is
+	usually the modulus, but is always a fraction of the period.)</li>
+    <li>The other categories (e.g. over-sized patterns, growing patterns, and
+	pathological patterns) lump all objects into a single list, so they
+	do not require any additional information.</li>
+</ul></p>
+<p>At the bottom of the table is a link to the desired Catagolue search results,
+if sufficient information has been supplied, or an error message indicating
+what information is missing.</p>
+</article>
+<hr /><article><a id="a12" name="a12"></a>
+<a id="tips" name="tips"></a>
+<h2>Tips</h2>
+<p>Some helpful search tips:</p>
+<p><ul>
+    <li>Normally, the list of patterns searched include all patterns on this
+	site that occur in detailed object lists, currently 14880 items.
+	You can also optionally search through around 107058 additional items
+	that appear on expanded object stamp pages (i.e. those that include
+	2000 or more patterns, without syntheses, 1000 per page). To avoid
+	long delays during page loads, this option is on a separate page,
+	<a class="i" target="lifesrch" href="lifxsrch.htm">Expanded search</a>.
+	On that version of the search page, the inclusion of these additional
+	patterns can be enabled by checking the check-box <em>Include expanded
+	object lists</em>. If this is disabled, the search will be as limited
+	as (and as fast as) the regular search.
+	<ul>
+	    <li>Normal search includes all Life still-lifes up to 15 bits,
+		pseudo-still-lifes up to 16 bits, period 2 oscillators up to
+		18 bits, and period 2 pseudo-oscillators up to 18 bits.</li>
+	    <li>Expanded search includes all Life still-lifes and pseudo-still-lifes
+		up to 18 bits (and symmetric ones up to 24 bits), and period
+		2 oscillators and pseudo-oscillators up to 21 bits.</li>
+	    <li>All other object types, and all other rules, are the same in
+		both kinds of search.</li>
+	</ul></li>
+    <li>If you get too many results, try to narrow down the search. When
+	searching by name, use multiple wildcards. (For example, when looking
+	for snakes on candlefrobras, try <em>*snake*frob*</em> rather than just
+	<em>*frob*</em>. It can also be helpful to narrow the search by
+	specifying a period, a range for minimum population, and/or a velocity
+	for spaceships.</li>
+    <li>If you get too few results, or none at all, try removing one search
+	criterion at a time until some results are found.</li>
+    <li>Four properties (minimum population, period, name, and image) are always
+	displayed in the search results table. Other properties are only
+	displayed if you supply search criteria for them, or if you specifically
+	sort based on those properties. To include other properties in the table
+	without actually constraining them, enable a constraint and set it to
+	<em>Any</em>.</li>
+    <li>Search speed is increased if you specify specific rules, categories,
+	populations, periods, or velocities, as these criteria automatically
+	reject entire groups of patterns without needing to examine each
+	one separately. Note that searching by pattern image also filters Life
+	still-lifes, pseudo-still-lifes, and quasi-still-lifes by implicitly
+	selecting <em>Minimum population &ge; (population of the entered image,
+	assuming all wildcards are dead)</em> and <em>Maximum population &le;
+	(population of the entered image, assuming all wildcards are
+	alive)</em>. The fastest search is to search by name for one specific
+	still-life, e.g. 12.121; such searches should be virtually
+	instantaneous.</li>
+    <li>Text representations (i.e. Apg, LIS, and SOF names) are not stored in
+	the database, but each pattern&rsquo;s representation is calculated the first
+	time it is needed. Thus, searches by name (e.g. <em>Apg begins with
+	xp3_</em> can initially take a long time, unless other constraints are
+	also supplied. Apg search names also contain implicit constraints for
+	category, period, and population, unless complicated names are used
+	(e.g. anything other than <em>is</em>, e.g. wildcards, multiple names,
+	exclusions). Searching apg search names by image, however, is faster
+	than a normal image search, because the apg search name also implicitly
+	filtered by category and period.</li>
+    <li>Image search with wildcards is extremely time-consuming, so it is
+	usually a good idea to provide as many other known criteria as possible
+	(e.g. category, period).</li>
+    <li>It is easy to convert from one Life file format to another. Simply use
+	the image search, paste the input file (which can be in any supported
+	format) into the image text box, press Search, then use the Export function
+	to export it into any other supported format.</li>
+</ul></p>
+<p>Sometimes, results can be correct, although they may seem confusing or
+counter-intuitive:</p>
+<p><ul>
+    <li>When entering numeric expressions, the * for multiplication can
+	sometimes be omitted, but not always; omitting it can sometimes yield
+	unexpected results. It can always be omitted before
+	<i>&pi;</i>, <i>&tau;</i> and <i>&straightphi;</i> (e.g. 2<i>&pi;</i> is 2*<i>&pi;</i>).
+	It can be omitted before <i>e</i> (e.g. 3e^2 is 3*<i>e</i>&sup2;), but
+	not if it&rsquo;s followed by + or &ndash;, as that indicates scientific
+	notation (e.g. 4e-2 = 0.04, not 4*<i>e</i>-2).
+	It can never be omitted with &radic;
+	(e.g. 4&radic;2 = fourth root of 2, not 4*&radic;2). It may also never
+	be omitted in any other cases not mentioned here.</li>
+    <li>In numeric expressions, implicit multiplication has a higher binding
+	precedence than exponentiation. Thus, 4<i>&pi;</i>&sup2; and 4<i>&pi;</i>^2
+	are (4*<i>&pi;</i>)&sup2; rather than 4*(<i>&pi;</i>&sup2;). This may be
+	counter-intuitive (and is, in this example, incorrect) but it is not
+	likely to be fixed soon.</li>
+    <li>The displayed form of an object is the base canonical form that
+	included in the object database. This may differ from what is entered
+	via image search. In most cases, width &ge; height, but for moving
+	patterns (e.g. spaceships, pseudo-spaceships, quasi-spaceships, and
+	puffers), movement is always in the up and/or left directions, and
+	velocity up &ge; velocity left.</li>
+    <li>Adding additional constraints can sometimes produce <em>more</em>
+	results rather than less. This often happens when one constraint
+	renders another meaningless, causing it to be ignored. For example,
+	when searching for objects with velocity &gt; 0, there are hundreds
+	of objects (spaceships and puffers), yet when the search is also
+	restricted to only still-lifes, there are thousands of results.
+	This is because velocity is meaningless for still-lifes, so it is
+	ignored, and all still-lifes are found.</li>
+    <li>Many properties (such as heat and volatility) are formally defined only
+	for periodic patterns, such as oscillators (and, implicitly, still-lifes
+	that have heat and volatility zero). Here, these definitions are
+	extended to other kinds of objects, by being treated asymptotically, as
+	limits as time goes to infinity (e.g.
+	lim<sub><i>x</i>&rarr;&infin;</sub> (statistics from generations
+	<i>xp</i>&hellip;2<i>xp</i>-1, where <i>p</i> is the pattern&rsquo;s period,
+	or 1 if the period is not regular). This allows the definitions to be
+	seamlessly extended to many other classes of objects:
+	<ul>
+	    <li>Spaceships are completely volatile (e.g. heat is finite, and
+		volatility and strict volatility are 1).</li>
+	    <li>Heat and volatility of guns are dominated by their outputs
+		(e.g. heat is infinite; volatility is that of their
+		outputs, e.g. 1).</li>
+	    <li>Heat and volatility of puffers and wick-stretchers are dominated
+		by their outputs (e.g. heat is that of the puffer if output is
+		all still-lifes, and infinite otherwise; volatility is that of
+		the output).</li>
+	    <li>Similarly, heat and volatility of breeders are dominated by
+		their guns or puffers, and they in turn by their outputs.
+		(e.g. heat is always infinite (e.g. &infin; for MMS breeders,
+		and &infin;&sup2; for all others).</li>
+	    <li>Temperature for infinitely-expanding patterns can be meaningful
+		even if heat is not (e.g. for guns, puffers, and breeders, it
+		will be that of their dominating outputs.)</li>
+	    <li>Methuselahs are dominated by their final census.</li>
+	    <li>Irregular infinitely-expanding patterns (typically in rules
+		other than Life) have infinite heat and volatility, zero
+		strict volatility, and indeterminate temperature.</li>
+	</ul></li>
+</ul></p>
+</article>
+<hr /><article><a id="a13" name="a13"></a>
+<a id="issues" name="issues"></a>
+<h2>Known issues</h2>
+<p><ul>
+    <li>Heat and volatility may be incorrect for methuselahs and growing patterns,
+	and is meaningless for not quite stable objects.</li>
+    <li>Most periodic patterns can be found by image search in any phase.
+	However, some large patterns are only listed by their main phases. These
+	include methuselahs and expanding patterns (guns, puffers, wick-stretchers
+	and breeders).</li>
+    <li>Huge patterns frequently lack accurate information about certain
+	statistics, such as pattern image, average and maximum population, heat,
+	large bounding box, hull, etc. (The only patterns currently affected are
+	the <a class="i" href="exotic.htm">huge spaceships</a> and the
+	<a class="i" href="puff.htm#puff-geminoid">Geminoid
+	replicators</a>.)</li>
+    <li>Wildcard image searches may take an extremely long time, especially if
+	the image being searched for is fairly large, and there are no other
+	constraints. It is best to apply as many other constraints as possible
+	to first narrow the search.</li>
+    <li>Search by image does not actually analyze a pattern&rsquo;s
+	behavior (other than to check if it is stable), so if a pattern is not
+	in the list of known patterns, most of its properties will not be
+	available. In particular, the associated Catagolue link will only be
+	correct if the pattern is a still-life. If it is anything else,
+	its Catagolue link assumes a prefix of <em>xp0_</em>, for generic
+	unstable pattern, unless a specific search category has been
+	selected, and an additional constraint (i.e. population for
+	still-lifes, pseudo-still-lifes, quasi-lifes, or constellations
+	containing the same; period for oscillators, pseudo-oscillators,
+	quasi-oscillators, spaceships, pseudo-spaceships, quasi-spaceships,
+	or constellations containing these).</li>
+</ul></p>
+</article>
+<hr /><article><a id="a14" name="a14"></a>
+<a id="browser" name="browser"></a>
+<h2>Browser issues</h2>
+<p><ul>
+    <li>Some browsers display text more widely than others, which can
+	sometimes cause entries in tables to wrap around.</li>
+    <li id="opera">Opera version 9 does not resize the pattern image properly.
+	Also, in the list view, when a large number of results are found (for
+	example, around 3000 or more), the sort order can be unpredictable.</li>
+    <li id="nocan">Older browsers (such as this one) that lack support for HTML
+	canvases do not support the stamp view of search results, thumbnail
+	images in the list view of search results, or pattern images below
+	search details.)</li>
+    <li>On some browsers, re-loading the page resets all form data. On some
+	others, form data is preserved. In any case, search results are not
+	preserved.</li>
+</ul></p>
+</article>
+<hr class="a" /><article><a id="a15" name="a15"></a>
+<a id="privacy" name="privacy"></a>
+<h2>Privacy policy</h2>
+<p>All searching is performed entirely in the browser; no information is sent
+to any server, so no data is collected for any purpose whatsoever. (Not that it
+likely that anyone would consider Life patterns to be highly sensitive personal
+information anyway.) Some search results provide links that go to other sites
+like Catagolue or David Eppstein&rsquo;s glider repository. Following those links
+to other sites may be subject to those sites&rsquo;s privacy policies.</p>
+</article>
+<canvas id="can" style="display:none;" width="1" height="1"></canvas>
+</main>
+<hr class="a" /><p>Related:
+    <a class="i" target="lifesrch" href="lifesrch.htm">Normal search</a>,
+    <a class="i" target="lifesrch" href="lifxsrch.htm">Expanded search</a>.</p>
+<p><b>See also:</b>
+    <a href="lifestr.htm">structure</a>,
+    <a href="lifestyl.htm">style book</a>,
+    <a href="lifeterm.htm">definitions</a>,
+    <a href="lifemeth.htm">search methodologies</a>,
+    <a href="recipe.htm">conversion recipes</a>,
+    <a href="liferule.htm">other rules</a>,
+    <a href="lifenews.htm">news</a>,
+    <a href="lifecred.htm">credits</a>,
+    <a href="lifelink.htm">links</a>,
+    <a href="lifemap.htm">site map</a>,
+    <a class="i" target="lifesrch" href="lifesrch.htm">search</a>,
+    <a class="i" target="lifesrch" href="lifxsrch.htm">expanded search</a>,
+    <a class="i" target="srchhelp" href="srchhelp.htm">search help</a>.</p>
+<p><a href="index.htm">Home page</a> |
+<a href="lifepage.htm">Life page</a></p>
+<p><a href="lifepage.htm#copyright">Copyright &copy;
+1997, 1998, 1999, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022 by Mark. D. Niemiec.
+All rights reserved</a>.<br />
+This page was last updated on <em>2022-07-03</em>.</p>
+<script type="text/javascript"><!--
+"use strict";
+function Hide (n) { document.getElementById (n).style.display = "none"; }
+function Body () {
+    if (document.getElementById ("can").getContext) {	// HTML5 canvas support
+	Hide ("nocan");
+    } else {				// No canvas: stamp view not available
+	Hide ("by"); Hide ("res"); Hide ("click"); Hide ("fixed");
+	Hide ("stamp"); Hide ("img"); Hide ("opera");
+    }
+}
+Body ();
+// -->
+</script>
+</body></html>

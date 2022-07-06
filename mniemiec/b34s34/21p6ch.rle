@@ -1,0 +1,11 @@
+#N 21p6ch.rle: Chorine: Pattern image
+#O Mark D. Niemiec's life synthesis database, Fri Jun 21 22:03:53 2013
+#C  .OO....
+#C  .O.OOOO
+#C  .O....O
+#C  .O.O.O.
+#C  O....O.
+#C  OOOO.O.
+#C  ....OO.
+x = 7, y = 7, rule = B34/S34
+bxx$bxb4x$bx4bx$bxbxbx$x4bx$4xbx$4bxx!

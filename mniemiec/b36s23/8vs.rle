@@ -1,0 +1,10 @@
+#N 8vs.rle: 8.6; Very long snake; long long snake: Synthesis
+#O Mark D. Niemiec's life synthesis database, Fri Aug 04 16:18:03 2017
+#C  OO....
+#C  O.O...
+#C  ...O.O
+#C  ....OO
+x = 69, y = 13, rule = B36/S23
+6bobo$7boo$7bo$9bo13bxxbx16boobobbo13bxx$4boobbo14bxbxx16boboobbobo11b
+xbx$3boo3b3o38boobboo11bxbx$5bo46boo13bxx$oo44bo7bo$boo43boo$o44bobo$
+49boo$49bobo$49bo!

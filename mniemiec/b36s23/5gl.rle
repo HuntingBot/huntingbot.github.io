@@ -1,0 +1,17 @@
+#N 5gl.rle: Glider; Featherweight spaceship; FWSS; 5P4H1V1.1; Glider 115: Synthesis
+#O Mark D. Niemiec's life synthesis database, Fri Aug 11 05:02:15 2017
+#C  OOO
+#C  O..
+#C  .O.
+x = 147, y = 86, rule = B36/S23
+4bo$5bo$3b3o36bobo$24b3x16boo19b3x$4bo19bx18bo20bx$3boo20bx39bx$3bobo
+36boo$41boo$43bo15$3bo$bobo$bboo$$4bo40bo$4bobo38bobo76bobo$4boo39boo
+77boo$125bo$40bobo40bo45bo$41boo41boobbo39boo$24b3x14bo22b3x16boobboo
+15b3x21bobo13b3x$8b3o13bx39bx22bobo14bx39bx$8bo16bx12bo26bx39bx39bx$9b
+o28boo43b3o$37bobo43bo42boo$84bo40boo$127bo18$bbo82bo$obo81bo$boo81b3o
+$4bo20bxx18boo72boo$4boo17bxbbx16bobbo72b3o$3bobo17bxx18boo37boo35b3o$
+64b3x16bobo18b3x12b3o3bo18b3x$45boo17bx15bo5bo17bx13boboo4boo11bxx3bx$
+45bobo17bx14boo3bo19bx12b3o3boo13b3x3bx$45bo30boo23bxx16bo6bo12b3x$75b
+obo3bobo17bxbx35b3x$77bo4bo18bx36bxbxx$138b3x$139bx5$6bo$4bobo$5boo$b
+3o18bxxbxx15booboo$3bo18bxxbxx15booboo$bbo4boo$8boo$7bo36boo$43bobo18b
+3x$45bo18bx$65bx!

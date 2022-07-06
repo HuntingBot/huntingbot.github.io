@@ -1,0 +1,14 @@
+#N 11itt.rle: Integral w/two tubs: Synthesis
+#O Mark D. Niemiec's life synthesis database, Mon Jul 13 13:59:37 2020
+#C  .O.....
+#C  O.O....
+#C  .O.O...
+#C  ...O...
+#C  ...O.O.
+#C  ....O.O
+#C  .....O.
+x = 121, y = 19
+18bo$16boo$17boo$35bx19bo19bx19bo19bx$16bo17bxbx17bobo17bxbx17bobo17bx
+bx$15boo18bxbx17bobo17bxbx17bobo17bxbx$15bobo19bx19bo19bx19bo19bx$37b
+xx18boobbo15bxbx17bobo17bxbx$21boo37bo17bxbx17bobo17bxbx$20boo38b3o16b
+xbx17bobo17bx$22bo57bx19bo$$102b3o$102bo$103bo$$oo$boo$o!

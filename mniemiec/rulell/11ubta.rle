@@ -1,0 +1,36 @@
+#N 11ubta.rle: Up boat on table; Cis-boat and table: Synthesis
+#O Mark D. Niemiec's life synthesis database, Sun Jul 19 05:14:53 2020
+#C  OO.OO.
+#C  .O.O.O
+#C  .O..O.
+#C  OO....
+x = 194, y = 126
+59bobo$59boo$60bo3$49bobo$50boo$50bo6$52bo$50bobo$51boo9$60bo$3bobo13b
+obo5bx19bo10boo$4boo13boo5bxbx17bobo6bo3boo5bxbbx16bobbo16bxbbx$4bo15b
+o5bxx18boo8boo8b4x16b4o16b4x$55boo$26bxx18boo18bxx18boo18bxx$26bxbx17b
+obo17bxbx17boo18bxbx$14bo12bx19bo19bx39bx$10boboo$8bobobboo73boobboo$
+9boo76bobobbobo$89bobbo7$79bo23byy4b3y24bo7b3y4byy$77boo24byy32boo12b
+yy$78boo56boo$$81bo27b3y22bo9b3y$81boo3b3o38b3o3boo$80bobo50bobo$105b
+yy42byy$105byy42byy$bbobbo44bobbo$obobbobo40bobobbobo$boobboo42boobboo
+$105bxx42bxx$25bxx42bxx35bx42bx$6bobbo15bx3bx16bobbo16bx3bx15bobbo15bx
+3bx16bobbo16bx3bx$6b4o16b4x16b4o16b4x16b4o16b4x16b4o16b4x$$6boo18bxx
+18boo18bxx18boo18bxx18boo18bxx$6bobo17bxbx17bobo17bxbx17bobo17bxbx17bo
+bo17bxbx$7bo19bx19bo19bx19bo19bx19bo19bx6$81bo52bo$82bo50bo$80b3o50b3o
+3$4bo46bo32bo46bo$4bobo17bx24bobo19bx12bobo16bxx24bobo19bxx$4boo17bxbx
+24boo18bxbx11boo17bxbx24boo18bxbx20bo$24bxbx42bxbx32bxbx42bxbx19boo19b
+x$6bobbo15bx3bx16bobbo16bx3bx15bobbo15bx3bx16bobbo16bx3bx15bobbobboo
+12bxbbxbxbx$6b4o16b4x16b4o16b4x16b4o16b4x16b4o16b4x16b4o16b4xbxx$$6boo
+18bxx18boo18bxx18boo18bxx18boo18bxx18boo18bxx$6bobo17bxbx17bobo17bxbx
+17bobo17bxbx17bobo17bxbx17bobo17bxbx$7bo19bx19bo19bx19bo19bx19bo19bx
+19bo19bx11$110bobo12bo$110boo13bobo$bboo107bo13boo$3boo$bbo3bobbo16bo
+bbo16bobbo16bobbo16bobbo16bobbo16bobbo16bobbo$6b4o16b4o16b4o16b4o16b4o
+16b4o16b4o16b4obboo$151boo$6boo18boo18boo18boo18boo18boo18boo18boo5bo$
+6bobo17bobo17bobo17bobo17bobobbo14bobo17bobo17bobo$7bo14boo3bo19bo19bo
+19bobbo16bo19bo19bo$23boo65b3o$22bo44boo$44b3o19bobo$46bo21bo$45bo6$
+43bo19bobo20bo19bobo18bobo$44bo19boo18bobo20boo19boo$42b3o19bo20boo20b
+o20bo$$6bobbo12bo3bobbo16bobbo16bobbo16bobbo16bobbo16bobbo16bobbo16bo
+bbo16bobbo$6b4o13boob4o16b4o16b4o16b4o16b4o16b4o16b4o16b4o16b4o$bbo19b
+oo$3booboo18boo18boo18boo18boo18boo18boo18boo18boo18boo$bboobbobo17bob
+o17bobo17bobo17bobo17bobo17bobo17bobo17bobo17bobo$7bo19bo19bo19bo19bo
+19bo19bo19bo19bo19bo$150b3o$150bo18boo16boo$151bo17bobo15bobo$169bo17b
+o!

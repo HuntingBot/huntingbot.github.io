@@ -1,0 +1,10 @@
+#N 24o2.rle: 24-bit P4 c/2 spaceship: Pattern image
+#O Mark D. Niemiec's life synthesis database, Sat Oct 28 18:05:19 2017
+#C  ....OOOO....
+#C  ....O..O....
+#C  OOO.O..O.OOO
+#C  O.O.O..O.O.O
+#C  ............
+#C  ..O..OO..O..
+x = 12, y = 6, rule = B3/S2aei3aeijr4-cknqy
+4b4x$4bxbbx$3xbxbbxb3x$xbxbxbbxbxbx$$bbxbbxxbbx!

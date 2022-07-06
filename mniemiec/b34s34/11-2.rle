@@ -1,0 +1,9 @@
+#N 11-2.rle: 11.2; Small dollar: Synthesis
+#O Mark D. Niemiec's life synthesis database, Sat Mar 08 01:56:22 1997
+#C  .O.OO..
+#C  OO.O.OO
+#C  ..OO.O.
+x = 48, y = 11, rule = B34/S34
+12boo$11bobbo3b4o$12boo5boo25bx$12boo8bo9bo13bxx$o9bo11b3o6boo12bx$oo
+6b3o11b3o6boo12b3x$oo6b3o11bo9bo14bx$o9bo8boo24bxx$12boo5boo25bx$11b4o
+3bobbo$19boo!

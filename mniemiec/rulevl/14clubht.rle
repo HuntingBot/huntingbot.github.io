@@ -1,0 +1,13 @@
+#N 14clubht.rle: Snorkel loop w/up boat; Claw w/up boat w/hooked tail: Synthesis
+#O Mark D. Niemiec's life synthesis database, Tue Sep 01 02:59:09 2020
+#C  OO.....
+#C  O.O....
+#C  .O.O.OO
+#C  ...O.O.
+#C  ..O..O.
+#C  ...OO..
+x = 156, y = 52
+36bo$34boo$35boo29$39by49bo$39by49bo$39by49bo$$14bo71boo$12boo71bobo$
+13boo72bo$$13bo40bxx48boo48bxx$12boo39bxbx47bobo47bxbx$12bobo34bxxbxbx
+44boobobo44bxxbxbx$bo48bxbx47bobo47bxbx$boo47bxbbx46bobbo46bxbbx$obo
+48bxx48boo48bxx5$6bo$6boo$5bobo!

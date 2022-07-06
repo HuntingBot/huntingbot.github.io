@@ -1,0 +1,15 @@
+#N 14idbug.rle: Integral w/down boat and up barge: Synthesis
+#O Mark D. Niemiec's life synthesis database, Tue Jul 07 17:48:30 2020
+#C  .OO.....
+#C  O.O.....
+#C  .O......
+#C  ..OOO...
+#C  .....O..
+#C  ....O.O.
+#C  .....O.O
+#C  ......O.
+x = 122, y = 19
+18bo$16boo$17boo$35bx19bo19bx19bo19bx$16bo17bxbx13bo3bobo17bxbx17bobo
+17bxbx$15boo18bxbx13bo3bobo16bxxbx16boobo16bxxbx$15bobo19bx11b3o5bo19b
+x19bo19bx$37bxx18boo18bxx18boobbo15bxbx$21boo77bo17bxbx$20boo27b3o48b
+3o16bxbx$22bo28bo68bx$50bo5$oo$boo$o!

@@ -1,0 +1,10 @@
+#N 18spsp1.rle: Cis skewed poles: Pattern image
+#O Mark D. Niemiec's life synthesis database, Sat Aug 05 02:16:11 2017
+#C  OO........OO
+#C  O..........O
+#C  .O.O....O.O.
+#C  ...OO..OO...
+#C  ....O..O....
+#C  ....O..O....
+x = 12, y = 6, rule = B36/S23
+xx8bxx$x10bx$bxbx4bxbx$3bxxbbxx$4bxbbx$4bxbbx!

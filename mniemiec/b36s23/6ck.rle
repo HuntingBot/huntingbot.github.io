@@ -1,0 +1,13 @@
+#N 6ck.rle: Clock: Synthesis
+#O Mark D. Niemiec's life synthesis database, Fri Aug 04 03:29:06 2017
+#C  .O..
+#C  .O.O
+#C  O.O.
+#C  ..O.
+x = 103, y = 36, rule = B36/S23
+81bobo$81boo$82bo$$78bo$79boo19bx$78boo20bxbx$82boo15bxbx$81boo18bx$
+83bo$$79bo$79boo$78bobo5$79bobo$79boo$80bo$$75bobo$76boo$o3bo71bo$boob
+obo79bo13bx$oobboo16bx19bo13bxx4bx13boo4bo3bobo11bxbx$21bxbx11boo4bobo
+11bxbbxbbxbx11bobbobbobobboo11bxbx$6b3o13bx11bobo5bo13bxx4bx13boo4bo
+18bx$6bo29bo36bo$7bo30boo33boo9bo$38bobo31bobo8boo$38bo44bobo$80boo$
+79bobo$81bo!

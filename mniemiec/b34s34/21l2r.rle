@@ -1,0 +1,9 @@
+#N 21l2r.rle: M1 between two loaves: Pattern image
+#O Mark D. Niemiec's life synthesis database, Wed Nov 20 03:23:05 2013
+#C  O...............
+#C  OO...OOO.....OOO
+#C  OOO....O.....OO.
+#C  ....O..O.....O..
+#C  .....OOO........
+x = 16, y = 5, rule = B34/S34
+x$xx3b3x5b3x$3x4bx5bxx$4bxbbx5bx$5b3x!

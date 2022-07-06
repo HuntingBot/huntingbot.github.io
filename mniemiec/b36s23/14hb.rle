@@ -1,0 +1,23 @@
+#N 14hb.rle: 14.393; Half bakery; Loaf side tie loaf; Loaf on loaf; Bi-loaf 1: Synthesis
+#O Mark D. Niemiec's life synthesis database, Wed Aug 23 23:05:14 2017
+#C  .OO....
+#C  O..O...
+#C  .O.O...
+#C  ..O.OO.
+#C  ...O..O
+#C  ....O.O
+#C  .....O.
+x = 114, y = 82, rule = B36/S23
+71bxx38bxx$56bo13bxbbx36bxbbx$55bo14bxbx19bo17bxbx$55b3o10bxxbx21boo
+13bxxbx$52boo13bxbbx21boo13bxbbx$47bo5boo12bxbx17bo7b3o9bxbx$48boobbo
+15bx19boo5bo12bx$47boo38boo7bo12$93bo$11bo36bo44bobo15bxx$11bobo35bo
+43boo15bxbbx$11boo34b3o60bxbx$31bxx18boo19bx19bo15bxxbx$9b3o18bxbbx16b
+obbo17bxbx17bobo13bxbbx$11bo18bxbx17bobo17bxbx17bobo14bxbx$10bo20bx19b
+o19bx14b3obbo16bx$88bo$87bo10$49bobo$50boo$50bo20bx19bo3b3o13bxx$53bo
+16bxbx17bobobbo14bxbbx$45bobo4boo16bxx18boo4bo13bxbx$46boo4bobo13bxx
+18boo4bo13bxxbx$46bo20bxbx17bobo4boo11bxbbx$49bo18bx19bo4bobo11bxbx$
+48boo34bo23bx$48bobo34boo$84boobboo$87bobo$89bo11$93bobo$94boo$94bo$$
+96bobo$92bo3boo$50bo42boobbo$bbo47bobo39boo$obo47boobboo$boo50boo56bxx
+$55bo15bx19bo18bxbbx$5bo24bx19bo19bxbx17bobo17bxbx$6boobo19bxbx17bobo
+17bxbx17bobo16bxxbx$5boobbobo16bxbx17bobo17bxbx17bobo16bxbbx$9boo18bx
+19bo19bx13bobo3bo17bxbx$78bo5boo22bx$79boo3bo$78boo$82boo$83boo$82bo!

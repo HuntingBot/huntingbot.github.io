@@ -1,0 +1,14 @@
+#N 11dlft.rle: Down loaf w/tail; Trans-loaf w/tail: Synthesis
+#O Mark D. Niemiec's life synthesis database, Mon Aug 31 19:35:37 2020
+#C  OO....
+#C  .O....
+#C  .O.OO.
+#C  ..O..O
+#C  ...O.O
+#C  ....O.
+x = 111, y = 30
+65bxx18boo18bxx$51bo14bx19bo19bx$43bo7bobo12bxbx17bobo17bxbxx$43boo6b
+oo14bxbx17bobo17bxbbx$42bobo23bx19bo19bxbx$49bo59bx$49boo36boo$48bobo
+36bobo$87bo11$bbobo36boo$3boo37boo21bxx18boo18bxx$3bo21bxx14bo3boo19bx
+19bo19bx$25bxx18boo19bxbx17bobo17bxbxx$3o64bxx18boo18bxbbx$bbo105bxbx$
+bo45boo60bx$47bobo43boo$47bo41booboo$88bobo3bo$90bo!

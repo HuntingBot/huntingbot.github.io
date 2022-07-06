@@ -1,0 +1,8 @@
+#N 34-p20.rle: Period 20 oscillator: Stamp collection
+#O Mark D. Niemiec's life synthesis database, Wed Feb 19 22:07:53 2014
+x = 125, y = 30, rule = B34/S34
+5$5boo3bo24boo3bo24boo3bo8boo3bo10boo3bo$5b3o27b3o27b3o11b3o13b3o$6bo
+29bo29bo13bo15bo$9bo29bo29bo13bo15bo$8b3o27b3o27b3o11b3o13b3o$5bo3boo
+24bo3boo24bo3boo6bo5boo10bo3boo$$42boo3bo24boo5bo22boo3bo$42b3o27b3o
+27b3o$43bo29bo29bo$46bo29bo29bo$45b3o27b3o27b3o$42bo3boo24bo3boo24bo3b
+oo$$109boo3bo$109b3o$110bo$113bo$112b3o$109bo3boo!

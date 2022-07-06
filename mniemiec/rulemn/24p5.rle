@@ -1,0 +1,12 @@
+#N 24p5.rle: 24-bit P5: Pattern image
+#O Mark D. Niemiec's life synthesis database, Wed Jul 24 02:24:57 2013
+#C  OO......OO
+#C  .O......O.
+#C  .OOO..OOO.
+#C  ..........
+#C  ..........
+#C  .OOO..OOO.
+#C  .O......O.
+#C  OO......OO
+x = 10, y = 8, rule = B3/S2ae3aeijr4-ckqy
+xx6bxx$bx6bx$b3xbb3x3$b3xbb3x$bx6bx$xx6bxx!

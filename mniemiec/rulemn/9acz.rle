@@ -1,0 +1,9 @@
+#N 9acz.rle: Carrier siamese Z: Synthesis
+#O Mark D. Niemiec's life synthesis database, Fri Jul 19 03:07:38 2013
+#C  OO...O
+#C  O..OOO
+#C  ..OO..
+x = 68, y = 28, rule = B3/S2ae3aeijr4-ckqy
+50bo$48boobo$48b4o$50bo4$3bo6b3o40boo$bboboo4bo42bo$bb3o5boo41b3o$3bo$
+22bxx18boo18bxx3bx$boo19bxbbx16bobbo16bxbb3x$bbo21bxx18boo18bxx$3o5$
+47boo$47boo$46boboo$47boo$$49bo$48b4o$48boboo$49bo!

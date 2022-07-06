@@ -1,0 +1,12 @@
+#N 16mbhnz.rle: Medium blinker on z on hand: Partial synthesis
+#O Mark D. Niemiec's life synthesis database, Sat May 02 23:00:32 2020
+#C  O....O..
+#C  O..OOO..
+#C  O..O....
+#C  O....OOO
+#C  ....OOO.
+#C  ......O.
+x = 78, y = 22
+40bo$bx19bo17boo30bx$b3x17b3o15b4o28b3x$3x17b3o17boo28b3x4bx$4bx19bo
+49bxbbx$bb3x17b3o47b3xbbx$bbx19bo17boo30bx4bx$39b4o$39boo$40bo9$64boo$
+63b3o$62boobo$62b3o!

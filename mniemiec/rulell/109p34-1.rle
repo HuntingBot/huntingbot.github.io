@@ -1,0 +1,45 @@
+#N 109p34-1.rle: 109P34.1: Partial synthesis
+#O Mark D. Niemiec's life synthesis database, Fri Jun 04 19:37:45 2021
+#C  .......OO....................OO.......
+#C  .OO...O.O....................O.O...OO.
+#C  ..O...O........................O...O..
+#C  ..O.OO.OOOO................OOOO.OO.O..
+#C  ...O..O...O................O...O..O...
+#C  ....OO..O...................OO..O.....
+#C  .....O.OO....................OOOO.....
+#C  ...O....O.O................O....O.O...
+#C  .OOO.OO..OO................OO..OO.OOO.
+#C  O....O..........................O....O
+#C  .OOO.O..........................O.OOO.
+#C  ...OO...OO.OO.......O....OO.OO...OO...
+#C  .........O.OO......OO....OO.O.........
+#C  .........O..........O.......O.........
+#C  ........OO..................OO........
+x = 188, y = 58
+57bxx20bxx26boo20boo26bxx20bxx$51bxx3bxbx20bxbx3bxx14boo3bobo20bobo3b
+oo14bxx3bxbx20bxbx3bxx$52bx3bx24bx3bx16bo3bo24bo3bo16bx3bx24bx3bx$52bx
+bxxb4x16b4xbxxbx16boboob4o16b4oboobo16bxbxxb4x16b4xbxxbx$53bxbbx3bx16b
+x3bxbbx18bobbo3bo16bo3bobbo18bxbbx3bx16bx3bxbbx$55bxbbxx19bxbbxx21bobb
+oo19bobboo21bxbbxx19bxbbxx$55b4x20bxxbx22b4o20boobo22b4x20bxxbx$53bxbx
+4bx16bxbx4bx18bobo4bo16bobo4bo18bxbx4bx16bxbx4bx$51b3xbxxbbxx16bxxbbxx
+b3x14b3oboobboo16boobboob3o14b3xbxxbbxx16bxxbbxxb3x$50bx4bx26bx4bx12bo
+4bo26bo4bo12bx4bx26bx4bx$51b3xbx26bxb3x14b3obo26bob3o14b3xbx26bxb3x$
+53bxx3bxxbxx12bxxbxx3bxx18boo3booboo12booboo3boo18bxx3bxxbxx4bx7bxxbxx
+3bxx$59bxbxx12bxxbx30boboo12boobo30bxbxx4bxx6bxxbx$59bx18bx30bo18bo30b
+x7bx10bx$58bxx18bxx28boo18boo28bxx18bxx$116bo$116boo$115bobo$$125bo$
+124boo$124bobo9$7boo20boo26bxx20bxx26boo20boo26bxx20bxx$boo3bobo20bobo
+3boo14bxx3bxbx20bxbx3bxx14boo3bobo20bobo3boo14bxx3bxbx20bxbx3bxx$bbo3b
+o24bo3bo16bx3bx24bx3bx16bo3bo24bo3bo16bx3bx24bx3bx$bboboob4o16b4oboobo
+16bxbxxb4x16b4xbxxbx16boboob4o16b4oboobo16bxbxxb4x16b4xbxxbx$3bobbo3bo
+16bo3bobbo18bxbbx3bx16bx3bxbbx18bobbo3bo16bo3bobbo18bxbbx3bx16bx3bxbbx
+$5bobboo19bobboo21bxbbxx19bxbbxx21bobboo19bobboo21bxbbxx19bxbbxx$5b4o
+20boobo22b4x20bxxbx22b4o20boobo22b4x20bxxbx$3bobo4bo16bobo4bo18bxbx4bx
+16bxbx4bx18bobo4bo16bobo4bo18bxbx4bx16bxbx4bx$b3oboobboo16boobboob3o
+14b3xbxxbbxx16bxxbbxxb3x14b3oboobboo16boobboob3o14b3xbxxbbxx16bxxbbxxb
+3x$o4bo26bo4bo12bx4bx26bx4bx12bo4bo26bo4bo12bx4bx26bx4bx$b3obo26bob3o
+14b3xbx26bxb3x14b3obo26bob3o14b3xbx26bxb3x$3boo3booboo4bo7booboo3boo
+18bxx3bxxbxx4bx7bxxbxx3bxx18boo3booboo4bo7booboo3boo18bxx3bxxbxx4bx7b
+xxbxx3bxx$9boboo4boo6boobo30bxbxx4bxx6bxxbx30boboo4boo6boobo30bxbxx4b
+xx6bxxbx$9bo7bo10bo30bx7bx10bx30bo7bo10bo30bx7bx10bx$8boo18boo28bxx18b
+xx28boo18boo28bxx18bxx4$70bx$71bxx$70bxx50bo$121boo$121bobo48bx$173bx$
+171b3x$28b3o$28bo$29bo!

@@ -1,0 +1,12 @@
+#N 14dmbl.rle: Blinker on diamond: Synthesis
+#O Mark D. Niemiec's life synthesis database, Thu Sep 28 22:22:16 2017
+#C  ..OO...
+#C  .O..O.O
+#C  O.O.O.O
+#C  .O..O.O
+#C  ..OO...
+x = 69, y = 27, rule = B36/S23
+bo$bbo$3o$$7bo$5bobo$6boo$$54bo$6b3o43boo$8bo44boo$7bo16bxx3bxx13boo3b
+oo13bxx$23bxbbxbxbbx11bobbobobbo5bobo3bxbbxbx$22bxbxbxbxbxbx9bobobobob
+obo4boo3bxbxbxbx$23bxbbxbxbbx11bobbobobbo6bo4bxbbxbx$7bo16bxx3bxx13boo
+3boo13bxx$6bo46boo$6b3o43boo$54bo$$7boo$7bobo$7bo$$12b3o$12bo$13bo!

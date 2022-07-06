@@ -1,0 +1,13 @@
+#N 17besbt.rle: Boat on bookend siamese bookend: Synthesis
+#O Mark D. Niemiec's life synthesis database, Tue Sep 01 05:29:12 2020
+#C  OO...OO
+#C  O..O..O
+#C  .OOOOO.
+#C  .......
+#C  ...O...
+#C  ..O.O..
+#C  ..OO...
+x = 65, y = 23
+6bo$5bo$5b3o4$18bxx3bxx13boo3boo13bxx3bxx$18bxbbxbbx13bobbobbo13bxbbx
+bbx$3bobo13b5x15b5o15b5x$3boo$4bo16bx19bo19bx$20bxbx17bobo17bxbx$boo
+12b3ybbxx13b3obboo18bxx$oo$bbo28b3o$33bo$32bo4$6boo$5boo$7bo!

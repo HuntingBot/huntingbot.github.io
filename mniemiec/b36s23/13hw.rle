@@ -1,0 +1,19 @@
+#N 13hw.rle: Heavyweight spaceship; HWSS; Big fish; 13P4H2V0.1: Synthesis
+#O Mark D. Niemiec's life synthesis database, Wed Aug 23 22:55:49 2017
+#C  OOO..
+#C  O..O.
+#C  O....
+#C  O...O
+#C  O...O
+#C  O....
+#C  .O.O.
+x = 151, y = 49, rule = B36/S23
+45bobo$46boo$46bo19b3x$6bo59bxbbx$4bobo19bxx18boo18bx$5boo19bxx18boo
+18bx3bx$bboo38b3o21bx3bx$bobo40bo21bx$3bo39bo4b3o16bxbx$48bo$49bo17$
+124bobo$125boo$125bo$5bobo37bobo37bobo$6boo38boo38boo$bo4bo19b3x12bo4b
+o19b3x17bo19b3x11bo5boo18b3x$bbo23bxbbx12bo23bxbbx36bxbbx11boobbobbo
+17bxbbx$3o3boo18bx13b3o3boo18bx13bo5boo18bx13boo3bobbo17bx$7bo18bx3bx
+16bo18bx3bx7bobo6bo18bx3bx15boo18bx3bx$6bo19bx3bx15bo19bx3bx8boo4bo20b
+x3bx35bx3bx$6bobo17bx19bobo17bx18boo19bx15boo22bx$7boo18bxbx17boo18bxb
+x37bxbx5boo4bobo23bxbx$82boo30bobo6bo$7bo36b3o34bobo3boo27bo$6boo36bo
+bbo35bobbobo$6bobo35bo43bo$44bo$45bobo$$77bo$77boo$76bobo!

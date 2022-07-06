@@ -1,0 +1,11 @@
+#N 25p4hc.rle: Half cross: Pattern image
+#O Mark D. Niemiec's life synthesis database, Sun May 05 09:14:08 2013
+#C  OO.OO..
+#C  .OOO.O.
+#C  O...O.O
+#C  .OOO.OO
+#C  O..O.O.
+#C  ...O.OO
+#C  ..O.O.O
+x = 7, y = 7, rule = B34/S34
+xxbxx$b3xbx$x3bxbx$b3xbxx$xbbxbx$3bxbxx$bbxbxbx!

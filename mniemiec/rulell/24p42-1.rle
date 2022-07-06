@@ -1,0 +1,16 @@
+#N 24p42-1.rle: 24P42.1; 12P14.1 and star sharing sparks: Synthesis
+#O Mark D. Niemiec's life synthesis database, Fri Jun 19 14:34:18 2020
+#C  .OOO............
+#C  ................
+#C  O...........O...
+#C  O...O.....O...O.
+#C  O...O......O.O..
+#C  O........O.....O
+#C  ...........O.O..
+#C  .OOO......O...O.
+#C  ............O...
+x = 70, y = 21
+23b4x16b4o16b4x$oo5bo13bx6bx12bo6bo12bx6bx$boo4bobo11bx6bx12bo6bo12bx
+6bx$o6boo12bx6bx12bo6bo12bx6bx$24bxx18boo18bxx3$54bobo$54boo$55bo10bx$
+64bx3bx$9boo54bxbx$8boo53bx5bx$10bo54bxbx$64bx3bx$66bx3$39b3o$41bo$40b
+o!

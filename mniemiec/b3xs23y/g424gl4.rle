@@ -1,0 +1,14 @@
+#N g424gl4.rle: Period 424 (mod 106) rotating glider gun: Synthesis
+#O Mark D. Niemiec's life synthesis database, Wed Jan 17 20:25:58 2018
+#C  .OOO....O.
+#C  O........O
+#C  O.........
+#C  O...O.....
+#C  .O..O.....
+#C  ..OO......
+x = 353, y = 206
+175bo$175bobo$175boo8$166bobo$166boo$167bo30$315bxx$314bxbx$316bx34$
+218bxx$218bxbx$218bx23$258bx$259bx$bo$bbo$3o22bx39bo$24bxbx37bobo188b
+xx$3b3o18bxbx37bobo187bx4bx$5bo19bx39bo188bx4bx$4bo250bx3bx$256b3x10$
+254bx$254bxbx$254bxx68$352bx$350bxbx$351bxx7$171bo$170boo$170bobobb3o$
+175bo$176bo!

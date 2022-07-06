@@ -1,0 +1,18 @@
+#N 20p13-1.rle: 20P13.1: Synthesis
+#O Mark D. Niemiec's life synthesis database, Sat Aug 22 00:16:52 2020
+#C  OO...OO...
+#C  OO..OO....
+#C  ..........
+#C  .........O
+#C  ........OO
+#C  ...OO...O.
+#C  ...OO.....
+#C  ..........
+#C  ........OO
+#C  ........OO
+x = 103, y = 26
+72bo$72bobo4bobo$72boo5boo$80bo$11bo$6bo3bo$7boob3o24bx29bo$6boo28bxbx
+27bobo27bxx3bxx$37bxx28boo28bxxbbxx$$bobo29bx29bo29bx$bboo28bxbx27bobo
+28bxx$bbo30bxx3bxx23boo3boo7boo15bx3bxx$38bxx28boo7bobo18bxx$boo7boo
+65bo$obo6boo82bxx$bbo3boo3bo44b3o34bxx$5bobo50bo$7bo49bo3$68b3o$68bo$
+57boo10bo$58boo$57bo!

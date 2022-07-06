@@ -1,0 +1,9 @@
+#N 6blbl15.rle: Two blinkers offset (5;  1): Synthesis
+#O Mark D. Niemiec's life synthesis database, Fri Jul 31 05:28:45 2020
+#C  OOO.....
+#C  .....OOO
+x = 128, y = 30
+4bo$bboo$3boo$20b3x$25b3x$3boo$4boo$3bo10$99bo$100bo$82bobo13b3o$83boo
+31bo$83bo33boo$116boo$3o17b3o17b3o17b3o17b3o17b3o17b3o$5b3o17b3o17b3o
+17b3o17b3o17b3o17b3o$$bboo18boo$3boo16bobo18boo22boo$bbo20bo19boo20bob
+o$42bo24bo!

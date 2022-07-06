@@ -1,0 +1,13 @@
+#N 24be2bt2.rle: Boats on bookends: Synthesis
+#O Mark D. Niemiec's life synthesis database, Wed Jun 02 21:48:54 2021
+#C  OO....O.
+#C  O..O.O.O
+#C  .OOO.OO.
+#C  ........
+#C  .OOO.OO.
+#C  O..O.O.O
+#C  OO....O.
+x = 75, y = 12
+3bobo48bo$4boo21bxx18boo3boo13bxx4bx$4bo22bxbbx16bobbobboo12bxbbxbxbx$
+28b3x17b3o17b3xbxx$boo$obo25b3x17b3o17b3xbxx$bbo24bxbbx16bobbobboo12bx
+bbxbxbx$27bxx18boo3boo13bxx4bx$54bo$8boo$8bobo$8bo!

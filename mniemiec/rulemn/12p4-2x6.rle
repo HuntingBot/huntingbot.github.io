@@ -1,0 +1,13 @@
+#N 12p4-2x6.rle: 2x6 block: Synthesis
+#O Mark D. Niemiec's life synthesis database, Mon Oct 30 05:59:03 2017
+#C  OOOOOO
+#C  OOOOOO
+x = 133, y = 100, rule = B3/S2aei3aeijr4-cknqy
+117bo$115boobo$116b3o$117bo$$116boo$90bxx12boo4boo3boobo8b6x$67b3o20b
+xx11bo6boo4boo9b6x$69bo36bo9boo$68boo35boo$$70bo$69b3o35boo$68boobo34b
+3o$70bo35bo15$61bo$62bo$59boboo$44byy13b3obboo$44byy18boo$21bo$21bobo
+17byy18boo$21b3o17byy18boo8$13boo$12boboo$15bo$14boo9$21bo$21bobo$21b
+3o$$45bxx18boo18bxx18boo$45bx19bo19bx19bo$44bx5bx13bo5bo13bx5bx13bo5bo
+$45b3xbxx14b3oboo14b3xbxx14b3oboo$46bxx18boo18bxx18boo$$13boo112b6x$
+12boboo111b6x$15bo90b3o$14boo89boobo$105bo$106bo3$bo$boo4bo$oboobboo$b
+oobboobo$6boo18$7bo$5b4o$5boobo$7bo!

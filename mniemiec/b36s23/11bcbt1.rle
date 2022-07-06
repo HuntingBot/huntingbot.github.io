@@ -1,0 +1,9 @@
+#N 11bcbt1.rle: Up boat on beacon: Synthesis
+#O Mark D. Niemiec's life synthesis database, Fri Aug 11 04:26:31 2017
+#C  OO......
+#C  O.....O.
+#C  ...O.O.O
+#C  ..OO.OO.
+x = 65, y = 12, rule = B36/S23
+bo$bbo$3o$21bxx18boo18bxx$21bx19bo19bx$3bo20bx19bo19bx$3bobo17bxx18boo
+18bxx$3boo$63bxx$oo39b3o18bxbx$boo40bo19bx$o41bo!

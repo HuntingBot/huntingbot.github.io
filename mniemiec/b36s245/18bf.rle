@@ -1,0 +1,10 @@
+#N 18bf.rle: Butterfly: Pattern image
+#O Mark D. Niemiec's life synthesis database, Fri May 01 01:01:23 2020
+#C  ..O..O..
+#C  ...OO...
+#C  OO.OO.OO
+#C  ...OO...
+#C  .O.OO.O.
+#C  ...OO...
+x = 8, y = 6
+bbxbbx$3bxx$xxbxxbxx$3bxx$bxbxxbx$3bxx!

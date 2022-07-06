@@ -1,0 +1,29 @@
+#N 6bg.rle: Barge: Synthesis
+#O Mark D. Niemiec's life synthesis database, Sun Dec 20 17:20:06 2020
+#C  .O..
+#C  O.O.
+#C  .O.O
+#C  ..O.
+x = 188, y = 118
+4bo$5bo$3b3o19bx39bx$24bxbx37bxbx$7boo16bxbx37bxbx$7bobo16bx18boo19bx$
+7bo37boo8$43bobo$44boo$44bo28byy$72bybby$46boo24bybby$46boo25byy4$68by
+$48boo17byby$48boo16bybby$67byy6$5bo19bx19bo19bx19bo19bx19bo19bx19bo
+19bx$4bobo17bxbx17bobo17bxbx17bobo17bxbx17bobo17bxbx17bobo17bxbx$5bo
+19bxbx17bobo17bxbx17bobo17bxbx17bobo17bxbx17bobo17bxbx$26bx19bo19bx19b
+obo17bx20bo18bx20bo18bx$11bo18by19bo36bo38bo39bo$9boo18byby17bobo38boo
+34boo38boo$10boo16bybby16bobbo38bobo56byy$5b3o21byy18boo3boo34bo38bo
+18bybby14bo18byy$7bo45boo73boo19byy14boo17bybby$6bo48bo72bobo34bobo16b
+ybby$185byy10$5bo19bx28booboo6bx19bo19bx19bo19bx$4bobo17bxbx25bobboobo
+5bxbx17bobo17bxbx17bobo17bxbx$5bobo17bxbx24boo11bxbx17bobo17bxbx17bobo
+17bxbx$7bo18bx21boo16bx20bo18bx20bo18bx$6bo42boo35bo39bo$6boo40bo36bo
+39bo$85boo37bo$7bo19byy95boo$7boo17bybby54bo$6bobo17bybby53boo38bo$27b
+yy54bobo36boo$122bobo4$131bo$130bo$130b3o3$5bo19bx19bo19bx19bo19bx19bo
+4b3o12bxx$4bobo17bxbx17bobo17bxbx17bobo17bxbx17bobo3bo13bxbbx$5bobo17b
+x19bobo15bxbbx18bobo15bxbbx18bobo3bo13bxbx$6bo39bo17bxx20bo17bxx20bo
+19bx$9boo$9bobo34boo38boo$9bo35bobo38bobo$47bo38bo13$5bo19bx19bo19bx
+19bo19bx$4bobo17bxbx17bobo17bxbx17bobo17bxbx$5bobo17bxbx17bobo17bxbx
+17bobo17bxbx$6bo19bxbx17bobo17bxbx17bobo17bxbx$27bx19bo19bx19bo19bxx$
+12bo18by19bo39bo$10boo18byby17bobo37bobobboo$11boo16bybby16bobbo36bobb
+oboo$6b3o21byy18boo3boo33boo4bo$8bo45boo$7bo48bo7$81bo$82bo$80b3o$5bo
+19bo19bo15bo3bo19bo$3obobo17bobo17bobo15bobobo17bobo$bbobbobo12boo3bob
+o17bobo12b3obbobo17bobo$bo4bo14boo3bo13b3o3bo19bo19bo$20bo21bo$41bo!

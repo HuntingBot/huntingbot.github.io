@@ -1,0 +1,12 @@
+#N 13-15.rle: 13.15; Hand on tub w/shoe: Partial synthesis
+#O Mark D. Niemiec's life synthesis database, Sat Apr 25 01:42:08 2020
+#C  .O.O..
+#C  O.OO..
+#C  .O....
+#C  ...OOO
+#C  ..OOO.
+#C  ....O.
+x = 46, y = 28
+bx19bo19bx$b3x17b3o17b3x$3x17b3o17b3x$4bx19bo19bx$bb3x17b3o17bxxbx$bbx
+19bo19bxbx6$21b4obb4o$21boobobboboo$23boobboo$23boobboo10$19boo$18b4o$
+20boo$20bo!

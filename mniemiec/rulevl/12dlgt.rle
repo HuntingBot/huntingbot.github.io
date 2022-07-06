@@ -1,0 +1,12 @@
+#N 12dlgt.rle: Down long barge w/tail: Synthesis
+#O Mark D. Niemiec's life synthesis database, Mon Aug 31 17:18:37 2020
+#C  OO...O.
+#C  .O..O.O
+#C  .O.O.O.
+#C  ..O.O..
+#C  ...O...
+x = 120, y = 17
+100boo$33bxx18boo18bxx18boo4boo12bxx3bx$4bo29bx19bo19bx19bo6bo12bxbbxb
+x$5bo21byy5bxbxx9boo5boboo16bxbxx16boboo16bxbxbx$3b3o21byby5bxbx9bobo
+5bobo17bxbx17bobo17bxbx$28by7bx11bo7bo19bx19bo19bx$bo$boo45boo$obo44bo
+bo$49bo5$16bo$15boo$15bobo!

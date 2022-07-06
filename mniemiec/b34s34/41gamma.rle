@@ -1,0 +1,22 @@
+#N 41gamma.rle: Gamma ship: Pattern image
+#O Mark D. Niemiec's life synthesis database, Mon Jun 10 22:27:18 2013
+#C  ..OO..
+#C  .OOOO.
+#C  .O..O.
+#C  ..OO..
+#C  .OOOO.
+#C  ......
+#C  .O..O.
+#C  ......
+#C  OOOOOO
+#C  ......
+#C  OO.OO.
+#C  ..O...
+#C  OO.OO.
+#C  ......
+#C  O.O.O.
+#C  ......
+#C  OOOOO.
+#C  .O.O..
+x = 6, y = 18, rule = B34/S34
+bbxx$b4x$bxbbx$bbxx$b4x$$bxbbx$$6x$$xxbxx$bbx$xxbxx$$xbxbx$$5x$bxbx!

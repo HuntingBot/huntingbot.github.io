@@ -1,0 +1,10 @@
+#N 16-1573.rle: 16.1573: Synthesis
+#O Mark D. Niemiec's life synthesis database, Wed Feb 26 23:30:04 1997
+#C  .O..........O.
+#C  OO..........OO
+#C  ..OO......OO..
+#C  ....OO..OO....
+#C  ......OO......
+x = 33, y = 13, rule = B34/S34
+4b4o$5boo6$oboo4boobo$boboobboobo9bx10bx$3boobboo10bxx10bxx$b3o4b3o10b
+xx6bxx$bo8bo12bxxbbxx$25bxx!

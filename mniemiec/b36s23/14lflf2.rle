@@ -1,0 +1,16 @@
+#N 14lflf2.rle: 14.384; Loaf tie loaf; Bi-loaf 2: Synthesis
+#O Mark D. Niemiec's life synthesis database, Fri Aug 11 04:17:17 2017
+#C  ..O....
+#C  .O.O...
+#C  O..O...
+#C  .OO.OO.
+#C  ...O..O
+#C  ...O.O.
+#C  ....O..
+x = 106, y = 21, rule = B36/S23
+74bo$75bo$36bo36b3o$37bo19byy18boo$35b3o18bybby16bobbo$40bobo14byy18b
+oo$40boo$41bo19bx19bo19bx$bo4bo30boo21bxbx17bobo17bxbx$bbobbo16bx15boo
+bbo16bxbbx16bobbo16bxbbx$3obb3o13bxbx13bo3bobo3bo12bxxbxx15booboo15bxx
+bxx$22bx19bobboo15bxbbx16bobbo16bxbbx$8b3o35boo14bxbx17bobo17bxbx$8bo
+34bo19bx19bo19bx$9bo33boo$42bobo21byy18boo$47b3o15bybby16bobbo$47bo18b
+yy18boo$48bo40b3o$89bo$90bo!

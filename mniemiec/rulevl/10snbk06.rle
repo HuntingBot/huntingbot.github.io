@@ -1,0 +1,17 @@
+#N 10snbk06.rle: Snake and block offset (6; 0): Synthesis
+#O Mark D. Niemiec's life synthesis database, Tue Sep 01 17:08:53 2020
+#C  OO.O..OO
+#C  O.OO..OO
+x = 132, y = 88
+6bo$5bo$5b3o16bxxbxbbxx$10boo12bxbxxbbxx$9boo$11bo13$7bobo$8boo18byy$
+8bo19byy$$4boobobboo12bxx$4boboobboo12bxxbbx$27bxbx$27bxbbx$28bxx12$
+108bobo$109boo9bo$109bo11boo$120boo$oobboobobboo12boobobboo12boobobboo
+12boobobboo12boobobboo12boobobboo12boobobboo$booboboobboo12boboobboo
+12boboobboo12boboobboo12boboobboo12boboobboo12boboobboo$o$21boo24bo20b
+o20bo$20bobo24boo19boo19boo$22bo23bobo18bobo18bobo11$25bobo20bobo22bo$
+25boo21boo23bobo$26bo22bo23boo$95bo$24boobobboo12boobobboo12boobobboo
+12boobobbooboo9boobobboo$24boboobboo12boboobboo12boboobboo12boboobboo
+bboo8boboobboo3bo$113boo$114boo14$13boo$13bobo$13bo$4boobobboo12boobo
+bboo12boobobboo12boobobboo12boobobboo$4boboobboo12boboobboo12boboobboo
+12boboobboo12boboobboo$$33b3o17boo16boo16bo$33bo19bobo15bobo14boo$34bo
+18bo17bo16bobo!

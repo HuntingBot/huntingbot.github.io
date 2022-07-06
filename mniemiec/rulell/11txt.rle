@@ -1,0 +1,36 @@
+#N 11txt.rle: Tub w/extra long tail: Synthesis
+#O Mark D. Niemiec's life synthesis database, Tue Jul 14 18:46:09 2020
+#C  OO....O.
+#C  O.O..O.O
+#C  ...O..O.
+#C  ....OO..
+x = 194, y = 98
+6boo$7boo$6bo$10bo$10bobo$10boo$32bxx18boo18bxx18boo18bxx$bo7bo23bx19b
+o19bx19bo19bx$boo6boo21bx19bo19bx19bo19bx$obo5bobo20bx19bo19bx19bo19bx
+$30bx19bo19bx19bo19bx$30bxx18boobbo15bxbx17bobo17bxbx$53bo17bxbx17bobo
+17bxbx$53b3o16bxbx17bobo17bx$73bx19bo$$95b3o$95bo$96bo8$12boo18bxx18b
+oo18bxx18boo18bxx18boo18bxx$13bo18bxx19bo18bxx19bo18bxx19bo18bxx$12bo
+39bo39bo39bo$11bo39bo39bo39bo$6boobbo39bo39bo39bo$7boobobo37bobo37bobo
+37bobo$6bo4bobo37bobo37bobo32bo4bobo$12bo33b3o3bo34boo3bo34boo3bo$48bo
+37bobo37boo$47bo40bo7$93bobo75bobo$94boo76boo$94bo77bo$137bo$7bo4boo
+18bxx14bo3boo18bxx18boo38booboo35boo$8bo4bo17bxbx12bobo4bo17bxbx19bo
+39bobboo35bo$6b3o3bo19bx14boo3bo19bx19bo39bo39bo$11bo39bo39bo39bo39bo
+19bx$10bo39bo39bo20bx18bo20bxx17bo19bxbx$10bobo19bx17bobo19bx17bobo17b
+xbx17bobo17bxbbx16bobo17bxbbx$11bobo17bxbx17bobo17bxbx17bobo17bxbx17bo
+bo17bxbx17bobo17bxbx$12bo19bx19bo19bx19bo19bx19bo19bx19bo19bx5$135bo$
+135bobo$8bo76bo49boo$9bo73bobo$7b3o74boo44bobo37bobo19bx$70bx38bxx20b
+oo19bxx17boo18bxbx$48b3o18bxbx16b3o18bxbx19bo20bxx17bo20bxx$7b3o21bxx
+17bo19bxbx17bo19bxbx$9bobboo17bxbx15bobboo17bxbx15bobboo17bxbx18boo18b
+xx18boo18bxx$8bo4bo19bx19bo19bx19bo19bx19bo19bx19bo19bx$12bo19bx19bo
+19bx19bo19bx19bo19bx19bo19bx$11bo19bx19bo19bx19bo19bx19bo19bx19bo19bx$
+10bo19bx19bo19bx19bo19bx19bo19bx19bo19bx$10bobo17bxbx17bobo17bxbx17bob
+o17bxbx17bobo17bxbx17bobo17bxbx$11bobo17bxbx17bobo17bxbx17bobo17bxbx
+17bobo17bxbx17bobo17bxbx$12bo19bx19bo19bx19bo19bx19bo19bx19bo19bx9$74b
+obo$75boo$49bo25bo$50bo$12boo18boo14b3oboo18boo18boo18boo18boo18boo18b
+oo18boo$13bo19bo19bo19bo19bo19bo19bo19bo19bo19bo$6boo4bo19bo19bo19bo
+19bo19bo19bo19bo19bo19bo$7boobbo19bo19bo19bo19bo19bo19bo19bo19bo19bo$
+6bo3bo19bo19bo19bo19bo5bo13bo19bo19bo19bo19bo$10bobo13bo3bobo17bobo17b
+obo17bobobbo14bobobb3o12bobo17bobo17bobo17bobo$11bobo13boobbobo17bobo
+17bobo17bobob3o13bobobo15bobo17bobo17bobo17bobo$12bo13boo4bo19bo19bo
+19bo19bo3bo15bo3boo14bo19bo19bo$135boo18boo$137bo17bobo16b3o13boo$155b
+o18bo15bobo$175bo14bo!

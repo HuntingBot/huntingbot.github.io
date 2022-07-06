@@ -1,0 +1,26 @@
+#N 8p3-1.rle: 8P3.1: Synthesis
+#O Mark D. Niemiec's life synthesis database, Tue Jul 14 00:22:56 2020
+#C  OO...
+#C  O..O.
+#C  .....
+#C  .O..O
+#C  ...OO
+x = 190, y = 112
+24bo$22bobo$23boo$$23bo21bxx18boo18bxx38bxx18boo18bxx$23boo20bxx18boo
+18bxbbx22bo13bxbbx16bobbo16bxbbx$22bobo84boo$72boo12bxbbx20boo14bxbbx
+16bobbo16bxbbx$68booboo15bxx38bxx18boo18bxx$67bobo3bo$69bo42b3o$112bo$
+113bo$135by19bo$134byby17bobo$133bybby16bobbo$134byy18boo$158b3o$158bo
+$159bo5$10bo$8bobo$9boo5$71bo$69boo$23bo46boo$24boo19bxx18boo18bxx18b
+oo18bxx$23boo3bo16bxbx17bobo17bxbbx16bobo17bxbbx$27bo20bx19bo38bo$27b
+3o19bx19bo16bxbbx17bobo16bxbbx$48bxx18boo18bxx18bobo17bxx$20b3o86bo$
+22bo$21bo89bo$111boo$110bobo$115b3o$115bo$116bo18$5boo18bxx18boo18bxx
+18boo18bxx18boo18bxx18boo18bxx$5bobbo16bxx18bobbo16bxx18bobbo16bxx18bo
+bbo16bxx18bobbo16bxx$$6bobbo36bobbo36bobbo36bobbo36bobbo$8boo38boo38b
+oo38boo38boo$$172bo$7boo35b3o39b3o40boo40boo$8boo36bo39bo41boo41bobo$
+7bo37bo41bo42bo11$5boo18bxx$5bobbo16bxbx$26bx$6bobbo$8boo$$4b3o$6bo$5b
+o8$182bo$180bobo$bo179boo$boo159bo$obobboo18boo18boo18boo18boo18boo18b
+oo18boo13bobobboo18boo$5bobbo16bobbo16bobbo16bobbo16bobbo16bobbo16bobb
+o11bobobbobbo12boobbobbo16bobbo$21bo78bobo19bo18boo$6bobbo11boo3bobbo
+16bobbo16bobbo16bobbo11boo3bobbo10bobo3bobbo11bo4bobbo16bobbo16bobbo$
+8boo10bobo5boo12boo4boo13boo3boo18boo11bo6boo11boo5boo18boo18boo18boo$
+43boo17bobo17b3o$42bo21bo19bo$83bo!

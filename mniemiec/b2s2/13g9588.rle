@@ -1,0 +1,8 @@
+#N 13g9588.rle: c/3 Glider 9588: Pattern image
+#O Mark D. Niemiec's life synthesis database, Mon Jun 24 17:03:37 2013
+#C  ....OOO....
+#C  ...........
+#C  .O.O...O.O.
+#C  O..OO.OO..O
+x = 11, y = 4, rule = B2/S2
+4b3x$$bxbx3bxbx$xbbxxbxxbbx!

@@ -1,0 +1,50 @@
+#N 40rp8.rle: Eight R pentominos: Synthesis
+#O Mark D. Niemiec's life synthesis database, Thu Jan 18 02:10:12 2018
+#C  .....O......O.....
+#C  ....OO......OO....
+#C  .....OO....OO.....
+#C  ..................
+#C  .O..............O.
+#C  OOO............OOO
+#C  ..O............O..
+#C  ..................
+#C  ..................
+#C  ..................
+#C  ..................
+#C  ..O............O..
+#C  OOO............OOO
+#C  .O..............O.
+#C  ..................
+#C  .....OO....OO.....
+#C  ....OO......OO....
+#C  .....O......O.....
+x = 170, y = 107
+4bo68bo$5bo31bx29bo4bo24bx4bx24bo4bo24bx4bx$3b3o30bxbx27bobo3b3o21bxbx
+bbxbx22bobobbobo22bxbxbbxbx$36bxbx27bobo27bxbxbbxbx22bobobbobo22bxbxbb
+xbx$bbo34bx29bo7b3o19bx4bx24bo4bo24bx4bx$bboo71bo$bobo72bo$31bxx28boo
+28bxx28boo28bxx14bxx$30bxbbx26bobbo26bxbbx26bobbo14boo10bxbbx12bxbbx$
+31bxx28boo28bxx28boo15bobo10bxx14bxx$138bo$135boo$91bxx28boo11bobo14b
+xx$60boo28bxbbx26bobbo12bo13bxbbx$59bobo29bxx28boo28bxx$61bo$63boo$63b
+obo$63bo13$7bo4bo24bx4bx24bo4bo24bx4bx24bo4bo24bx4bx$6bobobbobo22bxbx
+bbxbx22bobobbobo22bxbxbbxbx22bobobbobo22bxbxbbxbx$6bobobbobo22bxbxbbxb
+x22bobobbobo22bxbxbbxbx22bobobbobo22bxbxbbxbx$7bo4bo24bx4bx24bo4bo24bx
+4bx24bo4bo24bx4bx3$boo14boo12bxx14bxx12boo14boo12bxx14bxx12boo14boo12b
+xx14bxx$obbo12bobbo10bxbbx12bxbbx10bobbo12bobbo10bxbbx12bxbbx10bobbo
+12bobbo10bxbbx12bxbbx$boo14boo12bxx14bxx12boo14boo12bxx14bxx12boo14boo
+12bxx14bxx3$boo28bxx14bxx12boo14boo12bxx14bxx12boo14boo12bxx14bxx$obbo
+14boo10bxbbx12bxbbx10bobbo12bobbo10bxbbx12bxbbx10bobbo12bobbo10bxbbx
+12bxbbx$boo15bobo10bxx14bxx12boo14boo12bxx14bxx12boo14boo12bxx14bxx$
+18bo$15boo$14bobo80bx29bo29bx$16bo79bxbx27bobo27bxbxbbxx$96bxbx23bo3bo
+bo27bxbxbbxx$97bx25bo3bo29bx$121b3o$$119boo$69boo47bobo$69bobo48bo16b
+3o$62boo5bo67bo$61bobo74bo$63bo59boo$122bobo$64boo58bo$64bobo70boo$64b
+o71boo$138bo12$77bobo20bobo$78boo20boo$78bo22bo$74bo30bo$75boo26boo$
+74boo28boo$7bo4bo24bx4bx44bo4bo$6bobobbobo22bxbxbbxbx42bobobbobo32bx6b
+x$6bobobbobo22bxbxbbxbx42bobobbobo31bxx6bxx$7bo4bo24bx4bx44bo4bo33bxx
+4bxx$$122bx14bx$boo14boo12bxx14bxx32boo14boo22b3x12b3x$obbo12bobbo10bx
+bbx12bxbbx30bobbo12bobbo23bx12bx$boo14boo12bxx14bxx32boo14boo3$boo14b
+oo12bxx14bxx32boo14boo$obbo12bobbo10bxbbx12bxbbx30bobbo12bobbo23bx12bx
+$boo14boo12bxx14bxx32boo14boo22b3x12b3x$122bx14bx$$7bo29bx4bx44bo4bo
+33bxx4bxx$6bobobboo8bo14bxbxbbxbx42bobobbobo31bxx6bxx$6bobobboo8bobo
+12bxbxbbxbx42bobobbobo32bx6bx$7bo9boobboo14bx4bx44bo4bo$16boo6boo48boo
+28boo$18bo5bobo48boo26boo$24bo49bo30bo$78bo22bo$78boo20boo$77bobo20bob
+o!

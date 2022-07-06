@@ -1,0 +1,15 @@
+#N 16ubtab1.rle: Up boat on up boat on table: Synthesis
+#O Mark D. Niemiec's life synthesis database, Mon Jul 13 17:30:37 2020
+#C  .O......
+#C  O.O.O..O
+#C  .OO.OOOO
+#C  ........
+#C  ......OO
+#C  .....O.O
+#C  ......O.
+x = 111, y = 35
+56bobo$56boo$57bo3$46bobo$47boo$47bo6$49bo$47bobo$48boo9$57bo32bo$obo
+13bobo5bx19bo10boo31boo19bx$boo13boo5bxbx17bobo6bo3boo5bxbbx16bobbobb
+oo12bxbbxbxbx$bo15bo5bxx18boo8boo8b4x16b4o16b4xbxx$52boo$23bxx18boo18b
+xx18boo18bxx$23bxbx17bobo17bxbx17bobo17bxbx$11bo12bx19bo19bx19bo19bx$
+7boboo$5bobobboo$6boo!

@@ -1,0 +1,8 @@
+#N 17o2.rle: 17-bit P2 c/2 orthogonal spaceship: Pattern image
+#O Mark D. Niemiec's life synthesis database, Sun Sep 24 22:00:53 2017
+#C  OOO.OOO.OOO
+#C  O.O.O.O.O.O
+#C  ...........
+#C  ..O.....O..
+x = 11, y = 4, rule = B3/S2ae3aeijr4-ckqy
+3xb3xb3x$xbxbxbxbxbx$$bbx5bx!
